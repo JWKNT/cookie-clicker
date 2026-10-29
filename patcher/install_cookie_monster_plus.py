@@ -279,6 +279,7 @@ def install(app: Path, manifest: dict, files: dict[str, bytes]) -> tuple[Path, P
     # Stage beside the local folder (the game only loads mods inside it), then move into place
     staging = Path(tempfile.mkdtemp(prefix=".cookie-monster-plus-", dir=app / "mods"))
     try:
+        staging.chmod(0o755)  # mkdtemp creates the folder private to the user; mod folders are readable
         for name, data in files.items():
             (staging / name).write_bytes(data)
         if not matches(staging, manifest):

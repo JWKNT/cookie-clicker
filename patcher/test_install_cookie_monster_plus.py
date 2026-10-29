@@ -77,6 +77,8 @@ class PatcherTest(unittest.TestCase):
         manifest = json.loads((ROOT / "mod" / "manifest.json").read_text())
         for name in manifest["files"]:
             self.assertEqual((target / name).read_bytes(), (ROOT / "mod" / name).read_bytes())
+        if sys.platform != "win32":
+            self.assertEqual(target.stat().st_mode & 0o777, 0o755)
         self.assertEqual(run_quiet([str(game), "--offline", "--verify"]), 0)
         # A second run leaves a verified install alone
         self.assertEqual(run_quiet([str(game), "--offline"]), 0)
