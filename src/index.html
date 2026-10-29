@@ -1,0 +1,190 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#fbfaf7"><title>Cookie Clicker · jehlp.net</title><meta name="description" content="The mathematics of optimal play in Cookie Clicker, with interactive examples and a patcher that installs the Cookie Monster+ autoplay mod."><link rel="canonical" href="https://jehlp.net/cookie-clicker/"><link rel="icon" href="assets/favicon.png" type="image/png"><script src="https://jehlp.net/site-theme/v2/theme.js?v=20261009-reading-folio"></script><link rel="stylesheet" href="https://jehlp.net/site-theme/v2/base.css?v=20261009-reading-folio"><link rel="stylesheet" href="assets/guide.css?v=20261029"><script src="assets/explorers.mjs?v=20261029" type="module"></script></head>
+<body><a class="skip-link" href="#main">Skip to the guide</a><header class="site-header site-header--identity"><div class="site-identity site-brand"><img class="site-mark" src="assets/mark.png" alt="" width="32" height="32"><h1 class="site-title">Cookie Clicker</h1></div><nav aria-label="Main"><a href="#install">Download</a><a href="paper/cookie-clicker-optimal-play.pdf">Paper</a><span class="site-utility-pair"><a class="site-home" aria-label="Home — jehlp.net" href="https://jehlp.net/"><span aria-hidden="true">Home</span></a><button type="button" data-theme-toggle="" class="theme-toggle" aria-label="Use dark theme"></button></span></nav></header>
+<div class="reading-layout"><aside id="contents" class="contents"><p class="contents-title">Contents</p><nav aria-label="Chapters"><ol><li><a href="#game">The game in numbers</a></li><li><a href="#buy">What to buy next</a></li><li><a href="#golden">Golden cookies and the bank</a></li><li><a href="#chips">Heavenly chips</a></li><li><a href="#ascend">When to ascend</a></li><li><a href="#achievements">Achievements and milk</a></li><li><a href="#godzamok">Godzamok</a></li><li><a href="#wrath">Wrinklers and wrath</a></li><li><a href="#minigames">Minigames and seasons</a></li><li><a href="#install">Install Cookie Monster+</a></li></ol></nav></aside>
+<main id="main">
+
+<section id="game">
+<h2><span class="chapter-number">1</span> The game in numbers</h2>
+<p><cite>Cookie Clicker</cite> is an idle game by Orteil. You bake cookies and spend them on buildings and upgrades, which bake more cookies. A <dfn>run</dfn> is the period between two resets.</p>
+<p>Each building type has a base price \(p_0\). Each copy costs 15% more than the copy before it:</p>
+<div class="equation" tabindex="0">\[ p_k = 1.15^{k}\,p_0 \qquad (k = 0, 1, 2, \dots) \]</div>
+<p>Buildings and upgrades set the <dfn>cookies per second</dfn> \(c\), also called CpS. Clicks, golden cookies and wrinklers add more. The sum is the <dfn>income</dfn>.</p>
+<p>At any time you can <dfn>ascend</dfn>. Ascension ends the run. In return you keep <dfn>prestige</dfn>, which grows with the cube root of all cookies ever baked, \(A\):</p>
+<div class="equation" tabindex="0">\[ P = \sqrt[3]{A / 10^{12}} \]</div>
+<p>After the heavenly upgrade Legacy, each prestige level adds 1% to production in all later runs. Each new level also gives one <dfn>heavenly chip</dfn>, which buys permanent upgrades.</p>
+<p>Four decisions occur many times in a game: what to buy next, when to keep cookies in the bank for golden cookies, how to spend heavenly chips, and when to ascend. Chapters 2 to 5 give a rule for each decision. Chapters 6 to 9 cover the other systems. The <a href="paper/cookie-clicker-optimal-play.pdf">paper</a> contains the complete proofs, and chapter 10 installs the mod that plays by these rules.</p>
+</section>
+
+<section id="buy">
+<h2><span class="chapter-number">2</span> What to buy next</h2>
+<p>You want two items, \(A\) and \(B\), and you cannot buy either now. Item \(i\) costs \(p_i\) and adds \(\Delta_i\) to the income \(c\). Which item do you buy first?</p>
+<p>If you buy \(A\) first, you save \(p_A\) at income \(c\). Then you save \(p_B\) at the higher income \(c + \Delta_A\). The other order is symmetric. Both orders end in the same state, so the faster order is better. Compare the two total times:</p>
+<div class="equation" tabindex="0">\[ T_{AB} = \frac{p_A}{c} + \frac{p_B}{c + \Delta_A}, \qquad T_{BA} = \frac{p_B}{c} + \frac{p_A}{c + \Delta_B} \]</div>
+<p>The comparison simplifies to one index for each item.</p>
+<div class="theorem"><p><strong>Rule 1 (pairwise exchange).</strong> Buy \(A\) first if and only if \(E_A \le E_B\), where</p>
+<div class="equation" tabindex="0">\[ E_i = \frac{p_i}{c} + \frac{p_i}{\Delta_i} . \]</div></div>
+<p>The first term is the time to save for the item. The second term is its <dfn>payback time</dfn>: the time that the item needs to earn back its price. Cookie Monster shows the sum as the <dfn>payback period</dfn>. When you cannot buy any of the items, the payback period gives the same order as \(E_i\). Thus the usual community rule is exactly correct in that case.</p>
+<p>The rule is local. \(E_i\) changes as \(c\) increases, so no single sorted list is correct for the whole game. At each decision, buy the item with the smallest \(E_i\).</p>
+<p>A large bank changes the rule. If the bank holds enough for either item but not for both, buy the item with the larger \(\Delta_i\) first. In simulations this difference changes the time to a goal by less than 0.4%.</p>
+<div class="experiment">
+<h3>Which purchase first</h3>
+<p>Set the income and the two items. The display compares the two orders.</p><div id="order-demo"></div>
+<noscript><p>Example: the income is 100 per second. Item A costs 1,000 and adds 10. Item B costs 5,000 and adds 80. Then \(E_A = 110\) and \(E_B = 112.5\). Buy A first. Both items arrive after 55.5 seconds, and after 55.6 seconds in the other order.</p></noscript></div>
+</section>
+
+<section id="golden">
+<h2><span class="chapter-number">3</span> Golden cookies and the bank</h2>
+<p>A <dfn>golden cookie</dfn> appears on the screen at random times. A click gives one of several effects. The most frequent are <dfn>Frenzy</dfn>, which multiplies production by 7 for 77 seconds, and <dfn>Lucky!</dfn>, which pays</p>
+<div class="equation" tabindex="0">\[ \min(0.15\,b,\ 900\,c) + 13 \]</div>
+<p>cookies, where \(b\) is the bank. Below the cap, at a bank of 6,000 seconds of CpS, the payout is 15% of the bank. Thus each cookie in the bank earns a part of every Lucky! payout.</p>
+<div class="experiment">
+<h3>Lucky! payout</h3>
+<p>Move the bank. The payout grows with the bank until the cap.</p><div id="lucky-demo"></div>
+<noscript><p>With a bank of 3,000 seconds of CpS, Lucky! pays 450 seconds of CpS. From 6,000 seconds of CpS, it always pays 900 seconds.</p></noscript></div>
+<p>First, find how often golden cookies appear. The game waits at least \(t_{\min} = 5\) minutes and at most \(t_{\max} = 15\) minutes. In each frame after the minimum, the chance of a golden cookie is \(\bigl((t - t_{\min})/W\bigr)^5\). Here \(t\) counts frames, and the window has \(W\) frames at 30 frames per second. The chance that no cookie appears before the fraction \(x\) of the window is close to \(e^{-W x^6/6}\). One integral then gives the mean fraction:</p>
+<div class="equation" tabindex="0">\[ \mathbb{E}[x] \approx \Gamma\!\left(\tfrac{7}{6}\right) \left(\frac{6}{W}\right)^{1/6} \]</div>
+<p>At the base frequency, a golden cookie appears every 447 seconds on average. Lucky day and Serendipity each halve both limits. With both upgrades, the mean interval is 121 seconds.</p>
+<div class="experiment">
+<h3>Golden cookie interval</h3>
+<p>Select the frequency upgrades.</p><div id="interval-demo"></div>
+<noscript><p>Without upgrades, the mean interval is 447 seconds. With Lucky day and Serendipity, it is 121 seconds.</p></noscript></div>
+<p>About 42% of golden cookies give Lucky!. They occur at the rate \(\lambda_L = 0.42/\mathbb{E}[I]\), where \(I\) is the interval. Thus a banked cookie earns \(0.15\,g\,\lambda_L\) per second, where \(g\) multiplies golden cookie gains. A cookie spent on item \(i\) earns \(\bar\Delta_i / p_i\) per second.</p>
+<div class="theorem"><p><strong>Rule 2 (the Lucky! bank).</strong> Spend the cookie if and only if</p>
+<div class="equation" tabindex="0">\[ \frac{p_i}{\bar\Delta_i} < \theta = \frac{1}{0.15\,g\,\lambda_L} . \]</div></div>
+<p>Here \(\bar\Delta_i\) is all the income that the item adds: its CpS, its click power at the clicker's rate, and the extra income that Frenzies and other golden effects make from both. With both frequency upgrades, \(\theta\) is about 1,900 seconds. Early in a run, payback times are seconds or minutes, so spend every cookie. Late in a run, payback times are hours, so keep the bank.</p>
+</section>
+
+<section id="chips">
+<h2><span class="chapter-number">4</span> Heavenly chips</h2>
+<p>Heavenly upgrades cost chips. Each upgrade multiplies the speed of every later run. Upgrade \(j\) costs \(p_j\) chips and multiplies the speed by \(m_j > 1\). New chips arrive faster at a higher speed, so an upgrade bought early also shortens the wait for every later upgrade.</p>
+<div class="theorem"><p><strong>Rule 3 (ratio rule).</strong> Buy the upgrades in decreasing order of</p>
+<div class="equation" tabindex="0">\[ \rho_j = \frac{1 - 1/m_j}{p_j} . \]</div></div>
+<p>To prove the rule, swap two adjacent upgrades \(i\) and \(j\). Every other wait stays the same. The swap shortens the total time if and only if \(\rho_i > \rho_j\). This is Smith's rule from the scheduling of jobs.</p>
+<p>The rule tells you to save. Do not buy a cheap upgrade with a low ratio while an upgrade with a higher ratio is still too expensive. Value an upgrade that needs a parent together with the parent, as one block.</p>
+</section>
+
+<section id="ascend">
+<h2><span class="chapter-number">5</span> When to ascend</h2>
+<p>Ascension is a trade. It ends the run, and in return every later run is faster. If a run at speed 1 bakes \(F(x)\) cookies in time \(x\), the same run at speed \(S\) bakes \(F(St)\) cookies in time \(t\). A faster run follows the same path in less time.</p>
+<p>Late in the game, the speed is proportional to prestige. Suppose that the cookies of a run grow like \(t^\beta\), where \(\beta\) is the <dfn>growth exponent</dfn> of the run, and write \(\gamma = 3/\beta - 1\). A telescoping lower bound on the total time then gives the best schedule. Each run multiplies all-time cookies by the same factor \(v^\star\), the root of</p>
+<div class="equation" tabindex="0">\[ \frac{\beta}{3}\left(1 - \frac{1}{v}\right) = \frac{1 - v^{-\gamma/3}}{\gamma} . \]</div>
+<p>For \(\beta = 2\), \(v^\star \approx 7.9\), and for \(\beta = 3\), \(v^\star \approx 16.8\). Prestige grows by the cube root of \(v^\star\) in each run: about 2.0 and 2.6 times.</p>
+<div class="experiment">
+<h3>Growth in each run</h3>
+<p>Select the growth exponent of the current run.</p><div id="ascend-demo"></div>
+<noscript><p>The optimal factors are 4.24 at \(\beta = 1.5\), 7.87 at \(\beta = 2\), 16.8 at \(\beta = 3\), 28.4 at \(\beta = 4\) and 60.9 at \(\beta = 6\).</p></noscript></div>
+<p>A familiar rule says: ascend when the marginal rate falls to the average rate. This is the marginal value theorem. It is correct only at \(\beta = 3\), because it ignores that later runs become longer or shorter. At \(\beta = 6\), it waits 6.5 times too long.</p>
+<p>Early in the game, prestige changes the speed very little, and a reset only loses time. If every run has the same speed, one long run is the fastest way to bake any number of cookies. The mod therefore uses a dynamic program over all future ascensions, including the heavenly upgrades that each ascension can buy. Late in the game it agrees with the formula above, and early in the game it does not reset too soon.</p>
+</section>
+
+<section id="achievements">
+<h2><span class="chapter-number">6</span> Achievements and milk</h2>
+<p>Each achievement, except the shadow achievements, adds 4% <dfn>milk</dfn>. Kitten upgrades turn milk into production. With kitten factors \(k_i\), milk \(\mu\) and a milk multiplier \(m\), production carries the factor \(\prod_i (1 + k_i m \mu)\). One more achievement multiplies production by</p>
+<div class="equation" tabindex="0">\[ \prod_i \frac{1 + k_i m (\mu + 0.04)}{1 + k_i m \mu} . \]</div>
+<p>On an observed save with eight kittens and 952% milk, one achievement adds 2.14% to production. The mod takes every achievement that needs only an action at once. Examples are a click on the news ticker in a narrow window, one of Santa's helper grandmas, and a gift code sent to yourself.</p>
+<p>Some achievements cost time, for example a special run. The rescaling of time also gives these a price. A permanent gain of a share \(x\) of income makes all later play \(x\) times faster. Over the remaining play time \(H\), the gain is worth \(xH\) seconds. A delay of \(D\) seconds costs \(D\) seconds.</p>
+<div class="theorem"><p><strong>Rule 4 (worth of an achievement).</strong> An action that delays play by \(D\) seconds and earns achievements worth \(x_1, \dots, x_k\) pays if and only if</p>
+<div class="equation" tabindex="0">\[ D < H \sum_i x_i . \]</div></div>
+<p>Nobody knows \(H\) in advance. With no other information, the median remaining time equals the time played so far, so the mod uses that estimate. After 77 hours of play, one achievement is worth 1.66 hours.</p>
+<p>Neverclick and Hardcore need a <dfn>Born again</dfn> run, which starts without prestige or upgrades. A simulation of that run needs about 4 hours for both achievements, so the mod starts one after about 93 hours of play. Wrinklesquisher and Moistburster need 50 and 200 wrinklers burst in one run. Such a spree costs some minutes of income, so the mod does it when the run is long enough.</p>
+<div class="experiment">
+<h3>Worth of an achievement</h3>
+<p>Set the kittens, the milk and the hours played.</p><div id="worth-demo"></div>
+<noscript><p>With eight kittens, 952% milk and a milk multiplier of 1.1, one achievement adds about 2.1% to production. After 77 hours of play, it is worth about 1.65 hours.</p></noscript></div>
+</section>
+
+<section id="godzamok">
+<h2><span class="chapter-number">7</span> Godzamok</h2>
+<p>Godzamok is a god in the Pantheon minigame. When you sell buildings, Godzamok gives a 10-second buff to click power. Each building sold adds \(b = 1\%\) in the first slot, 0.5% in the second slot and 0.25% in the third slot. Sales during the buff add to it without a limit, but they do not make it longer.</p>
+<p>Sell all \(n\) copies of a building whose next copy costs \(p\), and buy them back in the same frame. Production does not change. A sale returns 25% of the price of the next copy, so the refund is \(1.15 \times 25\%\) of the cost to buy the copies back. The round trip therefore costs</p>
+<div class="equation" tabindex="0">\[ \left(1 - 1.15 \cdot 0.25\right) \frac{p\,(1 - 1.15^{-n})}{0.15} = 0.7125 \times \text{(cost to buy back)} . \]</div>
+<p>The round trip adds \(bn\) to the buff. This is worth \(b\,n\,K\,t\) cookies, where \(K\) is the click income without the buff and \(t\) is the remaining time of the buff. Late in a run, this value is much larger than the cost for every building type except the newest ones.</p>
+<p>Suppose that you cycle \(U\) buildings in each of the \(F = 300\) frames of one buff. The multiplier increases by \(bU\) in each frame, so its average over the buff is</p>
+<div class="equation" tabindex="0">\[ 1 + bU\,\frac{F + 1}{2} \approx 1 + 150\,bU . \]</div>
+<p>The mouse upgrades make a click worth 15% of CpS, so 20 clicks per second bring 3 times CpS. On a late-game save, the mod cycled about 2,200 buildings per frame in 3 milliseconds. The buff averaged ×3,329, and the income increased to about 22,000 times CpS.</p>
+<div class="experiment">
+<h3>Godzamok buff</h3>
+<p>Select the slot and the number of buildings that the mod sells and buys back in each frame.</p><div id="godzamok-demo"></div>
+<noscript><p>In the first slot, 2,200 buildings per frame make the buff reach ×6,601 after 10 seconds. The average is ×3,312.</p></noscript></div>
+</section>
+
+<section id="wrath">
+<h2><span class="chapter-number">8</span> Wrinklers and wrath</h2>
+<p>The <dfn>Grandmapocalypse</dfn> has three stages of wrath. At stage \(\ell\), each golden cookie is a <dfn>wrath cookie</dfn> with probability \(\ell/3\). <dfn>Wrinklers</dfn> also appear. A wrinkler takes a part of CpS and returns 1.1 times its contents when you burst it.</p>
+<p>With \(n\) wrinklers, a share \(s = n/20\) of CpS withers. Each wrinkler receives that whole share, not a part \(1/n\) of it. Thus wrinklers multiply the income from CpS by</p>
+<div class="equation" tabindex="0">\[ W(n) = 1 - s + s\,n\,r, \qquad W(10) = 6, \quad W(12) = 8.32 \quad (r = 1.1) . \]</div>
+<p>Wrath cookies replace Frenzies with clots and Ruin. In return they bring Elder frenzies, which multiply production by 666 for 6 seconds, and cookie storms. The table gives the share of each effect at each stage, simulated from the choice rule of the game.</p>
+<div class="table-scroll" tabindex="0"><table class="numeric-table">
+<caption>Shares of golden cookie effects by stage</caption>
+<thead><tr><th scope="col">Stage</th><th scope="col">Frenzy</th><th scope="col">Lucky!</th><th scope="col">Building</th><th scope="col">Click frenzy</th><th scope="col">Storm</th><th scope="col">Chain</th><th scope="col">Elder frenzy</th><th scope="col">Clot</th><th scope="col">Ruin</th><th scope="col">Cursed</th></tr></thead>
+<tbody>
+<tr><th scope="row">0</th><td>.422</td><td>.422</td><td>.100</td><td>.040</td><td>.008</td><td>.008</td><td>–</td><td>–</td><td>–</td><td>–</td></tr>
+<tr><th scope="row">1</th><td>.294</td><td>.341</td><td>.076</td><td>.032</td><td>.024</td><td>.023</td><td>.017</td><td>.090</td><td>.090</td><td>.008</td></tr>
+<tr><th scope="row">2</th><td>.157</td><td>.280</td><td>.056</td><td>.027</td><td>.039</td><td>.039</td><td>.034</td><td>.171</td><td>.171</td><td>.015</td></tr>
+<tr><th scope="row">3</th><td>–</td><td>.245</td><td>.041</td><td>.023</td><td>.055</td><td>.055</td><td>.051</td><td>.245</td><td>.244</td><td>.023</td></tr>
+</tbody></table></div>
+<p>When most income comes from CpS, wrath wins. With ten wrinklers, the total income is about 2.8 times that of stage 0. Godzamok changes this result. With the Elder Pact, an Elder Pledge costs at most \(8^{14} \approx 4.4 \times 10^{12}\) cookies, and it becomes available again when it ends. Thus the stage is a free choice.</p>
+<div class="theorem"><p><strong>Rule 5 (calm or wrath).</strong> Golden cookies multiply click income by 11.8 in calm and by 8.5 in wrath, and they multiply CpS income by 8.7 and 62.8. These values assume twelve wrinklers, doubled effect durations and a mean interval of 121 seconds. Calm earns more if and only if click income is more than about 16 times CpS.</p></div>
+<p>With Godzamok, click income is thousands of times CpS, so the mod keeps a pledge active. It lets wrath reach stage 3 once for an achievement. Then it revokes the Elder Covenant, because the covenant costs 5% of CpS and a pledge costs nothing.</p>
+<div class="experiment">
+<h3>Wrinklers and the stage</h3>
+<p>Set the wrinklers and the ratio of click income to CpS.</p><div id="wrinkler-demo"></div>
+<noscript><p>Ten wrinklers give \(W = 6\). With click income 3 times CpS, wrath earns more. With click income 1,000 times CpS, calm earns about 38% more.</p></noscript></div>
+</section>
+
+<section id="minigames">
+<h2><span class="chapter-number">9</span> Minigames and seasons</h2>
+<p><strong>Grimoire.</strong> Below its cap \(M\), magic regenerates at the rate \(\kappa\sqrt{m}\). To fill an interval of magic from \(a\) to \(a + C\) takes</p>
+<div class="equation" tabindex="0">\[ \int_a^{a+C} \frac{dm}{\kappa\sqrt{m}} = \frac{2}{\kappa}\left(\sqrt{a + C} - \sqrt{a}\right) , \]</div>
+<p>which decreases in \(a\). Thus a spell that costs \(C\) is cast most often when you cast it at full magic. The mod casts Force the Hand of Fate at full magic. Cheaper spells would reach the spell-count achievements sooner, but they would lose more golden cookies than the achievements are worth.</p>
+<p><strong>Pantheon.</strong> The mod tries every order of the useful gods with the CpS formula of the game and the income model. It moves gods only when income increases by more than 1%. Each ascension restores three worship swaps, but from zero swaps the next swap takes 16 hours. When a much better arrangement waits for a swap, the mod spends the next sugar lump on a refill.</p>
+<p><strong>Garden.</strong> New seeds come only from mutations, and mutations grow only in empty tiles next to mature parent plants. Plant parent kind A on the tiles where \(x + y\) is even and \(x\) is even. Plant kind B where \(x + y\) is even and \(x\) is odd, and leave the other tiles empty. Then every empty tile touches both kinds, on every plot of at least 2 × 2 tiles. The mod breeds Thumbcorn first, which adds 2% click power, and then Cronerice, Gildmillet, Clover and Golden clover. Wood chips give three mutation rolls in each tick.</p>
+<div class="experiment">
+<h3>Breeding layout</h3>
+<p>Select the farm level. A and B mark the parent tiles.</p><div id="garden-demo"></div>
+<noscript><p>On the 2 × 2 plot of farm level 1, the parents are on one diagonal. The two empty tiles each touch both parents.</p></noscript></div>
+<p><strong>Stock Market.</strong> Prices return toward the resting value \(R_i = 10 + 10\,i + (\ell_{\text{bank}} - 1)\). A purchase costs at most 20% extra and a sale costs nothing. Thus a purchase below \(0.6\,R_i\) and a sale at \(R_i\) return at least \(1/(0.6 \cdot 1.2) - 1 = 39\%\). The office upgrades open loans. Each loan multiplies CpS for a period and then divides it for a longer period.</p>
+<div class="table-scroll" tabindex="0"><table class="numeric-table">
+<caption>Stock Market loans</caption>
+<thead><tr><th scope="col">Loan</th><th scope="col">CpS</th><th scope="col">For</th><th scope="col">Then</th><th scope="col">For</th><th scope="col">Down payment</th></tr></thead>
+<tbody>
+<tr><th scope="row">1</th><td>×1.5</td><td>2 h</td><td>×0.25</td><td>4 h</td><td>20% of bank</td></tr>
+<tr><th scope="row">2</th><td>×2</td><td>40 s</td><td>×0.1</td><td>40 min</td><td>40% of bank</td></tr>
+<tr><th scope="row">3</th><td>×1.2</td><td>48 h</td><td>×0.8</td><td>120 h</td><td>50% of bank</td></tr>
+</tbody></table></div>
+<p>If the run ends before the boost ends, the penalty never applies. The mod takes a loan when the planner expects the run to end in time. It ascends early when a loan is about to end and an early ascension costs less than the penalty.</p>
+<p><strong>Dragon.</strong> To buy back \(n\) copies of a building whose next copy costs \(p\) takes \(p\,(1 - 1.15^{-n})/0.15\), about \(6.67\,p\) for \(n = 100\). The mod trains the dragon toward Radiant Appetite, which doubles production, when the buildings are available and the buy-back costs at most one hour of income.</p>
+<p><strong>Seasons.</strong> Christmas gives 14 levels of Santa, which cost about \(1.2 \times 10^{16}\) cookies in total. Valentine's Day gives seven heart cookies that add 2% each, and Easter gives eggs. Each run visits these seasons in that order and then stays in Christmas for the reindeer.</p>
+<p><strong>Sugar lumps.</strong> Lumps go first to the minigames, then to a Sugar frenzy in each run, then to cursor levels for the first loan, and then to building levels by gain per lump.</p>
+</section>
+
+<section id="install">
+<h2><span class="chapter-number">10</span> Install Cookie Monster+</h2>
+<p>Cookie Monster+ is a version of the Cookie Monster mod that plays by the rules above. It clicks, buys, manages every minigame and ascends at the optimal time. Each system has a switch in the settings.</p>
+<article class="tool-card">
+<header class="tool-card-heading"><div><p class="tool-version">v2.053.12 · 172 KB</p><h3>Cookie Monster+ patcher</h3></div><span class="tool-status">Steam · Cookie Clicker 2.053</span></header>
+<p>The patcher installs Cookie Monster+ as a local mod beside Cookie Monster. It downloads the current build, checks every file against its published SHA-256 digest and does not change your save.</p>
+<ol class="tool-steps">
+<li>Subscribe to Cookie Monster in the Steam Workshop. Start Cookie Clicker once.</li>
+<li>Download the patcher and extract the archive.</li>
+<li>Double-click <code>Install Cookie Monster Plus.command</code> on macOS or the <code>.bat</code> file on Windows. On Linux, run <code>python3 install_cookie_monster_plus.py</code>.</li>
+<li>Restart Cookie Clicker. The autoplay settings are in Options, under Cookie Monster.</li>
+</ol>
+<div class="tool-actions"><a class="primary-action" href="https://github.com/JWKNT/cookie-clicker/releases/download/v2.053.12/Cookie-Monster-Plus-Patcher-v2.053.12.zip">Download patcher</a><a href="https://github.com/JWKNT/cookie-clicker/releases/tag/v2.053.12">Release notes</a><a href="https://github.com/JWKNT/cookie-clicker">Source</a></div>
+<details class="tool-details"><summary>Verification and removal</summary>
+<p>If the patcher does not find the game, drag the Cookie Clicker folder into its window. Python 3.9 or newer is necessary. If macOS blocks the file, Control-click it and select Open.</p>
+<p>Run the patcher with <code>--verify</code> to check an installation, or with <code>--uninstall</code> to remove Cookie Monster+. An earlier copy moves to <code>mods/.cookie-monster-plus-backups</code>. The Workshop copy of Cookie Monster stays unchanged. If both mods are on, only Cookie Monster+ runs.</p>
+<p class="tool-hash"><span>SHA-256</span> <code>4fb75265bd3a6884d705304a29bbad12cbe206c96d68523ab75442940ee480db</code></p>
+</details>
+<details class="tool-details"><summary>Browser version</summary>
+<p>In the browser version of the game, open the developer console and enter this line:</p>
+<p><code>Game.LoadMod('https://jehlp.net/cookie-clicker/mod/main.js')</code></p>
+<p>The mod does not stay installed after you reload the page.</p>
+</details>
+</article>
+<p class="tools-note">Keep a copy of your save before you install any mod. Cookie Monster is by the Cookie Monster Team under the MIT License, and the changes that make Cookie Monster+ use the same license.</p>
+</section>
+
+</main></div>
+</body></html>

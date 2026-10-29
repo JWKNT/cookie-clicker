@@ -1,0 +1,12 @@
+{
+  "name": "cookie-clicker",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "node build.mjs",
+    "test": "node build.mjs --check && node --test tests/*.test.mjs && python3 -m unittest discover -s patcher -p 'test_*.py'"
+  },
+  "devDependencies": {
+    "temml": "0.14.0"
+  }
+}
