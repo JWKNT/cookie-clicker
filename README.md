@@ -1,6 +1,6 @@
 # Cookie Clicker: optimal play and the Cookie Monster+ patcher
 
-[Guide](https://jehlp.net/cookie-clicker/) · [Paper (PDF)](paper/cookie-clicker-optimal-play.pdf) · [Download the patcher](https://github.com/JWKNT/cookie-clicker/releases/latest)
+[Guide](https://jehlp.net/cookie-clicker/) · [Paper (PDF)](https://jehlp.net/cookie-clicker/paper.pdf) · [Download the patcher](https://jehlp.net/cookie-clicker/tools.html)
 
 This repository contains a guide to the mathematics of optimal play in *Cookie Clicker*, the paper with the
 complete proofs, and a patcher. The patcher installs Cookie Monster+, a version of the Cookie Monster mod that
@@ -9,10 +9,11 @@ plays by these rules, in the Steam version of the game.
 | Folder | Contents |
 | --- | --- |
 | `index.html`, `src/`, `assets/` | The guide at <https://jehlp.net/cookie-clicker/>, with interactive examples. |
-| `paper/` | The paper: LaTeX source and PDF. |
+| `tools.html` | The download page at <https://jehlp.net/cookie-clicker/tools.html>. |
+| `paper.pdf`, `paper/` | The paper at <https://jehlp.net/cookie-clicker/paper.pdf> and its LaTeX source. |
 | `patcher/` | The patcher and its double-click launchers for macOS and Windows. |
 | `mod/` | The Cookie Monster+ build that the patcher installs, with its SHA-256 manifest. |
-| `source/` | The Cookie Monster+ changes, as one patch over upstream Cookie Monster. |
+| `source/` | The full, readable Cookie Monster+ source and the build steps. |
 
 ## Install Cookie Monster+
 
@@ -73,6 +74,8 @@ build, follow [source/README.md](source/README.md).
 
 ## Licenses
 
-`mod/main.js` is a modified build of Cookie Monster by the Cookie Monster Team. It and the changes in
-`source/` are under the MIT License in [mod/LICENSE.md](mod/LICENSE.md). The Latin Modern Math font has its own
-license in `assets/fonts/`. No new license is granted for the other files.
+`mod/main.js` is a modified build of Cookie Monster by the Cookie Monster Team. Cookie Monster, its framework and
+the Cookie Monster+ changes in `source/` are under the MIT License. The build also includes jscolor 2.5.2, which
+is under the GPL 3.0 or later, so `mod/main.js` as a whole is under the GPL 3.0 or later.
+[mod/LICENSE.md](mod/LICENSE.md) lists each part. The Latin Modern Math font has its own license in
+`assets/fonts/`. No new license is granted for the other files.

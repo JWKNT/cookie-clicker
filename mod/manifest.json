@@ -1,24 +1,28 @@
 {
   "name": "Cookie Monster+",
-  "version": "2.053.12",
+  "version": "2.053.13",
   "gameVersion": "2.053",
   "requires": "cookie monster",
   "files": {
     "info.txt": {
-      "sha256": "981aeb4720fb10fd430bb8352dd2619a7246540c96682b12959553f7df0480b1",
+      "sha256": "860540516371ffc4b88a96c3a5d52414a6910d2c189b75e0d5d19bccbfa2057f",
       "size": 550
     },
     "main.js": {
-      "sha256": "7ced38af8853e7b758c1c4ac19f113590c339636031a6e446f046670c5b4b009",
-      "size": 279428
+      "sha256": "7bc3d45798e02b983ec2cdb1f8bd19d5412612644be12d4dbd0ab8574571689f",
+      "size": 654752
     },
     "thumbnail.png": {
       "sha256": "24d72807863ee8fd4864f43ce4e9fadb79e6440a5e524c778b93cebdb1806b8f",
       "size": 90783
     },
     "LICENSE.md": {
-      "sha256": "e9c7c13523ef6537866537535abaeb8b98342596f76d264d6aaf245b9a8cf848",
-      "size": 1400
+      "sha256": "66e93924649b444578aba4cab985fd65e930199c3386a67583683dc52de212d8",
+      "size": 1855
+    },
+    "LICENSE-GPL-3.0.txt": {
+      "sha256": "3972dc9744f6499f0f9b2dbf76696f2ae7ad8af9b23dde66d6af86c9dfb36986",
+      "size": 35149
     }
   }
 }

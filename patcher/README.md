@@ -38,13 +38,13 @@ python3 install_cookie_monster_plus.py --uninstall
 | `--verify` | Check the installed files against the release. |
 | `--uninstall` | Remove Cookie Monster+. Its files move to the backup folder. |
 | `--offline` | Install the files in this archive. Do not download. |
-| `--version 2.053.12` | Install this release instead of the latest one. |
+| `--version 2.053.13` | Install this release instead of the latest one. |
 | `--force` | Install even if Cookie Monster is not installed. |
 
 ## What the patcher changes
 
 - It writes `mods/local/Cookie Monster Plus` in the game folder: `info.txt`,
-  `main.js`, `thumbnail.png` and `LICENSE.md`.
+  `main.js`, `thumbnail.png` and the license files.
 - It moves an earlier, different copy to `mods/.cookie-monster-plus-backups`.
   The game does not load mods from that folder.
 - It does not change the Workshop copy of Cookie Monster, because Steam

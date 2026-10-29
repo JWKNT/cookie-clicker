@@ -22,7 +22,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 MOD = ROOT / "mod"
 PATCHER = ROOT / "patcher"
-MOD_FILES = ("info.txt", "main.js", "thumbnail.png", "LICENSE.md")
+MOD_FILES = ("info.txt", "main.js", "thumbnail.png", "LICENSE.md", "LICENSE-GPL-3.0.txt")
 PATCHER_FILES = (
     "install_cookie_monster_plus.py",
     "Install Cookie Monster Plus.command",

@@ -1,7 +1,7 @@
 <!doctype html>
-<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#fbfaf7"><title>Cookie Clicker · jehlp.net</title><meta name="description" content="The mathematics of optimal play in Cookie Clicker, with interactive examples and a patcher that installs the Cookie Monster+ autoplay mod."><link rel="canonical" href="https://jehlp.net/cookie-clicker/"><link rel="icon" href="assets/favicon.png" type="image/png"><script src="https://jehlp.net/site-theme/v2/theme.js?v=20261009-reading-folio"></script><link rel="stylesheet" href="https://jehlp.net/site-theme/v2/base.css?v=20261009-reading-folio"><link rel="stylesheet" href="assets/guide.css?v=20261029"><script src="assets/explorers.mjs?v=20261029" type="module"></script></head>
-<body><a class="skip-link" href="#main">Skip to the guide</a><header class="site-header site-header--identity"><div class="site-identity site-brand"><img class="site-mark" src="assets/mark.png" alt="" width="32" height="32"><h1 class="site-title">Cookie Clicker</h1></div><nav aria-label="Main"><a href="#install">Download</a><a href="paper/cookie-clicker-optimal-play.pdf">Paper</a><span class="site-utility-pair"><a class="site-home" aria-label="Home — jehlp.net" href="https://jehlp.net/"><span aria-hidden="true">Home</span></a><button type="button" data-theme-toggle="" class="theme-toggle" aria-label="Use dark theme"></button></span></nav></header>
-<div class="reading-layout"><aside id="contents" class="contents"><p class="contents-title">Contents</p><nav aria-label="Chapters"><ol><li><a href="#game">The game in numbers</a></li><li><a href="#buy">What to buy next</a></li><li><a href="#golden">Golden cookies and the bank</a></li><li><a href="#chips">Heavenly chips</a></li><li><a href="#ascend">When to ascend</a></li><li><a href="#achievements">Achievements and milk</a></li><li><a href="#godzamok">Godzamok</a></li><li><a href="#wrath">Wrinklers and wrath</a></li><li><a href="#minigames">Minigames and seasons</a></li><li><a href="#install">Install Cookie Monster+</a></li></ol></nav></aside>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#fbfaf7"><title>Cookie Clicker · jehlp.net</title><meta name="description" content="The mathematics of optimal play in Cookie Clicker, with interactive examples and a patcher that installs the Cookie Monster+ autoplay mod."><link rel="canonical" href="https://jehlp.net/cookie-clicker/"><link rel="icon" href="assets/favicon.png" type="image/png"><script src="https://jehlp.net/site-theme/v2/theme.js?v=20261009-reading-folio"></script><link rel="stylesheet" href="https://jehlp.net/site-theme/v2/base.css?v=20261009-reading-folio"><link rel="stylesheet" href="assets/guide.css?v=20261030"><script src="assets/explorers.mjs?v=20261030" type="module"></script></head>
+<body><a class="skip-link" href="#main">Skip to the guide</a><header class="site-header site-header--identity"><div class="site-identity site-brand"><img class="site-mark" src="assets/mark.png" alt="" width="32" height="32"><h1 class="site-title">Cookie Clicker</h1></div><nav aria-label="Main"><a href="./" aria-current="page">Guide</a><a href="tools.html">Tools</a><a href="paper.pdf">Paper</a><span class="site-utility-pair"><a class="site-home" aria-label="Home — jehlp.net" href="https://jehlp.net/"><span aria-hidden="true">Home</span></a><button type="button" data-theme-toggle="" class="theme-toggle" aria-label="Use dark theme"></button></span></nav></header>
+<div class="reading-layout"><aside id="contents" class="contents"><p class="contents-title">Contents</p><nav aria-label="Chapters"><ol><li><a href="#game">The game in numbers</a></li><li><a href="#buy">What to buy next</a></li><li><a href="#golden">Golden cookies and the bank</a></li><li><a href="#chips">Heavenly chips</a></li><li><a href="#ascend">When to ascend</a></li><li><a href="#achievements">Achievements and milk</a></li><li><a href="#godzamok">Godzamok</a></li><li><a href="#wrath">Wrinklers and wrath</a></li><li><a href="#minigames">Minigames and seasons</a></li></ol></nav></aside>
 <main id="main">
 
 <section id="game">
@@ -13,7 +13,7 @@
 <p>At any time you can <dfn>ascend</dfn>. Ascension ends the run. In return you keep <dfn>prestige</dfn>, which grows with the cube root of all cookies ever baked, \(A\):</p>
 <div class="equation" tabindex="0">\[ P = \sqrt[3]{A / 10^{12}} \]</div>
 <p>After the heavenly upgrade Legacy, each prestige level adds 1% to production in all later runs. Each new level also gives one <dfn>heavenly chip</dfn>, which buys permanent upgrades.</p>
-<p>Four decisions occur many times in a game: what to buy next, when to keep cookies in the bank for golden cookies, how to spend heavenly chips, and when to ascend. Chapters 2 to 5 give a rule for each decision. Chapters 6 to 9 cover the other systems. The <a href="paper/cookie-clicker-optimal-play.pdf">paper</a> contains the complete proofs, and chapter 10 installs the mod that plays by these rules.</p>
+<p>Four decisions occur many times in a game: what to buy next, when to keep cookies in the bank for golden cookies, how to spend heavenly chips, and when to ascend. Chapters 2 to 5 give a rule for each decision. Chapters 6 to 9 cover the other systems. The <a href="paper.pdf">paper</a> contains the complete proofs. The <a href="tools.html">Tools</a> page has the patcher for Cookie Monster+, a mod that plays by these rules.</p>
 </section>
 
 <section id="buy">
@@ -157,33 +157,6 @@
 <p><strong>Dragon.</strong> To buy back \(n\) copies of a building whose next copy costs \(p\) takes \(p\,(1 - 1.15^{-n})/0.15\), about \(6.67\,p\) for \(n = 100\). The mod trains the dragon toward Radiant Appetite, which doubles production, when the buildings are available and the buy-back costs at most one hour of income.</p>
 <p><strong>Seasons.</strong> Christmas gives 14 levels of Santa, which cost about \(1.2 \times 10^{16}\) cookies in total. Valentine's Day gives seven heart cookies that add 2% each, and Easter gives eggs. Each run visits these seasons in that order and then stays in Christmas for the reindeer.</p>
 <p><strong>Sugar lumps.</strong> Lumps go first to the minigames, then to a Sugar frenzy in each run, then to cursor levels for the first loan, and then to building levels by gain per lump.</p>
-</section>
-
-<section id="install">
-<h2><span class="chapter-number">10</span> Install Cookie Monster+</h2>
-<p>Cookie Monster+ is a version of the Cookie Monster mod that plays by the rules above. It clicks, buys, manages every minigame and ascends at the optimal time. Each system has a switch in the settings.</p>
-<article class="tool-card">
-<header class="tool-card-heading"><div><p class="tool-version">v2.053.12 · 172 KB</p><h3>Cookie Monster+ patcher</h3></div><span class="tool-status">Steam · Cookie Clicker 2.053</span></header>
-<p>The patcher installs Cookie Monster+ as a local mod beside Cookie Monster. It downloads the current build, checks every file against its published SHA-256 digest and does not change your save.</p>
-<ol class="tool-steps">
-<li>Subscribe to Cookie Monster in the Steam Workshop. Start Cookie Clicker once.</li>
-<li>Download the patcher and extract the archive.</li>
-<li>Double-click <code>Install Cookie Monster Plus.command</code> on macOS or the <code>.bat</code> file on Windows. On Linux, run <code>python3 install_cookie_monster_plus.py</code>.</li>
-<li>Restart Cookie Clicker. The autoplay settings are in Options, under Cookie Monster.</li>
-</ol>
-<div class="tool-actions"><a class="primary-action" href="https://github.com/JWKNT/cookie-clicker/releases/download/v2.053.12/Cookie-Monster-Plus-Patcher-v2.053.12.zip">Download patcher</a><a href="https://github.com/JWKNT/cookie-clicker/releases/tag/v2.053.12">Release notes</a><a href="https://github.com/JWKNT/cookie-clicker">Source</a></div>
-<details class="tool-details"><summary>Verification and removal</summary>
-<p>If the patcher does not find the game, drag the Cookie Clicker folder into its window. Python 3.9 or newer is necessary. If macOS blocks the file, Control-click it and select Open.</p>
-<p>Run the patcher with <code>--verify</code> to check an installation, or with <code>--uninstall</code> to remove Cookie Monster+. An earlier copy moves to <code>mods/.cookie-monster-plus-backups</code>. The Workshop copy of Cookie Monster stays unchanged. If both mods are on, only Cookie Monster+ runs.</p>
-<p class="tool-hash"><span>SHA-256</span> <code>8dca709e533223853c92aca26ec37423d38a3190ead4caab2b89b6991e60f947</code></p>
-</details>
-<details class="tool-details"><summary>Browser version</summary>
-<p>In the browser version of the game, open the developer console and enter this line:</p>
-<p><code>Game.LoadMod('https://jehlp.net/cookie-clicker/mod/main.js')</code></p>
-<p>The mod does not stay installed after you reload the page.</p>
-</details>
-</article>
-<p class="tools-note">Keep a copy of your save before you install any mod. Cookie Monster is by the Cookie Monster Team under the MIT License, and the changes that make Cookie Monster+ use the same license.</p>
 </section>
 
 </main></div>

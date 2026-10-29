@@ -28,7 +28,7 @@ import urllib.error
 import urllib.request
 from pathlib import Path
 
-VERSION = "2.053.12"
+VERSION = "2.053.13"
 REPOSITORY = "JWKNT/cookie-clicker"
 RAW_BASE = f"https://raw.githubusercontent.com/{REPOSITORY}"
 PAGE = "https://jehlp.net/cookie-clicker/"
@@ -325,7 +325,7 @@ def run(arguments: list[str] | None = None) -> int:
     action.add_argument("--verify", action="store_true", help="check the installed files against the release")
     action.add_argument("--uninstall", action="store_true", help="remove Cookie Monster+ (moved to a backup folder)")
     parser.add_argument("--offline", action="store_true", help="install the files bundled with this patcher")
-    parser.add_argument("--version", help="install this release instead of the latest one, for example 2.053.12")
+    parser.add_argument("--version", help="install this release instead of the latest one, for example 2.053.13")
     parser.add_argument("--force", action="store_true", help="install even if Cookie Monster is not installed")
     options = parser.parse_args(arguments)
 

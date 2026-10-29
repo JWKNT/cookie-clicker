@@ -1,0 +1,40 @@
+import CalculateGains from '../Calculations/CalculateGains.js';
+import CheckOtherAchiev from '../Calculations/CheckOtherAchiev.js';
+import CopyData from '../SimulationData/CopyData.js';
+import {
+  SimAchievementsOwned,
+  SimCookiesPs,
+  SimGod1, // eslint-disable-line no-unused-vars
+  SimGod2, // eslint-disable-line no-unused-vars
+  SimGod3, // eslint-disable-line no-unused-vars
+} from '../VariablesAndData.js';
+
+/**
+ * This functions calculates the cps and cost of changing a Dragon Aura
+ * It is called by CM.Disp.AddAuraInfo()
+ * @param	{number}	god		The number of the slot to be swapped in
+ * @param	{number     slot	The slot the god will go to
+ * @returns {number} 	CM.Sim.cookiesPs - Game.cookiesPs   The bonus cps and the price of the change
+ */
+export default function CalculateChangeGod(god, slot) {
+  if (!Game.Objects.Temple.minigameLoaded) return 0;
+  CopyData();
+  const { minigame } = Game.Objects.Temple;
+  const CurrentSlot = minigame.godsById[god].slot;
+  if (CurrentSlot === '0') SimGod1 = minigame.slot[slot];
+  else if (CurrentSlot === '1') SimGod2 = minigame.slot[slot];
+  else if (CurrentSlot === '2') SimGod3 = minigame.slot[slot];
+
+  if (slot === 0) SimGod1 = god;
+  else if (slot === 1) SimGod2 = god;
+  else if (slot === 2) SimGod3 = god;
+
+  const lastAchievementsOwned = SimAchievementsOwned;
+  CalculateGains();
+
+  CheckOtherAchiev();
+  if (lastAchievementsOwned !== SimAchievementsOwned) {
+    CalculateGains();
+  }
+  return SimCookiesPs - Game.cookiesPs;
+}

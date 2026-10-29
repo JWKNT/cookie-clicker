@@ -122,29 +122,6 @@ noscript { font-size:.95rem; }
   .formula-scroll { display:inline; overflow:visible; padding:0; margin:0; }
   .equation math { font-size:11pt; }
 }
-/* Download card: the shared reader pattern (site-theme v2 reader.css), scoped to this page */
-.tool-card { margin:1.5rem 0; border-block:1px solid var(--line-strong); background:var(--paper); font-family:var(--ui, var(--serif)); font-size:1rem; line-height:1.6; }
-.tool-card-heading { display:flex; flex-wrap:wrap; align-items:start; justify-content:space-between; gap:.6rem 18px; padding:14px 4px 11px; border-bottom:1px solid var(--line); }
-.tool-card h3 { margin:3px 0 0; color:var(--blue-dark); font-size:1.15rem; font-weight:600; }
-.tool-version { margin:0; color:var(--muted); font:var(--text-meta, .75rem)/1.4 var(--mono); }
-.tool-status { flex:none; padding:3px 7px; border:1px solid var(--line-strong); color:var(--muted-strong); font:var(--text-ui, .875rem)/1.4 var(--ui, var(--serif)); }
-.tool-card > p { margin:0; padding:14px 4px 7px; }
-.tool-steps { margin:0; padding:4px 18px 13px 30px; color:var(--muted-strong); }
-.tool-steps li { padding:3px 0 3px 4px; }
-.tool-card code { padding:1px 3px; background:var(--surface); color:var(--ink); font:var(--text-ui, .875rem)/1.5 var(--mono); overflow-wrap:anywhere; }
-.tool-actions { display:flex; flex-wrap:wrap; align-items:center; gap:9px; padding:0 4px 17px; }
-.tool-actions a { min-height:var(--control-size, 2.25rem); padding:7px 10px; border:1px solid var(--line-strong); color:var(--blue-dark); font:var(--text-ui, .875rem)/1.4 var(--ui, var(--serif)); text-decoration:none; }
-.tool-actions a:hover { border-color:var(--blue); color:var(--blue); }
-.tool-actions .primary-action { border-color:var(--blue); background:var(--surface-blue); }
-.tool-details { margin:0; padding:0; border-block:0; border-top:1px solid var(--line); }
-.tool-details summary { padding:9px 4px; color:var(--muted); font:var(--text-ui, .875rem)/1.4 var(--ui, var(--serif)); }
-.tool-details[open] summary { border-bottom:1px solid var(--line); color:var(--blue-dark); }
-.tool-details > p { margin:0; padding:12px 4px 0; color:var(--muted-strong); font-size:1rem; }
-.tool-details > p:last-child { padding-bottom:13px; }
-.tool-hash { display:grid; grid-template-columns:auto minmax(0,1fr); gap:9px; align-items:baseline; }
-.tool-hash span { color:var(--faint); font:var(--text-meta, .75rem)/1.4 var(--mono); text-transform:uppercase; }
-.tool-hash code { font-size:var(--text-meta, .75rem); }
-.tools-note { margin:1.5rem 0 0; padding:14px 17px; border-left:2px solid var(--blue); background:var(--surface); font-size:.98rem; line-height:1.65; }
 /* Numeric tables keep tabular figures in a keyboard-scrollable region */
 .table-scroll { margin:1.5rem 0; }
 .numeric-table { font-size:.92rem; font-variant-numeric:lining-nums tabular-nums; }
@@ -158,8 +135,3 @@ noscript { font-size:.95rem; }
 .garden-empty { fill:none; stroke:var(--line-strong); stroke-width:1.5; stroke-dasharray:4 4; }
 .garden-label { fill:var(--ink); font-family:var(--serif); font-size:18px; font-weight:bold; }
 .plot-label { fill:var(--muted); font-family:var(--sans); font-size:13px; }
-@media(max-width:720px) {
-  .tool-steps { padding-right:4px; }
-  .tool-hash { display:block; }
-  .tool-hash span { display:block; margin-bottom:4px; }
-}

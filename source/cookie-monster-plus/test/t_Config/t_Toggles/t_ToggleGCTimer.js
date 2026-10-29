@@ -1,0 +1,45 @@
+import { before, beforeEach, describe, it } from 'mocha';
+import { assert } from 'chai';
+import { l } from '../../GlobalsForTesting.js';
+
+import ToggleGCTimer from '../../../src/Config/Toggles/ToggleGCTimer.js';
+import { GCTimers } from '../../../src/Disp/VariablesAndData.js';
+import { CacheGoldenShimmersByID } from '../../../src/Cache/VariablesAndData.js';
+
+describe('ToggleGCTimer', () => {
+  global.l = l;
+
+  beforeEach(() => {
+    global.domids = {};
+    GCTimers[0] = { style: {} };
+    GCTimers[1] = { style: {} };
+    CacheGoldenShimmersByID[0] = {
+      l: { style: { left: 'Test00', top: 'Test01' } },
+    };
+    CacheGoldenShimmersByID[1] = {
+      l: { style: { left: 'Test10', top: 'Test11' } },
+    };
+    ToggleGCTimer();
+  });
+
+  describe('GCTimer = 0', () => {
+    before(() => {
+      Game.mods.cookieMonsterFramework.saveData.cookieMonsterMod.settings.GCTimer = 0;
+    });
+    it('Toggle style correctly', () => {
+      assert.equal(GCTimers[0].style.display, 'none');
+      assert.equal(GCTimers[1].style.display, 'none');
+    });
+  });
+  describe('GCTimer = 1', () => {
+    before(() => {
+      Game.mods.cookieMonsterFramework.saveData.cookieMonsterMod.settings.GCTimer = 1;
+    });
+    it('Toggle style correctly', () => {
+      assert.equal(GCTimers[0].style.display, 'block');
+      assert.equal(GCTimers[0].style.left, 'Test00');
+      assert.equal(GCTimers[0].style.top, 'Test01');
+      assert.equal(GCTimers[1].style.display, 'block');
+    });
+  });
+});

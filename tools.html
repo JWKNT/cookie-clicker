@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Download the patcher that installs Cookie Monster+, the Cookie Monster mod with optimal autoplay, in the Steam version of Cookie Clicker.">
+    <meta name="theme-color" content="#fbfaf7">
+    <link rel="canonical" href="https://jehlp.net/cookie-clicker/tools.html">
+    <title>Cookie Clicker Tools · jehlp.net</title>
+    <link rel="icon" href="assets/favicon.png" type="image/png">
+    <script src="https://jehlp.net/site-theme/v2/theme.js?v=20261009-reading-folio"></script>
+    <link rel="stylesheet" href="https://jehlp.net/site-theme/v2/base.css?v=20261009-reading-folio">
+    <link rel="stylesheet" href="https://jehlp.net/site-theme/v2/reader.css?v=20261009-reading-folio">
+  </head>
+  <body>
+    <a class="skip-link" href="#downloads">Skip to downloads</a>
+
+    <header class="site-header site-header--identity">
+      <div class="site-identity site-brand"><img class="site-mark" src="assets/mark.png" alt="" width="32" height="32"><a class="site-title" href="./">Cookie Clicker</a></div>
+      <nav aria-label="Main">
+        <a href="./">Guide</a>
+        <a href="tools.html" aria-current="page">Tools</a>
+        <a href="paper.pdf">Paper</a>
+        <span class="site-utility-pair">
+          <a class="site-home" aria-label="Home — jehlp.net" href="https://jehlp.net/"><span aria-hidden="true">Home</span></a>
+          <button type="button" data-theme-toggle="" class="theme-toggle" aria-label="Use dark theme"></button>
+        </span>
+      </nav>
+    </header>
+
+    <main class="tools-shell">
+      <section class="tools-intro">
+        <p class="tools-kicker">Steam · Cookie Clicker 2.053 · macOS, Windows and Linux</p>
+        <h1>Cookie Monster+</h1>
+        <p>Requires the Steam version of the game and the Cookie Monster mod from the Steam Workshop.</p>
+      </section>
+
+      <section class="tool-list" id="downloads" aria-label="Downloads">
+        <article class="tool-card">
+          <header class="tool-card-heading">
+            <div>
+              <p class="tool-version">v2.053.13 · 262 KB</p>
+              <h2>Cookie Monster+ patcher</h2>
+            </div>
+            <span class="tool-status">Autoplay mod</span>
+          </header>
+          <p>This tool installs Cookie Monster+ as a local mod beside Cookie Monster. Cookie Monster+ plays by the rules in the <a href="./">guide</a>. It clicks, buys, manages every minigame and ascends at the optimal time. Each system has a switch in the settings. Version 2.053.13 publishes a readable build and the full source.</p>
+          <ol class="tool-steps">
+            <li>Subscribe to Cookie Monster in the Steam Workshop. Start Cookie Clicker once.</li>
+            <li>Download the patcher and extract the archive.</li>
+            <li>Double-click <code>Install Cookie Monster Plus.command</code> on macOS or the <code>.bat</code> file on Windows. On Linux, run <code>python3 install_cookie_monster_plus.py</code>.</li>
+            <li>Restart Cookie Clicker. The autoplay settings are in Options, under Cookie Monster.</li>
+          </ol>
+          <div class="tool-actions">
+            <a class="primary-action" href="https://github.com/JWKNT/cookie-clicker/releases/download/v2.053.13/Cookie-Monster-Plus-Patcher-v2.053.13.zip">Download patcher</a>
+            <a href="https://github.com/JWKNT/cookie-clicker/releases/tag/v2.053.13">Release notes</a>
+            <a href="https://github.com/JWKNT/cookie-clicker/tree/main/source/cookie-monster-plus">Source</a>
+          </div>
+          <details class="tool-details">
+            <summary>Verification and removal</summary>
+            <p>The patcher downloads the current build and checks every file against its published SHA-256 digest. It does not change your save. Python 3.9 or newer is necessary.</p>
+            <p>If the patcher does not find the game, drag the Cookie Clicker folder into its window. If macOS blocks the file, Control-click it and select Open.</p>
+            <p>Run the patcher with <code>--verify</code> to check an installation, or with <code>--uninstall</code> to remove Cookie Monster+. An earlier copy moves to <code>mods/.cookie-monster-plus-backups</code>. The Workshop copy of Cookie Monster stays unchanged. If both mods are on, only Cookie Monster+ runs.</p>
+            <p class="tool-hash"><span>SHA-256</span> <code>077a5328602b4fd79a58113f38f8fc1bd8e2f698d514bed23e7f9ca2ea0809a9</code></p>
+          </details>
+          <details class="tool-details">
+            <summary>Browser version</summary>
+            <p>In the browser version of the game, open the developer console and enter this line:</p>
+            <p><code>Game.LoadMod('https://jehlp.net/cookie-clicker/mod/main.js')</code></p>
+            <p>The mod does not stay installed after you reload the page.</p>
+          </details>
+          <details class="tool-details">
+            <summary>Build from source</summary>
+            <p>The folder <code>source/cookie-monster-plus</code> contains the full source. Node.js 22 or newer is necessary.</p>
+            <p>Run <code>npm ci</code>, <code>npm test</code> and <code>npm run build:mod</code> in that folder. The build writes <code>mod/main.js</code>, which is identical to the published file.</p>
+          </details>
+        </article>
+      </section>
+
+      <aside class="tools-note">
+        <h2>Before installing</h2>
+        <p>Keep a copy of your save before you install any mod. Turn off other autoplay mods, because two mods that buy and click at the same time interfere.</p>
+      </aside>
+    </main>
+
+    <footer>
+      <p>Unofficial, noncommercial fan mod. Please support DashNet and own a copy of <cite>Cookie Clicker</cite>.</p>
+      <p>Cookie Monster is by the Cookie Monster Team under the MIT License. The Cookie Monster+ changes use the same license. The complete build includes jscolor, so it is under the GPL 3.0 or later.</p>
+    </footer>
+  </body>
+</html>

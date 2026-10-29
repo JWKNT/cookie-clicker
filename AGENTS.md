@@ -14,5 +14,9 @@ Describe the style as ASD-STE100-guided. Do not claim full compliance without a 
 - Edit `src/index.html`, not `index.html`. Run `node build.mjs` to render the TeX formulas as MathML.
 - Run `npm test`. It checks that `index.html` is current, runs the page and mathematics tests, and runs the
   patcher tests.
-- After a paper change, rebuild `paper/cookie-clicker-optimal-play.pdf` from its `.tex` source and inspect it.
-- A new mod build follows `source/README.md`. The page, the manifest and the release must name the same version.
+- `tools.html` is hand-written. It holds the download card and follows the shared tools pattern of
+  `../site-theme/v2/reader.css`.
+- After a paper change, build `paper/cookie-clicker-optimal-play.tex` with `tectonic`, copy the PDF to `paper.pdf`
+  and inspect it. The site serves the paper at `/cookie-clicker/paper.pdf`.
+- A new mod build follows `source/README.md`. The Tools page, the manifest and the release must name the same
+  version.

@@ -1,8 +1,17 @@
 # Licenses
 
-`main.js` is a modified build of Cookie Monster, released under the MIT License
-below. The changes that make it Cookie Monster+ are in `source/cookie-monster-plus.patch`
-in https://github.com/JWKNT/cookie-clicker and are released under the same license.
+`main.js` is a readable (unminified) build of Cookie Monster+. It combines four parts:
+
+| Part | Author | License |
+| --- | --- | --- |
+| Cookie Monster | Cookie Monster Team | MIT (below) |
+| Cookie Monster Framework 0.2.4 | Cookie Monster Team | MIT (below) |
+| The Cookie Monster+ changes | jehlp.net | MIT (below) |
+| jscolor 2.5.2 | Jan Odvarko, East Desire | GPL-3.0-or-later (`LICENSE-GPL-3.0.txt`) |
+
+Because jscolor is under the GNU General Public License, the combined file is distributed under the GNU
+General Public License, version 3 or later. The MIT License below applies to the Cookie Monster parts on
+their own. The complete source is in `source/` at https://github.com/JWKNT/cookie-clicker.
 `thumbnail.png` is the Cookie Monster thumbnail.
 
 The MIT License (MIT)
