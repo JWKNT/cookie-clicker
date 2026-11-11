@@ -29,7 +29,7 @@
 <p>A large bank changes the rule. If the bank holds enough for either item but not for both, buy the item with the larger \(\Delta_i\) first. In simulations this difference changes the time to a goal by less than 0.4%.</p>
 <div class="experiment">
 <h3>Which purchase first</h3>
-<p>Set the income and the two items. The display compares the two orders.</p><div id="order-demo"></div>
+<div id="order-demo"></div>
 <noscript><p>Example: the income is 100 per second. Item A costs 1,000 and adds 10. Item B costs 5,000 and adds 80. Then \(E_A = 110\) and \(E_B = 112.5\). Buy A first. Both items arrive after 55.5 seconds, and after 55.6 seconds in the other order.</p></noscript></div>
 </section>
 
@@ -40,14 +40,14 @@
 <p>cookies, where \(b\) is the bank. Below the cap, at a bank of 6,000 seconds of CpS, the payout is 15% of the bank. Thus each cookie in the bank earns a part of every Lucky! payout.</p>
 <div class="experiment">
 <h3>Lucky! payout</h3>
-<p>Move the bank. The payout grows with the bank until the cap.</p><div id="lucky-demo"></div>
+<div id="lucky-demo"></div>
 <noscript><p>With a bank of 3,000 seconds of CpS, Lucky! pays 450 seconds of CpS. From 6,000 seconds of CpS, it always pays 900 seconds.</p></noscript></div>
 <p>First, find how often golden cookies appear. The game waits at least \(t_{\min} = 5\) minutes and at most \(t_{\max} = 15\) minutes. In each frame after the minimum, the chance of a golden cookie is \(\bigl((t - t_{\min})/W\bigr)^5\). Here \(t\) counts frames, and the window has \(W\) frames at 30 frames per second. The chance that no cookie appears before the fraction \(x\) of the window is close to \(e^{-W x^6/6}\). One integral then gives the mean fraction:</p>
 <div class="equation" tabindex="0">\[ \mathbb{E}[x] \approx \Gamma\!\left(\tfrac{7}{6}\right) \left(\frac{6}{W}\right)^{1/6} \]</div>
 <p>At the base frequency, a golden cookie appears every 447 seconds on average. Lucky day and Serendipity each halve both limits. With both upgrades, the mean interval is 121 seconds.</p>
 <div class="experiment">
 <h3>Golden cookie interval</h3>
-<p>Select the frequency upgrades.</p><div id="interval-demo"></div>
+<div id="interval-demo"></div>
 <noscript><p>Without upgrades, the mean interval is 447 seconds. With Lucky day and Serendipity, it is 121 seconds.</p></noscript></div>
 <p>About 42% of golden cookies give Lucky!. They occur at the rate \(\lambda_L = 0.42/\mathbb{E}[I]\), where \(I\) is the interval. Thus a banked cookie earns \(0.15\,g\,\lambda_L\) per second, where \(g\) multiplies golden cookie gains. A cookie spent on item \(i\) earns \(\bar\Delta_i / p_i\) per second.</p>
 <div class="theorem"><p><strong>Rule 2 (the Lucky! bank).</strong> Spend the cookie if and only if</p>
@@ -72,7 +72,7 @@
 <p>For \(\beta = 2\), \(v^\star \approx 7.9\), and for \(\beta = 3\), \(v^\star \approx 16.8\). Prestige grows by the cube root of \(v^\star\) in each run: about 2.0 and 2.6 times.</p>
 <div class="experiment">
 <h3>Growth in each run</h3>
-<p>Select the growth exponent of the current run.</p><div id="ascend-demo"></div>
+<div id="ascend-demo"></div>
 <noscript><p>The optimal factors are 4.24 at \(\beta = 1.5\), 7.87 at \(\beta = 2\), 16.8 at \(\beta = 3\), 28.4 at \(\beta = 4\) and 60.9 at \(\beta = 6\).</p></noscript></div>
 <p>A familiar rule says: ascend when the marginal rate falls to the average rate. This is the marginal value theorem. It is correct only at \(\beta = 3\), because it ignores that later runs become longer or shorter. At \(\beta = 6\), it waits 6.5 times too long.</p>
 <p>Early in the game, prestige changes the speed very little, and a reset only loses time. If every run has the same speed, one long run is the fastest way to bake any number of cookies. The mod therefore uses a dynamic program over all future ascensions, including the heavenly upgrades that each ascension can buy. Late in the game it agrees with the formula above, and early in the game it does not reset too soon.</p>
@@ -90,7 +90,7 @@
 <p>Neverclick and Hardcore need a <dfn>Born again</dfn> run, which starts without prestige or upgrades. A simulation of that run needs about 4 hours for both achievements, so the mod starts one after about 93 hours of play. Wrinklesquisher and Moistburster need 50 and 200 wrinklers burst in one run. Such a spree costs some minutes of income, so the mod does it when the run is long enough.</p>
 <div class="experiment">
 <h3>Worth of an achievement</h3>
-<p>Set the kittens, the milk and the hours played.</p><div id="worth-demo"></div>
+<div id="worth-demo"></div>
 <noscript><p>With eight kittens, 952% milk and a milk multiplier of 1.1, one achievement adds about 2.1% to production. After 77 hours of play, it is worth about 1.65 hours.</p></noscript></div>
 </section>
 
@@ -105,7 +105,7 @@
 <p>The mouse upgrades make a click worth 15% of CpS, so 20 clicks per second bring 3 times CpS. On a late-game save, the mod cycled about 2,200 buildings per frame in 3 milliseconds. The buff averaged ×3,329, and the income increased to about 22,000 times CpS.</p>
 <div class="experiment">
 <h3>Godzamok buff</h3>
-<p>Select the slot and the number of buildings that the mod sells and buys back in each frame.</p><div id="godzamok-demo"></div>
+<div id="godzamok-demo"></div>
 <noscript><p>In the first slot, 2,200 buildings per frame make the buff reach ×6,601 after 10 seconds. The average is ×3,312.</p></noscript></div>
 </section>
 
@@ -129,7 +129,7 @@
 <p>With Godzamok, click income is thousands of times CpS, so the mod keeps a pledge active. It lets wrath reach stage 3 once for an achievement. Then it revokes the Elder Covenant, because the covenant costs 5% of CpS and a pledge costs nothing.</p>
 <div class="experiment">
 <h3>Wrinklers and the stage</h3>
-<p>Set the wrinklers and the ratio of click income to CpS.</p><div id="wrinkler-demo"></div>
+<div id="wrinkler-demo"></div>
 <noscript><p>Ten wrinklers give \(W = 6\). With click income 3 times CpS, wrath earns more. With click income 1,000 times CpS, calm earns about 38% more.</p></noscript></div>
 </section>
 
@@ -142,7 +142,7 @@
 <p><strong>Garden.</strong> New seeds come only from mutations, and mutations grow only in empty tiles next to mature parent plants. Plant parent kind A on the tiles where \(x + y\) is even and \(x\) is even. Plant kind B where \(x + y\) is even and \(x\) is odd, and leave the other tiles empty. Then every empty tile touches both kinds, on every plot of at least 2 × 2 tiles. The mod breeds Thumbcorn first, which adds 2% click power, and then Cronerice, Gildmillet, Clover and Golden clover. Wood chips give three mutation rolls in each tick.</p>
 <div class="experiment">
 <h3>Breeding layout</h3>
-<p>Select the farm level. A and B mark the parent tiles.</p><div id="garden-demo"></div>
+<p>A and B mark the parent tiles.</p><div id="garden-demo"></div>
 <noscript><p>On the 2 × 2 plot of farm level 1, the parents are on one diagonal. The two empty tiles each touch both parents.</p></noscript></div>
 <p><strong>Stock Market.</strong> Prices return toward the resting value \(R_i = 10 + 10\,i + (\ell_{\text{bank}} - 1)\). A purchase costs at most 20% extra and a sale costs nothing. Thus a purchase below \(0.6\,R_i\) and a sale at \(R_i\) return at least \(1/(0.6 \cdot 1.2) - 1 = 39\%\). The office upgrades open loans. Each loan multiplies CpS for a period and then divides it for a longer period.</p>
 <div class="table-scroll" tabindex="0"><table class="numeric-table">
