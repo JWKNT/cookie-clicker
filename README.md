@@ -1,16 +1,18 @@
-# Cookie Clicker: optimal play and the Cookie Monster+ patcher
+# Cookie Clicker: four rules and the Cookie Monster+ patcher
 
 [Guide](https://jehlp.net/cookie-clicker/) · [Paper (PDF)](https://jehlp.net/cookie-clicker/paper.pdf) · [Download the patcher](https://jehlp.net/cookie-clicker/tools.html)
 
-This repository contains a guide to the mathematics of optimal play in *Cookie Clicker*, the paper with the
-complete proofs, and a patcher. The patcher installs Cookie Monster+, a version of the Cookie Monster mod that
-plays by these rules, in the Steam version of the game.
+This repository contains a guide to four decisions in *Cookie Clicker*, the paper with the proofs, and a
+patcher. Each decision has a rule that is exact in a small model of the game. No rule is proved for the whole
+game. The patcher installs Cookie Monster+, a version of the Cookie Monster mod that plays by these rules, in
+the Steam version of the game.
 
 | Folder | Contents |
 | --- | --- |
-| `index.html`, `src/`, `assets/` | The guide at <https://jehlp.net/cookie-clicker/>, with interactive examples. |
+| `index.html`, `src/`, `assets/` | The guide at <https://jehlp.net/cookie-clicker/>, with calculated figures and tables. |
 | `tools.html` | The download page at <https://jehlp.net/cookie-clicker/tools.html>. |
 | `paper.pdf`, `paper/` | The paper at <https://jehlp.net/cookie-clicker/paper.pdf> and its LaTeX source. |
+| `paper/lean/` | Lean 4 proofs of three statements of the paper. |
 | `patcher/` | The patcher and its double-click launchers for macOS and Windows. |
 | `mod/` | The Cookie Monster+ build that the patcher installs, with its SHA-256 manifest. |
 | `source/` | The full, readable Cookie Monster+ source and the build steps. |
@@ -45,21 +47,25 @@ Cookie Monster+ keeps every Cookie Monster feature and adds autoplay. Each syste
 - It trains the dragon, plays the seasons, spends sugar lumps and runs the Pantheon, Grimoire, Garden and
   Stock Market.
 - It takes achievements when they are worth their cost, including one Born again run.
-- It spends heavenly chips by the ratio rule and ascends when a dynamic program says that ascension is optimal.
+- It spends heavenly chips by the ratio rule and plans its ascensions with a dynamic program.
 
 ## The rules
 
-The guide explains each rule. The paper proves them.
+The guide explains each rule. The paper, *Four decisions in Cookie Clicker*, proves each rule in a model and
+gives two examples in which a rule loses time outside its model.
 
-1. **Purchase order.** Buy the item with the smallest $p/c + p/\Delta$: the time to save for it plus its
-   payback time.
-2. **The "Lucky!" bank.** Spend a cookie when the purchase pays back faster than
-   $\theta = 1/(0.15\,g\,\lambda_L)$, about 1,900 seconds with both frequency upgrades.
-3. **Heavenly chips.** Buy upgrades in decreasing order of $(1 - 1/m)/p$.
-4. **Ascension.** Late in the game, each run multiplies all-time cookies by the root of
+1. **Purchase order.** For two items that the bank cannot pay, buy first the item with the smaller
+   $p/c + p/\Delta$: the time to save for it plus its payback time. With three items this rule can lose time.
+2. **The Lucky bank.** Up to the cap of the Lucky payout, a purchase increases the expected income when it
+   pays back faster than $\theta = 1/(0.15\,g\,\lambda)$, about 1,915 seconds with the two frequency upgrades.
+3. **Heavenly chips.** If each chip costs the same effort, buy upgrades in decreasing order of $(1 - 1/m)/p$.
+4. **Ascension.** Late in the game, each run multiplies all-time cookies by the one root above 1 of
    $\tfrac{\beta}{3}(1 - 1/v) = (1 - v^{-\gamma/3})/\gamma$, where $\gamma = 3/\beta - 1$.
-5. **Achievements.** An action that delays play by $D$ pays when $D$ is less than the share of income
-   that its achievements add, multiplied by the remaining play time.
+5. **Achievements.** An action that stops production for $D$ and then multiplies it by $M$ saves time when
+   $D < H(1 - 1/M)$, where $H$ is the time to the goal.
+
+Lean 4 has checked the method for a fixed list of purchases, the example with three items and the inequality
+of rule 5. The files are in [paper/lean](paper/lean).
 
 ## Development
 
@@ -68,9 +74,16 @@ npm ci
 npm test
 ```
 
-Edit `src/index.html` and run `node build.mjs` to render its TeX formulas as MathML in `index.html`. The site
-uses the shared jehlp.net theme. GitHub Pages publishes the repository root from `main`. To publish a new mod
-build, follow [source/README.md](source/README.md).
+Edit `src/index.html` and run `node build.mjs`. The build changes the TeX formulas to MathML and calculates
+the figures and tables of `src/figures.mjs` with `assets/cookie-math.mjs`. The page needs no script of its own.
+The site uses the shared jehlp.net theme. GitHub Pages publishes the repository root from `main`. To publish a
+new mod build, follow [source/README.md](source/README.md).
+
+The tests calculate each number that the page and the paper quote. With `pdftotext` installed, they also check
+that each reference of the page is on the named page of `paper.pdf`.
+
+To build the paper, run `tectonic four-decisions.tex` in `paper/` and copy the PDF to `paper.pdf`. To check the
+Lean proofs, run `lake build` in `paper/lean/` with Lean 4.33.1.
 
 ## Licenses
 

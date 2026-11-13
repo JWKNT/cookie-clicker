@@ -1,9 +1,9 @@
 # Cookie Monster+ patcher
 
 This patcher installs Cookie Monster+ in the Steam version of *Cookie Clicker*.
-Cookie Monster+ is a version of the Cookie Monster mod with mathematically
-optimal autoplay. The guide at <https://jehlp.net/cookie-clicker/> explains
-the rules that it plays by.
+Cookie Monster+ is a version of the Cookie Monster mod with autoplay. The
+guide at <https://jehlp.net/cookie-clicker/> explains the rules that it plays
+by.
 
 ## Before you start
 

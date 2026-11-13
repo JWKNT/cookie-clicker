@@ -1,0 +1,748 @@
+\documentclass[11pt]{article}
+\input{style/preamble}
+
+\renewcommand{\papertitle}{Four decisions in Cookie Clicker}
+\renewcommand{\papersubtitle}{The order of purchases, the bank for golden cookies, the order of
+permanent upgrades, and the time of a reset}
+\renewcommand{\paperdate}{13 November 2026}
+\renewcommand{\paperrunning}{Four decisions in Cookie Clicker}
+\hypersetup{pdftitle={Four decisions in Cookie Clicker},pdfauthor={KNT, Fable 5.2}}
+
+% An example has the counter of the statements and no box.
+\theoremstyle{boxed}
+\newtheorem{example}[theorem]{Example}
+
+\begin{document}
+\maketitleblock
+
+\emph{Cookie Clicker} is a game in which cookies buy items that bake more cookies. Four
+decisions return through the whole game: which item to buy first, how many cookies to keep for
+the golden cookies, in which order to buy the permanent upgrades, and when to reset the game for
+a permanent bonus. For each decision we state a model and prove the rule that is exact in that
+model. Two examples give cases in which a rule loses time: the index rule with three purchases,
+and the ratio rule for upgrades if the cost of a chip changes.
+Each statement is about its model. The fastest way through the whole game is not known.
+Fable~5.2 is a language model. Section~\ref{sec:status} states the part of each author and the
+statements that Lean has checked.
+
+\fronthead{The results in six sentences}
+\begin{enumerate}[leftmargin=1.6em]
+\item Let two items be too dear for the bank. The faster order has the smaller index
+$E=p/c+p/\Delta$ first, where $p$ is the price, $\Delta$ is the income that the item adds, and
+$c$ is the present income (Theorem~\ref{thm:pair}).
+\item With three items, the smallest index first can lose time. For a finite list, a recursion
+over the sets of bought items gives the least time, and a schedule with longer waits is never
+faster (Theorem~\ref{thm:list}).
+\item A \emph{Lucky} golden cookie pays 15\% of the bank, up to a cap. Below the cap, a
+purchase increases the expected income exactly when its payback time $p/\Delta$ is less than
+$\theta=1/(0.15\,g\lambda)$ (Theorem~\ref{thm:bank}).
+\item If each chip costs the same effort, the fastest orders of the permanent upgrades are the
+orders along which $(1-1/m)/p$ does not increase. Here $p$ is the price in chips and $m$ is the
+factor of the upgrade (Theorem~\ref{thm:ratio}).
+\item A pause of $D$ seconds that multiplies all later rates by $M$ shortens a task of $H$
+seconds exactly when $D<H(1-1/M)$ (Proposition~\ref{prop:pause}).
+\item Let a run bake cookies in proportion to $t^{\beta}$, with a speed in proportion to the
+prestige. A chain of resets is fastest exactly when each run multiplies the cookies of all runs
+by $v^{\star}$, the one root of an equation in $\beta$ (Theorem~\ref{thm:reset}).
+\end{enumerate}
+
+\contentsblock
+
+\newpage
+\section{The game and the models}\label{sec:intro}
+
+\subsection{The game}
+
+The player owns \emph{buildings} and \emph{upgrades}. They fix the number of cookies that the
+game adds to the \emph{bank} in each second. We call this number the \emph{income} and write $c$
+for it. A purchase takes its price from the bank. Copy number $n+1$ of a building costs
+$1.15^{\,n}$ times the first copy, so the next purchase always needs a longer wait or a larger
+income.
+
+A \emph{golden cookie} appears at random times. A click on it gives one of several effects.
+Section~\ref{sec:bank} is about the effect \emph{Lucky}, which pays a part of the bank.
+
+The player can \emph{reset} the game at any time. The game calls this an ascension. A reset
+removes the bank, the buildings and the upgrades. A \emph{run} is the play between two resets.
+Let $A$ be the number of cookies that all runs have baked. The \emph{prestige} is
+\begin{equation}\label{eq:prestige}
+  P=\Bigl(\frac{A}{10^{12}}\Bigr)^{1/3}.
+\end{equation}
+The game uses the whole part of $P$. After a reset, each unit of prestige adds 1\% to the
+income, and each new unit gives one \emph{heavenly chip}. Chips buy \emph{permanent upgrades},
+which stay after a reset. All statements about the game are for version~2.053~\cite{Game}.
+
+\subsection{The models}
+
+Each section fixes a model: a small set of rules in which the decision has an exact answer. The
+models leave out parts of the game. The game rounds prices to whole numbers. Temporary effects
+change the income. Golden cookies arrive at random times.
+
+A random income needs care, because a mean income does not give a mean time. Suppose that the
+income is $1$ or $3$, each with chance one half, and that the player needs $3$ cookies. The mean
+income is $2$, and at this income the wait is $\frac32$ seconds. The wait is in fact $3$ seconds
+or $1$ second, and its mean is $2$ seconds. For this reason Section~\ref{sec:bank} compares
+expected incomes at one moment, and it makes no statement about the time to a goal.
+
+A guide for players and the mod Cookie Monster+ use the four rules together~\cite{Repo}. Such a
+player is a heuristic. We have no proof that it is the fastest player, and no bound for its
+loss.
+
+\subsection{Authorship and verification}\label{sec:status}
+
+KNT is a person. Fable~5.2 is the language model Claude Fable~5.2. KNT set the task and directed
+the work. An earlier version of this paper, of October 2026, had the author line Claude
+(Anthropic). It called the rules optimal play. An audit of that version found claims without a
+proof and gave Examples~\ref{ex:three} and~\ref{ex:effort}. Fable~5.2 wrote this version. The
+exact mean of Lemma~\ref{lem:interval} and the uniqueness in Theorem~\ref{thm:reset} are new in
+it.
+
+Lean~4 has checked three statements, with rational numbers. The names are in the namespace
+\lean{CookieClicker}. Theorem~\ref{thm:list} is \lean{complete_global_optimal}. The times of
+Example~\ref{ex:three} are \lean{greedy_counterexample}, with
+\lean{counterexample_greedy_choices} for the indices. The inequality of
+Proposition~\ref{prop:pause} is \lean{achievement_break_even}. The Lean kernel accepts the
+proofs with the axioms \lean{propext}, \lean{Classical.choice} and \lean{Quot.sound} only. The
+files are in the folder \texttt{paper/lean} of~\cite{Repo}.
+
+The other statements have no formal proof. A program computes each number of
+Tables~\ref{tab:interval} and~\ref{tab:vstar}, and the tests of~\cite{Repo} compare the numbers
+with this text. We cite \cite{Charnov} and \cite{Smith} for the names of two rules, and we did
+not read them for this paper. No referee has read the text.
+
+\begin{notation}{symbols}
+\begin{itemize}[leftmargin=1.2em]
+\item $c$ is the income in cookies per second, and $b$ is the number of cookies in the bank.
+\item An item has a price $p$ and a \emph{gain} $\Delta$: the purchase takes $p$ from the bank
+and adds $\Delta$ to the income.
+\item $A$ is the number of cookies that all runs have baked, and $P$ is the prestige
+\eqref{eq:prestige}.
+\item $\beta$ is the \emph{growth exponent} of a run: the run bakes cookies in proportion to
+$t^{\beta}$. We put $\gamma=3/\beta-1$.
+\item $\EE$ is an expected value.
+\end{itemize}
+\end{notation}
+
+\section{The order of purchases}\label{sec:purchases}
+
+\paragraph{Model.} The income is $c>0$ and the bank holds $b\ge0$ cookies. There is a finite
+list of items. The player can buy an item when the bank holds its price. The purchase takes no
+time. Between two purchases the income does not change. Each item is bought once.
+
+A \emph{schedule} is an order $i_1,\dots,i_n$ of the items with times $0\le t_1\le\dots\le t_n$
+such that the bank holds the price of $i_k$ at the time $t_k$, for each $k$. Its \emph{time} is
+$t_n$. The \emph{earliest schedule} of an order buys each item at the first moment at which the
+bank holds its price.
+
+\subsection{Two purchases}
+
+\begin{maintheorem}{the index for two purchases}\label{thm:pair}
+Let $A$ and $B$ be items with positive prices and positive gains, and let
+$b\le\min(p_A,p_B)$. Let $T_{AB}$ be the time of the earliest schedule with $A$ first, and
+$T_{BA}$ the time with $B$ first. Put
+\[
+  E_i=\frac{p_i}{c}+\frac{p_i}{\Delta_i}.
+\]
+Then
+\[
+  T_{AB}-T_{BA}=\frac{\Delta_A\,\Delta_B}{(c+\Delta_A)(c+\Delta_B)}\,\bigl(E_A-E_B\bigr).
+\]
+So the order with $A$ first is faster exactly when $E_A<E_B$. The two orders end with the same
+income and an empty bank.
+\end{maintheorem}
+
+\begin{proof}
+With $A$ first, the bank reaches $p_A$ after $(p_A-b)/c$ seconds, and the purchase empties it.
+The income is then $c+\Delta_A$, and the bank reaches $p_B$ after $p_B/(c+\Delta_A)$ more
+seconds. The other order is symmetric. So
+\[
+  T_{AB}=\frac{p_A-b}{c}+\frac{p_B}{c+\Delta_A},\qquad
+  T_{BA}=\frac{p_B-b}{c}+\frac{p_A}{c+\Delta_B}.
+\]
+The bank $b$ cancels in the difference:
+\[
+  T_{AB}-T_{BA}
+  =p_A\Bigl(\frac1c-\frac1{c+\Delta_B}\Bigr)-p_B\Bigl(\frac1c-\frac1{c+\Delta_A}\Bigr)
+  =\frac{p_A\,\Delta_B}{c\,(c+\Delta_B)}-\frac{p_B\,\Delta_A}{c\,(c+\Delta_A)}.
+\]
+Take the factor $\Delta_A\Delta_B/((c+\Delta_A)(c+\Delta_B))$ out of the two terms. The first
+term leaves $p_A(c+\Delta_A)/(c\,\Delta_A)=E_A$, and the second leaves $E_B$.
+\end{proof}
+
+The first term of $E_i$ is the time to save for the item from an empty bank. The second term is
+the \emph{payback time}: the time in which the item earns its price. The add-on Cookie
+Monster~\cite{CM} shows the \emph{payback period} $\max(p_i-b,0)/c+p_i/\Delta_i$. If the bank
+holds no price, this is $E_i-b/c$, and it gives the same order as $E_i$.
+
+The condition $b\le\min(p_A,p_B)$ is necessary. Suppose that the bank holds each price and not
+the sum: $\max(p_A,p_B)\le b<p_A+p_B$. Then the first purchase needs no wait, and
+$T_{AB}=(p_A+p_B-b)/(c+\Delta_A)$. So the faster order has the larger gain first.
+
+\subsection{Three purchases}
+
+The index gives a rule for a longer list: buy the item with the smallest index, calculate the
+indices again at the new income, and continue. We call this the \emph{index rule}.
+
+\begin{example}[the index rule can lose time]\label{ex:three}
+Let $b=0$ and $c=1$. Three items have these prices and gains:
+\[
+  A=(3,1),\qquad B=(5,4),\qquad C=(6,6).
+\]
+The indices are $6$, $\frac{25}{4}$ and $7$, so the index rule buys $A$. At the income $2$ the
+indices of $B$ and $C$ are $\frac{15}{4}$ and $4$, so it buys $B$ and then $C$. Its time is
+\[
+  3+\frac52+\frac66=\frac{13}{2}.
+\]
+The order $B$, $C$, $A$ has the time
+\[
+  5+\frac65+\frac3{11}=\frac{356}{55}=\frac{13}{2}-\frac{3}{110}.
+\]
+The six orders have the times
+$\frac{13}{2}$ ($ABC$), $\frac{53}{8}$ ($ACB$), $\frac{33}{5}$ ($BAC$), $\frac{356}{55}$
+($BCA$), $\frac{395}{56}$ ($CAB$) and $\frac{538}{77}$ ($CBA$). The order $BCA$ is the fastest
+(Figure~\ref{fig:three}).
+\end{example}
+
+\begin{figure}[ht]
+\centering
+\begin{tikzpicture}[x=1.9cm,y=1cm]
+  % time axis
+  \draw[edge, slate!70] (0,-2.15) -- (6.75,-2.15);
+  \foreach \t in {0,...,6} {
+    \draw[edge, slate!70] (\t,-2.15) -- (\t,-2.25);
+    \node[note] at (\t,-2.5) {\t};
+  }
+  \node[note, anchor=west] at (6.8,-2.15) {seconds};
+  % index rule: A, B, C
+  \draw[cool] (0,0) -- (6.5,0);
+  \foreach \t/\name in {3/A,5.5/B,6.5/C} {
+    \node[port] at (\t,0) {};
+    \node[text=accent, font=\sffamily\small\bfseries] at (\t,0.36) {\name};
+  }
+  \node[note] at (1.5,-0.32) {income 1};
+  \node[note] at (4.25,-0.32) {income 2};
+  \node[note] at (6.0,-0.32) {income 6};
+  \node[note, anchor=east, text=accent] at (-0.12,0) {index rule};
+  \node[note, anchor=west, text=accent] at (6.62,0) {$\frac{13}{2}$};
+  % fastest: B, C, A
+  \draw[hot] (0,-1.25) -- (6.4727,-1.25);
+  \foreach \t/\name/\dx in {5/B/0,6.2/C/-0.04,6.4727/A/0.07} {
+    \node[circle, draw=warm, fill=white, line width=0.8pt, inner sep=1.5pt] at (\t,-1.25) {};
+    \node[text=warm, font=\sffamily\small\bfseries] at (\t+\dx,-0.89) {\name};
+  }
+  \node[note] at (2.5,-1.57) {income 1};
+  \node[note] at (5.6,-1.57) {income 5};
+  \node[note, anchor=east, text=warm] at (-0.12,-1.25) {fastest};
+  \node[note, anchor=west, text=warm] at (6.62,-1.25) {$\frac{356}{55}$};
+\end{tikzpicture}
+\caption{Example~\ref{ex:three}. The index rule buys the cheap item $A$ first. The fastest
+schedule waits two seconds longer for its first purchase, and it ends $\frac{3}{110}$ seconds
+earlier.}\label{fig:three}
+\end{figure}
+
+\subsection{A finite list}
+
+\begin{lemma}[no wait helps]\label{lem:earliest}
+Let all gains be nonnegative. In a schedule, each purchase is at the same time as in the
+earliest schedule of the same order, or later.
+\end{lemma}
+
+\begin{proof}
+Let the schedule have the times $t_1\le\dots\le t_n$, and let the earliest schedule of its order
+have the times $e_1\le\dots\le e_n$. Let $k\ge0$, suppose that $e_j\le t_j$ for all $j\le k$, and
+suppose that $e_{k+1}>t_{k+1}$.
+
+Before the time $t_{k+1}$, the schedule has made some of its first $k$ purchases and no others.
+The earliest schedule has made each of these purchases at the same time or earlier, and it
+makes purchase $k+1$ after $t_{k+1}$. The gains are nonnegative, so at each moment before
+$t_{k+1}$ its income is at least the income of the schedule. Thus up to the time $t_{k+1}$ it has
+received at least as many cookies. At that time it has paid the first $k$ prices and no others,
+and the schedule has paid these prices also. So its bank at the time $t_{k+1}$ holds at least
+the bank of the schedule before purchase $k+1$, and that bank holds the price of item $k+1$.
+Then the earliest schedule buys item $k+1$ at the time $t_{k+1}$ or earlier. This is not
+possible, so $e_{k+1}\le t_{k+1}$. The lemma follows by induction on $k$.
+\end{proof}
+
+\begin{theorem}[a finite list]\label{thm:list}
+Let $R$ be a finite list of items with prices $p_i\ge0$ and gains $\Delta_i\ge0$. For a bank
+$b\ge0$ and an income $c>0$ put
+\[
+  w_i=\frac{\max(p_i-b,\,0)}{c},\qquad b_i=\max(b-p_i,\,0),
+\]
+and define
+\[
+  V(b,c,\emptyset)=0,\qquad
+  V(b,c,R)=\min_{i\in R}\Bigl[\,w_i+V\bigl(b_i,\ c+\Delta_i,\ R\setminus\{i\}\bigr)\Bigr].
+\]
+Then $V(b,c,R)$ is the least time of a schedule that buys all items of $R$.
+\end{theorem}
+
+\begin{proof}
+By Lemma~\ref{lem:earliest} the least time is the least time of an earliest schedule. We use
+induction on the number of items. Let an earliest schedule have the first item $i$. It buys $i$
+after $w_i$ seconds. The bank is then $b_i$ and the income is $c+\Delta_i$. From this moment the
+schedule is an earliest schedule for the items of $R\setminus\{i\}$, and each earliest schedule
+for these items can follow. By the induction hypothesis the least time of the rest is
+$V(b_i,c+\Delta_i,R\setminus\{i\})$. The minimum over the first item $i$ is $V(b,c,R)$.
+\end{proof}
+
+The state after the purchases of a set $S$ of items depends on $S$ only, and not on the order.
+The income is $c+\sum_{i\in S}\Delta_i$. The bank is $\max(b-\sum_{i\in S}p_i,\,0)$, because
+$\max(\max(b-p,0)-q,\,0)=\max(b-p-q,\,0)$ for $q\ge0$. So a program needs one value of $V$ for
+each subset of $R$. For Example~\ref{ex:three} the recursion gives $\frac{356}{55}$.
+
+The model has a fixed list of items. In the game, a purchase can change other prices and gains,
+and a building has many copies. There the recursion is not available and the index rule is a
+heuristic. Example~\ref{ex:three} shows a loss of $0.4\%$. We do not know a bound for the loss
+in general.
+
+\section{The bank for golden cookies}\label{sec:bank}
+
+With golden cookies, a cookie in the bank has a use. A Lucky golden cookie pays
+\begin{equation}\label{eq:lucky}
+  g\,\min(0.15\,b,\ 900\,c)+13
+\end{equation}
+cookies. Here $b$ is the bank, $c$ is the income, and $g\ge1$ is a factor from upgrades. The
+payout increases with the bank up to the \emph{cap} $b=6000\,c$ (Figure~\ref{fig:lucky}).
+
+\begin{figure}[ht]
+\centering
+\begin{tikzpicture}[x=0.00105cm,y=0.0036cm]
+  \draw[edge, slate!70, -{Stealth[length=4pt]}] (0,0) -- (9700,0);
+  \draw[edge, slate!70, -{Stealth[length=4pt]}] (0,0) -- (0,1120);
+  \foreach \x in {3000,6000,9000} {
+    \draw[edge, slate!70] (\x,0) -- (\x,-22);
+    \node[note] at (\x,-75) {\x};
+  }
+  \foreach \y in {450,900} {
+    \draw[edge, slate!70] (0,\y) -- (-70,\y);
+    \node[note, anchor=east] at (-110,\y) {\y};
+  }
+  \draw[edge, slate!45, dashed] (6000,0) -- (6000,900);
+  \draw[edge, slate!45, dashed] (0,900) -- (6000,900);
+  \draw[cool] (0,0) -- (6000,900);
+  \draw[hot] (6000,900) -- (9300,900);
+  \node[port] at (6000,900) {};
+  \node[note, text=accent, anchor=south east] at (2950,480) {slope 0.15};
+  \node[note, text=warm, anchor=south] at (7650,930) {no gain above the cap};
+  \node[note, anchor=north] at (4850,-150) {bank, in seconds of income};
+  \node[note, anchor=south, rotate=90] at (-900,500) {payout, in seconds of income};
+\end{tikzpicture}
+\caption{The Lucky payout \eqref{eq:lucky} for $g=1$, without the constant $13$. Below the cap,
+each banked cookie adds $0.15$ cookies to the payout. The cap is at a bank of $6000$ seconds of
+income.}\label{fig:lucky}
+\end{figure}
+
+\paragraph{Model.} Lucky cookies arrive at the rate $\lambda$: in a short time $dt$ the
+expected number of Lucky cookies is $\lambda\,dt$. The player clicks each one at once. The
+\emph{expected income} at the bank $b$ and the income $c$ is
+\[
+  R(b,c)=c+\lambda\bigl(g\,\min(0.15\,b,\ 900\,c)+13\bigr).
+\]
+
+\begin{maintheorem}{the bank}\label{thm:bank}
+Let an item have a price $p\le b$ and a gain $\Delta\ge0$. The purchase changes the expected
+income by
+\[
+  R(b-p,\,c+\Delta)-R(b,c)=\Delta+\lambda g\Bigl[\min\bigl(0.15\,(b-p),\ 900\,(c+\Delta)\bigr)
+  -\min\bigl(0.15\,b,\ 900\,c\bigr)\Bigr].
+\]
+\begin{enumerate}[leftmargin=1.9em,label=\textup{(\alph*)}]
+\item If $b\le6000\,c$, the change is $\Delta-0.15\,\lambda g\,p$. It is positive exactly when
+\[
+  \frac{p}{\Delta}<\theta,\qquad\theta=\frac{1}{0.15\,g\lambda}.
+\]
+\item If $b-p\ge6000\,(c+\Delta)$, the change is $(1+900\,\lambda g)\,\Delta$, which is not
+negative.
+\end{enumerate}
+\end{maintheorem}
+
+\begin{proof}
+The first formula is the definition of $R$. In case~(a) we have
+$0.15\,(b-p)\le0.15\,b\le900\,c\le900\,(c+\Delta)$. So each minimum is its first term, and the
+bracket is $-0.15\,p$. In case~(b) we have $0.15\,b\ge0.15\,(b-p)\ge900\,(c+\Delta)\ge900\,c$.
+So each minimum is its second term, and the bracket is $900\,\Delta$.
+\end{proof}
+
+The number $\theta$ is the time in which a banked cookie earns one cookie. Below the cap, the
+theorem says: buy an item if its payback time is less than $\theta$, and keep the cookies if it
+is more. Above the cap, a purchase that leaves the bank above the new cap loses nothing. Between
+the two cases, the first formula of the theorem gives the change.
+
+The theorem compares two expected incomes at one moment. It does not give the fastest schedule
+for a list of purchases (Section~\ref{sec:intro}).
+
+\subsection{The rate of Lucky cookies}
+
+Let $I$ be the time between two golden cookies, in seconds, and let $\pi$ be the share of the
+golden cookies that give Lucky. Then $\lambda=\pi/\EE I$.
+
+\begin{lemma}[the time between golden cookies]\label{lem:interval}
+After a golden cookie the game waits $t_{\min}$ frames. In each later frame $j=1,\dots,W$ a
+golden cookie appears with chance $(j/W)^{5}$, if none has appeared before. Let $J$ be the
+number of the frame in which the golden cookie appears. Then
+\[
+  \EE J=\sum_{k=0}^{W-1}\ \prod_{j=1}^{k}\Bigl(1-\frac{j^{5}}{W^{5}}\Bigr)
+  \ \le\ 1+\Gamma\bigl(\tfrac76\bigr)\,\bigl(6\,W^{5}\bigr)^{1/6}.
+\]
+\end{lemma}
+
+\begin{proof}
+The chance that no golden cookie appears in the frames $1,\dots,k$ is
+$q_k=\prod_{j\le k}(1-j^{5}/W^{5})$, and $q_W=0$. So $\EE J=\sum_{k\ge0}\PP(J>k)=\sum_{k=0}^{W-1}q_k$.
+For the bound we use $1-x\le e^{-x}$ and $\sum_{j\le k}j^{5}\ge\int_0^{k}x^{5}\,dx=k^{6}/6$. They
+give $q_k\le f(k)$ with $f(x)=\exp(-x^{6}/(6W^{5}))$. The function $f$ decreases, so
+\[
+  \sum_{k\ge0}f(k)\le f(0)+\int_0^{\infty}f(x)\,dx=1+\bigl(6\,W^{5}\bigr)^{1/6}\,\Gamma\bigl(\tfrac76\bigr).
+\]
+The last step is the integral $\int_0^{\infty}e^{-ax^{6}}\,dx=a^{-1/6}\,\Gamma(\frac76)$.
+\end{proof}
+
+The game has 30 frames in a second. Without upgrades, $t_{\min}$ is 5 minutes and
+$W=t_{\max}-t_{\min}$ is 10 minutes. The upgrades Lucky day and Serendipity each halve the two
+numbers. The bound is larger than the exact mean by less than two frames
+(Table~\ref{tab:interval}). If the player clicks each golden cookie at once, then $\EE I=(t_{\min}+\EE J)/30$.
+
+\begin{table}[ht]
+\centering\small
+\begin{tabular}{@{}lrrrrr@{}}
+\toprule
+Upgrades & $W$ & $\EE J$ & bound & $\EE I$ in seconds & $\theta$ in seconds \\
+\midrule
+none & 18\,000 & 4396.85 & 4398.13 & 446.56 & 7060 \\
+one & 9\,000 & 2467.53 & 2468.80 & 232.25 & 3672 \\
+both & 4\,500 & 1384.74 & 1386.01 & 121.16 & 1915 \\
+\bottomrule
+\end{tabular}
+\caption{The time between golden cookies by Lemma~\ref{lem:interval}, and the number $\theta$ of
+Theorem~\ref{thm:bank} for $g=1$ and $\pi=0.4217$.}\label{tab:interval}
+\end{table}
+
+\begin{fineprint}
+The share $\pi=0.4217$ is for golden cookies without wrath and a player with at least ten
+buildings. The game makes a list with Frenzy and Lucky. It adds Cookie chain and Cookie storm
+together with chance $0.03$, Click frenzy with chance $0.1$, and a building effect with chance
+$0.25$. With chance $0.8$ it removes the effect of the last golden cookie from the list. Then it
+takes one effect from the list, each with the same chance. The number $0.4217$ is the long-run
+share of Lucky in this chain. We leave out effects with a chance below $0.001$ and the effects
+of the dragon.
+\end{fineprint}
+
+With the two upgrades, $\theta$ is about 32 minutes. Early in a run the payback times are
+seconds or minutes, and the rule says to spend. Late in a run they are hours, and the rule says
+to keep the bank at the cap.
+
+\section{The order of permanent upgrades}\label{sec:chips}
+
+\paragraph{Model.} There are $n$ upgrades, and the player wants all of them. Upgrade $j$ costs
+$p_j>0$ chips and multiplies the speed by $m_j>1$. Chips arrive one after another. At the speed
+$S$, a chip takes $q/S$ seconds, with a fixed number $q>0$. At the start the speed is $S_0$ and
+the player has no chips. The player buys the upgrades in a fixed order, each at the moment at
+which the chips for it are there. So the time of the order $j_1,\dots,j_n$ is
+\begin{equation}\label{eq:chiptime}
+  \frac{q}{S_0}\sum_{k=1}^{n}\frac{p_{j_k}}{m_{j_1}\cdots m_{j_{k-1}}}.
+\end{equation}
+
+\begin{maintheorem}{the ratio rule}\label{thm:ratio}
+Put
+\[
+  \rho_j=\frac{1-1/m_j}{p_j}.
+\]
+An order has the least time \eqref{eq:chiptime} if and only if $\rho$ does not increase along
+it.
+\end{maintheorem}
+
+\begin{proof}
+Let $i$ and $j$ be adjacent in an order, with $i$ first, and let $\Pi$ be the product of the
+factors of the upgrades before them. An exchange of $i$ and $j$ does not change the other terms
+of \eqref{eq:chiptime}, because the product after the two upgrades is $\Pi\,m_im_j$ in each
+order. The two terms change from $p_i+p_j/m_i$ to $p_j+p_i/m_j$, each times $q/(S_0\Pi)$. The
+difference is
+\[
+  \Bigl(p_j+\frac{p_i}{m_j}\Bigr)-\Bigl(p_i+\frac{p_j}{m_i}\Bigr)
+  =p_j\Bigl(1-\frac1{m_i}\Bigr)-p_i\Bigl(1-\frac1{m_j}\Bigr)=p_i\,p_j\,(\rho_i-\rho_j).
+\]
+So the exchange makes the time less if $\rho_i<\rho_j$, and it does not change the time if
+$\rho_i=\rho_j$.
+
+There are finitely many orders, so some order has the least time. An order with $\rho_i<\rho_j$
+for an adjacent pair is not such an order. So $\rho$ does not increase along an order with the
+least time. Two orders along which $\rho$ does not increase differ by exchanges of adjacent
+upgrades with the same $\rho$. So all of them have the same time, which is the least time.
+\end{proof}
+
+The proof is the exchange argument of Smith's rule for the order of jobs on one
+machine~\cite{Smith}.
+
+The rule can tell the player to save chips. Let $X$ cost 10 chips with the factor $1.05$, and
+let $Y$ cost 100 chips with the factor $3$. Then $\rho_X=0.0048$ and $\rho_Y=0.0067$. With $Y$
+first the time is $100+10/3=103.3$ units of $q/S_0$, and with $X$ first it is
+$10+100/1.05=105.2$ units. So the player keeps the first 10 chips and waits for $Y$.
+
+Some upgrades need other upgrades first. Suppose that a group of upgrades stays together, in a
+fixed order $1,\dots,r$. In the exchange argument the group acts as one upgrade with the factor
+$M=m_1\cdots m_r$ and the price
+\[
+  d=\sum_{k=1}^{r}\frac{p_k}{m_1\cdots m_{k-1}},
+\]
+because two adjacent groups have the times $d+d'/M$ and $d'+d/M'$ in the two orders. The ratio
+of the group is $(1-1/M)/d$. The price $d$ is less than the sum of the prices.
+
+\begin{example}[the effort for a chip must be fixed]\label{ex:effort}
+Let the chip number $B$ take $B/S$ seconds: the effort increases. In the sum over the chips we
+write an integral over $B$. Upgrade $X$ costs 1 chip with the factor $2$, and upgrade $Y$ costs
+2 chips with the factor $100$. Then $\rho_X=\frac12$ is more than $\rho_Y=\frac{99}{200}$. With
+$S_0=1$, the order with $X$ first has the time
+\[
+  \int_0^{1}B\,dB+\frac12\int_1^{3}B\,dB=\frac12+2=\frac52,
+\]
+and the order with $Y$ first has the time
+\[
+  \int_0^{2}B\,dB+\frac1{100}\int_2^{3}B\,dB=2+\frac1{40}=\frac{81}{40}.
+\]
+So the order of the ratio rule is the slower one.
+\end{example}
+
+In the game the effort is not fixed. By \eqref{eq:prestige}, the chip number $B$ needs about
+$3\cdot10^{12}\,B^{2}$ cookies. So the ratio rule is exact in its model and a heuristic in the
+game.
+
+\section{The time of a reset}\label{sec:reset}
+
+\subsection{Speed}
+
+Permanent bonuses multiply the income of a run. A run has the \emph{speed} $S$ if each source of
+income is $S$ times the source in a run with the speed $1$, with the same items.
+
+\begin{lemma}[time and speed]\label{lem:rescale}
+Suppose that the decisions of the player depend on the bank and on the items, and not on the
+clock. If the run with the speed $1$ bakes $F(x)$ cookies in its first $x$ seconds, then the run
+with the speed $S$ bakes $F(St)$ cookies in its first $t$ seconds.
+\end{lemma}
+
+\begin{proof}
+Put $s=St$. Between two purchases, the bank of the run with the speed $S$ increases by
+$S\,r\,dt=r\,ds$ in the time $dt$, where $r$ is the income at the speed $1$ with the same items.
+The prices are the same, and the decisions see the same bank and the same items. So in the
+variable $s$ the run is the run with the speed $1$.
+\end{proof}
+
+In the game the lemma is exact for the buildings and the clicks. Golden cookies follow the
+clock, so for them it is an approximation.
+
+\begin{proposition}[a pause for a permanent gain]\label{prop:pause}
+Suppose that a task needs $H$ more seconds at the present speed. An action stops all income for
+$D\ge0$ seconds and then multiplies the speed by $M>0$. With the action the task needs $D+H/M$
+seconds. So the action shortens the task exactly when
+\[
+  D<H\Bigl(1-\frac1M\Bigr).
+\]
+\end{proposition}
+
+\begin{proof}
+By Lemma~\ref{lem:rescale}, a speed that is $M$ times larger divides the remaining time by $M$.
+So the action gives the time $D+H/M$, and $D+H/M<H$ is the stated inequality.
+\end{proof}
+
+For $M=1+x$ the action can cost up to $Hx/(1+x)$ seconds. This is less than $Hx$. In the game,
+an achievement is such a gain. In one game with eight kitten upgrades, one more achievement gave
+$x=0.0214$. For a task of 77 hours, an achievement was then worth a pause of up to
+$77\cdot0.0214/1.0214=1.61$ hours.
+
+\subsection{A chain of resets}
+
+\paragraph{Model.} The prestige is the real number $P$ of \eqref{eq:prestige}. A run that
+starts with the prestige $P$ has the speed $\kappa P$, with a fixed number $\kappa>0$. A run
+with the speed $1$ bakes $F(x)=\alpha\,x^{\beta}$ cookies in its first $x$ seconds, with
+$\alpha>0$ and $\beta>1$. A reset takes no time. The earlier runs have baked $A_0>0$ cookies, and the goal is
+$A^{\ast}>A_0$. A \emph{schedule} is a chain
+$A_0<A_1<\dots<A_n=A^{\ast}$: run number $k$ starts at $A_{k-1}$ and the player resets at $A_k$.
+
+A run from $A$ to $vA$, with $v>1$, bakes $(v-1)A$ cookies. By Lemma~\ref{lem:rescale} it takes
+the time
+\begin{equation}\label{eq:runtime}
+  T(A,v)=\frac{\bigl((v-1)A/\alpha\bigr)^{1/\beta}}{\kappa\,(A/10^{12})^{1/3}}
+  =K\,A^{\gamma/3}\,(v-1)^{1/\beta},\qquad
+  \gamma=\frac3\beta-1,\quad K=\frac{10^{4}}{\kappa\,\alpha^{1/\beta}}.
+\end{equation}
+For $\beta<3$ the exponent $\gamma$ is positive, and later runs take longer for the same factor
+$v$. For $\beta>3$ they take less time.
+
+\begin{maintheorem}{the time of a reset}\label{thm:reset}
+Put $\Phi(A)=(3/\gamma)\,A^{\gamma/3}$ if $\gamma\ne0$ and $\Phi(A)=\ln A$ if $\gamma=0$. For
+$v>1$ put
+\[
+  \rho(v)=\frac{(v-1)^{1/\beta}}{\Phi(v)-\Phi(1)}.
+\]
+\begin{enumerate}[leftmargin=1.9em,label=\textup{(\alph*)}]
+\item The function $\rho$ decreases on an interval $(1,v^{\star}]$ and increases on
+$[v^{\star},\infty)$. The number $v^{\star}$ is the only solution $v>1$ of
+\begin{equation}\label{eq:vstar}
+  \frac\beta3\Bigl(1-\frac1v\Bigr)=\frac{1-v^{-\gamma/3}}{\gamma}\quad(\gamma\ne0),
+  \qquad\qquad 3\,(v-1)=v\ln v\quad(\gamma=0).
+\end{equation}
+\item Each schedule takes at least the time $K\,\rho(v^{\star})\,\bigl(\Phi(A^{\ast})-\Phi(A_0)\bigr)$.
+\item A schedule takes exactly this time if and only if $A_k=v^{\star}A_{k-1}$ for each $k$.
+\end{enumerate}
+\end{maintheorem}
+
+\begin{proof}
+\step{The sum.} The function $\Phi$ increases, and $\Phi(vA)-\Phi(A)=A^{\gamma/3}\,(\Phi(v)-\Phi(1))$
+for all $A>0$ and $v>1$. So \eqref{eq:runtime} is
+\[
+  T(A,v)=K\,\rho(v)\,\bigl(\Phi(vA)-\Phi(A)\bigr).
+\]
+Let a schedule have the factors $v_k=A_k/A_{k-1}$. Its time is
+\begin{align*}
+  \sum_{k=1}^{n}K\,\rho(v_k)\,\bigl(\Phi(A_k)-\Phi(A_{k-1})\bigr)
+  &\ \ge\ K\,\min_{v>1}\rho(v)\ \sum_{k=1}^{n}\bigl(\Phi(A_k)-\Phi(A_{k-1})\bigr)\\
+  &\ =\ K\,\min_{v>1}\rho(v)\,\bigl(\Phi(A^{\ast})-\Phi(A_0)\bigr).
+\end{align*}
+The two sides are equal if and only if each $v_k$ is a minimum point of $\rho$. So (b) and (c)
+follow from (a).
+
+\step{One minimum.} Put $u=\ln v$, and $\psi(x)=x/(1-e^{-x})$ for $x\ne0$, $\psi(0)=1$. The
+function $\psi$ is positive. A calculation gives
+\[
+  \frac{d}{du}\ln\rho=\frac1\beta\cdot\frac{e^{u}}{e^{u}-1}
+  -\frac\gamma3\cdot\frac{e^{\gamma u/3}}{e^{\gamma u/3}-1}
+  =\frac1u\Bigl(\frac{\psi(u)}{\beta}-\psi\bigl(\tfrac{\gamma u}{3}\bigr)\Bigr),
+\]
+where the second term is $1/u$ if $\gamma=0$. So the derivative has the sign of
+\[
+  h(u)=\ln\psi(u)-\ln\psi\bigl(\tfrac{\gamma u}{3}\bigr)-\ln\beta .
+\]
+Put $L(x)=x\,\psi'(x)/\psi(x)=1-x/(e^{x}-1)$, with $L(0)=0$. The function $x/(e^{x}-1)$ has a
+derivative with the numerator $e^{x}(1-x)-1$. This numerator has its maximum $0$ at $x=0$, so
+it is negative for $x\ne0$. So $L$ increases strictly on the real line. We have $\gamma/3<1$, and thus
+\[
+  u\,h'(u)=L(u)-L\bigl(\tfrac{\gamma u}{3}\bigr)>0\qquad(u>0).
+\]
+So $h$ increases strictly. For $u\to0$ we have $h(u)\to-\ln\beta<0$. For $u\to\infty$ we have
+$\psi(u)/u\to1$. If $\gamma\le0$, then $\psi(\gamma u/3)\le1$ and $h(u)\to\infty$. If $\gamma>0$,
+then $\psi(\gamma u/3)/u\to\gamma/3$ and $h(u)\to\ln(3/(\beta\gamma))=\ln(3/(3-\beta))>0$. Hence
+$h$ has exactly one zero $u^{\star}$. It is negative before $u^{\star}$ and positive after it,
+and (a) holds with $v^{\star}=e^{u^{\star}}$. The zero satisfies
+$\psi(u)=\beta\,\psi(\gamma u/3)$, which is \eqref{eq:vstar}.
+\end{proof}
+
+So the player resets when the cookies of all runs are $v^{\star}$ times their number at the
+start of the run. The prestige is then $(v^{\star})^{1/3}$ times its value at the start
+(Table~\ref{tab:vstar}). For $\beta=\frac32$ the equation \eqref{eq:vstar} is
+$x^{3}-2x^{2}+1=0$ for $x=v^{1/3}$, and the factor of the prestige is the golden ratio
+$(1+\sqrt5)/2$.
+
+If $A^{\ast}/A_0$ is not a power of $v^{\star}$, then no schedule has the time of (b), and the
+least time is larger.
+
+\begin{table}[ht]
+\centering\small
+\begin{tabular}{@{}rrrrr@{}}
+\toprule
+$\beta$ & $\gamma$ & $v^{\star}$ & $(v^{\star})^{1/3}$ & root of \eqref{eq:mvt} \\
+\midrule
+1.5 & 1 & 4.24 & 1.62 & 2.40 \\
+2 & 0.5 & 7.87 & 1.99 & 4.92 \\
+2.5 & 0.2 & 12.03 & 2.29 & 9.31 \\
+3 & 0 & 16.80 & 2.56 & 16.80 \\
+4 & $-0.25$ & 28.39 & 3.05 & 50.44 \\
+6 & $-0.5$ & 60.91 & 3.93 & 397.38 \\
+\bottomrule
+\end{tabular}
+\caption{The factor $v^{\star}$ of Theorem~\ref{thm:reset} for six growth exponents, the factor
+of the prestige, and the factor of the rule without the correction for later
+runs.}\label{tab:vstar}
+\end{table}
+
+The exponent $\beta$ of the present run has an estimate. If the run has baked $C$ cookies in
+$t$ seconds and the income is $c$ now, then $F(x)=\alpha x^{\beta}$ gives $\beta=c\,t/C$.
+
+For $\gamma=0$ the theorem says: reset at the moment at which $\ln P$ increases at its mean rate
+over the run. This is the marginal value theorem of Charnov~\cite{Charnov}. For
+$\beta\ne3$ the same rule ignores that later runs take more or less time. It then has the
+equation
+\begin{equation}\label{eq:mvt}
+  \beta\,(v-1)=v\ln v
+\end{equation}
+in the place of \eqref{eq:vstar} (Figure~\ref{fig:vstar}).
+
+\begin{figure}[ht]
+\centering
+\begin{tikzpicture}[x=1.55cm,y=1.35cm]
+  % frame and grid; the vertical axis is log10 of the factor
+  \foreach \y/\lab in {0/1,1/10,2/100,3/1000} {
+    \draw[edge, slate!25] (1,\y) -- (8.1,\y);
+    \node[note, anchor=east] at (0.93,\y) {\lab};
+  }
+  \foreach \x in {2,...,8} {
+    \draw[edge, slate!70] (\x,0) -- (\x,-0.06);
+    \node[note] at (\x,-0.24) {\x};
+  }
+  \draw[edge, slate!70] (1,0) -- (8.1,0);
+  \draw[edge, slate!70] (1,0) -- (1,3.55);
+  \draw[edge, slate!45, dashed] (3,0) -- (3,1.2253);
+  \draw[hot, dashed] plot coordinates {(1.2,0.1635) (1.4,0.3107) (1.6,0.4461) (1.8,0.5726) (2.0,0.6921) (2.2,0.8061) (2.4,0.9158) (2.6,1.0218) (2.8,1.1248) (3.0,1.2253) (3.2,1.3238) (3.4,1.4205) (3.6,1.5158) (3.8,1.6098) (4.0,1.7027) (4.2,1.7948) (4.4,1.8861) (4.6,1.9767) (4.8,2.0667) (5.0,2.1563) (5.2,2.2455) (5.4,2.3343) (5.6,2.4229) (5.8,2.5111) (6.0,2.5992) (6.2,2.6871) (6.4,2.7748) (6.6,2.8624) (6.8,2.9499) (7.0,3.0373) (7.2,3.1246) (7.4,3.2118) (7.6,3.2990) (7.8,3.3861) (8.0,3.4732)};
+  \draw[cool] plot coordinates {(1.2,0.3522) (1.4,0.5515) (1.6,0.6926) (1.8,0.8035) (2.0,0.8961) (2.2,0.9762) (2.4,1.0474) (2.6,1.1117) (2.8,1.1707) (3.0,1.2253) (3.2,1.2763) (3.4,1.3242) (3.6,1.3694) (3.8,1.4123) (4.0,1.4532) (4.2,1.4922) (4.4,1.5296) (4.6,1.5655) (4.8,1.6001) (5.0,1.6334) (5.2,1.6656) (5.4,1.6968) (5.6,1.7270) (5.8,1.7563) (6.0,1.7847) (6.2,1.8124) (6.4,1.8393) (6.6,1.8655) (6.8,1.8911) (7.0,1.9160) (7.2,1.9404) (7.4,1.9642) (7.6,1.9875) (7.8,2.0102) (8.0,2.0325)};
+  \node[port] at (3,1.2253) {};
+  \node[note, text=accent, anchor=west] at (6.1,1.52) {$v^{\star}$ of \eqref{eq:vstar}};
+  \node[note, text=warm, anchor=east] at (5.85,2.76) {root of \eqref{eq:mvt}};
+  \node[note, anchor=west] at (3.08,0.42) {the two agree at $\beta=3$};
+  \node[note, anchor=north] at (4.55,-0.42) {growth exponent $\beta$};
+  \node[note, anchor=south, rotate=90] at (0.28,1.75) {factor of all cookies in one run};
+\end{tikzpicture}
+\caption{The factor $v^{\star}$ and the root of \eqref{eq:mvt}. The vertical scale is
+logarithmic.}\label{fig:vstar}
+\end{figure}
+
+\subsection{Early in the game}
+
+\begin{proposition}[no gain in speed, no reset]\label{prop:early}
+Suppose that all runs have the same speed $S$, that $F(x)=\alpha\,x^{\beta}$ with $\beta>1$, and
+that a reset takes $\tau\ge0$ seconds. Then one run is the fastest way to bake a given number
+of cookies.
+\end{proposition}
+
+\begin{proof}
+Let $n\ge2$ runs bake $D_1,\dots,D_n>0$ cookies, with the sum $D$. Their time is
+\[
+  \sum_{k=1}^{n}\frac{(D_k/\alpha)^{1/\beta}}{S}+(n-1)\,\tau .
+\]
+For $0<a<1$ and positive numbers we have $(x+y)^{a}<x^{a}+y^{a}$. With $a=1/\beta$ this gives
+$D^{1/\beta}<\sum_kD_k^{1/\beta}$. So one run with $D$ cookies takes less time.
+\end{proof}
+
+Early in the game a reset changes the speed by a small amount, and the game is near this case.
+Theorem~\ref{thm:reset} is for the late game, where the bonus of the prestige is much larger
+than the income without it.
+
+With a reset time $\tau>0$ or a different speed, we know no formula. A program can take a finite
+set of levels $a_0<a_1<\dots<a_n=A^{\ast}$ and the time $t(i,j)$ of a run from $a_i$ to $a_j$.
+The least time $V(i)$ from $a_i$ with resets at these levels satisfies
+\[
+  V(n)=0,\qquad V(i)=\min_{j>i}\bigl[\,t(i,j)+\tau\,[j<n]+V(j)\,\bigr],
+\]
+where $[j<n]$ is $1$ if $j<n$ and $0$ if $j=n$. The reason is that a schedule is a path from
+$a_i$ to $a_n$, and its first run ends at some $a_j$. The choice $j=n$ is the run that reaches
+the goal without a reset. A program must include it.
+
+\begin{thebibliography}{9}\small
+
+\bibitem{Charnov} E.~L.~Charnov, Optimal foraging, the marginal value theorem,
+\emph{Theoret.\ Population Biol.}\ 9 (1976), 129--136.
+
+\bibitem{CM} Cookie Monster Team, Cookie Monster, an add-on for Cookie Clicker,
+\url{https://github.com/CookieMonsterTeam/CookieMonster}.
+
+\bibitem{Repo} KNT and Fable~5.2, a guide to Cookie Clicker, the mod Cookie Monster+ and the
+Lean files of this paper, \url{https://jehlp.net/cookie-clicker/} and
+\url{https://github.com/JWKNT/cookie-clicker}.
+
+\bibitem{Smith} W.~E.~Smith, Various optimizers for single-stage production,
+\emph{Naval Res.\ Logist.\ Quart.}\ 3 (1956), 59--66.
+
+\bibitem{Game} J.~Thiennot (Orteil), Cookie Clicker, version 2.053, DashNet,
+\url{https://orteil.dashnet.org/cookieclicker/}.
+
+\end{thebibliography}
+
+\end{document}

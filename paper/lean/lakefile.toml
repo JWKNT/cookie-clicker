@@ -1,0 +1,10 @@
+name = "CookieClickerPaper"
+version = "0.1.0"
+defaultTargets = ["CookieClicker", "Paper"]
+
+[[lean_lib]]
+name = "CookieClicker"
+globs = ["CookieClicker.+"]
+
+[[lean_lib]]
+name = "Paper"
