@@ -1,0 +1,40 @@
+/** Intact Game.Win callback checks with explicit diagnostic callback fixtures.
+ * These fixtures test source execution; they do not model the native UI/Steam callbacks. */
+import assert from 'node:assert/strict';
+import {createRequire} from 'node:module';
+import {createHash} from 'node:crypto';
+import {fileURLToPath} from 'node:url';
+import {spawnSyncWithFileInput as spawnSync} from './process-input.mjs';
+import {compileJavaScript} from '../model/javascript-ast.mjs';
+import {loadGameSource} from '../model/game-source.mjs';
+import {runNativeEngine} from '../model/native-engine.mjs';
+const require=createRequire(new URL('../source/cookie-monster-plus/package.json',import.meta.url));
+const acorn=require('acorn'), source=loadGameSource().sources['main.js'];
+const extract=name=>{const start=source.indexOf(`Game.${name}=function`);assert(start>=0);const fn=acorn.parseExpressionAt(source,start+`Game.${name}=`.length,{ecmaVersion:5});return source.slice(fn.start,fn.end);};
+const nativeWin=extract('Win'),nativeCount=extract('CountsAsAchievementOwned');
+assert.equal(createHash('sha256').update(nativeWin).digest('hex'),'9858b21b85f151c87a79a617c4fe8558deff82b1f830c85aa24113869ed71e92');
+const setup=`var trace='',App=0,loc=function(s){trace+='L';return s;};var achievement={won:0,dname:'Hand-picked',icon:[28,14],id:123,pool:'normal',vanilla:1};var Game={Achievements:{'Hand-picked':achievement},AchievementsOwned:0,recalculateGains:0,Notify:function(title,text,icon){trace+='N'+achievement.won+':'+text+':'+icon.join(',')+';';},NotifyTooltip:function(text){trace+='T'+achievement.won+':'+text+';';}};Game.Win=${nativeWin};Game.CountsAsAchievementOwned=${nativeCount};`;
+const result=`trace+'|'+achievement.won+':'+Game.AchievementsOwned+':'+Game.recalculateGains;`;
+const cases=[];const add=(name,action)=>cases.push({name,source:setup+action+result});
+add('first normal award preserves native effect order',`Game.Win('Hand-picked');`);
+add('already won bypasses every callback',`achievement.won=1;Game.Win('Hand-picked');`);
+add('unknown string is ignored',`Game.Win('missing');`);
+add('notification failure follows won write',`Game.Notify=function(){trace+='N'+achievement.won;throw 7;};try{Game.Win('Hand-picked');}catch(e){trace+='E'+e;}`);
+add('localization failure follows won write',`loc=function(){trace+='L'+achievement.won;throw 8;};try{Game.Win('Hand-picked');}catch(e){trace+='E'+e;}`);
+add('tooltip failure precedes count and recalculation',`Game.NotifyTooltip=function(){trace+='T';throw 9;};try{Game.Win('Hand-picked');}catch(e){trace+='E'+e;}`);
+add('arbitrary callback mutation is retained',`Game.Notify=function(){achievement.won=0;trace+='mutation';};Game.Win('Hand-picked');`);
+add('native Steam callback observes count and recalculation',`App={gotAchiev:function(id){trace+='S'+id+':'+Game.AchievementsOwned+':'+Game.recalculateGains;}};Game.Win('Hand-picked');`);
+add('nonvanilla achievement skips Steam callback',`achievement.vanilla=0;App={gotAchiev:function(){throw 99;}};Game.Win('Hand-picked');`);
+add('shadow achievement does not increase normal count',`achievement.pool='shadow';Game.Win('Hand-picked');`);
+add('empty pool increases normal count',`achievement.pool='';Game.Win('Hand-picked');`);
+add('truthy short name is evaluated natively',`achievement.shortName='short';Game.Win('Hand-picked');`);
+add('false short name falls back to display name',`achievement.shortName='';Game.Win('Hand-picked');`);
+add('native array branch recurses without a second award',`Game.Win(['Hand-picked','missing','Hand-picked']);`);
+add('won setter and getter effects are preserved',`var count=0;Object.defineProperty(achievement,'won',{get:function(){return count;},set:function(v){trace+='W';count=v;},configurable:true});Game.Win('Hand-picked');`);
+add('native read-only won does not invent strict mode',`Object.defineProperty(achievement,'won',{value:0,writable:false});Game.Win('Hand-picked');`);
+const execution=spawnSync(fileURLToPath(new URL('.lake/build/bin/jsastcheck',import.meta.url)),['--execute'],{input:JSON.stringify(cases.map(c=>({ast:compileJavaScript(c.source,{name:c.name}),fuel:200000,standardLibrary:true}))),encoding:'utf8',timeout:120000,maxBuffer:8*1024*1024});
+if(execution.error)throw execution.error;assert.equal(execution.status,0,execution.stderr);
+const actual=JSON.parse(execution.stdout);
+const expected=runNativeEngine(`const fs=require('fs'),vm=require('vm');process.stdout.write(JSON.stringify(JSON.parse(fs.readFileSync(0,'utf8')).map(c=>{const s=vm.runInNewContext(c.source);if(typeof s!=='string')throw Error(c.name);return Array.from({length:s.length},(_,i)=>s.charCodeAt(i));})));`,cases);
+for(let i=0;i<cases.length;i++){assert.equal(actual[i].status,'complete',cases[i].name+':'+JSON.stringify(actual[i]));assert.deepEqual(actual[i].value,{type:'string',units:expected[i]},cases[i].name);}
+console.log(JSON.stringify({nativeWinCases:cases.length,nativeComparisons:cases.length,winSourceSha256:createHash('sha256').update(nativeWin).digest('hex'),callbackFixtures:'Explicit diagnostic source callbacks; not native UI/Steam refinement',fullAchievementCallbackProved:false}));

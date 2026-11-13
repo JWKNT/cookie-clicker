@@ -22,9 +22,12 @@ npm run build:mod
 file is readable. The build gives the published file byte for byte.
 
 The 190 unit tests cover the calculations of the model and the safeguards of the autoplay. They do not prove
-that the mod is the fastest player. Seven more tests run the mod against the source of the game itself. They
-need a model of the game engine that is not in this repository, and an installed copy of the game. Without
-them, mocha reports these seven tests as pending.
+that the mod is the fastest player. Seven more tests run the mod against the source of the game itself, with
+the game model in [`../model/`](../model/README.md). They need an installed copy of the game. Without it,
+mocha reports these seven tests as pending.
+
+The notes of the audit are in [`../paper/AUDIT.md`](../paper/AUDIT.md). The files `RELEASE-2.053.14.md` to
+`RELEASE-2.053.21.md` are the notes of the local candidates of October 2026.
 
 ## Where the changes are
 

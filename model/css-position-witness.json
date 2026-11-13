@@ -1,0 +1,47 @@
+{
+  "schema": 1,
+  "scope": "source background-position numeric parsing, retained value and CSSOM text",
+  "sources": [
+    {
+      "file": "css_parser_token.cc",
+      "url": "https://github.com/chromium/chromium/blob/87.0.4280.141/third_party/blink/renderer/core/css/parser/css_parser_token.cc",
+      "sha256": "06328954e1209c9008e4ef58a0a0ed77a2c51e6443d8c192b644c46f59107589"
+    },
+    {
+      "file": "css_parser_token.h",
+      "url": "https://github.com/chromium/chromium/blob/87.0.4280.141/third_party/blink/renderer/core/css/parser/css_parser_token.h",
+      "sha256": "468d98182101e0a3e5c962ffdfe52a807252825f267ad3b66ceeaf87b1f8083b"
+    },
+    {
+      "file": "css_parsing_utils.cc",
+      "url": "https://github.com/chromium/chromium/blob/87.0.4280.141/third_party/blink/renderer/core/css/properties/css_parsing_utils.cc",
+      "sha256": "b780eca7186f9d0b5691ce2578bd758c170bde6dec0cfc082052107a1b633761"
+    },
+    {
+      "file": "css_numeric_literal_value.cc",
+      "url": "https://github.com/chromium/chromium/blob/87.0.4280.141/third_party/blink/renderer/core/css/css_numeric_literal_value.cc",
+      "sha256": "be62a75eba433e3d700dc23737dece25d72d733b474f0b2441af9d4784f8c262"
+    }
+  ],
+  "gameSourceHash": "a8813ec2ee97edf5ebff6a3ce2037dcb65c08abd13c123bb92efda89b06ef4f7",
+  "sourceStatements": [
+    {
+      "line": 16594,
+      "source": "Game.ascendMeter.style.backgroundPosition=(-Game.T*0.5-Game.ascendMeterPercent*100)+'px';"
+    }
+  ],
+  "supported": "One/two position components using px, percent or source keywords. Numeric tokens clamp to the finite binary32 magnitude range while retaining binary64 precision inside it. Lossless internal text is separate from the pinned CSS small-integer/%.6g getter and attribute text.",
+  "maximumMagnitude": {
+    "binary64Hex": "47efffffe0000000",
+    "exactInteger": "340282346638528859811704183484516925440"
+  },
+  "remaining": [
+    "Relative/physical units, computed values and full invalid-value recovery",
+    "Multiple layers and three/four component grammar",
+    "CSS Typed OM and computed/used positions",
+    "Image painting, clipping and hit testing",
+    "General browser parser/renderer refinement"
+  ],
+  "validation": "node lean/check_javascript_background_position.mjs --engine",
+  "rendererRefinementVerified": false
+}

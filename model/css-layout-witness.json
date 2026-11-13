@@ -1,0 +1,84 @@
+{
+  "schema": 1,
+  "scope": "closed-source-css-cascade-and-integral-positioned-boxes",
+  "chromiumVersion": "87.0.4280.141",
+  "sources": [
+    {
+      "file": "html.css",
+      "url": "https://github.com/chromium/chromium/blob/87.0.4280.141/third_party/blink/renderer/core/html/resources/html.css",
+      "sha256": "23effb5564b04c04dcb8d72b04941f9d3e69511ebbb2152ab4eda4f423c3778d"
+    },
+    {
+      "file": "element.cc",
+      "url": "https://github.com/chromium/chromium/blob/87.0.4280.141/third_party/blink/renderer/core/dom/element.cc",
+      "sha256": "63a93ef5c8b04a21fb0ef6f674d4a72eb220b922b7e1a6fb410e7f1dfc31c7d0"
+    },
+    {
+      "file": "layout_box.cc",
+      "url": "https://github.com/chromium/chromium/blob/87.0.4280.141/third_party/blink/renderer/core/layout/layout_box.cc",
+      "sha256": "9cd86652500b3da7f148f541f794a840c253c47d95059d4300220e5b1b5a4dbf"
+    },
+    {
+      "file": "ng_absolute_utils.cc",
+      "url": "https://github.com/chromium/chromium/blob/87.0.4280.141/third_party/blink/renderer/core/layout/ng/ng_absolute_utils.cc",
+      "sha256": "bd8decdad926608a3338b566042b485122c1f4cecefd19cd3ddbb1d30bb0b909"
+    },
+    {
+      "file": "layout_unit.h",
+      "url": "https://github.com/chromium/chromium/blob/87.0.4280.141/third_party/blink/renderer/platform/geometry/layout_unit.h",
+      "sha256": "c494e48224f1fbfa1a345d4573ecf0885fc07afeb6b6a47647561af12b96f122"
+    },
+    {
+      "file": "length_functions.cc",
+      "url": "https://github.com/chromium/chromium/blob/87.0.4280.141/third_party/blink/renderer/platform/geometry/length_functions.cc",
+      "sha256": "0d83113fb6b65e36daf650acd4f74cd1168095ef93d44c8dde3fef9bc8d33252"
+    },
+    {
+      "file": "document.cc",
+      "url": "https://github.com/chromium/chromium/blob/87.0.4280.141/third_party/blink/renderer/core/dom/document.cc",
+      "sha256": "29f1e9d8b8e3bb79e32adef7f950a51e799389a971587a4d7e24ca8940304e29"
+    },
+    {
+      "file": "css_parsing_utils.cc",
+      "url": "https://github.com/chromium/chromium/blob/87.0.4280.141/third_party/blink/renderer/core/css/properties/css_parsing_utils.cc",
+      "sha256": "b780eca7186f9d0b5691ce2578bd758c170bde6dec0cfc082052107a1b633761"
+    }
+  ],
+  "stylesheets": [
+    {
+      "name": "../steam/fonts.css",
+      "sha256": "9bd20bc2e0a326d5c4801c83ee8b982ada6b1c3ff3d7ad36053a20b48582eebc",
+      "rules": 5
+    },
+    {
+      "name": "style.css",
+      "sha256": "90c1ad8750f88ad2f964b5910521e84a16f9ec4d9b30c26244625bc269c7f446",
+      "rules": 522
+    }
+  ],
+  "implementation": {
+    "syntax": "Explicit token, selector, declaration, keyframe and font-face data; source ranges and order retained. Runtime style text is consumed by a closed Lean parser, without a string-to-AST lookup.",
+    "cascade": "HTML selector fragment with specificity, source order and author/inline important ranking. Unknown dynamic pseudo-class truth remains explicit.",
+    "stylesheetActivation": "Actual connected link/style order selects configured loaded source or parses actual runtime text. Unknown source, alternate/media selection and unsupported runtime grammar remain unresolved.",
+    "overflowProjection": "All possibly matching overflow declarations must be whole hidden/visible shorthands. Kernel lemmas preserve paired axis candidate lists, winners and the allowed value class under arbitrary candidate selection. Unknown pointer state is not assigned. Other dynamic geometry and axis overrides remain explicit.",
+    "geometry": "Known non-replaced block elements; definite root sizes; absolute/fixed axes with zero margins, padding and effective border; integral px and 0/100 percent lengths.",
+    "hiddenBoxes": "A positive display/all cascade query on an actual ancestor makes every descendant layout box absent. It does not parse unrelated descendant geometry or require viewport dimensions. Unknown dynamic display and all resets cannot establish this result.",
+    "range": "Inputs, containing boxes and output coordinates are restricted to ±1000000 CSS pixels. Horizontal integer percentages additionally require an exactly representable binary32 product of magnitude at most 2^24 and an integral quotient by100. General LayoutUnit quantization/saturation is not supplied.",
+    "horizontalWidth": "A separate content/padding/border-width calculation supports non-replaced normal and positioned block widths, integral box edges and min/max constraints. It requires root/body scrollbar exclusion and rejects floats, generated floats, shrink-to-fit and non-paint transitions. Paint-property transitions admit the seven native timing keywords after a nonnegative duration; functions, delays and reordered forms remain explicit. Text height is not supplied.",
+    "verticalHeight": "A separate content/padding/border-height calculation admits definite heights and positioned stretch between definite insets, with integral pixel edges and min/max constraints. It requires viewport scrollbar exclusion; content heights, percentage vertical edges and fractional LayoutUnit results remain explicit.",
+    "observations": "DOMRect allocated from computed box; measured native rectangles are never model inputs.",
+    "focus": "Inherited visibility plus a supported actual box; native focusability, scrolling and event/default actions remain separate.",
+    "editing": "A separate inherited -webkit-user-modify query reads only editing/all candidates from actual ancestors. It needs no viewport or box dimensions, while unknown reset, value and selector cases remain explicit. Native SupportsFocus and style-lifecycle requirements remain separate."
+  },
+  "validation": "node lean/check_javascript_css.mjs --engine",
+  "remaining": [
+    "Tokenizer/parser refinement",
+    "Full browser cascade and property grammar",
+    "Font and intrinsic sizes, general normal flow, fractional layout",
+    "Transforms, scroll offsets, painting, clipping and hit testing",
+    "Stylesheet resource/load/parser timing",
+    "Complete source and native host refinement"
+  ],
+  "rendererRefinementVerified": false,
+  "hitTestingVerified": false
+}

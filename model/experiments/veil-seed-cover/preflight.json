@@ -1,0 +1,39 @@
+{
+  "scope": "Actual pinned seedrandom library in installed Electron Node mode; game startup/player saves not used",
+  "samples": 6192,
+  "bitExact": true,
+  "sourceHashes": {
+    "main.js": "a8813ec2ee97edf5ebff6a3ce2037dcb65c08abd13c123bb92efda89b06ef4f7",
+    "minigameGarden.js": "184eacacd9325d493412dcda07f63d3a791939f83889b4349b6099d04be8e6c9",
+    "minigameMarket.js": "78538743673f3c1cd0e870a3695c77dcacd63febbe64b88f8a8fab9ea7e2863f",
+    "minigameGrimoire.js": "9efea1feb898dc9b719dd971bd27a71f083a8855b910013c524aea9b6d2a349d",
+    "minigamePantheon.js": "af08c31c4564d445cc2d1a7d101c4a63b57aa9b89991b93b8a65f4c0427573a0",
+    "base64.js": "875839c3e0c174c9358ce96923adfed6a6d2c090187a32deb35152dfac2c0e47",
+    "loc/EN.js": "ce48272a5fd5ab1f309dbb8fd7bd70188984ce14235a1d3d9215f3585101f433",
+    "index.html": "28488d9aef9bf31c4c023a0af01f0500a3b3e462b79bf7f2b09790025927a969"
+  },
+  "seedrandomLibrarySha256": "a6c6d6219add3214812ad4d6dd8311ddb2b5d9551090344ce047a6226045b7be",
+  "sampleInputSha256": "bc04c5d7f88c369118d5f9afef8eb859a74750c9f0ebe009b908654e75be9ff2",
+  "sampleOutputSha256": "46e969dfe525091cab49e590ef4cc038af4d346f51479291c6e6dd2436ae64f4",
+  "engine": {
+    "node": "12.18.3",
+    "v8": "8.7.220.31-electron.0",
+    "uv": "1.38.0",
+    "zlib": "1.2.11",
+    "brotli": "1.0.7",
+    "ares": "1.16.0",
+    "modules": "85",
+    "nghttp2": "1.41.0",
+    "napi": "6",
+    "llhttp": "2.0.4",
+    "http_parser": "2.9.3",
+    "openssl": "1.1.1",
+    "cldr": "37.0",
+    "icu": "67.1",
+    "tz": "2020f",
+    "unicode": "13.0",
+    "electron": "11.5.0"
+  },
+  "compilerSourceSha256": "22b055b24adc9a0c3e2bd388c58fcff82cfa8b95a1ce965cde8b561a4c093574",
+  "arc4HeaderSha256": "3eab311f39865396bbb7ad0b46bf206c166d1f4cf8ac0572de9fb17d81b621a7"
+}

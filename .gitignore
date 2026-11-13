@@ -6,3 +6,10 @@ __pycache__/
 .claude/
 paper/*.log
 paper/lean/.lake/
+lean/.lake/
+# These two files hold the page, the style sheets and the parsed scripts of the game.
+# The notice of the game asks not to re-host its code, so they stay out of the repository.
+model/experiments/cursor-cycle-source/request.json.gz
+model/experiments/cursor-cycle-source/request-template.json
+# Local records of the text that the commits of 13 November 2026 replaced.
+paper/AUDIT-*.patch

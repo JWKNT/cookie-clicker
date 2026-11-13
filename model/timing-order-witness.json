@@ -1,0 +1,96 @@
+{
+  "schema": "cookie-source-timing-native-v1",
+  "sourceHashes": {
+    "main.js": "a8813ec2ee97edf5ebff6a3ce2037dcb65c08abd13c123bb92efda89b06ef4f7",
+    "minigameGarden.js": "184eacacd9325d493412dcda07f63d3a791939f83889b4349b6099d04be8e6c9",
+    "minigameMarket.js": "78538743673f3c1cd0e870a3695c77dcacd63febbe64b88f8a8fab9ea7e2863f",
+    "minigameGrimoire.js": "9efea1feb898dc9b719dd971bd27a71f083a8855b910013c524aea9b6d2a349d",
+    "minigamePantheon.js": "af08c31c4564d445cc2d1a7d101c4a63b57aa9b89991b93b8a65f4c0427573a0",
+    "base64.js": "875839c3e0c174c9358ce96923adfed6a6d2c090187a32deb35152dfac2c0e47",
+    "loc/EN.js": "ce48272a5fd5ab1f309dbb8fd7bd70188984ce14235a1d3d9215f3585101f433",
+    "index.html": "28488d9aef9bf31c4c023a0af01f0500a3b3e462b79bf7f2b09790025927a969"
+  },
+  "fragments": {
+    "aura": {
+      "sha256": "9ede509f3ac180b215dd23cce16a9c3519b371342df458dc71abe5a1ee9d2851",
+      "text": "function(what)\r\n\t\t{\r\n\t\t\tvar n=0;\r\n\t\t\tif (Game.dragonAuras[Game.dragonAura].name==what || Game.dragonAuras[Game.dragonAura2].name==what) n=1;\r\n\t\t\tif ((Game.dragonAuras[Game.dragonAura].name=='Reality Bending' || Game.dragonAuras[Game.dragonAura2].name=='Reality Bending') && Game.dragonLevel>=Game.dragonAurasBN[what].id+4) n+=0.1;\r\n\t\t\treturn n;\r\n\t\t}"
+    },
+    "capacity": {
+      "sha256": "712b353419a05ec1928010ab469bc7091d48a29edfd1462ca5b81c129ca8f889",
+      "text": "function()\r\n\t\t{\r\n\t\t\tvar towers=Math.max(M.parent.amount,1);\r\n\t\t\tvar lvl=Math.max(M.parent.level,1);\r\n\t\t\tM.magicM=Math.floor(4+Math.pow(towers,0.6)+Math.log((towers+(lvl-1)*10)/15+1)*15);\r\n\t\t\t//old formula :\r\n\t\t\t/*\r\n\t\t\tM.magicM=8+Math.min(M.parent.amount,M.parent.level*5)+Math.ceil(M.parent.amount/10);\r\n\t\t\tif (M.magicM>200)\r\n\t\t\t{\r\n\t\t\t\t//diminishing returns starting at 200, being 5% as fast by 400\r\n\t\t\t\tvar x=M.magicM;\r\n\t\t\t\tvar top=x-200;\r\n\t\t\t\ttop/=200;\r\n\t\t\t\tvar top2=top;\r\n\t\t\t\ttop*=(1-top/2);\r\n\t\t\t\tif (top2>=1) top=0.5;\r\n\t\t\t\ttop=top*0.95+top2*0.05;\r\n\t\t\t\ttop*=200;\r\n\t\t\t\tx=top+200;\r\n\t\t\t\tM.magicM=x;\r\n\t\t\t}\r\n\t\t\t*/\r\n\t\t\tM.magic=Math.min(M.magicM,M.magic);\r\n\t\t}"
+    },
+    "cost": {
+      "sha256": "590b72dd62512d684e93f5a5a55aee8aa2232d2ddc184d229f446709ce9eb5bb",
+      "text": "function(spell)\r\n\t\t{\r\n\t\t\tvar out=spell.costMin;\r\n\t\t\tif (spell.costPercent) out+=M.magicM*spell.costPercent;\r\n\t\t\tout*=1-0.1*Game.auraMult('Supreme Intellect');\r\n\t\t\treturn Math.floor(out);\r\n\t\t}"
+    },
+    "economicPrefix": {
+      "sha256": "52727fd984080f56281100f1e6faa115a926f752e6edd691b40f0acd54ccc560",
+      "text": "if (Game.T%5==0) {M.computeMagicM();}\r\n\t\tM.magicPS=Math.max(0.002,Math.pow(M.magic/Math.max(M.magicM,100),0.5))*0.002;\r\n\t\tM.magic+=M.magicPS;\r\n\t\tM.magic=Math.min(M.magic,M.magicM);"
+    },
+    "logicWrapper": {
+      "sha256": "4d60c59bea65531a38403c077e5ba8c961b4ad3322c08893a7443e7d753051f6",
+      "text": "function(){if (Game.T%5==0) {M.computeMagicM();}\r\n\t\tM.magicPS=Math.max(0.002,Math.pow(M.magic/Math.max(M.magicM,100),0.5))*0.002;\r\n\t\tM.magic+=M.magicPS;\r\n\t\tM.magic=Math.min(M.magic,M.magicM);}"
+    },
+    "debit": {
+      "sha256": "b0f690be6af08f23e2cfa7d27519ffdfeda8b84106fae93e0f5e347bbbe01753",
+      "text": "M.magic-=cost;\r\n\t\t\t\tM.magic=Math.max(0,M.magic);"
+    },
+    "payWrapper": {
+      "sha256": "9da9dfa6dd83abd794157a59fce75135c788c84f3d9bb6262220ffc4ca521a02",
+      "text": "function(cost){M.magic-=cost;\r\n\t\t\t\tM.magic=Math.max(0,M.magic);}"
+    },
+    "gamblerCost": {
+      "sha256": "2be4421c15bd4ea98ac5c6b86b70f121b4af19eb1f287636e1b72586b3583ba0",
+      "text": "{costMin:3,costPercent:0.05}"
+    },
+    "conjureCost": {
+      "sha256": "4099c3de5106083a135c89048adfabe70ade938a4f2baf70fdaeae86c35555be",
+      "text": "{costMin:2,costPercent:0.4}"
+    }
+  },
+  "workerSha256": "0830c434ab0036f28b230d3ba3b66fab75bf9ffaf7cc25a79a9e73874673692c",
+  "result": {
+    "versions": {
+      "node": "12.18.3",
+      "v8": "8.7.220.31-electron.0",
+      "uv": "1.38.0",
+      "zlib": "1.2.11",
+      "brotli": "1.0.7",
+      "ares": "1.16.0",
+      "modules": "85",
+      "nghttp2": "1.41.0",
+      "napi": "6",
+      "llhttp": "2.0.4",
+      "http_parser": "2.9.3",
+      "openssl": "1.1.1",
+      "cldr": "37.0",
+      "icu": "67.1",
+      "tz": "2020f",
+      "unicode": "13.0",
+      "electron": "11.5.0"
+    },
+    "initial": {
+      "magicM": 100,
+      "selfCost": 8,
+      "fullCost": 42,
+      "capturedCost": 21,
+      "magic": 50
+    },
+    "common": 50.042435106809684,
+    "before": 29.043512927483206,
+    "after": 29.043849920367812,
+    "beforeBits": "4628868239806987868",
+    "afterBits": "4628868334662052214",
+    "strictlyMoreMagicAfterLogic": true,
+    "affordable": true,
+    "gameEntryPointExecuted": false
+  },
+  "scope": {
+    "sourceFragmentsExecuted": true,
+    "pinnedEngine": true,
+    "newSaveReachabilityProved": false,
+    "fullGameTrace": false,
+    "fullGameNonattainmentProved": false,
+    "interpretation": "A configured local source state exposes a noncommuting delayed spell payment and Logic magic update. Integer rounding of action times is not justified without an event-order equivalence proof. No optimality or nonattainment conclusion is drawn."
+  }
+}

@@ -1,0 +1,85 @@
+{
+  "schemaVersion": 1,
+  "status": "milestone",
+  "elapsedMs": 20820634,
+  "firstCompletedNormalReincarnation": true,
+  "ascensions": 1,
+  "prestige": 1,
+  "hardcore": true,
+  "neverclick": true,
+  "lumpTimestampElapsedMs": 12842973,
+  "config": {
+    "clickRate": 50,
+    "inputBatchMilliseconds": 1000,
+    "ascension": {
+      "earlyResetCookieTarget": 1000000000000
+    },
+    "helperSetup": true
+  },
+  "policySourceSha256": "4dd2f9cd977af8940ef2777f5bb2cea8546c76519c68dde129f0115ff5dcfa8c",
+  "environment": {
+    "platform": "Steam adapter",
+    "heralds": 100,
+    "epochMs": 1793275200000,
+    "timezone": "UTC",
+    "randomSeed": 1,
+    "randomMode": "LCG sample stream",
+    "verifiedLeanTranslation": false,
+    "policyMode": "no-retry-no-rng-manipulation",
+    "saveReloadRetries": false,
+    "nativeRngManipulation": false,
+    "nativeSaveInspection": "current-export-ui-only-v1",
+    "timerSemantics": "chromium-87-long-min1-preincrement5-zero-host-latency-v1"
+  },
+  "executionRuntime": {
+    "node": "v23.6.0",
+    "v8": "12.9.202.28-node.12",
+    "platform": "darwin",
+    "architecture": "arm64"
+  },
+  "recordingMode": "summary-only",
+  "actionCount": 1868468,
+  "randomDrawCount": 42065291,
+  "reloadCount": 0,
+  "noFullReplayHistory": true,
+  "optimalityCertified": false,
+  "scope": "Initialized source-adapter sample with a fixed lower first-reset target. No injected resources or outcome retries. This is neither a complete trajectory nor an IID expectation estimate or optimality proof. The original runner regenerated its then-current policy; the archived policy is the exact frozen source used by this sample.",
+  "files": [
+    {
+      "archive": "result.json",
+      "sha256": "77a57f27a942166d6efc2976d7f2ed32c8a9b88fac7980c69eac4b566ef4ae77",
+      "bytes": 233520
+    },
+    {
+      "archive": "policy.js",
+      "sha256": "5e3150892d82794200f9129bac359b7b322950581635ed5403ba864cd85678db",
+      "bytes": 168912
+    },
+    {
+      "archive": "progress.log",
+      "sha256": "05b755c51d2d51520e37decdc3c3200b9466d113cdc975c8ebcc4fa2aca19088",
+      "bytes": 21003
+    },
+    {
+      "archive": "original-runner.mjs",
+      "sha256": "16932b79fafd4d2fc65df8915207b1507b4450146bbb27e25ac3b033979a134e",
+      "bytes": 3215
+    },
+    {
+      "archive": "model--runtime.mjs",
+      "sha256": "427c41595d8e6195c44130b408cd52aafbc003dddaa4a049a66f340e1380a2e5",
+      "bytes": 86802
+    },
+    {
+      "archive": "model--policy-runtime.mjs",
+      "sha256": "bcf17efb2539d9ed2c8673d6de9bd81a09426ee6249ce9677395b96843ba4207",
+      "bytes": 9678
+    }
+  ],
+  "snapshotArchive": {
+    "path": "dist/experiments/new-save-first-reset.tar.gz",
+    "sha256": "9f725c8ce73680d463d318c9650647c5d9ab0167fbfe60b3799a452c34387c11",
+    "bytes": 109971,
+    "scope": "Frozen policy, original runner, final observation, progress log and two model dependencies. Not a full dependency snapshot or replay history."
+  }
+}

@@ -4,7 +4,11 @@
   "type": "module",
   "scripts": {
     "build": "node build.mjs",
-    "test": "node build.mjs --check && node --test tests/*.test.mjs && python3 -m unittest discover -s patcher -p 'test_*.py'"
+    "test": "node build.mjs --check && node --test --test-concurrency=2 tests/*.test.mjs && python3 -m unittest discover -s patcher -p 'test_*.py'",
+    "test:mod": "npm test --prefix source/cookie-monster-plus",
+    "test:lean": "python3 lean/check.py --engine",
+    "audit:game": "node tools/audit-game.mjs",
+    "evaluate:policy": "node tools/evaluate-policy.mjs"
   },
   "devDependencies": {
     "temml": "0.14.0"

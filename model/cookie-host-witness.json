@@ -1,0 +1,65 @@
+{
+  "schema": 1,
+  "scope": "file-and-opaque-origin-cookie-accessors-not-browser-refinement",
+  "chromiumVersion": "87.0.4280.141",
+  "sources": [
+    {
+      "file": "document.cc",
+      "url": "https://github.com/chromium/chromium/blob/87.0.4280.141/third_party/blink/renderer/core/dom/document.cc",
+      "sha256": "29f1e9d8b8e3bb79e32adef7f950a51e799389a971587a4d7e24ca8940304e29"
+    },
+    {
+      "file": "cookie_jar.cc",
+      "url": "https://github.com/chromium/chromium/blob/87.0.4280.141/third_party/blink/renderer/core/loader/cookie_jar.cc",
+      "sha256": "3f0ace913cf9bafa1d7607ac9d5db3082736a59b0c97c5f4aebde5dbaf012fdf"
+    },
+    {
+      "file": "cookie_monster.cc",
+      "url": "https://github.com/chromium/chromium/blob/87.0.4280.141/net/cookies/cookie_monster.cc",
+      "sha256": "f565f81d5519d2eb9c28efc295a82c8fc743de53005716f23cca540e5b96f475"
+    },
+    {
+      "file": "restricted_cookie_manager.cc",
+      "url": "https://github.com/chromium/chromium/blob/87.0.4280.141/services/network/restricted_cookie_manager.cc",
+      "sha256": "dbfe0e2d82b6d44af79a43135ff0152a510a35802ed5bb2a25c0ee35301cd965"
+    },
+    {
+      "file": "security_origin.cc",
+      "url": "https://github.com/chromium/chromium/blob/87.0.4280.141/third_party/blink/renderer/platform/weborigin/security_origin.cc",
+      "sha256": "716b19c087181b1c6cfcd4d338dbf669a7a680408090a09c4658715a227cf5d1"
+    },
+    {
+      "file": "security_origin.h",
+      "url": "https://github.com/chromium/chromium/blob/87.0.4280.141/third_party/blink/renderer/platform/weborigin/security_origin.h",
+      "sha256": "2b2767455d05c04d0dde47a3cc0d08288a9b9ed94da2e7253e7bfee074df048d"
+    }
+  ],
+  "configuration": {
+    "initialCookieStore": "empty",
+    "cookieableSchemes": [
+      "http",
+      "https",
+      "ws",
+      "wss"
+    ],
+    "nativeSchemeRegistryChanges": "not modeled",
+    "origins": [
+      "file",
+      "opaque"
+    ],
+    "unconfigured": "explicit unresolved request"
+  },
+  "rules": {
+    "fileGetter": "empty string",
+    "fileSetter": "performs source DOMString conversion and returns undefined; excluded file scheme cannot store cookie",
+    "opaqueAccess": "SecurityError after setter conversion; wrong receiver rejects before conversion",
+    "setterMissingArgument": "undefined is converted to DOMString"
+  },
+  "validation": "node lean/check_javascript_cookies.mjs --engine; fresh temporary file/data profiles, no user cookie store",
+  "remaining": [
+    "HTTP cookie stores, expiry, domains, paths and SameSite",
+    "Native scheme-policy changes",
+    "Other Document origins and global native host refinement"
+  ],
+  "fullHostRefinement": false
+}

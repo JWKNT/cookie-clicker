@@ -1,0 +1,244 @@
+{
+  "schema": 1,
+  "scope": "closed-border-shorthand-geometry",
+  "chromiumVersion": "87.0.4280.141",
+  "sources": [
+    {
+      "file": "css_parsing_utils.cc",
+      "url": "https://github.com/chromium/chromium/blob/87.0.4280.141/third_party/blink/renderer/core/css/properties/css_parsing_utils.cc",
+      "sha256": "b780eca7186f9d0b5691ce2578bd758c170bde6dec0cfc082052107a1b633761"
+    },
+    {
+      "file": "css_properties.json5",
+      "url": "https://github.com/chromium/chromium/blob/87.0.4280.141/third_party/blink/renderer/core/css/css_properties.json5",
+      "sha256": "0b52b3a7ad58da694d1297135933423ed851e62280a11f5ac5733dc748158bce"
+    },
+    {
+      "file": "style_builder_converter.cc",
+      "url": "https://github.com/chromium/chromium/blob/87.0.4280.141/third_party/blink/renderer/core/css/resolver/style_builder_converter.cc",
+      "sha256": "085924014cc996aa8265ede02571f6a6bf442e260b6b1090c3910ba95d7026ca"
+    }
+  ],
+  "declarations": [
+    {
+      "stylesheet": "style.css",
+      "sha256": "90c1ad8750f88ad2f964b5910521e84a16f9ec4d9b30c26244625bc269c7f446",
+      "property": "border",
+      "start": 554,
+      "end": 563,
+      "important": false
+    },
+    {
+      "stylesheet": "style.css",
+      "sha256": "90c1ad8750f88ad2f964b5910521e84a16f9ec4d9b30c26244625bc269c7f446",
+      "property": "border",
+      "start": 1073,
+      "end": 1084,
+      "important": false
+    },
+    {
+      "stylesheet": "style.css",
+      "sha256": "90c1ad8750f88ad2f964b5910521e84a16f9ec4d9b30c26244625bc269c7f446",
+      "property": "border-bottom",
+      "start": 5147,
+      "end": 5194,
+      "important": false
+    },
+    {
+      "stylesheet": "style.css",
+      "sha256": "90c1ad8750f88ad2f964b5910521e84a16f9ec4d9b30c26244625bc269c7f446",
+      "property": "border",
+      "start": 6667,
+      "end": 6688,
+      "important": false
+    },
+    {
+      "stylesheet": "style.css",
+      "sha256": "90c1ad8750f88ad2f964b5910521e84a16f9ec4d9b30c26244625bc269c7f446",
+      "property": "border-right",
+      "start": 8562,
+      "end": 8589,
+      "important": false
+    },
+    {
+      "stylesheet": "style.css",
+      "sha256": "90c1ad8750f88ad2f964b5910521e84a16f9ec4d9b30c26244625bc269c7f446",
+      "property": "border",
+      "start": 15054,
+      "end": 15078,
+      "important": false
+    },
+    {
+      "stylesheet": "style.css",
+      "sha256": "90c1ad8750f88ad2f964b5910521e84a16f9ec4d9b30c26244625bc269c7f446",
+      "property": "border",
+      "start": 15900,
+      "end": 15924,
+      "important": false
+    },
+    {
+      "stylesheet": "style.css",
+      "sha256": "90c1ad8750f88ad2f964b5910521e84a16f9ec4d9b30c26244625bc269c7f446",
+      "property": "border",
+      "start": 16284,
+      "end": 16323,
+      "important": false
+    },
+    {
+      "stylesheet": "style.css",
+      "sha256": "90c1ad8750f88ad2f964b5910521e84a16f9ec4d9b30c26244625bc269c7f446",
+      "property": "border",
+      "start": 17525,
+      "end": 17553,
+      "important": false
+    },
+    {
+      "stylesheet": "style.css",
+      "sha256": "90c1ad8750f88ad2f964b5910521e84a16f9ec4d9b30c26244625bc269c7f446",
+      "property": "border",
+      "start": 18305,
+      "end": 18326,
+      "important": false
+    },
+    {
+      "stylesheet": "style.css",
+      "sha256": "90c1ad8750f88ad2f964b5910521e84a16f9ec4d9b30c26244625bc269c7f446",
+      "property": "border",
+      "start": 18536,
+      "end": 18557,
+      "important": false
+    },
+    {
+      "stylesheet": "style.css",
+      "sha256": "90c1ad8750f88ad2f964b5910521e84a16f9ec4d9b30c26244625bc269c7f446",
+      "property": "border",
+      "start": 18694,
+      "end": 18715,
+      "important": false
+    },
+    {
+      "stylesheet": "style.css",
+      "sha256": "90c1ad8750f88ad2f964b5910521e84a16f9ec4d9b30c26244625bc269c7f446",
+      "property": "border",
+      "start": 19145,
+      "end": 19166,
+      "important": false
+    },
+    {
+      "stylesheet": "style.css",
+      "sha256": "90c1ad8750f88ad2f964b5910521e84a16f9ec4d9b30c26244625bc269c7f446",
+      "property": "border",
+      "start": 19299,
+      "end": 19320,
+      "important": false
+    },
+    {
+      "stylesheet": "style.css",
+      "sha256": "90c1ad8750f88ad2f964b5910521e84a16f9ec4d9b30c26244625bc269c7f446",
+      "property": "border",
+      "start": 19735,
+      "end": 19756,
+      "important": false
+    },
+    {
+      "stylesheet": "style.css",
+      "sha256": "90c1ad8750f88ad2f964b5910521e84a16f9ec4d9b30c26244625bc269c7f446",
+      "property": "border",
+      "start": 19882,
+      "end": 19903,
+      "important": false
+    },
+    {
+      "stylesheet": "style.css",
+      "sha256": "90c1ad8750f88ad2f964b5910521e84a16f9ec4d9b30c26244625bc269c7f446",
+      "property": "border",
+      "start": 21734,
+      "end": 21772,
+      "important": false
+    },
+    {
+      "stylesheet": "style.css",
+      "sha256": "90c1ad8750f88ad2f964b5910521e84a16f9ec4d9b30c26244625bc269c7f446",
+      "property": "border",
+      "start": 24579,
+      "end": 24590,
+      "important": false
+    },
+    {
+      "stylesheet": "style.css",
+      "sha256": "90c1ad8750f88ad2f964b5910521e84a16f9ec4d9b30c26244625bc269c7f446",
+      "property": "border",
+      "start": 45461,
+      "end": 45472,
+      "important": false
+    },
+    {
+      "stylesheet": "style.css",
+      "sha256": "90c1ad8750f88ad2f964b5910521e84a16f9ec4d9b30c26244625bc269c7f446",
+      "property": "border",
+      "start": 50394,
+      "end": 50405,
+      "important": false
+    },
+    {
+      "stylesheet": "style.css",
+      "sha256": "90c1ad8750f88ad2f964b5910521e84a16f9ec4d9b30c26244625bc269c7f446",
+      "property": "border",
+      "start": 62379,
+      "end": 62400,
+      "important": false
+    },
+    {
+      "stylesheet": "style.css",
+      "sha256": "90c1ad8750f88ad2f964b5910521e84a16f9ec4d9b30c26244625bc269c7f446",
+      "property": "border",
+      "start": 64824,
+      "end": 64845,
+      "important": false
+    },
+    {
+      "stylesheet": "style.css",
+      "sha256": "90c1ad8750f88ad2f964b5910521e84a16f9ec4d9b30c26244625bc269c7f446",
+      "property": "border",
+      "start": 66093,
+      "end": 66103,
+      "important": false
+    },
+    {
+      "stylesheet": "style.css",
+      "sha256": "90c1ad8750f88ad2f964b5910521e84a16f9ec4d9b30c26244625bc269c7f446",
+      "property": "border",
+      "start": 66453,
+      "end": 66463,
+      "important": false
+    },
+    {
+      "stylesheet": "style.css",
+      "sha256": "90c1ad8750f88ad2f964b5910521e84a16f9ec4d9b30c26244625bc269c7f446",
+      "property": "border",
+      "start": 67059,
+      "end": 67081,
+      "important": true
+    }
+  ],
+  "initial": {
+    "widthCssPixels": 3,
+    "style": "none",
+    "color": "currentColor"
+  },
+  "keywordWidths": {
+    "thin": 1,
+    "medium": 3,
+    "thick": 5
+  },
+  "implemented": "Order-independent width/style/color parsing; nonnegative integral px widths and native width keywords; admitted fixed colors and currentColor validation; reset missing width/style to their native initial values. Geometric consumers require zoom1.",
+  "proof": "CookieClicker.JavaScript.Css.Border.none_keeps_medium checks that border:none retains medium width before a later style override.",
+  "remaining": [
+    "Fractional or relative lengths and LayoutUnit rounding",
+    "Complete CSS color grammar and CSS-wide reset/inheritance",
+    "Invalid-value cascade recovery",
+    "Border image painting and native renderer refinement"
+  ],
+  "validation": "node lean/check_javascript_border.mjs --engine",
+  "rendererRefinementVerified": false
+}

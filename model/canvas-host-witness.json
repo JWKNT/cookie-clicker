@@ -1,0 +1,151 @@
+{
+  "schema": 5,
+  "scope": "source-pinned-canvas-adapter-not-browser-refinement",
+  "chromiumVersion": "87.0.4280.141",
+  "sources": [
+    {
+      "file": "html_canvas_element.cc",
+      "url": "https://github.com/chromium/chromium/blob/87.0.4280.141/third_party/blink/renderer/core/html/canvas/html_canvas_element.cc",
+      "sha256": "6d9052d6fdf866d119649b3511119996d904e0f3b9314ef06d2e70831835a888"
+    },
+    {
+      "file": "html_canvas_element.idl",
+      "url": "https://github.com/chromium/chromium/blob/87.0.4280.141/third_party/blink/renderer/core/html/canvas/html_canvas_element.idl",
+      "sha256": "2ed366c16f337cbb95c668f0243895c5193551f7444579e9845addb7a63173aa"
+    },
+    {
+      "file": "element.cc",
+      "url": "https://github.com/chromium/chromium/blob/87.0.4280.141/third_party/blink/renderer/core/dom/element.cc",
+      "sha256": "63a93ef5c8b04a21fb0ef6f674d4a72eb220b922b7e1a6fb410e7f1dfc31c7d0"
+    },
+    {
+      "file": "html_parser_idioms.cc",
+      "url": "https://github.com/chromium/chromium/blob/87.0.4280.141/third_party/blink/renderer/core/html/parser/html_parser_idioms.cc",
+      "sha256": "670214dc32d204cf529c6ec11d0606666bcf0b27143d1f560cc08306cf7f2b46"
+    },
+    {
+      "file": "html_canvas_element_module.idl",
+      "url": "https://github.com/chromium/chromium/blob/87.0.4280.141/third_party/blink/renderer/modules/canvas/htmlcanvas/html_canvas_element_module.idl",
+      "sha256": "941a7784b50f49b10d78811056bb7b178fb4f493f0ba722fa8de227442c1a10d"
+    },
+    {
+      "file": "html_canvas_element_module.cc",
+      "url": "https://github.com/chromium/chromium/blob/87.0.4280.141/third_party/blink/renderer/modules/canvas/htmlcanvas/html_canvas_element_module.cc",
+      "sha256": "697a3f78e5464ad9316a015843ae290f6b4b2ec3de4812a4accf013b9e6351a7"
+    },
+    {
+      "file": "canvas_context_creation_attributes_module.idl",
+      "url": "https://github.com/chromium/chromium/blob/87.0.4280.141/third_party/blink/renderer/modules/canvas/htmlcanvas/canvas_context_creation_attributes_module.idl",
+      "sha256": "11d7b62f98b2c1c00311909d961fdcc8437c0abdbe588dc0ead37302a1a3e2c6"
+    },
+    {
+      "file": "canvas_context_creation_attributes_helpers.cc",
+      "url": "https://github.com/chromium/chromium/blob/87.0.4280.141/third_party/blink/renderer/modules/canvas/htmlcanvas/canvas_context_creation_attributes_helpers.cc",
+      "sha256": "00219bfbf39b01513a0bf5e32cf36de5916a0e1d1de3fca249db7ba138ace224"
+    },
+    {
+      "file": "canvas_rendering_context.cc",
+      "url": "https://github.com/chromium/chromium/blob/87.0.4280.141/third_party/blink/renderer/core/html/canvas/canvas_rendering_context.cc",
+      "sha256": "a3f2127bb01273ad4c9db7fe8829eec348c78c3c9d8a2ccf99cffd8c623de8e1"
+    },
+    {
+      "file": "canvas_rendering_context_2d.cc",
+      "url": "https://github.com/chromium/chromium/blob/87.0.4280.141/third_party/blink/renderer/modules/canvas/canvas2d/canvas_rendering_context_2d.cc",
+      "sha256": "7cf392b5041a28087fee5f01577e26a10c40cb5dd06d41e6d1c538f8d4272888"
+    },
+    {
+      "file": "canvas_rendering_context_2d_settings.idl",
+      "url": "https://github.com/chromium/chromium/blob/87.0.4280.141/third_party/blink/renderer/modules/canvas/canvas2d/canvas_rendering_context_2d_settings.idl",
+      "sha256": "1bcd6f1af2bbb43596cc967037210cf9b13aac8bbe48edef686cf84b2164e227"
+    },
+    {
+      "file": "canvas_rendering_context_2d.idl",
+      "url": "https://github.com/chromium/chromium/blob/87.0.4280.141/third_party/blink/renderer/modules/canvas/canvas2d/canvas_rendering_context_2d.idl",
+      "sha256": "52615adc42da596f90fc8f9a7626e22721b85971f607108a95ec4d956595f0d0"
+    },
+    {
+      "file": "base_rendering_context_2d.cc",
+      "url": "https://github.com/chromium/chromium/blob/87.0.4280.141/third_party/blink/renderer/modules/canvas/canvas2d/base_rendering_context_2d.cc",
+      "sha256": "09cb96a15217d3a0fced986ed72d671c3bb375aef021e35dae0b45c5370047e3"
+    },
+    {
+      "file": "base_rendering_context_2d.h",
+      "url": "https://github.com/chromium/chromium/blob/87.0.4280.141/third_party/blink/renderer/modules/canvas/canvas2d/base_rendering_context_2d.h",
+      "sha256": "29752a6b3660e5667fcae9df689933812d8744436b8226670f8e90969c49a8f6"
+    },
+    {
+      "file": "canvas_rendering_context_2d_state.cc",
+      "url": "https://github.com/chromium/chromium/blob/87.0.4280.141/third_party/blink/renderer/modules/canvas/canvas2d/canvas_rendering_context_2d_state.cc",
+      "sha256": "8f49926be3f754e23f9fa7f19174a618ca6ce905fbc36a39b04d12a9bb4621b9"
+    },
+    {
+      "file": "canvas_rendering_context_2d_state.h",
+      "url": "https://github.com/chromium/chromium/blob/87.0.4280.141/third_party/blink/renderer/modules/canvas/canvas2d/canvas_rendering_context_2d_state.h",
+      "sha256": "c46be82454e4fa566e7904882b9d065a10a022a21363bbc2ae59dfa7f9fb6d8d"
+    },
+    {
+      "file": "graphics_types.cc",
+      "url": "https://github.com/chromium/chromium/blob/87.0.4280.141/third_party/blink/renderer/platform/graphics/graphics_types.cc",
+      "sha256": "c3561a58873cf27b94290de3f5aa773bcc3f8df1e62f2453723b536d44476eea"
+    },
+    {
+      "file": "math_extras.h",
+      "url": "https://github.com/chromium/chromium/blob/87.0.4280.141/third_party/blink/renderer/platform/wtf/math_extras.h",
+      "sha256": "b95c9bb35caabc1f22e8a9808be49cb003cbf9563bba1d93de9bee2282d2342e"
+    },
+    {
+      "file": "affine_transform.cc",
+      "url": "https://github.com/chromium/chromium/blob/87.0.4280.141/third_party/blink/renderer/platform/transforms/affine_transform.cc",
+      "sha256": "f012215bab586083b2e4a038aaf037edd7fca2b89865d4fbd35e411e0685b652"
+    },
+    {
+      "file": "affine_transform.h",
+      "url": "https://github.com/chromium/chromium/blob/87.0.4280.141/third_party/blink/renderer/platform/transforms/affine_transform.h",
+      "sha256": "ec58ebf1574455ab908fb7706b54a611f2332bfbc502e92cf83c193970d728c5"
+    }
+  ],
+  "rules": {
+    "defaultWidth": 300,
+    "defaultHeight": 150,
+    "maximumReflectedDimension": 2147483647,
+    "propertyConversion": "Web IDL unsigned long, then values above INT_MAX become the dimension default before serialization",
+    "attributeParsing": "Leading HTML whitespace and plus accepted; negative zero accepted; first decimal digit sequence used; invalid or above INT_MAX uses dimension default",
+    "canvasContextMode": "none or created 2D identity; stored alpha, native prototype, canvas identity and explicit drawing-state stack; clear commands retain their matrix, and fill commands retain complete admitted drawing snapshots; pixel observations remain explicit",
+    "drawingState": "Native default scalar properties, save/restore, numeric and keyword setters with source coercions; unrestricted-double alpha, finite binary32 clamp for line/shadow properties, native invalid-value and signed-zero rules",
+    "dimensionReset": "Width/height assignment or mutation resets drawing state and clears saved states while preserving context identity and creation alpha; removing an absent attribute does not reset",
+    "transforms": "Pinned binary32 input clamp and binary64 affine order for scale, translate, numeric transform/setTransform, resetTransform and zero/nonfinite rotations; save/restore/reset retain matrix; ordinary bounded allocations without context loss; empty canvas operations have no paint canvas",
+    "fonts": "Fixed integer pixel sizes and parsed family metadata, separate from getter serialization; quoted generic-name families stay distinct; source conversion, save/restore and dimension reset retained",
+    "colors": "Admitted fixed CSS colors retain native RGBA bytes separately from Canvas getter formatting, including save/restore/reset; gradients, patterns and currentColor remain explicit",
+    "fillRect": "Actual source conversions precede finite/(width||height) validation and bounded paint allocation; native negative-rectangle adjustment and binary32 clamp; command snapshots include matrix, scalar fields, parsed colors/font and target dimensions/alpha. Initial full clip only. Zero-area calls are retained because full-canvas composite modes can affect pixels. No pixel interpretation is supplied.",
+    "remainingState": "Paths, nonzero C-library rotations, DOMMatrix2DInit/getTransform, font metrics and full style lifecycle, general CSS colors, filters, inherited direction, large allocation and context-loss effects remain explicit boundaries",
+    "contextOptionOrder": [
+      "alpha",
+      "antialias",
+      "depth",
+      "failIfMajorPerformanceCaveat",
+      "powerPreference",
+      "premultipliedAlpha",
+      "preserveDrawingBuffer",
+      "stencil",
+      "desynchronized",
+      "xrCompatible"
+    ],
+    "contextOptionConversion": "Actual source getters and string conversion; nonobject settings ignored; powerPreference enum validated; repeated context calls still convert options",
+    "platform": "macOS; pinned Chromium helper forces desynchronized false",
+    "twoDAttributes": "Fresh ordinary dictionary with alpha and desynchronized; color management and new Canvas2D API members absent in the captured native configuration"
+  },
+  "validation": [
+    "node lean/check_javascript_browser.mjs --engine",
+    "node lean/check_javascript_canvas.mjs --engine",
+    "node lean/check_javascript_canvas_matrix.mjs --engine",
+    "node lean/check_javascript_font.mjs --engine",
+    "node lean/check_javascript_color.mjs --engine",
+    "node lean/check_javascript_canvas_fill.mjs --engine"
+  ],
+  "remaining": [
+    "Other rendering context modes and context loss",
+    "Rasterization, compositing, fonts and image decoding",
+    "Canvas serialization and pixel readback",
+    "Renderer layout and full native host refinement"
+  ]
+}

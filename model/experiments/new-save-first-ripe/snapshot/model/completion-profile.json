@@ -1,0 +1,205 @@
+{
+  "schemaVersion": 1,
+  "id": "normal-completion-no-long-sugar-v1",
+  "version": "1.0.0",
+  "gameVersion": "2.053",
+  "edition": "steam",
+  "scope": "All attainable vanilla normal achievements, upgrades, and progression unlocks, except the exact sugar achievements listed here. Shadow achievements and inaccessible/debug content are excluded.",
+  "objective": "Minimum expected elapsed time from a new save until the terminal predicate is true.",
+  "semantics": {
+    "achievements": "All normal achievements must be won. The listed sugar exceptions need not be won. Shadow achievements do not affect completion.",
+    "ordinaryUpgrades": "Every legal ordinary, cookie, research, building, seasonal, fortune, synergy, and other non-toggle upgrade must currently be bought.",
+    "heavenlyUpgrades": "Every legal prestige upgrade must currently be bought, including cosmetics and offline upgrades.",
+    "cosmeticUnlocks": "All milk choices must be available. Hazelnut milk requires 600 normal achievements. Sugar exclusions remove individual achievement requirements; they do not remove this aggregate unlock threshold. Wallpaper, sound, and jukebox choices follow from their required prestige upgrades.",
+    "toggles": "Each legal toggle or selector must be currently unlocked or bought, or recorded as accessed previously. Mutually exclusive choices need not be active together.",
+    "garden": "Every seed must currently be unlocked. Seedless to nay remains required, so the seed log must be rebuilt after a required sacrifice.",
+    "progression": "Dragon, Santa, Stock Market offices, garden plots and soils, all minigames, and their spell, god, good and loan access must be unlocked in the current normal run.",
+    "temporaryAvailability": "An unlocked spell or loan need not be affordable or outside a cooldown at the terminal instant. Gods, auras, seasons, and cosmetic choices need not all be selected at once. Their finite access prerequisites still apply.",
+    "unboundedQuantities": "Completion does not require unbounded building levels, building amounts, stock holdings, or broker counts. Required achievements and finite unlock thresholds still apply.",
+    "sugarResources": "Lump costs for required ordinary progression remain in the model. Exceptions remove terminal achievement requirements, not resource costs or game rules.",
+    "transientStates": "Completion is evaluated in an active normal ascension, outside ascension and reincarnation transitions."
+  },
+  "achievementPools": [
+    "",
+    "normal"
+  ],
+  "upgradeOwnershipPools": [
+    "",
+    "normal",
+    "cookie",
+    "tech",
+    "prestige"
+  ],
+  "upgradeAccessPools": [
+    "toggle"
+  ],
+  "excludedUpgradePools": [
+    "debug",
+    "unused",
+    "dungeon",
+    "shadow",
+    "prestigeDecor"
+  ],
+  "excludedAchievementPools": [
+    "shadow",
+    "dungeon",
+    "debug",
+    "unused"
+  ],
+  "sugarAchievementExclusions": [
+    {
+      "name": "Freaky jazz hands",
+      "reason": "level-10 sugar gate",
+      "building": "Cursor"
+    },
+    {
+      "name": "Methuselah",
+      "reason": "level-10 sugar gate",
+      "building": "Grandma"
+    },
+    {
+      "name": "Huge tracts of land",
+      "reason": "level-10 sugar gate",
+      "building": "Farm"
+    },
+    {
+      "name": "D-d-d-d-deeper",
+      "reason": "level-10 sugar gate",
+      "building": "Mine"
+    },
+    {
+      "name": "Patently genius",
+      "reason": "level-10 sugar gate",
+      "building": "Factory"
+    },
+    {
+      "name": "A capital idea",
+      "reason": "level-10 sugar gate",
+      "building": "Bank"
+    },
+    {
+      "name": "It belongs in a bakery",
+      "reason": "level-10 sugar gate",
+      "building": "Temple"
+    },
+    {
+      "name": "Motormouth",
+      "reason": "level-10 sugar gate",
+      "building": "Wizard tower"
+    },
+    {
+      "name": "Been there done that",
+      "reason": "level-10 sugar gate",
+      "building": "Shipment"
+    },
+    {
+      "name": "Phlogisticated substances",
+      "reason": "level-10 sugar gate",
+      "building": "Alchemy lab"
+    },
+    {
+      "name": "Bizarro world",
+      "reason": "level-10 sugar gate",
+      "building": "Portal"
+    },
+    {
+      "name": "The long now",
+      "reason": "level-10 sugar gate",
+      "building": "Time machine"
+    },
+    {
+      "name": "Chubby hadrons",
+      "reason": "level-10 sugar gate",
+      "building": "Antimatter condenser"
+    },
+    {
+      "name": "Palettable",
+      "reason": "level-10 sugar gate",
+      "building": "Prism"
+    },
+    {
+      "name": "Let's leaf it at that",
+      "reason": "level-10 sugar gate",
+      "building": "Chancemaker"
+    },
+    {
+      "name": "Sierpinski rhomboids",
+      "reason": "level-10 sugar gate",
+      "building": "Fractal engine"
+    },
+    {
+      "name": "Alexandria",
+      "reason": "level-10 sugar gate",
+      "building": "Javascript console"
+    },
+    {
+      "name": "Strange topologies",
+      "reason": "level-10 sugar gate",
+      "building": "Idleverse"
+    },
+    {
+      "name": "Gifted",
+      "reason": "level-10 sugar gate",
+      "building": "Cortex baker"
+    },
+    {
+      "name": "Self-improvement",
+      "reason": "level-10 sugar gate",
+      "building": "You"
+    },
+    {
+      "name": "Year's worth of cavities",
+      "reason": "365 lifetime sugar lumps"
+    },
+    {
+      "name": "Sugar sugar",
+      "reason": "bifurcated lump random wait"
+    },
+    {
+      "name": "Sweetmeats",
+      "reason": "meaty lump random wait"
+    },
+    {
+      "name": "Maillard reaction",
+      "reason": "caramelized lump random wait"
+    }
+  ],
+  "retainedSugarAchievements": [
+    "Dude, sweet",
+    "Sugar rush",
+    "Hand-picked",
+    "Keeper of the conservatory",
+    "Seedless to nay",
+    "Pyramid scheme"
+  ],
+  "requiredBuildingLevels": {
+    "Cursor": 12,
+    "Farm": 9,
+    "Temple": 1,
+    "Wizard tower": 1,
+    "Bank": 1
+  },
+  "requiredMinigames": {
+    "Farm": "Garden",
+    "Bank": "Stock Market",
+    "Temple": "Pantheon",
+    "Wizard tower": "Grimoire"
+  },
+  "normalAscensionMode": 0,
+  "sourceReferences": {
+    "normalAchievementPools": "main.js:12637-12640",
+    "levelCosts": "main.js:8104-8114",
+    "sugarTotals": "main.js:4455-4463",
+    "gardenSacrifice": "minigameGarden.js:1496-1514",
+    "gardenPlotLevels": "minigameGarden.js:1471-1486",
+    "stockOfficeLevels": "minigameMarket.js:291-297,543-548"
+  },
+  "notes": [
+    "This explicit profile implements the requested long-sugar exception policy. It does not claim that these gates require a fixed number of calendar days.",
+    "Sugar baking, Sugar crystal cookies, and other chip-purchased upgrades remain required regardless of their lump-dependent bonus.",
+    "Cursor level 12 is still required by Pyramid scheme and the last office, even though Freaky jazz hands is excluded.",
+    "Ordinary upgrades, dragon progress, Santa progress, and stock offices reset on ascension. Garden seeds persist on ordinary ascension but are lost on garden sacrifice. Persistent achievement success alone is insufficient.",
+    "The 598 required achievements, plus the level-10 Cursor achievement forced by Cursor level 12, total 599. At least one other excluded normal achievement must also be won to unlock the last milk choice at 600. No particular additional excluded achievement is prescribed.",
+    "A complete terminal predicate is separate from a proof of an optimal policy."
+  ]
+}

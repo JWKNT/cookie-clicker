@@ -1,0 +1,50 @@
+{
+  "schemaVersion": 1,
+  "id": "iid53-native-seeded-unbounded-clock-strings-fixed-heralds-v3",
+  "completionProfileId": "normal-completion-no-long-sugar-v1",
+  "objective": "Minimize the expected elapsed time to the first complete state from a new save. A path with no complete state has hitting time infinity.",
+  "unseededRandom": {
+    "law": "Each free draw is independent and uniform on {k / 2^53 : 0 <= k < 2^53}.",
+    "bits": 53,
+    "noArgumentSeedrandom": "Restore the free independent draw law. This is a mathematical environment assumption, not a claim about the browser entropy pool."
+  },
+  "explicitlySeededRandom": "Retain the pinned game's seedrandom algorithm, seed construction, draw order, and correlations. Do not replace seeded outputs with independent draws.",
+  "clock": "Use an unbounded monotone mathematical clock. The finite Date range and eventual binary64 timestamp stagnation are not completion obstructions in this model.",
+  "externalData": {
+    "heralds": {
+      "mode": "fixed",
+      "value": 100,
+      "rule": "Fix the herald count at 100, with no later external changes. External Steam player-count variation is outside this selected environment.",
+      "authorization": "The user selected fixed 100 heralds on 2026-10-31.",
+      "adapter": "The existing isolated Steam adapter supplies playersN=10000 to each native GrabData callback. The native source computes heralds=100. Policy sessions reject another herald count; lower-level diagnostic fixtures may still use explicitly different counts."
+    }
+  },
+  "controls": {
+    "saveReloadRetries": false,
+    "scheduledMaintenanceReloads": true,
+    "maintenanceReloadRule": "A scheduled maintenance reload saves the current state and then reloads it. It must not restore an earlier state or retry a random outcome. Retain all native save/load effects; do not treat reload as the identity transition.",
+    "saveEditing": false,
+    "clockEditing": false,
+    "futureRandomOrHiddenGeneratorInspection": false,
+    "deliberateUiRandomGeneratorManipulation": false,
+    "timingChosenToChangeSeededOutcomes": false,
+    "seededTimingRule": "The strategy must not choose an action timestamp to change a seeded outcome, including searching harvest timestamps with the publicly exported startup seed. Native current-save export inspection remains allowed. A trace alone does not establish compliance: the decision rule and its use of seed information must be audited.",
+    "ordinaryGameResets": true,
+    "nativeCurrentSaveExportInspection": true,
+    "exportInspectionRule": "The strategy may open the native Export save interface and read or decode the current displayed save, including the startup seed. Retain the native export and save bookkeeping effects. This does not permit import, editing, earlier-state restoration, retries, or access to future free draws."
+  },
+  "execution": {
+    "inputLatency": "The existing mathematical adapter charges elapsed game time to waits and native timers, with zero simulated latency for an input or policy computation.",
+    "experimentBudgets": "Decision and same-time action caps stop diagnostic experiments. They are not restrictions on the strategies in the requested optimum.",
+    "failedInfinitePaths": "An infinite sequence without completion has hitting time infinity, even when its elapsed action times have a finite sum."
+  },
+  "implementationBoundary": "The user selected the random, clock, and timestamp-string idealizations. The executable diagnostic game adapter still uses finite native dates and a reproducible LCG or explicit tape. The Lean interpreter has an unbounded timestamp and Gregorian calendar carrier, source-specific save/gift readers and zero initializers, plus provenance-tagged timestamp text and exact traversal in the captured native mixkey activation and save-codec builtins. Native-prefix and explicit-decimal seed comparisons are separate finite tests. Complete source propagation/refinement, tagged seeded-library termination, a legal attaining policy, and a matching full-game lower bound remain unproved.",
+  "timestampStringProcessing": {
+    "rule": "Extend timestamp string processing to arbitrary finite timestamp text. It must not overflow a native String limit or stall at a binary64 loop-index limit.",
+    "nativePrefixAgreement": true,
+    "seededAlgorithm": "Preserve native seeded results for ordinary timestamps, UTF-16 code-unit order, mixkey byte arithmetic, ARC4, and seeded draw order. Use exact length and traversal indices for extended timestamp text.",
+    "scope": "This extends timestamp-derived text processing, including timestamp seeds and clock serialization. It does not replace ordinary economic Number arithmetic or turn seeded draws into independent draws.",
+    "authorization": "The user selected this extension on 2026-10-31.",
+    "implementedScope": "The captured native mixkey closure retains its source text and all statements except the transient e=0 initializer, which uses an exact traversal index. Timestamp-derived URI/base64/string/regex and native save-helper map/join operations preserve the text provenance. Ordinary arrays and economic Numbers retain native behavior. General arithmetic such as e+1 leaves the exact index carrier; this implementation does not make arbitrary source loops total."
+  }
+}

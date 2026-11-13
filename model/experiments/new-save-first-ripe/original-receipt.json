@@ -1,0 +1,52 @@
+{
+  "scope": "First periodically emitted public progress after native first ripe-lump acquisition or Temple level1. Public observation only, not a resumable state or exact first-hit time. Runner and policy unchanged.",
+  "summary": {
+    "elapsedMs": 95400678,
+    "decisions": 100061,
+    "stage": "early-income-growth",
+    "bank": 6.247757370120573e+21,
+    "earned": 1.7504094289960785e+22,
+    "cps": 3219264426344814,
+    "click": 5222335870280401000,
+    "ascensions": 0,
+    "prestige": 0,
+    "lumps": 0,
+    "lump": {
+      "available": true,
+      "type": null,
+      "ageMs": 120078,
+      "matureAge": 72000000,
+      "ripeAge": 82800000,
+      "overripeAge": 86400000,
+      "nextRefill": 0
+    },
+    "temple": {
+      "amount": 105,
+      "level": 1
+    },
+    "achievementsOwned": 100,
+    "wonFlags": 100,
+    "garden": null,
+    "buff": {
+      "time": 26,
+      "multClick": 16386
+    },
+    "hardcore": true,
+    "neverclick": true,
+    "firstCompletionMs": null,
+    "checkpoints": 13009523,
+    "wallSeconds": 7037.659913583,
+    "rss": 105676800
+  },
+  "sha256": {
+    "public-progress.json": "66d1077a5a2fa6d2e8d646a9e6eec465a5b606b9f3b0ff7225bb400ea7f22925",
+    "log-prefix.log": "1363e7e01ae04c7f552ccd367cd4c318445a57a008f944016d13243cafc9e48f"
+  },
+  "dependencies": {
+    "full-route-policy.js": "cd2564269468ed45a8dfc203a19917722ced9a4d69f53634df78c385f06bb477",
+    "full-route-start.json": "26c4789b84fd2fa4b46cdbdc98426dc7cb121b54f00a31bff11ade7a77812fc6",
+    "model/runtime.mjs": "a5e95f8c741f259b458e9885d194a6c3bf5c36c22933149b77e6e19fe9fd0da4",
+    "model/completion-policy.mjs": "521aa0bcda761e27366fc8f85205621b3e19e373977e5ac1c8867ad30784c473",
+    "tools/run-complete-source.mjs": "27ee9ea558f1b159ffa83c8a6e744e9a5237f8ad21fe16d0c275ffd0f58e20f0"
+  }
+}

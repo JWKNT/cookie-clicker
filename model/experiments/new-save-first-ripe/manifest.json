@@ -1,0 +1,124 @@
+{
+  "schemaVersion": 1,
+  "scope": "A genuine fresh-save, observation-only Node/LCG diagnostic prefix. No injected resources, restored state, outcome retries, or seeded timing search. Not a full replay, expected-time proof, source refinement proof, or optimality certificate.",
+  "observedCheckpoint": {
+    "elapsedMs": 95400678,
+    "decisions": 100061,
+    "stage": "early-income-growth",
+    "bank": 6.247757370120573e+21,
+    "earned": 1.7504094289960785e+22,
+    "cps": 3219264426344814,
+    "click": 5222335870280401000,
+    "ascensions": 0,
+    "prestige": 0,
+    "lumps": 0,
+    "lump": {
+      "available": true,
+      "type": null,
+      "ageMs": 120078,
+      "matureAge": 72000000,
+      "ripeAge": 82800000,
+      "overripeAge": 86400000,
+      "nextRefill": 0
+    },
+    "temple": {
+      "amount": 105,
+      "level": 1
+    },
+    "achievementsOwned": 100,
+    "wonFlags": 100,
+    "garden": null,
+    "buff": {
+      "time": 26,
+      "multClick": 16386
+    },
+    "hardcore": true,
+    "neverclick": true,
+    "firstCompletionMs": null,
+    "checkpoints": 13009523,
+    "wallSeconds": 7037.659913583,
+    "rss": 105676800
+  },
+  "exactAcquisitionTimeKnown": false,
+  "fullReplayTapeAvailable": false,
+  "policy": {
+    "file": "evaluated-policy.js",
+    "fileBytes": 179221,
+    "fileSha256": "cd2564269468ed45a8dfc203a19917722ced9a4d69f53634df78c385f06bb477",
+    "evaluatedBytes": 179220,
+    "evaluatedSha256": "fad0bf030fe6c2d881341cb4e3cff1cebe3da8042ea1c45e22ea74d93477188c",
+    "convention": "The original runner writes source plus one final LF; the VM evaluates source without that appended LF."
+  },
+  "configuration": {
+    "config": {
+      "clickRate": 50,
+      "inputBatchMilliseconds": 1000,
+      "lowEffects": true,
+      "earlyFunding": {
+        "cycles": 16384,
+        "batchCycles": 249
+      },
+      "helperSetup": true
+    },
+    "environment": {
+      "randomSeed": 1,
+      "recordAudit": false,
+      "maintenanceReload": {
+        "firstMs": 604800000,
+        "everyMs": 604800000
+      }
+    },
+    "horizon": 31536000000,
+    "policySha256": "fad0bf030fe6c2d881341cb4e3cff1cebe3da8042ea1c45e22ea74d93477188c",
+    "startedAtUtc": "2026-10-31T23:36:58.290Z"
+  },
+  "externalDependencies": {
+    "gameSource": "User-supplied installed Steam2.053 src directory; read-only. The eight exact hashes are SOURCE_HASHES in snapshot/model/game-source.mjs. No game code or save is bundled.",
+    "node": {
+      "node": "v23.6.0",
+      "v8": "12.9.202.28-node.12",
+      "platform": "darwin",
+      "architecture": "arm64"
+    },
+    "epochMs": 1793275200000,
+    "gameTimezone": "UTC",
+    "randomness": "LCG sample stream with randomSeed1; this is not the accepted IID53 expectation model.",
+    "assets": "The frozen Node diagnostic adapter supplies its existing instant-asset browser approximation, not full Chromium native delivery."
+  },
+  "reproducerChange": "snapshot/tools/run-first-ripe.mjs differs from original-runner.mjs only by a diagnostic stop after a periodic progress write at elapsedMs>=95400678. The original365-day horizon remains in effect for action censoring before that stop.",
+  "payloadSha256": {
+    "README.md": "bd471060f59ab370cb0754987f2fd5b5ddfaeee8c7ddd2c7a538f89be6917d92",
+    "evaluated-policy.js": "cd2564269468ed45a8dfc203a19917722ced9a4d69f53634df78c385f06bb477",
+    "log-prefix.log": "1363e7e01ae04c7f552ccd367cd4c318445a57a008f944016d13243cafc9e48f",
+    "original-receipt.json": "d213a85a615b69e3ffb59b2bb03d804922f7dd4f57dd38281265bcce0763ebb5",
+    "original-runner.mjs": "27ee9ea558f1b159ffa83c8a6e744e9a5237f8ad21fe16d0c275ffd0f58e20f0",
+    "original-start.json": "26c4789b84fd2fa4b46cdbdc98426dc7cb121b54f00a31bff11ade7a77812fc6",
+    "public-progress.json": "66d1077a5a2fa6d2e8d646a9e6eec465a5b606b9f3b0ff7225bb400ea7f22925",
+    "reproduce.mjs": "ebcf2f36f5e891da2ffafa8e69951df62cb35afb93e794196386be04f439c922",
+    "snapshot/model/ascension-policy.mjs": "03860fbdf7f6ab73d7b132ae9168ce0044836c554d0f07d4f0a90d38220a8c02",
+    "snapshot/model/baseline-policy.mjs": "8ca564aed9f76e386bbbeb717b98482d2d7d76dd79e7d2e5016b1775ec7f0f9d",
+    "snapshot/model/catalogue.json": "a9b36f37e69618bb35d08cd71f4f66d2292fa53fba205d8118bf421beda1bff6",
+    "snapshot/model/combo-policy.mjs": "8e60eacc1304c5e9fd1730d6f96ba5672d81c74fe2736e158db0f5011fe129ce",
+    "snapshot/model/completion-policy.mjs": "521aa0bcda761e27366fc8f85205621b3e19e373977e5ac1c8867ad30784c473",
+    "snapshot/model/completion-profile.json": "28363b84e5bbc1d3b688eb2f0596e71669c2fc8c17fcae08501ab6c85f66179d",
+    "snapshot/model/completion-requirements.json": "9d9ebaa27cf1a2bb890a4c514bf2583c4c307a90ee2c6bdfe15d52dfb235aaf3",
+    "snapshot/model/completion.mjs": "d6777fe839d7c75e6cde91bb5a8f19668542818c296ec5d811e882c3fa3a6e12",
+    "snapshot/model/early-funding-policy.mjs": "7a88d42133a237c848443dd8bc1aed97d00780e048c146c4671b82d60c2257c1",
+    "snapshot/model/evaluate-policy.mjs": "05c65fd4302c46afae1c2f8c179d7c02d7fc6865c71080dff1bbdc88ae445b46",
+    "snapshot/model/game-source.mjs": "d4805b5a6cff893cf5dfce7ef04d10e5fa3045229735c1bc83e6f06efcd055e6",
+    "snapshot/model/garden-policy.mjs": "e778f72512d619be1af3ebfcaea9529ebe0e030641a4089a49ae16a157bf1b58",
+    "snapshot/model/golden-garden.mjs": "030ae42e2762dd4c1ae9f477bff9fb4e7c11a51df927af971ccb701e8f9e2354",
+    "snapshot/model/grimoire-reset-policy.mjs": "6aaa4c24142617d186d4feb551308671d3ff0496c516248ee734ba849971a892",
+    "snapshot/model/helper-cover.mjs": "f1ee1e69101c6ecd69bedc13116b9d6eabf4a16d7f7d1fad069f3d6dfe103423",
+    "snapshot/model/helper-setup-policy.mjs": "bb6392e2d9763c8de8de1d9992ec54143e997373f2fa825453c64a54d65dc3ec",
+    "snapshot/model/maintenance-schedule.mjs": "c22546088c4608890baf738a95da9dd395681b139c3cff984380772800725f83",
+    "snapshot/model/market-policy.mjs": "f53c097c88e0e6f489a7f987b095eb6b6e0df3d41a91f5e8c508b495075d1ce9",
+    "snapshot/model/mathematical-assumptions.json": "6aba263e99e09e5573e8954258747aed34496b4466a5e275ab969f0668fb8835",
+    "snapshot/model/misc-policy.mjs": "2bc2b78374cd1cad895f2f9d3e2e149f1340bfe0fd52938a9d1e9478dda21aa1",
+    "snapshot/model/policy-runtime.mjs": "bcf17efb2539d9ed2c8673d6de9bd81a09426ee6249ce9677395b96843ba4207",
+    "snapshot/model/production-policy.mjs": "80bdc449aa0623e6317d20e89138d34e322f58155cf0aa3c762aa1d112fa7cbc",
+    "snapshot/model/runtime.mjs": "a5e95f8c741f259b458e9885d194a6c3bf5c36c22933149b77e6e19fe9fd0da4",
+    "snapshot/model/season-policy.mjs": "066f8b3ae5c0ed110aebbfe0bf0e367e8056be0fdf89f3565f7d26bb3d9031e0",
+    "snapshot/tools/run-first-ripe.mjs": "1f5da8f87b0c8bf2b2d68701316ebb323807beba606c6af743743160fc873685"
+  }
+}

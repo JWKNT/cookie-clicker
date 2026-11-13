@@ -1,0 +1,137 @@
+{
+  "schemaVersion": 1,
+  "scope": "source-handler-diagnostic-not-ordinary-physical-input-or-optimality-proof",
+  "reproduction": "node tools/probe-lean-startup.mjs --stage onload --language-setting EN --tasks 30 --fuel 100000 --task-fuel 30000000 --timeout-ms 600000 --random-input-count 4096 --post-task-stages model/source-click-stages.json --output /tmp/cookie-audit/source-click",
+  "sourceHashes": {
+    "main.js": "a8813ec2ee97edf5ebff6a3ce2037dcb65c08abd13c123bb92efda89b06ef4f7",
+    "minigameGarden.js": "184eacacd9325d493412dcda07f63d3a791939f83889b4349b6099d04be8e6c9",
+    "minigameMarket.js": "78538743673f3c1cd0e870a3695c77dcacd63febbe64b88f8a8fab9ea7e2863f",
+    "minigameGrimoire.js": "9efea1feb898dc9b719dd971bd27a71f083a8855b910013c524aea9b6d2a349d",
+    "minigamePantheon.js": "af08c31c4564d445cc2d1a7d101c4a63b57aa9b89991b93b8a65f4c0427573a0",
+    "base64.js": "875839c3e0c174c9358ce96923adfed6a6d2c090187a32deb35152dfac2c0e47",
+    "loc/EN.js": "ce48272a5fd5ab1f309dbb8fd7bd70188984ce14235a1d3d9215f3585101f433",
+    "index.html": "28488d9aef9bf31c4c023a0af01f0500a3b3e462b79bf7f2b09790025927a969"
+  },
+  "implementationHashes": {
+    "lean/CookieClicker/JavaScriptBrowser.lean": "0a2754894d50f96493d9b74aabd4c299c280c51c2552e26f2bfdeebca8b100cb",
+    "lean/CookieClicker/JavaScriptBrowserEventState.lean": "f2207b39ed6757fe4e5d3dfd261129b55b9f950ce6016126c033725b962c5b96",
+    "lean/CookieClicker/JavaScriptBrowserEvents.lean": "6ae80daa0324c50259b6913c4e1af9976c10189930b041bef92f4059da4dea13",
+    "lean/CookieClicker/JavaScriptBrowserResources.lean": "af7d52001e6c5a9d6883b9bc34a7cc59b72433c37c74d263e844c14fefe58aa9",
+    "lean/JavaScriptAstMain.lean": "03854f3b0732acbff8e1310707f45725a59aead58e98e8c91631272ce50c2928",
+    "lean/check_javascript_mouse_dispatch.mjs": "b1df14c0195f82aeaa8aca05116a078550f419b111b5c9b074dc082ac2bbef9d",
+    "lean/check_javascript_media_prefix.mjs": "46ca2b6f5f84406343e07cf081f903e23180e82c5aa0cfd66cf754d5f2a3217c",
+    "model/native-browser.mjs": "e78086c57b9397e48bfb576d9cb5561c7952f6ab5f13530645d0b5eccc0c7dc7",
+    "tools/probe-lean-startup.mjs": "6bc877122f8e884fa8765151d21fbc4ebb33d03aacdf41f07f7fdbb197511f1b",
+    "lean/check_media_autoplay.lean": "b2b4e8b0e65112b6cc337929b175809ad41016ed8929cb39bccbfab92d139593"
+  },
+  "stagesSha256": "0100fe17e5dbe3a0b3bf3a80fa96bac711cfb20a35b0347ca6c787218c9ed317",
+  "verifiedIsolatedExecutableSha256": "eca96cd936617bcae674b59ba4cc83f4d6b9c9b79c211d617a3c86277e0ee3cc",
+  "rawResultSha256": "83b00f5f8a889b57e0ef68af6384871b1cd500946e2b9fb241923b2e0bbab832",
+  "diagnosticBudgets": {
+    "fuelPerProgram": 100000,
+    "taskFuel": 30000000,
+    "taskBudget": 30,
+    "timeoutMilliseconds": 600000,
+    "randomInputCount": 4096
+  },
+  "diagnosticAssumptions": {
+    "environment": "Captured audit navigator/location/screen values; source App=0 branch; external Steam host script omitted explicitly.",
+    "clock": {
+      "epochMilliseconds": "1793275200000",
+      "timeZone": "UTC",
+      "desktopTimeZoneInferred": false,
+      "model": "selected-unbounded-v1",
+      "annotatedCurrentSaveReaders": true
+    },
+    "storage": {
+      "origin": "enabled",
+      "quotaBytes": 104857600,
+      "initialLocalEntries": 0,
+      "initialSessionEntries": 0,
+      "languageSetting": "EN",
+      "setupWrites": [
+        {
+          "key": "CookieClickerLang",
+          "value": "EN"
+        }
+      ],
+      "gameSaveSupplied": false
+    },
+    "cookies": {
+      "origin": "file",
+      "initialCookieEntries": 0,
+      "cookieableSchemes": [
+        "http",
+        "https",
+        "ws",
+        "wss"
+      ],
+      "userCookieStoreRead": false
+    },
+    "resourceBaseURL": {
+      "value": "file:///var/folders/6k/y7fhskwn2ggdc_8rppvshctr0000gn/T/cookie-clicker-dom-audit-FaBmos/",
+      "derivation": "Directory prefix of the captured canonical file document URL; no URL parser or installed app execution is inferred."
+    },
+    "browsingContextName": {
+      "initialValue": "",
+      "explicitFreshWindowFixture": true
+    },
+    "stylesheets": {
+      "loadedBeforeDiagnosticLoad": true,
+      "sources": [
+        {
+          "name": "../steam/fonts.css",
+          "sha256": "9bd20bc2e0a326d5c4801c83ee8b982ada6b1c3ff3d7ad36053a20b48582eebc"
+        },
+        {
+          "name": "style.css",
+          "sha256": "90c1ad8750f88ad2f964b5910521e84a16f9ec4d9b30c26244625bc269c7f446"
+        }
+      ],
+      "rendererRectanglesInjected": false
+    },
+    "initialDocument": "Entire pinned document parsed before source diagnostics; parser-blocking document visibility is not modeled by this probe.",
+    "randomInputs": "4096 fixed admissible uniform53 indices for diagnosis only; not an expectation computation or strategy action.",
+    "taskExecution": "Separate source programs in page order. Optional explicit task budget uses the model zero-latency pinned asset/script queue; no renderer state is invented."
+  },
+  "status": "unresolved",
+  "boundary": "CookieClicker.JavaScript.UnresolvedRequest.builtin\n  { namespaceName := \"Browser.HTMLMediaElement\", name := \"set volume\" }\n  (CookieClicker.JavaScript.Value.object 4530)\n  [CookieClicker.JavaScript.Value.number 4594234569871327232]\n  false",
+  "values": {
+    "cookies": 1.0,
+    "cookiesEarned": 1.0,
+    "handmadeCookies": 1.0,
+    "cookieClicks": 1.0,
+    "T": 7.0,
+    "drawT": 8.0,
+    "AchievementsOwned": 0.0
+  },
+  "freeDrawsConsumed": 48,
+  "soundRequest": "snd/clickb4.mp3",
+  "rectangles": [
+    {
+      "id": "bigCookie",
+      "rectangle": {
+        "detail": "CookieClicker.JavaScript.EvalFailure.unresolved\n  (CookieClicker.JavaScript.UnresolvedRequest.unsupportedSyntax\n    \"CSS layout: Native element formatting requires additional UA rules [rectangle node=218 button#bigCookie]\")",
+        "status": "unresolved"
+      }
+    },
+    {
+      "id": "product0",
+      "rectangle": {
+        "detail": "CookieClicker.JavaScript.EvalFailure.unresolved\n  (CookieClicker.JavaScript.UnresolvedRequest.unsupportedSyntax\n    \"CSS layout: CSS dynamic pseudo-class: hover [rectangle node=2528 div#product0]\")",
+        "status": "unresolved"
+      }
+    },
+    {
+      "id": "statsButton",
+      "rectangle": {
+        "detail": "CookieClicker.JavaScript.EvalFailure.unresolved\n  (CookieClicker.JavaScript.UnresolvedRequest.unsupportedSyntax\n    \"CSS layout: Nonzero or automatic box edge requires general layout [rectangle node=365 div#statsButton]\")",
+        "status": "unresolved"
+      }
+    }
+  ],
+  "syntheticNullView": true,
+  "ordinaryPhysicalInputVerified": false,
+  "sourceRefinementVerified": false,
+  "optimalStrategyProved": false
+}

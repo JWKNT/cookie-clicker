@@ -1,0 +1,116 @@
+{
+  "schema": 1,
+  "title": "Exhaustive public Fortune seed inference with a visible quote refinement",
+  "gameVersion": "2.053",
+  "nativeSourceHashes": {
+    "main.js": "a8813ec2ee97edf5ebff6a3ce2037dcb65c08abd13c123bb92efda89b06ef4f7",
+    "minigameGarden.js": "184eacacd9325d493412dcda07f63d3a791939f83889b4349b6099d04be8e6c9",
+    "minigameMarket.js": "78538743673f3c1cd0e870a3695c77dcacd63febbe64b88f8a8fab9ea7e2863f",
+    "minigameGrimoire.js": "9efea1feb898dc9b719dd971bd27a71f083a8855b910013c524aea9b6d2a349d",
+    "minigamePantheon.js": "af08c31c4564d445cc2d1a7d101c4a63b57aa9b89991b93b8a65f4c0427573a0",
+    "base64.js": "875839c3e0c174c9358ce96923adfed6a6d2c090187a32deb35152dfac2c0e47",
+    "loc/EN.js": "ce48272a5fd5ab1f309dbb8fd7bd70188984ce14235a1d3d9215f3585101f433",
+    "index.html": "28488d9aef9bf31c4c023a0af01f0500a3b3e462b79bf7f2b09790025927a969"
+  },
+  "execution": {
+    "node": "v23.6.0",
+    "v8": "12.9.202.28-node.12",
+    "platform": "darwin",
+    "architecture": "arm64"
+  },
+  "reproduce": "node tools/infer-fortune-seed.mjs 73 43 10 64 --output /tmp/fortune-posterior.json",
+  "scanImplementation": {
+    "moduleHash": "3fbd14d82f014d06e79523b3bff99a9180d48870fe235069c80c1b7148ec2688",
+    "functions": {
+      "inferSeedFromFortune": "552c00e8034845552c450586c0d7ac7a6b96f540438fbac6a7c2090b7872b556",
+      "candidateFortuneNumbers": "747d69e4520190f4ee1b6b0c7c76ae41888a26b8e21d32cf8d30669bae1535e6",
+      "shortAsciiSeededRandom": "92d29111ba7f89b2f551cb3a9040c9c4b10b700088693020c9251139d1ed9067",
+      "startupSeedPriorNumerator": "cb621e4a1232aa0a2d26747540e674084e09b1e9c6956ab5addd41a6edd1700b",
+      "startupSeeds": "568698b398f4c99b9c46c308a89782d3fea9b3cd6cf76e194b81d4f1688bb5a5"
+    },
+    "letterBucketsHash": "abb9d5be79e8903f474bfa55ca22e6832329a4b8a3fd68df6f54233c2b326207"
+  },
+  "coverage": "The completed scan enumerated all 26^5 startup seeds. The scan core function hashes and bucket table remain unchanged after the visible-quote refinement was added.",
+  "scope": "This finite observation witness is not a proof of whole-game source refinement, a complete strategy, or independent spell outcomes.",
+  "posterior": {
+    "observation": [
+      73,
+      43,
+      10,
+      64
+    ],
+    "inspected": 11881376,
+    "completeStartupDomain": true,
+    "posteriorScope": "all-startup-seeds",
+    "priorDenominator": "59285549689505892056868344324448208820874232148807968788202283012051522375647232",
+    "posteriorDenominator": "9979576387365606137495076327292792311950666201377691721865549023253751060",
+    "candidates": [
+      {
+        "seed": "aaodk",
+        "priorNumerator": "4989788193682817472169663800122117864428323567397801164991618131272935696",
+        "posteriorNumerator": "4989788193682817472169663800122117864428323567397801164991618131272935696"
+      },
+      {
+        "seed": "abeby",
+        "priorNumerator": "4989788193682788665325412527170674447522342633979890556873930891980815364",
+        "posteriorNumerator": "4989788193682788665325412527170674447522342633979890556873930891980815364"
+      }
+    ],
+    "consistent": true,
+    "wallMilliseconds": 108029.088667
+  },
+  "quoteRefinements": [
+    {
+      "observation": [
+        73,
+        43,
+        10,
+        64
+      ],
+      "inspected": 11881376,
+      "completeStartupDomain": true,
+      "posteriorScope": "all-startup-seeds",
+      "priorDenominator": "59285549689505892056868344324448208820874232148807968788202283012051522375647232",
+      "posteriorDenominator": "4989788193682817472169663800122117864428323567397801164991618131272935696",
+      "candidates": [
+        {
+          "seed": "aaodk",
+          "priorNumerator": "4989788193682817472169663800122117864428323567397801164991618131272935696",
+          "posteriorNumerator": "4989788193682817472169663800122117864428323567397801164991618131272935696"
+        }
+      ],
+      "consistent": true,
+      "wallMilliseconds": 108029.088667,
+      "additionalObservation": {
+        "kind": "mice-clicking-mice-spelling",
+        "spelling": "blasphemouse"
+      }
+    },
+    {
+      "observation": [
+        73,
+        43,
+        10,
+        64
+      ],
+      "inspected": 11881376,
+      "completeStartupDomain": true,
+      "posteriorScope": "all-startup-seeds",
+      "priorDenominator": "59285549689505892056868344324448208820874232148807968788202283012051522375647232",
+      "posteriorDenominator": "4989788193682788665325412527170674447522342633979890556873930891980815364",
+      "candidates": [
+        {
+          "seed": "abeby",
+          "priorNumerator": "4989788193682788665325412527170674447522342633979890556873930891980815364",
+          "posteriorNumerator": "4989788193682788665325412527170674447522342633979890556873930891980815364"
+        }
+      ],
+      "consistent": true,
+      "wallMilliseconds": 108029.088667,
+      "additionalObservation": {
+        "kind": "mice-clicking-mice-spelling",
+        "spelling": "blasphemous"
+      }
+    }
+  ]
+}

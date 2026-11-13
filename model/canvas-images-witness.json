@@ -1,0 +1,5113 @@
+{
+  "sourceHashes": {
+    "main.js": "a8813ec2ee97edf5ebff6a3ce2037dcb65c08abd13c123bb92efda89b06ef4f7",
+    "minigameGarden.js": "184eacacd9325d493412dcda07f63d3a791939f83889b4349b6099d04be8e6c9",
+    "minigameMarket.js": "78538743673f3c1cd0e870a3695c77dcacd63febbe64b88f8a8fab9ea7e2863f",
+    "minigameGrimoire.js": "9efea1feb898dc9b719dd971bd27a71f083a8855b910013c524aea9b6d2a349d",
+    "minigamePantheon.js": "af08c31c4564d445cc2d1a7d101c4a63b57aa9b89991b93b8a65f4c0427573a0",
+    "base64.js": "875839c3e0c174c9358ce96923adfed6a6d2c090187a32deb35152dfac2c0e47",
+    "loc/EN.js": "ce48272a5fd5ab1f309dbb8fd7bd70188984ce14235a1d3d9215f3585101f433",
+    "index.html": "28488d9aef9bf31c4c023a0af01f0500a3b3e462b79bf7f2b09790025927a969"
+  },
+  "pngAssets": [
+    {
+      "path": "img/AQWorlds_CookieClicker_300x40.png",
+      "sha256": "9fe9130784e98d79c25d5cff227baa9d159f8db55a8b15fac3367d44866ad0d7",
+      "width": 300,
+      "height": 40,
+      "chunks": [
+        "IHDR",
+        "gAMA",
+        "iCCP",
+        "cHRM",
+        "pHYs",
+        "IDAT",
+        "eXIf",
+        "IEND"
+      ],
+      "animated": false,
+      "exif": true,
+      "admitted": false
+    },
+    {
+      "path": "img/alchemylab.png",
+      "sha256": "3db8029356b1614260f45e4786c18d32a5a2c5d9cb53f95321c5e6770914c477",
+      "width": 64,
+      "height": 64,
+      "chunks": [
+        "IHDR",
+        "PLTE",
+        "tRNS",
+        "IDAT",
+        "IEND"
+      ],
+      "animated": false,
+      "exif": false,
+      "admitted": true
+    },
+    {
+      "path": "img/alchemylabBackground.png",
+      "sha256": "10897b78720854d23b7aefd24101bc70c0eae4f11495d85ef59bb49cf3ee72ea",
+      "width": 128,
+      "height": 128,
+      "chunks": [
+        "IHDR",
+        "PLTE",
+        "IDAT",
+        "IEND"
+      ],
+      "animated": false,
+      "exif": false,
+      "admitted": true
+    },
+    {
+      "path": "img/alteredGrandma.png",
+      "sha256": "55a5c4a2555a78552ffdeba45201edbf94af5100eda79461b4955a7a0d2e586b",
+      "width": 64,
+      "height": 64,
+      "chunks": [
+        "IHDR",
+        "PLTE",
+        "tRNS",
+        "IDAT",
+        "IEND"
+      ],
+      "animated": false,
+      "exif": false,
+      "admitted": true
+    },
+    {
+      "path": "img/alternateGrandma.png",
+      "sha256": "64da14a8a8e90cb69a18be0664c218eaecfad3237b05b92e07f8e51d0a395c81",
+      "width": 64,
+      "height": 64,
+      "chunks": [
+        "IHDR",
+        "IDAT",
+        "IEND"
+      ],
+      "animated": false,
+      "exif": false,
+      "admitted": true
+    },
+    {
+      "path": "img/antiGrandma.png",
+      "sha256": "338bf351eeb1d14e6de3523b1d68a23d2ce07e46575a2bc223780c4b8e20cee5",
+      "width": 64,
+      "height": 64,
+      "chunks": [
+        "IHDR",
+        "PLTE",
+        "tRNS",
+        "IDAT",
+        "IEND"
+      ],
+      "animated": false,
+      "exif": false,
+      "admitted": true
+    },
+    {
+      "path": "img/antimattercondenser.png",
+      "sha256": "6dd1c637ec2b6d01fe772007606239969a54e952a7b1bb4830754df2ccc23e2f",
+      "width": 64,
+      "height": 64,
+      "chunks": [
+        "IHDR",
+        "PLTE",
+        "tRNS",
+        "IDAT",
+        "IEND"
+      ],
+      "animated": false,
+      "exif": false,
+      "admitted": true
+    },
+    {
+      "path": "img/antimattercondenserBackground.png",
+      "sha256": "99ec86fda1d6157350628887bc5c5103e1f75f74ffa17da0cf93d93cfb42dede",
+      "width": 128,
+      "height": 128,
+      "chunks": [
+        "IHDR",
+        "PLTE",
+        "IDAT",
+        "IEND"
+      ],
+      "animated": false,
+      "exif": false,
+      "admitted": true
+    },
+    {
+      "path": "img/ascendBox.png",
+      "sha256": "2487aeb5b87e642a56a17507f44e1c1769fd0680da59e4c619ac9480482a4a6d",
+      "width": 344,
+      "height": 163,
+      "chunks": [
+        "IHDR",
+        "tEXt",
+        "iTXt",
+        "PLTE",
+        "tRNS",
+        "IDAT",
+        "IEND"
+      ],
+      "animated": false,
+      "exif": false,
+      "admitted": true
+    },
+    {
+      "path": "img/ascendInfo.png",
+      "sha256": "7fde2e787006c2f069ae6e1c4e80f2a04ff470f93f2c9a09842089ce223d5408",
+      "width": 308,
+      "height": 94,
+      "chunks": [
+        "IHDR",
+        "tEXt",
+        "iTXt",
+        "PLTE",
+        "tRNS",
+        "IDAT",
+        "IEND"
+      ],
+      "animated": false,
+      "exif": false,
+      "admitted": true
+    },
+    {
+      "path": "img/ascendSlot.png",
+      "sha256": "c29657a8663625941d660c8cafcec6f34561c92080b18f25cc0d65acee809221",
+      "width": 264,
+      "height": 88,
+      "chunks": [
+        "IHDR",
+        "tEXt",
+        "iTXt",
+        "IDAT",
+        "IEND"
+      ],
+      "animated": false,
+      "exif": false,
+      "admitted": true
+    },
+    {
+      "path": "img/ascendWisp.png",
+      "sha256": "d63b1c166e86a0108a166c8be49eac2d582f941ea50344e7f8e74e10ec30805f",
+      "width": 256,
+      "height": 99,
+      "chunks": [
+        "IHDR",
+        "tEXt",
+        "iTXt",
+        "IDAT",
+        "IEND"
+      ],
+      "animated": false,
+      "exif": false,
+      "admitted": true
+    },
+    {
+      "path": "img/ascendedBakingPod.png",
+      "sha256": "fd7f1f85e44beed958da75da7c6a169d443e3ff84a952ca3e2781bd1447d9901",
+      "width": 96,
+      "height": 96,
+      "chunks": [
+        "IHDR",
+        "PLTE",
+        "tRNS",
+        "IDAT",
+        "IEND"
+      ],
+      "animated": false,
+      "exif": false,
+      "admitted": true
+    },
+    {
+      "path": "img/bank.png",
+      "sha256": "e54e78334eaeee42c1f4461a24bc75236743b3156fb06cfbd373078a4ca7df5f",
+      "width": 64,
+      "height": 64,
+      "chunks": [
+        "IHDR",
+        "tEXt",
+        "PLTE",
+        "tRNS",
+        "IDAT",
+        "IEND"
+      ],
+      "animated": false,
+      "exif": false,
+      "admitted": true
+    },
+    {
+      "path": "img/bankBackground.png",
+      "sha256": "cb8aa4f778f08d93ffcc10a1abe28842ac5ea0526e8c032fbf804e7f6847022b",
+      "width": 128,
+      "height": 128,
+      "chunks": [
+        "IHDR",
+        "tEXt",
+        "iTXt",
+        "PLTE",
+        "IDAT",
+        "IEND"
+      ],
+      "animated": false,
+      "exif": false,
+      "admitted": true
+    },
+    {
+      "path": "img/bankGrandma.png",
+      "sha256": "ada1dea0a49c539de07bda99a7c7bf372415d8ca1634015884576a089305a906",
+      "width": 64,
+      "height": 64,
+      "chunks": [
+        "IHDR",
+        "tEXt",
+        "PLTE",
+        "tRNS",
+        "IDAT",
+        "IEND"
+      ],
+      "animated": false,
+      "exif": false,
+      "admitted": true
+    },
+    {
+      "path": "img/blackGradient.png",
+      "sha256": "d990307423958ccd4d281e3e428725c61c32c60d5d3583cac445d96bf6ead15a",
+      "width": 2,
+      "height": 640,
+      "chunks": [
+        "IHDR",
+        "IDAT",
+        "IEND"
+      ],
+      "animated": false,
+      "exif": false,
+      "admitted": true
+    },
+    {
+      "path": "img/blackGradientLeft.png",
+      "sha256": "8c7e5e2f91f45c473a1738caceec3d5ff4d2507d0d751d85f19fb69e4bc51f2c",
+      "width": 150,
+      "height": 150,
+      "chunks": [
+        "IHDR",
+        "tEXt",
+        "iTXt",
+        "IDAT",
+        "IEND"
+      ],
+      "animated": false,
+      "exif": false,
+      "admitted": true
+    },
+    {
+      "path": "img/blackGradientSmallTop.png",
+      "sha256": "12d1e09dcd356a97cb50850ab7174c6980b2e460e390a93d8cb98967affe9428",
+      "width": 2,
+      "height": 64,
+      "chunks": [
+        "IHDR",
+        "tEXt",
+        "iTXt",
+        "IDAT",
+        "IEND"
+      ],
+      "animated": false,
+      "exif": false,
+      "admitted": true
+    },
+    {
+      "path": "img/bracketPanelLeftS.png",
+      "sha256": "8d56e1145ef13a67ac993bb7d6302c2907a6bb8b62dbceb4887001013b9710fc",
+      "width": 16,
+      "height": 36,
+      "chunks": [
+        "IHDR",
+        "tEXt",
+        "iTXt",
+        "IDAT",
+        "IEND"
+      ],
+      "animated": false,
+      "exif": false,
+      "admitted": true
+    },
+    {
+      "path": "img/bracketPanelRightS.png",
+      "sha256": "f4747ccb95267b5041a1eb8496b776f5d7e0d99bbc5c665c7a5b8c4e4d59e86c",
+      "width": 18,
+      "height": 36,
+      "chunks": [
+        "IHDR",
+        "tEXt",
+        "iTXt",
+        "IDAT",
+        "IEND"
+      ],
+      "animated": false,
+      "exif": false,
+      "admitted": true
+    },
+    {
+      "path": "img/brainyGrandma.png",
+      "sha256": "141acd99e7a1ec91754813c32f0d8149e1e66f1258ed94baeaf63aaedb747112",
+      "width": 64,
+      "height": 64,
+      "chunks": [
+        "IHDR",
+        "IDAT",
+        "IEND"
+      ],
+      "animated": false,
+      "exif": false,
+      "admitted": true
+    },
+    {
+      "path": "img/brokenCookie.png",
+      "sha256": "b171ef8e1c4d0262145bc16d8cc3a2267193e0266b5a84dd9ca89560c896858f",
+      "width": 2560,
+      "height": 256,
+      "chunks": [
+        "IHDR",
+        "tEXt",
+        "iTXt",
+        "PLTE",
+        "tRNS",
+        "IDAT",
+        "IEND"
+      ],
+      "animated": false,
+      "exif": false,
+      "admitted": true
+    },
+    {
+      "path": "img/brokenCookieHalo.png",
+      "sha256": "096a992221efa955ca34ed02fc23ea39757e4a44f3229d78968fd8ebb296ee11",
+      "width": 192,
+      "height": 192,
+      "chunks": [
+        "IHDR",
+        "tEXt",
+        "iTXt",
+        "IDAT",
+        "IEND"
+      ],
+      "animated": false,
+      "exif": false,
+      "admitted": true
+    },
+    {
+      "path": "img/brownStripes.png",
+      "sha256": "2b8679e86d9bf378950030ad4fb9cbd622bd6cbec040c4290cbf38953eb0ad95",
+      "width": 200,
+      "height": 16,
+      "chunks": [
+        "IHDR",
+        "tEXt",
+        "iTXt",
+        "PLTE",
+        "IDAT",
+        "IEND"
+      ],
+      "animated": false,
+      "exif": false,
+      "admitted": true
+    },
+    {
+      "path": "img/brownStripesLeftEdge.png",
+      "sha256": "a09145597bac8d12f56113453fbbee41bb9463a4a6d01e472569d07aaf62eeb3",
+      "width": 16,
+      "height": 16,
+      "chunks": [
+        "IHDR",
+        "tEXt",
+        "iTXt",
+        "PLTE",
+        "IDAT",
+        "IEND"
+      ],
+      "animated": false,
+      "exif": false,
+      "admitted": true
+    },
+    {
+      "path": "img/buildings.png",
+      "sha256": "a6db162217e38b5f9545f085e2310c0d5120359a71a428284955a3036c711205",
+      "width": 256,
+      "height": 1344,
+      "chunks": [
+        "IHDR",
+        "tEXt",
+        "iTXt",
+        "PLTE",
+        "tRNS",
+        "IDAT",
+        "IEND"
+      ],
+      "animated": false,
+      "exif": false,
+      "admitted": true
+    },
+    {
+      "path": "img/bunnies.png",
+      "sha256": "a62086110926365a161968959f55f447a22c71dd5e0b2b26f1b7bf5c0b6bfc28",
+      "width": 384,
+      "height": 192,
+      "chunks": [
+        "IHDR",
+        "tEXt",
+        "iTXt",
+        "PLTE",
+        "tRNS",
+        "IDAT",
+        "IEND"
+      ],
+      "animated": false,
+      "exif": false,
+      "admitted": true
+    },
+    {
+      "path": "img/bunnyGrandma.png",
+      "sha256": "4fe5d94ca76343ca73d70a52ec22ded656f7606b2ac417c71adeaf925ffc269a",
+      "width": 64,
+      "height": 64,
+      "chunks": [
+        "IHDR",
+        "tEXt",
+        "PLTE",
+        "tRNS",
+        "IDAT",
+        "IEND"
+      ],
+      "animated": false,
+      "exif": false,
+      "admitted": true
+    },
+    {
+      "path": "img/chancemaker.png",
+      "sha256": "42f75997c7c5af3745156a26db24eb0b47193722ab48f26c0c3a44f71bf29231",
+      "width": 64,
+      "height": 64,
+      "chunks": [
+        "IHDR",
+        "tEXt",
+        "iTXt",
+        "PLTE",
+        "tRNS",
+        "IDAT",
+        "IEND"
+      ],
+      "animated": false,
+      "exif": false,
+      "admitted": true
+    },
+    {
+      "path": "img/chancemakerBackground.png",
+      "sha256": "ef46f961f6a43128bbe6fb86b7e9e814b76b4af1769bcb1a5e78088df9b73db0",
+      "width": 128,
+      "height": 128,
+      "chunks": [
+        "IHDR",
+        "tEXt",
+        "iTXt",
+        "PLTE",
+        "IDAT",
+        "IEND"
+      ],
+      "animated": false,
+      "exif": false,
+      "admitted": true
+    },
+    {
+      "path": "img/cloneGrandma.png",
+      "sha256": "a9a70e4343d325353f49a498773264e647bc033470b8b44702852590b879bc11",
+      "width": 64,
+      "height": 64,
+      "chunks": [
+        "IHDR",
+        "tEXt",
+        "PLTE",
+        "tRNS",
+        "IDAT",
+        "IEND"
+      ],
+      "animated": false,
+      "exif": false,
+      "admitted": true
+    },
+    {
+      "path": "img/contract.png",
+      "sha256": "2e15498bb8c04dd9494305596b97b7ed06ec16f3a002ad30bbd4642088f6ac0b",
+      "width": 96,
+      "height": 96,
+      "chunks": [
+        "IHDR",
+        "tEXt",
+        "iTXt",
+        "PLTE",
+        "tRNS",
+        "IDAT",
+        "IEND"
+      ],
+      "animated": false,
+      "exif": false,
+      "admitted": true
+    },
+    {
+      "path": "img/control.png",
+      "sha256": "1317ffe83cb51d331e7ca265cdcc4703fec4b7912481df319490286951d9053b",
+      "width": 144,
+      "height": 144,
+      "chunks": [
+        "IHDR",
+        "IDAT",
+        "IEND"
+      ],
+      "animated": false,
+      "exif": false,
+      "admitted": true
+    },
+    {
+      "path": "img/cookieShadow.png",
+      "sha256": "f2b61fbcbb0e39795dd982012968972244807cafcfe25e271d8e1a577edbd802",
+      "width": 64,
+      "height": 64,
+      "chunks": [
+        "IHDR",
+        "tEXt",
+        "iTXt",
+        "IDAT",
+        "IEND"
+      ],
+      "animated": false,
+      "exif": false,
+      "admitted": true
+    },
+    {
+      "path": "img/cookieShower1.png",
+      "sha256": "f26c9a7c7ad104f57c6574d6650d00ed44a3927843c6e466c54736957b436741",
+      "width": 512,
+      "height": 512,
+      "chunks": [
+        "IHDR",
+        "PLTE",
+        "tRNS",
+        "IDAT",
+        "IEND"
+      ],
+      "animated": false,
+      "exif": false,
+      "admitted": true
+    },
+    {
+      "path": "img/cookieShower2.png",
+      "sha256": "296777b889b9a03292cccb95a3e475226a9e8e512b266323776c8b33bfee0ca7",
+      "width": 512,
+      "height": 512,
+      "chunks": [
+        "IHDR",
+        "PLTE",
+        "tRNS",
+        "IDAT",
+        "IEND"
+      ],
+      "animated": false,
+      "exif": false,
+      "admitted": true
+    },
+    {
+      "path": "img/cookieShower3.png",
+      "sha256": "6ed8cd5f61a019b67695112722fb40d0ffdb862535050d1bb0000162750c145f",
+      "width": 512,
+      "height": 512,
+      "chunks": [
+        "IHDR",
+        "PLTE",
+        "tRNS",
+        "IDAT",
+        "IEND"
+      ],
+      "animated": false,
+      "exif": false,
+      "admitted": true
+    },
+    {
+      "path": "img/cortex.png",
+      "sha256": "006ba929bd5581d4078b39a0cc26637f074f5f77ecbeedd1cae86ea2bdee5273",
+      "width": 256,
+      "height": 64,
+      "chunks": [
+        "IHDR",
+        "IDAT",
+        "IEND"
+      ],
+      "animated": false,
+      "exif": false,
+      "admitted": true
+    },
+    {
+      "path": "img/cortexBackground.png",
+      "sha256": "3c8b668932ecac88a397fbde3a221c5d69d99c762075f551277225064d3bd1c7",
+      "width": 128,
+      "height": 128,
+      "chunks": [
+        "IHDR",
+        "IDAT",
+        "IEND"
+      ],
+      "animated": false,
+      "exif": false,
+      "admitted": true
+    },
+    {
+      "path": "img/cosmicGrandma.png",
+      "sha256": "00ed96b278fab2c1a55d40c256d0d9aecc5365b32a450de95261e0f75b3166c8",
+      "width": 64,
+      "height": 64,
+      "chunks": [
+        "IHDR",
+        "PLTE",
+        "tRNS",
+        "IDAT",
+        "IEND"
+      ],
+      "animated": false,
+      "exif": false,
+      "admitted": true
+    },
+    {
+      "path": "img/cursor.png",
+      "sha256": "b122d7da853cb679d78d952038f611cc1370408c1eee1f7aea04aac8f029a8b6",
+      "width": 64,
+      "height": 64,
+      "chunks": [
+        "IHDR",
+        "tEXt",
+        "iTXt",
+        "IDAT",
+        "IEND"
+      ],
+      "animated": false,
+      "exif": false,
+      "admitted": true
+    },
+    {
+      "path": "img/darkNoise.png",
+      "sha256": "331b42cf406a18b52681cbf1e42d3cbd46f4388a2652ae47bd792e0c9acdd867",
+      "width": 64,
+      "height": 64,
+      "chunks": [
+        "IHDR",
+        "PLTE",
+        "IDAT",
+        "IEND"
+      ],
+      "animated": false,
+      "exif": false,
+      "admitted": true
+    },
+    {
+      "path": "img/dashnetLogo.png",
+      "sha256": "73468f269a503c2badfc6616224f9a0b0d4ce2e878c57e210a12aefd07c29a67",
+      "width": 688,
+      "height": 247,
+      "chunks": [
+        "IHDR",
+        "IDAT",
+        "IDAT",
+        "IDAT",
+        "IDAT",
+        "IDAT",
+        "IDAT",
+        "IDAT",
+        "IDAT",
+        "IDAT",
+        "IDAT",
+        "IDAT",
+        "IDAT",
+        "IDAT",
+        "IEND"
+      ],
+      "animated": false,
+      "exif": false,
+      "admitted": true
+    },
+    {
+      "path": "img/discord.png",
+      "sha256": "0cc9afd53eb0c2832853a39aea07d1fc28ebb39f49dcc57260a502288022fe1f",
+      "width": 22,
+      "height": 32,
+      "chunks": [
+        "IHDR",
+        "tEXt",
+        "iTXt",
+        "PLTE",
+        "IDAT",
+        "IEND"
+      ],
+      "animated": false,
+      "exif": false,
+      "admitted": true
+    },
+    {
+      "path": "img/dragon.png",
+      "sha256": "3793c77f96d3c0e9b998e13b9c34e58bd673b594b47791129e4e32822e7587da",
+      "width": 864,
+      "height": 96,
+      "chunks": [
+        "IHDR",
+        "tEXt",
+        "iTXt",
+        "PLTE",
+        "tRNS",
+        "IDAT",
+        "IEND"
+      ],
+      "animated": false,
+      "exif": false,
+      "admitted": true
+    },
+    {
+      "path": "img/dragonBG.png",
+      "sha256": "150cc329b2fa15dbdc64281a8c5c59f1fe90c3067afa301f216d1f26278d5731",
+      "width": 300,
+      "height": 300,
+      "chunks": [
+        "IHDR",
+        "tEXt",
+        "iTXt",
+        "PLTE",
+        "tRNS",
+        "IDAT",
+        "IEND"
+      ],
+      "animated": false,
+      "exif": false,
+      "admitted": true
+    },
+    {
+      "path": "img/dragonFrame.png",
+      "sha256": "52e9c33adb593d9a65099b3d4990c4042e383356dcf1d3a42dff1c737511cf9c",
+      "width": 288,
+      "height": 96,
+      "chunks": [
+        "IHDR",
+        "tEXt",
+        "iTXt",
+        "PLTE",
+        "tRNS",
+        "IDAT",
+        "IEND"
+      ],
+      "animated": false,
+      "exif": false,
+      "admitted": true
+    },
+    {
+      "path": "img/dungeonDot.png",
+      "sha256": "53f5c93bdd83eff7468daf7af7fbbd052bce6f624c5bda5b8016b5f62ac5f201",
+      "width": 160,
+      "height": 32,
+      "chunks": [
+        "IHDR",
+        "tEXt",
+        "iTXt",
+        "PLTE",
+        "tRNS",
+        "IDAT",
+        "IEND"
+      ],
+      "animated": false,
+      "exif": false,
+      "admitted": true
+    },
+    {
+      "path": "img/dungeonFactory.png",
+      "sha256": "da30812ef3dca70334ad16f5ff3d8973b8ebcd833a1a6f7d022f14b2289f14ed",
+      "width": 144,
+      "height": 144,
+      "chunks": [
+        "IHDR",
+        "PLTE",
+        "tRNS",
+        "IDAT",
+        "IEND"
+      ],
+      "animated": false,
+      "exif": false,
+      "admitted": true
+    },
+    {
+      "path": "img/dungeonFoes.png",
+      "sha256": "a864d722c882e290db697bab7d546184f74f1fbb1b5ee8875767206b245e0e8d",
+      "width": 64,
+      "height": 64,
+      "chunks": [
+        "IHDR",
+        "tEXt",
+        "iTXt",
+        "PLTE",
+        "tRNS",
+        "IDAT",
+        "IEND"
+      ],
+      "animated": false,
+      "exif": false,
+      "admitted": true
+    },
+    {
+      "path": "img/dungeonHeroes.png",
+      "sha256": "1d112e07571afb21bdd22aee61393868a54305aca1c3cf2639ddf8f2b9aa7d91",
+      "width": 32,
+      "height": 128,
+      "chunks": [
+        "IHDR",
+        "tEXt",
+        "iTXt",
+        "PLTE",
+        "tRNS",
+        "IDAT",
+        "IEND"
+      ],
+      "animated": false,
+      "exif": false,
+      "admitted": true
+    },
+    {
+      "path": "img/dungeonIcons.png",
+      "sha256": "0a347022d7e9e7bf5e9ce5c4d9521b97d2fa57848f360ce66615a4b23c5bfcee",
+      "width": 256,
+      "height": 256,
+      "chunks": [
+        "IHDR",
+        "PLTE",
+        "tRNS",
+        "IDAT",
+        "IEND"
+      ],
+      "animated": false,
+      "exif": false,
+      "admitted": true
+    },
+    {
+      "path": "img/dungeonItems.png",
+      "sha256": "994a4b4aac10f095570fcd0316fa03fa3df921b9e3ac3c95378d262f12dc413d",
+      "width": 96,
+      "height": 96,
+      "chunks": [
+        "IHDR",
+        "tEXt",
+        "iTXt",
+        "PLTE",
+        "tRNS",
+        "IDAT",
+        "IEND"
+      ],
+      "animated": false,
+      "exif": false,
+      "admitted": true
+    },
+    {
+      "path": "img/dungeonOverlay.png",
+      "sha256": "57d24b6b0cfa997b9e1c2bae492d6a0075cd77b0f012ef18d00cfd2c4adcd2ee",
+      "width": 144,
+      "height": 144,
+      "chunks": [
+        "IHDR",
+        "PLTE",
+        "tRNS",
+        "IDAT",
+        "IEND"
+      ],
+      "animated": false,
+      "exif": false,
+      "admitted": true
+    },
+    {
+      "path": "img/dungeonPictos.png",
+      "sha256": "cd8c7377b910a3a0120f93d126e79211fe4d0de04a830c704b2241e1243575ad",
+      "width": 16,
+      "height": 128,
+      "chunks": [
+        "IHDR",
+        "tEXt",
+        "iTXt",
+        "PLTE",
+        "tRNS",
+        "IDAT",
+        "IEND"
+      ],
+      "animated": false,
+      "exif": false,
+      "admitted": true
+    },
+    {
+      "path": "img/dungeonTiles.png",
+      "sha256": "2dea4458c422a42c9e469cd3c2330f32fa6a457bbc546395f60fce293d45877a",
+      "width": 128,
+      "height": 128,
+      "chunks": [
+        "IHDR",
+        "PLTE",
+        "IDAT",
+        "IEND"
+      ],
+      "animated": false,
+      "exif": false,
+      "admitted": true
+    },
+    {
+      "path": "img/easterEggs.png",
+      "sha256": "6eb63e5b7b90c0ce7c4ee922a32735a94638faaf152a4de00a06f3afaa686935",
+      "width": 384,
+      "height": 64,
+      "chunks": [
+        "IHDR",
+        "tEXt",
+        "iTXt",
+        "PLTE",
+        "tRNS",
+        "IDAT",
+        "IEND"
+      ],
+      "animated": false,
+      "exif": false,
+      "admitted": true
+    },
+    {
+      "path": "img/elfGrandma.png",
+      "sha256": "dac9e189b24036bc1576de0038ec60acf7a1aed6f7fa61a46dc55ae89db169a2",
+      "width": 64,
+      "height": 64,
+      "chunks": [
+        "IHDR",
+        "PLTE",
+        "tRNS",
+        "IDAT",
+        "IEND"
+      ],
+      "animated": false,
+      "exif": false,
+      "admitted": true
+    },
+    {
+      "path": "img/empty.png",
+      "sha256": "ba78444bfbd7c20f571088bc949f4d6f0fc0a30dcc92e42bccc821c3216abbef",
+      "width": 1,
+      "height": 1,
+      "chunks": [
+        "IHDR",
+        "PLTE",
+        "tRNS",
+        "IDAT",
+        "IEND"
+      ],
+      "animated": false,
+      "exif": false,
+      "admitted": true
+    },
+    {
+      "path": "img/emptyFrame.png",
+      "sha256": "b8dbba0ab06a3e2b63b0795393fa42c2c7dd84a958d8b3d51f91883fc8a74a6c",
+      "width": 60,
+      "height": 60,
+      "chunks": [
+        "IHDR",
+        "tEXt",
+        "iTXt",
+        "PLTE",
+        "IDAT",
+        "IEND"
+      ],
+      "animated": false,
+      "exif": false,
+      "admitted": true
+    },
+    {
+      "path": "img/factory.png",
+      "sha256": "7b0b76c75f20be380ab25ca4f16412a4e4628a64421166907286bf5c3a79d448",
+      "width": 64,
+      "height": 64,
+      "chunks": [
+        "IHDR",
+        "PLTE",
+        "tRNS",
+        "IDAT",
+        "IEND"
+      ],
+      "animated": false,
+      "exif": false,
+      "admitted": true
+    },
+    {
+      "path": "img/factoryBackground.png",
+      "sha256": "17f12ddb12f1e01a22993731cd13570110b7bb425d8b5257e915ede2987ebe55",
+      "width": 128,
+      "height": 128,
+      "chunks": [
+        "IHDR",
+        "PLTE",
+        "IDAT",
+        "IEND"
+      ],
+      "animated": false,
+      "exif": false,
+      "admitted": true
+    },
+    {
+      "path": "img/farm.png",
+      "sha256": "a0a2bfd5728cea8c665eaea15b5c8a6f4189bb06a46f3473a4922cc4c61d6dff",
+      "width": 64,
+      "height": 64,
+      "chunks": [
+        "IHDR",
+        "PLTE",
+        "tRNS",
+        "IDAT",
+        "IEND"
+      ],
+      "animated": false,
+      "exif": false,
+      "admitted": true
+    },
+    {
+      "path": "img/farmBackground.png",
+      "sha256": "30dc6b4bbdfdb16cc0b390d3c87ebc7e5395d37a21a9c11866e8b76937153842",
+      "width": 128,
+      "height": 128,
+      "chunks": [
+        "IHDR",
+        "PLTE",
+        "IDAT",
+        "IEND"
+      ],
+      "animated": false,
+      "exif": false,
+      "admitted": true
+    },
+    {
+      "path": "img/farmerGrandma.png",
+      "sha256": "a83070f3be0dd4df67392a30389bd3b730ec5ce15e72781daaa20671c2d38182",
+      "width": 64,
+      "height": 64,
+      "chunks": [
+        "IHDR",
+        "PLTE",
+        "tRNS",
+        "IDAT",
+        "IEND"
+      ],
+      "animated": false,
+      "exif": false,
+      "admitted": true
+    },
+    {
+      "path": "img/featherLeft.png",
+      "sha256": "836e164c1b5fba32df11debc78e692bfa084464f70da766a6c8575819b9231cf",
+      "width": 39,
+      "height": 23,
+      "chunks": [
+        "IHDR",
+        "tEXt",
+        "iTXt",
+        "IDAT",
+        "IEND"
+      ],
+      "animated": false,
+      "exif": false,
+      "admitted": true
+    },
+    {
+      "path": "img/featherRight.png",
+      "sha256": "f027fccbc8c26abe16d25cec36821d9816025377ade240c8a1f761af0f2b70c8",
+      "width": 39,
+      "height": 23,
+      "chunks": [
+        "IHDR",
+        "tEXt",
+        "iTXt",
+        "IDAT",
+        "IEND"
+      ],
+      "animated": false,
+      "exif": false,
+      "admitted": true
+    },
+    {
+      "path": "img/filler.png",
+      "sha256": "880b06a3fbbac6e782ce7a6a902f27980f526c258ec9847e8c2a5261a9f4ff3a",
+      "width": 8,
+      "height": 8,
+      "chunks": [
+        "IHDR",
+        "tEXt",
+        "iTXt",
+        "PLTE",
+        "tRNS",
+        "IDAT",
+        "IEND"
+      ],
+      "animated": false,
+      "exif": false,
+      "admitted": true
+    },
+    {
+      "path": "img/fractalEngine.png",
+      "sha256": "4bb25f0bff4b55917ac6c5ffc34511b0373707ab96c89e5e8ee827e3b5284ef6",
+      "width": 64,
+      "height": 64,
+      "chunks": [
+        "IHDR",
+        "tEXt",
+        "iTXt",
+        "PLTE",
+        "tRNS",
+        "IDAT",
+        "IEND"
+      ],
+      "animated": false,
+      "exif": false,
+      "admitted": true
+    },
+    {
+      "path": "img/fractalEngineBackground.png",
+      "sha256": "5ffe80be7fc38269683078b975702a53b5636bfb51c5a192e8388aa74fc62c48",
+      "width": 128,
+      "height": 128,
+      "chunks": [
+        "IHDR",
+        "tEXt",
+        "iTXt",
+        "PLTE",
+        "IDAT",
+        "IEND"
+      ],
+      "animated": false,
+      "exif": false,
+      "admitted": true
+    },
+    {
+      "path": "img/frameBorder.png",
+      "sha256": "fc0212f467761209a9c18e13ead43d2b7f7ecc98b7a8af27725c48c62a7dee83",
+      "width": 9,
+      "height": 9,
+      "chunks": [
+        "IHDR",
+        "tEXt",
+        "iTXt",
+        "PLTE",
+        "tRNS",
+        "IDAT",
+        "IEND"
+      ],
+      "animated": false,
+      "exif": false,
+      "admitted": true
+    },
+    {
+      "path": "img/frostedReindeer.png",
+      "sha256": "0b0a4bcf4ebe4772ee7a09094b70bf052172482403823e78fe2774f7cad4c5d3",
+      "width": 167,
+      "height": 212,
+      "chunks": [
+        "IHDR",
+        "PLTE",
+        "tRNS",
+        "IDAT",
+        "IEND"
+      ],
+      "animated": false,
+      "exif": false,
+      "admitted": true
+    },
+    {
+      "path": "img/gardenPlants.png",
+      "sha256": "415e92e167e43ec6520d9ec2ec948c09ab47f01d5593cdf63dc679e8f88b297f",
+      "width": 240,
+      "height": 1728,
+      "chunks": [
+        "IHDR",
+        "tEXt",
+        "iTXt",
+        "PLTE",
+        "tRNS",
+        "IDAT",
+        "IEND"
+      ],
+      "animated": false,
+      "exif": false,
+      "admitted": true
+    },
+    {
+      "path": "img/gardenPlots.png",
+      "sha256": "6a00bf2ee97248b617a5477153fe9d22e41b66e2b8f44c183d6b7770bff93abd",
+      "width": 160,
+      "height": 40,
+      "chunks": [
+        "IHDR",
+        "tEXt",
+        "iTXt",
+        "IDAT",
+        "IEND"
+      ],
+      "animated": false,
+      "exif": false,
+      "admitted": true
+    },
+    {
+      "path": "img/gardenTip.png",
+      "sha256": "a902882c36b1269109190b6e113ef098f134c118d546b2fd5005673c7b5846fc",
+      "width": 120,
+      "height": 153,
+      "chunks": [
+        "IHDR",
+        "tEXt",
+        "iTXt",
+        "PLTE",
+        "IDAT",
+        "IEND"
+      ],
+      "animated": false,
+      "exif": false,
+      "admitted": true
+    },
+    {
+      "path": "img/girlscoutChip.png",
+      "sha256": "96f6317e4a7ef66c369319880fcadef733d371634691f241a5cacf63a1cee1be",
+      "width": 64,
+      "height": 64,
+      "chunks": [
+        "IHDR",
+        "PLTE",
+        "tRNS",
+        "IDAT",
+        "IEND"
+      ],
+      "animated": false,
+      "exif": false,
+      "admitted": true
+    },
+    {
+      "path": "img/girlscoutCrumb.png",
+      "sha256": "356231028f1b0bc7c794a001b0e9e72ad98704f5a126d19cb47980f490c21e06",
+      "width": 64,
+      "height": 64,
+      "chunks": [
+        "IHDR",
+        "PLTE",
+        "tRNS",
+        "IDAT",
+        "IEND"
+      ],
+      "animated": false,
+      "exif": false,
+      "admitted": true
+    },
+    {
+      "path": "img/girlscoutDoe.png",
+      "sha256": "1bb4d44e600d800467fc2d0307fb1085b08191c68165869c3756043884af3d20",
+      "width": 64,
+      "height": 64,
+      "chunks": [
+        "IHDR",
+        "PLTE",
+        "tRNS",
+        "IDAT",
+        "IEND"
+      ],
+      "animated": false,
+      "exif": false,
+      "admitted": true
+    },
+    {
+      "path": "img/girlscoutLucky.png",
+      "sha256": "56412b4e6036c5c722e11ad15d8ad52a5ab2028da9baa9e88a9fba5cd30022af",
+      "width": 64,
+      "height": 64,
+      "chunks": [
+        "IHDR",
+        "PLTE",
+        "tRNS",
+        "IDAT",
+        "IEND"
+      ],
+      "animated": false,
+      "exif": false,
+      "admitted": true
+    },
+    {
+      "path": "img/glint.png",
+      "sha256": "6ac3bba3e17464faa99e5f58208ea34dde3350fcfc7bb1f853522e1480b3c619",
+      "width": 32,
+      "height": 32,
+      "chunks": [
+        "IHDR",
+        "tEXt",
+        "iTXt",
+        "IDAT",
+        "IEND"
+      ],
+      "animated": false,
+      "exif": false,
+      "admitted": true
+    },
+    {
+      "path": "img/goldCookie.png",
+      "sha256": "567b42f7f912dcdfe31b5492147730284abffd2ea0ee4fc53c4f48f75fc6c0f0",
+      "width": 96,
+      "height": 96,
+      "chunks": [
+        "IHDR",
+        "PLTE",
+        "tRNS",
+        "IDAT",
+        "IEND"
+      ],
+      "animated": false,
+      "exif": false,
+      "admitted": true
+    },
+    {
+      "path": "img/grandma.png",
+      "sha256": "a053197d6d4522bd51b8301418bdd429411b43516356e293645ccdc20b40c05b",
+      "width": 64,
+      "height": 64,
+      "chunks": [
+        "IHDR",
+        "PLTE",
+        "tRNS",
+        "IDAT",
+        "IEND"
+      ],
+      "animated": false,
+      "exif": false,
+      "admitted": true
+    },
+    {
+      "path": "img/grandmaBackground.png",
+      "sha256": "2beef820175c3b65c7f2a5789eea189cc17d0af9660b4bd3d82e1a80dad7f110",
+      "width": 128,
+      "height": 128,
+      "chunks": [
+        "IHDR",
+        "PLTE",
+        "IDAT",
+        "IEND"
+      ],
+      "animated": false,
+      "exif": false,
+      "admitted": true
+    },
+    {
+      "path": "img/grandmasGrandma.png",
+      "sha256": "a27b533f486ea16f60565e86f51d374760ee3638152fcae29df100589ede4a20",
+      "width": 64,
+      "height": 64,
+      "chunks": [
+        "IHDR",
+        "PLTE",
+        "tRNS",
+        "IDAT",
+        "IEND"
+      ],
+      "animated": false,
+      "exif": false,
+      "admitted": true
+    },
+    {
+      "path": "img/heartStorm.png",
+      "sha256": "7ee02dce124a3e1267a13b1d6aecd4aac4576f9d8e673c891081495d6435bc06",
+      "width": 512,
+      "height": 512,
+      "chunks": [
+        "IHDR",
+        "tEXt",
+        "iTXt",
+        "PLTE",
+        "tRNS",
+        "IDAT",
+        "IEND"
+      ],
+      "animated": false,
+      "exif": false,
+      "admitted": true
+    },
+    {
+      "path": "img/hearts.png",
+      "sha256": "ff73864543732ab829579246bc8888ce5db4b606fd6f2a5c9b72c3b68778ca7d",
+      "width": 768,
+      "height": 96,
+      "chunks": [
+        "IHDR",
+        "tEXt",
+        "iTXt",
+        "PLTE",
+        "tRNS",
+        "IDAT",
+        "IEND"
+      ],
+      "animated": false,
+      "exif": false,
+      "admitted": true
+    },
+    {
+      "path": "img/heavenlyMoney.png",
+      "sha256": "319e6bf1435280481de9d5649333e1f9cc5ac6e4dd85512528009f769d08a970",
+      "width": 16,
+      "height": 16,
+      "chunks": [
+        "IHDR",
+        "tEXt",
+        "iTXt",
+        "PLTE",
+        "tRNS",
+        "IDAT",
+        "IEND"
+      ],
+      "animated": false,
+      "exif": false,
+      "admitted": true
+    },
+    {
+      "path": "img/heraldFlag.png",
+      "sha256": "1bc6591c3d56d7678f488c257d56e12cb489f9d700439cd6afd5911f4d10225a",
+      "width": 31,
+      "height": 39,
+      "chunks": [
+        "IHDR",
+        "tEXt",
+        "iTXt",
+        "IDAT",
+        "IEND"
+      ],
+      "animated": false,
+      "exif": false,
+      "admitted": true
+    },
+    {
+      "path": "img/icon.png",
+      "sha256": "d2de3ea1ebc4c7ccd0f4039285198011fd0cdca8da139cdf1b00c48c00943f07",
+      "width": 512,
+      "height": 512,
+      "chunks": [
+        "IHDR",
+        "IDAT",
+        "IDAT",
+        "IDAT",
+        "IDAT",
+        "IDAT",
+        "IDAT",
+        "IDAT",
+        "IDAT",
+        "IDAT",
+        "IDAT",
+        "IDAT",
+        "IDAT",
+        "IDAT",
+        "IDAT",
+        "IDAT",
+        "IDAT",
+        "IDAT",
+        "IDAT",
+        "IDAT",
+        "IDAT",
+        "IDAT",
+        "IDAT",
+        "IDAT",
+        "IDAT",
+        "IDAT",
+        "IDAT",
+        "IDAT",
+        "IDAT",
+        "IDAT",
+        "IDAT",
+        "IDAT",
+        "IDAT",
+        "IDAT",
+        "IDAT",
+        "IDAT",
+        "IDAT",
+        "IDAT",
+        "IDAT",
+        "IDAT",
+        "IDAT",
+        "IDAT",
+        "IDAT",
+        "IDAT",
+        "IDAT",
+        "IDAT",
+        "IDAT",
+        "IDAT",
+        "IDAT",
+        "IDAT",
+        "IDAT",
+        "IDAT",
+        "IDAT",
+        "IDAT",
+        "IDAT",
+        "IEND"
+      ],
+      "animated": false,
+      "exif": false,
+      "admitted": true
+    },
+    {
+      "path": "img/icons.png",
+      "sha256": "3c0ecd606cd7e79915677f51a1b39b345037b9408f2feab635b998591841653b",
+      "width": 1728,
+      "height": 1776,
+      "chunks": [
+        "IHDR",
+        "tEXt",
+        "iTXt",
+        "PLTE",
+        "tRNS",
+        "IDAT",
+        "IEND"
+      ],
+      "animated": false,
+      "exif": false,
+      "admitted": true
+    },
+    {
+      "path": "img/idleverse.png",
+      "sha256": "543457fbb2676d4eeb700dddd9c71412fbe50ce68b8b8b1dcb9f540ee865a8e2",
+      "width": 256,
+      "height": 64,
+      "chunks": [
+        "IHDR",
+        "IDAT",
+        "IEND"
+      ],
+      "animated": false,
+      "exif": false,
+      "admitted": true
+    },
+    {
+      "path": "img/idleverseBackground.png",
+      "sha256": "da0961de1cae584a1f2ff4a8a7410165ce41de91aae140fcd11926fe53324e12",
+      "width": 128,
+      "height": 128,
+      "chunks": [
+        "IHDR",
+        "IDAT",
+        "IEND"
+      ],
+      "animated": false,
+      "exif": false,
+      "admitted": true
+    },
+    {
+      "path": "img/imperfectCookie.png",
+      "sha256": "f770b7b43f6b42a3e84bd8121ccf958ec56847ab3faccb81ef11198b658072f9",
+      "width": 512,
+      "height": 512,
+      "chunks": [
+        "IHDR",
+        "PLTE",
+        "tRNS",
+        "IDAT",
+        "IEND"
+      ],
+      "animated": false,
+      "exif": false,
+      "admitted": true
+    },
+    {
+      "path": "img/infoBG.png",
+      "sha256": "2be61cab3a6df82ebc7caed8ff4e5622eb57f2c0a86429a2dd5f3262e64e5c8c",
+      "width": 16,
+      "height": 16,
+      "chunks": [
+        "IHDR",
+        "IDAT",
+        "IEND"
+      ],
+      "animated": false,
+      "exif": false,
+      "admitted": true
+    },
+    {
+      "path": "img/infoBGfade.png",
+      "sha256": "8bdf204fad0c2090d99155de67d4036cb1be292885fd4abe468511eb7a8673f9",
+      "width": 16,
+      "height": 16,
+      "chunks": [
+        "IHDR",
+        "IDAT",
+        "IEND"
+      ],
+      "animated": false,
+      "exif": false,
+      "admitted": true
+    },
+    {
+      "path": "img/javascriptconsole.png",
+      "sha256": "e500527d102f4a27787991c2fa5b2d86b9193b90192742cc4e5a92aa119c31c8",
+      "width": 28,
+      "height": 126,
+      "chunks": [
+        "IHDR",
+        "IDAT",
+        "IEND"
+      ],
+      "animated": false,
+      "exif": false,
+      "admitted": true
+    },
+    {
+      "path": "img/javascriptconsoleBackground.png",
+      "sha256": "1ff5c43d1056f671454628fbd1f52b0425f59ab08fe7aa8272dca2c32e06f48e",
+      "width": 128,
+      "height": 128,
+      "chunks": [
+        "IHDR",
+        "tEXt",
+        "iTXt",
+        "PLTE",
+        "IDAT",
+        "IEND"
+      ],
+      "animated": false,
+      "exif": false,
+      "admitted": true
+    },
+    {
+      "path": "img/levelUp.png",
+      "sha256": "17f81fdc957d35037770b7b421e24302be3628489801a710b7775c1923c3ad29",
+      "width": 33,
+      "height": 19,
+      "chunks": [
+        "IHDR",
+        "tEXt",
+        "iTXt",
+        "IDAT",
+        "IEND"
+      ],
+      "animated": false,
+      "exif": false,
+      "admitted": true
+    },
+    {
+      "path": "img/linkDash.png",
+      "sha256": "11e837b2484b466d57d818883c24c3fd88922d65f2ebf886ef4956d45f550efa",
+      "width": 12,
+      "height": 24,
+      "chunks": [
+        "IHDR",
+        "tEXt",
+        "iTXt",
+        "IDAT",
+        "IEND"
+      ],
+      "animated": false,
+      "exif": false,
+      "admitted": true
+    },
+    {
+      "path": "img/linkPulse.png",
+      "sha256": "7c953ee1166580360d41e4494155bd6f1242b41e8c5be6435e9144a1e23b04a1",
+      "width": 32,
+      "height": 8,
+      "chunks": [
+        "IHDR",
+        "tEXt",
+        "iTXt",
+        "IDAT",
+        "IEND"
+      ],
+      "animated": false,
+      "exif": false,
+      "admitted": true
+    },
+    {
+      "path": "img/lockOff.png",
+      "sha256": "c84d177d450e6be65b8b016ff812f5fccece4c3107df0fc615649f174a137bb1",
+      "width": 16,
+      "height": 16,
+      "chunks": [
+        "IHDR",
+        "tEXt",
+        "iTXt",
+        "IDAT",
+        "IEND"
+      ],
+      "animated": false,
+      "exif": false,
+      "admitted": true
+    },
+    {
+      "path": "img/lockOn.png",
+      "sha256": "cd0bcf2dcac78fb71648fc50a227b3f58de184b38c30df873423be52a16fed33",
+      "width": 16,
+      "height": 16,
+      "chunks": [
+        "IHDR",
+        "tEXt",
+        "iTXt",
+        "IDAT",
+        "IEND"
+      ],
+      "animated": false,
+      "exif": false,
+      "admitted": true
+    },
+    {
+      "path": "img/luckyGrandma.png",
+      "sha256": "3cf1449465852c1924c14bdfa54d2384153245c65370b61b69c95595ca0f3869",
+      "width": 64,
+      "height": 64,
+      "chunks": [
+        "IHDR",
+        "tEXt",
+        "PLTE",
+        "tRNS",
+        "IDAT",
+        "IEND"
+      ],
+      "animated": false,
+      "exif": false,
+      "admitted": true
+    },
+    {
+      "path": "img/mapIcons.png",
+      "sha256": "6f70052cd42fecd13eb0163c16b173bd427a45a2bad01ae2c524d1b6688c0670",
+      "width": 128,
+      "height": 128,
+      "chunks": [
+        "IHDR",
+        "PLTE",
+        "tRNS",
+        "IDAT",
+        "IEND"
+      ],
+      "animated": false,
+      "exif": false,
+      "admitted": true
+    },
+    {
+      "path": "img/marshmallows.png",
+      "sha256": "d15c2695dd9975f363d89f4e68e76bb7ed38b5a656cd1a32fcf841bea3942fcf",
+      "width": 192,
+      "height": 64,
+      "chunks": [
+        "IHDR",
+        "PLTE",
+        "tRNS",
+        "IDAT",
+        "IEND"
+      ],
+      "animated": false,
+      "exif": false,
+      "admitted": true
+    },
+    {
+      "path": "img/messageBG.png",
+      "sha256": "bcd4a3ac8e9e5990ba02af323d85756f12fd6c9fc3f41c1803d47cc410b5ca9c",
+      "width": 320,
+      "height": 160,
+      "chunks": [
+        "IHDR",
+        "tEXt",
+        "iTXt",
+        "PLTE",
+        "IDAT",
+        "IEND"
+      ],
+      "animated": false,
+      "exif": false,
+      "admitted": true
+    },
+    {
+      "path": "img/metaGrandma.png",
+      "sha256": "7b9845f0468901fc0d0b9dd483b6ddc05ade7aa313cdef827b97f17743b5e57f",
+      "width": 64,
+      "height": 64,
+      "chunks": [
+        "IHDR",
+        "tEXt",
+        "iTXt",
+        "PLTE",
+        "tRNS",
+        "IDAT",
+        "IEND"
+      ],
+      "animated": false,
+      "exif": false,
+      "admitted": true
+    },
+    {
+      "path": "img/milkBanana.png",
+      "sha256": "36fbe281d8d2b12859a9b96c286cc0c55aa8a44916cb7f465ae03b24ac38387e",
+      "width": 240,
+      "height": 240,
+      "chunks": [
+        "IHDR",
+        "IDAT",
+        "IDAT",
+        "IDAT",
+        "IDAT",
+        "IDAT",
+        "IDAT",
+        "IEND"
+      ],
+      "animated": false,
+      "exif": false,
+      "admitted": true
+    },
+    {
+      "path": "img/milkBlack.png",
+      "sha256": "b0f78894e6cc0e303d5bc47182b6aea7cf640db41c691a7a951de13db88493e5",
+      "width": 240,
+      "height": 240,
+      "chunks": [
+        "IHDR",
+        "IDAT",
+        "IDAT",
+        "IDAT",
+        "IDAT",
+        "IDAT",
+        "IDAT",
+        "IEND"
+      ],
+      "animated": false,
+      "exif": false,
+      "admitted": true
+    },
+    {
+      "path": "img/milkBlackcurrant.png",
+      "sha256": "762f7a44a87b125d3a118fb377f0c7b0714b3269eb6d134710718d8426c5ff41",
+      "width": 240,
+      "height": 240,
+      "chunks": [
+        "IHDR",
+        "tEXt",
+        "iTXt",
+        "IDAT",
+        "IEND"
+      ],
+      "animated": false,
+      "exif": false,
+      "admitted": true
+    },
+    {
+      "path": "img/milkBlood.png",
+      "sha256": "e3f2865a41f03f23e4ec2ba8d6276c1bcd6854d697300d05918a76d261a7d3c4",
+      "width": 240,
+      "height": 240,
+      "chunks": [
+        "IHDR",
+        "IDAT",
+        "IDAT",
+        "IDAT",
+        "IDAT",
+        "IDAT",
+        "IDAT",
+        "IDAT",
+        "IDAT",
+        "IEND"
+      ],
+      "animated": false,
+      "exif": false,
+      "admitted": true
+    },
+    {
+      "path": "img/milkBlueFire.png",
+      "sha256": "e3b627706d215844044e4b878e60248a2ef05694bbb0866dcabfcdcc1fb91557",
+      "width": 240,
+      "height": 240,
+      "chunks": [
+        "IHDR",
+        "IDAT",
+        "IDAT",
+        "IDAT",
+        "IDAT",
+        "IDAT",
+        "IDAT",
+        "IDAT",
+        "IDAT",
+        "IDAT",
+        "IDAT",
+        "IEND"
+      ],
+      "animated": false,
+      "exif": false,
+      "admitted": true
+    },
+    {
+      "path": "img/milkBlueberry.png",
+      "sha256": "139a6056a882fd4befcd55f0a4a571509fe47d326c5caa60a489e0bf12390934",
+      "width": 240,
+      "height": 240,
+      "chunks": [
+        "IHDR",
+        "IDAT",
+        "IDAT",
+        "IDAT",
+        "IDAT",
+        "IDAT",
+        "IDAT",
+        "IEND"
+      ],
+      "animated": false,
+      "exif": false,
+      "admitted": true
+    },
+    {
+      "path": "img/milkCaramel.png",
+      "sha256": "e60f7141e6414c6d137a83080c2a2c2d1397ae3741781a4a6775819d09d22552",
+      "width": 240,
+      "height": 240,
+      "chunks": [
+        "IHDR",
+        "IDAT",
+        "IDAT",
+        "IDAT",
+        "IDAT",
+        "IDAT",
+        "IDAT",
+        "IEND"
+      ],
+      "animated": false,
+      "exif": false,
+      "admitted": true
+    },
+    {
+      "path": "img/milkCherry.png",
+      "sha256": "855d5d82185168acca781c90c37c79e9b91521eac12a599a6be66cbc40375363",
+      "width": 240,
+      "height": 240,
+      "chunks": [
+        "IHDR",
+        "tEXt",
+        "iTXt",
+        "IDAT",
+        "IEND"
+      ],
+      "animated": false,
+      "exif": false,
+      "admitted": true
+    },
+    {
+      "path": "img/milkChocolate.png",
+      "sha256": "c9a3324a5f0223d7657ca38825809c03b65141d157311ce6ef0df7a6f043567d",
+      "width": 240,
+      "height": 240,
+      "chunks": [
+        "IHDR",
+        "IDAT",
+        "IDAT",
+        "IDAT",
+        "IDAT",
+        "IDAT",
+        "IEND"
+      ],
+      "animated": false,
+      "exif": false,
+      "admitted": true
+    },
+    {
+      "path": "img/milkCoconut.png",
+      "sha256": "a3598a04145159d7a1f56f1a2584cc26e4df4c6c264c1a8b16db7e1cbe7d5e84",
+      "width": 240,
+      "height": 240,
+      "chunks": [
+        "IHDR",
+        "tEXt",
+        "iTXt",
+        "IDAT",
+        "IEND"
+      ],
+      "animated": false,
+      "exif": false,
+      "admitted": true
+    },
+    {
+      "path": "img/milkCoffee.png",
+      "sha256": "2f88a4dab3679d4f1ecf2e40ecb866ff48861014f68b4b026915913d3d98ca03",
+      "width": 240,
+      "height": 240,
+      "chunks": [
+        "IHDR",
+        "tEXt",
+        "iTXt",
+        "IDAT",
+        "IEND"
+      ],
+      "animated": false,
+      "exif": false,
+      "admitted": true
+    },
+    {
+      "path": "img/milkDragonfruit.png",
+      "sha256": "f70c44d73c989efb3e8b4aa570a908afb783a1ab6740c1b856bb80c155e4a740",
+      "width": 240,
+      "height": 240,
+      "chunks": [
+        "IHDR",
+        "tEXt",
+        "iTXt",
+        "IDAT",
+        "IEND"
+      ],
+      "animated": false,
+      "exif": false,
+      "admitted": true
+    },
+    {
+      "path": "img/milkFire.png",
+      "sha256": "66ce84320cdf063974a0dbaa52ea50295454b2e2bb2e8aa34583a6d7ff2e5df8",
+      "width": 240,
+      "height": 240,
+      "chunks": [
+        "IHDR",
+        "IDAT",
+        "IDAT",
+        "IDAT",
+        "IDAT",
+        "IDAT",
+        "IDAT",
+        "IDAT",
+        "IDAT",
+        "IDAT",
+        "IEND"
+      ],
+      "animated": false,
+      "exif": false,
+      "admitted": true
+    },
+    {
+      "path": "img/milkGold.png",
+      "sha256": "ff63fdebfec89f3a742f18e42fa057487c3d14be7e971d35336cbb12d59dbe67",
+      "width": 240,
+      "height": 240,
+      "chunks": [
+        "IHDR",
+        "IDAT",
+        "IDAT",
+        "IDAT",
+        "IDAT",
+        "IDAT",
+        "IDAT",
+        "IDAT",
+        "IDAT",
+        "IEND"
+      ],
+      "animated": false,
+      "exif": false,
+      "admitted": true
+    },
+    {
+      "path": "img/milkGreenFire.png",
+      "sha256": "44dab2f8f1afc13245e87db0ee85d4ae2180c3a6e91b9ca17b2d2e3779802c8e",
+      "width": 240,
+      "height": 240,
+      "chunks": [
+        "IHDR",
+        "IDAT",
+        "IDAT",
+        "IDAT",
+        "IDAT",
+        "IDAT",
+        "IDAT",
+        "IDAT",
+        "IDAT",
+        "IDAT",
+        "IEND"
+      ],
+      "animated": false,
+      "exif": false,
+      "admitted": true
+    },
+    {
+      "path": "img/milkHazelnut.png",
+      "sha256": "3830de1071a34e8bda3cf5af76a1d99e0de69bc1ca02c5ee0994418cd349327a",
+      "width": 240,
+      "height": 240,
+      "chunks": [
+        "IHDR",
+        "tEXt",
+        "iTXt",
+        "IDAT",
+        "IEND"
+      ],
+      "animated": false,
+      "exif": false,
+      "admitted": true
+    },
+    {
+      "path": "img/milkHoney.png",
+      "sha256": "c71bccd972fccf4093dfaae3e3711a9f7d99f9fed73ff71f7dcc4404aa8687fb",
+      "width": 240,
+      "height": 240,
+      "chunks": [
+        "IHDR",
+        "tEXt",
+        "iTXt",
+        "IDAT",
+        "IEND"
+      ],
+      "animated": false,
+      "exif": false,
+      "admitted": true
+    },
+    {
+      "path": "img/milkLicorice.png",
+      "sha256": "2f5c492647f00bf1d2767526bb2f596227469560cb35698ff8bfdb11361a1e79",
+      "width": 240,
+      "height": 240,
+      "chunks": [
+        "IHDR",
+        "tEXt",
+        "iTXt",
+        "IDAT",
+        "IEND"
+      ],
+      "animated": false,
+      "exif": false,
+      "admitted": true
+    },
+    {
+      "path": "img/milkLime.png",
+      "sha256": "3b8a5138bb4412be845e606a6bdd996ccae3a560779e6582b1a4e48a043fcc35",
+      "width": 240,
+      "height": 240,
+      "chunks": [
+        "IHDR",
+        "IDAT",
+        "IDAT",
+        "IDAT",
+        "IDAT",
+        "IDAT",
+        "IDAT",
+        "IEND"
+      ],
+      "animated": false,
+      "exif": false,
+      "admitted": true
+    },
+    {
+      "path": "img/milkMaple.png",
+      "sha256": "a6bdaad3ec4baf6ce5cba92fa787522ba7a20e8a66d1f555a36f844745abd2db",
+      "width": 240,
+      "height": 240,
+      "chunks": [
+        "IHDR",
+        "tEXt",
+        "iTXt",
+        "IDAT",
+        "IEND"
+      ],
+      "animated": false,
+      "exif": false,
+      "admitted": true
+    },
+    {
+      "path": "img/milkMelon.png",
+      "sha256": "27003b724d215614ca4e0f75cee89fcf81be051f8679e0be02c2453d5c5b8cd9",
+      "width": 240,
+      "height": 240,
+      "chunks": [
+        "IHDR",
+        "tEXt",
+        "iTXt",
+        "IDAT",
+        "IEND"
+      ],
+      "animated": false,
+      "exif": false,
+      "admitted": true
+    },
+    {
+      "path": "img/milkMint.png",
+      "sha256": "fa2373caa434e63771cbe7b295240a1bd431d0849d1872fa292d485c270620d9",
+      "width": 240,
+      "height": 240,
+      "chunks": [
+        "IHDR",
+        "tEXt",
+        "iTXt",
+        "IDAT",
+        "IEND"
+      ],
+      "animated": false,
+      "exif": false,
+      "admitted": true
+    },
+    {
+      "path": "img/milkOrange.png",
+      "sha256": "308b8a80060ec8b3b0d2776e8c655a428022003bf00a83c71c7df21981b38047",
+      "width": 240,
+      "height": 240,
+      "chunks": [
+        "IHDR",
+        "IDAT",
+        "IDAT",
+        "IDAT",
+        "IDAT",
+        "IDAT",
+        "IDAT",
+        "IEND"
+      ],
+      "animated": false,
+      "exif": false,
+      "admitted": true
+    },
+    {
+      "path": "img/milkPeach.png",
+      "sha256": "8ca6a27bc10b145c42475980e0d3ee68701101f4317baeac5488d86ea3cb51b8",
+      "width": 240,
+      "height": 240,
+      "chunks": [
+        "IHDR",
+        "tEXt",
+        "iTXt",
+        "IDAT",
+        "IEND"
+      ],
+      "animated": false,
+      "exif": false,
+      "admitted": true
+    },
+    {
+      "path": "img/milkPlain.png",
+      "sha256": "f4b7f99fb9e56bb83c24f744064e8555e4fecbf47ce4c1b54967523108ca1adb",
+      "width": 240,
+      "height": 240,
+      "chunks": [
+        "IHDR",
+        "IDAT",
+        "IDAT",
+        "IDAT",
+        "IDAT",
+        "IDAT",
+        "IDAT",
+        "IEND"
+      ],
+      "animated": false,
+      "exif": false,
+      "admitted": true
+    },
+    {
+      "path": "img/milkRaspberry.png",
+      "sha256": "7fd3fe8f2ddbb930683fe2e116e765f54e9498d7d237bd2e4c191fa9c79ca78e",
+      "width": 240,
+      "height": 240,
+      "chunks": [
+        "IHDR",
+        "IDAT",
+        "IDAT",
+        "IDAT",
+        "IDAT",
+        "IDAT",
+        "IDAT",
+        "IEND"
+      ],
+      "animated": false,
+      "exif": false,
+      "admitted": true
+    },
+    {
+      "path": "img/milkRose.png",
+      "sha256": "ef8742b28d4c4c395663d7b58cf40086e07b751c9a2031572b6635b3a28b9ca0",
+      "width": 240,
+      "height": 240,
+      "chunks": [
+        "IHDR",
+        "tEXt",
+        "iTXt",
+        "IDAT",
+        "IEND"
+      ],
+      "animated": false,
+      "exif": false,
+      "admitted": true
+    },
+    {
+      "path": "img/milkSoy.png",
+      "sha256": "785da8e0249295122458929d69a44c137d0f20c6db792d4ba634b3894755fcc0",
+      "width": 240,
+      "height": 240,
+      "chunks": [
+        "IHDR",
+        "tEXt",
+        "iTXt",
+        "IDAT",
+        "IEND"
+      ],
+      "animated": false,
+      "exif": false,
+      "admitted": true
+    },
+    {
+      "path": "img/milkSpiced.png",
+      "sha256": "94d4434df8e55c373140e5320e98d2808c6caac1f4dc4c7079b65ccbaf0616d5",
+      "width": 240,
+      "height": 240,
+      "chunks": [
+        "IHDR",
+        "tEXt",
+        "iTXt",
+        "IDAT",
+        "IEND"
+      ],
+      "animated": false,
+      "exif": false,
+      "admitted": true
+    },
+    {
+      "path": "img/milkStars.png",
+      "sha256": "9994d60271f8b27a2c4892da5fb3f24f06eaa5d8b0bbe1bb1cf76d556dc19729",
+      "width": 240,
+      "height": 240,
+      "chunks": [
+        "IHDR",
+        "IDAT",
+        "IDAT",
+        "IDAT",
+        "IDAT",
+        "IDAT",
+        "IDAT",
+        "IDAT",
+        "IEND"
+      ],
+      "animated": false,
+      "exif": false,
+      "admitted": true
+    },
+    {
+      "path": "img/milkStrawberry.png",
+      "sha256": "e173e2f1ba9f1d7134aa8e6c37e2367165131c4b04c6be3d778dac754e272379",
+      "width": 240,
+      "height": 240,
+      "chunks": [
+        "IHDR",
+        "IDAT",
+        "IDAT",
+        "IDAT",
+        "IDAT",
+        "IDAT",
+        "IDAT",
+        "IEND"
+      ],
+      "animated": false,
+      "exif": false,
+      "admitted": true
+    },
+    {
+      "path": "img/milkTea.png",
+      "sha256": "0bdb6da85627635afb92ce893e8734c57d0cf650767e6c51cdd33ad9b6274f81",
+      "width": 240,
+      "height": 240,
+      "chunks": [
+        "IHDR",
+        "tEXt",
+        "iTXt",
+        "IDAT",
+        "IEND"
+      ],
+      "animated": false,
+      "exif": false,
+      "admitted": true
+    },
+    {
+      "path": "img/milkVanilla.png",
+      "sha256": "93edb6af0c5754129ae19fcfbd25ef4453e9bdf90cae2c73bd2c86cd90ab2b9b",
+      "width": 240,
+      "height": 240,
+      "chunks": [
+        "IHDR",
+        "IDAT",
+        "IDAT",
+        "IDAT",
+        "IDAT",
+        "IDAT",
+        "IDAT",
+        "IEND"
+      ],
+      "animated": false,
+      "exif": false,
+      "admitted": true
+    },
+    {
+      "path": "img/milkZebra.png",
+      "sha256": "366e68726887f993606d58d9f338a56f2c31e9f9d5dcbd6d60720d637cd8a64a",
+      "width": 240,
+      "height": 240,
+      "chunks": [
+        "IHDR",
+        "IDAT",
+        "IDAT",
+        "IDAT",
+        "IDAT",
+        "IDAT",
+        "IDAT",
+        "IDAT",
+        "IDAT",
+        "IDAT",
+        "IEND"
+      ],
+      "animated": false,
+      "exif": false,
+      "admitted": true
+    },
+    {
+      "path": "img/mine.png",
+      "sha256": "822573d38b472f8f057317ade8f214c6d08142031e0caee2b0bdbaea34d1aef4",
+      "width": 64,
+      "height": 64,
+      "chunks": [
+        "IHDR",
+        "PLTE",
+        "tRNS",
+        "IDAT",
+        "IEND"
+      ],
+      "animated": false,
+      "exif": false,
+      "admitted": true
+    },
+    {
+      "path": "img/mineBackground.png",
+      "sha256": "8d0ff49e96cf62a9ea069a10798da8694af4c07fdfcceddf0ac170cfe3bd0bf2",
+      "width": 128,
+      "height": 128,
+      "chunks": [
+        "IHDR",
+        "PLTE",
+        "IDAT",
+        "IEND"
+      ],
+      "animated": false,
+      "exif": false,
+      "admitted": true
+    },
+    {
+      "path": "img/minerGrandma.png",
+      "sha256": "36ce9cd2499f4642637ecc926008bcb67771cfeec2162fbe31596e1950119110",
+      "width": 64,
+      "height": 64,
+      "chunks": [
+        "IHDR",
+        "PLTE",
+        "tRNS",
+        "IDAT",
+        "IEND"
+      ],
+      "animated": false,
+      "exif": false,
+      "admitted": true
+    },
+    {
+      "path": "img/money.png",
+      "sha256": "d3dd3942ef07e27fc13750c0302de690ab1dfe7e8801bd3c52c2644b4677d831",
+      "width": 16,
+      "height": 16,
+      "chunks": [
+        "IHDR",
+        "PLTE",
+        "tRNS",
+        "IDAT",
+        "IEND"
+      ],
+      "animated": false,
+      "exif": false,
+      "admitted": true
+    },
+    {
+      "path": "img/nest.png",
+      "sha256": "5f369998ebc32ec6f84a54292fd2ebc016031b69a3a5c3920423cc6f4bf8fd58",
+      "width": 304,
+      "height": 151,
+      "chunks": [
+        "IHDR",
+        "tEXt",
+        "PLTE",
+        "tRNS",
+        "IDAT",
+        "IEND"
+      ],
+      "animated": false,
+      "exif": false,
+      "admitted": true
+    },
+    {
+      "path": "img/panelBG.png",
+      "sha256": "3f30208504e13782e1f0e14b02532af2a4befe3dcfed73eb4fb85bf3c734e0fd",
+      "width": 256,
+      "height": 256,
+      "chunks": [
+        "IHDR",
+        "tEXt",
+        "iTXt",
+        "PLTE",
+        "IDAT",
+        "IEND"
+      ],
+      "animated": false,
+      "exif": false,
+      "admitted": true
+    },
+    {
+      "path": "img/panelGradientBottom.png",
+      "sha256": "77e8608a28a28a0997c14e56991c6d2f349e47f24b32062b01aee7dcdc421349",
+      "width": 16,
+      "height": 64,
+      "chunks": [
+        "IHDR",
+        "tEXt",
+        "iTXt",
+        "IDAT",
+        "IEND"
+      ],
+      "animated": false,
+      "exif": false,
+      "admitted": true
+    },
+    {
+      "path": "img/panelGradientLeft.png",
+      "sha256": "33d8e9c2e4287cca7755f5a33f315ea709c6b373db2a40ebbd932c6596c9b7a3",
+      "width": 64,
+      "height": 16,
+      "chunks": [
+        "IHDR",
+        "tEXt",
+        "iTXt",
+        "IDAT",
+        "IEND"
+      ],
+      "animated": false,
+      "exif": false,
+      "admitted": true
+    },
+    {
+      "path": "img/panelGradientRight.png",
+      "sha256": "de03d8b6eb88cb3d3f9fe339d305ce6acf828d0456f0ec470f0f64612c84ce60",
+      "width": 64,
+      "height": 16,
+      "chunks": [
+        "IHDR",
+        "tEXt",
+        "iTXt",
+        "IDAT",
+        "IEND"
+      ],
+      "animated": false,
+      "exif": false,
+      "admitted": true
+    },
+    {
+      "path": "img/panelGradientTop.png",
+      "sha256": "3d52272fb67509790d7599be7e5c092521e44b4862ab6e22366ccddbe4e4fd94",
+      "width": 16,
+      "height": 64,
+      "chunks": [
+        "IHDR",
+        "tEXt",
+        "iTXt",
+        "IDAT",
+        "IEND"
+      ],
+      "animated": false,
+      "exif": false,
+      "admitted": true
+    },
+    {
+      "path": "img/panelHorizontal.png",
+      "sha256": "271f1c65ca1b1b0def1e35b755144d863da2bb4498be6b474cfa8b7e63ed7111",
+      "width": 512,
+      "height": 16,
+      "chunks": [
+        "IHDR",
+        "tEXt",
+        "iTXt",
+        "PLTE",
+        "IDAT",
+        "IEND"
+      ],
+      "animated": false,
+      "exif": false,
+      "admitted": true
+    },
+    {
+      "path": "img/panelMenu.png",
+      "sha256": "f0d8310701b2a26f68cde788627dd3376f118c13445f6841fbc1e6a6e27e7918",
+      "width": 192,
+      "height": 192,
+      "chunks": [
+        "IHDR",
+        "tEXt",
+        "iTXt",
+        "PLTE",
+        "IDAT",
+        "IEND"
+      ],
+      "animated": false,
+      "exif": false,
+      "admitted": true
+    },
+    {
+      "path": "img/panelMenu2.png",
+      "sha256": "554c9f8e58c8f097fbb93031d40e2d01bf946b3a667c62baeb7878abd8c2bfb0",
+      "width": 200,
+      "height": 192,
+      "chunks": [
+        "IHDR",
+        "tEXt",
+        "iTXt",
+        "IDAT",
+        "IEND"
+      ],
+      "animated": false,
+      "exif": false,
+      "admitted": true
+    },
+    {
+      "path": "img/panelMenu3.png",
+      "sha256": "91261cd54f467c8b1e4992ad80ccd9957b8a7a136b04bcd831c047a507975906",
+      "width": 200,
+      "height": 192,
+      "chunks": [
+        "IHDR",
+        "tEXt",
+        "iTXt",
+        "IDAT",
+        "IEND"
+      ],
+      "animated": false,
+      "exif": false,
+      "admitted": true
+    },
+    {
+      "path": "img/panelVertical.png",
+      "sha256": "40d9c44bd00268afc364191e987caebd974f9492d858ebcca31196f0a50e5e49",
+      "width": 16,
+      "height": 512,
+      "chunks": [
+        "IHDR",
+        "tEXt",
+        "iTXt",
+        "PLTE",
+        "IDAT",
+        "IEND"
+      ],
+      "animated": false,
+      "exif": false,
+      "admitted": true
+    },
+    {
+      "path": "img/parade.png",
+      "sha256": "36ebed215fa7194973b493dfedec56c3bafb3ab7bba01e21d2c6b43c90b28c7c",
+      "width": 640,
+      "height": 64,
+      "chunks": [
+        "IHDR",
+        "tEXt",
+        "iTXt",
+        "PLTE",
+        "tRNS",
+        "IDAT",
+        "IEND"
+      ],
+      "animated": false,
+      "exif": false,
+      "admitted": true
+    },
+    {
+      "path": "img/patreon.png",
+      "sha256": "b55cd6e385b3b78dcdee1f12e97604e4d679bcdd9d7bc2fb0d783e0b9ec210a8",
+      "width": 22,
+      "height": 32,
+      "chunks": [
+        "IHDR",
+        "tEXt",
+        "iTXt",
+        "PLTE",
+        "IDAT",
+        "IEND"
+      ],
+      "animated": false,
+      "exif": false,
+      "admitted": true
+    },
+    {
+      "path": "img/perfectCookie.png",
+      "sha256": "3425f0be3a858f9a1e74f0560d5524ded3ea49c7d1f7c8778ba2b23162f9271a",
+      "width": 512,
+      "height": 512,
+      "chunks": [
+        "IHDR",
+        "PLTE",
+        "tRNS",
+        "IDAT",
+        "IEND"
+      ],
+      "animated": false,
+      "exif": false,
+      "admitted": true
+    },
+    {
+      "path": "img/pieFill.png",
+      "sha256": "98240361c2d8fc92fdcc8d1797c357ff8a4d167162b7d3324922715d056bb64e",
+      "width": 864,
+      "height": 384,
+      "chunks": [
+        "IHDR",
+        "tEXt",
+        "iTXt",
+        "PLTE",
+        "IDAT",
+        "IEND"
+      ],
+      "animated": false,
+      "exif": false,
+      "admitted": true
+    },
+    {
+      "path": "img/playsaurusLogo.png",
+      "sha256": "3b4386b0cde3ec192148498b8abec60384434b7692e2c52f993992ee1ed45e1a",
+      "width": 858,
+      "height": 125,
+      "chunks": [
+        "IHDR",
+        "sRGB",
+        "gAMA",
+        "pHYs",
+        "tEXt",
+        "IDAT",
+        "IDAT",
+        "IEND"
+      ],
+      "animated": false,
+      "exif": false,
+      "admitted": true
+    },
+    {
+      "path": "img/playsaurusbanner1.png",
+      "sha256": "2bfb0cb0c9dbdcbd7999355153a2bd5a55ebc1d742fd621d260f13394c14eb67",
+      "width": 300,
+      "height": 64,
+      "chunks": [
+        "IHDR",
+        "pHYs",
+        "iTXt",
+        "IDAT",
+        "IEND"
+      ],
+      "animated": false,
+      "exif": false,
+      "admitted": true
+    },
+    {
+      "path": "img/playsaurusbanner2.png",
+      "sha256": "f3fa3ac251283ba01dc745f12885dc3e81560e1a4c39199808c50b34bcd0e004",
+      "width": 300,
+      "height": 64,
+      "chunks": [
+        "IHDR",
+        "pHYs",
+        "iTXt",
+        "IDAT",
+        "IEND"
+      ],
+      "animated": false,
+      "exif": false,
+      "admitted": true
+    },
+    {
+      "path": "img/playsaurusbanner3.png",
+      "sha256": "03b915632aa8a53c54a0517d238d908d1f133ee9694264ac4a32806355675225",
+      "width": 300,
+      "height": 64,
+      "chunks": [
+        "IHDR",
+        "pHYs",
+        "iTXt",
+        "IDAT",
+        "IEND"
+      ],
+      "animated": false,
+      "exif": false,
+      "admitted": true
+    },
+    {
+      "path": "img/pointyLad.png",
+      "sha256": "22edb5d0b35a4e3abb327f9c27751b88f2bc14b00b59422fb58736456f360ad3",
+      "width": 60,
+      "height": 56,
+      "chunks": [
+        "IHDR",
+        "tEXt",
+        "iTXt",
+        "IDAT",
+        "IEND"
+      ],
+      "animated": false,
+      "exif": false,
+      "admitted": true
+    },
+    {
+      "path": "img/portal.png",
+      "sha256": "6757b813efe0755e58c2192f5d93104a79a3312f6163a55978ad4d014a567931",
+      "width": 64,
+      "height": 64,
+      "chunks": [
+        "IHDR",
+        "PLTE",
+        "tRNS",
+        "IDAT",
+        "IEND"
+      ],
+      "animated": false,
+      "exif": false,
+      "admitted": true
+    },
+    {
+      "path": "img/portalBackground.png",
+      "sha256": "2b991b34c31efe12d016b9a8b554262113398df051363fc86a8efe5731b6ae77",
+      "width": 128,
+      "height": 128,
+      "chunks": [
+        "IHDR",
+        "PLTE",
+        "IDAT",
+        "IEND"
+      ],
+      "animated": false,
+      "exif": false,
+      "admitted": true
+    },
+    {
+      "path": "img/portraitChip.png",
+      "sha256": "2ea429b2c983170fe640f9b4b28545408182df941724477e3ea4d072cf502609",
+      "width": 64,
+      "height": 64,
+      "chunks": [
+        "IHDR",
+        "PLTE",
+        "tRNS",
+        "IDAT",
+        "IEND"
+      ],
+      "animated": false,
+      "exif": false,
+      "admitted": true
+    },
+    {
+      "path": "img/portraitCrumb.png",
+      "sha256": "70b0817697b06c43a200ab92fe6fe74f9a594c8c127ebe6d2b8fa308b342ed33",
+      "width": 64,
+      "height": 64,
+      "chunks": [
+        "IHDR",
+        "PLTE",
+        "tRNS",
+        "IDAT",
+        "IEND"
+      ],
+      "animated": false,
+      "exif": false,
+      "admitted": true
+    },
+    {
+      "path": "img/portraitDoe.png",
+      "sha256": "09592d17b5c0677938c7b26db78dda8238b5b47dab93b51abb7eda385994079f",
+      "width": 64,
+      "height": 64,
+      "chunks": [
+        "IHDR",
+        "PLTE",
+        "tRNS",
+        "IDAT",
+        "IEND"
+      ],
+      "animated": false,
+      "exif": false,
+      "admitted": true
+    },
+    {
+      "path": "img/portraitLucky.png",
+      "sha256": "d12648e37398c92a7860185ebe04377fea56eb4ef5fece324d3d367528b690a2",
+      "width": 64,
+      "height": 64,
+      "chunks": [
+        "IHDR",
+        "PLTE",
+        "tRNS",
+        "IDAT",
+        "IEND"
+      ],
+      "animated": false,
+      "exif": false,
+      "admitted": true
+    },
+    {
+      "path": "img/prestigeBarCap.png",
+      "sha256": "34d56b484e7bba90df5c0be0ec2de5bfd801734307d800c9f482646187749e17",
+      "width": 8,
+      "height": 8,
+      "chunks": [
+        "IHDR",
+        "tEXt",
+        "iTXt",
+        "IDAT",
+        "IEND"
+      ],
+      "animated": false,
+      "exif": false,
+      "admitted": true
+    },
+    {
+      "path": "img/prism.png",
+      "sha256": "bf34c725e96d4c78e88c703ec5fb9851a8f23e8e389d231327d98dd21d157e92",
+      "width": 64,
+      "height": 64,
+      "chunks": [
+        "IHDR",
+        "tEXt",
+        "PLTE",
+        "tRNS",
+        "IDAT",
+        "IEND"
+      ],
+      "animated": false,
+      "exif": false,
+      "admitted": true
+    },
+    {
+      "path": "img/prismBackground.png",
+      "sha256": "ec66e90144b99d463ac9c892b5b7899eea45944b45faa2686e74c6b359f0eeae",
+      "width": 128,
+      "height": 128,
+      "chunks": [
+        "IHDR",
+        "tEXt",
+        "PLTE",
+        "IDAT",
+        "IEND"
+      ],
+      "animated": false,
+      "exif": false,
+      "admitted": true
+    },
+    {
+      "path": "img/rainbowGrandma.png",
+      "sha256": "e79ca6067d2a16da411d549fd2ae8655a2eae508f7726b124f5159137073b035",
+      "width": 64,
+      "height": 64,
+      "chunks": [
+        "IHDR",
+        "tEXt",
+        "PLTE",
+        "tRNS",
+        "IDAT",
+        "IEND"
+      ],
+      "animated": false,
+      "exif": false,
+      "admitted": true
+    },
+    {
+      "path": "img/roundFrameBorder.png",
+      "sha256": "c50cb77e723abfb2443e854ee22bb7d3b13e61ce024cb42608e2470f8a0af354",
+      "width": 48,
+      "height": 48,
+      "chunks": [
+        "IHDR",
+        "tEXt",
+        "iTXt",
+        "PLTE",
+        "tRNS",
+        "IDAT",
+        "IEND"
+      ],
+      "animated": false,
+      "exif": false,
+      "admitted": true
+    },
+    {
+      "path": "img/roundedPanelBG.png",
+      "sha256": "6d68708d35ea714f86db07bc684b2456db8cbb13993f98a717f8058cec20c671",
+      "width": 478,
+      "height": 32,
+      "chunks": [
+        "IHDR",
+        "tEXt",
+        "iTXt",
+        "PLTE",
+        "IDAT",
+        "IEND"
+      ],
+      "animated": false,
+      "exif": false,
+      "admitted": true
+    },
+    {
+      "path": "img/roundedPanelBGS.png",
+      "sha256": "bba0d46202a34d71ad60fcb672096be77023b93262dd378da737f8b6b77e5ee7",
+      "width": 478,
+      "height": 36,
+      "chunks": [
+        "IHDR",
+        "tEXt",
+        "iTXt",
+        "IDAT",
+        "IEND"
+      ],
+      "animated": false,
+      "exif": false,
+      "admitted": true
+    },
+    {
+      "path": "img/roundedPanelLeft.png",
+      "sha256": "df2636835a314fe7651a3fcefc438698143d7055249d104f3fdea3f7c58bfe50",
+      "width": 17,
+      "height": 32,
+      "chunks": [
+        "IHDR",
+        "tEXt",
+        "iTXt",
+        "IDAT",
+        "IEND"
+      ],
+      "animated": false,
+      "exif": false,
+      "admitted": true
+    },
+    {
+      "path": "img/roundedPanelLeftS.png",
+      "sha256": "1a62a89cebfcf4e297691dc6295149fbdebea2ac2732567d95e4a4ae4c4d89f6",
+      "width": 18,
+      "height": 36,
+      "chunks": [
+        "IHDR",
+        "tEXt",
+        "iTXt",
+        "IDAT",
+        "IEND"
+      ],
+      "animated": false,
+      "exif": false,
+      "admitted": true
+    },
+    {
+      "path": "img/roundedPanelRight.png",
+      "sha256": "1aa2bf263595b5078501389c151935fd730225f61870163f4f42266fbdfe78a7",
+      "width": 17,
+      "height": 32,
+      "chunks": [
+        "IHDR",
+        "tEXt",
+        "iTXt",
+        "IDAT",
+        "IEND"
+      ],
+      "animated": false,
+      "exif": false,
+      "admitted": true
+    },
+    {
+      "path": "img/roundedPanelRightS.png",
+      "sha256": "9dbc4341f6dc907b51cff83eaf45494df3fcfd31c0aa99fcb84f559c60cf4ac4",
+      "width": 20,
+      "height": 36,
+      "chunks": [
+        "IHDR",
+        "tEXt",
+        "iTXt",
+        "IDAT",
+        "IEND"
+      ],
+      "animated": false,
+      "exif": false,
+      "admitted": true
+    },
+    {
+      "path": "img/santa.png",
+      "sha256": "96c63a5f4a6627de772000862dfc47ecaf2306d498214a2cb7e762b1e7ab71f2",
+      "width": 1440,
+      "height": 96,
+      "chunks": [
+        "IHDR",
+        "tEXt",
+        "iTXt",
+        "PLTE",
+        "tRNS",
+        "IDAT",
+        "IEND"
+      ],
+      "animated": false,
+      "exif": false,
+      "admitted": true
+    },
+    {
+      "path": "img/scriptGrandma.png",
+      "sha256": "4bff3d601ff25a0b191c7092acadba6dc2837389dc31fe58ed71349b065109ff",
+      "width": 64,
+      "height": 64,
+      "chunks": [
+        "IHDR",
+        "tEXt",
+        "PLTE",
+        "tRNS",
+        "IDAT",
+        "IEND"
+      ],
+      "animated": false,
+      "exif": false,
+      "admitted": true
+    },
+    {
+      "path": "img/selectTarget.png",
+      "sha256": "cbb77ff87f8aadc692164c3ea053c83f7ce2bea5313616d9b97b3a122a608e22",
+      "width": 60,
+      "height": 60,
+      "chunks": [
+        "IHDR",
+        "tEXt",
+        "iTXt",
+        "IDAT",
+        "IEND"
+      ],
+      "animated": false,
+      "exif": false,
+      "admitted": true
+    },
+    {
+      "path": "img/sentientFurnace.png",
+      "sha256": "35941f540d0d3a57c14afb2ac4db7294d7d151f2838a6ced2916090ecdda2886",
+      "width": 96,
+      "height": 96,
+      "chunks": [
+        "IHDR",
+        "PLTE",
+        "tRNS",
+        "IDAT",
+        "IEND"
+      ],
+      "animated": false,
+      "exif": false,
+      "admitted": true
+    },
+    {
+      "path": "img/shadedBorders.png",
+      "sha256": "06d4a23574cdd352bf4d0f41e1753ee580a6bfb900d1956a4d88215c8d2feef6",
+      "width": 256,
+      "height": 256,
+      "chunks": [
+        "IHDR",
+        "tEXt",
+        "iTXt",
+        "IDAT",
+        "IEND"
+      ],
+      "animated": false,
+      "exif": false,
+      "admitted": true
+    },
+    {
+      "path": "img/shadedBordersGold.png",
+      "sha256": "10dc768899309383e7b51d81f587f0ebf45fd2f6cb4868d53d07c1d9b3887065",
+      "width": 256,
+      "height": 256,
+      "chunks": [
+        "IHDR",
+        "PLTE",
+        "tRNS",
+        "IDAT",
+        "IEND"
+      ],
+      "animated": false,
+      "exif": false,
+      "admitted": true
+    },
+    {
+      "path": "img/shadedBordersRed.png",
+      "sha256": "d41c944d56b99b299a5eb70907b8c178659006ae33fa844e4c12bfbe50fed53c",
+      "width": 256,
+      "height": 256,
+      "chunks": [
+        "IHDR",
+        "PLTE",
+        "tRNS",
+        "IDAT",
+        "IEND"
+      ],
+      "animated": false,
+      "exif": false,
+      "admitted": true
+    },
+    {
+      "path": "img/shadedBordersSoft.png",
+      "sha256": "aa9fab92f91a23eac99fb249c41c53e48e38c3bfb846a4f64f30e5bbcd73275b",
+      "width": 256,
+      "height": 256,
+      "chunks": [
+        "IHDR",
+        "tEXt",
+        "iTXt",
+        "IDAT",
+        "IEND"
+      ],
+      "animated": false,
+      "exif": false,
+      "admitted": true
+    },
+    {
+      "path": "img/shimmeringVeil.png",
+      "sha256": "7384942c75928cda5fd00151c274f7f6da84b36f2d7cf7d9ee2221c9903281be",
+      "width": 128,
+      "height": 128,
+      "chunks": [
+        "IHDR",
+        "tEXt",
+        "iTXt",
+        "IDAT",
+        "IEND"
+      ],
+      "animated": false,
+      "exif": false,
+      "admitted": true
+    },
+    {
+      "path": "img/shine.png",
+      "sha256": "b4fdeb663730eaccf4718f2012e63e2d42c50663d018b6c869c2d888726517f5",
+      "width": 128,
+      "height": 128,
+      "chunks": [
+        "IHDR",
+        "PLTE",
+        "tRNS",
+        "IDAT",
+        "IEND"
+      ],
+      "animated": false,
+      "exif": false,
+      "admitted": true
+    },
+    {
+      "path": "img/shineGold.png",
+      "sha256": "a7d89e015e9ada593817d5b4e3aba661443eaec455ee032d1687ef36423be308",
+      "width": 128,
+      "height": 128,
+      "chunks": [
+        "IHDR",
+        "tEXt",
+        "iTXt",
+        "IDAT",
+        "IEND"
+      ],
+      "animated": false,
+      "exif": false,
+      "admitted": true
+    },
+    {
+      "path": "img/shineRed.png",
+      "sha256": "b34fb2c7142f746dede69d3df8f88d5e2cc55650f757f3df8752e1f69d25bec1",
+      "width": 128,
+      "height": 128,
+      "chunks": [
+        "IHDR",
+        "tEXt",
+        "iTXt",
+        "IDAT",
+        "IEND"
+      ],
+      "animated": false,
+      "exif": false,
+      "admitted": true
+    },
+    {
+      "path": "img/shineSpoke.png",
+      "sha256": "ffbe5c091939e9420b9c780025202c47d79939a6e408625ef17f9e95e63aabc6",
+      "width": 128,
+      "height": 128,
+      "chunks": [
+        "IHDR",
+        "tEXt",
+        "iTXt",
+        "IDAT",
+        "IEND"
+      ],
+      "animated": false,
+      "exif": false,
+      "admitted": true
+    },
+    {
+      "path": "img/shinyWinkler.png",
+      "sha256": "c4b9a9d61bc6f6b246ce1a5ec60361b5591488528b26c53f418aa46b62e924ee",
+      "width": 100,
+      "height": 200,
+      "chunks": [
+        "IHDR",
+        "tEXt",
+        "iTXt",
+        "PLTE",
+        "tRNS",
+        "IDAT",
+        "IEND"
+      ],
+      "animated": false,
+      "exif": false,
+      "admitted": true
+    },
+    {
+      "path": "img/shinyWrinkler.png",
+      "sha256": "41a2e19bd87e327e78dabdb30c29b3eeaad6c738376391cf6403dad47874b8c3",
+      "width": 100,
+      "height": 200,
+      "chunks": [
+        "IHDR",
+        "tEXt",
+        "iTXt",
+        "PLTE",
+        "tRNS",
+        "IDAT",
+        "IEND"
+      ],
+      "animated": false,
+      "exif": false,
+      "admitted": true
+    },
+    {
+      "path": "img/shinyWrinklerBits.png",
+      "sha256": "55e8a65f2e7532ab918a66bae84d9b7d23b0845fe717484e085295e9b8ad8b91",
+      "width": 800,
+      "height": 200,
+      "chunks": [
+        "IHDR",
+        "tEXt",
+        "iTXt",
+        "PLTE",
+        "tRNS",
+        "IDAT",
+        "IEND"
+      ],
+      "animated": false,
+      "exif": false,
+      "admitted": true
+    },
+    {
+      "path": "img/shipment.png",
+      "sha256": "bcb571eaa47af76c02a685e8153d3a130acdb0a8f724156c9810b215de4f5b2d",
+      "width": 64,
+      "height": 64,
+      "chunks": [
+        "IHDR",
+        "PLTE",
+        "tRNS",
+        "IDAT",
+        "IEND"
+      ],
+      "animated": false,
+      "exif": false,
+      "admitted": true
+    },
+    {
+      "path": "img/shipmentBackground.png",
+      "sha256": "a80aa6b21878e4ca6db48a47435dbad5a63d57d68ff49dd5f8a2eed8428cb9f5",
+      "width": 128,
+      "height": 128,
+      "chunks": [
+        "IHDR",
+        "PLTE",
+        "IDAT",
+        "IEND"
+      ],
+      "animated": false,
+      "exif": false,
+      "admitted": true
+    },
+    {
+      "path": "img/smallCookies.png",
+      "sha256": "96ca83df1f9ed96c7ba47ec433a78b9b8a9bb88fe0f78b8a04fd60a51b9550cc",
+      "width": 512,
+      "height": 64,
+      "chunks": [
+        "IHDR",
+        "PLTE",
+        "tRNS",
+        "IDAT",
+        "IEND"
+      ],
+      "animated": false,
+      "exif": false,
+      "admitted": true
+    },
+    {
+      "path": "img/smallDollars.png",
+      "sha256": "641bcd471246a1c68f72a054190514bf3e39faaaabd2c39015d6659048203a06",
+      "width": 512,
+      "height": 64,
+      "chunks": [
+        "IHDR",
+        "tEXt",
+        "iTXt",
+        "PLTE",
+        "tRNS",
+        "IDAT",
+        "IEND"
+      ],
+      "animated": false,
+      "exif": false,
+      "admitted": true
+    },
+    {
+      "path": "img/spellBG.png",
+      "sha256": "b917d6c3d619af1d852b12fac46caf4be76971117fdcfd4c7f414dad5a91e061",
+      "width": 240,
+      "height": 222,
+      "chunks": [
+        "IHDR",
+        "tEXt",
+        "iTXt",
+        "PLTE",
+        "tRNS",
+        "IDAT",
+        "IEND"
+      ],
+      "animated": false,
+      "exif": false,
+      "admitted": true
+    },
+    {
+      "path": "img/spinnyBig.png",
+      "sha256": "0693305d415bad42327a0ca30b0b01557d18847e27c3a7c3ef425dc010f9b9e6",
+      "width": 100,
+      "height": 100,
+      "chunks": [
+        "IHDR",
+        "tEXt",
+        "iTXt",
+        "IDAT",
+        "IEND"
+      ],
+      "animated": false,
+      "exif": false,
+      "admitted": true
+    },
+    {
+      "path": "img/spinnySmall.png",
+      "sha256": "406f84e5f02045e5c0eb22be0b674014581cf6434b935acb90a5b4f7a6a79730",
+      "width": 100,
+      "height": 100,
+      "chunks": [
+        "IHDR",
+        "tEXt",
+        "iTXt",
+        "IDAT",
+        "IEND"
+      ],
+      "animated": false,
+      "exif": false,
+      "admitted": true
+    },
+    {
+      "path": "img/spookyCookie.png",
+      "sha256": "48ddf329761aae415f36a0b9a15c04409b881d622454c8c5d7e74a88cdf2203b",
+      "width": 96,
+      "height": 96,
+      "chunks": [
+        "IHDR",
+        "PLTE",
+        "tRNS",
+        "IDAT",
+        "IEND"
+      ],
+      "animated": false,
+      "exif": false,
+      "admitted": true
+    },
+    {
+      "path": "img/sugarLump.png",
+      "sha256": "3a8d95b5301a0a07bdeaec5dbe0815a17d83d03f17acad29a15cd4de28b9a86f",
+      "width": 16,
+      "height": 16,
+      "chunks": [
+        "IHDR",
+        "tEXt",
+        "iTXt",
+        "PLTE",
+        "tRNS",
+        "IDAT",
+        "IEND"
+      ],
+      "animated": false,
+      "exif": false,
+      "admitted": true
+    },
+    {
+      "path": "img/temple.png",
+      "sha256": "d15bf67fd8e245994172baa79472d7d54b13ec7e55294ca9e2490282649b8be1",
+      "width": 64,
+      "height": 64,
+      "chunks": [
+        "IHDR",
+        "tEXt",
+        "PLTE",
+        "tRNS",
+        "IDAT",
+        "IEND"
+      ],
+      "animated": false,
+      "exif": false,
+      "admitted": true
+    },
+    {
+      "path": "img/templeBackground.png",
+      "sha256": "da45d9469634c8631e41747143a509c034d9e9bbbf81a732d3bfae3960295d8d",
+      "width": 128,
+      "height": 128,
+      "chunks": [
+        "IHDR",
+        "tEXt",
+        "iTXt",
+        "PLTE",
+        "IDAT",
+        "IEND"
+      ],
+      "animated": false,
+      "exif": false,
+      "admitted": true
+    },
+    {
+      "path": "img/templeGrandma.png",
+      "sha256": "662209cfa42a434d6e05c3df961ad6d012091b9588ebc81bbb0218f0fe5c1276",
+      "width": 64,
+      "height": 64,
+      "chunks": [
+        "IHDR",
+        "tEXt",
+        "PLTE",
+        "tRNS",
+        "IDAT",
+        "IEND"
+      ],
+      "animated": false,
+      "exif": false,
+      "admitted": true
+    },
+    {
+      "path": "img/timemachine.png",
+      "sha256": "7a92b37f6a32769a696f16c1a53ae0fb89ab41ef758265dd7113f59d17c95dad",
+      "width": 64,
+      "height": 64,
+      "chunks": [
+        "IHDR",
+        "PLTE",
+        "tRNS",
+        "IDAT",
+        "IEND"
+      ],
+      "animated": false,
+      "exif": false,
+      "admitted": true
+    },
+    {
+      "path": "img/timemachineBackground.png",
+      "sha256": "201577c953c4756e49e79fa5052e82b4dd3c7d1ae3c0ddc54de4496889b112a0",
+      "width": 128,
+      "height": 128,
+      "chunks": [
+        "IHDR",
+        "PLTE",
+        "IDAT",
+        "IEND"
+      ],
+      "animated": false,
+      "exif": false,
+      "admitted": true
+    },
+    {
+      "path": "img/timerBars.png",
+      "sha256": "dab732afff399033e7a5eb25f23c777a647b46782f7740aed6d237538f5161c2",
+      "width": 128,
+      "height": 32,
+      "chunks": [
+        "IHDR",
+        "tEXt",
+        "iTXt",
+        "PLTE",
+        "IDAT",
+        "IEND"
+      ],
+      "animated": false,
+      "exif": false,
+      "admitted": true
+    },
+    {
+      "path": "img/tinyEyeEmpty.png",
+      "sha256": "4f7a0c620a91d67ab9fe53b4724d9cb0e6079a520dde53bb2059b5ec836c0569",
+      "width": 14,
+      "height": 14,
+      "chunks": [
+        "IHDR",
+        "IDAT",
+        "IEND"
+      ],
+      "animated": false,
+      "exif": false,
+      "admitted": true
+    },
+    {
+      "path": "img/tinyEyeOff.png",
+      "sha256": "8f539055aa90224c9f63fa51f1a109e62346c9e522f094d1734ec2a8697720c6",
+      "width": 14,
+      "height": 14,
+      "chunks": [
+        "IHDR",
+        "IDAT",
+        "IEND"
+      ],
+      "animated": false,
+      "exif": false,
+      "admitted": true
+    },
+    {
+      "path": "img/tinyEyeOn.png",
+      "sha256": "964e8998992a45d59996eb2f07e971bffb1fb2ba46ff422c519d7181090b0503",
+      "width": 14,
+      "height": 14,
+      "chunks": [
+        "IHDR",
+        "IDAT",
+        "IEND"
+      ],
+      "animated": false,
+      "exif": false,
+      "admitted": true
+    },
+    {
+      "path": "img/transmutedGrandma.png",
+      "sha256": "aa499e937457d1bc0d383973c49b8ec6983086c1b089b3d8e01603bd319b7cb0",
+      "width": 64,
+      "height": 64,
+      "chunks": [
+        "IHDR",
+        "PLTE",
+        "tRNS",
+        "IDAT",
+        "IEND"
+      ],
+      "animated": false,
+      "exif": false,
+      "admitted": true
+    },
+    {
+      "path": "img/turnInto.png",
+      "sha256": "d1d839b289ff897f0cff4cb539c3e312cf358a06f706e9591a9e3df5d6907119",
+      "width": 20,
+      "height": 22,
+      "chunks": [
+        "IHDR",
+        "tEXt",
+        "iTXt",
+        "IDAT",
+        "IEND"
+      ],
+      "animated": false,
+      "exif": false,
+      "admitted": true
+    },
+    {
+      "path": "img/upgradeFrame.png",
+      "sha256": "29c846d8aed2f5913391a1ffe9996051d6eb7637e7d8255108a8b968944c5040",
+      "width": 180,
+      "height": 120,
+      "chunks": [
+        "IHDR",
+        "tEXt",
+        "iTXt",
+        "IDAT",
+        "IEND"
+      ],
+      "animated": false,
+      "exif": false,
+      "admitted": true
+    },
+    {
+      "path": "img/upgradeFrameHeavenly.png",
+      "sha256": "3656655a2ba0da8a2b92eb80305ff20e687f3c8233cae6c4ff1fc9a22bcee2bd",
+      "width": 60,
+      "height": 120,
+      "chunks": [
+        "IHDR",
+        "tEXt",
+        "iTXt",
+        "PLTE",
+        "tRNS",
+        "IDAT",
+        "IEND"
+      ],
+      "animated": false,
+      "exif": false,
+      "admitted": true
+    },
+    {
+      "path": "img/upgradeFrameOld.png",
+      "sha256": "de6d11c2b6c5217ddaff1efa6e3d7f4e3ce3b9d742bb5eee5a683025cd0fb66a",
+      "width": 240,
+      "height": 120,
+      "chunks": [
+        "IHDR",
+        "tEXt",
+        "iTXt",
+        "PLTE",
+        "tRNS",
+        "IDAT",
+        "IEND"
+      ],
+      "animated": false,
+      "exif": false,
+      "admitted": true
+    },
+    {
+      "path": "img/upgradeFrameShadowOld.png",
+      "sha256": "49f1992c0e802baa9afaafb9ebd28a16abf43fa1e2a9059432de20544fbf55c1",
+      "width": 240,
+      "height": 120,
+      "chunks": [
+        "IHDR",
+        "tEXt",
+        "iTXt",
+        "PLTE",
+        "tRNS",
+        "IDAT",
+        "IEND"
+      ],
+      "animated": false,
+      "exif": false,
+      "admitted": true
+    },
+    {
+      "path": "img/upgradeHighlight.png",
+      "sha256": "0d15805babdb3e795d9409d16bd23f8f6be73dc222de5c0de025b3e1a2b6bbf4",
+      "width": 96,
+      "height": 96,
+      "chunks": [
+        "IHDR",
+        "tEXt",
+        "iTXt",
+        "IDAT",
+        "IEND"
+      ],
+      "animated": false,
+      "exif": false,
+      "admitted": true
+    },
+    {
+      "path": "img/upgradeSelector.png",
+      "sha256": "51c121f634b24e0cc75af8ddb5439bbe553ea2ad65fc041fbbc366a066c7b903",
+      "width": 12,
+      "height": 12,
+      "chunks": [
+        "IHDR",
+        "tEXt",
+        "iTXt",
+        "PLTE",
+        "tRNS",
+        "IDAT",
+        "IEND"
+      ],
+      "animated": false,
+      "exif": false,
+      "admitted": true
+    },
+    {
+      "path": "img/weeHoodie.png",
+      "sha256": "563823dd4a0c3b771e93bdf79c3e057ba3ece89aeccf3cdc4478cac22fd9b8c0",
+      "width": 25,
+      "height": 32,
+      "chunks": [
+        "IHDR",
+        "tEXt",
+        "iTXt",
+        "IDAT",
+        "IEND"
+      ],
+      "animated": false,
+      "exif": false,
+      "admitted": true
+    },
+    {
+      "path": "img/winkler.png",
+      "sha256": "55a161aa77d1482d63c73d65b650646c341b7a1ea3414f7145781feb3e2f46d0",
+      "width": 100,
+      "height": 200,
+      "chunks": [
+        "IHDR",
+        "tEXt",
+        "iTXt",
+        "PLTE",
+        "tRNS",
+        "IDAT",
+        "IEND"
+      ],
+      "animated": false,
+      "exif": false,
+      "admitted": true
+    },
+    {
+      "path": "img/winterFrame.png",
+      "sha256": "f8347f81170933b2bdc30344a657b345d950dd5f4861998543b89d7e0ba5f15b",
+      "width": 288,
+      "height": 96,
+      "chunks": [
+        "IHDR",
+        "tEXt",
+        "iTXt",
+        "PLTE",
+        "tRNS",
+        "IDAT",
+        "IEND"
+      ],
+      "animated": false,
+      "exif": false,
+      "admitted": true
+    },
+    {
+      "path": "img/winterWinkler.png",
+      "sha256": "addab2396dd6d9a6e5b0c49870f3744233d1d017356584a7bc562a0f6458529e",
+      "width": 100,
+      "height": 200,
+      "chunks": [
+        "IHDR",
+        "tEXt",
+        "iTXt",
+        "PLTE",
+        "tRNS",
+        "IDAT",
+        "IEND"
+      ],
+      "animated": false,
+      "exif": false,
+      "admitted": true
+    },
+    {
+      "path": "img/winterWrinkler.png",
+      "sha256": "988d3c397331ae7657f134b78f6b86956b8fefc337da0dcfcdd6d482c967c211",
+      "width": 100,
+      "height": 200,
+      "chunks": [
+        "IHDR",
+        "PLTE",
+        "tRNS",
+        "IDAT",
+        "IEND"
+      ],
+      "animated": false,
+      "exif": false,
+      "admitted": true
+    },
+    {
+      "path": "img/witchGrandma.png",
+      "sha256": "f83b9b3972faa9a5655cea98398ef2eeff1b9c34f8160bf07831733edb074f09",
+      "width": 64,
+      "height": 64,
+      "chunks": [
+        "IHDR",
+        "tEXt",
+        "PLTE",
+        "tRNS",
+        "IDAT",
+        "IEND"
+      ],
+      "animated": false,
+      "exif": false,
+      "admitted": true
+    },
+    {
+      "path": "img/wizardtower.png",
+      "sha256": "e8398ccb68283aec4844ee8de1e23a85fed3524d22b1d2a2861ea07828b41c6b",
+      "width": 64,
+      "height": 64,
+      "chunks": [
+        "IHDR",
+        "tEXt",
+        "PLTE",
+        "tRNS",
+        "IDAT",
+        "IEND"
+      ],
+      "animated": false,
+      "exif": false,
+      "admitted": true
+    },
+    {
+      "path": "img/wizardtowerBackground.png",
+      "sha256": "dd2e55149a05ff560c7ff1bc2de45aad08118347989db6c370a96743d9319329",
+      "width": 128,
+      "height": 128,
+      "chunks": [
+        "IHDR",
+        "tEXt",
+        "iTXt",
+        "PLTE",
+        "IDAT",
+        "IEND"
+      ],
+      "animated": false,
+      "exif": false,
+      "admitted": true
+    },
+    {
+      "path": "img/workerGrandma.png",
+      "sha256": "46e9a2001a6b8c088c278b54c52ec8a01cb10c09c1d19d88954de7b09daa73ab",
+      "width": 64,
+      "height": 64,
+      "chunks": [
+        "IHDR",
+        "PLTE",
+        "tRNS",
+        "IDAT",
+        "IEND"
+      ],
+      "animated": false,
+      "exif": false,
+      "admitted": true
+    },
+    {
+      "path": "img/wrathContract.png",
+      "sha256": "5472809dcf8e6be0530ce3c34059e0ef301e062c8baa760db77061dde026cfd4",
+      "width": 96,
+      "height": 96,
+      "chunks": [
+        "IHDR",
+        "tEXt",
+        "iTXt",
+        "PLTE",
+        "tRNS",
+        "IDAT",
+        "IEND"
+      ],
+      "animated": false,
+      "exif": false,
+      "admitted": true
+    },
+    {
+      "path": "img/wrathCookie.png",
+      "sha256": "d97a628cf15e831e91750abb92b9f365831c647509d484dd07d1c513d7f2467c",
+      "width": 96,
+      "height": 96,
+      "chunks": [
+        "IHDR",
+        "PLTE",
+        "tRNS",
+        "IDAT",
+        "IEND"
+      ],
+      "animated": false,
+      "exif": false,
+      "admitted": true
+    },
+    {
+      "path": "img/wrinkler.png",
+      "sha256": "c15b0d5d8d588549884b4df37f0705f720a54fc766202274fbf0ed710f743d2e",
+      "width": 100,
+      "height": 200,
+      "chunks": [
+        "IHDR",
+        "PLTE",
+        "tRNS",
+        "IDAT",
+        "IEND"
+      ],
+      "animated": false,
+      "exif": false,
+      "admitted": true
+    },
+    {
+      "path": "img/wrinklerBits.png",
+      "sha256": "108e07dfccf24a644edaf9535f3f693f6a24aa9fcda68d829ac99df73d39cb51",
+      "width": 800,
+      "height": 200,
+      "chunks": [
+        "IHDR",
+        "tEXt",
+        "iTXt",
+        "PLTE",
+        "tRNS",
+        "IDAT",
+        "IEND"
+      ],
+      "animated": false,
+      "exif": false,
+      "admitted": true
+    },
+    {
+      "path": "img/wrinklerBitsOld.png",
+      "sha256": "de5ffd493f3589c26af5afd743eb4e4c3a9786e942e29970a8820c8d2cbe89c2",
+      "width": 512,
+      "height": 64,
+      "chunks": [
+        "IHDR",
+        "PLTE",
+        "tRNS",
+        "IDAT",
+        "IEND"
+      ],
+      "animated": false,
+      "exif": false,
+      "admitted": true
+    },
+    {
+      "path": "img/wrinklerBlink.png",
+      "sha256": "8e8eb9867850d06ec4f34cc28f9db328811134f0a7e5df753ccb69a6897f82cf",
+      "width": 100,
+      "height": 200,
+      "chunks": [
+        "IHDR",
+        "tEXt",
+        "iTXt",
+        "PLTE",
+        "tRNS",
+        "IDAT",
+        "IEND"
+      ],
+      "animated": false,
+      "exif": false,
+      "admitted": true
+    },
+    {
+      "path": "img/wrinklerGooglies.png",
+      "sha256": "425aea1bc189f8103d35c43550c8e75010cceaec07fcde4b9f66a833f3004be9",
+      "width": 100,
+      "height": 200,
+      "chunks": [
+        "IHDR",
+        "tEXt",
+        "iTXt",
+        "PLTE",
+        "tRNS",
+        "IDAT",
+        "IEND"
+      ],
+      "animated": false,
+      "exif": false,
+      "admitted": true
+    },
+    {
+      "path": "img/wrinklerShadow.png",
+      "sha256": "67fa48800b2c11bc8b412b90de3484862b3aacff05ef7876df73aca65d708df2",
+      "width": 20,
+      "height": 40,
+      "chunks": [
+        "IHDR",
+        "tEXt",
+        "iTXt",
+        "IDAT",
+        "IEND"
+      ],
+      "animated": false,
+      "exif": false,
+      "admitted": true
+    },
+    {
+      "path": "img/you.png",
+      "sha256": "7331fcf6b41fe40e038cff0ee979ad3f7507732a09708066ad57c4d7009594f9",
+      "width": 64,
+      "height": 64,
+      "chunks": [
+        "IHDR",
+        "tEXt",
+        "iTXt",
+        "PLTE",
+        "tRNS",
+        "IDAT",
+        "IEND"
+      ],
+      "animated": false,
+      "exif": false,
+      "admitted": true
+    },
+    {
+      "path": "img/youAddons.png",
+      "sha256": "67328dbf8aa98244c11d058052df3d8b7e9343da9bc8b3b75be946b22954c087",
+      "width": 360,
+      "height": 192,
+      "chunks": [
+        "IHDR",
+        "tEXt",
+        "iTXt",
+        "PLTE",
+        "tRNS",
+        "IDAT",
+        "IEND"
+      ],
+      "animated": false,
+      "exif": false,
+      "admitted": true
+    },
+    {
+      "path": "img/youBackground.png",
+      "sha256": "a08c06cbc72e5110db42299ffeee1d2dff813a03c498b703344bcd996c7ec784",
+      "width": 128,
+      "height": 128,
+      "chunks": [
+        "IHDR",
+        "tEXt",
+        "iTXt",
+        "PLTE",
+        "IDAT",
+        "IEND"
+      ],
+      "animated": false,
+      "exif": false,
+      "admitted": true
+    },
+    {
+      "path": "img/youLight.png",
+      "sha256": "b495ba991508408a7b450d541bde86eb276d565c9eee717114a92ee4784c6845",
+      "width": 42,
+      "height": 128,
+      "chunks": [
+        "IHDR",
+        "tEXt",
+        "iTXt",
+        "IDAT",
+        "IEND"
+      ],
+      "animated": false,
+      "exif": false,
+      "admitted": true
+    }
+  ],
+  "jpegAssets": [
+    {
+      "path": "img/BGgarden.jpg",
+      "sha256": "f284e1eb1e92f3389eaa42c399226aec38e750a23b8a6c2b0cd4bf2718e0db75",
+      "width": 512,
+      "height": 128,
+      "markers": [
+        225,
+        236,
+        225,
+        238,
+        219,
+        192,
+        196,
+        218,
+        217
+      ],
+      "orientations": [],
+      "trailingByteCount": 0,
+      "admitted": true
+    },
+    {
+      "path": "img/BGgrimoire.jpg",
+      "sha256": "737cc18efe6746a07c90ae1fc039c2130832a25a2771f7eea07fe7890714efaf",
+      "width": 512,
+      "height": 128,
+      "markers": [
+        225,
+        236,
+        225,
+        238,
+        219,
+        192,
+        196,
+        218,
+        217
+      ],
+      "orientations": [],
+      "trailingByteCount": 0,
+      "admitted": true
+    },
+    {
+      "path": "img/BGmarket.jpg",
+      "sha256": "ef7de645eeecba7ea396d9d37d36d9b2018f18c54b37efedf277334058ceb6cd",
+      "width": 512,
+      "height": 128,
+      "markers": [
+        225,
+        236,
+        225,
+        238,
+        219,
+        192,
+        196,
+        218,
+        217
+      ],
+      "orientations": [],
+      "trailingByteCount": 0,
+      "admitted": true
+    },
+    {
+      "path": "img/BGpantheon.jpg",
+      "sha256": "d5fba8487a9da01a58655f01f8ef299fb7cc4a3352aa19b0001d3fee56181d92",
+      "width": 512,
+      "height": 128,
+      "markers": [
+        225,
+        236,
+        225,
+        238,
+        219,
+        192,
+        196,
+        218,
+        217
+      ],
+      "orientations": [],
+      "trailingByteCount": 0,
+      "admitted": true
+    },
+    {
+      "path": "img/aqworldsbanner.jpg",
+      "sha256": "268db5155086962b0171ee85045a37960d2c850b514c0648ca6cdb0fabb2b6b6",
+      "width": 300,
+      "height": 64,
+      "markers": [
+        224,
+        219,
+        219,
+        192,
+        196,
+        196,
+        196,
+        196,
+        218,
+        217
+      ],
+      "orientations": [],
+      "trailingByteCount": 0,
+      "admitted": true
+    },
+    {
+      "path": "img/bgBW.jpg",
+      "sha256": "bda46818b6a89c2ba44caa4be49b8e157a32e5ca11396cf417da007219465706",
+      "width": 512,
+      "height": 512,
+      "markers": [
+        225,
+        236,
+        225,
+        238,
+        219,
+        192,
+        196,
+        218,
+        217
+      ],
+      "orientations": [],
+      "trailingByteCount": 0,
+      "admitted": true
+    },
+    {
+      "path": "img/bgBlack.jpg",
+      "sha256": "c10f345a7be6170a5a23198f5fcdcdbddcb7368e30a14dded9e833809caa466b",
+      "width": 512,
+      "height": 512,
+      "markers": [
+        225,
+        236,
+        225,
+        238,
+        219,
+        192,
+        196,
+        218,
+        217
+      ],
+      "orientations": [],
+      "trailingByteCount": 0,
+      "admitted": true
+    },
+    {
+      "path": "img/bgBlue.jpg",
+      "sha256": "15587f81038598332b5d8a74bb99fde73b3b96cfd623254ae897ecc1fb002776",
+      "width": 512,
+      "height": 512,
+      "markers": [
+        225,
+        236,
+        225,
+        238,
+        219,
+        192,
+        196,
+        218,
+        217
+      ],
+      "orientations": [],
+      "trailingByteCount": 0,
+      "admitted": true
+    },
+    {
+      "path": "img/bgCandy.jpg",
+      "sha256": "c23a836edf628840df79f063ae643ce65b47572048d8571a862ece6651a352d6",
+      "width": 512,
+      "height": 512,
+      "markers": [
+        225,
+        236,
+        225,
+        238,
+        219,
+        192,
+        196,
+        218,
+        217
+      ],
+      "orientations": [],
+      "trailingByteCount": 0,
+      "admitted": true
+    },
+    {
+      "path": "img/bgChoco.jpg",
+      "sha256": "b3797ec0d8e0d9856ecf0bee438b29433365cb5c07d0807ceaf34f053a92d3ca",
+      "width": 512,
+      "height": 512,
+      "markers": [
+        225,
+        236,
+        225,
+        238,
+        219,
+        192,
+        196,
+        218,
+        217
+      ],
+      "orientations": [],
+      "trailingByteCount": 0,
+      "admitted": true
+    },
+    {
+      "path": "img/bgChocoDark.jpg",
+      "sha256": "f59e4f0699c90c29a9f5f1464aceedf2c576e2e11d15d87d4a25ff02e215d5c8",
+      "width": 512,
+      "height": 512,
+      "markers": [
+        225,
+        236,
+        225,
+        238,
+        219,
+        192,
+        196,
+        218,
+        217
+      ],
+      "orientations": [],
+      "trailingByteCount": 0,
+      "admitted": true
+    },
+    {
+      "path": "img/bgCoarse.jpg",
+      "sha256": "50a0d2a530252b64ca3f7c49e6ab8418e417f6f23581d45a4518092326b51e27",
+      "width": 512,
+      "height": 512,
+      "markers": [
+        225,
+        236,
+        225,
+        238,
+        219,
+        192,
+        196,
+        218,
+        217
+      ],
+      "orientations": [],
+      "trailingByteCount": 0,
+      "admitted": true
+    },
+    {
+      "path": "img/bgFoil.jpg",
+      "sha256": "c710a1192a7d77f4c457923e0e85707a86d783f42e5b0e264c528f099912fa3b",
+      "width": 512,
+      "height": 512,
+      "markers": [
+        225,
+        236,
+        225,
+        238,
+        219,
+        192,
+        196,
+        218,
+        217
+      ],
+      "orientations": [],
+      "trailingByteCount": 0,
+      "admitted": true
+    },
+    {
+      "path": "img/bgGold.jpg",
+      "sha256": "12c95d01b70aa1f7a74200b12845fb23fe86c5d724d20be8868c64a26bbd6f84",
+      "width": 512,
+      "height": 512,
+      "markers": [
+        225,
+        236,
+        225,
+        238,
+        219,
+        192,
+        196,
+        218,
+        217
+      ],
+      "orientations": [],
+      "trailingByteCount": 0,
+      "admitted": true
+    },
+    {
+      "path": "img/bgMint.jpg",
+      "sha256": "bc181c00863a64155f95be6e1fb78c0601b1f7f490579dc79e554cebf4bd9414",
+      "width": 512,
+      "height": 512,
+      "markers": [
+        225,
+        236,
+        225,
+        238,
+        219,
+        192,
+        196,
+        218,
+        217
+      ],
+      "orientations": [],
+      "trailingByteCount": 0,
+      "admitted": true
+    },
+    {
+      "path": "img/bgMoney.jpg",
+      "sha256": "5706ca347b511abfbe1a75216b7909279a1d0522b4f3f01cb733b02536ad61ff",
+      "width": 600,
+      "height": 600,
+      "markers": [
+        225,
+        236,
+        225,
+        238,
+        219,
+        192,
+        196,
+        218,
+        217
+      ],
+      "orientations": [],
+      "trailingByteCount": 0,
+      "admitted": true
+    },
+    {
+      "path": "img/bgMoneyChart.jpg",
+      "sha256": "4036f77c6e9438e02d155e28bafa9f74980958a315902e16fe3b879327fd9f20",
+      "width": 512,
+      "height": 128,
+      "markers": [
+        225,
+        236,
+        225,
+        238,
+        219,
+        192,
+        196,
+        218,
+        217
+      ],
+      "orientations": [],
+      "trailingByteCount": 0,
+      "admitted": true
+    },
+    {
+      "path": "img/bgPaint.jpg",
+      "sha256": "a0a43d55fba093afd6100e3c84dec43418677d3f9a38ad12526218fb95e3497c",
+      "width": 512,
+      "height": 512,
+      "markers": [
+        225,
+        236,
+        225,
+        238,
+        219,
+        192,
+        196,
+        218,
+        217
+      ],
+      "orientations": [],
+      "trailingByteCount": 0,
+      "admitted": true
+    },
+    {
+      "path": "img/bgPink.jpg",
+      "sha256": "315e20635710e561a308957c354387662ecadd52b3d67515574c778d2d18506a",
+      "width": 512,
+      "height": 512,
+      "markers": [
+        225,
+        236,
+        225,
+        238,
+        219,
+        192,
+        196,
+        218,
+        217
+      ],
+      "orientations": [],
+      "trailingByteCount": 0,
+      "admitted": true
+    },
+    {
+      "path": "img/bgPurple.jpg",
+      "sha256": "a32719c751527428ee8c91c7f77c451116f82ea35effaf26792936e42f1503f7",
+      "width": 512,
+      "height": 512,
+      "markers": [
+        225,
+        236,
+        225,
+        238,
+        219,
+        192,
+        196,
+        218,
+        217
+      ],
+      "orientations": [],
+      "trailingByteCount": 0,
+      "admitted": true
+    },
+    {
+      "path": "img/bgRed.jpg",
+      "sha256": "09cb1593db676942a8450a4cd2f0767764ec2f4a704334a9fddb92cddcae52a0",
+      "width": 512,
+      "height": 512,
+      "markers": [
+        225,
+        236,
+        225,
+        238,
+        219,
+        192,
+        196,
+        218,
+        217
+      ],
+      "orientations": [],
+      "trailingByteCount": 0,
+      "admitted": true
+    },
+    {
+      "path": "img/bgSilver.jpg",
+      "sha256": "09afcbfae2c6f5732817b0291a29a197ad5b687337e35fbcc24677b4149a0ba4",
+      "width": 512,
+      "height": 512,
+      "markers": [
+        225,
+        236,
+        225,
+        238,
+        219,
+        192,
+        196,
+        218,
+        217
+      ],
+      "orientations": [],
+      "trailingByteCount": 0,
+      "admitted": true
+    },
+    {
+      "path": "img/bgSky.jpg",
+      "sha256": "cd820558950a06509859f504a7a389b75df7e1d0dfe6a37d10301909f5ec348b",
+      "width": 512,
+      "height": 512,
+      "markers": [
+        225,
+        236,
+        225,
+        238,
+        219,
+        192,
+        196,
+        218,
+        217
+      ],
+      "orientations": [],
+      "trailingByteCount": 0,
+      "admitted": true
+    },
+    {
+      "path": "img/bgSnowy.jpg",
+      "sha256": "4ad396b8ccffa4ca576cdf43f9f5042149ab2bf38de4b07f76872f2c8554aae6",
+      "width": 512,
+      "height": 512,
+      "markers": [
+        225,
+        236,
+        225,
+        238,
+        219,
+        192,
+        196,
+        218,
+        217
+      ],
+      "orientations": [],
+      "trailingByteCount": 0,
+      "admitted": true
+    },
+    {
+      "path": "img/bgSpectrum.jpg",
+      "sha256": "73a40880dcf776a3d7a667f49f3938e390d695725d0a8170fd8cc0fe8b63be70",
+      "width": 512,
+      "height": 512,
+      "markers": [
+        225,
+        236,
+        225,
+        238,
+        219,
+        192,
+        196,
+        218,
+        217
+      ],
+      "orientations": [],
+      "trailingByteCount": 0,
+      "admitted": true
+    },
+    {
+      "path": "img/bgStars.jpg",
+      "sha256": "7024ab9502b4811efcb5823aad07cf7638aafe41d438c44c93da8060fdf8390b",
+      "width": 512,
+      "height": 512,
+      "markers": [
+        225,
+        236,
+        225,
+        238,
+        219,
+        192,
+        196,
+        218,
+        217
+      ],
+      "orientations": [],
+      "trailingByteCount": 0,
+      "admitted": true
+    },
+    {
+      "path": "img/bgWhite.jpg",
+      "sha256": "0329176c58f521817d15c372d143f77afd2c964efbe62a46cd1ec12878e27c34",
+      "width": 512,
+      "height": 512,
+      "markers": [
+        225,
+        236,
+        225,
+        238,
+        219,
+        192,
+        196,
+        218,
+        217
+      ],
+      "orientations": [],
+      "trailingByteCount": 0,
+      "admitted": true
+    },
+    {
+      "path": "img/bgYellowBlue.jpg",
+      "sha256": "2e48c2c92931c2b04bb051dd92c4f0c7d88f0e452654aa49b24e97cba269bd1b",
+      "width": 512,
+      "height": 512,
+      "markers": [
+        225,
+        236,
+        225,
+        238,
+        219,
+        192,
+        196,
+        218,
+        217
+      ],
+      "orientations": [],
+      "trailingByteCount": 0,
+      "admitted": true
+    },
+    {
+      "path": "img/buttonTile.jpg",
+      "sha256": "499add2017dcabea793aebd5c9281f3aef05ee33e764036f17a30e7aa7a141cb",
+      "width": 120,
+      "height": 256,
+      "markers": [
+        224,
+        219,
+        219,
+        192,
+        196,
+        196,
+        196,
+        196,
+        218,
+        217
+      ],
+      "orientations": [],
+      "trailingByteCount": 0,
+      "admitted": true
+    },
+    {
+      "path": "img/darkNoise.jpg",
+      "sha256": "1bc356fb2f127abd90b015d64cf1b8fd75764504890ce9b9f45b53dee36c47fb",
+      "width": 512,
+      "height": 512,
+      "markers": [
+        225,
+        236,
+        225,
+        238,
+        219,
+        192,
+        196,
+        218,
+        217
+      ],
+      "orientations": [],
+      "trailingByteCount": 0,
+      "admitted": true
+    },
+    {
+      "path": "img/darkNoiseTopBar.jpg",
+      "sha256": "3a02444321f54436de72a9bb984dc99660e9ce44485d4df8c63827306d5b1f18",
+      "width": 512,
+      "height": 64,
+      "markers": [
+        225,
+        236,
+        225,
+        238,
+        219,
+        192,
+        196,
+        218,
+        217
+      ],
+      "orientations": [],
+      "trailingByteCount": 0,
+      "admitted": true
+    },
+    {
+      "path": "img/dungeonMapFactory.jpg",
+      "sha256": "7cd112c0b8eaeb9f44bf4a3f2de00e4ea9d499b869d40b47c56dbe9b31d5858e",
+      "width": 100,
+      "height": 400,
+      "markers": [
+        225,
+        236,
+        225,
+        238,
+        219,
+        192,
+        196,
+        218,
+        217
+      ],
+      "orientations": [],
+      "trailingByteCount": 0,
+      "admitted": true
+    },
+    {
+      "path": "img/glint.jpg",
+      "sha256": "176b9e436c018cea07400ec78a4ea636fe891b5c2fb5291e1b8d65c3ecfee495",
+      "width": 32,
+      "height": 32,
+      "markers": [
+        225,
+        236,
+        225,
+        238,
+        219,
+        192,
+        196,
+        218,
+        217
+      ],
+      "orientations": [],
+      "trailingByteCount": 0,
+      "admitted": true
+    },
+    {
+      "path": "img/grandmas1.jpg",
+      "sha256": "c24e9b55661afa9d8d69dfc0f71fab8fab0993fafe3b8d7943e8e995209caef0",
+      "width": 256,
+      "height": 256,
+      "markers": [
+        224,
+        219,
+        219,
+        192,
+        196,
+        196,
+        196,
+        196,
+        218,
+        217
+      ],
+      "orientations": [],
+      "trailingByteCount": 0,
+      "admitted": true
+    },
+    {
+      "path": "img/grandmas2.jpg",
+      "sha256": "4f3190cfe87022328579e2fb7b399f1b2f7834f1c2ba3f437da5febb89a3ec3d",
+      "width": 256,
+      "height": 256,
+      "markers": [
+        224,
+        219,
+        219,
+        192,
+        196,
+        196,
+        196,
+        196,
+        218,
+        217
+      ],
+      "orientations": [],
+      "trailingByteCount": 0,
+      "admitted": true
+    },
+    {
+      "path": "img/grandmas3.jpg",
+      "sha256": "23429d96f217b50247b88948194a21e1414b4eefa974fd7d6a57f1f078fe55f8",
+      "width": 256,
+      "height": 256,
+      "markers": [
+        224,
+        219,
+        219,
+        192,
+        196,
+        196,
+        196,
+        196,
+        218,
+        217
+      ],
+      "orientations": [],
+      "trailingByteCount": 0,
+      "admitted": true
+    },
+    {
+      "path": "img/heavenRing1.jpg",
+      "sha256": "243f06d0d950e42dc29448b599cd6d77256938a8f912904452c72574cc483dd2",
+      "width": 128,
+      "height": 128,
+      "markers": [
+        224,
+        219,
+        219,
+        192,
+        196,
+        196,
+        196,
+        196,
+        218,
+        217
+      ],
+      "orientations": [],
+      "trailingByteCount": 2598,
+      "admitted": true
+    },
+    {
+      "path": "img/heavenRing2.jpg",
+      "sha256": "8abeba031054160f80f6326210640646cbecdcc3eef535cd1037cc28dfced6f3",
+      "width": 128,
+      "height": 128,
+      "markers": [
+        224,
+        219,
+        219,
+        192,
+        196,
+        196,
+        196,
+        196,
+        218,
+        217
+      ],
+      "orientations": [],
+      "trailingByteCount": 2416,
+      "admitted": true
+    },
+    {
+      "path": "img/mapBG.jpg",
+      "sha256": "f41f506bfa09cb4f0be14dd6be25c5832de83507834ae6512e6f120729aa5dcc",
+      "width": 600,
+      "height": 600,
+      "markers": [
+        224,
+        219,
+        219,
+        192,
+        196,
+        196,
+        196,
+        196,
+        218,
+        217
+      ],
+      "orientations": [],
+      "trailingByteCount": 0,
+      "admitted": true
+    },
+    {
+      "path": "img/prestigeBar.jpg",
+      "sha256": "024a6fde8486b34a31c8eeeb15cc11da68e8d093dc79968a7588c828c679db1d",
+      "width": 128,
+      "height": 8,
+      "markers": [
+        225,
+        236,
+        225,
+        238,
+        219,
+        192,
+        196,
+        218,
+        217
+      ],
+      "orientations": [],
+      "trailingByteCount": 0,
+      "admitted": true
+    },
+    {
+      "path": "img/snow.jpg",
+      "sha256": "9b449e64b0fe1a33f017c657274a893cd8515e4302de067f5ce0bbc025439881",
+      "width": 512,
+      "height": 512,
+      "markers": [
+        224,
+        219,
+        219,
+        192,
+        196,
+        196,
+        196,
+        196,
+        218,
+        217
+      ],
+      "orientations": [],
+      "trailingByteCount": 0,
+      "admitted": true
+    },
+    {
+      "path": "img/snow2.jpg",
+      "sha256": "08ab1d757ffea3a67e98ad02153df7d4e63f6649007e0b664ef8b4755d9a00ec",
+      "width": 512,
+      "height": 512,
+      "markers": [
+        224,
+        219,
+        219,
+        192,
+        196,
+        196,
+        196,
+        196,
+        218,
+        217
+      ],
+      "orientations": [],
+      "trailingByteCount": 0,
+      "admitted": true
+    },
+    {
+      "path": "img/sparkles.jpg",
+      "sha256": "adc08d152d694e9e242c275d789a231275289ae1085801586a424b0df5574fe7",
+      "width": 2048,
+      "height": 128,
+      "markers": [
+        225,
+        236,
+        225,
+        238,
+        219,
+        192,
+        196,
+        218,
+        217
+      ],
+      "orientations": [],
+      "trailingByteCount": 0,
+      "admitted": true
+    },
+    {
+      "path": "img/starbg.jpg",
+      "sha256": "a7872fec4747584221c9eb3d75ed7f88d9d1a9c49bfecd52a744040c1ecf0d5c",
+      "width": 1024,
+      "height": 1024,
+      "markers": [
+        225,
+        236,
+        225,
+        238,
+        219,
+        192,
+        196,
+        218,
+        217
+      ],
+      "orientations": [],
+      "trailingByteCount": 0,
+      "admitted": true
+    },
+    {
+      "path": "img/storeTile.jpg",
+      "sha256": "1bc44d2caa43751079c4f03b2c9da0c7d3cd75a8ea4461545b14991cd23ecf62",
+      "width": 300,
+      "height": 256,
+      "markers": [
+        224,
+        219,
+        219,
+        192,
+        196,
+        196,
+        196,
+        196,
+        218,
+        217
+      ],
+      "orientations": [],
+      "trailingByteCount": 0,
+      "admitted": true
+    },
+    {
+      "path": "img/upgradeHighlight.jpg",
+      "sha256": "7dffee8b7a028c112ef5e6bc441e4a58d9a5298c749090a4a3a322235ff8cd2d",
+      "width": 96,
+      "height": 96,
+      "markers": [
+        225,
+        236,
+        225,
+        238,
+        219,
+        192,
+        196,
+        218,
+        217
+      ],
+      "orientations": [],
+      "trailingByteCount": 0,
+      "admitted": true
+    }
+  ],
+  "byteParserVerified": false,
+  "decoderRefinementVerified": false,
+  "originCleanRefinementVerified": false
+}

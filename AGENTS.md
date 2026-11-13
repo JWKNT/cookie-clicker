@@ -27,3 +27,20 @@ Describe the style as ASD-STE100-guided. Do not claim full compliance without a 
   its exit code.
 - A new mod build follows `source/README.md`. The Tools page, the manifest and the release must name the same
   version.
+
+## The audit folders
+
+`lean/`, `model/`, `tools/`, most files of `tests/`, `paper/AUDIT.md` and the report
+`paper/cookie-clicker-optimal-play.tex` are the audit of October 2026. Read `lean/README.md` and
+`model/README.md` before a change there.
+
+- Every committed file is public at `jehlp.net/cookie-clicker/`. Do not commit a file of the game: no script,
+  page, style sheet, image or sound, and no complete parsed form of them. `.gitignore` names two such
+  records. `THIRD-PARTY.md` says what the repository holds from the game and from other projects.
+- A witness file must not hold the home folder of a machine. `tests/publication.test.mjs` checks this.
+  `model/native-engine.mjs` writes the engine path with `~`.
+- Many records hold SHA-256 digests of other files. After a change to a file, look for its old digest in
+  `model/`, `lean/` and `tests/`. For the veil records, run `node tools/audit-veil-cover.mjs --check`.
+- A test that needs an installed copy of Cookie Clicker 2.053 for Steam must skip itself on a machine without
+  the game. `npm test` must pass there.
+- `python3 lean/check.py --engine` needs the game. `lake build` in `lean/` does not.

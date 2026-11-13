@@ -1,0 +1,3881 @@
+{
+  "schema_version": 1,
+  "game_version": "2.053",
+  "status": "static_inventory_not_runtime_validated",
+  "source": {
+    "file": "main.js",
+    "sha256": "a8813ec2ee97edf5ebff6a3ce2037dcb65c08abd13c123bb92efda89b06ef4f7"
+  },
+  "extraction": {
+    "method": "Parse JavaScript with Acorn. Read literal achievement names and subsequent Game.last.pool assignments in declaration order. Normalize the default empty pool to normal. Do not execute the game.",
+    "literal_identifiers": 642,
+    "normal_literal_identifiers": 621,
+    "shadow_identifiers": 17,
+    "unused_dungeon_identifiers": 4,
+    "numeric_game_ids_assigned": false,
+    "runtime_validated": false
+  },
+  "unresolved_dynamic_identifiers": [
+    {
+      "source_line": 13101,
+      "definition": "CpsAchievement",
+      "name_expression": "'When this baby hits '+Beautify(10000000000000*60*60)+' cookies per hour'",
+      "pool": "normal",
+      "reason": "The primary name depends on the runtime Beautify function. Capture it from the verified game initialization before asserting complete coverage."
+    }
+  ],
+  "achievements": [
+    {
+      "name": "Wake and bake",
+      "pool": "normal",
+      "definition": "BankAchievement",
+      "line": 12698
+    },
+    {
+      "name": "Making some dough",
+      "pool": "normal",
+      "definition": "BankAchievement",
+      "line": 12699
+    },
+    {
+      "name": "So baked right now",
+      "pool": "normal",
+      "definition": "BankAchievement",
+      "line": 12700
+    },
+    {
+      "name": "Fledgling bakery",
+      "pool": "normal",
+      "definition": "BankAchievement",
+      "line": 12701
+    },
+    {
+      "name": "Affluent bakery",
+      "pool": "normal",
+      "definition": "BankAchievement",
+      "line": 12702
+    },
+    {
+      "name": "World-famous bakery",
+      "pool": "normal",
+      "definition": "BankAchievement",
+      "line": 12703
+    },
+    {
+      "name": "Cosmic bakery",
+      "pool": "normal",
+      "definition": "BankAchievement",
+      "line": 12704
+    },
+    {
+      "name": "Galactic bakery",
+      "pool": "normal",
+      "definition": "BankAchievement",
+      "line": 12705
+    },
+    {
+      "name": "Universal bakery",
+      "pool": "normal",
+      "definition": "BankAchievement",
+      "line": 12706
+    },
+    {
+      "name": "Timeless bakery",
+      "pool": "normal",
+      "definition": "BankAchievement",
+      "line": 12707
+    },
+    {
+      "name": "Infinite bakery",
+      "pool": "normal",
+      "definition": "BankAchievement",
+      "line": 12708
+    },
+    {
+      "name": "Immortal bakery",
+      "pool": "normal",
+      "definition": "BankAchievement",
+      "line": 12709
+    },
+    {
+      "name": "Don't stop me now",
+      "pool": "normal",
+      "definition": "BankAchievement",
+      "line": 12710
+    },
+    {
+      "name": "You can stop now",
+      "pool": "normal",
+      "definition": "BankAchievement",
+      "line": 12711
+    },
+    {
+      "name": "Cookies all the way down",
+      "pool": "normal",
+      "definition": "BankAchievement",
+      "line": 12712
+    },
+    {
+      "name": "Overdose",
+      "pool": "normal",
+      "definition": "BankAchievement",
+      "line": 12713
+    },
+    {
+      "name": "Casual baking",
+      "pool": "normal",
+      "definition": "CpsAchievement",
+      "line": 12715
+    },
+    {
+      "name": "Hardcore baking",
+      "pool": "normal",
+      "definition": "CpsAchievement",
+      "line": 12716
+    },
+    {
+      "name": "Steady tasty stream",
+      "pool": "normal",
+      "definition": "CpsAchievement",
+      "line": 12717
+    },
+    {
+      "name": "Cookie monster",
+      "pool": "normal",
+      "definition": "CpsAchievement",
+      "line": 12718
+    },
+    {
+      "name": "Mass producer",
+      "pool": "normal",
+      "definition": "CpsAchievement",
+      "line": 12719
+    },
+    {
+      "name": "Cookie vortex",
+      "pool": "normal",
+      "definition": "CpsAchievement",
+      "line": 12720
+    },
+    {
+      "name": "Cookie pulsar",
+      "pool": "normal",
+      "definition": "CpsAchievement",
+      "line": 12721
+    },
+    {
+      "name": "Cookie quasar",
+      "pool": "normal",
+      "definition": "CpsAchievement",
+      "line": 12722
+    },
+    {
+      "name": "Oh hey, you're still here",
+      "pool": "normal",
+      "definition": "CpsAchievement",
+      "line": 12723
+    },
+    {
+      "name": "Let's never bake again",
+      "pool": "normal",
+      "definition": "CpsAchievement",
+      "line": 12724
+    },
+    {
+      "name": "Sacrifice",
+      "pool": "normal",
+      "definition": "Achievement",
+      "line": 12727
+    },
+    {
+      "name": "Oblivion",
+      "pool": "normal",
+      "definition": "Achievement",
+      "line": 12728
+    },
+    {
+      "name": "From scratch",
+      "pool": "normal",
+      "definition": "Achievement",
+      "line": 12729
+    },
+    {
+      "name": "Neverclick",
+      "pool": "normal",
+      "definition": "Achievement",
+      "line": 12732
+    },
+    {
+      "name": "Clicktastic",
+      "pool": "normal",
+      "definition": "Achievement",
+      "line": 12734
+    },
+    {
+      "name": "Clickathlon",
+      "pool": "normal",
+      "definition": "Achievement",
+      "line": 12735
+    },
+    {
+      "name": "Clickolympics",
+      "pool": "normal",
+      "definition": "Achievement",
+      "line": 12736
+    },
+    {
+      "name": "Clickorama",
+      "pool": "normal",
+      "definition": "Achievement",
+      "line": 12737
+    },
+    {
+      "name": "Click",
+      "pool": "normal",
+      "definition": "Achievement",
+      "line": 12740
+    },
+    {
+      "name": "Double-click",
+      "pool": "normal",
+      "definition": "Achievement",
+      "line": 12741
+    },
+    {
+      "name": "Mouse wheel",
+      "pool": "normal",
+      "definition": "Achievement",
+      "line": 12742
+    },
+    {
+      "name": "Of Mice and Men",
+      "pool": "normal",
+      "definition": "Achievement",
+      "line": 12743
+    },
+    {
+      "name": "The Digital",
+      "pool": "normal",
+      "definition": "Achievement",
+      "line": 12744
+    },
+    {
+      "name": "Just wrong",
+      "pool": "normal",
+      "definition": "Achievement",
+      "line": 12747
+    },
+    {
+      "name": "Grandma's cookies",
+      "pool": "normal",
+      "definition": "TieredAchievement",
+      "line": 12749
+    },
+    {
+      "name": "Sloppy kisses",
+      "pool": "normal",
+      "definition": "TieredAchievement",
+      "line": 12750
+    },
+    {
+      "name": "Retirement home",
+      "pool": "normal",
+      "definition": "TieredAchievement",
+      "line": 12751
+    },
+    {
+      "name": "Bought the farm",
+      "pool": "normal",
+      "definition": "TieredAchievement",
+      "line": 12754
+    },
+    {
+      "name": "Reap what you sow",
+      "pool": "normal",
+      "definition": "TieredAchievement",
+      "line": 12755
+    },
+    {
+      "name": "Farm ill",
+      "pool": "normal",
+      "definition": "TieredAchievement",
+      "line": 12756
+    },
+    {
+      "name": "Production chain",
+      "pool": "normal",
+      "definition": "TieredAchievement",
+      "line": 12759
+    },
+    {
+      "name": "Industrial revolution",
+      "pool": "normal",
+      "definition": "TieredAchievement",
+      "line": 12760
+    },
+    {
+      "name": "Global warming",
+      "pool": "normal",
+      "definition": "TieredAchievement",
+      "line": 12761
+    },
+    {
+      "name": "You know the drill",
+      "pool": "normal",
+      "definition": "TieredAchievement",
+      "line": 12764
+    },
+    {
+      "name": "Excavation site",
+      "pool": "normal",
+      "definition": "TieredAchievement",
+      "line": 12765
+    },
+    {
+      "name": "Hollow the planet",
+      "pool": "normal",
+      "definition": "TieredAchievement",
+      "line": 12766
+    },
+    {
+      "name": "Expedition",
+      "pool": "normal",
+      "definition": "TieredAchievement",
+      "line": 12769
+    },
+    {
+      "name": "Galactic highway",
+      "pool": "normal",
+      "definition": "TieredAchievement",
+      "line": 12770
+    },
+    {
+      "name": "Far far away",
+      "pool": "normal",
+      "definition": "TieredAchievement",
+      "line": 12771
+    },
+    {
+      "name": "Transmutation",
+      "pool": "normal",
+      "definition": "TieredAchievement",
+      "line": 12774
+    },
+    {
+      "name": "Transmogrification",
+      "pool": "normal",
+      "definition": "TieredAchievement",
+      "line": 12775
+    },
+    {
+      "name": "Gold member",
+      "pool": "normal",
+      "definition": "TieredAchievement",
+      "line": 12776
+    },
+    {
+      "name": "A whole new world",
+      "pool": "normal",
+      "definition": "TieredAchievement",
+      "line": 12779
+    },
+    {
+      "name": "Now you're thinking",
+      "pool": "normal",
+      "definition": "TieredAchievement",
+      "line": 12780
+    },
+    {
+      "name": "Dimensional shift",
+      "pool": "normal",
+      "definition": "TieredAchievement",
+      "line": 12781
+    },
+    {
+      "name": "Time warp",
+      "pool": "normal",
+      "definition": "TieredAchievement",
+      "line": 12784
+    },
+    {
+      "name": "Alternate timeline",
+      "pool": "normal",
+      "definition": "TieredAchievement",
+      "line": 12785
+    },
+    {
+      "name": "Rewriting history",
+      "pool": "normal",
+      "definition": "TieredAchievement",
+      "line": 12786
+    },
+    {
+      "name": "One with everything",
+      "pool": "normal",
+      "definition": "Achievement",
+      "line": 12790
+    },
+    {
+      "name": "Mathematician",
+      "pool": "normal",
+      "definition": "Achievement",
+      "line": 12791
+    },
+    {
+      "name": "Base 10",
+      "pool": "normal",
+      "definition": "Achievement",
+      "line": 12792
+    },
+    {
+      "name": "Golden cookie",
+      "pool": "normal",
+      "definition": "Achievement",
+      "line": 12795
+    },
+    {
+      "name": "Lucky cookie",
+      "pool": "normal",
+      "definition": "Achievement",
+      "line": 12796
+    },
+    {
+      "name": "A stroke of luck",
+      "pool": "normal",
+      "definition": "Achievement",
+      "line": 12797
+    },
+    {
+      "name": "Cheated cookies taste awful",
+      "pool": "shadow",
+      "definition": "Achievement",
+      "line": 12800
+    },
+    {
+      "name": "Uncanny clicker",
+      "pool": "normal",
+      "definition": "Achievement",
+      "line": 12802
+    },
+    {
+      "name": "Builder",
+      "pool": "normal",
+      "definition": "Achievement",
+      "line": 12805
+    },
+    {
+      "name": "Architect",
+      "pool": "normal",
+      "definition": "Achievement",
+      "line": 12806
+    },
+    {
+      "name": "Enhancer",
+      "pool": "normal",
+      "definition": "Achievement",
+      "line": 12808
+    },
+    {
+      "name": "Augmenter",
+      "pool": "normal",
+      "definition": "Achievement",
+      "line": 12809
+    },
+    {
+      "name": "Cookie-dunker",
+      "pool": "normal",
+      "definition": "Achievement",
+      "line": 12812
+    },
+    {
+      "name": "Fortune",
+      "pool": "normal",
+      "definition": "Achievement",
+      "line": 12815
+    },
+    {
+      "name": "True Neverclick",
+      "pool": "shadow",
+      "definition": "Achievement",
+      "line": 12817
+    },
+    {
+      "name": "Elder nap",
+      "pool": "normal",
+      "definition": "Achievement",
+      "line": 12820
+    },
+    {
+      "name": "Elder slumber",
+      "pool": "normal",
+      "definition": "Achievement",
+      "line": 12821
+    },
+    {
+      "name": "Elder",
+      "pool": "normal",
+      "definition": "Achievement",
+      "line": 12824
+    },
+    {
+      "name": "Elder calm",
+      "pool": "normal",
+      "definition": "Achievement",
+      "line": 12827
+    },
+    {
+      "name": "Engineer",
+      "pool": "normal",
+      "definition": "Achievement",
+      "line": 12830
+    },
+    {
+      "name": "Leprechaun",
+      "pool": "normal",
+      "definition": "Achievement",
+      "line": 12833
+    },
+    {
+      "name": "Black cat's paw",
+      "pool": "normal",
+      "definition": "Achievement",
+      "line": 12834
+    },
+    {
+      "name": "Nihilism",
+      "pool": "normal",
+      "definition": "Achievement",
+      "line": 12837
+    },
+    {
+      "name": "Antibatter",
+      "pool": "normal",
+      "definition": "TieredAchievement",
+      "line": 12840
+    },
+    {
+      "name": "Quirky quarks",
+      "pool": "normal",
+      "definition": "TieredAchievement",
+      "line": 12841
+    },
+    {
+      "name": "It does matter!",
+      "pool": "normal",
+      "definition": "TieredAchievement",
+      "line": 12842
+    },
+    {
+      "name": "Upgrader",
+      "pool": "normal",
+      "definition": "Achievement",
+      "line": 12845
+    },
+    {
+      "name": "Centennial",
+      "pool": "normal",
+      "definition": "Achievement",
+      "line": 12848
+    },
+    {
+      "name": "Hardcore",
+      "pool": "normal",
+      "definition": "Achievement",
+      "line": 12851
+    },
+    {
+      "name": "Speed baking I",
+      "pool": "shadow",
+      "definition": "Achievement",
+      "line": 12854
+    },
+    {
+      "name": "Speed baking II",
+      "pool": "shadow",
+      "definition": "Achievement",
+      "line": 12855
+    },
+    {
+      "name": "Speed baking III",
+      "pool": "shadow",
+      "definition": "Achievement",
+      "line": 12856
+    },
+    {
+      "name": "Getting even with the oven",
+      "pool": "dungeon",
+      "definition": "Achievement",
+      "line": 12860
+    },
+    {
+      "name": "Now this is pod-smashing",
+      "pool": "dungeon",
+      "definition": "Achievement",
+      "line": 12861
+    },
+    {
+      "name": "Chirped out",
+      "pool": "dungeon",
+      "definition": "Achievement",
+      "line": 12862
+    },
+    {
+      "name": "Follow the white rabbit",
+      "pool": "dungeon",
+      "definition": "Achievement",
+      "line": 12863
+    },
+    {
+      "name": "Clickasmic",
+      "pool": "normal",
+      "definition": "Achievement",
+      "line": 12866
+    },
+    {
+      "name": "Friend of the ancients",
+      "pool": "normal",
+      "definition": "TieredAchievement",
+      "line": 12869
+    },
+    {
+      "name": "Ruler of the ancients",
+      "pool": "normal",
+      "definition": "TieredAchievement",
+      "line": 12870
+    },
+    {
+      "name": "Wholesome",
+      "pool": "normal",
+      "definition": "Achievement",
+      "line": 12873
+    },
+    {
+      "name": "Just plain lucky",
+      "pool": "shadow",
+      "definition": "Achievement",
+      "line": 12876
+    },
+    {
+      "name": "Itchscratcher",
+      "pool": "normal",
+      "definition": "Achievement",
+      "line": 12879
+    },
+    {
+      "name": "Wrinklesquisher",
+      "pool": "normal",
+      "definition": "Achievement",
+      "line": 12880
+    },
+    {
+      "name": "Moistburster",
+      "pool": "normal",
+      "definition": "Achievement",
+      "line": 12881
+    },
+    {
+      "name": "Spooky cookies",
+      "pool": "normal",
+      "definition": "Achievement",
+      "line": 12884
+    },
+    {
+      "name": "Coming to town",
+      "pool": "normal",
+      "definition": "Achievement",
+      "line": 12887
+    },
+    {
+      "name": "All hail Santa",
+      "pool": "normal",
+      "definition": "Achievement",
+      "line": 12888
+    },
+    {
+      "name": "Let it snow",
+      "pool": "normal",
+      "definition": "Achievement",
+      "line": 12889
+    },
+    {
+      "name": "Oh deer",
+      "pool": "normal",
+      "definition": "Achievement",
+      "line": 12890
+    },
+    {
+      "name": "Sleigh of hand",
+      "pool": "normal",
+      "definition": "Achievement",
+      "line": 12891
+    },
+    {
+      "name": "Reindeer sleigher",
+      "pool": "normal",
+      "definition": "Achievement",
+      "line": 12892
+    },
+    {
+      "name": "Perfected agriculture",
+      "pool": "normal",
+      "definition": "TieredAchievement",
+      "line": 12895
+    },
+    {
+      "name": "Ultimate automation",
+      "pool": "normal",
+      "definition": "TieredAchievement",
+      "line": 12897
+    },
+    {
+      "name": "Can you dig it",
+      "pool": "normal",
+      "definition": "TieredAchievement",
+      "line": 12899
+    },
+    {
+      "name": "Type II civilization",
+      "pool": "normal",
+      "definition": "TieredAchievement",
+      "line": 12901
+    },
+    {
+      "name": "Gild wars",
+      "pool": "normal",
+      "definition": "TieredAchievement",
+      "line": 12903
+    },
+    {
+      "name": "Brain-split",
+      "pool": "normal",
+      "definition": "TieredAchievement",
+      "line": 12905
+    },
+    {
+      "name": "Time duke",
+      "pool": "normal",
+      "definition": "TieredAchievement",
+      "line": 12907
+    },
+    {
+      "name": "Molecular maestro",
+      "pool": "normal",
+      "definition": "TieredAchievement",
+      "line": 12909
+    },
+    {
+      "name": "Lone photon",
+      "pool": "normal",
+      "definition": "TieredAchievement",
+      "line": 12912
+    },
+    {
+      "name": "Dazzling glimmer",
+      "pool": "normal",
+      "definition": "TieredAchievement",
+      "line": 12913
+    },
+    {
+      "name": "Blinding flash",
+      "pool": "normal",
+      "definition": "TieredAchievement",
+      "line": 12914
+    },
+    {
+      "name": "Unending glow",
+      "pool": "normal",
+      "definition": "TieredAchievement",
+      "line": 12915
+    },
+    {
+      "name": "Lord of Constructs",
+      "pool": "normal",
+      "definition": "Achievement",
+      "line": 12918
+    },
+    {
+      "name": "Lord of Progress",
+      "pool": "normal",
+      "definition": "Achievement",
+      "line": 12920
+    },
+    {
+      "name": "Bicentennial",
+      "pool": "normal",
+      "definition": "Achievement",
+      "line": 12922
+    },
+    {
+      "name": "Lovely cookies",
+      "pool": "normal",
+      "definition": "Achievement",
+      "line": 12925
+    },
+    {
+      "name": "Centennial and a half",
+      "pool": "normal",
+      "definition": "Achievement",
+      "line": 12928
+    },
+    {
+      "name": "Tiny cookie",
+      "pool": "normal",
+      "definition": "Achievement",
+      "line": 12931
+    },
+    {
+      "name": "You win a cookie",
+      "pool": "normal",
+      "definition": "Achievement",
+      "line": 12934
+    },
+    {
+      "name": "Click delegator",
+      "pool": "normal",
+      "definition": "ProductionAchievement",
+      "line": 12937
+    },
+    {
+      "name": "Gushing grannies",
+      "pool": "normal",
+      "definition": "ProductionAchievement",
+      "line": 12939
+    },
+    {
+      "name": "I hate manure",
+      "pool": "normal",
+      "definition": "ProductionAchievement",
+      "line": 12941
+    },
+    {
+      "name": "Never dig down",
+      "pool": "normal",
+      "definition": "ProductionAchievement",
+      "line": 12943
+    },
+    {
+      "name": "The incredible machine",
+      "pool": "normal",
+      "definition": "ProductionAchievement",
+      "line": 12945
+    },
+    {
+      "name": "And beyond",
+      "pool": "normal",
+      "definition": "ProductionAchievement",
+      "line": 12947
+    },
+    {
+      "name": "Magnum Opus",
+      "pool": "normal",
+      "definition": "ProductionAchievement",
+      "line": 12949
+    },
+    {
+      "name": "With strange eons",
+      "pool": "normal",
+      "definition": "ProductionAchievement",
+      "line": 12951
+    },
+    {
+      "name": "Spacetime jigamaroo",
+      "pool": "normal",
+      "definition": "ProductionAchievement",
+      "line": 12953
+    },
+    {
+      "name": "Supermassive",
+      "pool": "normal",
+      "definition": "ProductionAchievement",
+      "line": 12955
+    },
+    {
+      "name": "Praise the sun",
+      "pool": "normal",
+      "definition": "ProductionAchievement",
+      "line": 12957
+    },
+    {
+      "name": "Clickageddon",
+      "pool": "normal",
+      "definition": "Achievement",
+      "line": 12961
+    },
+    {
+      "name": "Clicknarok",
+      "pool": "normal",
+      "definition": "Achievement",
+      "line": 12962
+    },
+    {
+      "name": "Extreme polydactyly",
+      "pool": "normal",
+      "definition": "Achievement",
+      "line": 12965
+    },
+    {
+      "name": "Dr. T",
+      "pool": "normal",
+      "definition": "Achievement",
+      "line": 12966
+    },
+    {
+      "name": "The old never bothered me anyway",
+      "pool": "normal",
+      "definition": "TieredAchievement",
+      "line": 12968
+    },
+    {
+      "name": "Homegrown",
+      "pool": "normal",
+      "definition": "TieredAchievement",
+      "line": 12969
+    },
+    {
+      "name": "Technocracy",
+      "pool": "normal",
+      "definition": "TieredAchievement",
+      "line": 12970
+    },
+    {
+      "name": "The center of the Earth",
+      "pool": "normal",
+      "definition": "TieredAchievement",
+      "line": 12971
+    },
+    {
+      "name": "We come in peace",
+      "pool": "normal",
+      "definition": "TieredAchievement",
+      "line": 12972
+    },
+    {
+      "name": "The secrets of the universe",
+      "pool": "normal",
+      "definition": "TieredAchievement",
+      "line": 12973
+    },
+    {
+      "name": "Realm of the Mad God",
+      "pool": "normal",
+      "definition": "TieredAchievement",
+      "line": 12974
+    },
+    {
+      "name": "Forever and ever",
+      "pool": "normal",
+      "definition": "TieredAchievement",
+      "line": 12975
+    },
+    {
+      "name": "Walk the planck",
+      "pool": "normal",
+      "definition": "TieredAchievement",
+      "line": 12976
+    },
+    {
+      "name": "Rise and shine",
+      "pool": "normal",
+      "definition": "TieredAchievement",
+      "line": 12977
+    },
+    {
+      "name": "God complex",
+      "pool": "shadow",
+      "definition": "Achievement",
+      "line": 12980
+    },
+    {
+      "name": "Third-party",
+      "pool": "shadow",
+      "definition": "Achievement",
+      "line": 12981
+    },
+    {
+      "name": "Dematerialize",
+      "pool": "normal",
+      "definition": "Achievement",
+      "line": 12984
+    },
+    {
+      "name": "Nil zero zilch",
+      "pool": "normal",
+      "definition": "Achievement",
+      "line": 12985
+    },
+    {
+      "name": "Transcendence",
+      "pool": "normal",
+      "definition": "Achievement",
+      "line": 12986
+    },
+    {
+      "name": "Obliterate",
+      "pool": "normal",
+      "definition": "Achievement",
+      "line": 12987
+    },
+    {
+      "name": "Negative void",
+      "pool": "normal",
+      "definition": "Achievement",
+      "line": 12988
+    },
+    {
+      "name": "The hunt is on",
+      "pool": "normal",
+      "definition": "Achievement",
+      "line": 12991
+    },
+    {
+      "name": "Egging on",
+      "pool": "normal",
+      "definition": "Achievement",
+      "line": 12992
+    },
+    {
+      "name": "Mass Easteria",
+      "pool": "normal",
+      "definition": "Achievement",
+      "line": 12993
+    },
+    {
+      "name": "Hide & seek champion",
+      "pool": "normal",
+      "definition": "Achievement",
+      "line": 12994
+    },
+    {
+      "name": "What's in a name",
+      "pool": "normal",
+      "definition": "Achievement",
+      "line": 12997
+    },
+    {
+      "name": "Pretty penny",
+      "pool": "normal",
+      "definition": "TieredAchievement",
+      "line": 13001
+    },
+    {
+      "name": "Fit the bill",
+      "pool": "normal",
+      "definition": "TieredAchievement",
+      "line": 13002
+    },
+    {
+      "name": "A loan in the dark",
+      "pool": "normal",
+      "definition": "TieredAchievement",
+      "line": 13003
+    },
+    {
+      "name": "Need for greed",
+      "pool": "normal",
+      "definition": "TieredAchievement",
+      "line": 13004
+    },
+    {
+      "name": "It's the economy, stupid",
+      "pool": "normal",
+      "definition": "TieredAchievement",
+      "line": 13005
+    },
+    {
+      "name": "Your time to shrine",
+      "pool": "normal",
+      "definition": "TieredAchievement",
+      "line": 13007
+    },
+    {
+      "name": "Shady sect",
+      "pool": "normal",
+      "definition": "TieredAchievement",
+      "line": 13008
+    },
+    {
+      "name": "New-age cult",
+      "pool": "normal",
+      "definition": "TieredAchievement",
+      "line": 13009
+    },
+    {
+      "name": "Organized religion",
+      "pool": "normal",
+      "definition": "TieredAchievement",
+      "line": 13010
+    },
+    {
+      "name": "Fanaticism",
+      "pool": "normal",
+      "definition": "TieredAchievement",
+      "line": 13011
+    },
+    {
+      "name": "Bewitched",
+      "pool": "normal",
+      "definition": "TieredAchievement",
+      "line": 13013
+    },
+    {
+      "name": "The sorcerer's apprentice",
+      "pool": "normal",
+      "definition": "TieredAchievement",
+      "line": 13014
+    },
+    {
+      "name": "Charms and enchantments",
+      "pool": "normal",
+      "definition": "TieredAchievement",
+      "line": 13015
+    },
+    {
+      "name": "Curses and maledictions",
+      "pool": "normal",
+      "definition": "TieredAchievement",
+      "line": 13016
+    },
+    {
+      "name": "Magic kingdom",
+      "pool": "normal",
+      "definition": "TieredAchievement",
+      "line": 13017
+    },
+    {
+      "name": "Vested interest",
+      "pool": "normal",
+      "definition": "ProductionAchievement",
+      "line": 13020
+    },
+    {
+      "name": "New world order",
+      "pool": "normal",
+      "definition": "ProductionAchievement",
+      "line": 13022
+    },
+    {
+      "name": "Hocus pocus",
+      "pool": "normal",
+      "definition": "ProductionAchievement",
+      "line": 13024
+    },
+    {
+      "name": "Finger clickin' good",
+      "pool": "normal",
+      "definition": "ProductionAchievement",
+      "line": 13029
+    },
+    {
+      "name": "Panic at the bingo",
+      "pool": "normal",
+      "definition": "ProductionAchievement",
+      "line": 13031
+    },
+    {
+      "name": "Rake in the dough",
+      "pool": "normal",
+      "definition": "ProductionAchievement",
+      "line": 13033
+    },
+    {
+      "name": "Quarry on",
+      "pool": "normal",
+      "definition": "ProductionAchievement",
+      "line": 13035
+    },
+    {
+      "name": "Yes I love technology",
+      "pool": "normal",
+      "definition": "ProductionAchievement",
+      "line": 13037
+    },
+    {
+      "name": "Paid in full",
+      "pool": "normal",
+      "definition": "ProductionAchievement",
+      "line": 13039
+    },
+    {
+      "name": "Church of Cookiology",
+      "pool": "normal",
+      "definition": "ProductionAchievement",
+      "line": 13041
+    },
+    {
+      "name": "Too many rabbits, not enough hats",
+      "pool": "normal",
+      "definition": "ProductionAchievement",
+      "line": 13043
+    },
+    {
+      "name": "The most precious cargo",
+      "pool": "normal",
+      "definition": "ProductionAchievement",
+      "line": 13045
+    },
+    {
+      "name": "The Aureate",
+      "pool": "normal",
+      "definition": "ProductionAchievement",
+      "line": 13047
+    },
+    {
+      "name": "Ever more hideous",
+      "pool": "normal",
+      "definition": "ProductionAchievement",
+      "line": 13049
+    },
+    {
+      "name": "Be kind, rewind",
+      "pool": "normal",
+      "definition": "ProductionAchievement",
+      "line": 13051
+    },
+    {
+      "name": "Infinitesimal",
+      "pool": "normal",
+      "definition": "ProductionAchievement",
+      "line": 13053
+    },
+    {
+      "name": "A still more glorious dawn",
+      "pool": "normal",
+      "definition": "ProductionAchievement",
+      "line": 13055
+    },
+    {
+      "name": "Rebirth",
+      "pool": "normal",
+      "definition": "Achievement",
+      "line": 13058
+    },
+    {
+      "name": "Here you go",
+      "pool": "normal",
+      "definition": "Achievement",
+      "line": 13061
+    },
+    {
+      "name": "Resurrection",
+      "pool": "normal",
+      "definition": "Achievement",
+      "line": 13064
+    },
+    {
+      "name": "Reincarnation",
+      "pool": "normal",
+      "definition": "Achievement",
+      "line": 13065
+    },
+    {
+      "name": "Endless cycle",
+      "pool": "shadow",
+      "definition": "Achievement",
+      "line": 13066
+    },
+    {
+      "name": "The agemaster",
+      "pool": "normal",
+      "definition": "TieredAchievement",
+      "line": 13071
+    },
+    {
+      "name": "To oldly go",
+      "pool": "normal",
+      "definition": "TieredAchievement",
+      "line": 13072
+    },
+    {
+      "name": "Gardener extraordinaire",
+      "pool": "normal",
+      "definition": "TieredAchievement",
+      "line": 13074
+    },
+    {
+      "name": "Tectonic ambassador",
+      "pool": "normal",
+      "definition": "TieredAchievement",
+      "line": 13075
+    },
+    {
+      "name": "Rise of the machines",
+      "pool": "normal",
+      "definition": "TieredAchievement",
+      "line": 13076
+    },
+    {
+      "name": "Acquire currency",
+      "pool": "normal",
+      "definition": "TieredAchievement",
+      "line": 13077
+    },
+    {
+      "name": "Zealotry",
+      "pool": "normal",
+      "definition": "TieredAchievement",
+      "line": 13078
+    },
+    {
+      "name": "The wizarding world",
+      "pool": "normal",
+      "definition": "TieredAchievement",
+      "line": 13079
+    },
+    {
+      "name": "Parsec-masher",
+      "pool": "normal",
+      "definition": "TieredAchievement",
+      "line": 13080
+    },
+    {
+      "name": "The work of a lifetime",
+      "pool": "normal",
+      "definition": "TieredAchievement",
+      "line": 13081
+    },
+    {
+      "name": "A place lost in time",
+      "pool": "normal",
+      "definition": "TieredAchievement",
+      "line": 13082
+    },
+    {
+      "name": "Heat death",
+      "pool": "normal",
+      "definition": "TieredAchievement",
+      "line": 13083
+    },
+    {
+      "name": "Microcosm",
+      "pool": "normal",
+      "definition": "TieredAchievement",
+      "line": 13084
+    },
+    {
+      "name": "Bright future",
+      "pool": "normal",
+      "definition": "TieredAchievement",
+      "line": 13085
+    },
+    {
+      "name": "Here be dragon",
+      "pool": "normal",
+      "definition": "Achievement",
+      "line": 13088
+    },
+    {
+      "name": "How?",
+      "pool": "normal",
+      "definition": "BankAchievement",
+      "line": 13090
+    },
+    {
+      "name": "The land of milk and cookies",
+      "pool": "normal",
+      "definition": "BankAchievement",
+      "line": 13091
+    },
+    {
+      "name": "He who controls the cookies controls the universe",
+      "pool": "normal",
+      "definition": "BankAchievement",
+      "line": 13092
+    },
+    {
+      "name": "Tonight on Hoarders",
+      "pool": "normal",
+      "definition": "BankAchievement",
+      "line": 13093
+    },
+    {
+      "name": "Are you gonna eat all that?",
+      "pool": "normal",
+      "definition": "BankAchievement",
+      "line": 13094
+    },
+    {
+      "name": "We're gonna need a bigger bakery",
+      "pool": "normal",
+      "definition": "BankAchievement",
+      "line": 13095
+    },
+    {
+      "name": "In the mouth of madness",
+      "pool": "normal",
+      "definition": "BankAchievement",
+      "line": 13096
+    },
+    {
+      "name": "Brought to you by the letter <div style=\"display:inline-block;background:url(img/money.png);width:16px;height:16px;\"></div>",
+      "pool": "normal",
+      "definition": "BankAchievement",
+      "line": 13097
+    },
+    {
+      "name": "A world filled with cookies",
+      "pool": "normal",
+      "definition": "CpsAchievement",
+      "line": 13100
+    },
+    {
+      "name": "Fast and delicious",
+      "pool": "normal",
+      "definition": "CpsAchievement",
+      "line": 13102
+    },
+    {
+      "name": "Cookiehertz : a really, really tasty hertz",
+      "pool": "normal",
+      "definition": "CpsAchievement",
+      "line": 13103
+    },
+    {
+      "name": "Woops, you solved world hunger",
+      "pool": "normal",
+      "definition": "CpsAchievement",
+      "line": 13104
+    },
+    {
+      "name": "Turbopuns",
+      "pool": "normal",
+      "definition": "CpsAchievement",
+      "line": 13105
+    },
+    {
+      "name": "Faster menner",
+      "pool": "normal",
+      "definition": "CpsAchievement",
+      "line": 13106
+    },
+    {
+      "name": "And yet you're still hungry",
+      "pool": "normal",
+      "definition": "CpsAchievement",
+      "line": 13107
+    },
+    {
+      "name": "The Abakening",
+      "pool": "normal",
+      "definition": "CpsAchievement",
+      "line": 13108
+    },
+    {
+      "name": "There's really no hard limit to how long these achievement names can be and to be quite honest I'm rather curious to see how far we can go.<br>Adolphus W. Green (1844–1917) started as the Principal of the Groton School in 1864. By 1865, he became second assistant librarian at the New York Mercantile Library; from 1867 to 1869, he was promoted to full librarian. From 1869 to 1873, he worked for Evarts, Southmayd & Choate, a law firm co-founded by William M. Evarts, Charles Ferdinand Southmayd and Joseph Hodges Choate. He was admitted to the New York State Bar Association in 1873.<br>Anyway, how's your day been?",
+      "pool": "normal",
+      "definition": "CpsAchievement",
+      "line": 13109
+    },
+    {
+      "name": "Fast",
+      "pool": "normal",
+      "definition": "CpsAchievement",
+      "line": 13110
+    },
+    {
+      "name": "Bicentennial and a half",
+      "pool": "normal",
+      "definition": "Achievement",
+      "line": 13113
+    },
+    {
+      "name": "Tabloid addiction",
+      "pool": "normal",
+      "definition": "Achievement",
+      "line": 13116
+    },
+    {
+      "name": "Clickastrophe",
+      "pool": "normal",
+      "definition": "Achievement",
+      "line": 13119
+    },
+    {
+      "name": "Clickataclysm",
+      "pool": "normal",
+      "definition": "Achievement",
+      "line": 13120
+    },
+    {
+      "name": "Thumbs, phalanges, metacarpals",
+      "pool": "normal",
+      "definition": "Achievement",
+      "line": 13123
+    },
+    {
+      "name": "Polymath",
+      "pool": "normal",
+      "definition": "Achievement",
+      "line": 13126
+    },
+    {
+      "name": "The elder scrolls",
+      "pool": "normal",
+      "definition": "Achievement",
+      "line": 13129
+    },
+    {
+      "name": "To crumbs, you say?",
+      "pool": "normal",
+      "definition": "Achievement",
+      "line": 13132
+    },
+    {
+      "name": "Seedy business",
+      "pool": "normal",
+      "definition": "TieredAchievement",
+      "line": 13134
+    },
+    {
+      "name": "Freak fracking",
+      "pool": "normal",
+      "definition": "TieredAchievement",
+      "line": 13135
+    },
+    {
+      "name": "Modern times",
+      "pool": "normal",
+      "definition": "TieredAchievement",
+      "line": 13136
+    },
+    {
+      "name": "The nerve of war",
+      "pool": "normal",
+      "definition": "TieredAchievement",
+      "line": 13137
+    },
+    {
+      "name": "Wololo",
+      "pool": "normal",
+      "definition": "TieredAchievement",
+      "line": 13138
+    },
+    {
+      "name": "And now for my next trick, I'll need a volunteer from the audience",
+      "pool": "normal",
+      "definition": "TieredAchievement",
+      "line": 13139
+    },
+    {
+      "name": "It's not delivery",
+      "pool": "normal",
+      "definition": "TieredAchievement",
+      "line": 13140
+    },
+    {
+      "name": "Gold, Jerry! Gold!",
+      "pool": "normal",
+      "definition": "TieredAchievement",
+      "line": 13141
+    },
+    {
+      "name": "Forbidden zone",
+      "pool": "normal",
+      "definition": "TieredAchievement",
+      "line": 13142
+    },
+    {
+      "name": "cookie clicker forever and forever a hundred years cookie clicker, all day long forever, forever a hundred times, over and over cookie clicker adventures dot com",
+      "pool": "normal",
+      "definition": "TieredAchievement",
+      "line": 13143
+    },
+    {
+      "name": "Scientists baffled everywhere",
+      "pool": "normal",
+      "definition": "TieredAchievement",
+      "line": 13144
+    },
+    {
+      "name": "Harmony of the spheres",
+      "pool": "normal",
+      "definition": "TieredAchievement",
+      "line": 13145
+    },
+    {
+      "name": "Last Chance to See",
+      "pool": "shadow",
+      "definition": "Achievement",
+      "line": 13148
+    },
+    {
+      "name": "Early bird",
+      "pool": "normal",
+      "definition": "Achievement",
+      "line": 13151
+    },
+    {
+      "name": "Fading luck",
+      "pool": "normal",
+      "definition": "Achievement",
+      "line": 13152
+    },
+    {
+      "name": "Eldeer",
+      "pool": "normal",
+      "definition": "Achievement",
+      "line": 13155
+    },
+    {
+      "name": "Dude, sweet",
+      "pool": "normal",
+      "definition": "Achievement",
+      "line": 13158
+    },
+    {
+      "name": "Sugar rush",
+      "pool": "normal",
+      "definition": "Achievement",
+      "line": 13159
+    },
+    {
+      "name": "Year's worth of cavities",
+      "pool": "normal",
+      "definition": "Achievement",
+      "line": 13160
+    },
+    {
+      "name": "Hand-picked",
+      "pool": "normal",
+      "definition": "Achievement",
+      "line": 13161
+    },
+    {
+      "name": "Sugar sugar",
+      "pool": "normal",
+      "definition": "Achievement",
+      "line": 13162
+    },
+    {
+      "name": "All-natural cane sugar",
+      "pool": "shadow",
+      "definition": "Achievement",
+      "line": 13163
+    },
+    {
+      "name": "Sweetmeats",
+      "pool": "normal",
+      "definition": "Achievement",
+      "line": 13164
+    },
+    {
+      "name": "Tricentennial",
+      "pool": "normal",
+      "definition": "Achievement",
+      "line": 13167
+    },
+    {
+      "name": "Knead for speed",
+      "pool": "normal",
+      "definition": "CpsAchievement",
+      "line": 13169
+    },
+    {
+      "name": "Well the cookies start coming and they don't stop coming",
+      "pool": "normal",
+      "definition": "CpsAchievement",
+      "line": 13170
+    },
+    {
+      "name": "I don't know if you've noticed but all these icons are very slightly off-center",
+      "pool": "normal",
+      "definition": "CpsAchievement",
+      "line": 13171
+    },
+    {
+      "name": "The proof of the cookie is in the baking",
+      "pool": "normal",
+      "definition": "CpsAchievement",
+      "line": 13172
+    },
+    {
+      "name": "If it's worth doing, it's worth overdoing",
+      "pool": "normal",
+      "definition": "CpsAchievement",
+      "line": 13173
+    },
+    {
+      "name": "The dreams in which I'm baking are the best I've ever had",
+      "pool": "normal",
+      "definition": "BankAchievement",
+      "line": 13175
+    },
+    {
+      "name": "Set for life",
+      "pool": "normal",
+      "definition": "BankAchievement",
+      "line": 13176
+    },
+    {
+      "name": "You and the beanstalk",
+      "pool": "normal",
+      "definition": "TieredAchievement",
+      "line": 13178
+    },
+    {
+      "name": "Romancing the stone",
+      "pool": "normal",
+      "definition": "TieredAchievement",
+      "line": 13179
+    },
+    {
+      "name": "Ex machina",
+      "pool": "normal",
+      "definition": "TieredAchievement",
+      "line": 13180
+    },
+    {
+      "name": "And I need it now",
+      "pool": "normal",
+      "definition": "TieredAchievement",
+      "line": 13181
+    },
+    {
+      "name": "Pray on the weak",
+      "pool": "normal",
+      "definition": "TieredAchievement",
+      "line": 13182
+    },
+    {
+      "name": "It's a kind of magic",
+      "pool": "normal",
+      "definition": "TieredAchievement",
+      "line": 13183
+    },
+    {
+      "name": "Make it so",
+      "pool": "normal",
+      "definition": "TieredAchievement",
+      "line": 13184
+    },
+    {
+      "name": "All that glitters is gold",
+      "pool": "normal",
+      "definition": "TieredAchievement",
+      "line": 13185
+    },
+    {
+      "name": "H̸̷͓̳̳̯̟͕̟͍͍̣͡ḛ̢̦̰̺̮̝͖͖̘̪͉͘͡ ̠̦͕̤̪̝̥̰̠̫̖̣͙̬͘ͅC̨̦̺̩̲̥͉̭͚̜̻̝̣̼͙̮̯̪o̴̡͇̘͎̞̲͇̦̲͞͡m̸̩̺̝̣̹̱͚̬̥̫̳̼̞̘̯͘ͅẹ͇̺̜́̕͢s̶̙̟̱̥̮̯̰̦͓͇͖͖̝͘͘͞",
+      "pool": "normal",
+      "definition": "TieredAchievement",
+      "line": 13186
+    },
+    {
+      "name": "Way back then",
+      "pool": "normal",
+      "definition": "TieredAchievement",
+      "line": 13187
+    },
+    {
+      "name": "Exotic matter",
+      "pool": "normal",
+      "definition": "TieredAchievement",
+      "line": 13188
+    },
+    {
+      "name": "At the end of the tunnel",
+      "pool": "normal",
+      "definition": "TieredAchievement",
+      "line": 13189
+    },
+    {
+      "name": "Click (starring Adam Sandler)",
+      "pool": "normal",
+      "definition": "ProductionAchievement",
+      "line": 13194
+    },
+    {
+      "name": "Frantiquities",
+      "pool": "normal",
+      "definition": "ProductionAchievement",
+      "line": 13196
+    },
+    {
+      "name": "Overgrowth",
+      "pool": "normal",
+      "definition": "ProductionAchievement",
+      "line": 13198
+    },
+    {
+      "name": "Sedimentalism",
+      "pool": "normal",
+      "definition": "ProductionAchievement",
+      "line": 13200
+    },
+    {
+      "name": "Labor of love",
+      "pool": "normal",
+      "definition": "ProductionAchievement",
+      "line": 13202
+    },
+    {
+      "name": "Reverse funnel system",
+      "pool": "normal",
+      "definition": "ProductionAchievement",
+      "line": 13204
+    },
+    {
+      "name": "Thus spoke you",
+      "pool": "normal",
+      "definition": "ProductionAchievement",
+      "line": 13206
+    },
+    {
+      "name": "Manafest destiny",
+      "pool": "normal",
+      "definition": "ProductionAchievement",
+      "line": 13208
+    },
+    {
+      "name": "Neither snow nor rain nor heat nor gloom of night",
+      "pool": "normal",
+      "definition": "ProductionAchievement",
+      "line": 13210
+    },
+    {
+      "name": "I've got the Midas touch",
+      "pool": "normal",
+      "definition": "ProductionAchievement",
+      "line": 13212
+    },
+    {
+      "name": "Which eternal lie",
+      "pool": "normal",
+      "definition": "ProductionAchievement",
+      "line": 13214
+    },
+    {
+      "name": "D&eacute;j&agrave; vu",
+      "pool": "normal",
+      "definition": "ProductionAchievement",
+      "line": 13216
+    },
+    {
+      "name": "Powers of Ten",
+      "pool": "normal",
+      "definition": "ProductionAchievement",
+      "line": 13218
+    },
+    {
+      "name": "Now the dark days are gone",
+      "pool": "normal",
+      "definition": "ProductionAchievement",
+      "line": 13220
+    },
+    {
+      "name": "Freaky jazz hands",
+      "pool": "normal",
+      "definition": "Achievement",
+      "line": 13223
+    },
+    {
+      "name": "Methuselah",
+      "pool": "normal",
+      "definition": "Achievement",
+      "line": 13225
+    },
+    {
+      "name": "Huge tracts of land",
+      "pool": "normal",
+      "definition": "Achievement",
+      "line": 13227
+    },
+    {
+      "name": "D-d-d-d-deeper",
+      "pool": "normal",
+      "definition": "Achievement",
+      "line": 13229
+    },
+    {
+      "name": "Patently genius",
+      "pool": "normal",
+      "definition": "Achievement",
+      "line": 13231
+    },
+    {
+      "name": "A capital idea",
+      "pool": "normal",
+      "definition": "Achievement",
+      "line": 13233
+    },
+    {
+      "name": "It belongs in a bakery",
+      "pool": "normal",
+      "definition": "Achievement",
+      "line": 13235
+    },
+    {
+      "name": "Motormouth",
+      "pool": "normal",
+      "definition": "Achievement",
+      "line": 13237
+    },
+    {
+      "name": "Been there done that",
+      "pool": "normal",
+      "definition": "Achievement",
+      "line": 13239
+    },
+    {
+      "name": "Phlogisticated substances",
+      "pool": "normal",
+      "definition": "Achievement",
+      "line": 13241
+    },
+    {
+      "name": "Bizarro world",
+      "pool": "normal",
+      "definition": "Achievement",
+      "line": 13243
+    },
+    {
+      "name": "The long now",
+      "pool": "normal",
+      "definition": "Achievement",
+      "line": 13245
+    },
+    {
+      "name": "Chubby hadrons",
+      "pool": "normal",
+      "definition": "Achievement",
+      "line": 13247
+    },
+    {
+      "name": "Palettable",
+      "pool": "normal",
+      "definition": "Achievement",
+      "line": 13249
+    },
+    {
+      "name": "Bibbidi-bobbidi-boo",
+      "pool": "normal",
+      "definition": "Achievement",
+      "line": 13253
+    },
+    {
+      "name": "I'm the wiz",
+      "pool": "normal",
+      "definition": "Achievement",
+      "line": 13254
+    },
+    {
+      "name": "A wizard is you",
+      "pool": "normal",
+      "definition": "Achievement",
+      "line": 13255
+    },
+    {
+      "name": "Four-leaf cookie",
+      "pool": "shadow",
+      "definition": "Achievement",
+      "line": 13258
+    },
+    {
+      "name": "Lucked out",
+      "pool": "normal",
+      "definition": "TieredAchievement",
+      "line": 13261
+    },
+    {
+      "name": "What are the odds",
+      "pool": "normal",
+      "definition": "TieredAchievement",
+      "line": 13262
+    },
+    {
+      "name": "Grandma needs a new pair of shoes",
+      "pool": "normal",
+      "definition": "TieredAchievement",
+      "line": 13263
+    },
+    {
+      "name": "Million to one shot, doc",
+      "pool": "normal",
+      "definition": "TieredAchievement",
+      "line": 13264
+    },
+    {
+      "name": "As luck would have it",
+      "pool": "normal",
+      "definition": "TieredAchievement",
+      "line": 13265
+    },
+    {
+      "name": "Ever in your favor",
+      "pool": "normal",
+      "definition": "TieredAchievement",
+      "line": 13266
+    },
+    {
+      "name": "Be a lady",
+      "pool": "normal",
+      "definition": "TieredAchievement",
+      "line": 13267
+    },
+    {
+      "name": "Dicey business",
+      "pool": "normal",
+      "definition": "TieredAchievement",
+      "line": 13268
+    },
+    {
+      "name": "Fingers crossed",
+      "pool": "normal",
+      "definition": "ProductionAchievement",
+      "line": 13271
+    },
+    {
+      "name": "Just a statistic",
+      "pool": "normal",
+      "definition": "ProductionAchievement",
+      "line": 13272
+    },
+    {
+      "name": "Murphy's wild guess",
+      "pool": "normal",
+      "definition": "ProductionAchievement",
+      "line": 13273
+    },
+    {
+      "name": "Let's leaf it at that",
+      "pool": "normal",
+      "definition": "Achievement",
+      "line": 13275
+    },
+    {
+      "name": "The ultimate clickdown",
+      "pool": "normal",
+      "definition": "Achievement",
+      "line": 13278
+    },
+    {
+      "name": "Aged well",
+      "pool": "normal",
+      "definition": "TieredAchievement",
+      "line": 13282
+    },
+    {
+      "name": "101st birthday",
+      "pool": "normal",
+      "definition": "TieredAchievement",
+      "line": 13283
+    },
+    {
+      "name": "But wait 'til you get older",
+      "pool": "normal",
+      "definition": "TieredAchievement",
+      "line": 13284
+    },
+    {
+      "name": "Harvest moon",
+      "pool": "normal",
+      "definition": "TieredAchievement",
+      "line": 13285
+    },
+    {
+      "name": "Mine?",
+      "pool": "normal",
+      "definition": "TieredAchievement",
+      "line": 13286
+    },
+    {
+      "name": "In full gear",
+      "pool": "normal",
+      "definition": "TieredAchievement",
+      "line": 13287
+    },
+    {
+      "name": "Treacle tart economics",
+      "pool": "normal",
+      "definition": "TieredAchievement",
+      "line": 13288
+    },
+    {
+      "name": "Holy cookies, grandma!",
+      "pool": "normal",
+      "definition": "TieredAchievement",
+      "line": 13289
+    },
+    {
+      "name": "The Prestige",
+      "pool": "normal",
+      "definition": "TieredAchievement",
+      "line": 13290
+    },
+    {
+      "name": "That's just peanuts to space",
+      "pool": "normal",
+      "definition": "TieredAchievement",
+      "line": 13291
+    },
+    {
+      "name": "Worth its weight in lead",
+      "pool": "normal",
+      "definition": "TieredAchievement",
+      "line": 13292
+    },
+    {
+      "name": "What happens in the vortex stays in the vortex",
+      "pool": "normal",
+      "definition": "TieredAchievement",
+      "line": 13293
+    },
+    {
+      "name": "Invited to yesterday's party",
+      "pool": "normal",
+      "definition": "TieredAchievement",
+      "line": 13294
+    },
+    {
+      "name": "Downsizing",
+      "pool": "normal",
+      "definition": "TieredAchievement",
+      "line": 13295
+    },
+    {
+      "name": "My eyes",
+      "pool": "normal",
+      "definition": "TieredAchievement",
+      "line": 13296
+    },
+    {
+      "name": "Maybe a chance in hell, actually",
+      "pool": "normal",
+      "definition": "TieredAchievement",
+      "line": 13297
+    },
+    {
+      "name": "Make like a tree",
+      "pool": "normal",
+      "definition": "TieredAchievement",
+      "line": 13299
+    },
+    {
+      "name": "Cave story",
+      "pool": "normal",
+      "definition": "TieredAchievement",
+      "line": 13300
+    },
+    {
+      "name": "In-cog-neato",
+      "pool": "normal",
+      "definition": "TieredAchievement",
+      "line": 13301
+    },
+    {
+      "name": "Save your breath because that's all you've got left",
+      "pool": "normal",
+      "definition": "TieredAchievement",
+      "line": 13302
+    },
+    {
+      "name": "Vengeful and almighty",
+      "pool": "normal",
+      "definition": "TieredAchievement",
+      "line": 13303
+    },
+    {
+      "name": "Spell it out for you",
+      "pool": "normal",
+      "definition": "TieredAchievement",
+      "line": 13304
+    },
+    {
+      "name": "Space space space space space",
+      "pool": "normal",
+      "definition": "TieredAchievement",
+      "line": 13305
+    },
+    {
+      "name": "Don't get used to yourself, you're gonna have to change",
+      "pool": "normal",
+      "definition": "TieredAchievement",
+      "line": 13306
+    },
+    {
+      "name": "Objects in the mirror dimension are closer than they appear",
+      "pool": "normal",
+      "definition": "TieredAchievement",
+      "line": 13307
+    },
+    {
+      "name": "Groundhog day",
+      "pool": "normal",
+      "definition": "TieredAchievement",
+      "line": 13308
+    },
+    {
+      "name": "A matter of perspective",
+      "pool": "normal",
+      "definition": "TieredAchievement",
+      "line": 13309
+    },
+    {
+      "name": "Optical illusion",
+      "pool": "normal",
+      "definition": "TieredAchievement",
+      "line": 13310
+    },
+    {
+      "name": "Jackpot",
+      "pool": "normal",
+      "definition": "TieredAchievement",
+      "line": 13311
+    },
+    {
+      "name": "So much to do so much to see",
+      "pool": "shadow",
+      "definition": "Achievement",
+      "line": 13314
+    },
+    {
+      "name": "Running with scissors",
+      "pool": "normal",
+      "definition": "CpsAchievement",
+      "line": 13318
+    },
+    {
+      "name": "Rarefied air",
+      "pool": "normal",
+      "definition": "CpsAchievement",
+      "line": 13319
+    },
+    {
+      "name": "Push it to the limit",
+      "pool": "normal",
+      "definition": "CpsAchievement",
+      "line": 13320
+    },
+    {
+      "name": "Green cookies sleep furiously",
+      "pool": "normal",
+      "definition": "CpsAchievement",
+      "line": 13321
+    },
+    {
+      "name": "Panic! at Nabisco",
+      "pool": "normal",
+      "definition": "BankAchievement",
+      "line": 13323
+    },
+    {
+      "name": "Bursting at the seams",
+      "pool": "normal",
+      "definition": "BankAchievement",
+      "line": 13324
+    },
+    {
+      "name": "Just about full",
+      "pool": "normal",
+      "definition": "BankAchievement",
+      "line": 13325
+    },
+    {
+      "name": "Hungry for more",
+      "pool": "normal",
+      "definition": "BankAchievement",
+      "line": 13326
+    },
+    {
+      "name": "All the other kids with the pumped up clicks",
+      "pool": "normal",
+      "definition": "Achievement",
+      "line": 13329
+    },
+    {
+      "name": "One...more...click...",
+      "pool": "normal",
+      "definition": "Achievement",
+      "line": 13330
+    },
+    {
+      "name": "Botany enthusiast",
+      "pool": "normal",
+      "definition": "Achievement",
+      "line": 13333
+    },
+    {
+      "name": "Green, aching thumb",
+      "pool": "normal",
+      "definition": "Achievement",
+      "line": 13334
+    },
+    {
+      "name": "In the garden of Eden (baby)",
+      "pool": "normal",
+      "definition": "Achievement",
+      "line": 13335
+    },
+    {
+      "name": "Keeper of the conservatory",
+      "pool": "normal",
+      "definition": "Achievement",
+      "line": 13337
+    },
+    {
+      "name": "Seedless to nay",
+      "pool": "normal",
+      "definition": "Achievement",
+      "line": 13338
+    },
+    {
+      "name": "You get nothing",
+      "pool": "normal",
+      "definition": "Achievement",
+      "line": 13341
+    },
+    {
+      "name": "Humble rebeginnings",
+      "pool": "normal",
+      "definition": "Achievement",
+      "line": 13342
+    },
+    {
+      "name": "The end of the world",
+      "pool": "normal",
+      "definition": "Achievement",
+      "line": 13343
+    },
+    {
+      "name": "Oh, you're back",
+      "pool": "normal",
+      "definition": "Achievement",
+      "line": 13344
+    },
+    {
+      "name": "Lazarus",
+      "pool": "normal",
+      "definition": "Achievement",
+      "line": 13345
+    },
+    {
+      "name": "Leisurely pace",
+      "pool": "normal",
+      "definition": "CpsAchievement",
+      "line": 13347
+    },
+    {
+      "name": "Hypersonic",
+      "pool": "normal",
+      "definition": "CpsAchievement",
+      "line": 13348
+    },
+    {
+      "name": "Feed me, Orteil",
+      "pool": "normal",
+      "definition": "BankAchievement",
+      "line": 13350
+    },
+    {
+      "name": "And then what?",
+      "pool": "normal",
+      "definition": "BankAchievement",
+      "line": 13351
+    },
+    {
+      "name": "Tricentennial and a half",
+      "pool": "normal",
+      "definition": "Achievement",
+      "line": 13354
+    },
+    {
+      "name": "Quadricentennial",
+      "pool": "normal",
+      "definition": "Achievement",
+      "line": 13355
+    },
+    {
+      "name": "Quadricentennial and a half",
+      "pool": "normal",
+      "definition": "Achievement",
+      "line": 13356
+    },
+    {
+      "name": "Quincentennial",
+      "pool": "normal",
+      "definition": "Achievement",
+      "line": 13358
+    },
+    {
+      "name": "Maillard reaction",
+      "pool": "normal",
+      "definition": "Achievement",
+      "line": 13361
+    },
+    {
+      "name": "When the cookies ascend just right",
+      "pool": "shadow",
+      "definition": "Achievement",
+      "line": 13364
+    },
+    {
+      "name": "With her finger and her thumb",
+      "pool": "normal",
+      "definition": "Achievement",
+      "line": 13368
+    },
+    {
+      "name": "Defense of the ancients",
+      "pool": "normal",
+      "definition": "TieredAchievement",
+      "line": 13370
+    },
+    {
+      "name": "Sharpest tool in the shed",
+      "pool": "normal",
+      "definition": "TieredAchievement",
+      "line": 13371
+    },
+    {
+      "name": "Hey now, you're a rock",
+      "pool": "normal",
+      "definition": "TieredAchievement",
+      "line": 13372
+    },
+    {
+      "name": "Break the mold",
+      "pool": "normal",
+      "definition": "TieredAchievement",
+      "line": 13373
+    },
+    {
+      "name": "Get the show on, get paid",
+      "pool": "normal",
+      "definition": "TieredAchievement",
+      "line": 13374
+    },
+    {
+      "name": "My world's on fire, how about yours",
+      "pool": "normal",
+      "definition": "TieredAchievement",
+      "line": 13375
+    },
+    {
+      "name": "The meteor men beg to differ",
+      "pool": "normal",
+      "definition": "TieredAchievement",
+      "line": 13376
+    },
+    {
+      "name": "Only shooting stars",
+      "pool": "normal",
+      "definition": "TieredAchievement",
+      "line": 13377
+    },
+    {
+      "name": "We could all use a little change",
+      "pool": "normal",
+      "definition": "TieredAchievement",
+      "line": 13378
+    },
+    {
+      "name": "Your brain gets smart but your head gets dumb",
+      "pool": "normal",
+      "definition": "TieredAchievement",
+      "line": 13379
+    },
+    {
+      "name": "The years start coming",
+      "pool": "normal",
+      "definition": "TieredAchievement",
+      "line": 13380
+    },
+    {
+      "name": "What a concept",
+      "pool": "normal",
+      "definition": "TieredAchievement",
+      "line": 13381
+    },
+    {
+      "name": "You'll never shine if you don't glow",
+      "pool": "normal",
+      "definition": "TieredAchievement",
+      "line": 13382
+    },
+    {
+      "name": "You'll never know if you don't go",
+      "pool": "normal",
+      "definition": "TieredAchievement",
+      "line": 13383
+    },
+    {
+      "name": "Self-contained",
+      "pool": "normal",
+      "definition": "TieredAchievement",
+      "line": 13386
+    },
+    {
+      "name": "Threw you for a loop",
+      "pool": "normal",
+      "definition": "TieredAchievement",
+      "line": 13387
+    },
+    {
+      "name": "The sum of its parts",
+      "pool": "normal",
+      "definition": "TieredAchievement",
+      "line": 13388
+    },
+    {
+      "name": "Bears repeating",
+      "pool": "normal",
+      "definition": "TieredAchievement",
+      "line": 13389
+    },
+    {
+      "name": "More of the same",
+      "pool": "normal",
+      "definition": "TieredAchievement",
+      "line": 13390
+    },
+    {
+      "name": "Last recurse",
+      "pool": "normal",
+      "definition": "TieredAchievement",
+      "line": 13391
+    },
+    {
+      "name": "Out of one, many",
+      "pool": "normal",
+      "definition": "TieredAchievement",
+      "line": 13392
+    },
+    {
+      "name": "An example of recursion",
+      "pool": "normal",
+      "definition": "TieredAchievement",
+      "line": 13393
+    },
+    {
+      "name": "For more information on this achievement, please refer to its title",
+      "pool": "normal",
+      "definition": "TieredAchievement",
+      "line": 13394
+    },
+    {
+      "name": "I'm so meta, even this achievement",
+      "pool": "normal",
+      "definition": "TieredAchievement",
+      "line": 13395
+    },
+    {
+      "name": "Never get bored",
+      "pool": "normal",
+      "definition": "TieredAchievement",
+      "line": 13396
+    },
+    {
+      "name": "The needs of the many",
+      "pool": "normal",
+      "definition": "ProductionAchievement",
+      "line": 13399
+    },
+    {
+      "name": "Eating its own",
+      "pool": "normal",
+      "definition": "ProductionAchievement",
+      "line": 13400
+    },
+    {
+      "name": "We must go deeper",
+      "pool": "normal",
+      "definition": "ProductionAchievement",
+      "line": 13401
+    },
+    {
+      "name": "Sierpinski rhomboids",
+      "pool": "normal",
+      "definition": "Achievement",
+      "line": 13403
+    },
+    {
+      "name": "Gotta go fast",
+      "pool": "normal",
+      "definition": "CpsAchievement",
+      "line": 13405
+    },
+    {
+      "name": "I think it's safe to say you've got it made",
+      "pool": "normal",
+      "definition": "BankAchievement",
+      "line": 13406
+    },
+    {
+      "name": "Renaissance baker",
+      "pool": "normal",
+      "definition": "Achievement",
+      "line": 13409
+    },
+    {
+      "name": "Veteran",
+      "pool": "normal",
+      "definition": "Achievement",
+      "line": 13412
+    },
+    {
+      "name": "Thick-skinned",
+      "pool": "normal",
+      "definition": "Achievement",
+      "line": 13415
+    },
+    {
+      "name": "F12",
+      "pool": "normal",
+      "definition": "TieredAchievement",
+      "line": 13419
+    },
+    {
+      "name": "Variable success",
+      "pool": "normal",
+      "definition": "TieredAchievement",
+      "line": 13420
+    },
+    {
+      "name": "No comments",
+      "pool": "normal",
+      "definition": "TieredAchievement",
+      "line": 13421
+    },
+    {
+      "name": "Up to code",
+      "pool": "normal",
+      "definition": "TieredAchievement",
+      "line": 13422
+    },
+    {
+      "name": "Works on my machine",
+      "pool": "normal",
+      "definition": "TieredAchievement",
+      "line": 13423
+    },
+    {
+      "name": "Technical debt",
+      "pool": "normal",
+      "definition": "TieredAchievement",
+      "line": 13424
+    },
+    {
+      "name": "Mind your language",
+      "pool": "normal",
+      "definition": "TieredAchievement",
+      "line": 13425
+    },
+    {
+      "name": "Inconsolable",
+      "pool": "normal",
+      "definition": "TieredAchievement",
+      "line": 13426
+    },
+    {
+      "name": "Closure",
+      "pool": "normal",
+      "definition": "TieredAchievement",
+      "line": 13427
+    },
+    {
+      "name": "Dude what if we're all living in a simulation like what if we're all just code on a computer somewhere",
+      "pool": "normal",
+      "definition": "TieredAchievement",
+      "line": 13428
+    },
+    {
+      "name": "Taking the back streets",
+      "pool": "normal",
+      "definition": "TieredAchievement",
+      "line": 13429
+    },
+    {
+      "name": "Inherited prototype",
+      "pool": "normal",
+      "definition": "ProductionAchievement",
+      "line": 13432
+    },
+    {
+      "name": "A model of document object",
+      "pool": "normal",
+      "definition": "ProductionAchievement",
+      "line": 13433
+    },
+    {
+      "name": "First-class citizen",
+      "pool": "normal",
+      "definition": "ProductionAchievement",
+      "line": 13434
+    },
+    {
+      "name": "Alexandria",
+      "pool": "normal",
+      "definition": "Achievement",
+      "line": 13436
+    },
+    {
+      "name": "Bake him away, toys",
+      "pool": "normal",
+      "definition": "CpsAchievement",
+      "line": 13438
+    },
+    {
+      "name": "You're #1 so why try harder",
+      "pool": "normal",
+      "definition": "CpsAchievement",
+      "line": 13439
+    },
+    {
+      "name": "Haven't even begun to peak",
+      "pool": "normal",
+      "definition": "CpsAchievement",
+      "line": 13440
+    },
+    {
+      "name": "A sometimes food",
+      "pool": "normal",
+      "definition": "BankAchievement",
+      "line": 13441
+    },
+    {
+      "name": "Not enough of a good thing",
+      "pool": "normal",
+      "definition": "BankAchievement",
+      "line": 13442
+    },
+    {
+      "name": "Horn of plenty",
+      "pool": "normal",
+      "definition": "BankAchievement",
+      "line": 13443
+    },
+    {
+      "name": "Smurf account",
+      "pool": "normal",
+      "definition": "Achievement",
+      "line": 13446
+    },
+    {
+      "name": "If at first you don't succeed",
+      "pool": "normal",
+      "definition": "Achievement",
+      "line": 13447
+    },
+    {
+      "name": "O Fortuna",
+      "pool": "normal",
+      "definition": "Achievement",
+      "line": 13450
+    },
+    {
+      "name": "Initial public offering",
+      "pool": "normal",
+      "definition": "Achievement",
+      "line": 13453
+    },
+    {
+      "name": "Rookie numbers",
+      "pool": "normal",
+      "definition": "Achievement",
+      "line": 13454
+    },
+    {
+      "name": "No nobility in poverty",
+      "pool": "normal",
+      "definition": "Achievement",
+      "line": 13455
+    },
+    {
+      "name": "Full warehouses",
+      "pool": "normal",
+      "definition": "Achievement",
+      "line": 13456
+    },
+    {
+      "name": "Make my day",
+      "pool": "normal",
+      "definition": "Achievement",
+      "line": 13457
+    },
+    {
+      "name": "Buy buy buy",
+      "pool": "normal",
+      "definition": "Achievement",
+      "line": 13458
+    },
+    {
+      "name": "Gaseous assets",
+      "pool": "shadow",
+      "definition": "Achievement",
+      "line": 13459
+    },
+    {
+      "name": "Pyramid scheme",
+      "pool": "normal",
+      "definition": "Achievement",
+      "line": 13460
+    },
+    {
+      "name": "Jellicles",
+      "pool": "normal",
+      "definition": "Achievement",
+      "line": 13463
+    },
+    {
+      "name": "Quincentennial and a half",
+      "pool": "normal",
+      "definition": "Achievement",
+      "line": 13466
+    },
+    {
+      "name": "What did we even eat before these",
+      "pool": "normal",
+      "definition": "CpsAchievement",
+      "line": 13468
+    },
+    {
+      "name": "Heavy flow",
+      "pool": "normal",
+      "definition": "CpsAchievement",
+      "line": 13469
+    },
+    {
+      "name": "More you say?",
+      "pool": "normal",
+      "definition": "CpsAchievement",
+      "line": 13470
+    },
+    {
+      "name": "Large and in charge",
+      "pool": "normal",
+      "definition": "BankAchievement",
+      "line": 13471
+    },
+    {
+      "name": "Absolutely stuffed",
+      "pool": "normal",
+      "definition": "BankAchievement",
+      "line": 13472
+    },
+    {
+      "name": "It's only wafer-thin",
+      "pool": "normal",
+      "definition": "BankAchievement",
+      "line": 13473
+    },
+    {
+      "name": "Clickety split",
+      "pool": "normal",
+      "definition": "Achievement",
+      "line": 13475
+    },
+    {
+      "name": "Gotta hand it to you",
+      "pool": "normal",
+      "definition": "Achievement",
+      "line": 13476
+    },
+    {
+      "name": "Okay boomer",
+      "pool": "normal",
+      "definition": "TieredAchievement",
+      "line": 13477
+    },
+    {
+      "name": "Overripe",
+      "pool": "normal",
+      "definition": "TieredAchievement",
+      "line": 13478
+    },
+    {
+      "name": "Rock on",
+      "pool": "normal",
+      "definition": "TieredAchievement",
+      "line": 13479
+    },
+    {
+      "name": "Self-manmade man",
+      "pool": "normal",
+      "definition": "TieredAchievement",
+      "line": 13480
+    },
+    {
+      "name": "Checks out",
+      "pool": "normal",
+      "definition": "TieredAchievement",
+      "line": 13481
+    },
+    {
+      "name": "Living on a prayer",
+      "pool": "normal",
+      "definition": "TieredAchievement",
+      "line": 13482
+    },
+    {
+      "name": "Higitus figitus migitus mum",
+      "pool": "normal",
+      "definition": "TieredAchievement",
+      "line": 13483
+    },
+    {
+      "name": "The incredible journey",
+      "pool": "normal",
+      "definition": "TieredAchievement",
+      "line": 13484
+    },
+    {
+      "name": "Just a phase",
+      "pool": "normal",
+      "definition": "TieredAchievement",
+      "line": 13485
+    },
+    {
+      "name": "Don't let me leave, Murph",
+      "pool": "normal",
+      "definition": "TieredAchievement",
+      "line": 13486
+    },
+    {
+      "name": "Caveman to cosmos",
+      "pool": "normal",
+      "definition": "TieredAchievement",
+      "line": 13487
+    },
+    {
+      "name": "Particular tastes",
+      "pool": "normal",
+      "definition": "TieredAchievement",
+      "line": 13488
+    },
+    {
+      "name": "A light snack",
+      "pool": "normal",
+      "definition": "TieredAchievement",
+      "line": 13489
+    },
+    {
+      "name": "Tempting fate",
+      "pool": "normal",
+      "definition": "TieredAchievement",
+      "line": 13490
+    },
+    {
+      "name": "Tautological",
+      "pool": "normal",
+      "definition": "TieredAchievement",
+      "line": 13491
+    },
+    {
+      "name": "Curly braces",
+      "pool": "normal",
+      "definition": "TieredAchievement",
+      "line": 13492
+    },
+    {
+      "name": "Seven horseshoes",
+      "pool": "shadow",
+      "definition": "Achievement",
+      "line": 13495
+    },
+    {
+      "name": "Olden days",
+      "pool": "normal",
+      "definition": "Achievement",
+      "line": 13498
+    },
+    {
+      "name": "The devil's workshop",
+      "pool": "normal",
+      "definition": "Achievement",
+      "line": 13501
+    },
+    {
+      "name": "In the green",
+      "pool": "normal",
+      "definition": "TieredAchievement",
+      "line": 13502
+    },
+    {
+      "name": "Mountain out of a molehill, but like in a good way",
+      "pool": "normal",
+      "definition": "TieredAchievement",
+      "line": 13503
+    },
+    {
+      "name": "The wheels of progress",
+      "pool": "normal",
+      "definition": "TieredAchievement",
+      "line": 13504
+    },
+    {
+      "name": "That's rich",
+      "pool": "normal",
+      "definition": "TieredAchievement",
+      "line": 13505
+    },
+    {
+      "name": "Preaches and cream",
+      "pool": "normal",
+      "definition": "TieredAchievement",
+      "line": 13506
+    },
+    {
+      "name": "Magic thinking",
+      "pool": "normal",
+      "definition": "TieredAchievement",
+      "line": 13507
+    },
+    {
+      "name": "Is there life on Mars?",
+      "pool": "normal",
+      "definition": "TieredAchievement",
+      "line": 13508
+    },
+    {
+      "name": "Bad chemistry",
+      "pool": "normal",
+      "definition": "TieredAchievement",
+      "line": 13509
+    },
+    {
+      "name": "Reduced to gibbering heaps",
+      "pool": "normal",
+      "definition": "TieredAchievement",
+      "line": 13510
+    },
+    {
+      "name": "Back already?",
+      "pool": "normal",
+      "definition": "TieredAchievement",
+      "line": 13511
+    },
+    {
+      "name": "Nuclear throne",
+      "pool": "normal",
+      "definition": "TieredAchievement",
+      "line": 13512
+    },
+    {
+      "name": "Making light of the situation",
+      "pool": "normal",
+      "definition": "TieredAchievement",
+      "line": 13513
+    },
+    {
+      "name": "Flip a cookie. Chips, I win. Crust, you lose.",
+      "pool": "normal",
+      "definition": "TieredAchievement",
+      "line": 13514
+    },
+    {
+      "name": "In and of itself",
+      "pool": "normal",
+      "definition": "TieredAchievement",
+      "line": 13515
+    },
+    {
+      "name": "Duck typing",
+      "pool": "normal",
+      "definition": "TieredAchievement",
+      "line": 13516
+    },
+    {
+      "name": "They'll never know what hit 'em",
+      "pool": "normal",
+      "definition": "TieredAchievement",
+      "line": 13519
+    },
+    {
+      "name": "Well-versed",
+      "pool": "normal",
+      "definition": "TieredAchievement",
+      "line": 13520
+    },
+    {
+      "name": "Ripe for the picking",
+      "pool": "normal",
+      "definition": "TieredAchievement",
+      "line": 13521
+    },
+    {
+      "name": "Unreal",
+      "pool": "normal",
+      "definition": "TieredAchievement",
+      "line": 13522
+    },
+    {
+      "name": "Once you've seen one",
+      "pool": "normal",
+      "definition": "TieredAchievement",
+      "line": 13523
+    },
+    {
+      "name": "Spoils and plunder",
+      "pool": "normal",
+      "definition": "TieredAchievement",
+      "line": 13524
+    },
+    {
+      "name": "Nobody exists on purpose, nobody belongs anywhere",
+      "pool": "normal",
+      "definition": "TieredAchievement",
+      "line": 13525
+    },
+    {
+      "name": "Hyperspace expressway",
+      "pool": "normal",
+      "definition": "TieredAchievement",
+      "line": 13526
+    },
+    {
+      "name": "Versatile",
+      "pool": "normal",
+      "definition": "TieredAchievement",
+      "line": 13527
+    },
+    {
+      "name": "You are inevitable",
+      "pool": "normal",
+      "definition": "TieredAchievement",
+      "line": 13528
+    },
+    {
+      "name": "Away from this place",
+      "pool": "normal",
+      "definition": "TieredAchievement",
+      "line": 13529
+    },
+    {
+      "name": "Everywhere at once",
+      "pool": "normal",
+      "definition": "TieredAchievement",
+      "line": 13530
+    },
+    {
+      "name": "Reject reality, substitute your own",
+      "pool": "normal",
+      "definition": "TieredAchievement",
+      "line": 13531
+    },
+    {
+      "name": "Fringe",
+      "pool": "normal",
+      "definition": "ProductionAchievement",
+      "line": 13534
+    },
+    {
+      "name": "Coherence",
+      "pool": "normal",
+      "definition": "ProductionAchievement",
+      "line": 13535
+    },
+    {
+      "name": "Earth-616",
+      "pool": "normal",
+      "definition": "ProductionAchievement",
+      "line": 13536
+    },
+    {
+      "name": "Strange topologies",
+      "pool": "normal",
+      "definition": "Achievement",
+      "line": 13538
+    },
+    {
+      "name": "Grand design",
+      "pool": "normal",
+      "definition": "Achievement",
+      "line": 13541
+    },
+    {
+      "name": "Ecumenopolis",
+      "pool": "normal",
+      "definition": "Achievement",
+      "line": 13542
+    },
+    {
+      "name": "The full picture",
+      "pool": "normal",
+      "definition": "Achievement",
+      "line": 13545
+    },
+    {
+      "name": "When there's nothing left to add",
+      "pool": "normal",
+      "definition": "Achievement",
+      "line": 13546
+    },
+    {
+      "name": "Sexcentennial",
+      "pool": "normal",
+      "definition": "Achievement",
+      "line": 13549
+    },
+    {
+      "name": "Keep going until I say stop",
+      "pool": "normal",
+      "definition": "CpsAchievement",
+      "line": 13551
+    },
+    {
+      "name": "But I didn't say stop, did I?",
+      "pool": "normal",
+      "definition": "CpsAchievement",
+      "line": 13552
+    },
+    {
+      "name": "With unrivaled fervor",
+      "pool": "normal",
+      "definition": "CpsAchievement",
+      "line": 13553
+    },
+    {
+      "name": "Think big",
+      "pool": "normal",
+      "definition": "BankAchievement",
+      "line": 13554
+    },
+    {
+      "name": "Hypersize me",
+      "pool": "normal",
+      "definition": "BankAchievement",
+      "line": 13555
+    },
+    {
+      "name": "Max capacity",
+      "pool": "normal",
+      "definition": "BankAchievement",
+      "line": 13556
+    },
+    {
+      "name": "Liquid assets",
+      "pool": "normal",
+      "definition": "Achievement",
+      "line": 13559
+    },
+    {
+      "name": "Stifling the press",
+      "pool": "normal",
+      "definition": "Achievement",
+      "line": 13562
+    },
+    {
+      "name": "It's big brain time",
+      "pool": "normal",
+      "definition": "TieredAchievement",
+      "line": 13566
+    },
+    {
+      "name": "Just my imagination",
+      "pool": "normal",
+      "definition": "TieredAchievement",
+      "line": 13567
+    },
+    {
+      "name": "Now there's an idea",
+      "pool": "normal",
+      "definition": "TieredAchievement",
+      "line": 13568
+    },
+    {
+      "name": "The organ that named itself",
+      "pool": "normal",
+      "definition": "TieredAchievement",
+      "line": 13569
+    },
+    {
+      "name": "Gyrification",
+      "pool": "normal",
+      "definition": "TieredAchievement",
+      "line": 13570
+    },
+    {
+      "name": "A trademarked portmanteau of \"imagination\" and \"engineering\"",
+      "pool": "normal",
+      "definition": "TieredAchievement",
+      "line": 13571
+    },
+    {
+      "name": "Mindfulness",
+      "pool": "normal",
+      "definition": "TieredAchievement",
+      "line": 13572
+    },
+    {
+      "name": "The 10% myth",
+      "pool": "normal",
+      "definition": "TieredAchievement",
+      "line": 13573
+    },
+    {
+      "name": "Don't think about it too hard",
+      "pool": "normal",
+      "definition": "TieredAchievement",
+      "line": 13574
+    },
+    {
+      "name": "Though fools seldom differ",
+      "pool": "normal",
+      "definition": "TieredAchievement",
+      "line": 13575
+    },
+    {
+      "name": "Looking kind of dumb",
+      "pool": "normal",
+      "definition": "TieredAchievement",
+      "line": 13576
+    },
+    {
+      "name": "A beautiful mind",
+      "pool": "normal",
+      "definition": "TieredAchievement",
+      "line": 13577
+    },
+    {
+      "name": "Cardinal synapses",
+      "pool": "normal",
+      "definition": "TieredAchievement",
+      "line": 13578
+    },
+    {
+      "name": "Positive thinking",
+      "pool": "normal",
+      "definition": "ProductionAchievement",
+      "line": 13581
+    },
+    {
+      "name": "The thought that counts",
+      "pool": "normal",
+      "definition": "ProductionAchievement",
+      "line": 13582
+    },
+    {
+      "name": "Unthinkable",
+      "pool": "normal",
+      "definition": "ProductionAchievement",
+      "line": 13583
+    },
+    {
+      "name": "Gifted",
+      "pool": "normal",
+      "definition": "Achievement",
+      "line": 13585
+    },
+    {
+      "name": "They moistly come at night",
+      "pool": "normal",
+      "definition": "TieredAchievement",
+      "line": 13588
+    },
+    {
+      "name": "It's grown on you",
+      "pool": "normal",
+      "definition": "TieredAchievement",
+      "line": 13589
+    },
+    {
+      "name": "Don't let the walls cave in on you",
+      "pool": "normal",
+      "definition": "TieredAchievement",
+      "line": 13590
+    },
+    {
+      "name": "Replaced by robots",
+      "pool": "normal",
+      "definition": "TieredAchievement",
+      "line": 13591
+    },
+    {
+      "name": "Financial prodigy",
+      "pool": "normal",
+      "definition": "TieredAchievement",
+      "line": 13592
+    },
+    {
+      "name": "And I will pray to a big god",
+      "pool": "normal",
+      "definition": "TieredAchievement",
+      "line": 13593
+    },
+    {
+      "name": "Shosple Colupis",
+      "pool": "normal",
+      "definition": "TieredAchievement",
+      "line": 13594
+    },
+    {
+      "name": "False vacuum",
+      "pool": "normal",
+      "definition": "TieredAchievement",
+      "line": 13595
+    },
+    {
+      "name": "Metallic taste",
+      "pool": "normal",
+      "definition": "TieredAchievement",
+      "line": 13596
+    },
+    {
+      "name": "Swiss cheese",
+      "pool": "normal",
+      "definition": "TieredAchievement",
+      "line": 13597
+    },
+    {
+      "name": "But the future refused to change",
+      "pool": "normal",
+      "definition": "TieredAchievement",
+      "line": 13598
+    },
+    {
+      "name": "What's the dark matter with you",
+      "pool": "normal",
+      "definition": "TieredAchievement",
+      "line": 13599
+    },
+    {
+      "name": "Enlightenment",
+      "pool": "normal",
+      "definition": "TieredAchievement",
+      "line": 13600
+    },
+    {
+      "name": "Never tell me the odds",
+      "pool": "normal",
+      "definition": "TieredAchievement",
+      "line": 13601
+    },
+    {
+      "name": "Blowing an Apollonian gasket",
+      "pool": "normal",
+      "definition": "TieredAchievement",
+      "line": 13602
+    },
+    {
+      "name": "Get with the program",
+      "pool": "normal",
+      "definition": "TieredAchievement",
+      "line": 13603
+    },
+    {
+      "name": "Lost your cosmic marbles",
+      "pool": "normal",
+      "definition": "TieredAchievement",
+      "line": 13604
+    },
+    {
+      "name": "By will alone I set my mind in motion",
+      "pool": "normal",
+      "definition": "TieredAchievement",
+      "line": 13605
+    },
+    {
+      "name": "Ain't that a click in the head",
+      "pool": "normal",
+      "definition": "Achievement",
+      "line": 13607
+    },
+    {
+      "name": "Sexcentennial and a half",
+      "pool": "normal",
+      "definition": "Achievement",
+      "line": 13610
+    },
+    {
+      "name": "I am speed",
+      "pool": "normal",
+      "definition": "CpsAchievement",
+      "line": 13612
+    },
+    {
+      "name": "And on and on",
+      "pool": "normal",
+      "definition": "CpsAchievement",
+      "line": 13613
+    },
+    {
+      "name": "Fake it till you bake it",
+      "pool": "normal",
+      "definition": "BankAchievement",
+      "line": 13614
+    },
+    {
+      "name": "History in the baking",
+      "pool": "normal",
+      "definition": "BankAchievement",
+      "line": 13615
+    },
+    {
+      "name": "Baby it's old outside",
+      "pool": "normal",
+      "definition": "Achievement",
+      "line": 13617
+    },
+    {
+      "name": "Myriad",
+      "pool": "normal",
+      "definition": "Achievement",
+      "line": 13620
+    },
+    {
+      "name": "Kaizen",
+      "pool": "normal",
+      "definition": "Achievement",
+      "line": 13623
+    },
+    {
+      "name": "Beyond quality",
+      "pool": "normal",
+      "definition": "Achievement",
+      "line": 13624
+    },
+    {
+      "name": "Everything happens so much",
+      "pool": "normal",
+      "definition": "CpsAchievement",
+      "line": 13626
+    },
+    {
+      "name": "I'll rest when I'm dead",
+      "pool": "normal",
+      "definition": "CpsAchievement",
+      "line": 13627
+    },
+    {
+      "name": "What do you get for the baker who has everything",
+      "pool": "normal",
+      "definition": "BankAchievement",
+      "line": 13628
+    },
+    {
+      "name": "Bottomless pit",
+      "pool": "normal",
+      "definition": "BankAchievement",
+      "line": 13629
+    },
+    {
+      "name": "All the stars in heaven",
+      "pool": "normal",
+      "definition": "Achievement",
+      "line": 13632
+    },
+    {
+      "name": "No time like the present",
+      "pool": "normal",
+      "definition": "Achievement",
+      "line": 13635
+    },
+    {
+      "name": "Can we get much higher",
+      "pool": "normal",
+      "definition": "CpsAchievement",
+      "line": 13637
+    },
+    {
+      "name": "Speed's the name of the game (no it's not it's called Cookie Clicker)",
+      "pool": "normal",
+      "definition": "CpsAchievement",
+      "line": 13638
+    },
+    {
+      "name": "Rainy day fund",
+      "pool": "normal",
+      "definition": "BankAchievement",
+      "line": 13639
+    },
+    {
+      "name": "And a little extra",
+      "pool": "normal",
+      "definition": "BankAchievement",
+      "line": 13640
+    },
+    {
+      "name": "Grandmapocalypse",
+      "pool": "normal",
+      "definition": "Achievement",
+      "line": 13643
+    },
+    {
+      "name": "Wrath cookie",
+      "pool": "normal",
+      "definition": "Achievement",
+      "line": 13644
+    },
+    {
+      "name": "No more room in hell",
+      "pool": "normal",
+      "definition": "Achievement",
+      "line": 13647
+    },
+    {
+      "name": "In her likeness",
+      "pool": "shadow",
+      "definition": "Achievement",
+      "line": 13650
+    },
+    {
+      "name": "Wrinkler poker",
+      "pool": "normal",
+      "definition": "Achievement",
+      "line": 13653
+    },
+    {
+      "name": "Septcentennial",
+      "pool": "normal",
+      "definition": "Achievement",
+      "line": 13656
+    },
+    {
+      "name": "My own clone",
+      "pool": "normal",
+      "definition": "TieredAchievement",
+      "line": 13659
+    },
+    {
+      "name": "Multiplicity",
+      "pool": "normal",
+      "definition": "TieredAchievement",
+      "line": 13660
+    },
+    {
+      "name": "Born for this job",
+      "pool": "normal",
+      "definition": "TieredAchievement",
+      "line": 13661
+    },
+    {
+      "name": "Episode II",
+      "pool": "normal",
+      "definition": "TieredAchievement",
+      "line": 13662
+    },
+    {
+      "name": "Copy that",
+      "pool": "normal",
+      "definition": "TieredAchievement",
+      "line": 13663
+    },
+    {
+      "name": "Life finds a way",
+      "pool": "normal",
+      "definition": "TieredAchievement",
+      "line": 13664
+    },
+    {
+      "name": "Overcrowding",
+      "pool": "normal",
+      "definition": "TieredAchievement",
+      "line": 13665
+    },
+    {
+      "name": "Strength in numbers",
+      "pool": "normal",
+      "definition": "TieredAchievement",
+      "line": 13666
+    },
+    {
+      "name": "Army of me",
+      "pool": "normal",
+      "definition": "TieredAchievement",
+      "line": 13667
+    },
+    {
+      "name": "Know thyself",
+      "pool": "normal",
+      "definition": "TieredAchievement",
+      "line": 13668
+    },
+    {
+      "name": "Didn't make sense not to live",
+      "pool": "normal",
+      "definition": "TieredAchievement",
+      "line": 13669
+    },
+    {
+      "name": "Genetic bottleneck",
+      "pool": "normal",
+      "definition": "TieredAchievement",
+      "line": 13670
+    },
+    {
+      "name": "Despite everything, it's still you",
+      "pool": "normal",
+      "definition": "TieredAchievement",
+      "line": 13671
+    },
+    {
+      "name": "Everyone everywhere all at once",
+      "pool": "normal",
+      "definition": "TieredAchievement",
+      "line": 13672
+    },
+    {
+      "name": "Self-made",
+      "pool": "normal",
+      "definition": "ProductionAchievement",
+      "line": 13675
+    },
+    {
+      "name": "Reproducible results",
+      "pool": "normal",
+      "definition": "ProductionAchievement",
+      "line": 13676
+    },
+    {
+      "name": "That's all you",
+      "pool": "normal",
+      "definition": "ProductionAchievement",
+      "line": 13677
+    },
+    {
+      "name": "Self-improvement",
+      "pool": "normal",
+      "definition": "Achievement",
+      "line": 13679
+    },
+    {
+      "name": "And now you're even older",
+      "pool": "normal",
+      "definition": "TieredAchievement",
+      "line": 13681
+    },
+    {
+      "name": "Au naturel",
+      "pool": "normal",
+      "definition": "TieredAchievement",
+      "line": 13682
+    },
+    {
+      "name": "Dirt-rich",
+      "pool": "normal",
+      "definition": "TieredAchievement",
+      "line": 13683
+    },
+    {
+      "name": "Bots build bots",
+      "pool": "normal",
+      "definition": "TieredAchievement",
+      "line": 13684
+    },
+    {
+      "name": "Getting that bag",
+      "pool": "normal",
+      "definition": "TieredAchievement",
+      "line": 13685
+    },
+    {
+      "name": "The leader is good, the leader is great",
+      "pool": "normal",
+      "definition": "TieredAchievement",
+      "line": 13686
+    },
+    {
+      "name": "You don't think they could've used... it couldn't have been ma-",
+      "pool": "normal",
+      "definition": "TieredAchievement",
+      "line": 13687
+    },
+    {
+      "name": "Signed, sealed, delivered",
+      "pool": "normal",
+      "definition": "TieredAchievement",
+      "line": 13688
+    },
+    {
+      "name": "Sugar, spice, and everything nice",
+      "pool": "normal",
+      "definition": "TieredAchievement",
+      "line": 13689
+    },
+    {
+      "name": "Not even remotely close to Kansas anymore",
+      "pool": "normal",
+      "definition": "TieredAchievement",
+      "line": 13690
+    },
+    {
+      "name": "I only meant to stay a while",
+      "pool": "normal",
+      "definition": "TieredAchievement",
+      "line": 13691
+    },
+    {
+      "name": "Not 20 years away forever",
+      "pool": "normal",
+      "definition": "TieredAchievement",
+      "line": 13692
+    },
+    {
+      "name": "Bright side of the Moon",
+      "pool": "normal",
+      "definition": "TieredAchievement",
+      "line": 13693
+    },
+    {
+      "name": "Riding the Mersenne twister",
+      "pool": "normal",
+      "definition": "TieredAchievement",
+      "line": 13694
+    },
+    {
+      "name": "Divide and conquer",
+      "pool": "normal",
+      "definition": "TieredAchievement",
+      "line": 13695
+    },
+    {
+      "name": "Pebcakes",
+      "pool": "normal",
+      "definition": "TieredAchievement",
+      "line": 13696
+    },
+    {
+      "name": "Greener on the other sides",
+      "pool": "normal",
+      "definition": "TieredAchievement",
+      "line": 13697
+    },
+    {
+      "name": "Where is my mind",
+      "pool": "normal",
+      "definition": "TieredAchievement",
+      "line": 13698
+    },
+    {
+      "name": "Introspection",
+      "pool": "normal",
+      "definition": "TieredAchievement",
+      "line": 13699
+    },
+    {
+      "name": "Debt evasion",
+      "pool": "normal",
+      "definition": "Achievement",
+      "line": 13702
+    },
+    {
+      "name": "Oft we mar what's well",
+      "pool": "normal",
+      "definition": "Achievement",
+      "line": 13705
+    },
+    {
+      "name": "Cookie Clicker",
+      "pool": "normal",
+      "definition": "Achievement",
+      "line": 13708
+    },
+    {
+      "name": "What's not clicking",
+      "pool": "normal",
+      "definition": "Achievement",
+      "line": 13723
+    },
+    {
+      "name": "All on deck",
+      "pool": "normal",
+      "definition": "Achievement",
+      "line": 13725
+    },
+    {
+      "name": "A round of applause",
+      "pool": "normal",
+      "definition": "Achievement",
+      "line": 13726
+    }
+  ]
+}

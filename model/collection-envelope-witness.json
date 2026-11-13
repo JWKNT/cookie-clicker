@@ -1,0 +1,934 @@
+{
+  "schemaVersion": 1,
+  "status": "route-envelope-with-source-refinement-obligations",
+  "premises": {
+    "buildingAmountMaximum": 2000,
+    "buildingLevelMaximum": 12,
+    "soil": "dirt",
+    "heraldMaximum": 100,
+    "noDebugUpgradesOrMods": true,
+    "noDragonsFortuneOrRealityBending": true,
+    "resetCookieCapExponent": 1000,
+    "perEpochEarnedCapExponent": 940,
+    "prePrestigeRawCpsCapExponent": 400
+  },
+  "algebra": {
+    "gardenEffectBoost": "At most eight neighbors: (6/5)^8 < 8.",
+    "gardenPositiveEffect": "1 + 36*(4/100)*8 < 16; milk uses 2/1000 and is <2.",
+    "cookieFactorProduct": "At most248 factors <=5/4; (5/4)^248 < 2^83.",
+    "kittenFactorProduct": "Milk<26, milk multiplier<3, coefficient<=1/5: each factor<32;18 factors <=2^90.",
+    "ordinaryBuildingSum": "base<2^49;15tiers<4;5synergies<128;fortune<2;grandma factor<32;level<2;god<2;amount<2^11;20-way sum<2^5. Upper bound2^138.",
+    "buildingSumBudget": "The separate Cursor and Grandma formulas also fit2^140, including the additive egg9.",
+    "otherRawFactors": "Garden4bits,Herald1,ingredients5,Santa4,fortunes2,dragon-scale1,ascetic1,ages1,Santa-legacy1,eggs14,sugar1,Radiant2:37bits, budget40.",
+    "unroundedRawBudget": "140+83+90+40=353 exponent bits before the prestige factor.",
+    "roundingObligation": "Refine native arithmetic with total expansion <=2^47 to obtain the stated2^400 bound; the catalogue alone does not establish this.",
+    "resetBarrier": "For integer0<=old<=2^1000 and0<=earned<=2^940, binary64 integer rounding(old+earned)<=2^1000."
+  },
+  "earningPhases": {
+    "golden": {
+      "policyConditions": [
+        "1000 Cursors and at most700 of each other building",
+        "elderWrath0 and no research purchases",
+        "empty Garden",
+        "no dragon aura, no scorn god, no loans or sugar frenzy",
+        "golden switch off",
+        "click only timer-created leaders, with no big-cookie clicks or storm-drop clicks"
+      ],
+      "product": "101*71^19*7*2 <2^128: building buffs, Frenzy, and a conservative veil factor. Wrath and dragon buffs are absent under these conditions.",
+      "cpsCapExponent": 863,
+      "largestCredit": "Golden-lump harvest <=86400*CpS <2^880; Lucky and chain payouts have smaller source coefficients.",
+      "buffDrain": {
+        "durationMultiplierUpperCandidate": 2.4495818395400004,
+        "maximumFrenzySecondsCandidate": 189,
+        "conservativeSecondsPerLeader": 240,
+        "maximumDrainLogicFrames": 55994401,
+        "source": [
+          "main.js:5460-5478",
+          "main.js:13748-13825",
+          "main.js:13862-14005"
+        ],
+        "argument": "Native Get lucky2, Lasting fortune1.1, four1.01 factors and Decadence1.07 give the maximum duration multiplier with empty Garden and auras0. Every golden production/click effect lasts at most240 seconds per pop. Existing names add duration, not multiplicative CpS;7777 pops add at most55,994,400 integer frames. updateBuffs subtracts one each logic frame and deletes nonpositive timers.",
+        "open": "Refine the finite multiplier cases, allowed effect pool and native callback/frame schedule. Sugar blessing is excluded from the drain condition because it changes frequency only and can be renewed by later lumps."
+      },
+      "exit": "Wrath cookie and Eldeer have already been completed before this fresh wrath0 run. After7777 leaders, stop popping golden cookies and wait at most the stated drain-frame budget for golden-created production/click buffs to expire, then enter collection/refill. Do not wait for unrelated Sugar blessing. Reset-dependent Thick-skinned work must also precede this epoch."
+    },
+    "collection": {
+      "policyConditions": [
+        "do not pop further golden cookies, including Fortune-generated cookies",
+        "Easter drops use wrinklers only",
+        "only Diminish Ineptitude is cast",
+        "no Dragon Fortune or Reality Bending",
+        "Godzamok click multiplier<=2^53",
+        "at most1000 shares per market transaction",
+        "only a self-addressed one-cookie gift",
+        "no ascension after final collection begins unless abandoning the failed epoch"
+      ],
+      "cpsCapExponent": 741,
+      "clickCapExponent": 800,
+      "marketCreditCapExponent": 762,
+      "buildingRefundCapExponent": 500,
+      "wrinklerStorageCandidateCapExponent": 850,
+      "wrinklerPayoutCandidateCapExponent": 854,
+      "gardenCreditCapExponent": 755,
+      "open": "The wrinkler storage barrier and native rounding of all listed expressions require source refinement."
+    },
+    "counterInvariant": {
+      "ordinaryCreditCapExponent": 880,
+      "beforeChocolateCapExponent": 936,
+      "oneChocolateCreditCapExponent": 932,
+      "afterChocolateCapExponent": 938,
+      "argument": "Every ordinary credit preserves the applicable binary64 barrier, irrespective of the number of inputs. Refunds use earned=max(bank,earned). The one Chocolate egg purchase changes the barrier from2^936 to2^938. The end-earned bound2^940 then follows."
+    }
+  },
+  "retryReset": {
+    "source": [
+      "main.js:3492-3618",
+      "minigameGarden.js:M.reset",
+      "minigameMarket.js:M.reset"
+    ],
+    "discarded": [
+      "current non-prestige upgrade ownership except selected permanent slots",
+      "cookies and cookiesEarned",
+      "building amounts and highest counts",
+      "cookiesPsRawHighest",
+      "seasonUses",
+      "research and pledge state",
+      "dragon and Santa levels",
+      "market holdings and profit"
+    ],
+    "retained": [
+      "normal achievements",
+      "building levels",
+      "heavenly upgrades",
+      "previously unlocked Garden seed knowledge",
+      "historical access union"
+    ],
+    "program": "Leave permanent slots empty for this route. On a failed fixed-deadline epoch, ordinarily ascend and reincarnate, clear controller ownership caches, and rebuild current ownership from the new public snapshot. Test completion only against current ownership plus the separately defined historical-access union.",
+    "open": [
+      "Prove the complete reset/rebuild source transition preserves the route entry invariant",
+      "Do not count a discarded owned upgrade as completed after reset"
+    ]
+  },
+  "open": [
+    "Prove the native production expressions are bounded by the extracted catalogue algebra, including all binary64 rounding.",
+    "Bound every Earn, direct bank addition and earned=max(bank,earned) path during an epoch by2^940; a raw-CpS bound alone does not do this.",
+    "Prove a uniform funded rebuild reaches the chosen board without exceeding the epoch/frame bounds.",
+    "Compose the source reset and completion projection; current-upgrade ownership is not persistent."
+  ],
+  "sourceHashes": {
+    "main.js": "a8813ec2ee97edf5ebff6a3ce2037dcb65c08abd13c123bb92efda89b06ef4f7",
+    "minigameGarden.js": "184eacacd9325d493412dcda07f63d3a791939f83889b4349b6099d04be8e6c9",
+    "minigameMarket.js": "78538743673f3c1cd0e870a3695c77dcacd63febbe64b88f8a8fab9ea7e2863f",
+    "minigameGrimoire.js": "9efea1feb898dc9b719dd971bd27a71f083a8855b910013c524aea9b6d2a349d",
+    "minigamePantheon.js": "af08c31c4564d445cc2d1a7d101c4a63b57aa9b89991b93b8a65f4c0427573a0",
+    "base64.js": "875839c3e0c174c9358ce96923adfed6a6d2c090187a32deb35152dfac2c0e47",
+    "loc/EN.js": "ce48272a5fd5ab1f309dbb8fd7bd70188984ce14235a1d3d9215f3585101f433",
+    "index.html": "28488d9aef9bf31c4c023a0af01f0500a3b3e462b79bf7f2b09790025927a969"
+  },
+  "facts": {
+    "buildingTypes": 20,
+    "cookieFactors": 248,
+    "maximumFixedCookiePower": 13,
+    "functionalCookieFactors": 8,
+    "achievementDefinitions": 643,
+    "kittenPoolEntries": 18,
+    "grandmaSynergies": 18,
+    "maximumOrdinaryTiers": 15,
+    "maximumBuildingSynergies": 5,
+    "maximumOrdinaryBaseCps": 510000000000000
+  },
+  "functionalCookies": [
+    {
+      "name": "Pure heart biscuits",
+      "functionSha256": "9c187924f9de3b7e6a648ae6067b840120b79c7ade2bdba1372d93b67b74f8e4",
+      "upperPower": 3.9,
+      "justification": "3 from Starlove, multiplied by at most1.3 from Selebrak"
+    },
+    {
+      "name": "Ardent heart biscuits",
+      "functionSha256": "9c187924f9de3b7e6a648ae6067b840120b79c7ade2bdba1372d93b67b74f8e4",
+      "upperPower": 3.9,
+      "justification": "3 from Starlove, multiplied by at most1.3 from Selebrak"
+    },
+    {
+      "name": "Sour heart biscuits",
+      "functionSha256": "9c187924f9de3b7e6a648ae6067b840120b79c7ade2bdba1372d93b67b74f8e4",
+      "upperPower": 3.9,
+      "justification": "3 from Starlove, multiplied by at most1.3 from Selebrak"
+    },
+    {
+      "name": "Weeping heart biscuits",
+      "functionSha256": "9c187924f9de3b7e6a648ae6067b840120b79c7ade2bdba1372d93b67b74f8e4",
+      "upperPower": 3.9,
+      "justification": "3 from Starlove, multiplied by at most1.3 from Selebrak"
+    },
+    {
+      "name": "Golden heart biscuits",
+      "functionSha256": "9c187924f9de3b7e6a648ae6067b840120b79c7ade2bdba1372d93b67b74f8e4",
+      "upperPower": 3.9,
+      "justification": "3 from Starlove, multiplied by at most1.3 from Selebrak"
+    },
+    {
+      "name": "Eternal heart biscuits",
+      "functionSha256": "9c187924f9de3b7e6a648ae6067b840120b79c7ade2bdba1372d93b67b74f8e4",
+      "upperPower": 3.9,
+      "justification": "3 from Starlove, multiplied by at most1.3 from Selebrak"
+    },
+    {
+      "name": "Sugar crystal cookies",
+      "functionSha256": "e59f63bc5643580404c11d0ec64ca03d1af9854bc63f9bd6b9d491022d59f891",
+      "upperPower": 25,
+      "justification": "5 plus at most20 building types"
+    },
+    {
+      "name": "Prism heart biscuits",
+      "functionSha256": "9c187924f9de3b7e6a648ae6067b840120b79c7ade2bdba1372d93b67b74f8e4",
+      "upperPower": 3.9,
+      "justification": "3 from Starlove, multiplied by at most1.3 from Selebrak"
+    }
+  ],
+  "buildings": [
+    {
+      "id": 0,
+      "name": "Cursor",
+      "baseCps": null,
+      "ordinaryTierCount": 0,
+      "synergyCount": 1,
+      "cpsFunctionSha256": "10fc5336d3356c66deb2036dafa3d281923dcd2d69d1262c9af0d954c3cea901"
+    },
+    {
+      "id": 1,
+      "name": "Grandma",
+      "baseCps": 1,
+      "ordinaryTierCount": 15,
+      "synergyCount": 1,
+      "cpsFunctionSha256": "c9382345b9ced9ddd9631a17fdc19a233a410d243184bb06180bfe8acd3b6ccb"
+    },
+    {
+      "id": 2,
+      "name": "Farm",
+      "baseCps": 8,
+      "ordinaryTierCount": 15,
+      "synergyCount": 5,
+      "cpsFunctionSha256": "bd80be65708ff53b53942d80935c2f3f38a5a3593dd268b5c95cf44deeec7384"
+    },
+    {
+      "id": 3,
+      "name": "Mine",
+      "baseCps": 47,
+      "ordinaryTierCount": 15,
+      "synergyCount": 5,
+      "cpsFunctionSha256": "bd80be65708ff53b53942d80935c2f3f38a5a3593dd268b5c95cf44deeec7384"
+    },
+    {
+      "id": 4,
+      "name": "Factory",
+      "baseCps": 260,
+      "ordinaryTierCount": 15,
+      "synergyCount": 4,
+      "cpsFunctionSha256": "bd80be65708ff53b53942d80935c2f3f38a5a3593dd268b5c95cf44deeec7384"
+    },
+    {
+      "id": 5,
+      "name": "Bank",
+      "baseCps": 1400,
+      "ordinaryTierCount": 15,
+      "synergyCount": 4,
+      "cpsFunctionSha256": "bd80be65708ff53b53942d80935c2f3f38a5a3593dd268b5c95cf44deeec7384"
+    },
+    {
+      "id": 6,
+      "name": "Temple",
+      "baseCps": 7800,
+      "ordinaryTierCount": 15,
+      "synergyCount": 5,
+      "cpsFunctionSha256": "bd80be65708ff53b53942d80935c2f3f38a5a3593dd268b5c95cf44deeec7384"
+    },
+    {
+      "id": 7,
+      "name": "Wizard tower",
+      "baseCps": 44000,
+      "ordinaryTierCount": 15,
+      "synergyCount": 4,
+      "cpsFunctionSha256": "bd80be65708ff53b53942d80935c2f3f38a5a3593dd268b5c95cf44deeec7384"
+    },
+    {
+      "id": 8,
+      "name": "Shipment",
+      "baseCps": 260000,
+      "ordinaryTierCount": 15,
+      "synergyCount": 4,
+      "cpsFunctionSha256": "bd80be65708ff53b53942d80935c2f3f38a5a3593dd268b5c95cf44deeec7384"
+    },
+    {
+      "id": 9,
+      "name": "Alchemy lab",
+      "baseCps": 1600000,
+      "ordinaryTierCount": 15,
+      "synergyCount": 4,
+      "cpsFunctionSha256": "bd80be65708ff53b53942d80935c2f3f38a5a3593dd268b5c95cf44deeec7384"
+    },
+    {
+      "id": 10,
+      "name": "Portal",
+      "baseCps": 10000000,
+      "ordinaryTierCount": 15,
+      "synergyCount": 5,
+      "cpsFunctionSha256": "bd80be65708ff53b53942d80935c2f3f38a5a3593dd268b5c95cf44deeec7384"
+    },
+    {
+      "id": 11,
+      "name": "Time machine",
+      "baseCps": 65000000,
+      "ordinaryTierCount": 15,
+      "synergyCount": 5,
+      "cpsFunctionSha256": "bd80be65708ff53b53942d80935c2f3f38a5a3593dd268b5c95cf44deeec7384"
+    },
+    {
+      "id": 12,
+      "name": "Antimatter condenser",
+      "baseCps": 430000000,
+      "ordinaryTierCount": 15,
+      "synergyCount": 5,
+      "cpsFunctionSha256": "bd80be65708ff53b53942d80935c2f3f38a5a3593dd268b5c95cf44deeec7384"
+    },
+    {
+      "id": 13,
+      "name": "Prism",
+      "baseCps": 2900000000,
+      "ordinaryTierCount": 15,
+      "synergyCount": 5,
+      "cpsFunctionSha256": "bd80be65708ff53b53942d80935c2f3f38a5a3593dd268b5c95cf44deeec7384"
+    },
+    {
+      "id": 14,
+      "name": "Chancemaker",
+      "baseCps": 21000000000,
+      "ordinaryTierCount": 15,
+      "synergyCount": 3,
+      "cpsFunctionSha256": "bd80be65708ff53b53942d80935c2f3f38a5a3593dd268b5c95cf44deeec7384"
+    },
+    {
+      "id": 15,
+      "name": "Fractal engine",
+      "baseCps": 150000000000,
+      "ordinaryTierCount": 15,
+      "synergyCount": 3,
+      "cpsFunctionSha256": "bd80be65708ff53b53942d80935c2f3f38a5a3593dd268b5c95cf44deeec7384"
+    },
+    {
+      "id": 16,
+      "name": "Javascript console",
+      "baseCps": 1100000000000,
+      "ordinaryTierCount": 15,
+      "synergyCount": 3,
+      "cpsFunctionSha256": "bd80be65708ff53b53942d80935c2f3f38a5a3593dd268b5c95cf44deeec7384"
+    },
+    {
+      "id": 17,
+      "name": "Idleverse",
+      "baseCps": 8300000000000,
+      "ordinaryTierCount": 15,
+      "synergyCount": 2,
+      "cpsFunctionSha256": "bd80be65708ff53b53942d80935c2f3f38a5a3593dd268b5c95cf44deeec7384"
+    },
+    {
+      "id": 18,
+      "name": "Cortex baker",
+      "baseCps": 64000000000000,
+      "ordinaryTierCount": 15,
+      "synergyCount": 2,
+      "cpsFunctionSha256": "bd80be65708ff53b53942d80935c2f3f38a5a3593dd268b5c95cf44deeec7384"
+    },
+    {
+      "id": 19,
+      "name": "You",
+      "baseCps": 510000000000000,
+      "ordinaryTierCount": 15,
+      "synergyCount": 2,
+      "cpsFunctionSha256": "bd80be65708ff53b53942d80935c2f3f38a5a3593dd268b5c95cf44deeec7384"
+    }
+  ],
+  "arithmeticChecks": {
+    "cookieProduct": true,
+    "gardenBoost": true,
+    "gardenPositiveEffect": true,
+    "gardenMilk": true,
+    "kittenSingle": true,
+    "ordinarySumBits": true,
+    "rawBudget": true,
+    "resetCapNativeAddition": true,
+    "resetCapFinite": true,
+    "epochClockRoom": true
+  },
+  "sourceFunctions": {
+    "CalculateGains": "b208165a59abd009f4bc2520b343b5e6f019ca7d407ac134d2383e1db88e05a6",
+    "GetTieredCpsMult": "a3468657748c423731cde5c1376096d60a787516450d19c133e76263da834369",
+    "GetHeavenlyMultiplier": "0737f632f10b30acc5cf615f194ea01869f1e815d4114fe6cda684cf5cf68733",
+    "ComputeCps": "e20ee2b18c0cae91f9fd37e01979912c5f9f90197bf3bf883d2a529ea33d0890",
+    "Reset": "ff68b9795653bb21e7b66dbb8b4278792f1541391db13edd2656f4f0f51c437b",
+    "gainBuff": "88b1cec233024578b03f5fcb0a374128abba5b4fcdabf61e723492a96989ea32",
+    "updateBuffs": "be55d31fb9c4319158cc166972831851a29f7f86e2c6c47f620cf61a999538dc"
+  },
+  "resetProbe": {
+    "scope": "native-reset-implication-from-explicit-entry-premises",
+    "sourceHashes": {
+      "main.js": "a8813ec2ee97edf5ebff6a3ce2037dcb65c08abd13c123bb92efda89b06ef4f7",
+      "minigameGarden.js": "184eacacd9325d493412dcda07f63d3a791939f83889b4349b6099d04be8e6c9",
+      "minigameMarket.js": "78538743673f3c1cd0e870a3695c77dcacd63febbe64b88f8a8fab9ea7e2863f",
+      "minigameGrimoire.js": "9efea1feb898dc9b719dd971bd27a71f083a8855b910013c524aea9b6d2a349d",
+      "minigamePantheon.js": "af08c31c4564d445cc2d1a7d101c4a63b57aa9b89991b93b8a65f4c0427573a0",
+      "base64.js": "875839c3e0c174c9358ce96923adfed6a6d2c090187a32deb35152dfac2c0e47",
+      "loc/EN.js": "ce48272a5fd5ab1f309dbb8fd7bd70188984ce14235a1d3d9215f3585101f433",
+      "index.html": "28488d9aef9bf31c4c023a0af01f0500a3b3e462b79bf7f2b09790025927a969"
+    },
+    "premises": [
+      "bank and earned2^90 after normal startup",
+      "136 spendable lumps after lump activation",
+      "Thumbcorn seed unlocked before reset"
+    ],
+    "before": {
+      "currentOwned": true,
+      "legacyOwned": false,
+      "clickAchievement": true,
+      "levels": {
+        "Cursor": 12,
+        "Farm": 10,
+        "Temple": 1,
+        "Wizard tower": 1,
+        "Bank": 1
+      },
+      "amounts": {
+        "Cursor": 1,
+        "Farm": 1,
+        "Temple": 1,
+        "Wizard tower": 1,
+        "Bank": 1
+      },
+      "thumbcornUnlocked": true,
+      "seasonUses": 0,
+      "santaLevel": 0,
+      "dragonLevel": 0,
+      "rawCpsHighest": 53740.912,
+      "cookiesReset": 0,
+      "lumps": 0,
+      "onAscend": false
+    },
+    "after": {
+      "currentOwned": false,
+      "legacyOwned": true,
+      "clickAchievement": true,
+      "levels": {
+        "Cursor": 12,
+        "Farm": 10,
+        "Temple": 1,
+        "Wizard tower": 1,
+        "Bank": 1
+      },
+      "amounts": {
+        "Cursor": 0,
+        "Farm": 0,
+        "Temple": 0,
+        "Wizard tower": 0,
+        "Bank": 0
+      },
+      "thumbcornUnlocked": true,
+      "seasonUses": 0,
+      "santaLevel": 0,
+      "dragonLevel": 0,
+      "rawCpsHighest": 0,
+      "cookiesReset": 1.2379400392853803e+27,
+      "lumps": 0,
+      "onAscend": false
+    },
+    "rebuiltOwnership": {
+      "Reinforced index finger": false,
+      "Legacy": true
+    },
+    "actionCount": 39,
+    "actionsSha256": "07981262b802837d72325ae989ba9fab4d44667cbe5bdcb0ecfaea1e4c95d600"
+  },
+  "marketOfficeTailProbe": {
+    "scope": "synthetic-native-market-DOM-reset-implication",
+    "sourceHashes": {
+      "main.js": "a8813ec2ee97edf5ebff6a3ce2037dcb65c08abd13c123bb92efda89b06ef4f7",
+      "minigameGarden.js": "184eacacd9325d493412dcda07f63d3a791939f83889b4349b6099d04be8e6c9",
+      "minigameMarket.js": "78538743673f3c1cd0e870a3695c77dcacd63febbe64b88f8a8fab9ea7e2863f",
+      "minigameGrimoire.js": "9efea1feb898dc9b719dd971bd27a71f083a8855b910013c524aea9b6d2a349d",
+      "minigamePantheon.js": "af08c31c4564d445cc2d1a7d101c4a63b57aa9b89991b93b8a65f4c0427573a0",
+      "base64.js": "875839c3e0c174c9358ce96923adfed6a6d2c090187a32deb35152dfac2c0e47",
+      "loc/EN.js": "ce48272a5fd5ab1f309dbb8fd7bd70188984ce14235a1d3d9215f3585101f433",
+      "index.html": "28488d9aef9bf31c4c023a0af01f0500a3b3e462b79bf7f2b09790025927a969"
+    },
+    "premises": [
+      "bank and earned2^90 after normal startup",
+      "one lump to open the Bank minigame",
+      "office level5 or4 is an assigned entry condition",
+      "drawT2^53 is an assigned saturation condition"
+    ],
+    "cases": [
+      {
+        "before": {
+          "officeLevel": 5,
+          "display": "none"
+        },
+        "after": {
+          "officeLevel": 0,
+          "display": "none",
+          "drawT": 9007199254740992,
+          "drawTModulo10": 2
+        }
+      },
+      {
+        "before": {
+          "officeLevel": 4,
+          "display": null
+        },
+        "after": {
+          "officeLevel": 0,
+          "display": null,
+          "drawT": 9007199254740992,
+          "drawTModulo10": 2
+        }
+      }
+    ],
+    "doesNotProve": [
+      "new-save reachability of the assigned states",
+      "a browser hit-test",
+      "global nonattainment"
+    ],
+    "routeRepair": "Use office4 and750 highest of each goods building for storage>=1000. Defer office5 until the final deterministic completion step, so failed epochs never hide the office upgrade button."
+  },
+  "earnSiteAudit": {
+    "scope": "direct-AST-income-site-inventory-not-callback-bound-proof",
+    "sourceHashes": {
+      "main.js": "a8813ec2ee97edf5ebff6a3ce2037dcb65c08abd13c123bb92efda89b06ef4f7",
+      "minigameGarden.js": "184eacacd9325d493412dcda07f63d3a791939f83889b4349b6099d04be8e6c9",
+      "minigameMarket.js": "78538743673f3c1cd0e870a3695c77dcacd63febbe64b88f8a8fab9ea7e2863f",
+      "minigameGrimoire.js": "9efea1feb898dc9b719dd971bd27a71f083a8855b910013c524aea9b6d2a349d",
+      "minigamePantheon.js": "af08c31c4564d445cc2d1a7d101c4a63b57aa9b89991b93b8a65f4c0427573a0",
+      "base64.js": "875839c3e0c174c9358ce96923adfed6a6d2c090187a32deb35152dfac2c0e47",
+      "loc/EN.js": "ce48272a5fd5ab1f309dbb8fd7bd70188984ce14235a1d3d9215f3585101f433",
+      "index.html": "28488d9aef9bf31c4c023a0af01f0500a3b3e462b79bf7f2b09790025927a969"
+    },
+    "earnCalls": 22,
+    "counterWrites": 19,
+    "sites": [
+      {
+        "filename": "main.js",
+        "line": 2022,
+        "sourceStart": 108118,
+        "sourceEnd": 108138,
+        "kind": "counter-write",
+        "expression": "Game.cookiesEarned=0",
+        "expressionSha256": "18179728acffdf47eee4f17bb671af1c31e64f4212c273b4b0f3d3895a4e8279",
+        "treatment": "zero initialization/reset or NaN recovery; adds no positive cookies"
+      },
+      {
+        "filename": "main.js",
+        "line": 2023,
+        "sourceStart": 108179,
+        "sourceEnd": 108193,
+        "kind": "counter-write",
+        "expression": "Game.cookies=0",
+        "expressionSha256": "55977ab1aad34cf93477ad11e6596978b6dd6b4c52b38a087dc4ff111f7a8945",
+        "treatment": "zero initialization/reset or NaN recovery; adds no positive cookies"
+      },
+      {
+        "filename": "main.js",
+        "line": 3009,
+        "sourceStart": 152953,
+        "sourceEnd": 152984,
+        "kind": "counter-write",
+        "expression": "Game.cookies=parseFloat(spl[0])",
+        "expressionSha256": "7023c39328e45dfd4c3bb0d2d2a3acb9c1370c8b3574525992d5947da741f7ce",
+        "treatment": "save parsing: only empty new-save startup; no load/reload retry"
+      },
+      {
+        "filename": "main.js",
+        "line": 3010,
+        "sourceStart": 152993,
+        "sourceEnd": 153030,
+        "kind": "counter-write",
+        "expression": "Game.cookiesEarned=parseFloat(spl[1])",
+        "expressionSha256": "c90d6e984dfe990e2ef550a90ed6597b4980e5615b30de92e4bd0bc8b237296f",
+        "treatment": "save parsing: only empty new-save startup; no load/reload retry"
+      },
+      {
+        "filename": "main.js",
+        "line": 3369,
+        "sourceStart": 167782,
+        "sourceEnd": 167799,
+        "kind": "Earn-call",
+        "expression": "Game.Earn(amount)",
+        "expressionSha256": "511db8f73f1711a7e636f4fbbe7e828e90b13b07d8323738bb5787cefca51efa",
+        "treatment": "offline save-load reward: absent after the empty new-save startup; no reload in this route"
+      },
+      {
+        "filename": "main.js",
+        "line": 3497,
+        "sourceStart": 173221,
+        "sourceEnd": 173235,
+        "kind": "counter-write",
+        "expression": "Game.cookies=0",
+        "expressionSha256": "55977ab1aad34cf93477ad11e6596978b6dd6b4c52b38a087dc4ff111f7a8945",
+        "treatment": "zero initialization/reset or NaN recovery; adds no positive cookies"
+      },
+      {
+        "filename": "main.js",
+        "line": 3498,
+        "sourceStart": 173241,
+        "sourceEnd": 173261,
+        "kind": "counter-write",
+        "expression": "Game.cookiesEarned=0",
+        "expressionSha256": "18179728acffdf47eee4f17bb671af1c31e64f4212c273b4b0f3d3895a4e8279",
+        "treatment": "zero initialization/reset or NaN recovery; adds no positive cookies"
+      },
+      {
+        "filename": "main.js",
+        "line": 4496,
+        "sourceStart": 218803,
+        "sourceEnd": 218860,
+        "kind": "Earn-call",
+        "expression": "Game.Earn(Math.min(Game.cookiesPs*60*60*24,Game.cookies))",
+        "expressionSha256": "4b679fe4c41ee577af9ec1d89656a634a78c301fdc0a2c9c69ac424d56a2305d",
+        "treatment": "golden lump: reward <=86400*currentCpS; no more than one natural harvest per second"
+      },
+      {
+        "filename": "main.js",
+        "line": 4657,
+        "sourceStart": 224738,
+        "sourceEnd": 224759,
+        "kind": "counter-write",
+        "expression": "Game.cookies+=howmuch",
+        "expressionSha256": "3d30891508dd8199789d4415fcf66e2568b8039e13ac9ed254faf6f2cbfc2c5e",
+        "treatment": "Game.Earn primitive: each classified credit must preserve the active native counter barrier; do not replace repeated rounded addition by an exact aggregate sum"
+      },
+      {
+        "filename": "main.js",
+        "line": 4658,
+        "sourceStart": 224765,
+        "sourceEnd": 224792,
+        "kind": "counter-write",
+        "expression": "Game.cookiesEarned+=howmuch",
+        "expressionSha256": "419ebf833e0926ef72a482d399b37fcb68cd573e7982bcdb1cd73a6b16c23e2f",
+        "treatment": "Game.Earn primitive: each classified credit must preserve the active native counter barrier; do not replace repeated rounded addition by an exact aggregate sum"
+      },
+      {
+        "filename": "main.js",
+        "line": 4662,
+        "sourceStart": 224840,
+        "sourceEnd": 224861,
+        "kind": "counter-write",
+        "expression": "Game.cookies-=howmuch",
+        "expressionSha256": "3b29790d54b8303e8e77e859757675e463515a6370a55e4c160f0b204870339f",
+        "treatment": "spend/dissolve: no positive increment for nonnegative amounts"
+      },
+      {
+        "filename": "main.js",
+        "line": 4666,
+        "sourceStart": 224912,
+        "sourceEnd": 224933,
+        "kind": "counter-write",
+        "expression": "Game.cookies-=howmuch",
+        "expressionSha256": "3b29790d54b8303e8e77e859757675e463515a6370a55e4c160f0b204870339f",
+        "treatment": "spend/dissolve: no positive increment for nonnegative amounts"
+      },
+      {
+        "filename": "main.js",
+        "line": 4667,
+        "sourceStart": 224939,
+        "sourceEnd": 224966,
+        "kind": "counter-write",
+        "expression": "Game.cookiesEarned-=howmuch",
+        "expressionSha256": "a589db52a3570c72ecaabac7f6e439e93ff2aa4ff3f91ae022a245c1640c4702",
+        "treatment": "spend/dissolve: no positive increment for nonnegative amounts"
+      },
+      {
+        "filename": "main.js",
+        "line": 4668,
+        "sourceStart": 224972,
+        "sourceEnd": 225009,
+        "kind": "counter-write",
+        "expression": "Game.cookies=Math.max(0,Game.cookies)",
+        "expressionSha256": "3ba0e947fb4ed5e78b6e08465e1fb671559989d0e087502b335afd7e72d7225b",
+        "treatment": "spend/dissolve: no positive increment for nonnegative amounts"
+      },
+      {
+        "filename": "main.js",
+        "line": 4669,
+        "sourceStart": 225015,
+        "sourceEnd": 225064,
+        "kind": "counter-write",
+        "expression": "Game.cookiesEarned=Math.max(0,Game.cookiesEarned)",
+        "expressionSha256": "136b92d84e4a060906154803de858d35f9c0e8924756c79f979c36463e84354d",
+        "treatment": "spend/dissolve: no positive increment for nonnegative amounts"
+      },
+      {
+        "filename": "main.js",
+        "line": 4780,
+        "sourceStart": 229247,
+        "sourceEnd": 229264,
+        "kind": "Earn-call",
+        "expression": "Game.Earn(amount)",
+        "expressionSha256": "511db8f73f1711a7e636f4fbbe7e828e90b13b07d8323738bb5787cefca51efa",
+        "treatment": "big-cookie click: only during the bounded refill phase after golden buffs expire"
+      },
+      {
+        "filename": "main.js",
+        "line": 5537,
+        "sourceStart": 257776,
+        "sourceEnd": 257791,
+        "kind": "Earn-call",
+        "expression": "Game.Earn(moni)",
+        "expressionSha256": "e2729d4b6fe8af5c16cef81e1a2a2cfd6898397d149af5deda9671c2ebf7da89",
+        "treatment": "Lucky: <=900*currentCpS*effectMultiplier+13, at most7777 leader pops"
+      },
+      {
+        "filename": "main.js",
+        "line": 5591,
+        "sourceStart": 260239,
+        "sourceEnd": 260254,
+        "kind": "Earn-call",
+        "expression": "Game.Earn(moni)",
+        "expressionSha256": "e2729d4b6fe8af5c16cef81e1a2a2cfd6898397d149af5deda9671c2ebf7da89",
+        "treatment": "chain: <=max(7,21600*currentCpS*effectMultiplier), included in7777 leader pops"
+      },
+      {
+        "filename": "main.js",
+        "line": 5600,
+        "sourceStart": 260639,
+        "sourceEnd": 260654,
+        "kind": "Earn-call",
+        "expression": "Game.Earn(moni)",
+        "expressionSha256": "e2729d4b6fe8af5c16cef81e1a2a2cfd6898397d149af5deda9671c2ebf7da89",
+        "treatment": "storm drop: ignored by this route; only timer-created leaders are clicked"
+      },
+      {
+        "filename": "main.js",
+        "line": 5793,
+        "sourceStart": 267678,
+        "sourceEnd": 267693,
+        "kind": "Earn-call",
+        "expression": "Game.Earn(moni)",
+        "expressionSha256": "e2729d4b6fe8af5c16cef81e1a2a2cfd6898397d149af5deda9671c2ebf7da89",
+        "treatment": "reindeer: <=max(25,60*currentCpS)*2*GardenReindeerGain; the frosting and Garden factors multiply the25-cookie floor too; at most200 per successful epoch"
+      },
+      {
+        "filename": "main.js",
+        "line": 7646,
+        "sourceStart": 378207,
+        "sourceEnd": 378261,
+        "kind": "Earn-call",
+        "expression": "Game.Earn(Math.min(Game.cookiesPs*60*60,Game.cookies))",
+        "expressionSha256": "bae774818afad66388b12ff26b6aed7e2a5ac1944c99a95d18912b9fa454a545",
+        "treatment": "fortune CpS: <=3600*currentCpS; consumed at most once per epoch"
+      },
+      {
+        "filename": "main.js",
+        "line": 7873,
+        "sourceStart": 385562,
+        "sourceEnd": 385581,
+        "kind": "counter-write",
+        "expression": "Game.cookies+=price",
+        "expressionSha256": "6f08f28f5f25bd95accd35d0b45618d0e911eaea5d299d2e24fab0acb0cdbdb0",
+        "treatment": "building sale: every refund<=2^500 under the route board bound, followed by earned=max(bank,earned); native counter barriers handle any finite number of Godzamok cycles"
+      },
+      {
+        "filename": "main.js",
+        "line": 7874,
+        "sourceStart": 385590,
+        "sourceEnd": 385650,
+        "kind": "counter-write",
+        "expression": "Game.cookiesEarned=Math.max(Game.cookies,Game.cookiesEarned)",
+        "expressionSha256": "d653dbb97e0a96b3da40773d2298d7f4a2edf1cf00fd99f07505172d2711aa9b",
+        "treatment": "building sale: every refund<=2^500 under the route board bound, followed by earned=max(bank,earned); native counter barriers handle any finite number of Godzamok cycles"
+      },
+      {
+        "filename": "main.js",
+        "line": 10402,
+        "sourceStart": 531247,
+        "sourceEnd": 531265,
+        "kind": "Earn-call",
+        "expression": "Game.Earn(cookies)",
+        "expressionSha256": "73adefd970ed3a4d3aa70afb125d2ae657c1f41cf55c6700e2c0c4311edf5c79",
+        "treatment": "Chocolate egg: one multiplicative bank increment<=0.05*bank after purchase"
+      },
+      {
+        "filename": "main.js",
+        "line": 12036,
+        "sourceStart": 720222,
+        "sourceEnd": 720244,
+        "kind": "Earn-call",
+        "expression": "Game.Earn(out.cookies)",
+        "expressionSha256": "17c86c66e0b5454906acf7a7251a28c8769179310d377f7c2d7345e5748ad000",
+        "treatment": "gift: only the displayed self-addressed one-cookie gift is redeemed"
+      },
+      {
+        "filename": "main.js",
+        "line": 14513,
+        "sourceStart": 857000,
+        "sourceEnd": 857020,
+        "kind": "Earn-call",
+        "expression": "Game.Earn(me.sucked)",
+        "expressionSha256": "5ebf72780f601d78bc2fec77cfb6e6ec56353bd42fd34f1adb239dcefa931be1",
+        "treatment": "wrinkler: stored counter receives <=currentCpS/30 per frame, rounds below its candidate2^850 barrier, and is multiplied by digestive factors with product<8 before payout; source refinement remains open"
+      },
+      {
+        "filename": "main.js",
+        "line": 15894,
+        "sourceStart": 914113,
+        "sourceEnd": 914154,
+        "kind": "Earn-call",
+        "expression": "Game.Earn(999999999999999999999999999999)",
+        "expressionSha256": "6e519c2b7d08af6f571ae718ec881c5d1f45745b139ff03e767951ff271c953c",
+        "treatment": "debug reward: unavailable under the no-debug route premise"
+      },
+      {
+        "filename": "main.js",
+        "line": 16275,
+        "sourceStart": 929720,
+        "sourceEnd": 929754,
+        "kind": "Earn-call",
+        "expression": "Game.Earn(Game.cookiesPs/Game.fps)",
+        "expressionSha256": "13db0dca10ef2e0e5ea5b50fa81520ce84bbc26de0f08305c2e43d75030b2fab",
+        "treatment": "passive income: one currentCpS/30 addition per native logic frame"
+      },
+      {
+        "filename": "main.js",
+        "line": 16317,
+        "sourceStart": 931620,
+        "sourceEnd": 931640,
+        "kind": "counter-write",
+        "expression": "Game.cookiesEarned=0",
+        "expressionSha256": "18179728acffdf47eee4f17bb671af1c31e64f4212c273b4b0f3d3895a4e8279",
+        "treatment": "zero initialization/reset or NaN recovery; adds no positive cookies"
+      },
+      {
+        "filename": "main.js",
+        "line": 16317,
+        "sourceStart": 931605,
+        "sourceEnd": 931619,
+        "kind": "counter-write",
+        "expression": "Game.cookies=0",
+        "expressionSha256": "55977ab1aad34cf93477ad11e6596978b6dd6b4c52b38a087dc4ff111f7a8945",
+        "treatment": "zero initialization/reset or NaN recovery; adds no positive cookies"
+      },
+      {
+        "filename": "main.js",
+        "line": 16487,
+        "sourceStart": 941467,
+        "sourceEnd": 941479,
+        "kind": "Earn-call",
+        "expression": "Game.Earn(1)",
+        "expressionSha256": "50d677b5551cfb0a4181757637e72fb1f2e417de623a26fcae9816b5237a2e2f",
+        "treatment": "You win a cookie: one cookie, only once for the persistent achievement"
+      },
+      {
+        "filename": "minigameGarden.js",
+        "line": 148,
+        "sourceStart": 5694,
+        "sourceEnd": 5709,
+        "kind": "Earn-call",
+        "expression": "Game.Earn(moni)",
+        "expressionSha256": "e2729d4b6fe8af5c16cef81e1a2a2cfd6898397d149af5deda9671c2ebf7da89",
+        "treatment": "Bakeberry harvest: <=1800*currentCpS"
+      },
+      {
+        "filename": "minigameGarden.js",
+        "line": 174,
+        "sourceStart": 6706,
+        "sourceEnd": 6721,
+        "kind": "Earn-call",
+        "expression": "Game.Earn(moni)",
+        "expressionSha256": "e2729d4b6fe8af5c16cef81e1a2a2cfd6898397d149af5deda9671c2ebf7da89",
+        "treatment": "Chocoroot harvest: <=180*currentCpS"
+      },
+      {
+        "filename": "minigameGarden.js",
+        "line": 199,
+        "sourceStart": 7643,
+        "sourceEnd": 7658,
+        "kind": "Earn-call",
+        "expression": "Game.Earn(moni)",
+        "expressionSha256": "e2729d4b6fe8af5c16cef81e1a2a2cfd6898397d149af5deda9671c2ebf7da89",
+        "treatment": "White chocoroot harvest: <=180*currentCpS"
+      },
+      {
+        "filename": "minigameGarden.js",
+        "line": 350,
+        "sourceStart": 13387,
+        "sourceEnd": 13402,
+        "kind": "Earn-call",
+        "expression": "Game.Earn(moni)",
+        "expressionSha256": "e2729d4b6fe8af5c16cef81e1a2a2cfd6898397d149af5deda9671c2ebf7da89",
+        "treatment": "Queenbeet harvest: <=3600*currentCpS"
+      },
+      {
+        "filename": "minigameGarden.js",
+        "line": 397,
+        "sourceStart": 15169,
+        "sourceEnd": 15184,
+        "kind": "Earn-call",
+        "expression": "Game.Earn(moni)",
+        "expressionSha256": "e2729d4b6fe8af5c16cef81e1a2a2cfd6898397d149af5deda9671c2ebf7da89",
+        "treatment": "Duketater harvest: <=7200*currentCpS"
+      },
+      {
+        "filename": "minigameGarden.js",
+        "line": 424,
+        "sourceStart": 16167,
+        "sourceEnd": 16182,
+        "kind": "Earn-call",
+        "expression": "Game.Earn(moni)",
+        "expressionSha256": "e2729d4b6fe8af5c16cef81e1a2a2cfd6898397d149af5deda9671c2ebf7da89",
+        "treatment": "Crumbspore death: <=60*currentCpS; at most36 deaths per Garden tick"
+      },
+      {
+        "filename": "minigameGarden.js",
+        "line": 449,
+        "sourceStart": 17110,
+        "sourceEnd": 17125,
+        "kind": "Earn-call",
+        "expression": "Game.Earn(moni)",
+        "expressionSha256": "e2729d4b6fe8af5c16cef81e1a2a2cfd6898397d149af5deda9671c2ebf7da89",
+        "treatment": "Doughshroom death: <=300*currentCpS; at most36 deaths per Garden tick"
+      },
+      {
+        "filename": "minigameGrimoire.js",
+        "line": 23,
+        "sourceStart": 645,
+        "sourceEnd": 659,
+        "kind": "Earn-call",
+        "expression": "Game.Earn(val)",
+        "expressionSha256": "367c7f039880396dceda01cf670b7cb806135c92d2e2621c18e6af9444f65ac7",
+        "treatment": "Conjure baked goods: not cast; this route uses only Diminish Ineptitude"
+      },
+      {
+        "filename": "minigameMarket.js",
+        "line": 252,
+        "sourceStart": 15442,
+        "sourceEnd": 15490,
+        "kind": "counter-write",
+        "expression": "Game.cookies+=Game.cookiesPsRawHighest*costInS*n",
+        "expressionSha256": "35be5dc90633f7591a301df328ad2466a83a66df139dee524ecfcb9d720190dc",
+        "treatment": "market sale: <=rawCpSHighest*250180*1000 per trade, followed by earned=max(bank,earned)"
+      },
+      {
+        "filename": "minigameMarket.js",
+        "line": 253,
+        "sourceStart": 15497,
+        "sourceEnd": 15557,
+        "kind": "counter-write",
+        "expression": "Game.cookiesEarned=Math.max(Game.cookies,Game.cookiesEarned)",
+        "expressionSha256": "d653dbb97e0a96b3da40773d2298d7f4a2edf1cf00fd99f07505172d2711aa9b",
+        "treatment": "market sale: <=rawCpSHighest*250180*1000 per trade, followed by earned=max(bank,earned)"
+      }
+    ],
+    "open": [
+      "Refine every listed callback bound and prove the route control guards that exclude unused callbacks",
+      "Cover generated handlers and alias/dynamic dispatch through the full source interpreter",
+      "Compose native rounded counter barriers and the one Chocolate phase change to prove earned<=2^940"
+    ]
+  }
+}

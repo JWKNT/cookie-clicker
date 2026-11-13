@@ -1,0 +1,42 @@
+)]}'
+{
+  "id": "740aff2508f7c642ce66671c3e343caee2c70900",
+  "entries": [
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "8bd7ea363799e855a9ad2df11c49d40fec7cc15d",
+      "name": "custom_property.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "e847acf2a7b46bcab911b8e8d6f64be19ff61290",
+      "name": "custom_property.h"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "3adeb6553bd4cf89506dfbb68e19901a32d4c2db",
+      "name": "custom_property_test.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "43fc39df996148d96e5036ea4dbce6ec337f6ce6",
+      "name": "longhands_custom.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "4c21de564273672d85c525b325f0e1f5df9ec294",
+      "name": "variable.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "012dc77a08434f1452fe55e3ea5bbce048ef3d59",
+      "name": "variable.h"
+    }
+  ]
+}

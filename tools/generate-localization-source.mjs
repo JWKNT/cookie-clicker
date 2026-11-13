@@ -1,0 +1,84 @@
+import assert from 'node:assert/strict';
+import { createRequire } from 'node:module';
+import { readFileSync, writeFileSync } from 'node:fs';
+import { createHash } from 'node:crypto';
+import { pathToFileURL } from 'node:url';
+import { resolve } from 'node:path';
+const arg = (flag, fallback) => { const at = process.argv.indexOf(flag); return at<0 ? fallback : process.argv[at+1]; };
+const repo = resolve(arg('--repo', new URL('..', import.meta.url).pathname));
+const {compileJavaScript} = await import(pathToFileURL(resolve(repo, 'model/javascript-ast.mjs')));
+const {loadGameSource} = await import(pathToFileURL(resolve(repo, 'model/game-source.mjs')));
+
+const require = createRequire(pathToFileURL(resolve(repo,'source/cookie-monster-plus/package.json')));
+const acorn = require('acorn');
+const source = loadGameSource();
+const sha256 = value => createHash('sha256').update(value).digest('hex');
+const rows = [], definitions = [];
+const functions = ['loc','parseLoc','escapeRegExp','replaceAll'].map(name=>['main.js',name,'global']);
+for (const [file, name, receiver] of functions) {
+  const main = source.sources[file];
+  const nodes = acorn.parse(main, {ecmaVersion:5}).body;
+  const fnNode = nodes.find(node=>node.type==='FunctionDeclaration'&&node.id.name===name) ?? nodes.flatMap(node=>node.type==='VariableDeclaration'?node.declarations:[]).find(node=>node.id.name===name)?.init;
+  assert(['FunctionExpression','FunctionDeclaration'].includes(fnNode?.type));
+  const text = main.slice(fnNode.start, fnNode.end);
+  const ast = compileJavaScript(`(${text});`, { name: `${receiver}.${name}` });
+  const root = ast.nodes[ast.units[0].root];
+  const fn = ast.nodes[ast.nodes[root.body[0]].expression];
+  const option = id => id === null ? 'none' : `(some ${render(id)})`;
+  const declarations = ds => `[${ds.map(d => `(${JSON.stringify(d.name)}, ${option(d.value)})`).join(', ')}]`;
+  const render = id => {
+    const n = ast.nodes[id];
+    const list = ids => `[${ids.map(render).join(', ')}]`;
+    if (n.tag === 'function') return `(.function ${n.name===null?'none':`(some ${JSON.stringify(n.name)})`} [${n.parameters.map(JSON.stringify).join(', ')}] ${list(n.body)} ${n.strict} ${n.sourceText===null?'none':`(some [${n.sourceText.join(',')}])`})`;
+    if (n.tag === 'tryCatchFinally') return `(.tryCatchFinally ${render(n.body)} ${n.handler===null?'none':`(some (${JSON.stringify(n.handler.name)}, ${render(n.handler.body)}))`} ${option(n.finalizer)})`;
+    if (n.tag === 'regexp') return `(.regexp [${n.pattern.join(',')}] ${JSON.stringify(n.flags)})`;
+    if (n.tag === 'identifier') return `(.identifier ${JSON.stringify(n.name)})`;
+    if (n.tag === 'this') return '.this';
+    if (n.tag === 'literal') {
+      if(n.literalKind==='string'&&!n.units.every(unit=>unit<128))throw new Error('Localization string renderer requires ASCII');
+      const literal = n.literalKind === 'number' ? `(.number ${n.bits})` : n.literalKind === 'boolean' ? `(.boolean ${n.value})`
+        : n.literalKind === 'string' ? `(.string (JSString.ofString ${JSON.stringify(String.fromCharCode(...n.units))}))` : '.null';
+      return `(.literal ${literal})`;
+    }
+    if (n.tag === 'member') return `(.member ${render(n.object)} ${render(n.property)} ${n.computed})`;
+    if (['assignment', 'binary', 'logical'].includes(n.tag)) return `(.${n.tag} .${n.operator} ${render(n.left)} ${render(n.right)})`;
+    if (n.tag === 'unary') return `(.unary .${n.operator} ${render(n.argument)})`;
+    if (n.tag === 'update') return `(.update .${n.operator} ${render(n.argument)} ${n.isPrefix})`;
+    if (n.tag === 'conditional') return `(.conditional ${render(n.test)} ${render(n.consequent)} ${render(n.alternate)})`;
+    if (n.tag === 'construct') return `(.construct ${render(n.callee)} ${list(n.arguments)})`;
+    if (n.tag === 'forIn') {
+      const binding = n.binding.kind === 'variable' ? `(.variable ${JSON.stringify(n.binding.name)})` : `(.reference ${render(n.binding.value)})`;
+      return `(.forIn ${binding} ${render(n.object)} ${render(n.body)})`;
+    }
+    if (n.tag === 'call') return `(.call ${render(n.callee)} ${list(n.arguments)})`;
+    if (n.tag === 'array') return `(.array [${n.elements.map(option).join(', ')}])`;
+    if (n.tag === 'expression') return `(.expression ${render(n.expression)})`;
+    if (n.tag === 'block') return `(.block ${list(n.body)})`;
+    if (n.tag === 'variable') return `(.variable ${declarations(n.declarations)})`;
+    if (n.tag === 'return') return `(.return ${option(n.value)})`;
+    if (n.tag === 'ifThenElse') return `(.ifThenElse ${render(n.test)} ${render(n.consequent)} ${option(n.alternate)})`;
+    if (n.tag === 'while') return `(.while ${render(n.test)} ${render(n.body)})`;
+    if (n.tag === 'forLoop') {
+      const initial = n.initial === null ? 'none' : n.initial.kind === 'variables' ? `(some (.variables ${declarations(n.initial.declarations)}))` : `(some (.expression ${render(n.initial.value)}))`;
+      return `(.forLoop ${initial} ${option(n.test)} ${option(n.update)} ${render(n.body)})`;
+    }
+    throw new Error(`Unsupported localization source node ${n.tag}`);
+  };
+  definitions.push(`-- ${receiver}.${name} source SHA-256: ${sha256(text)}\ndef ${name}Body : Stmt := .block [\n  ${fn.body.map(render).join(',\n  ')}]\n`);
+  rows.push({ file, name, receiver, parameters: fn.parameters, nodes: ast.nodes.length, sourceSha256: sha256(text) });
+}
+const output = `import CookieClicker.JavaScriptSyntax
+
+/- Generated by tools/generate-localization-source.mjs from the pinned game.
+main.js SHA-256: ${source.hashes['main.js']}
+The frontend and source-byte correspondence remain separate proof obligations.
+No source branches, effects or calls are removed. -/
+namespace CookieClicker.JavaScript.LocalizationSyntax
+
+${definitions.join('\n')}
+end CookieClicker.JavaScript.LocalizationSyntax
+`;
+const path = arg('--output',resolve(repo,'lean/CookieClicker/JavaScriptLocalizationSyntax.lean'));
+if (process.argv.includes('--check')) assert.equal(readFileSync(path, 'utf8'), output, 'Localization source is stale');
+else writeFileSync(path, output);
+console.log(JSON.stringify({ check: process.argv.includes('--check'), functions: rows }));

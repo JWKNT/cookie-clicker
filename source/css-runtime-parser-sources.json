@@ -1,0 +1,20 @@
+{
+  "version": "87.0.4280.141",
+  "sources": [
+    {
+      "name": "css_tokenizer.cc",
+      "url": "https://chromium.googlesource.com/chromium/src/+/refs/tags/87.0.4280.141/third_party/blink/renderer/core/css/parser/css_tokenizer.cc?format=TEXT",
+      "sha256": "1ad6b870f60d53c460cace2042a189d12eb9d341037f80cebe365ad79f424578"
+    },
+    {
+      "name": "longhands_custom.cc",
+      "url": "https://chromium.googlesource.com/chromium/src/+/refs/tags/87.0.4280.141/third_party/blink/renderer/core/css/properties/longhands/longhands_custom.cc?format=TEXT",
+      "sha256": "1c42113203e9740435f46404d7882ea0695c86b28add99cda89d8a36e5315e9a"
+    },
+    {
+      "name": "css_parsing_utils.cc",
+      "url": "https://chromium.googlesource.com/chromium/src/+/refs/tags/87.0.4280.141/third_party/blink/renderer/core/css/properties/css_parsing_utils.cc?format=TEXT",
+      "sha256": "b780eca7186f9d0b5691ce2578bd758c170bde6dec0cfc082052107a1b633761"
+    }
+  ]
+}

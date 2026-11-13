@@ -1,0 +1,169 @@
+{
+  "sourceHashes": {
+    "main.js": "a8813ec2ee97edf5ebff6a3ce2037dcb65c08abd13c123bb92efda89b06ef4f7",
+    "minigameGarden.js": "184eacacd9325d493412dcda07f63d3a791939f83889b4349b6099d04be8e6c9",
+    "minigameMarket.js": "78538743673f3c1cd0e870a3695c77dcacd63febbe64b88f8a8fab9ea7e2863f",
+    "minigameGrimoire.js": "9efea1feb898dc9b719dd971bd27a71f083a8855b910013c524aea9b6d2a349d",
+    "minigamePantheon.js": "af08c31c4564d445cc2d1a7d101c4a63b57aa9b89991b93b8a65f4c0427573a0",
+    "base64.js": "875839c3e0c174c9358ce96923adfed6a6d2c090187a32deb35152dfac2c0e47",
+    "loc/EN.js": "ce48272a5fd5ab1f309dbb8fd7bd70188984ce14235a1d3d9215f3585101f433",
+    "index.html": "28488d9aef9bf31c4c023a0af01f0500a3b3e462b79bf7f2b09790025927a969"
+  },
+  "runtimeSha256": "427c41595d8e6195c44130b408cd52aafbc003dddaa4a049a66f340e1380a2e5",
+  "host": {
+    "node": "23.6.0",
+    "acorn": "8.14.0",
+    "ada": "2.9.2",
+    "amaro": "0.2.1",
+    "ares": "1.34.4",
+    "brotli": "1.2.1",
+    "cjs_module_lexer": "1.4.1",
+    "cldr": "46.0",
+    "icu": "76.1",
+    "llhttp": "9.2.1",
+    "modules": "131",
+    "napi": "10",
+    "nbytes": "0.1.1",
+    "ncrypto": "0.0.1",
+    "nghttp2": "1.64.0",
+    "openssl": "3.6.3",
+    "simdjson": "3.10.1",
+    "simdutf": "5.7.2",
+    "sqlite": "3.47.2",
+    "tz": "2024b",
+    "undici": "6.21.0",
+    "unicode": "16.0",
+    "uv": "1.49.2",
+    "uvwasi": "0.0.21",
+    "v8": "12.9.202.28-node.12",
+    "zlib": "1.2.12"
+  },
+  "scope": "Actual native source in diagnostic DOM/clock adapter, from an explicit initial1e57-cookie/one-lump prerequisite. No later funding, level, mana, achievement or outcome mutation. No claim of legal new-save reachability, physical input refinement or global optimum.",
+  "entry": {
+    "prestige": 999999999999998,
+    "heavenlyChips": 999999999994844,
+    "bought": [
+      "Legacy",
+      "Heavenly cookies",
+      "Tin of british tea biscuits",
+      "Box of macarons",
+      "Box of brand biscuits",
+      "Tin of butter cookies",
+      "Starter kit",
+      "Starter kitchen"
+    ],
+    "priorCookiesReset": 0,
+    "earnedBeingForfeited": 1e+57,
+    "lumps": 0
+  },
+  "cycles": 999,
+  "outcomes": {
+    "success": 859,
+    "backfire": 140
+  },
+  "elapsedMilliseconds": 5335760,
+  "resetCount": 1,
+  "spells": 999,
+  "lumps": 0,
+  "level": 1,
+  "achievement": true,
+  "normalMode": true,
+  "rows": [
+    {
+      "cycle": 1,
+      "beforeSecret": {
+        "cookies": 34.09999999999993,
+        "cps": 6.6000000000000005
+      },
+      "beforeTower": {
+        "cookies": 660000000024.4187,
+        "cps": 3300000000006.5938,
+        "price": 330000000
+      },
+      "beforeCast": {
+        "cookies": 659670000024.4187,
+        "earned": 660000000035.4187,
+        "count": 0
+      },
+      "afterCast": {
+        "cookies": 758620500028.0815,
+        "earned": 758950500039.0815,
+        "count": 1,
+        "failed": false
+      },
+      "elapsed": 5340
+    },
+    {
+      "cycle": 2,
+      "beforeSecret": {
+        "cookies": 34.09999999999993,
+        "cps": 6.6000000000000005
+      },
+      "beforeTower": {
+        "cookies": 660000000024.4187,
+        "cps": 3300000000006.5938,
+        "price": 330000000
+      },
+      "beforeCast": {
+        "cookies": 659670000024.4187,
+        "earned": 660000000035.4187,
+        "count": 1
+      },
+      "afterCast": {
+        "cookies": 758620500028.0815,
+        "earned": 758950500039.0815,
+        "count": 2,
+        "failed": false
+      },
+      "elapsed": 10680
+    },
+    {
+      "cycle": 3,
+      "beforeSecret": {
+        "cookies": 34.09999999999993,
+        "cps": 6.6000000000000005
+      },
+      "beforeTower": {
+        "cookies": 660000000024.4187,
+        "cps": 3300000000006.5938,
+        "price": 330000000
+      },
+      "beforeCast": {
+        "cookies": 659670000024.4187,
+        "earned": 660000000035.4187,
+        "count": 2
+      },
+      "afterCast": {
+        "cookies": 758620500028.0815,
+        "earned": 758950500039.0815,
+        "count": 3,
+        "failed": false
+      },
+      "elapsed": 16020
+    },
+    {
+      "cycle": 999,
+      "beforeSecret": {
+        "cookies": 33.87999999999993,
+        "cps": 6.6000000000000005
+      },
+      "beforeTower": {
+        "cookies": 770000000024.4185,
+        "cps": 3300000000006.5938,
+        "price": 330000000
+      },
+      "beforeCast": {
+        "cookies": 769670000024.4185,
+        "earned": 770000000035.4185,
+        "count": 998
+      },
+      "afterCast": {
+        "cookies": 885120500028.0812,
+        "earned": 885450500039.0812,
+        "count": 999,
+        "failed": false
+      },
+      "elapsed": 5334660
+    }
+  ]
+}

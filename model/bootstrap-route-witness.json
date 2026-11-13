@@ -1,0 +1,357 @@
+{
+  "schemaVersion": 1,
+  "scope": "native-prefix-and-boundary-diagnostics-not-long-route-execution",
+  "sourceHashes": {
+    "main.js": "a8813ec2ee97edf5ebff6a3ce2037dcb65c08abd13c123bb92efda89b06ef4f7",
+    "minigameGarden.js": "184eacacd9325d493412dcda07f63d3a791939f83889b4349b6099d04be8e6c9",
+    "minigameMarket.js": "78538743673f3c1cd0e870a3695c77dcacd63febbe64b88f8a8fab9ea7e2863f",
+    "minigameGrimoire.js": "9efea1feb898dc9b719dd971bd27a71f083a8855b910013c524aea9b6d2a349d",
+    "minigamePantheon.js": "af08c31c4564d445cc2d1a7d101c4a63b57aa9b89991b93b8a65f4c0427573a0",
+    "base64.js": "875839c3e0c174c9358ce96923adfed6a6d2c090187a32deb35152dfac2c0e47",
+    "loc/EN.js": "ce48272a5fd5ab1f309dbb8fd7bd70188984ce14235a1d3d9215f3585101f433",
+    "index.html": "28488d9aef9bf31c4c023a0af01f0500a3b3e462b79bf7f2b09790025927a969"
+  },
+  "route": {
+    "status": "finite-source-route-with-arithmetic-proofs-and-open-refinement",
+    "target": "Hardcore, Neverclick, Temple level1, Godzamok and bank>=2^90 before unbounded random retries",
+    "steps": [
+      "After native startup is ready, make15 accepted clicks20ms apart and buy one Cursor. With zero upgrades, buy one each Grandma, Farm, Mine, Factory, Bank, Temple and Wizard tower as soon as affordable. Keep the first15-click count and buy no upgrades until the five-second check after earned>=1e9.",
+      "Keep elderWrath zero and buy no research. One Grandma does not activate the Grandmapocalypse. First lump activation starts a new clock; harvest at the observed ripe23h threshold, before24h. Do not search timestamps for seeded lump types.",
+      "Keep the Temple and Wizard tower already bought by the ladder and buy ten total Cursors; buy Reinforced index finger, Carpal tunnel prevention cream and Ambidextrous. Earn1000 handmade cookies and buy Plastic mouse.",
+      "Spend one ripe lump on Temple level1; wait for its native10ms loader; sell nine Cursors, then slot Godzamok in diamond.",
+      "At bank B below2^58, run floor(B/32) one-Cursor sale/rebuy cycles and400 accepted clicks20ms apart after one gains-update frame. Repeat on an11s period after the old buff expires.",
+      "At bank>=2^58, the Cursor debit15 and refund4 are absorbed. A finite2^56-cycle prefix reaches the cent-increment Godzamok cap2^47. Repeat400-click bursts until bank>=2^90.",
+      "A later ordinary reset keeps Temple level1. Rebuild the three Cursor upgrades, Plastic mouse and one Temple before repeating the same income construction."
+    ],
+    "source": {
+      "challenge": [
+        "main.js:16323-16332",
+        "main.js:16273-16278",
+        "main.js:8700-8704"
+      ],
+      "lump": [
+        "main.js:14204",
+        "main.js:4533",
+        "main.js:4541-4544",
+        "main.js:4597-4604",
+        "main.js:4470-4514"
+      ],
+      "clicks": [
+        "main.js:4671-4743",
+        "main.js:9931-9933",
+        "main.js:16426"
+      ],
+      "cycles": [
+        "main.js:7830-7901"
+      ]
+    },
+    "bounds": {
+      "passiveIncrement": {
+        "numerator": "7686143364045647",
+        "denominatorPowerOfTwo": 61
+      },
+      "passiveLowerGain": "1/1024",
+      "challengeFrames": "6660050",
+      "gainsUpdateFrames": 8,
+      "checkFrames": 150,
+      "schedulerFramesIncludingOverhead": "6660208",
+      "schedulerMsAfterReadyIncludingClicks": "219787164",
+      "diagnosticStartupWaitMs": 200,
+      "firstRipeWaitMs": 82800000,
+      "templePrice": 20000000,
+      "templeBaseCps": 7800,
+      "minimumBaseClick": 64,
+      "centMultiplierCap": 140737488355328,
+      "centCyclesToCap": "72057594037927936",
+      "lowBankCycleMaximumLoss": 16,
+      "burstClicks": 400,
+      "burstPeriodMs": 11000,
+      "burstBankGainLower": "9*floor(B/32)",
+      "highBankClickGainLower": "2^52",
+      "highBankClicksUpper": "274877906944",
+      "proposedTotalFramesUpper": "2^40"
+    },
+    "kernelArithmetic": [
+      "CookieClicker/BootstrapArithmetic.lean",
+      "CookieClicker/JavaScriptBootstrapLadder.lean",
+      "CookieClicker/JavaScriptRoundingOrder.lean",
+      "CookieClicker/JavaScriptScaledOrder.lean",
+      "CookieClicker/JavaScriptCounterLadder.lean"
+    ],
+    "purchaseLadder": [
+      {
+        "current": "Cursor",
+        "next": "Grandma",
+        "target": 100,
+        "gainQuanta": 1,
+        "frames": 102400
+      },
+      {
+        "current": "Grandma",
+        "next": "Farm",
+        "target": 1100,
+        "gainQuanta": 16,
+        "frames": 70400
+      },
+      {
+        "current": "Farm",
+        "next": "Mine",
+        "target": 12000,
+        "gainQuanta": 128,
+        "frames": 96000
+      },
+      {
+        "current": "Mine",
+        "next": "Factory",
+        "target": 130000,
+        "gainQuanta": 512,
+        "frames": 260000
+      },
+      {
+        "current": "Factory",
+        "next": "Bank",
+        "target": 1400000,
+        "gainQuanta": 4096,
+        "frames": 350000
+      },
+      {
+        "current": "Bank",
+        "next": "Temple",
+        "target": 20000000,
+        "gainQuanta": 16384,
+        "frames": 1250000
+      },
+      {
+        "current": "Temple",
+        "next": "Wizard tower",
+        "target": 330000000,
+        "gainQuanta": 131072,
+        "frames": 2578125
+      },
+      {
+        "current": "Wizard tower",
+        "next": null,
+        "target": 1000000000,
+        "gainQuanta": 524288,
+        "frames": 1953125
+      }
+    ],
+    "open": [
+      "Compose the proved joint bank/earned recurrence and source Earn/Spend bodies with initialized production and purchase callbacks; later sale/rebuy and click gain bounds remain separate",
+      "Prove the full no-upgrade production invariant for the eight fixed boards, automatic-callback preservation, native startup and timer schedule",
+      "Prove all256 low-bank bursts suffice, including native expiration/recalculation phases and bounded incidental host state",
+      "Compose this entry route with every later income stage, helper setup and all1558 completion conditions"
+    ]
+  },
+  "premises": [
+    {
+      "kind": "ladder-affordability-boundary",
+      "building": "Grandma",
+      "price": 100,
+      "bank": 99.99999999999999,
+      "description": "Inject bank immediately below the next native price and lifetime earned equal to prior spending plus bank; the intervening passive frames and callbacks are not replayed."
+    },
+    {
+      "kind": "ladder-affordability-boundary",
+      "building": "Farm",
+      "price": 1100,
+      "bank": 1099.9999999999998,
+      "description": "Inject bank immediately below the next native price and lifetime earned equal to prior spending plus bank; the intervening passive frames and callbacks are not replayed."
+    },
+    {
+      "kind": "ladder-affordability-boundary",
+      "building": "Mine",
+      "price": 12000,
+      "bank": 11999.999999999998,
+      "description": "Inject bank immediately below the next native price and lifetime earned equal to prior spending plus bank; the intervening passive frames and callbacks are not replayed."
+    },
+    {
+      "kind": "ladder-affordability-boundary",
+      "building": "Factory",
+      "price": 130000,
+      "bank": 129999.99999999999,
+      "description": "Inject bank immediately below the next native price and lifetime earned equal to prior spending plus bank; the intervening passive frames and callbacks are not replayed."
+    },
+    {
+      "kind": "ladder-affordability-boundary",
+      "building": "Bank",
+      "price": 1400000,
+      "bank": 1399999.9999999998,
+      "description": "Inject bank immediately below the next native price and lifetime earned equal to prior spending plus bank; the intervening passive frames and callbacks are not replayed."
+    },
+    {
+      "kind": "ladder-affordability-boundary",
+      "building": "Temple",
+      "price": 20000000,
+      "bank": 19999999.999999996,
+      "description": "Inject bank immediately below the next native price and lifetime earned equal to prior spending plus bank; the intervening passive frames and callbacks are not replayed."
+    },
+    {
+      "kind": "ladder-affordability-boundary",
+      "building": "Wizard tower",
+      "price": 330000000,
+      "bank": 329999999.99999994,
+      "description": "Inject bank immediately below the next native price and lifetime earned equal to prior spending plus bank; the intervening passive frames and callbacks are not replayed."
+    },
+    {
+      "kind": "challenge-boundary",
+      "description": "Inject earned immediately below1e9 and bank net of the eight native first-purchase prices; do not simulate the full6,660,050-credit ladder.",
+      "earned": 999999999.9999999,
+      "bank": 648456784.9999999,
+      "spent": 351543215
+    },
+    {
+      "kind": "ripe-boundary",
+      "description": "Set current lump age to exactly23h; do not simulate the wait"
+    },
+    {
+      "kind": "small-burst-bank",
+      "description": "Reduce bank to32768 to execute a bounded1024-cycle native diagnostic"
+    }
+  ],
+  "freshPrefix": {
+    "clicks": 15,
+    "cursorAmount": 1,
+    "upgrades": 0,
+    "rawCps": 0.1,
+    "frameIncrement": 0.0033333333333333335,
+    "elapsedMs": 700,
+    "elderWrath": 0
+  },
+  "ladder": [
+    {
+      "name": "Grandma",
+      "price": 100,
+      "before": 100.00333333333332,
+      "after": 0.03999999999998276,
+      "beforeCps": 0.1,
+      "afterCps": 1.1,
+      "credit": 0.03666666666666667,
+      "amount": 1,
+      "clicks": 15,
+      "upgrades": 0,
+      "elderWrath": 0,
+      "normalOrZeroBank": true
+    },
+    {
+      "name": "Farm",
+      "price": 1100,
+      "before": 1100.0366666666664,
+      "after": 0.3399999999997393,
+      "beforeCps": 1.1,
+      "afterCps": 9.1,
+      "credit": 0.30333333333333334,
+      "amount": 1,
+      "clicks": 15,
+      "upgrades": 0,
+      "elderWrath": 0,
+      "normalOrZeroBank": true
+    },
+    {
+      "name": "Mine",
+      "price": 12000,
+      "before": 12000.303333333331,
+      "after": 2.173333333331466,
+      "beforeCps": 9.1,
+      "afterCps": 56.1,
+      "credit": 1.87,
+      "amount": 1,
+      "clicks": 15,
+      "upgrades": 0,
+      "elderWrath": 0,
+      "normalOrZeroBank": true
+    },
+    {
+      "name": "Factory",
+      "price": 130000,
+      "before": 130001.86999999998,
+      "after": 12.406666666647459,
+      "beforeCps": 56.1,
+      "afterCps": 316.1,
+      "credit": 10.536666666666667,
+      "amount": 1,
+      "clicks": 15,
+      "upgrades": 0,
+      "elderWrath": 0,
+      "normalOrZeroBank": true
+    },
+    {
+      "name": "Bank",
+      "price": 1400000,
+      "before": 1400010.5366666664,
+      "after": 67.73999999972371,
+      "beforeCps": 316.1,
+      "afterCps": 1716.1,
+      "credit": 57.20333333333333,
+      "amount": 1,
+      "clicks": 15,
+      "upgrades": 0,
+      "elderWrath": 0,
+      "normalOrZeroBank": true
+    },
+    {
+      "name": "Temple",
+      "price": 20000000,
+      "before": 20000057.20333333,
+      "after": 374.4066666627427,
+      "beforeCps": 1716.1,
+      "afterCps": 9516.1,
+      "credit": 317.2033333333333,
+      "amount": 1,
+      "clicks": 15,
+      "upgrades": 0,
+      "elderWrath": 0,
+      "normalOrZeroBank": true
+    },
+    {
+      "name": "Wizard tower",
+      "price": 330000000,
+      "before": 330000317.20333326,
+      "after": 2101.0733332586287,
+      "beforeCps": 9516.1,
+      "afterCps": 53516.1,
+      "credit": 1783.87,
+      "amount": 1,
+      "clicks": 15,
+      "upgrades": 0,
+      "elderWrath": 0,
+      "normalOrZeroBank": true
+    }
+  ],
+  "challengeBoundary": {
+    "hardcore": true,
+    "neverclick": true,
+    "clicks": 15,
+    "earned": 1000276499.8500006,
+    "lumpsTotal": 0,
+    "lumpType": 0,
+    "elderWrath": 0
+  },
+  "ripeHarvest": {
+    "lumps": 1,
+    "total": 1
+  },
+  "entry": {
+    "bank": 649087388.7433321,
+    "templeLevel": 1,
+    "templeAmount": 1,
+    "cursorAmount": 1,
+    "mouseCps": 543.9480000000001,
+    "godSlot": 1,
+    "elderWrath": 0
+  },
+  "burst": {
+    "before": 32768,
+    "afterCycles": 21504,
+    "after": 2901212.087999942,
+    "cycles": 1024,
+    "multiplier": 11.239999999999805,
+    "acceptedClicks": 400,
+    "elapsedMs": 8033,
+    "remainingBuffFrames": 57,
+    "claimedMinimumGain": 9216
+  },
+  "reproduction": "node tools/probe-bootstrap-route.mjs",
+  "moduleSha256": "acd50e7378cd895999580e3696f3d4ce4ec1bed8fc279cd0f329f48faf45e2d9",
+  "runtimeSha256": "2bd47e179d0a23409bfcbc267a744c8fb9f9eb27b2d74dee8603ec96659c64b5"
+}

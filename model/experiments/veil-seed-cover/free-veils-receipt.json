@@ -1,0 +1,314 @@
+{
+  "scope": "Conditional post-milestone entry, one independently fixed ordinary reset, then zero-building public sales/free veil rebuys and consecutive source clicks. Supplied worst seed is a diagnostic premise, not policy information. No all-goal new-save claim.",
+  "sales": [
+    [
+      "Cursor",
+      10
+    ],
+    [
+      "Grandma",
+      5
+    ]
+  ],
+  "startingCookieClicks": 0,
+  "defense": 0.4,
+  "purchases": 34,
+  "receipts": [
+    {
+      "counter": 0,
+      "afterCookieClicks": 1,
+      "won": false,
+      "elapsedMs": 7208,
+      "bank": 220.6000000000002,
+      "unbuffedCps": 0
+    },
+    {
+      "counter": 1,
+      "afterCookieClicks": 2,
+      "won": false,
+      "elapsedMs": 7242,
+      "bank": 221.6000000000002,
+      "unbuffedCps": 0
+    },
+    {
+      "counter": 2,
+      "afterCookieClicks": 3,
+      "won": false,
+      "elapsedMs": 7276,
+      "bank": 222.6000000000002,
+      "unbuffedCps": 0
+    },
+    {
+      "counter": 3,
+      "afterCookieClicks": 4,
+      "won": false,
+      "elapsedMs": 7310,
+      "bank": 223.6000000000002,
+      "unbuffedCps": 0
+    },
+    {
+      "counter": 4,
+      "afterCookieClicks": 5,
+      "won": false,
+      "elapsedMs": 7344,
+      "bank": 224.6000000000002,
+      "unbuffedCps": 0
+    },
+    {
+      "counter": 5,
+      "afterCookieClicks": 6,
+      "won": false,
+      "elapsedMs": 7378,
+      "bank": 225.6000000000002,
+      "unbuffedCps": 0
+    },
+    {
+      "counter": 6,
+      "afterCookieClicks": 7,
+      "won": false,
+      "elapsedMs": 7412,
+      "bank": 226.6000000000002,
+      "unbuffedCps": 0
+    },
+    {
+      "counter": 7,
+      "afterCookieClicks": 8,
+      "won": false,
+      "elapsedMs": 7446,
+      "bank": 227.6000000000002,
+      "unbuffedCps": 0
+    },
+    {
+      "counter": 8,
+      "afterCookieClicks": 9,
+      "won": false,
+      "elapsedMs": 7480,
+      "bank": 228.6000000000002,
+      "unbuffedCps": 0
+    },
+    {
+      "counter": 9,
+      "afterCookieClicks": 10,
+      "won": false,
+      "elapsedMs": 7514,
+      "bank": 229.6000000000002,
+      "unbuffedCps": 0
+    },
+    {
+      "counter": 10,
+      "afterCookieClicks": 11,
+      "won": false,
+      "elapsedMs": 7548,
+      "bank": 230.6000000000002,
+      "unbuffedCps": 0
+    },
+    {
+      "counter": 11,
+      "afterCookieClicks": 12,
+      "won": false,
+      "elapsedMs": 7582,
+      "bank": 231.6000000000002,
+      "unbuffedCps": 0
+    },
+    {
+      "counter": 12,
+      "afterCookieClicks": 13,
+      "won": false,
+      "elapsedMs": 7616,
+      "bank": 232.6000000000002,
+      "unbuffedCps": 0
+    },
+    {
+      "counter": 13,
+      "afterCookieClicks": 14,
+      "won": false,
+      "elapsedMs": 7650,
+      "bank": 233.6000000000002,
+      "unbuffedCps": 0
+    },
+    {
+      "counter": 14,
+      "afterCookieClicks": 15,
+      "won": false,
+      "elapsedMs": 7684,
+      "bank": 234.6000000000002,
+      "unbuffedCps": 0
+    },
+    {
+      "counter": 15,
+      "afterCookieClicks": 16,
+      "won": false,
+      "elapsedMs": 7718,
+      "bank": 235.6000000000002,
+      "unbuffedCps": 0
+    },
+    {
+      "counter": 16,
+      "afterCookieClicks": 17,
+      "won": false,
+      "elapsedMs": 7752,
+      "bank": 236.6000000000002,
+      "unbuffedCps": 0
+    },
+    {
+      "counter": 17,
+      "afterCookieClicks": 18,
+      "won": false,
+      "elapsedMs": 7786,
+      "bank": 237.6000000000002,
+      "unbuffedCps": 0
+    },
+    {
+      "counter": 18,
+      "afterCookieClicks": 19,
+      "won": false,
+      "elapsedMs": 7820,
+      "bank": 238.6000000000002,
+      "unbuffedCps": 0
+    },
+    {
+      "counter": 19,
+      "afterCookieClicks": 20,
+      "won": false,
+      "elapsedMs": 7854,
+      "bank": 239.6000000000002,
+      "unbuffedCps": 0
+    },
+    {
+      "counter": 20,
+      "afterCookieClicks": 21,
+      "won": false,
+      "elapsedMs": 7888,
+      "bank": 240.6000000000002,
+      "unbuffedCps": 0
+    },
+    {
+      "counter": 21,
+      "afterCookieClicks": 22,
+      "won": false,
+      "elapsedMs": 7922,
+      "bank": 241.6000000000002,
+      "unbuffedCps": 0
+    },
+    {
+      "counter": 22,
+      "afterCookieClicks": 23,
+      "won": false,
+      "elapsedMs": 7956,
+      "bank": 242.6000000000002,
+      "unbuffedCps": 0
+    },
+    {
+      "counter": 23,
+      "afterCookieClicks": 24,
+      "won": false,
+      "elapsedMs": 7990,
+      "bank": 243.6000000000002,
+      "unbuffedCps": 0
+    },
+    {
+      "counter": 24,
+      "afterCookieClicks": 25,
+      "won": false,
+      "elapsedMs": 8024,
+      "bank": 244.6000000000002,
+      "unbuffedCps": 0
+    },
+    {
+      "counter": 25,
+      "afterCookieClicks": 26,
+      "won": false,
+      "elapsedMs": 8058,
+      "bank": 245.6000000000002,
+      "unbuffedCps": 0
+    },
+    {
+      "counter": 26,
+      "afterCookieClicks": 27,
+      "won": false,
+      "elapsedMs": 8092,
+      "bank": 246.6000000000002,
+      "unbuffedCps": 0
+    },
+    {
+      "counter": 27,
+      "afterCookieClicks": 28,
+      "won": false,
+      "elapsedMs": 8126,
+      "bank": 247.6000000000002,
+      "unbuffedCps": 0
+    },
+    {
+      "counter": 28,
+      "afterCookieClicks": 29,
+      "won": false,
+      "elapsedMs": 8160,
+      "bank": 248.6000000000002,
+      "unbuffedCps": 0
+    },
+    {
+      "counter": 29,
+      "afterCookieClicks": 30,
+      "won": false,
+      "elapsedMs": 8194,
+      "bank": 249.6000000000002,
+      "unbuffedCps": 0
+    },
+    {
+      "counter": 30,
+      "afterCookieClicks": 31,
+      "won": false,
+      "elapsedMs": 8228,
+      "bank": 250.6000000000002,
+      "unbuffedCps": 0
+    },
+    {
+      "counter": 31,
+      "afterCookieClicks": 32,
+      "won": false,
+      "elapsedMs": 8262,
+      "bank": 251.6000000000002,
+      "unbuffedCps": 0
+    },
+    {
+      "counter": 32,
+      "afterCookieClicks": 33,
+      "won": false,
+      "elapsedMs": 8296,
+      "bank": 252.6000000000002,
+      "unbuffedCps": 0
+    },
+    {
+      "counter": 33,
+      "afterCookieClicks": 34,
+      "won": false,
+      "elapsedMs": 8330,
+      "bank": 253.6000000000002,
+      "unbuffedCps": 0
+    },
+    {
+      "counter": 34,
+      "afterCookieClicks": 35,
+      "won": true,
+      "elapsedMs": 8364,
+      "bank": 254.6000000000002,
+      "unbuffedCps": 0
+    }
+  ],
+  "sourceHashes": {
+    "main.js": "a8813ec2ee97edf5ebff6a3ce2037dcb65c08abd13c123bb92efda89b06ef4f7",
+    "minigameGarden.js": "184eacacd9325d493412dcda07f63d3a791939f83889b4349b6099d04be8e6c9",
+    "minigameMarket.js": "78538743673f3c1cd0e870a3695c77dcacd63febbe64b88f8a8fab9ea7e2863f",
+    "minigameGrimoire.js": "9efea1feb898dc9b719dd971bd27a71f083a8855b910013c524aea9b6d2a349d",
+    "minigamePantheon.js": "af08c31c4564d445cc2d1a7d101c4a63b57aa9b89991b93b8a65f4c0427573a0",
+    "base64.js": "875839c3e0c174c9358ce96923adfed6a6d2c090187a32deb35152dfac2c0e47",
+    "loc/EN.js": "ce48272a5fd5ab1f309dbb8fd7bd70188984ce14235a1d3d9215f3585101f433",
+    "index.html": "28488d9aef9bf31c4c023a0af01f0500a3b3e462b79bf7f2b09790025927a969"
+  },
+  "audit": {
+    "recordingMode": "full",
+    "actionCount": 114,
+    "randomDrawCount": 5804,
+    "reloadCount": 0
+  }
+}

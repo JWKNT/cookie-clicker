@@ -1,0 +1,2467 @@
+{
+  "schema": 1,
+  "scope": "literal source canvas calls and deferred-paint obligations",
+  "sourceHashes": {
+    "main.js": "a8813ec2ee97edf5ebff6a3ce2037dcb65c08abd13c123bb92efda89b06ef4f7",
+    "minigameGarden.js": "184eacacd9325d493412dcda07f63d3a791939f83889b4349b6099d04be8e6c9",
+    "minigameMarket.js": "78538743673f3c1cd0e870a3695c77dcacd63febbe64b88f8a8fab9ea7e2863f",
+    "minigameGrimoire.js": "9efea1feb898dc9b719dd971bd27a71f083a8855b910013c524aea9b6d2a349d",
+    "minigamePantheon.js": "af08c31c4564d445cc2d1a7d101c4a63b57aa9b89991b93b8a65f4c0427573a0",
+    "base64.js": "875839c3e0c174c9358ce96923adfed6a6d2c090187a32deb35152dfac2c0e47",
+    "loc/EN.js": "ce48272a5fd5ab1f309dbb8fd7bd70188984ce14235a1d3d9215f3585101f433",
+    "index.html": "28488d9aef9bf31c4c023a0af01f0500a3b3e462b79bf7f2b09790025927a969"
+  },
+  "coverage": {
+    "units": 40,
+    "includesParsedInlineAndLiteralHandlers": true,
+    "uncompiledGeneratedHandlerTemplates": 16,
+    "pointsToAnalysisComplete": false,
+    "dynamicCallResolutionComplete": false
+  },
+  "counts": {
+    "getTransform": 0,
+    "setTransform": 0,
+    "resetTransform": 0,
+    "getImageData": 3,
+    "putImageData": 1,
+    "toDataURL": 0,
+    "toBlob": 0,
+    "isPointInPath": 0,
+    "isPointInStroke": 0,
+    "measureText": 6,
+    "rotate": 17,
+    "drawImage": 55,
+    "getContext": 10
+  },
+  "calls": [
+    {
+      "method": "drawImage",
+      "receiver": "[this]",
+      "arguments": [
+        "img",
+        "(X add x)",
+        "(Y add y)",
+        "iW",
+        "iH"
+      ],
+      "unitName": "main.js",
+      "unitKind": "script",
+      "origin": {
+        "kind": "pinned-file",
+        "file": "main.js"
+      },
+      "unit": 0,
+      "start": 28989,
+      "end": 29022,
+      "line": 730,
+      "column": 56,
+      "endLine": 730,
+      "endColumn": 89
+    },
+    {
+      "method": "rotate",
+      "receiver": "ctx",
+      "arguments": [
+        "(((me.r divide 360) multiply Math.PI) multiply 2)"
+      ],
+      "unitName": "main.js",
+      "unitKind": "script",
+      "origin": {
+        "kind": "pinned-file",
+        "file": "main.js"
+      },
+      "unit": 0,
+      "start": 274581,
+      "end": 274613,
+      "line": 6021,
+      "column": 7,
+      "endLine": 6021,
+      "endColumn": 39
+    },
+    {
+      "method": "drawImage",
+      "receiver": "ctx",
+      "arguments": [
+        "Pic(me.pic)",
+        "(me.picPos[0] multiply w)",
+        "(me.picPos[1] multiply h)",
+        "w",
+        "h",
+        "((minus w divide 2) multiply me.size)",
+        "((minus h divide 2) multiply me.size)",
+        "(w multiply me.size)",
+        "(h multiply me.size)"
+      ],
+      "unitName": "main.js",
+      "unitKind": "script",
+      "origin": {
+        "kind": "pinned-file",
+        "file": "main.js"
+      },
+      "unit": 0,
+      "start": 274733,
+      "end": 274839,
+      "line": 6028,
+      "column": 8,
+      "endLine": 6028,
+      "endColumn": 114
+    },
+    {
+      "method": "drawImage",
+      "receiver": "ctx",
+      "arguments": [
+        "Pic(me.pic)",
+        "((me.picId remainder 8) multiply w)",
+        "0",
+        "w",
+        "h",
+        "((minus w divide 2) multiply me.size)",
+        "((minus h divide 2) multiply me.size)",
+        "(w multiply me.size)",
+        "(h multiply me.size)"
+      ],
+      "unitName": "main.js",
+      "unitKind": "script",
+      "origin": {
+        "kind": "pinned-file",
+        "file": "main.js"
+      },
+      "unit": 0,
+      "start": 274974,
+      "end": 275067,
+      "line": 6033,
+      "column": 8,
+      "endLine": 6033,
+      "endColumn": 101
+    },
+    {
+      "method": "measureText",
+      "receiver": "ctx",
+      "arguments": [
+        "str"
+      ],
+      "unitName": "main.js",
+      "unitKind": "script",
+      "origin": {
+        "kind": "pinned-file",
+        "file": "main.js"
+      },
+      "unit": 0,
+      "start": 407824,
+      "end": 407844,
+      "line": 8353,
+      "column": 25,
+      "endLine": 8353,
+      "endColumn": 45
+    },
+    {
+      "method": "measureText",
+      "receiver": "ctx",
+      "arguments": [
+        "'Names in '"
+      ],
+      "unitName": "main.js",
+      "unitKind": "script",
+      "origin": {
+        "kind": "pinned-file",
+        "file": "main.js"
+      },
+      "unit": 0,
+      "start": 408074,
+      "end": 408102,
+      "line": 8360,
+      "column": 32,
+      "endLine": 8360,
+      "endColumn": 60
+    },
+    {
+      "method": "measureText",
+      "receiver": "ctx",
+      "arguments": [
+        "text"
+      ],
+      "unitName": "main.js",
+      "unitKind": "script",
+      "origin": {
+        "kind": "pinned-file",
+        "file": "main.js"
+      },
+      "unit": 0,
+      "start": 409424,
+      "end": 409445,
+      "line": 8393,
+      "column": 17,
+      "endLine": 8393,
+      "endColumn": 38
+    },
+    {
+      "method": "drawImage",
+      "receiver": "ctx",
+      "arguments": [
+        "sprite",
+        "Math.floor(((pic.x add (Math.random() multiply 4)) subtract 2))",
+        "Math.floor(((pic.y add (Math.random() multiply 4)) subtract 2))"
+      ],
+      "unitName": "main.js",
+      "unitKind": "script",
+      "origin": {
+        "kind": "pinned-file",
+        "file": "main.js"
+      },
+      "unit": 0,
+      "start": 410156,
+      "end": 410249,
+      "line": 8411,
+      "column": 7,
+      "endLine": 8411,
+      "endColumn": 100
+    },
+    {
+      "method": "drawImage",
+      "receiver": "ctx",
+      "arguments": [
+        "sprite",
+        "((sprite.width divide frames) multiply pic.frame)",
+        "0",
+        "(sprite.width divide frames)",
+        "sprite.height",
+        "pic.x",
+        "pic.y",
+        "(sprite.width divide frames)",
+        "sprite.height"
+      ],
+      "unitName": "main.js",
+      "unitKind": "script",
+      "origin": {
+        "kind": "pinned-file",
+        "file": "main.js"
+      },
+      "unit": 0,
+      "start": 410405,
+      "end": 410542,
+      "line": 8414,
+      "column": 30,
+      "endLine": 8414,
+      "endColumn": 167
+    },
+    {
+      "method": "drawImage",
+      "receiver": "ctx",
+      "arguments": [
+        "sprite",
+        "pic.x",
+        "pic.y"
+      ],
+      "unitName": "main.js",
+      "unitKind": "script",
+      "origin": {
+        "kind": "pinned-file",
+        "file": "main.js"
+      },
+      "unit": 0,
+      "start": 410556,
+      "end": 410589,
+      "line": 8415,
+      "column": 11,
+      "endLine": 8415,
+      "endColumn": 44
+    },
+    {
+      "method": "drawImage",
+      "receiver": "ctx",
+      "arguments": [
+        "Pic('youLight.png')",
+        "(pic.x add 11)",
+        "0"
+      ],
+      "unitName": "main.js",
+      "unitKind": "script",
+      "origin": {
+        "kind": "pinned-file",
+        "file": "main.js"
+      },
+      "unit": 0,
+      "start": 410660,
+      "end": 410705,
+      "line": 8419,
+      "column": 7,
+      "endLine": 8419,
+      "endColumn": 52
+    },
+    {
+      "method": "measureText",
+      "receiver": "ctx",
+      "arguments": [
+        "text"
+      ],
+      "unitName": "main.js",
+      "unitKind": "script",
+      "origin": {
+        "kind": "pinned-file",
+        "file": "main.js"
+      },
+      "unit": 0,
+      "start": 412181,
+      "end": 412202,
+      "line": 8435,
+      "column": 17,
+      "endLine": 8435,
+      "endColumn": 38
+    },
+    {
+      "method": "drawImage",
+      "receiver": "ctx",
+      "arguments": [
+        "Pic(img)",
+        "0",
+        "0"
+      ],
+      "unitName": "main.js",
+      "unitKind": "script",
+      "origin": {
+        "kind": "pinned-file",
+        "file": "main.js"
+      },
+      "unit": 0,
+      "start": 439929,
+      "end": 439956,
+      "line": 9011,
+      "column": 5,
+      "endLine": 9011,
+      "endColumn": 32
+    },
+    {
+      "method": "drawImage",
+      "receiver": "ctx",
+      "arguments": [
+        "Pic(img)",
+        "0",
+        "0"
+      ],
+      "unitName": "main.js",
+      "unitKind": "script",
+      "origin": {
+        "kind": "pinned-file",
+        "file": "main.js"
+      },
+      "unit": 0,
+      "start": 439988,
+      "end": 440015,
+      "line": 9015,
+      "column": 5,
+      "endLine": 9015,
+      "endColumn": 32
+    },
+    {
+      "method": "getContext",
+      "receiver": "canvasAddon",
+      "arguments": [
+        "'2d'"
+      ],
+      "unitName": "main.js",
+      "unitKind": "script",
+      "origin": {
+        "kind": "pinned-file",
+        "file": "main.js"
+      },
+      "unit": 0,
+      "start": 440145,
+      "end": 440173,
+      "line": 9019,
+      "column": 14,
+      "endLine": 9019,
+      "endColumn": 42
+    },
+    {
+      "method": "getContext",
+      "receiver": "canvasCols",
+      "arguments": [
+        "'2d'"
+      ],
+      "unitName": "main.js",
+      "unitKind": "script",
+      "origin": {
+        "kind": "pinned-file",
+        "file": "main.js"
+      },
+      "unit": 0,
+      "start": 440325,
+      "end": 440352,
+      "line": 9024,
+      "column": 17,
+      "endLine": 9024,
+      "endColumn": 44
+    },
+    {
+      "method": "drawImage",
+      "receiver": "ctxCols",
+      "arguments": [
+        "Pic(imgAddons)",
+        "0",
+        "0",
+        "8",
+        "colsN",
+        "0",
+        "0",
+        "8",
+        "colsN"
+      ],
+      "unitName": "main.js",
+      "unitKind": "script",
+      "origin": {
+        "kind": "pinned-file",
+        "file": "main.js"
+      },
+      "unit": 0,
+      "start": 440360,
+      "end": 440417,
+      "line": 9025,
+      "column": 5,
+      "endLine": 9025,
+      "endColumn": 62
+    },
+    {
+      "method": "getImageData",
+      "receiver": "ctxCols",
+      "arguments": [
+        "0",
+        "0",
+        "8",
+        "colsN"
+      ],
+      "unitName": "main.js",
+      "unitKind": "script",
+      "origin": {
+        "kind": "pinned-file",
+        "file": "main.js"
+      },
+      "unit": 0,
+      "start": 440441,
+      "end": 440474,
+      "line": 9026,
+      "column": 21,
+      "endLine": 9026,
+      "endColumn": 54
+    },
+    {
+      "method": "getImageData",
+      "receiver": "ctx",
+      "arguments": [
+        "0",
+        "0",
+        "64",
+        "64"
+      ],
+      "unitName": "main.js",
+      "unitKind": "script",
+      "origin": {
+        "kind": "pinned-file",
+        "file": "main.js"
+      },
+      "unit": 0,
+      "start": 440842,
+      "end": 440869,
+      "line": 9038,
+      "column": 17,
+      "endLine": 9038,
+      "endColumn": 44
+    },
+    {
+      "method": "drawImage",
+      "receiver": "ctxAddon",
+      "arguments": [
+        "Pic(imgAddons)",
+        "(8 add (addonTile[0] multiply 32))",
+        "(addonTile[1] multiply 32)",
+        "32",
+        "32",
+        "0",
+        "0",
+        "32",
+        "32"
+      ],
+      "unitName": "main.js",
+      "unitKind": "script",
+      "origin": {
+        "kind": "pinned-file",
+        "file": "main.js"
+      },
+      "unit": 0,
+      "start": 441800,
+      "end": 441884,
+      "line": 9054,
+      "column": 6,
+      "endLine": 9054,
+      "endColumn": 90
+    },
+    {
+      "method": "getImageData",
+      "receiver": "ctxAddon",
+      "arguments": [
+        "0",
+        "0",
+        "32",
+        "32"
+      ],
+      "unitName": "main.js",
+      "unitKind": "script",
+      "origin": {
+        "kind": "pinned-file",
+        "file": "main.js"
+      },
+      "unit": 0,
+      "start": 441918,
+      "end": 441950,
+      "line": 9056,
+      "column": 23,
+      "endLine": 9056,
+      "endColumn": 55
+    },
+    {
+      "method": "putImageData",
+      "receiver": "ctx",
+      "arguments": [
+        "imgData",
+        "0",
+        "0"
+      ],
+      "unitName": "main.js",
+      "unitKind": "script",
+      "origin": {
+        "kind": "pinned-file",
+        "file": "main.js"
+      },
+      "unit": 0,
+      "start": 444044,
+      "end": 444073,
+      "line": 9118,
+      "column": 5,
+      "endLine": 9118,
+      "endColumn": 34
+    },
+    {
+      "method": "getContext",
+      "receiver": "l('youCustomizerPreview')",
+      "arguments": [
+        "'2d'"
+      ],
+      "unitName": "main.js",
+      "unitKind": "script",
+      "origin": {
+        "kind": "pinned-file",
+        "file": "main.js"
+      },
+      "unit": 0,
+      "start": 449061,
+      "end": 449103,
+      "line": 9234,
+      "column": 11,
+      "endLine": 9234,
+      "endColumn": 53
+    },
+    {
+      "method": "drawImage",
+      "receiver": "ctx",
+      "arguments": [
+        "Game.Objects['You'].canvasAdd",
+        "minus 16",
+        "0"
+      ],
+      "unitName": "main.js",
+      "unitKind": "script",
+      "origin": {
+        "kind": "pinned-file",
+        "file": "main.js"
+      },
+      "unit": 0,
+      "start": 449138,
+      "end": 449188,
+      "line": 9236,
+      "column": 3,
+      "endLine": 9236,
+      "endColumn": 53
+    },
+    {
+      "method": "getContext",
+      "receiver": "l('youCustomizerPreviewBlur')",
+      "arguments": [
+        "'2d'"
+      ],
+      "unitName": "main.js",
+      "unitKind": "script",
+      "origin": {
+        "kind": "pinned-file",
+        "file": "main.js"
+      },
+      "unit": 0,
+      "start": 449198,
+      "end": 449244,
+      "line": 9237,
+      "column": 7,
+      "endLine": 9237,
+      "endColumn": 53
+    },
+    {
+      "method": "drawImage",
+      "receiver": "ctx",
+      "arguments": [
+        "Game.Objects['You'].canvasAdd",
+        "minus 16",
+        "0"
+      ],
+      "unitName": "main.js",
+      "unitKind": "script",
+      "origin": {
+        "kind": "pinned-file",
+        "file": "main.js"
+      },
+      "unit": 0,
+      "start": 449327,
+      "end": 449377,
+      "line": 9240,
+      "column": 3,
+      "endLine": 9240,
+      "endColumn": 53
+    },
+    {
+      "method": "getContext",
+      "receiver": "me.canvas",
+      "arguments": [
+        "'2d'",
+        "[object]"
+      ],
+      "unitName": "main.js",
+      "unitKind": "script",
+      "origin": {
+        "kind": "pinned-file",
+        "file": "main.js"
+      },
+      "unit": 0,
+      "start": 457861,
+      "end": 457901,
+      "line": 9336,
+      "column": 11,
+      "endLine": 9336,
+      "endColumn": 51
+    },
+    {
+      "method": "getContext",
+      "receiver": "me.canvasAdd",
+      "arguments": [
+        "'2d'"
+      ],
+      "unitName": "main.js",
+      "unitKind": "script",
+      "origin": {
+        "kind": "pinned-file",
+        "file": "main.js"
+      },
+      "unit": 0,
+      "start": 457990,
+      "end": 458019,
+      "line": 9340,
+      "column": 15,
+      "endLine": 9340,
+      "endColumn": 44
+    },
+    {
+      "method": "rotate",
+      "receiver": "ctx",
+      "arguments": [
+        "((minus me.r multiply Math.PI) divide 180)"
+      ],
+      "unitName": "main.js",
+      "unitKind": "script",
+      "origin": {
+        "kind": "pinned-file",
+        "file": "main.js"
+      },
+      "unit": 0,
+      "start": 858555,
+      "end": 858586,
+      "line": 14568,
+      "column": 6,
+      "endLine": 14568,
+      "endColumn": 37
+    },
+    {
+      "method": "drawImage",
+      "receiver": "ctx",
+      "arguments": [
+        "Pic('wrinklerShadow.png')",
+        "(minus sw divide 2)",
+        "minus 10",
+        "sw",
+        "sh"
+      ],
+      "unitName": "main.js",
+      "unitKind": "script",
+      "origin": {
+        "kind": "pinned-file",
+        "file": "main.js"
+      },
+      "unit": 0,
+      "start": 858595,
+      "end": 858651,
+      "line": 14569,
+      "column": 6,
+      "endLine": 14569,
+      "endColumn": 62
+    },
+    {
+      "method": "rotate",
+      "receiver": "ctx",
+      "arguments": [
+        "((me.r multiply Math.PI) divide 180)"
+      ],
+      "unitName": "main.js",
+      "unitKind": "script",
+      "origin": {
+        "kind": "pinned-file",
+        "file": "main.js"
+      },
+      "unit": 0,
+      "start": 858660,
+      "end": 858690,
+      "line": 14570,
+      "column": 6,
+      "endLine": 14570,
+      "endColumn": 36
+    },
+    {
+      "method": "rotate",
+      "receiver": "ctx",
+      "arguments": [
+        "((minus me.r multiply Math.PI) divide 180)"
+      ],
+      "unitName": "main.js",
+      "unitKind": "script",
+      "origin": {
+        "kind": "pinned-file",
+        "file": "main.js"
+      },
+      "unit": 0,
+      "start": 858735,
+      "end": 858766,
+      "line": 14573,
+      "column": 5,
+      "endLine": 14573,
+      "endColumn": 36
+    },
+    {
+      "method": "drawImage",
+      "receiver": "ctx",
+      "arguments": [
+        "Pic(pic)",
+        "(minus sw divide 2)",
+        "minus 10",
+        "sw",
+        "sh"
+      ],
+      "unitName": "main.js",
+      "unitKind": "script",
+      "origin": {
+        "kind": "pinned-file",
+        "file": "main.js"
+      },
+      "unit": 0,
+      "start": 859191,
+      "end": 859230,
+      "line": 14580,
+      "column": 5,
+      "endLine": 14580,
+      "endColumn": 44
+    },
+    {
+      "method": "drawImage",
+      "receiver": "ctx",
+      "arguments": [
+        "Pic([conditional])",
+        "(minus sw divide 2)",
+        "(minus 10 add (1 multiply Math.sin((((Game.T multiply 0.2) add (i multiply 3)) add 1.2))))",
+        "sw",
+        "sh"
+      ],
+      "unitName": "main.js",
+      "unitKind": "script",
+      "origin": {
+        "kind": "pinned-file",
+        "file": "main.js"
+      },
+      "unit": 0,
+      "start": 859281,
+      "end": 859457,
+      "line": 14581,
+      "column": 48,
+      "endLine": 14581,
+      "endColumn": 224
+    },
+    {
+      "method": "drawImage",
+      "receiver": "ctx",
+      "arguments": [
+        "Pic('glint.png')",
+        "(((minus s divide 2) add (Math.random() multiply 50)) subtract 25)",
+        "((minus s divide 2) add (Math.random() multiply 200))",
+        "s",
+        "s"
+      ],
+      "unitName": "main.js",
+      "unitKind": "script",
+      "origin": {
+        "kind": "pinned-file",
+        "file": "main.js"
+      },
+      "unit": 0,
+      "start": 859767,
+      "end": 859850,
+      "line": 14589,
+      "column": 6,
+      "endLine": 14589,
+      "endColumn": 89
+    },
+    {
+      "method": "measureText",
+      "receiver": "ctx",
+      "arguments": [
+        "text"
+      ],
+      "unitName": "main.js",
+      "unitKind": "script",
+      "origin": {
+        "kind": "pinned-file",
+        "file": "main.js"
+      },
+      "unit": 0,
+      "start": 860380,
+      "end": 860401,
+      "line": 14608,
+      "column": 33,
+      "endLine": 14608,
+      "endColumn": 54
+    },
+    {
+      "method": "measureText",
+      "receiver": "ctx",
+      "arguments": [
+        "Beautify(selected.sucked)"
+      ],
+      "unitName": "main.js",
+      "unitKind": "script",
+      "origin": {
+        "kind": "pinned-file",
+        "file": "main.js"
+      },
+      "unit": 0,
+      "start": 860408,
+      "end": 860450,
+      "line": 14608,
+      "column": 61,
+      "endLine": 14608,
+      "endColumn": 103
+    },
+    {
+      "method": "drawImage",
+      "receiver": "ctx",
+      "arguments": [
+        "Pic('icons.png')",
+        "(27 multiply 48)",
+        "(26 multiply 48)",
+        "48",
+        "48",
+        "(((x subtract (width divide 2)) subtract 16) subtract (s divide 2))",
+        "((y subtract 4) subtract (s divide 2))",
+        "s",
+        "s"
+      ],
+      "unitName": "main.js",
+      "unitKind": "script",
+      "origin": {
+        "kind": "pinned-file",
+        "file": "main.js"
+      },
+      "unit": 0,
+      "start": 861634,
+      "end": 861712,
+      "line": 14641,
+      "column": 4,
+      "endLine": 14641,
+      "endColumn": 82
+    },
+    {
+      "method": "rotate",
+      "receiver": "Game.LeftBackground",
+      "arguments": [
+        "(((r divide 360) multiply Math.PI) multiply 2)"
+      ],
+      "unitName": "main.js",
+      "unitKind": "script",
+      "origin": {
+        "kind": "pinned-file",
+        "file": "main.js"
+      },
+      "unit": 0,
+      "start": 884924,
+      "end": 884969,
+      "line": 15091,
+      "column": 27,
+      "endLine": 15091,
+      "endColumn": 72
+    },
+    {
+      "method": "drawImage",
+      "receiver": "Game.LeftBackground",
+      "arguments": [
+        "Pic('shine.png')",
+        "(minus ss divide 2)",
+        "(minus ss divide 2)",
+        "ss",
+        "ss"
+      ],
+      "unitName": "main.js",
+      "unitKind": "script",
+      "origin": {
+        "kind": "pinned-file",
+        "file": "main.js"
+      },
+      "unit": 0,
+      "start": 885021,
+      "end": 885086,
+      "line": 15093,
+      "column": 5,
+      "endLine": 15093,
+      "endColumn": 70
+    },
+    {
+      "method": "drawImage",
+      "receiver": "Game.LeftBackground",
+      "arguments": [
+        "Pic(pic)",
+        "(96 multiply frame)",
+        "0",
+        "96",
+        "96",
+        "((x add [conditional]) subtract (24 multiply s))",
+        "((y subtract [conditional]) subtract (24 multiply s))",
+        "(48 multiply s)",
+        "(48 multiply s)"
+      ],
+      "unitName": "main.js",
+      "unitKind": "script",
+      "origin": {
+        "kind": "pinned-file",
+        "file": "main.js"
+      },
+      "unit": 0,
+      "start": 885165,
+      "end": 885341,
+      "line": 15097,
+      "column": 26,
+      "endLine": 15097,
+      "endColumn": 202
+    },
+    {
+      "method": "drawImage",
+      "receiver": "Game.LeftBackground",
+      "arguments": [
+        "Pic(pic)",
+        "(96 multiply frame)",
+        "0",
+        "96",
+        "96",
+        "(x subtract (24 multiply s))",
+        "(y subtract (24 multiply s))",
+        "(48 multiply s)",
+        "(48 multiply s)"
+      ],
+      "unitName": "main.js",
+      "unitKind": "script",
+      "origin": {
+        "kind": "pinned-file",
+        "file": "main.js"
+      },
+      "unit": 0,
+      "start": 885353,
+      "end": 885437,
+      "line": 15098,
+      "column": 9,
+      "endLine": 15098,
+      "endColumn": 93
+    },
+    {
+      "method": "getContext",
+      "receiver": "l('backgroundCanvas')",
+      "arguments": [
+        "'2d'"
+      ],
+      "unitName": "main.js",
+      "unitKind": "script",
+      "origin": {
+        "kind": "pinned-file",
+        "file": "main.js"
+      },
+      "unit": 0,
+      "start": 888588,
+      "end": 888626,
+      "line": 15173,
+      "column": 20,
+      "endLine": 15173,
+      "endColumn": 58
+    },
+    {
+      "method": "getContext",
+      "receiver": "l('backgroundLeftCanvas')",
+      "arguments": [
+        "'2d'"
+      ],
+      "unitName": "main.js",
+      "unitKind": "script",
+      "origin": {
+        "kind": "pinned-file",
+        "file": "main.js"
+      },
+      "unit": 0,
+      "start": 888817,
+      "end": 888859,
+      "line": 15176,
+      "column": 24,
+      "endLine": 15176,
+      "endColumn": 66
+    },
+    {
+      "method": "drawImage",
+      "receiver": "Game.LeftBackground",
+      "arguments": [
+        "Pic('brokenCookie.png')",
+        "0",
+        "0"
+      ],
+      "unitName": "main.js",
+      "unitKind": "script",
+      "origin": {
+        "kind": "pinned-file",
+        "file": "main.js"
+      },
+      "unit": 0,
+      "start": 889152,
+      "end": 889210,
+      "line": 15181,
+      "column": 5,
+      "endLine": 15181,
+      "endColumn": 63
+    },
+    {
+      "method": "drawImage",
+      "receiver": "Game.LeftBackground",
+      "arguments": [
+        "Pic('brokenCookieHalo.png')",
+        "0",
+        "0"
+      ],
+      "unitName": "main.js",
+      "unitKind": "script",
+      "origin": {
+        "kind": "pinned-file",
+        "file": "main.js"
+      },
+      "unit": 0,
+      "start": 889218,
+      "end": 889280,
+      "line": 15182,
+      "column": 5,
+      "endLine": 15182,
+      "endColumn": 67
+    },
+    {
+      "method": "drawImage",
+      "receiver": "Game.LeftBackground",
+      "arguments": [
+        "Pic('starbg.jpg')",
+        "0",
+        "0"
+      ],
+      "unitName": "main.js",
+      "unitKind": "script",
+      "origin": {
+        "kind": "pinned-file",
+        "file": "main.js"
+      },
+      "unit": 0,
+      "start": 889288,
+      "end": 889340,
+      "line": 15183,
+      "column": 5,
+      "endLine": 15183,
+      "endColumn": 57
+    },
+    {
+      "method": "rotate",
+      "receiver": "Game.Background",
+      "arguments": [
+        "(Game.T multiply 0.001)"
+      ],
+      "unitName": "main.js",
+      "unitKind": "script",
+      "origin": {
+        "kind": "pinned-file",
+        "file": "main.js"
+      },
+      "unit": 0,
+      "start": 891134,
+      "end": 891170,
+      "line": 15226,
+      "column": 5,
+      "endLine": 15226,
+      "endColumn": 41
+    },
+    {
+      "method": "drawImage",
+      "receiver": "Game.Background",
+      "arguments": [
+        "Pic('heavenRing1.jpg')",
+        "(minus s divide 2)",
+        "(minus s divide 2)",
+        "s",
+        "s"
+      ],
+      "unitName": "main.js",
+      "unitKind": "script",
+      "origin": {
+        "kind": "pinned-file",
+        "file": "main.js"
+      },
+      "unit": 0,
+      "start": 891236,
+      "end": 891299,
+      "line": 15228,
+      "column": 5,
+      "endLine": 15228,
+      "endColumn": 68
+    },
+    {
+      "method": "rotate",
+      "receiver": "Game.Background",
+      "arguments": [
+        "(minus Game.T multiply 0.0017)"
+      ],
+      "unitName": "main.js",
+      "unitKind": "script",
+      "origin": {
+        "kind": "pinned-file",
+        "file": "main.js"
+      },
+      "unit": 0,
+      "start": 891307,
+      "end": 891345,
+      "line": 15229,
+      "column": 5,
+      "endLine": 15229,
+      "endColumn": 43
+    },
+    {
+      "method": "drawImage",
+      "receiver": "Game.Background",
+      "arguments": [
+        "Pic('heavenRing2.jpg')",
+        "(minus s divide 2)",
+        "(minus s divide 2)",
+        "s",
+        "s"
+      ],
+      "unitName": "main.js",
+      "unitKind": "script",
+      "origin": {
+        "kind": "pinned-file",
+        "file": "main.js"
+      },
+      "unit": 0,
+      "start": 891412,
+      "end": 891475,
+      "line": 15231,
+      "column": 5,
+      "endLine": 15231,
+      "endColumn": 68
+    },
+    {
+      "method": "drawImage",
+      "receiver": "Game.Background",
+      "arguments": [
+        "Pic('shadedBordersSoft.png')",
+        "0",
+        "0",
+        "Game.Background.canvas.width",
+        "Game.Background.canvas.height"
+      ],
+      "unitName": "main.js",
+      "unitKind": "script",
+      "origin": {
+        "kind": "pinned-file",
+        "file": "main.js"
+      },
+      "unit": 0,
+      "start": 893682,
+      "end": 893800,
+      "line": 15303,
+      "column": 6,
+      "endLine": 15303,
+      "endColumn": 124
+    },
+    {
+      "method": "rotate",
+      "receiver": "ctx",
+      "arguments": [
+        "(((r divide 360) multiply Math.PI) multiply 2)"
+      ],
+      "unitName": "main.js",
+      "unitKind": "script",
+      "origin": {
+        "kind": "pinned-file",
+        "file": "main.js"
+      },
+      "unit": 0,
+      "start": 896361,
+      "end": 896390,
+      "line": 15384,
+      "column": 6,
+      "endLine": 15384,
+      "endColumn": 35
+    },
+    {
+      "method": "drawImage",
+      "receiver": "ctx",
+      "arguments": [
+        "Pic(pic)",
+        "(minus s divide 2)",
+        "(minus s divide 2)",
+        "s",
+        "s"
+      ],
+      "unitName": "main.js",
+      "unitKind": "script",
+      "origin": {
+        "kind": "pinned-file",
+        "file": "main.js"
+      },
+      "unit": 0,
+      "start": 896745,
+      "end": 896782,
+      "line": 15392,
+      "column": 6,
+      "endLine": 15392,
+      "endColumn": 43
+    },
+    {
+      "method": "rotate",
+      "receiver": "ctx",
+      "arguments": [
+        "((((minus r multiply 2) divide 360) multiply Math.PI) multiply 2)"
+      ],
+      "unitName": "main.js",
+      "unitKind": "script",
+      "origin": {
+        "kind": "pinned-file",
+        "file": "main.js"
+      },
+      "unit": 0,
+      "start": 896791,
+      "end": 896823,
+      "line": 15393,
+      "column": 6,
+      "endLine": 15393,
+      "endColumn": 38
+    },
+    {
+      "method": "drawImage",
+      "receiver": "ctx",
+      "arguments": [
+        "Pic(pic)",
+        "(minus s divide 2)",
+        "(minus s divide 2)",
+        "s",
+        "s"
+      ],
+      "unitName": "main.js",
+      "unitKind": "script",
+      "origin": {
+        "kind": "pinned-file",
+        "file": "main.js"
+      },
+      "unit": 0,
+      "start": 896871,
+      "end": 896908,
+      "line": 15395,
+      "column": 6,
+      "endLine": 15395,
+      "endColumn": 43
+    },
+    {
+      "method": "drawImage",
+      "receiver": "ctx",
+      "arguments": [
+        "Pic('dragonBG.png')",
+        "x",
+        "y",
+        "s",
+        "s"
+      ],
+      "unitName": "main.js",
+      "unitKind": "script",
+      "origin": {
+        "kind": "pinned-file",
+        "file": "main.js"
+      },
+      "unit": 0,
+      "start": 897441,
+      "end": 897483,
+      "line": 15413,
+      "column": 7,
+      "endLine": 15413,
+      "endColumn": 49
+    },
+    {
+      "method": "drawImage",
+      "receiver": "ctx",
+      "arguments": [
+        "Pic('perfectCookie.png')",
+        "(x subtract (s divide 2))",
+        "(y subtract (s divide 2))",
+        "s",
+        "s"
+      ],
+      "unitName": "main.js",
+      "unitKind": "script",
+      "origin": {
+        "kind": "pinned-file",
+        "file": "main.js"
+      },
+      "unit": 0,
+      "start": 898161,
+      "end": 898216,
+      "line": 15436,
+      "column": 9,
+      "endLine": 15436,
+      "endColumn": 64
+    },
+    {
+      "method": "drawImage",
+      "receiver": "ctx",
+      "arguments": [
+        "Pic('cookieShadow.png')",
+        "(x subtract (s divide 2))",
+        "((y subtract (s divide 2)) add 20)",
+        "s",
+        "s"
+      ],
+      "unitName": "main.js",
+      "unitKind": "script",
+      "origin": {
+        "kind": "pinned-file",
+        "file": "main.js"
+      },
+      "unit": 0,
+      "start": 898473,
+      "end": 898530,
+      "line": 15448,
+      "column": 29,
+      "endLine": 15448,
+      "endColumn": 86
+    },
+    {
+      "method": "drawImage",
+      "receiver": "ctx",
+      "arguments": [
+        "Pic('nest.png')",
+        "(minus nestW divide 2)",
+        "((minus nestH divide 2) add 130)",
+        "nestW",
+        "nestH"
+      ],
+      "unitName": "main.js",
+      "unitKind": "script",
+      "origin": {
+        "kind": "pinned-file",
+        "file": "main.js"
+      },
+      "unit": 0,
+      "start": 898710,
+      "end": 898774,
+      "line": 15454,
+      "column": 8,
+      "endLine": 15454,
+      "endColumn": 72
+    },
+    {
+      "method": "drawImage",
+      "receiver": "ctx",
+      "arguments": [
+        "Pic('perfectCookie.png')",
+        "(minus s divide 2)",
+        "(minus s divide 2)",
+        "s",
+        "s"
+      ],
+      "unitName": "main.js",
+      "unitKind": "script",
+      "origin": {
+        "kind": "pinned-file",
+        "file": "main.js"
+      },
+      "unit": 0,
+      "start": 898854,
+      "end": 898907,
+      "line": 15457,
+      "column": 7,
+      "endLine": 15457,
+      "endColumn": 60
+    },
+    {
+      "method": "drawImage",
+      "receiver": "ctx",
+      "arguments": [
+        "Pic('glint.png')",
+        "((minus size divide 2) add (Math.sin(a) multiply d))",
+        "((minus size divide 2) add (Math.cos(a) multiply d))",
+        "size",
+        "size"
+      ],
+      "unitName": "main.js",
+      "unitKind": "script",
+      "origin": {
+        "kind": "pinned-file",
+        "file": "main.js"
+      },
+      "unit": 0,
+      "start": 899253,
+      "end": 899338,
+      "line": 15468,
+      "column": 9,
+      "endLine": 15468,
+      "endColumn": 94
+    },
+    {
+      "method": "drawImage",
+      "receiver": "ctx",
+      "arguments": [
+        "Pic('shine.png')",
+        "x",
+        "y",
+        "s",
+        "s"
+      ],
+      "unitName": "main.js",
+      "unitKind": "script",
+      "origin": {
+        "kind": "pinned-file",
+        "file": "main.js"
+      },
+      "unit": 0,
+      "start": 899631,
+      "end": 899670,
+      "line": 15483,
+      "column": 6,
+      "endLine": 15483,
+      "endColumn": 45
+    },
+    {
+      "method": "drawImage",
+      "receiver": "ctx",
+      "arguments": [
+        "Pic('dragonBG.png')",
+        "x",
+        "y",
+        "s",
+        "s"
+      ],
+      "unitName": "main.js",
+      "unitKind": "script",
+      "origin": {
+        "kind": "pinned-file",
+        "file": "main.js"
+      },
+      "unit": 0,
+      "start": 899899,
+      "end": 899941,
+      "line": 15491,
+      "column": 7,
+      "endLine": 15491,
+      "endColumn": 49
+    },
+    {
+      "method": "drawImage",
+      "receiver": "ctx",
+      "arguments": [
+        "Pic('cookieShadow.png')",
+        "x",
+        "(y add 20)",
+        "s",
+        "s"
+      ],
+      "unitName": "main.js",
+      "unitKind": "script",
+      "origin": {
+        "kind": "pinned-file",
+        "file": "main.js"
+      },
+      "unit": 0,
+      "start": 900145,
+      "end": 900194,
+      "line": 15499,
+      "column": 28,
+      "endLine": 15499,
+      "endColumn": 77
+    },
+    {
+      "method": "drawImage",
+      "receiver": "ctx",
+      "arguments": [
+        "Pic('perfectCookie.png')",
+        "x",
+        "y",
+        "s",
+        "s"
+      ],
+      "unitName": "main.js",
+      "unitKind": "script",
+      "origin": {
+        "kind": "pinned-file",
+        "file": "main.js"
+      },
+      "unit": 0,
+      "start": 900203,
+      "end": 900250,
+      "line": 15500,
+      "column": 6,
+      "endLine": 15500,
+      "endColumn": 53
+    },
+    {
+      "method": "rotate",
+      "receiver": "ctx",
+      "arguments": [
+        "(((rot divide 360) multiply Math.PI) multiply 2)"
+      ],
+      "unitName": "main.js",
+      "unitKind": "script",
+      "origin": {
+        "kind": "pinned-file",
+        "file": "main.js"
+      },
+      "unit": 0,
+      "start": 901150,
+      "end": 901181,
+      "line": 15531,
+      "column": 7,
+      "endLine": 15531,
+      "endColumn": 38
+    },
+    {
+      "method": "drawImage",
+      "receiver": "ctx",
+      "arguments": [
+        "pic",
+        "0",
+        "0",
+        "32",
+        "32",
+        "x",
+        "y",
+        "32",
+        "32"
+      ],
+      "unitName": "main.js",
+      "unitKind": "script",
+      "origin": {
+        "kind": "pinned-file",
+        "file": "main.js"
+      },
+      "unit": 0,
+      "start": 901191,
+      "end": 901229,
+      "line": 15532,
+      "column": 7,
+      "endLine": 15532,
+      "endColumn": 45
+    },
+    {
+      "method": "rotate",
+      "receiver": "ctx",
+      "arguments": [
+        "(Game.T multiply 0.007)"
+      ],
+      "unitName": "main.js",
+      "unitKind": "script",
+      "origin": {
+        "kind": "pinned-file",
+        "file": "main.js"
+      },
+      "unit": 0,
+      "start": 902468,
+      "end": 902492,
+      "line": 15573,
+      "column": 6,
+      "endLine": 15573,
+      "endColumn": 30
+    },
+    {
+      "method": "drawImage",
+      "receiver": "ctx",
+      "arguments": [
+        "Pic('heavenRing1.jpg')",
+        "(minus s2 divide 2)",
+        "(minus s2 divide 2)",
+        "s2",
+        "s2"
+      ],
+      "unitName": "main.js",
+      "unitKind": "script",
+      "origin": {
+        "kind": "pinned-file",
+        "file": "main.js"
+      },
+      "unit": 0,
+      "start": 902560,
+      "end": 902615,
+      "line": 15576,
+      "column": 6,
+      "endLine": 15576,
+      "endColumn": 61
+    },
+    {
+      "method": "rotate",
+      "receiver": "ctx",
+      "arguments": [
+        "(minus Game.T multiply 0.002)"
+      ],
+      "unitName": "main.js",
+      "unitKind": "script",
+      "origin": {
+        "kind": "pinned-file",
+        "file": "main.js"
+      },
+      "unit": 0,
+      "start": 902624,
+      "end": 902649,
+      "line": 15577,
+      "column": 6,
+      "endLine": 15577,
+      "endColumn": 31
+    },
+    {
+      "method": "drawImage",
+      "receiver": "ctx",
+      "arguments": [
+        "Pic('heavenRing2.jpg')",
+        "(minus s2 divide 2)",
+        "(minus s2 divide 2)",
+        "s2",
+        "s2"
+      ],
+      "unitName": "main.js",
+      "unitKind": "script",
+      "origin": {
+        "kind": "pinned-file",
+        "file": "main.js"
+      },
+      "unit": 0,
+      "start": 902715,
+      "end": 902770,
+      "line": 15580,
+      "column": 6,
+      "endLine": 15580,
+      "endColumn": 61
+    },
+    {
+      "method": "rotate",
+      "receiver": "ctx",
+      "arguments": [
+        "(((t multiply minus 0.1) multiply Math.PI) multiply 2)"
+      ],
+      "unitName": "main.js",
+      "unitKind": "script",
+      "origin": {
+        "kind": "pinned-file",
+        "file": "main.js"
+      },
+      "unit": 0,
+      "start": 902901,
+      "end": 902933,
+      "line": 15588,
+      "column": 5,
+      "endLine": 15588,
+      "endColumn": 37
+    },
+    {
+      "method": "drawImage",
+      "receiver": "ctx",
+      "arguments": [
+        "Pic('brokenCookie.png')",
+        "(256 multiply chunks[i])",
+        "0",
+        "256",
+        "256",
+        "(((minus s divide 2) add (Math.sin(((minus (… divide …) multiply Math.PI) multiply 2)) multiply d)) add x2)",
+        "(((minus s divide 2) add (Math.cos(((minus (… divide …) multiply Math.PI) multiply 2)) multiply d)) add y2)",
+        "s",
+        "s"
+      ],
+      "unitName": "main.js",
+      "unitKind": "script",
+      "origin": {
+        "kind": "pinned-file",
+        "file": "main.js"
+      },
+      "unit": 0,
+      "start": 903815,
+      "end": 903993,
+      "line": 15610,
+      "column": 6,
+      "endLine": 15610,
+      "endColumn": 184
+    },
+    {
+      "method": "drawImage",
+      "receiver": "ctx",
+      "arguments": [
+        "Pic('brokenCookieHalo.png')",
+        "(minus s divide 1.3333)",
+        "(minus s divide 1.3333)",
+        "(s multiply 1.5)",
+        "(s multiply 1.5)"
+      ],
+      "unitName": "main.js",
+      "unitKind": "script",
+      "origin": {
+        "kind": "pinned-file",
+        "file": "main.js"
+      },
+      "unit": 0,
+      "start": 904192,
+      "end": 904266,
+      "line": 15615,
+      "column": 5,
+      "endLine": 15615,
+      "endColumn": 79
+    },
+    {
+      "method": "drawImage",
+      "receiver": "ctx",
+      "arguments": [
+        "Pic('shineSpoke.png')",
+        "(minus sw divide 2)",
+        "((minus sh subtract 32) subtract ((1 subtract t2) multiply 256))",
+        "sw",
+        "sh"
+      ],
+      "unitName": "main.js",
+      "unitKind": "script",
+      "origin": {
+        "kind": "pinned-file",
+        "file": "main.js"
+      },
+      "unit": 0,
+      "start": 904756,
+      "end": 904822,
+      "line": 15634,
+      "column": 8,
+      "endLine": 15634,
+      "endColumn": 74
+    },
+    {
+      "method": "rotate",
+      "receiver": "ctx",
+      "arguments": [
+        "((Math.PI multiply 2) divide n)"
+      ],
+      "unitName": "main.js",
+      "unitKind": "script",
+      "origin": {
+        "kind": "pinned-file",
+        "file": "main.js"
+      },
+      "unit": 0,
+      "start": 904842,
+      "end": 904865,
+      "line": 15636,
+      "column": 7,
+      "endLine": 15636,
+      "endColumn": 30
+    },
+    {
+      "method": "rotate",
+      "receiver": "ctx",
+      "arguments": [
+        "me.r"
+      ],
+      "unitName": "main.js",
+      "unitKind": "script",
+      "origin": {
+        "kind": "pinned-file",
+        "file": "main.js"
+      },
+      "unit": 0,
+      "start": 908144,
+      "end": 908160,
+      "line": 15727,
+      "column": 7,
+      "endLine": 15727,
+      "endColumn": 23
+    },
+    {
+      "method": "drawImage",
+      "receiver": "ctx",
+      "arguments": [
+        "Pic('smallCookies.png')",
+        "((me.id remainder 8) multiply 64)",
+        "0",
+        "64",
+        "64",
+        "(minus me.s divide 2)",
+        "(minus me.s divide 2)",
+        "me.s",
+        "me.s"
+      ],
+      "unitName": "main.js",
+      "unitKind": "script",
+      "origin": {
+        "kind": "pinned-file",
+        "file": "main.js"
+      },
+      "unit": 0,
+      "start": 908192,
+      "end": 908277,
+      "line": 15728,
+      "column": 29,
+      "endLine": 15728,
+      "endColumn": 114
+    },
+    {
+      "method": "drawImage",
+      "receiver": "ctx",
+      "arguments": [
+        "Pic('icons.png')",
+        "(me.icon[0] multiply 48)",
+        "(me.icon[1] multiply 48)",
+        "48",
+        "48",
+        "(minus me.s divide 2)",
+        "(minus me.s divide 2)",
+        "me.s",
+        "me.s"
+      ],
+      "unitName": "main.js",
+      "unitKind": "script",
+      "origin": {
+        "kind": "pinned-file",
+        "file": "main.js"
+      },
+      "unit": 0,
+      "start": 908292,
+      "end": 908383,
+      "line": 15729,
+      "column": 12,
+      "endLine": 15729,
+      "endColumn": 103
+    },
+    {
+      "method": "rotate",
+      "receiver": "ctx",
+      "arguments": [
+        "me.r"
+      ],
+      "unitName": "main.js",
+      "unitKind": "script",
+      "origin": {
+        "kind": "pinned-file",
+        "file": "main.js"
+      },
+      "unit": 0,
+      "start": 911283,
+      "end": 911299,
+      "line": 15807,
+      "column": 7,
+      "endLine": 15807,
+      "endColumn": 23
+    },
+    {
+      "method": "drawImage",
+      "receiver": "ctx",
+      "arguments": [
+        "Pic('smallCookies.png')",
+        "((me.id remainder 8) multiply 64)",
+        "0",
+        "64",
+        "64",
+        "(minus me.s divide 2)",
+        "(minus me.s divide 2)",
+        "me.s",
+        "me.s"
+      ],
+      "unitName": "main.js",
+      "unitKind": "script",
+      "origin": {
+        "kind": "pinned-file",
+        "file": "main.js"
+      },
+      "unit": 0,
+      "start": 911331,
+      "end": 911416,
+      "line": 15808,
+      "column": 29,
+      "endLine": 15808,
+      "endColumn": 114
+    },
+    {
+      "method": "drawImage",
+      "receiver": "ctx",
+      "arguments": [
+        "Pic('icons.png')",
+        "(me.icon[0] multiply 48)",
+        "(me.icon[1] multiply 48)",
+        "48",
+        "48",
+        "(minus me.s divide 2)",
+        "(minus me.s divide 2)",
+        "me.s",
+        "me.s"
+      ],
+      "unitName": "main.js",
+      "unitKind": "script",
+      "origin": {
+        "kind": "pinned-file",
+        "file": "main.js"
+      },
+      "unit": 0,
+      "start": 911431,
+      "end": 911522,
+      "line": 15809,
+      "column": 12,
+      "endLine": 15809,
+      "endColumn": 103
+    },
+    {
+      "method": "drawImage",
+      "receiver": "ctx",
+      "arguments": [
+        "Pic('shadedBordersSoft.png')",
+        "0",
+        "0",
+        "ctx.canvas.width",
+        "ctx.canvas.height"
+      ],
+      "unitName": "main.js",
+      "unitKind": "script",
+      "origin": {
+        "kind": "pinned-file",
+        "file": "main.js"
+      },
+      "unit": 0,
+      "start": 912000,
+      "end": 912082,
+      "line": 15828,
+      "column": 5,
+      "endLine": 15828,
+      "endColumn": 87
+    },
+    {
+      "method": "rotate",
+      "receiver": "ctx",
+      "arguments": [
+        "(minus Game.T multiply 0.01)"
+      ],
+      "unitName": "main.js",
+      "unitKind": "script",
+      "origin": {
+        "kind": "pinned-file",
+        "file": "main.js"
+      },
+      "unit": 0,
+      "start": 912507,
+      "end": 912531,
+      "line": 15845,
+      "column": 6,
+      "endLine": 15845,
+      "endColumn": 30
+    },
+    {
+      "method": "drawImage",
+      "receiver": "ctx",
+      "arguments": [
+        "Pic('shimmeringVeil.png')",
+        "(minus s divide 2)",
+        "(minus s divide 2)",
+        "s",
+        "s"
+      ],
+      "unitName": "main.js",
+      "unitKind": "script",
+      "origin": {
+        "kind": "pinned-file",
+        "file": "main.js"
+      },
+      "unit": 0,
+      "start": 912540,
+      "end": 912594,
+      "line": 15846,
+      "column": 6,
+      "endLine": 15846,
+      "endColumn": 60
+    },
+    {
+      "method": "drawImage",
+      "receiver": "ctx",
+      "arguments": [
+        "Pic('glint.png')",
+        "(xx subtract (size divide 2))",
+        "(yy subtract (size divide 2))",
+        "size",
+        "size"
+      ],
+      "unitName": "main.js",
+      "unitKind": "script",
+      "origin": {
+        "kind": "pinned-file",
+        "file": "main.js"
+      },
+      "unit": 0,
+      "start": 912947,
+      "end": 913008,
+      "line": 15858,
+      "column": 8,
+      "endLine": 15858,
+      "endColumn": 69
+    },
+    {
+      "method": "drawImage",
+      "receiver": "ctx",
+      "arguments": [
+        "Pic(borders)",
+        "0",
+        "0",
+        "ctx.canvas.width",
+        "ctx.canvas.height"
+      ],
+      "unitName": "main.js",
+      "unitKind": "script",
+      "origin": {
+        "kind": "pinned-file",
+        "file": "main.js"
+      },
+      "unit": 0,
+      "start": 913524,
+      "end": 913590,
+      "line": 15874,
+      "column": 5,
+      "endLine": 15874,
+      "endColumn": 71
+    },
+    {
+      "method": "getContext",
+      "receiver": "Game.fpsGraph",
+      "arguments": [
+        "'2d'",
+        "[object]"
+      ],
+      "unitName": "main.js",
+      "unitKind": "script",
+      "origin": {
+        "kind": "pinned-file",
+        "file": "main.js"
+      },
+      "unit": 0,
+      "start": 921380,
+      "end": 921424,
+      "line": 16033,
+      "column": 21,
+      "endLine": 16033,
+      "endColumn": 65
+    },
+    {
+      "method": "drawImage",
+      "receiver": "ctx",
+      "arguments": [
+        "Game.fpsGraph",
+        "minus 1",
+        "0"
+      ],
+      "unitName": "main.js",
+      "unitKind": "script",
+      "origin": {
+        "kind": "pinned-file",
+        "file": "main.js"
+      },
+      "unit": 0,
+      "start": 955303,
+      "end": 955336,
+      "line": 16820,
+      "column": 4,
+      "endLine": 16820,
+      "endColumn": 37
+    },
+    {
+      "method": "getContext",
+      "receiver": "M.graph",
+      "arguments": [
+        "'2d'",
+        "[object]"
+      ],
+      "unitName": "minigameMarket.js",
+      "unitKind": "script",
+      "origin": {
+        "kind": "pinned-file",
+        "file": "minigameMarket.js"
+      },
+      "unit": 2,
+      "start": 35604,
+      "end": 35642,
+      "line": 517,
+      "column": 13,
+      "endLine": 517,
+      "endColumn": 51
+    },
+    {
+      "method": "drawImage",
+      "receiver": "ctx",
+      "arguments": [
+        "M.graph",
+        "minus span",
+        "0"
+      ],
+      "unitName": "minigameMarket.js",
+      "unitKind": "script",
+      "origin": {
+        "kind": "pinned-file",
+        "file": "minigameMarket.js"
+      },
+      "unit": 2,
+      "start": 50442,
+      "end": 50472,
+      "line": 970,
+      "column": 13,
+      "endLine": 970,
+      "endColumn": 43
+    }
+  ],
+  "dynamicMemberCalls": [
+    {
+      "node": 5985,
+      "callee": "Game.modHooks[hook][i]",
+      "unitName": "main.js",
+      "unitKind": "script",
+      "origin": {
+        "kind": "pinned-file",
+        "file": "main.js"
+      },
+      "unit": 0,
+      "start": 42801,
+      "end": 42830,
+      "line": 1114,
+      "column": 3,
+      "endLine": 1114,
+      "endColumn": 32
+    },
+    {
+      "node": 6016,
+      "callee": "Game.modHooks[hook][i]",
+      "unitName": "main.js",
+      "unitKind": "script",
+      "origin": {
+        "kind": "pinned-file",
+        "file": "main.js"
+      },
+      "unit": 0,
+      "start": 42952,
+      "end": 42979,
+      "line": 1121,
+      "column": 7,
+      "endLine": 1121,
+      "endColumn": 34
+    },
+    {
+      "node": 46954,
+      "callee": "Game.modHooks['ticker'][i]",
+      "unitName": "main.js",
+      "unitKind": "script",
+      "origin": {
+        "kind": "pinned-file",
+        "file": "main.js"
+      },
+      "unit": 0,
+      "start": 374476,
+      "end": 374504,
+      "line": 7559,
+      "column": 12,
+      "endLine": 7559,
+      "endColumn": 40
+    }
+  ],
+  "unresolvedTemplates": [
+    {
+      "status": "template",
+      "source": {
+        "unit": 0,
+        "start": 115923,
+        "end": 116030,
+        "line": 2213,
+        "column": 240,
+        "endLine": 2213,
+        "endColumn": 347
+      },
+      "event": "onclick",
+      "parseError": "Unsupported JavaScript syntax in main.js:literal-handler:10281:57: Unexpected token (1:31)"
+    },
+    {
+      "status": "fragment",
+      "source": {
+        "unit": 0,
+        "start": 124538,
+        "end": 124704,
+        "line": 2427,
+        "column": 23,
+        "endLine": 2427,
+        "endColumn": 189
+      },
+      "event": "onmouseover",
+      "parseError": null
+    },
+    {
+      "status": "fragment",
+      "source": {
+        "unit": 0,
+        "start": 124781,
+        "end": 124884,
+        "line": 2428,
+        "column": 15,
+        "endLine": 2428,
+        "endColumn": 118
+      },
+      "event": "onmouseover",
+      "parseError": null
+    },
+    {
+      "status": "fragment",
+      "source": {
+        "unit": 0,
+        "start": 125071,
+        "end": 125235,
+        "line": 2433,
+        "column": 23,
+        "endLine": 2433,
+        "endColumn": 187
+      },
+      "event": "onmouseover",
+      "parseError": null
+    },
+    {
+      "status": "fragment",
+      "source": {
+        "unit": 0,
+        "start": 125325,
+        "end": 125426,
+        "line": 2434,
+        "column": 10,
+        "endLine": 2434,
+        "endColumn": 111
+      },
+      "event": "onmouseover",
+      "parseError": null
+    },
+    {
+      "status": "fragment",
+      "source": {
+        "unit": 0,
+        "start": 195144,
+        "end": 195490,
+        "line": 4045,
+        "column": 275,
+        "endLine": 4045,
+        "endColumn": 621
+      },
+      "event": "onmouseover",
+      "parseError": null
+    },
+    {
+      "status": "fragment",
+      "source": {
+        "unit": 0,
+        "start": 279990,
+        "end": 280065,
+        "line": 6211,
+        "column": 193,
+        "endLine": 6211,
+        "endColumn": 268
+      },
+      "event": "onclick",
+      "parseError": null
+    },
+    {
+      "status": "fragment",
+      "source": {
+        "unit": 0,
+        "start": 288205,
+        "end": 288219,
+        "line": 6433,
+        "column": 345,
+        "endLine": 6433,
+        "endColumn": 359
+      },
+      "event": "onchange",
+      "parseError": null
+    },
+    {
+      "status": "fragment",
+      "source": {
+        "unit": 0,
+        "start": 288229,
+        "end": 288242,
+        "line": 6433,
+        "column": 369,
+        "endLine": 6433,
+        "endColumn": 382
+      },
+      "event": "oninput",
+      "parseError": null
+    },
+    {
+      "status": "fragment",
+      "source": {
+        "unit": 0,
+        "start": 401344,
+        "end": 401419,
+        "line": 8209,
+        "column": 41,
+        "endLine": 8209,
+        "endColumn": 116
+      },
+      "event": "onclick",
+      "parseError": null
+    },
+    {
+      "status": "fragment",
+      "source": {
+        "unit": 0,
+        "start": 401582,
+        "end": 401666,
+        "line": 8210,
+        "column": 50,
+        "endLine": 8210,
+        "endColumn": 134
+      },
+      "event": "onclick",
+      "parseError": null
+    },
+    {
+      "status": "fragment",
+      "source": {
+        "unit": 0,
+        "start": 402049,
+        "end": 402078,
+        "line": 8211,
+        "column": 245,
+        "endLine": 8211,
+        "endColumn": 274
+      },
+      "event": "onclick",
+      "parseError": null
+    },
+    {
+      "status": "fragment",
+      "source": {
+        "unit": 0,
+        "start": 464161,
+        "end": 464209,
+        "line": 9501,
+        "column": 11,
+        "endLine": 9501,
+        "endColumn": 59
+      },
+      "event": "onclick",
+      "parseError": null
+    },
+    {
+      "status": "fragment",
+      "source": {
+        "unit": 0,
+        "start": 465627,
+        "end": 465826,
+        "line": 9537,
+        "column": 278,
+        "endLine": 9537,
+        "endColumn": 477
+      },
+      "event": "onmouseover",
+      "parseError": null
+    },
+    {
+      "status": "fragment",
+      "source": {
+        "unit": 0,
+        "start": 875850,
+        "end": 875892,
+        "line": 14895,
+        "column": 264,
+        "endLine": 14895,
+        "endColumn": 306
+      },
+      "event": "onmouseout",
+      "parseError": null
+    },
+    {
+      "status": "fragment",
+      "source": {
+        "unit": 0,
+        "start": 875918,
+        "end": 875961,
+        "line": 14895,
+        "column": 332,
+        "endLine": 14895,
+        "endColumn": 375
+      },
+      "event": "onmouseover",
+      "parseError": null
+    }
+  ],
+  "firstLiveRotation": {
+    "file": "main.js",
+    "line": 15384,
+    "expression": "(r/360)*Math.PI*2",
+    "rExpression": "Math.floor((Game.T*0.5)%360)",
+    "diagnosticFrame": 2,
+    "diagnosticR": 1,
+    "diagnosticAngleBits": "4580687790476533049",
+    "nativeLibraryResultSubstituted": false
+  },
+  "deferredPaint": {
+    "status": "proposed relation; executable model still stops at nonzero rotation",
+    "representation": [
+      "Ordered transform operations with their converted binary64 arguments",
+      "Save/restore snapshots of transform expression and complete drawing state",
+      "Paint commands with state and canvas dimensions at invocation",
+      "Image readiness/dimensions/origin state; canvas-source content snapshot at drawImage invocation",
+      "Reset/reallocation and context-loss state"
+    ],
+    "mustExecute": [
+      "Native receiver branding and required-argument checks",
+      "Source coercion callbacks, source exceptions and argument order",
+      "Any source-observable native exception and resource event",
+      "Native reads/writes of exposed drawing-state properties",
+      "Pixel/metric queries or explicit unresolved requests when their semantics are not supplied"
+    ],
+    "mustNotAssume": [
+      "V8 Math.sin/cos equals the engine C-library functions",
+      "A later canvas source can replace its call-time snapshot",
+      "No literal getTransform means no possible observation through aliases or generated handlers",
+      "A public screenshot observation can be discarded from the policy class",
+      "Canvas dimensions and command loops do not consume source randomness"
+    ],
+    "obligations": [
+      "Define an exact denotation parameterized by the pinned native transform/raster functions, or a proved larger host relation for a lower bound.",
+      "Prove source steps commute with the representation relation, including native validation, reset, drawing state and exception order.",
+      "Discharge actual source alias/call reachability before asserting that a context has no scalar/pixel observer.",
+      "Keep YouCustomizer getImageData/putImageData and text metric paths explicit until their exact interpretation is available.",
+      "Provide observation and action simulations; source-economic-state equality alone does not preserve the strategy class."
+    ]
+  },
+  "sourceNoninterferenceProved": false,
+  "rendererRefinementVerified": false,
+  "optimalityProved": false
+}

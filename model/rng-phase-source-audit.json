@@ -1,0 +1,5022 @@
+{
+  "schemaVersion": 1,
+  "status": "normal-control-flow-certificate-with-open-exception-and-call-refinement",
+  "sourceHashes": {
+    "main.js": "a8813ec2ee97edf5ebff6a3ce2037dcb65c08abd13c123bb92efda89b06ef4f7",
+    "minigameGarden.js": "184eacacd9325d493412dcda07f63d3a791939f83889b4349b6099d04be8e6c9",
+    "minigameMarket.js": "78538743673f3c1cd0e870a3695c77dcacd63febbe64b88f8a8fab9ea7e2863f",
+    "minigameGrimoire.js": "9efea1feb898dc9b719dd971bd27a71f083a8855b910013c524aea9b6d2a349d",
+    "minigamePantheon.js": "af08c31c4564d445cc2d1a7d101c4a63b57aa9b89991b93b8a65f4c0427573a0",
+    "base64.js": "875839c3e0c174c9358ce96923adfed6a6d2c090187a32deb35152dfac2c0e47",
+    "loc/EN.js": "ce48272a5fd5ab1f309dbb8fd7bd70188984ce14235a1d3d9215f3585101f433",
+    "index.html": "28488d9aef9bf31c4c023a0af01f0500a3b3e462b79bf7f2b09790025927a969"
+  },
+  "reproduction": "node tools/audit-rng-phase.mjs",
+  "existingKernelProjection": "lean/CookieClicker/NativeRngPhase.lean already checks the local normal-return phase programs. This report adds operation-level exceptional-exit obligations; it does not replace or strengthen those programs into a source-refinement theorem.",
+  "scope": "All explicit Math.seedrandom callsites in the pinned eight source files. The library implementation at main.js702 uses its local c.seedrandom alias and is separately the native generator implementation, not a game action.",
+  "assumptionsOfProjection": [
+    "Ordinary calls and constructions terminate normally and return with their incoming generator or the free generator.",
+    "Property reads, writes, conversion and host operations do not throw or synchronously invoke an unclassified generator-changing callback.",
+    "The clone-hover branch at main.js8417 is not executed; all other branch choices and loop iteration counts are overapproximated.",
+    "No imported/mod/injected code replaces native functions, properties or generator bindings."
+  ],
+  "conclusionsOfProjection": [
+    "Starting free, all enumerated seed-owning functions have only free normal/return outcomes under the projection premises and clone-branch exclusion.",
+    "Without that exclusion, the building draw callback has a seeded normal exit."
+  ],
+  "openForUniversalHandPickedBound": [
+    "Connect the syntax projection and callee contracts to actual source execution, including indirect functions and aliases.",
+    "Discharge every potentially exceptional operation reached while seeded. None of the paired reset sites is protected by finally.",
+    "Show the initialized generator is free and preserve phase through every allowed event, timer and host callback, including a callback that reports an uncaught exception.",
+    "Establish that the admissible policy definition excludes the clone leak; an intention-based prohibition alone is not a syntactic branch invariant.",
+    "Connect the harvest choose([0,1]) draw to that free phase and combine conditional fairness with the actual source sugar-clock spacing theorem."
+  ],
+  "everySeedCall": [
+    {
+      "file": "main.js",
+      "line": 4524,
+      "kind": "explicit-seed"
+    },
+    {
+      "file": "main.js",
+      "line": 4538,
+      "kind": "restore-free"
+    },
+    {
+      "file": "main.js",
+      "line": 7584,
+      "kind": "explicit-seed"
+    },
+    {
+      "file": "main.js",
+      "line": 7584,
+      "kind": "restore-free"
+    },
+    {
+      "file": "main.js",
+      "line": 8299,
+      "kind": "explicit-seed"
+    },
+    {
+      "file": "main.js",
+      "line": 8376,
+      "kind": "restore-free"
+    },
+    {
+      "file": "main.js",
+      "line": 8387,
+      "kind": "explicit-seed"
+    },
+    {
+      "file": "main.js",
+      "line": 8396,
+      "kind": "restore-free"
+    },
+    {
+      "file": "main.js",
+      "line": 8421,
+      "kind": "explicit-seed"
+    },
+    {
+      "file": "main.js",
+      "line": 8423,
+      "kind": "explicit-seed"
+    },
+    {
+      "file": "main.js",
+      "line": 11206,
+      "kind": "explicit-seed"
+    },
+    {
+      "file": "main.js",
+      "line": 11207,
+      "kind": "restore-free"
+    },
+    {
+      "file": "main.js",
+      "line": 11208,
+      "kind": "restore-free"
+    },
+    {
+      "file": "main.js",
+      "line": 11294,
+      "kind": "explicit-seed"
+    },
+    {
+      "file": "main.js",
+      "line": 11295,
+      "kind": "explicit-seed"
+    },
+    {
+      "file": "main.js",
+      "line": 11300,
+      "kind": "restore-free"
+    },
+    {
+      "file": "main.js",
+      "line": 11303,
+      "kind": "restore-free"
+    },
+    {
+      "file": "main.js",
+      "line": 11394,
+      "kind": "explicit-seed"
+    },
+    {
+      "file": "main.js",
+      "line": 11396,
+      "kind": "restore-free"
+    },
+    {
+      "file": "main.js",
+      "line": 14959,
+      "kind": "explicit-seed"
+    },
+    {
+      "file": "main.js",
+      "line": 14968,
+      "kind": "restore-free"
+    },
+    {
+      "file": "minigameGrimoire.js",
+      "line": 312,
+      "kind": "explicit-seed"
+    },
+    {
+      "file": "minigameGrimoire.js",
+      "line": 314,
+      "kind": "restore-free"
+    }
+  ],
+  "functions": [
+    {
+      "file": "main.js",
+      "name": "Game.computeLumpType",
+      "line": 4522,
+      "sha256": "98909e66832224eab0e9b2e39ebdb5f0eaa2c426c4df8529520e2b86b668afdb",
+      "forbiddenBranch": null,
+      "unrestricted": {
+        "outcomes": [
+          "normal:free"
+        ],
+        "seedCalls": [
+          {
+            "line": 4524,
+            "kind": "explicit-seed"
+          },
+          {
+            "line": 4538,
+            "kind": "restore-free"
+          }
+        ],
+        "callsWhileSeeded": [
+          {
+            "line": 4528,
+            "target": "Game.auraMult"
+          },
+          {
+            "line": 4529,
+            "target": "randomFloor"
+          },
+          {
+            "line": 4532,
+            "target": "Math.random"
+          },
+          {
+            "line": 4532,
+            "target": "Game.Has"
+          },
+          {
+            "line": 4532,
+            "target": "types.push"
+          },
+          {
+            "line": 4533,
+            "target": "Math.random"
+          },
+          {
+            "line": 4533,
+            "target": "types.push"
+          },
+          {
+            "line": 4534,
+            "target": "Math.random"
+          },
+          {
+            "line": 4534,
+            "target": "types.push"
+          },
+          {
+            "line": 4535,
+            "target": "Math.random"
+          },
+          {
+            "line": 4535,
+            "target": "types.push"
+          },
+          {
+            "line": 4537,
+            "target": "choose"
+          }
+        ],
+        "potentialExceptionalSitesWhileSeeded": [
+          {
+            "line": 4528,
+            "operation": "assignment-or-conversion"
+          },
+          {
+            "line": 4528,
+            "operation": "call:Game.auraMult"
+          },
+          {
+            "line": 4528,
+            "operation": "property-read-or-reference"
+          },
+          {
+            "line": 4529,
+            "operation": "assignment-or-conversion"
+          },
+          {
+            "line": 4529,
+            "operation": "call:randomFloor"
+          },
+          {
+            "line": 4530,
+            "operation": "binary-conversion"
+          },
+          {
+            "line": 4530,
+            "operation": "unary-or-update-conversion"
+          },
+          {
+            "line": 4532,
+            "operation": "binary-conversion"
+          },
+          {
+            "line": 4532,
+            "operation": "call:Game.Has"
+          },
+          {
+            "line": 4532,
+            "operation": "call:Math.random"
+          },
+          {
+            "line": 4532,
+            "operation": "call:types.push"
+          },
+          {
+            "line": 4532,
+            "operation": "property-read-or-reference"
+          },
+          {
+            "line": 4532,
+            "operation": "property-read-or-reference"
+          },
+          {
+            "line": 4532,
+            "operation": "property-read-or-reference"
+          },
+          {
+            "line": 4533,
+            "operation": "binary-conversion"
+          },
+          {
+            "line": 4533,
+            "operation": "binary-conversion"
+          },
+          {
+            "line": 4533,
+            "operation": "call:Math.random"
+          },
+          {
+            "line": 4533,
+            "operation": "call:types.push"
+          },
+          {
+            "line": 4533,
+            "operation": "property-read-or-reference"
+          },
+          {
+            "line": 4533,
+            "operation": "property-read-or-reference"
+          },
+          {
+            "line": 4534,
+            "operation": "binary-conversion"
+          },
+          {
+            "line": 4534,
+            "operation": "binary-conversion"
+          },
+          {
+            "line": 4534,
+            "operation": "call:Math.random"
+          },
+          {
+            "line": 4534,
+            "operation": "call:types.push"
+          },
+          {
+            "line": 4534,
+            "operation": "property-read-or-reference"
+          },
+          {
+            "line": 4534,
+            "operation": "property-read-or-reference"
+          },
+          {
+            "line": 4534,
+            "operation": "property-read-or-reference"
+          },
+          {
+            "line": 4535,
+            "operation": "binary-conversion"
+          },
+          {
+            "line": 4535,
+            "operation": "binary-conversion"
+          },
+          {
+            "line": 4535,
+            "operation": "call:Math.random"
+          },
+          {
+            "line": 4535,
+            "operation": "call:types.push"
+          },
+          {
+            "line": 4535,
+            "operation": "property-read-or-reference"
+          },
+          {
+            "line": 4535,
+            "operation": "property-read-or-reference"
+          },
+          {
+            "line": 4537,
+            "operation": "assignment-or-conversion"
+          },
+          {
+            "line": 4537,
+            "operation": "call:choose"
+          },
+          {
+            "line": 4537,
+            "operation": "property-read-or-reference"
+          },
+          {
+            "line": 4538,
+            "operation": "property-read-or-reference"
+          },
+          {
+            "line": 4538,
+            "operation": "seedrandom-call"
+          }
+        ]
+      },
+      "excludingForbiddenCloneBranch": {
+        "outcomes": [
+          "normal:free"
+        ],
+        "seedCalls": [
+          {
+            "line": 4524,
+            "kind": "explicit-seed"
+          },
+          {
+            "line": 4538,
+            "kind": "restore-free"
+          }
+        ],
+        "callsWhileSeeded": [
+          {
+            "line": 4528,
+            "target": "Game.auraMult"
+          },
+          {
+            "line": 4529,
+            "target": "randomFloor"
+          },
+          {
+            "line": 4532,
+            "target": "Math.random"
+          },
+          {
+            "line": 4532,
+            "target": "Game.Has"
+          },
+          {
+            "line": 4532,
+            "target": "types.push"
+          },
+          {
+            "line": 4533,
+            "target": "Math.random"
+          },
+          {
+            "line": 4533,
+            "target": "types.push"
+          },
+          {
+            "line": 4534,
+            "target": "Math.random"
+          },
+          {
+            "line": 4534,
+            "target": "types.push"
+          },
+          {
+            "line": 4535,
+            "target": "Math.random"
+          },
+          {
+            "line": 4535,
+            "target": "types.push"
+          },
+          {
+            "line": 4537,
+            "target": "choose"
+          }
+        ],
+        "potentialExceptionalSitesWhileSeeded": [
+          {
+            "line": 4528,
+            "operation": "assignment-or-conversion"
+          },
+          {
+            "line": 4528,
+            "operation": "call:Game.auraMult"
+          },
+          {
+            "line": 4528,
+            "operation": "property-read-or-reference"
+          },
+          {
+            "line": 4529,
+            "operation": "assignment-or-conversion"
+          },
+          {
+            "line": 4529,
+            "operation": "call:randomFloor"
+          },
+          {
+            "line": 4530,
+            "operation": "binary-conversion"
+          },
+          {
+            "line": 4530,
+            "operation": "unary-or-update-conversion"
+          },
+          {
+            "line": 4532,
+            "operation": "binary-conversion"
+          },
+          {
+            "line": 4532,
+            "operation": "call:Game.Has"
+          },
+          {
+            "line": 4532,
+            "operation": "call:Math.random"
+          },
+          {
+            "line": 4532,
+            "operation": "call:types.push"
+          },
+          {
+            "line": 4532,
+            "operation": "property-read-or-reference"
+          },
+          {
+            "line": 4532,
+            "operation": "property-read-or-reference"
+          },
+          {
+            "line": 4532,
+            "operation": "property-read-or-reference"
+          },
+          {
+            "line": 4533,
+            "operation": "binary-conversion"
+          },
+          {
+            "line": 4533,
+            "operation": "binary-conversion"
+          },
+          {
+            "line": 4533,
+            "operation": "call:Math.random"
+          },
+          {
+            "line": 4533,
+            "operation": "call:types.push"
+          },
+          {
+            "line": 4533,
+            "operation": "property-read-or-reference"
+          },
+          {
+            "line": 4533,
+            "operation": "property-read-or-reference"
+          },
+          {
+            "line": 4534,
+            "operation": "binary-conversion"
+          },
+          {
+            "line": 4534,
+            "operation": "binary-conversion"
+          },
+          {
+            "line": 4534,
+            "operation": "call:Math.random"
+          },
+          {
+            "line": 4534,
+            "operation": "call:types.push"
+          },
+          {
+            "line": 4534,
+            "operation": "property-read-or-reference"
+          },
+          {
+            "line": 4534,
+            "operation": "property-read-or-reference"
+          },
+          {
+            "line": 4534,
+            "operation": "property-read-or-reference"
+          },
+          {
+            "line": 4535,
+            "operation": "binary-conversion"
+          },
+          {
+            "line": 4535,
+            "operation": "binary-conversion"
+          },
+          {
+            "line": 4535,
+            "operation": "call:Math.random"
+          },
+          {
+            "line": 4535,
+            "operation": "call:types.push"
+          },
+          {
+            "line": 4535,
+            "operation": "property-read-or-reference"
+          },
+          {
+            "line": 4535,
+            "operation": "property-read-or-reference"
+          },
+          {
+            "line": 4537,
+            "operation": "assignment-or-conversion"
+          },
+          {
+            "line": 4537,
+            "operation": "call:choose"
+          },
+          {
+            "line": 4537,
+            "operation": "property-read-or-reference"
+          },
+          {
+            "line": 4538,
+            "operation": "property-read-or-reference"
+          },
+          {
+            "line": 4538,
+            "operation": "seedrandom-call"
+          }
+        ]
+      }
+    },
+    {
+      "file": "main.js",
+      "name": "Game.getNewTicker",
+      "line": 6992,
+      "sha256": "4d010844e03345885e3c982a0e5b8cd765fdce72cc0bef0df3af845c7ac5b011",
+      "forbiddenBranch": null,
+      "unrestricted": {
+        "outcomes": [
+          "normal:free"
+        ],
+        "seedCalls": [
+          {
+            "line": 7584,
+            "kind": "explicit-seed"
+          },
+          {
+            "line": 7584,
+            "kind": "restore-free"
+          }
+        ],
+        "callsWhileSeeded": [
+          {
+            "line": 7584,
+            "target": "loc"
+          },
+          {
+            "line": 7584,
+            "target": "Math.random"
+          },
+          {
+            "line": 7584,
+            "target": "Math.floor"
+          },
+          {
+            "line": 7584,
+            "target": "Math.random"
+          },
+          {
+            "line": 7584,
+            "target": "Math.floor"
+          },
+          {
+            "line": 7584,
+            "target": "Math.random"
+          },
+          {
+            "line": 7584,
+            "target": "Math.floor"
+          },
+          {
+            "line": 7584,
+            "target": "Math.random"
+          },
+          {
+            "line": 7584,
+            "target": "Math.floor"
+          }
+        ],
+        "potentialExceptionalSitesWhileSeeded": [
+          {
+            "line": 7584,
+            "operation": "assignment-or-conversion"
+          },
+          {
+            "line": 7584,
+            "operation": "binary-conversion"
+          },
+          {
+            "line": 7584,
+            "operation": "binary-conversion"
+          },
+          {
+            "line": 7584,
+            "operation": "binary-conversion"
+          },
+          {
+            "line": 7584,
+            "operation": "binary-conversion"
+          },
+          {
+            "line": 7584,
+            "operation": "binary-conversion"
+          },
+          {
+            "line": 7584,
+            "operation": "call:loc"
+          },
+          {
+            "line": 7584,
+            "operation": "call:Math.floor"
+          },
+          {
+            "line": 7584,
+            "operation": "call:Math.floor"
+          },
+          {
+            "line": 7584,
+            "operation": "call:Math.floor"
+          },
+          {
+            "line": 7584,
+            "operation": "call:Math.floor"
+          },
+          {
+            "line": 7584,
+            "operation": "call:Math.random"
+          },
+          {
+            "line": 7584,
+            "operation": "call:Math.random"
+          },
+          {
+            "line": 7584,
+            "operation": "call:Math.random"
+          },
+          {
+            "line": 7584,
+            "operation": "call:Math.random"
+          },
+          {
+            "line": 7584,
+            "operation": "property-read-or-reference"
+          },
+          {
+            "line": 7584,
+            "operation": "property-read-or-reference"
+          },
+          {
+            "line": 7584,
+            "operation": "property-read-or-reference"
+          },
+          {
+            "line": 7584,
+            "operation": "property-read-or-reference"
+          },
+          {
+            "line": 7584,
+            "operation": "property-read-or-reference"
+          },
+          {
+            "line": 7584,
+            "operation": "property-read-or-reference"
+          },
+          {
+            "line": 7584,
+            "operation": "property-read-or-reference"
+          },
+          {
+            "line": 7584,
+            "operation": "property-read-or-reference"
+          },
+          {
+            "line": 7584,
+            "operation": "property-read-or-reference"
+          },
+          {
+            "line": 7584,
+            "operation": "seedrandom-call"
+          }
+        ]
+      },
+      "excludingForbiddenCloneBranch": {
+        "outcomes": [
+          "normal:free"
+        ],
+        "seedCalls": [
+          {
+            "line": 7584,
+            "kind": "explicit-seed"
+          },
+          {
+            "line": 7584,
+            "kind": "restore-free"
+          }
+        ],
+        "callsWhileSeeded": [
+          {
+            "line": 7584,
+            "target": "loc"
+          },
+          {
+            "line": 7584,
+            "target": "Math.random"
+          },
+          {
+            "line": 7584,
+            "target": "Math.floor"
+          },
+          {
+            "line": 7584,
+            "target": "Math.random"
+          },
+          {
+            "line": 7584,
+            "target": "Math.floor"
+          },
+          {
+            "line": 7584,
+            "target": "Math.random"
+          },
+          {
+            "line": 7584,
+            "target": "Math.floor"
+          },
+          {
+            "line": 7584,
+            "target": "Math.random"
+          },
+          {
+            "line": 7584,
+            "target": "Math.floor"
+          }
+        ],
+        "potentialExceptionalSitesWhileSeeded": [
+          {
+            "line": 7584,
+            "operation": "assignment-or-conversion"
+          },
+          {
+            "line": 7584,
+            "operation": "binary-conversion"
+          },
+          {
+            "line": 7584,
+            "operation": "binary-conversion"
+          },
+          {
+            "line": 7584,
+            "operation": "binary-conversion"
+          },
+          {
+            "line": 7584,
+            "operation": "binary-conversion"
+          },
+          {
+            "line": 7584,
+            "operation": "binary-conversion"
+          },
+          {
+            "line": 7584,
+            "operation": "call:loc"
+          },
+          {
+            "line": 7584,
+            "operation": "call:Math.floor"
+          },
+          {
+            "line": 7584,
+            "operation": "call:Math.floor"
+          },
+          {
+            "line": 7584,
+            "operation": "call:Math.floor"
+          },
+          {
+            "line": 7584,
+            "operation": "call:Math.floor"
+          },
+          {
+            "line": 7584,
+            "operation": "call:Math.random"
+          },
+          {
+            "line": 7584,
+            "operation": "call:Math.random"
+          },
+          {
+            "line": 7584,
+            "operation": "call:Math.random"
+          },
+          {
+            "line": 7584,
+            "operation": "call:Math.random"
+          },
+          {
+            "line": 7584,
+            "operation": "property-read-or-reference"
+          },
+          {
+            "line": 7584,
+            "operation": "property-read-or-reference"
+          },
+          {
+            "line": 7584,
+            "operation": "property-read-or-reference"
+          },
+          {
+            "line": 7584,
+            "operation": "property-read-or-reference"
+          },
+          {
+            "line": 7584,
+            "operation": "property-read-or-reference"
+          },
+          {
+            "line": 7584,
+            "operation": "property-read-or-reference"
+          },
+          {
+            "line": 7584,
+            "operation": "property-read-or-reference"
+          },
+          {
+            "line": 7584,
+            "operation": "property-read-or-reference"
+          },
+          {
+            "line": 7584,
+            "operation": "property-read-or-reference"
+          },
+          {
+            "line": 7584,
+            "operation": "seedrandom-call"
+          }
+        ]
+      }
+    },
+    {
+      "file": "main.js",
+      "name": "this.draw",
+      "line": 8236,
+      "sha256": "ab52de40b2b6df92cdd14d80a27ca4e0a37f222ddb5a46a6f9a4c3844914541e",
+      "forbiddenBranch": {
+        "line": 8417,
+        "test": "selected==i && this.name=='You'",
+        "meaning": "The clone-hover branch leaks a seeded generator. Excluding this branch is a stated action-class premise, not a consequence of the syntax checker."
+      },
+      "unrestricted": {
+        "outcomes": [
+          "normal:free",
+          "normal:seeded",
+          "return:free"
+        ],
+        "seedCalls": [
+          {
+            "line": 8299,
+            "kind": "explicit-seed"
+          },
+          {
+            "line": 8376,
+            "kind": "restore-free"
+          },
+          {
+            "line": 8387,
+            "kind": "explicit-seed"
+          },
+          {
+            "line": 8396,
+            "kind": "restore-free"
+          },
+          {
+            "line": 8421,
+            "kind": "explicit-seed"
+          },
+          {
+            "line": 8423,
+            "kind": "explicit-seed"
+          }
+        ],
+        "callsWhileSeeded": [
+          {
+            "line": 8302,
+            "target": "Math.floor"
+          },
+          {
+            "line": 8302,
+            "target": "Math.random"
+          },
+          {
+            "line": 8302,
+            "target": "Math.floor"
+          },
+          {
+            "line": 8303,
+            "target": "Math.random"
+          },
+          {
+            "line": 8303,
+            "target": "Math.floor"
+          },
+          {
+            "line": 8307,
+            "target": "Math.random"
+          },
+          {
+            "line": 8307,
+            "target": "Math.floor"
+          },
+          {
+            "line": 8308,
+            "target": "Math.random"
+          },
+          {
+            "line": 8308,
+            "target": "Math.floor"
+          },
+          {
+            "line": 8310,
+            "target": "pic"
+          },
+          {
+            "line": 8313,
+            "target": "Math.random"
+          },
+          {
+            "line": 8313,
+            "target": "Math.floor"
+          },
+          {
+            "line": 8315,
+            "target": "Math.floor"
+          },
+          {
+            "line": 8315,
+            "target": "Math.floor"
+          },
+          {
+            "line": 8315,
+            "target": "this.pics.push"
+          },
+          {
+            "line": 8322,
+            "target": "this.pics.sort"
+          },
+          {
+            "line": 8323,
+            "target": "this.pics.pop"
+          },
+          {
+            "line": 8328,
+            "target": "this.pics.sort"
+          },
+          {
+            "line": 8344,
+            "target": "Game.Win"
+          },
+          {
+            "line": 8348,
+            "target": "loc"
+          },
+          {
+            "line": 8353,
+            "target": "ctx.measureText"
+          },
+          {
+            "line": 8353,
+            "target": "ctx.fillRect"
+          },
+          {
+            "line": 8356,
+            "target": "ctx.fillText"
+          },
+          {
+            "line": 8360,
+            "target": "ctx.measureText"
+          },
+          {
+            "line": 8360,
+            "target": "ctx.fillText"
+          },
+          {
+            "line": 8381,
+            "target": "Pic"
+          },
+          {
+            "line": 8388,
+            "target": "Date.now"
+          },
+          {
+            "line": 8388,
+            "target": "Date"
+          },
+          {
+            "line": 8388,
+            "target": "Math.random"
+          },
+          {
+            "line": 8389,
+            "target": "choose"
+          },
+          {
+            "line": 8391,
+            "target": "Math.random"
+          },
+          {
+            "line": 8391,
+            "target": "choose"
+          },
+          {
+            "line": 8392,
+            "target": "Math.random"
+          },
+          {
+            "line": 8392,
+            "target": "Math.floor"
+          },
+          {
+            "line": 8392,
+            "target": "Beautify"
+          },
+          {
+            "line": 8392,
+            "target": "loc"
+          },
+          {
+            "line": 8393,
+            "target": "ctx.measureText"
+          },
+          {
+            "line": 8394,
+            "target": "Math.random"
+          },
+          {
+            "line": 8394,
+            "target": "Math.min"
+          },
+          {
+            "line": 8394,
+            "target": "Math.max"
+          },
+          {
+            "line": 8395,
+            "target": "Math.random"
+          },
+          {
+            "line": 8414,
+            "target": "ctx.drawImage"
+          },
+          {
+            "line": 8415,
+            "target": "ctx.drawImage"
+          },
+          {
+            "line": 8419,
+            "target": "Pic"
+          },
+          {
+            "line": 8419,
+            "target": "ctx.drawImage"
+          },
+          {
+            "line": 8422,
+            "target": "Math.random"
+          },
+          {
+            "line": 8422,
+            "target": "Math.floor"
+          },
+          {
+            "line": 8426,
+            "target": "loc"
+          },
+          {
+            "line": 8426,
+            "target": "Math.random"
+          },
+          {
+            "line": 8426,
+            "target": "Math.floor"
+          },
+          {
+            "line": 8431,
+            "target": "romanize"
+          },
+          {
+            "line": 8431,
+            "target": "Math.random"
+          },
+          {
+            "line": 8431,
+            "target": "choose"
+          },
+          {
+            "line": 8432,
+            "target": "romanize"
+          },
+          {
+            "line": 8432,
+            "target": "choose"
+          },
+          {
+            "line": 8432,
+            "target": "choose"
+          },
+          {
+            "line": 8432,
+            "target": "<expression>.replace"
+          },
+          {
+            "line": 8435,
+            "target": "ctx.measureText"
+          },
+          {
+            "line": 8436,
+            "target": "Math.min"
+          },
+          {
+            "line": 8436,
+            "target": "Math.max"
+          },
+          {
+            "line": 8439,
+            "target": "Math.floor"
+          },
+          {
+            "line": 8439,
+            "target": "Math.floor"
+          },
+          {
+            "line": 8439,
+            "target": "ctx.fillText"
+          },
+          {
+            "line": 8441,
+            "target": "Math.floor"
+          },
+          {
+            "line": 8441,
+            "target": "Math.floor"
+          },
+          {
+            "line": 8441,
+            "target": "ctx.fillText"
+          }
+        ],
+        "potentialExceptionalSitesWhileSeeded": [
+          {
+            "line": 8296,
+            "operation": "binary-conversion"
+          },
+          {
+            "line": 8299,
+            "operation": "binary-conversion"
+          },
+          {
+            "line": 8299,
+            "operation": "property-read-or-reference"
+          },
+          {
+            "line": 8299,
+            "operation": "property-read-or-reference"
+          },
+          {
+            "line": 8299,
+            "operation": "property-read-or-reference"
+          },
+          {
+            "line": 8299,
+            "operation": "seedrandom-call"
+          },
+          {
+            "line": 8300,
+            "operation": "binary-conversion"
+          },
+          {
+            "line": 8302,
+            "operation": "assignment-or-conversion"
+          },
+          {
+            "line": 8302,
+            "operation": "binary-conversion"
+          },
+          {
+            "line": 8302,
+            "operation": "binary-conversion"
+          },
+          {
+            "line": 8302,
+            "operation": "binary-conversion"
+          },
+          {
+            "line": 8302,
+            "operation": "binary-conversion"
+          },
+          {
+            "line": 8302,
+            "operation": "binary-conversion"
+          },
+          {
+            "line": 8302,
+            "operation": "binary-conversion"
+          },
+          {
+            "line": 8302,
+            "operation": "binary-conversion"
+          },
+          {
+            "line": 8302,
+            "operation": "call:Math.floor"
+          },
+          {
+            "line": 8302,
+            "operation": "call:Math.floor"
+          },
+          {
+            "line": 8302,
+            "operation": "call:Math.random"
+          },
+          {
+            "line": 8302,
+            "operation": "property-read-or-reference"
+          },
+          {
+            "line": 8302,
+            "operation": "property-read-or-reference"
+          },
+          {
+            "line": 8302,
+            "operation": "property-read-or-reference"
+          },
+          {
+            "line": 8303,
+            "operation": "assignment-or-conversion"
+          },
+          {
+            "line": 8303,
+            "operation": "binary-conversion"
+          },
+          {
+            "line": 8303,
+            "operation": "binary-conversion"
+          },
+          {
+            "line": 8303,
+            "operation": "binary-conversion"
+          },
+          {
+            "line": 8303,
+            "operation": "binary-conversion"
+          },
+          {
+            "line": 8303,
+            "operation": "binary-conversion"
+          },
+          {
+            "line": 8303,
+            "operation": "binary-conversion"
+          },
+          {
+            "line": 8303,
+            "operation": "binary-conversion"
+          },
+          {
+            "line": 8303,
+            "operation": "call:Math.floor"
+          },
+          {
+            "line": 8303,
+            "operation": "call:Math.random"
+          },
+          {
+            "line": 8303,
+            "operation": "property-read-or-reference"
+          },
+          {
+            "line": 8303,
+            "operation": "property-read-or-reference"
+          },
+          {
+            "line": 8303,
+            "operation": "unary-or-update-conversion"
+          },
+          {
+            "line": 8307,
+            "operation": "assignment-or-conversion"
+          },
+          {
+            "line": 8307,
+            "operation": "binary-conversion"
+          },
+          {
+            "line": 8307,
+            "operation": "binary-conversion"
+          },
+          {
+            "line": 8307,
+            "operation": "binary-conversion"
+          },
+          {
+            "line": 8307,
+            "operation": "call:Math.floor"
+          },
+          {
+            "line": 8307,
+            "operation": "call:Math.random"
+          },
+          {
+            "line": 8307,
+            "operation": "property-read-or-reference"
+          },
+          {
+            "line": 8307,
+            "operation": "property-read-or-reference"
+          },
+          {
+            "line": 8308,
+            "operation": "assignment-or-conversion"
+          },
+          {
+            "line": 8308,
+            "operation": "binary-conversion"
+          },
+          {
+            "line": 8308,
+            "operation": "binary-conversion"
+          },
+          {
+            "line": 8308,
+            "operation": "binary-conversion"
+          },
+          {
+            "line": 8308,
+            "operation": "call:Math.floor"
+          },
+          {
+            "line": 8308,
+            "operation": "call:Math.random"
+          },
+          {
+            "line": 8308,
+            "operation": "property-read-or-reference"
+          },
+          {
+            "line": 8308,
+            "operation": "property-read-or-reference"
+          },
+          {
+            "line": 8310,
+            "operation": "binary-conversion"
+          },
+          {
+            "line": 8310,
+            "operation": "call:pic"
+          },
+          {
+            "line": 8310,
+            "operation": "unary-or-update-conversion"
+          },
+          {
+            "line": 8311,
+            "operation": "unary-or-update-conversion"
+          },
+          {
+            "line": 8313,
+            "operation": "assignment-or-conversion"
+          },
+          {
+            "line": 8313,
+            "operation": "assignment-or-conversion"
+          },
+          {
+            "line": 8313,
+            "operation": "binary-conversion"
+          },
+          {
+            "line": 8313,
+            "operation": "binary-conversion"
+          },
+          {
+            "line": 8313,
+            "operation": "binary-conversion"
+          },
+          {
+            "line": 8313,
+            "operation": "binary-conversion"
+          },
+          {
+            "line": 8313,
+            "operation": "binary-conversion"
+          },
+          {
+            "line": 8313,
+            "operation": "call:Math.floor"
+          },
+          {
+            "line": 8313,
+            "operation": "call:Math.random"
+          },
+          {
+            "line": 8313,
+            "operation": "property-read-or-reference"
+          },
+          {
+            "line": 8313,
+            "operation": "property-read-or-reference"
+          },
+          {
+            "line": 8314,
+            "operation": "assignment-or-conversion"
+          },
+          {
+            "line": 8315,
+            "operation": "call:Math.floor"
+          },
+          {
+            "line": 8315,
+            "operation": "call:Math.floor"
+          },
+          {
+            "line": 8315,
+            "operation": "call:this.pics.push"
+          },
+          {
+            "line": 8315,
+            "operation": "property-read-or-reference"
+          },
+          {
+            "line": 8315,
+            "operation": "property-read-or-reference"
+          },
+          {
+            "line": 8315,
+            "operation": "property-read-or-reference"
+          },
+          {
+            "line": 8316,
+            "operation": "unary-or-update-conversion"
+          },
+          {
+            "line": 8317,
+            "operation": "unary-or-update-conversion"
+          },
+          {
+            "line": 8319,
+            "operation": "binary-conversion"
+          },
+          {
+            "line": 8322,
+            "operation": "call:this.pics.sort"
+          },
+          {
+            "line": 8322,
+            "operation": "property-read-or-reference"
+          },
+          {
+            "line": 8322,
+            "operation": "property-read-or-reference"
+          },
+          {
+            "line": 8323,
+            "operation": "call:this.pics.pop"
+          },
+          {
+            "line": 8323,
+            "operation": "property-read-or-reference"
+          },
+          {
+            "line": 8324,
+            "operation": "unary-or-update-conversion"
+          },
+          {
+            "line": 8325,
+            "operation": "unary-or-update-conversion"
+          },
+          {
+            "line": 8328,
+            "operation": "call:this.pics.sort"
+          },
+          {
+            "line": 8328,
+            "operation": "property-read-or-reference"
+          },
+          {
+            "line": 8328,
+            "operation": "property-read-or-reference"
+          },
+          {
+            "line": 8331,
+            "operation": "property-read-or-reference"
+          },
+          {
+            "line": 8333,
+            "operation": "property-read-or-reference"
+          },
+          {
+            "line": 8335,
+            "operation": "unary-or-update-conversion"
+          },
+          {
+            "line": 8336,
+            "operation": "binary-conversion"
+          },
+          {
+            "line": 8336,
+            "operation": "property-read-or-reference"
+          },
+          {
+            "line": 8338,
+            "operation": "unary-or-update-conversion"
+          },
+          {
+            "line": 8339,
+            "operation": "unary-or-update-conversion"
+          },
+          {
+            "line": 8340,
+            "operation": "binary-conversion"
+          },
+          {
+            "line": 8340,
+            "operation": "unary-or-update-conversion"
+          },
+          {
+            "line": 8342,
+            "operation": "property-read-or-reference"
+          },
+          {
+            "line": 8343,
+            "operation": "assignment-or-conversion"
+          },
+          {
+            "line": 8343,
+            "operation": "binary-conversion"
+          },
+          {
+            "line": 8343,
+            "operation": "binary-conversion"
+          },
+          {
+            "line": 8343,
+            "operation": "binary-conversion"
+          },
+          {
+            "line": 8343,
+            "operation": "binary-conversion"
+          },
+          {
+            "line": 8343,
+            "operation": "binary-conversion"
+          },
+          {
+            "line": 8343,
+            "operation": "binary-conversion"
+          },
+          {
+            "line": 8343,
+            "operation": "binary-conversion"
+          },
+          {
+            "line": 8343,
+            "operation": "binary-conversion"
+          },
+          {
+            "line": 8343,
+            "operation": "property-read-or-reference"
+          },
+          {
+            "line": 8343,
+            "operation": "property-read-or-reference"
+          },
+          {
+            "line": 8343,
+            "operation": "property-read-or-reference"
+          },
+          {
+            "line": 8343,
+            "operation": "property-read-or-reference"
+          },
+          {
+            "line": 8343,
+            "operation": "property-read-or-reference"
+          },
+          {
+            "line": 8343,
+            "operation": "property-read-or-reference"
+          },
+          {
+            "line": 8343,
+            "operation": "property-read-or-reference"
+          },
+          {
+            "line": 8343,
+            "operation": "property-read-or-reference"
+          },
+          {
+            "line": 8344,
+            "operation": "binary-conversion"
+          },
+          {
+            "line": 8344,
+            "operation": "binary-conversion"
+          },
+          {
+            "line": 8344,
+            "operation": "call:Game.Win"
+          },
+          {
+            "line": 8344,
+            "operation": "property-read-or-reference"
+          },
+          {
+            "line": 8344,
+            "operation": "property-read-or-reference"
+          },
+          {
+            "line": 8344,
+            "operation": "property-read-or-reference"
+          },
+          {
+            "line": 8346,
+            "operation": "binary-conversion"
+          },
+          {
+            "line": 8346,
+            "operation": "property-read-or-reference"
+          },
+          {
+            "line": 8346,
+            "operation": "property-read-or-reference"
+          },
+          {
+            "line": 8348,
+            "operation": "call:loc"
+          },
+          {
+            "line": 8349,
+            "operation": "assignment-or-conversion"
+          },
+          {
+            "line": 8349,
+            "operation": "property-read-or-reference"
+          },
+          {
+            "line": 8350,
+            "operation": "assignment-or-conversion"
+          },
+          {
+            "line": 8350,
+            "operation": "property-read-or-reference"
+          },
+          {
+            "line": 8351,
+            "operation": "assignment-or-conversion"
+          },
+          {
+            "line": 8351,
+            "operation": "property-read-or-reference"
+          },
+          {
+            "line": 8352,
+            "operation": "assignment-or-conversion"
+          },
+          {
+            "line": 8352,
+            "operation": "property-read-or-reference"
+          },
+          {
+            "line": 8353,
+            "operation": "binary-conversion"
+          },
+          {
+            "line": 8353,
+            "operation": "call:ctx.fillRect"
+          },
+          {
+            "line": 8353,
+            "operation": "call:ctx.measureText"
+          },
+          {
+            "line": 8353,
+            "operation": "property-read-or-reference"
+          },
+          {
+            "line": 8353,
+            "operation": "property-read-or-reference"
+          },
+          {
+            "line": 8354,
+            "operation": "assignment-or-conversion"
+          },
+          {
+            "line": 8354,
+            "operation": "property-read-or-reference"
+          },
+          {
+            "line": 8355,
+            "operation": "assignment-or-conversion"
+          },
+          {
+            "line": 8355,
+            "operation": "property-read-or-reference"
+          },
+          {
+            "line": 8356,
+            "operation": "call:ctx.fillText"
+          },
+          {
+            "line": 8356,
+            "operation": "property-read-or-reference"
+          },
+          {
+            "line": 8359,
+            "operation": "assignment-or-conversion"
+          },
+          {
+            "line": 8359,
+            "operation": "property-read-or-reference"
+          },
+          {
+            "line": 8360,
+            "operation": "binary-conversion"
+          },
+          {
+            "line": 8360,
+            "operation": "call:ctx.fillText"
+          },
+          {
+            "line": 8360,
+            "operation": "call:ctx.measureText"
+          },
+          {
+            "line": 8360,
+            "operation": "property-read-or-reference"
+          },
+          {
+            "line": 8360,
+            "operation": "property-read-or-reference"
+          },
+          {
+            "line": 8364,
+            "operation": "binary-conversion"
+          },
+          {
+            "line": 8364,
+            "operation": "property-read-or-reference"
+          },
+          {
+            "line": 8366,
+            "operation": "unary-or-update-conversion"
+          },
+          {
+            "line": 8368,
+            "operation": "binary-conversion"
+          },
+          {
+            "line": 8368,
+            "operation": "unary-or-update-conversion"
+          },
+          {
+            "line": 8370,
+            "operation": "property-read-or-reference"
+          },
+          {
+            "line": 8371,
+            "operation": "assignment-or-conversion"
+          },
+          {
+            "line": 8371,
+            "operation": "binary-conversion"
+          },
+          {
+            "line": 8371,
+            "operation": "binary-conversion"
+          },
+          {
+            "line": 8371,
+            "operation": "binary-conversion"
+          },
+          {
+            "line": 8371,
+            "operation": "binary-conversion"
+          },
+          {
+            "line": 8371,
+            "operation": "binary-conversion"
+          },
+          {
+            "line": 8371,
+            "operation": "binary-conversion"
+          },
+          {
+            "line": 8371,
+            "operation": "binary-conversion"
+          },
+          {
+            "line": 8371,
+            "operation": "binary-conversion"
+          },
+          {
+            "line": 8371,
+            "operation": "property-read-or-reference"
+          },
+          {
+            "line": 8371,
+            "operation": "property-read-or-reference"
+          },
+          {
+            "line": 8371,
+            "operation": "property-read-or-reference"
+          },
+          {
+            "line": 8371,
+            "operation": "property-read-or-reference"
+          },
+          {
+            "line": 8371,
+            "operation": "property-read-or-reference"
+          },
+          {
+            "line": 8371,
+            "operation": "property-read-or-reference"
+          },
+          {
+            "line": 8371,
+            "operation": "property-read-or-reference"
+          },
+          {
+            "line": 8371,
+            "operation": "property-read-or-reference"
+          },
+          {
+            "line": 8376,
+            "operation": "property-read-or-reference"
+          },
+          {
+            "line": 8376,
+            "operation": "seedrandom-call"
+          },
+          {
+            "line": 8378,
+            "operation": "binary-conversion"
+          },
+          {
+            "line": 8378,
+            "operation": "unary-or-update-conversion"
+          },
+          {
+            "line": 8380,
+            "operation": "property-read-or-reference"
+          },
+          {
+            "line": 8381,
+            "operation": "binary-conversion"
+          },
+          {
+            "line": 8381,
+            "operation": "call:Pic"
+          },
+          {
+            "line": 8381,
+            "operation": "property-read-or-reference"
+          },
+          {
+            "line": 8381,
+            "operation": "property-read-or-reference"
+          },
+          {
+            "line": 8381,
+            "operation": "property-read-or-reference"
+          },
+          {
+            "line": 8383,
+            "operation": "binary-conversion"
+          },
+          {
+            "line": 8383,
+            "operation": "binary-conversion"
+          },
+          {
+            "line": 8383,
+            "operation": "property-read-or-reference"
+          },
+          {
+            "line": 8385,
+            "operation": "assignment-or-conversion"
+          },
+          {
+            "line": 8385,
+            "operation": "property-read-or-reference"
+          },
+          {
+            "line": 8386,
+            "operation": "assignment-or-conversion"
+          },
+          {
+            "line": 8386,
+            "operation": "property-read-or-reference"
+          },
+          {
+            "line": 8387,
+            "operation": "binary-conversion"
+          },
+          {
+            "line": 8387,
+            "operation": "property-read-or-reference"
+          },
+          {
+            "line": 8387,
+            "operation": "property-read-or-reference"
+          },
+          {
+            "line": 8387,
+            "operation": "property-read-or-reference"
+          },
+          {
+            "line": 8387,
+            "operation": "seedrandom-call"
+          },
+          {
+            "line": 8388,
+            "operation": "binary-conversion"
+          },
+          {
+            "line": 8388,
+            "operation": "binary-conversion"
+          },
+          {
+            "line": 8388,
+            "operation": "binary-conversion"
+          },
+          {
+            "line": 8388,
+            "operation": "binary-conversion"
+          },
+          {
+            "line": 8388,
+            "operation": "call:Date.now"
+          },
+          {
+            "line": 8388,
+            "operation": "call:Math.random"
+          },
+          {
+            "line": 8388,
+            "operation": "construct:Date"
+          },
+          {
+            "line": 8388,
+            "operation": "property-read-or-reference"
+          },
+          {
+            "line": 8388,
+            "operation": "property-read-or-reference"
+          },
+          {
+            "line": 8389,
+            "operation": "call:choose"
+          },
+          {
+            "line": 8389,
+            "operation": "property-read-or-reference"
+          },
+          {
+            "line": 8391,
+            "operation": "assignment-or-conversion"
+          },
+          {
+            "line": 8391,
+            "operation": "assignment-or-conversion"
+          },
+          {
+            "line": 8391,
+            "operation": "binary-conversion"
+          },
+          {
+            "line": 8391,
+            "operation": "binary-conversion"
+          },
+          {
+            "line": 8391,
+            "operation": "call:choose"
+          },
+          {
+            "line": 8391,
+            "operation": "call:Math.random"
+          },
+          {
+            "line": 8391,
+            "operation": "property-read-or-reference"
+          },
+          {
+            "line": 8391,
+            "operation": "property-read-or-reference"
+          },
+          {
+            "line": 8391,
+            "operation": "property-read-or-reference"
+          },
+          {
+            "line": 8391,
+            "operation": "property-read-or-reference"
+          },
+          {
+            "line": 8392,
+            "operation": "binary-conversion"
+          },
+          {
+            "line": 8392,
+            "operation": "binary-conversion"
+          },
+          {
+            "line": 8392,
+            "operation": "call:Beautify"
+          },
+          {
+            "line": 8392,
+            "operation": "call:loc"
+          },
+          {
+            "line": 8392,
+            "operation": "call:Math.floor"
+          },
+          {
+            "line": 8392,
+            "operation": "call:Math.random"
+          },
+          {
+            "line": 8392,
+            "operation": "property-read-or-reference"
+          },
+          {
+            "line": 8392,
+            "operation": "property-read-or-reference"
+          },
+          {
+            "line": 8392,
+            "operation": "property-read-or-reference"
+          },
+          {
+            "line": 8393,
+            "operation": "binary-conversion"
+          },
+          {
+            "line": 8393,
+            "operation": "call:ctx.measureText"
+          },
+          {
+            "line": 8393,
+            "operation": "property-read-or-reference"
+          },
+          {
+            "line": 8394,
+            "operation": "binary-conversion"
+          },
+          {
+            "line": 8394,
+            "operation": "binary-conversion"
+          },
+          {
+            "line": 8394,
+            "operation": "binary-conversion"
+          },
+          {
+            "line": 8394,
+            "operation": "binary-conversion"
+          },
+          {
+            "line": 8394,
+            "operation": "call:Math.max"
+          },
+          {
+            "line": 8394,
+            "operation": "call:Math.min"
+          },
+          {
+            "line": 8394,
+            "operation": "call:Math.random"
+          },
+          {
+            "line": 8394,
+            "operation": "property-read-or-reference"
+          },
+          {
+            "line": 8394,
+            "operation": "property-read-or-reference"
+          },
+          {
+            "line": 8394,
+            "operation": "property-read-or-reference"
+          },
+          {
+            "line": 8394,
+            "operation": "property-read-or-reference"
+          },
+          {
+            "line": 8394,
+            "operation": "property-read-or-reference"
+          },
+          {
+            "line": 8395,
+            "operation": "binary-conversion"
+          },
+          {
+            "line": 8395,
+            "operation": "binary-conversion"
+          },
+          {
+            "line": 8395,
+            "operation": "call:Math.random"
+          },
+          {
+            "line": 8395,
+            "operation": "property-read-or-reference"
+          },
+          {
+            "line": 8396,
+            "operation": "property-read-or-reference"
+          },
+          {
+            "line": 8396,
+            "operation": "seedrandom-call"
+          },
+          {
+            "line": 8414,
+            "operation": "binary-conversion"
+          },
+          {
+            "line": 8414,
+            "operation": "binary-conversion"
+          },
+          {
+            "line": 8414,
+            "operation": "binary-conversion"
+          },
+          {
+            "line": 8414,
+            "operation": "binary-conversion"
+          },
+          {
+            "line": 8414,
+            "operation": "binary-conversion"
+          },
+          {
+            "line": 8414,
+            "operation": "call:ctx.drawImage"
+          },
+          {
+            "line": 8414,
+            "operation": "property-read-or-reference"
+          },
+          {
+            "line": 8414,
+            "operation": "property-read-or-reference"
+          },
+          {
+            "line": 8414,
+            "operation": "property-read-or-reference"
+          },
+          {
+            "line": 8414,
+            "operation": "property-read-or-reference"
+          },
+          {
+            "line": 8414,
+            "operation": "property-read-or-reference"
+          },
+          {
+            "line": 8414,
+            "operation": "property-read-or-reference"
+          },
+          {
+            "line": 8414,
+            "operation": "property-read-or-reference"
+          },
+          {
+            "line": 8414,
+            "operation": "property-read-or-reference"
+          },
+          {
+            "line": 8414,
+            "operation": "property-read-or-reference"
+          },
+          {
+            "line": 8414,
+            "operation": "property-read-or-reference"
+          },
+          {
+            "line": 8414,
+            "operation": "unary-or-update-conversion"
+          },
+          {
+            "line": 8415,
+            "operation": "call:ctx.drawImage"
+          },
+          {
+            "line": 8415,
+            "operation": "property-read-or-reference"
+          },
+          {
+            "line": 8415,
+            "operation": "property-read-or-reference"
+          },
+          {
+            "line": 8415,
+            "operation": "property-read-or-reference"
+          },
+          {
+            "line": 8417,
+            "operation": "binary-conversion"
+          },
+          {
+            "line": 8417,
+            "operation": "binary-conversion"
+          },
+          {
+            "line": 8417,
+            "operation": "property-read-or-reference"
+          },
+          {
+            "line": 8419,
+            "operation": "binary-conversion"
+          },
+          {
+            "line": 8419,
+            "operation": "call:ctx.drawImage"
+          },
+          {
+            "line": 8419,
+            "operation": "call:Pic"
+          },
+          {
+            "line": 8419,
+            "operation": "property-read-or-reference"
+          },
+          {
+            "line": 8419,
+            "operation": "property-read-or-reference"
+          },
+          {
+            "line": 8421,
+            "operation": "binary-conversion"
+          },
+          {
+            "line": 8421,
+            "operation": "property-read-or-reference"
+          },
+          {
+            "line": 8421,
+            "operation": "property-read-or-reference"
+          },
+          {
+            "line": 8421,
+            "operation": "seedrandom-call"
+          },
+          {
+            "line": 8422,
+            "operation": "binary-conversion"
+          },
+          {
+            "line": 8422,
+            "operation": "call:Math.floor"
+          },
+          {
+            "line": 8422,
+            "operation": "call:Math.random"
+          },
+          {
+            "line": 8422,
+            "operation": "property-read-or-reference"
+          },
+          {
+            "line": 8422,
+            "operation": "property-read-or-reference"
+          },
+          {
+            "line": 8423,
+            "operation": "binary-conversion"
+          },
+          {
+            "line": 8423,
+            "operation": "property-read-or-reference"
+          },
+          {
+            "line": 8423,
+            "operation": "property-read-or-reference"
+          },
+          {
+            "line": 8423,
+            "operation": "property-read-or-reference"
+          },
+          {
+            "line": 8423,
+            "operation": "seedrandom-call"
+          },
+          {
+            "line": 8424,
+            "operation": "assignment-or-conversion"
+          },
+          {
+            "line": 8424,
+            "operation": "property-read-or-reference"
+          },
+          {
+            "line": 8425,
+            "operation": "assignment-or-conversion"
+          },
+          {
+            "line": 8425,
+            "operation": "property-read-or-reference"
+          },
+          {
+            "line": 8426,
+            "operation": "binary-conversion"
+          },
+          {
+            "line": 8426,
+            "operation": "binary-conversion"
+          },
+          {
+            "line": 8426,
+            "operation": "binary-conversion"
+          },
+          {
+            "line": 8426,
+            "operation": "call:loc"
+          },
+          {
+            "line": 8426,
+            "operation": "call:Math.floor"
+          },
+          {
+            "line": 8426,
+            "operation": "call:Math.random"
+          },
+          {
+            "line": 8426,
+            "operation": "property-read-or-reference"
+          },
+          {
+            "line": 8426,
+            "operation": "property-read-or-reference"
+          },
+          {
+            "line": 8426,
+            "operation": "property-read-or-reference"
+          },
+          {
+            "line": 8429,
+            "operation": "assignment-or-conversion"
+          },
+          {
+            "line": 8429,
+            "operation": "property-read-or-reference"
+          },
+          {
+            "line": 8431,
+            "operation": "binary-conversion"
+          },
+          {
+            "line": 8431,
+            "operation": "binary-conversion"
+          },
+          {
+            "line": 8431,
+            "operation": "binary-conversion"
+          },
+          {
+            "line": 8431,
+            "operation": "call:choose"
+          },
+          {
+            "line": 8431,
+            "operation": "call:Math.random"
+          },
+          {
+            "line": 8431,
+            "operation": "call:romanize"
+          },
+          {
+            "line": 8431,
+            "operation": "property-read-or-reference"
+          },
+          {
+            "line": 8431,
+            "operation": "property-read-or-reference"
+          },
+          {
+            "line": 8431,
+            "operation": "property-read-or-reference"
+          },
+          {
+            "line": 8432,
+            "operation": "binary-conversion"
+          },
+          {
+            "line": 8432,
+            "operation": "binary-conversion"
+          },
+          {
+            "line": 8432,
+            "operation": "binary-conversion"
+          },
+          {
+            "line": 8432,
+            "operation": "binary-conversion"
+          },
+          {
+            "line": 8432,
+            "operation": "binary-conversion"
+          },
+          {
+            "line": 8432,
+            "operation": "binary-conversion"
+          },
+          {
+            "line": 8432,
+            "operation": "binary-conversion"
+          },
+          {
+            "line": 8432,
+            "operation": "binary-conversion"
+          },
+          {
+            "line": 8432,
+            "operation": "binary-conversion"
+          },
+          {
+            "line": 8432,
+            "operation": "binary-conversion"
+          },
+          {
+            "line": 8432,
+            "operation": "binary-conversion"
+          },
+          {
+            "line": 8432,
+            "operation": "call:<expression>.replace"
+          },
+          {
+            "line": 8432,
+            "operation": "call:choose"
+          },
+          {
+            "line": 8432,
+            "operation": "call:choose"
+          },
+          {
+            "line": 8432,
+            "operation": "call:choose"
+          },
+          {
+            "line": 8432,
+            "operation": "call:romanize"
+          },
+          {
+            "line": 8432,
+            "operation": "property-read-or-reference"
+          },
+          {
+            "line": 8432,
+            "operation": "property-read-or-reference"
+          },
+          {
+            "line": 8432,
+            "operation": "property-read-or-reference"
+          },
+          {
+            "line": 8432,
+            "operation": "property-read-or-reference"
+          },
+          {
+            "line": 8432,
+            "operation": "property-read-or-reference"
+          },
+          {
+            "line": 8432,
+            "operation": "property-read-or-reference"
+          },
+          {
+            "line": 8432,
+            "operation": "property-read-or-reference"
+          },
+          {
+            "line": 8435,
+            "operation": "binary-conversion"
+          },
+          {
+            "line": 8435,
+            "operation": "call:ctx.measureText"
+          },
+          {
+            "line": 8435,
+            "operation": "property-read-or-reference"
+          },
+          {
+            "line": 8436,
+            "operation": "binary-conversion"
+          },
+          {
+            "line": 8436,
+            "operation": "binary-conversion"
+          },
+          {
+            "line": 8436,
+            "operation": "binary-conversion"
+          },
+          {
+            "line": 8436,
+            "operation": "call:Math.max"
+          },
+          {
+            "line": 8436,
+            "operation": "call:Math.min"
+          },
+          {
+            "line": 8436,
+            "operation": "property-read-or-reference"
+          },
+          {
+            "line": 8436,
+            "operation": "property-read-or-reference"
+          },
+          {
+            "line": 8436,
+            "operation": "property-read-or-reference"
+          },
+          {
+            "line": 8436,
+            "operation": "property-read-or-reference"
+          },
+          {
+            "line": 8438,
+            "operation": "assignment-or-conversion"
+          },
+          {
+            "line": 8438,
+            "operation": "property-read-or-reference"
+          },
+          {
+            "line": 8439,
+            "operation": "binary-conversion"
+          },
+          {
+            "line": 8439,
+            "operation": "binary-conversion"
+          },
+          {
+            "line": 8439,
+            "operation": "binary-conversion"
+          },
+          {
+            "line": 8439,
+            "operation": "call:ctx.fillText"
+          },
+          {
+            "line": 8439,
+            "operation": "call:Math.floor"
+          },
+          {
+            "line": 8439,
+            "operation": "call:Math.floor"
+          },
+          {
+            "line": 8439,
+            "operation": "property-read-or-reference"
+          },
+          {
+            "line": 8439,
+            "operation": "property-read-or-reference"
+          },
+          {
+            "line": 8439,
+            "operation": "property-read-or-reference"
+          },
+          {
+            "line": 8440,
+            "operation": "assignment-or-conversion"
+          },
+          {
+            "line": 8440,
+            "operation": "property-read-or-reference"
+          },
+          {
+            "line": 8441,
+            "operation": "binary-conversion"
+          },
+          {
+            "line": 8441,
+            "operation": "binary-conversion"
+          },
+          {
+            "line": 8441,
+            "operation": "call:ctx.fillText"
+          },
+          {
+            "line": 8441,
+            "operation": "call:Math.floor"
+          },
+          {
+            "line": 8441,
+            "operation": "call:Math.floor"
+          },
+          {
+            "line": 8441,
+            "operation": "property-read-or-reference"
+          },
+          {
+            "line": 8441,
+            "operation": "property-read-or-reference"
+          },
+          {
+            "line": 8441,
+            "operation": "property-read-or-reference"
+          }
+        ]
+      },
+      "excludingForbiddenCloneBranch": {
+        "outcomes": [
+          "normal:free",
+          "return:free"
+        ],
+        "seedCalls": [
+          {
+            "line": 8299,
+            "kind": "explicit-seed"
+          },
+          {
+            "line": 8376,
+            "kind": "restore-free"
+          },
+          {
+            "line": 8387,
+            "kind": "explicit-seed"
+          },
+          {
+            "line": 8396,
+            "kind": "restore-free"
+          }
+        ],
+        "callsWhileSeeded": [
+          {
+            "line": 8302,
+            "target": "Math.floor"
+          },
+          {
+            "line": 8302,
+            "target": "Math.random"
+          },
+          {
+            "line": 8302,
+            "target": "Math.floor"
+          },
+          {
+            "line": 8303,
+            "target": "Math.random"
+          },
+          {
+            "line": 8303,
+            "target": "Math.floor"
+          },
+          {
+            "line": 8307,
+            "target": "Math.random"
+          },
+          {
+            "line": 8307,
+            "target": "Math.floor"
+          },
+          {
+            "line": 8308,
+            "target": "Math.random"
+          },
+          {
+            "line": 8308,
+            "target": "Math.floor"
+          },
+          {
+            "line": 8310,
+            "target": "pic"
+          },
+          {
+            "line": 8313,
+            "target": "Math.random"
+          },
+          {
+            "line": 8313,
+            "target": "Math.floor"
+          },
+          {
+            "line": 8315,
+            "target": "Math.floor"
+          },
+          {
+            "line": 8315,
+            "target": "Math.floor"
+          },
+          {
+            "line": 8315,
+            "target": "this.pics.push"
+          },
+          {
+            "line": 8322,
+            "target": "this.pics.sort"
+          },
+          {
+            "line": 8323,
+            "target": "this.pics.pop"
+          },
+          {
+            "line": 8328,
+            "target": "this.pics.sort"
+          },
+          {
+            "line": 8344,
+            "target": "Game.Win"
+          },
+          {
+            "line": 8348,
+            "target": "loc"
+          },
+          {
+            "line": 8353,
+            "target": "ctx.measureText"
+          },
+          {
+            "line": 8353,
+            "target": "ctx.fillRect"
+          },
+          {
+            "line": 8356,
+            "target": "ctx.fillText"
+          },
+          {
+            "line": 8360,
+            "target": "ctx.measureText"
+          },
+          {
+            "line": 8360,
+            "target": "ctx.fillText"
+          },
+          {
+            "line": 8388,
+            "target": "Date.now"
+          },
+          {
+            "line": 8388,
+            "target": "Date"
+          },
+          {
+            "line": 8388,
+            "target": "Math.random"
+          },
+          {
+            "line": 8389,
+            "target": "choose"
+          },
+          {
+            "line": 8391,
+            "target": "Math.random"
+          },
+          {
+            "line": 8391,
+            "target": "choose"
+          },
+          {
+            "line": 8392,
+            "target": "Math.random"
+          },
+          {
+            "line": 8392,
+            "target": "Math.floor"
+          },
+          {
+            "line": 8392,
+            "target": "Beautify"
+          },
+          {
+            "line": 8392,
+            "target": "loc"
+          },
+          {
+            "line": 8393,
+            "target": "ctx.measureText"
+          },
+          {
+            "line": 8394,
+            "target": "Math.random"
+          },
+          {
+            "line": 8394,
+            "target": "Math.min"
+          },
+          {
+            "line": 8394,
+            "target": "Math.max"
+          },
+          {
+            "line": 8395,
+            "target": "Math.random"
+          }
+        ],
+        "potentialExceptionalSitesWhileSeeded": [
+          {
+            "line": 8296,
+            "operation": "binary-conversion"
+          },
+          {
+            "line": 8299,
+            "operation": "binary-conversion"
+          },
+          {
+            "line": 8299,
+            "operation": "property-read-or-reference"
+          },
+          {
+            "line": 8299,
+            "operation": "property-read-or-reference"
+          },
+          {
+            "line": 8299,
+            "operation": "property-read-or-reference"
+          },
+          {
+            "line": 8299,
+            "operation": "seedrandom-call"
+          },
+          {
+            "line": 8300,
+            "operation": "binary-conversion"
+          },
+          {
+            "line": 8302,
+            "operation": "assignment-or-conversion"
+          },
+          {
+            "line": 8302,
+            "operation": "binary-conversion"
+          },
+          {
+            "line": 8302,
+            "operation": "binary-conversion"
+          },
+          {
+            "line": 8302,
+            "operation": "binary-conversion"
+          },
+          {
+            "line": 8302,
+            "operation": "binary-conversion"
+          },
+          {
+            "line": 8302,
+            "operation": "binary-conversion"
+          },
+          {
+            "line": 8302,
+            "operation": "binary-conversion"
+          },
+          {
+            "line": 8302,
+            "operation": "binary-conversion"
+          },
+          {
+            "line": 8302,
+            "operation": "call:Math.floor"
+          },
+          {
+            "line": 8302,
+            "operation": "call:Math.floor"
+          },
+          {
+            "line": 8302,
+            "operation": "call:Math.random"
+          },
+          {
+            "line": 8302,
+            "operation": "property-read-or-reference"
+          },
+          {
+            "line": 8302,
+            "operation": "property-read-or-reference"
+          },
+          {
+            "line": 8302,
+            "operation": "property-read-or-reference"
+          },
+          {
+            "line": 8303,
+            "operation": "assignment-or-conversion"
+          },
+          {
+            "line": 8303,
+            "operation": "binary-conversion"
+          },
+          {
+            "line": 8303,
+            "operation": "binary-conversion"
+          },
+          {
+            "line": 8303,
+            "operation": "binary-conversion"
+          },
+          {
+            "line": 8303,
+            "operation": "binary-conversion"
+          },
+          {
+            "line": 8303,
+            "operation": "binary-conversion"
+          },
+          {
+            "line": 8303,
+            "operation": "binary-conversion"
+          },
+          {
+            "line": 8303,
+            "operation": "binary-conversion"
+          },
+          {
+            "line": 8303,
+            "operation": "call:Math.floor"
+          },
+          {
+            "line": 8303,
+            "operation": "call:Math.random"
+          },
+          {
+            "line": 8303,
+            "operation": "property-read-or-reference"
+          },
+          {
+            "line": 8303,
+            "operation": "property-read-or-reference"
+          },
+          {
+            "line": 8303,
+            "operation": "unary-or-update-conversion"
+          },
+          {
+            "line": 8307,
+            "operation": "assignment-or-conversion"
+          },
+          {
+            "line": 8307,
+            "operation": "binary-conversion"
+          },
+          {
+            "line": 8307,
+            "operation": "binary-conversion"
+          },
+          {
+            "line": 8307,
+            "operation": "binary-conversion"
+          },
+          {
+            "line": 8307,
+            "operation": "call:Math.floor"
+          },
+          {
+            "line": 8307,
+            "operation": "call:Math.random"
+          },
+          {
+            "line": 8307,
+            "operation": "property-read-or-reference"
+          },
+          {
+            "line": 8307,
+            "operation": "property-read-or-reference"
+          },
+          {
+            "line": 8308,
+            "operation": "assignment-or-conversion"
+          },
+          {
+            "line": 8308,
+            "operation": "binary-conversion"
+          },
+          {
+            "line": 8308,
+            "operation": "binary-conversion"
+          },
+          {
+            "line": 8308,
+            "operation": "binary-conversion"
+          },
+          {
+            "line": 8308,
+            "operation": "call:Math.floor"
+          },
+          {
+            "line": 8308,
+            "operation": "call:Math.random"
+          },
+          {
+            "line": 8308,
+            "operation": "property-read-or-reference"
+          },
+          {
+            "line": 8308,
+            "operation": "property-read-or-reference"
+          },
+          {
+            "line": 8310,
+            "operation": "binary-conversion"
+          },
+          {
+            "line": 8310,
+            "operation": "call:pic"
+          },
+          {
+            "line": 8310,
+            "operation": "unary-or-update-conversion"
+          },
+          {
+            "line": 8311,
+            "operation": "unary-or-update-conversion"
+          },
+          {
+            "line": 8313,
+            "operation": "assignment-or-conversion"
+          },
+          {
+            "line": 8313,
+            "operation": "assignment-or-conversion"
+          },
+          {
+            "line": 8313,
+            "operation": "binary-conversion"
+          },
+          {
+            "line": 8313,
+            "operation": "binary-conversion"
+          },
+          {
+            "line": 8313,
+            "operation": "binary-conversion"
+          },
+          {
+            "line": 8313,
+            "operation": "binary-conversion"
+          },
+          {
+            "line": 8313,
+            "operation": "binary-conversion"
+          },
+          {
+            "line": 8313,
+            "operation": "call:Math.floor"
+          },
+          {
+            "line": 8313,
+            "operation": "call:Math.random"
+          },
+          {
+            "line": 8313,
+            "operation": "property-read-or-reference"
+          },
+          {
+            "line": 8313,
+            "operation": "property-read-or-reference"
+          },
+          {
+            "line": 8314,
+            "operation": "assignment-or-conversion"
+          },
+          {
+            "line": 8315,
+            "operation": "call:Math.floor"
+          },
+          {
+            "line": 8315,
+            "operation": "call:Math.floor"
+          },
+          {
+            "line": 8315,
+            "operation": "call:this.pics.push"
+          },
+          {
+            "line": 8315,
+            "operation": "property-read-or-reference"
+          },
+          {
+            "line": 8315,
+            "operation": "property-read-or-reference"
+          },
+          {
+            "line": 8315,
+            "operation": "property-read-or-reference"
+          },
+          {
+            "line": 8316,
+            "operation": "unary-or-update-conversion"
+          },
+          {
+            "line": 8317,
+            "operation": "unary-or-update-conversion"
+          },
+          {
+            "line": 8319,
+            "operation": "binary-conversion"
+          },
+          {
+            "line": 8322,
+            "operation": "call:this.pics.sort"
+          },
+          {
+            "line": 8322,
+            "operation": "property-read-or-reference"
+          },
+          {
+            "line": 8322,
+            "operation": "property-read-or-reference"
+          },
+          {
+            "line": 8323,
+            "operation": "call:this.pics.pop"
+          },
+          {
+            "line": 8323,
+            "operation": "property-read-or-reference"
+          },
+          {
+            "line": 8324,
+            "operation": "unary-or-update-conversion"
+          },
+          {
+            "line": 8325,
+            "operation": "unary-or-update-conversion"
+          },
+          {
+            "line": 8328,
+            "operation": "call:this.pics.sort"
+          },
+          {
+            "line": 8328,
+            "operation": "property-read-or-reference"
+          },
+          {
+            "line": 8328,
+            "operation": "property-read-or-reference"
+          },
+          {
+            "line": 8331,
+            "operation": "property-read-or-reference"
+          },
+          {
+            "line": 8333,
+            "operation": "property-read-or-reference"
+          },
+          {
+            "line": 8335,
+            "operation": "unary-or-update-conversion"
+          },
+          {
+            "line": 8336,
+            "operation": "binary-conversion"
+          },
+          {
+            "line": 8336,
+            "operation": "property-read-or-reference"
+          },
+          {
+            "line": 8338,
+            "operation": "unary-or-update-conversion"
+          },
+          {
+            "line": 8339,
+            "operation": "unary-or-update-conversion"
+          },
+          {
+            "line": 8340,
+            "operation": "binary-conversion"
+          },
+          {
+            "line": 8340,
+            "operation": "unary-or-update-conversion"
+          },
+          {
+            "line": 8342,
+            "operation": "property-read-or-reference"
+          },
+          {
+            "line": 8343,
+            "operation": "assignment-or-conversion"
+          },
+          {
+            "line": 8343,
+            "operation": "binary-conversion"
+          },
+          {
+            "line": 8343,
+            "operation": "binary-conversion"
+          },
+          {
+            "line": 8343,
+            "operation": "binary-conversion"
+          },
+          {
+            "line": 8343,
+            "operation": "binary-conversion"
+          },
+          {
+            "line": 8343,
+            "operation": "binary-conversion"
+          },
+          {
+            "line": 8343,
+            "operation": "binary-conversion"
+          },
+          {
+            "line": 8343,
+            "operation": "binary-conversion"
+          },
+          {
+            "line": 8343,
+            "operation": "binary-conversion"
+          },
+          {
+            "line": 8343,
+            "operation": "property-read-or-reference"
+          },
+          {
+            "line": 8343,
+            "operation": "property-read-or-reference"
+          },
+          {
+            "line": 8343,
+            "operation": "property-read-or-reference"
+          },
+          {
+            "line": 8343,
+            "operation": "property-read-or-reference"
+          },
+          {
+            "line": 8343,
+            "operation": "property-read-or-reference"
+          },
+          {
+            "line": 8343,
+            "operation": "property-read-or-reference"
+          },
+          {
+            "line": 8343,
+            "operation": "property-read-or-reference"
+          },
+          {
+            "line": 8343,
+            "operation": "property-read-or-reference"
+          },
+          {
+            "line": 8344,
+            "operation": "binary-conversion"
+          },
+          {
+            "line": 8344,
+            "operation": "binary-conversion"
+          },
+          {
+            "line": 8344,
+            "operation": "call:Game.Win"
+          },
+          {
+            "line": 8344,
+            "operation": "property-read-or-reference"
+          },
+          {
+            "line": 8344,
+            "operation": "property-read-or-reference"
+          },
+          {
+            "line": 8344,
+            "operation": "property-read-or-reference"
+          },
+          {
+            "line": 8346,
+            "operation": "binary-conversion"
+          },
+          {
+            "line": 8346,
+            "operation": "property-read-or-reference"
+          },
+          {
+            "line": 8346,
+            "operation": "property-read-or-reference"
+          },
+          {
+            "line": 8348,
+            "operation": "call:loc"
+          },
+          {
+            "line": 8349,
+            "operation": "assignment-or-conversion"
+          },
+          {
+            "line": 8349,
+            "operation": "property-read-or-reference"
+          },
+          {
+            "line": 8350,
+            "operation": "assignment-or-conversion"
+          },
+          {
+            "line": 8350,
+            "operation": "property-read-or-reference"
+          },
+          {
+            "line": 8351,
+            "operation": "assignment-or-conversion"
+          },
+          {
+            "line": 8351,
+            "operation": "property-read-or-reference"
+          },
+          {
+            "line": 8352,
+            "operation": "assignment-or-conversion"
+          },
+          {
+            "line": 8352,
+            "operation": "property-read-or-reference"
+          },
+          {
+            "line": 8353,
+            "operation": "binary-conversion"
+          },
+          {
+            "line": 8353,
+            "operation": "call:ctx.fillRect"
+          },
+          {
+            "line": 8353,
+            "operation": "call:ctx.measureText"
+          },
+          {
+            "line": 8353,
+            "operation": "property-read-or-reference"
+          },
+          {
+            "line": 8353,
+            "operation": "property-read-or-reference"
+          },
+          {
+            "line": 8354,
+            "operation": "assignment-or-conversion"
+          },
+          {
+            "line": 8354,
+            "operation": "property-read-or-reference"
+          },
+          {
+            "line": 8355,
+            "operation": "assignment-or-conversion"
+          },
+          {
+            "line": 8355,
+            "operation": "property-read-or-reference"
+          },
+          {
+            "line": 8356,
+            "operation": "call:ctx.fillText"
+          },
+          {
+            "line": 8356,
+            "operation": "property-read-or-reference"
+          },
+          {
+            "line": 8359,
+            "operation": "assignment-or-conversion"
+          },
+          {
+            "line": 8359,
+            "operation": "property-read-or-reference"
+          },
+          {
+            "line": 8360,
+            "operation": "binary-conversion"
+          },
+          {
+            "line": 8360,
+            "operation": "call:ctx.fillText"
+          },
+          {
+            "line": 8360,
+            "operation": "call:ctx.measureText"
+          },
+          {
+            "line": 8360,
+            "operation": "property-read-or-reference"
+          },
+          {
+            "line": 8360,
+            "operation": "property-read-or-reference"
+          },
+          {
+            "line": 8364,
+            "operation": "binary-conversion"
+          },
+          {
+            "line": 8364,
+            "operation": "property-read-or-reference"
+          },
+          {
+            "line": 8366,
+            "operation": "unary-or-update-conversion"
+          },
+          {
+            "line": 8368,
+            "operation": "binary-conversion"
+          },
+          {
+            "line": 8368,
+            "operation": "unary-or-update-conversion"
+          },
+          {
+            "line": 8370,
+            "operation": "property-read-or-reference"
+          },
+          {
+            "line": 8371,
+            "operation": "assignment-or-conversion"
+          },
+          {
+            "line": 8371,
+            "operation": "binary-conversion"
+          },
+          {
+            "line": 8371,
+            "operation": "binary-conversion"
+          },
+          {
+            "line": 8371,
+            "operation": "binary-conversion"
+          },
+          {
+            "line": 8371,
+            "operation": "binary-conversion"
+          },
+          {
+            "line": 8371,
+            "operation": "binary-conversion"
+          },
+          {
+            "line": 8371,
+            "operation": "binary-conversion"
+          },
+          {
+            "line": 8371,
+            "operation": "binary-conversion"
+          },
+          {
+            "line": 8371,
+            "operation": "binary-conversion"
+          },
+          {
+            "line": 8371,
+            "operation": "property-read-or-reference"
+          },
+          {
+            "line": 8371,
+            "operation": "property-read-or-reference"
+          },
+          {
+            "line": 8371,
+            "operation": "property-read-or-reference"
+          },
+          {
+            "line": 8371,
+            "operation": "property-read-or-reference"
+          },
+          {
+            "line": 8371,
+            "operation": "property-read-or-reference"
+          },
+          {
+            "line": 8371,
+            "operation": "property-read-or-reference"
+          },
+          {
+            "line": 8371,
+            "operation": "property-read-or-reference"
+          },
+          {
+            "line": 8371,
+            "operation": "property-read-or-reference"
+          },
+          {
+            "line": 8376,
+            "operation": "property-read-or-reference"
+          },
+          {
+            "line": 8376,
+            "operation": "seedrandom-call"
+          },
+          {
+            "line": 8388,
+            "operation": "binary-conversion"
+          },
+          {
+            "line": 8388,
+            "operation": "binary-conversion"
+          },
+          {
+            "line": 8388,
+            "operation": "binary-conversion"
+          },
+          {
+            "line": 8388,
+            "operation": "binary-conversion"
+          },
+          {
+            "line": 8388,
+            "operation": "call:Date.now"
+          },
+          {
+            "line": 8388,
+            "operation": "call:Math.random"
+          },
+          {
+            "line": 8388,
+            "operation": "construct:Date"
+          },
+          {
+            "line": 8388,
+            "operation": "property-read-or-reference"
+          },
+          {
+            "line": 8388,
+            "operation": "property-read-or-reference"
+          },
+          {
+            "line": 8389,
+            "operation": "call:choose"
+          },
+          {
+            "line": 8389,
+            "operation": "property-read-or-reference"
+          },
+          {
+            "line": 8391,
+            "operation": "assignment-or-conversion"
+          },
+          {
+            "line": 8391,
+            "operation": "assignment-or-conversion"
+          },
+          {
+            "line": 8391,
+            "operation": "binary-conversion"
+          },
+          {
+            "line": 8391,
+            "operation": "binary-conversion"
+          },
+          {
+            "line": 8391,
+            "operation": "call:choose"
+          },
+          {
+            "line": 8391,
+            "operation": "call:Math.random"
+          },
+          {
+            "line": 8391,
+            "operation": "property-read-or-reference"
+          },
+          {
+            "line": 8391,
+            "operation": "property-read-or-reference"
+          },
+          {
+            "line": 8391,
+            "operation": "property-read-or-reference"
+          },
+          {
+            "line": 8391,
+            "operation": "property-read-or-reference"
+          },
+          {
+            "line": 8392,
+            "operation": "binary-conversion"
+          },
+          {
+            "line": 8392,
+            "operation": "binary-conversion"
+          },
+          {
+            "line": 8392,
+            "operation": "call:Beautify"
+          },
+          {
+            "line": 8392,
+            "operation": "call:loc"
+          },
+          {
+            "line": 8392,
+            "operation": "call:Math.floor"
+          },
+          {
+            "line": 8392,
+            "operation": "call:Math.random"
+          },
+          {
+            "line": 8392,
+            "operation": "property-read-or-reference"
+          },
+          {
+            "line": 8392,
+            "operation": "property-read-or-reference"
+          },
+          {
+            "line": 8392,
+            "operation": "property-read-or-reference"
+          },
+          {
+            "line": 8393,
+            "operation": "binary-conversion"
+          },
+          {
+            "line": 8393,
+            "operation": "call:ctx.measureText"
+          },
+          {
+            "line": 8393,
+            "operation": "property-read-or-reference"
+          },
+          {
+            "line": 8394,
+            "operation": "binary-conversion"
+          },
+          {
+            "line": 8394,
+            "operation": "binary-conversion"
+          },
+          {
+            "line": 8394,
+            "operation": "binary-conversion"
+          },
+          {
+            "line": 8394,
+            "operation": "binary-conversion"
+          },
+          {
+            "line": 8394,
+            "operation": "call:Math.max"
+          },
+          {
+            "line": 8394,
+            "operation": "call:Math.min"
+          },
+          {
+            "line": 8394,
+            "operation": "call:Math.random"
+          },
+          {
+            "line": 8394,
+            "operation": "property-read-or-reference"
+          },
+          {
+            "line": 8394,
+            "operation": "property-read-or-reference"
+          },
+          {
+            "line": 8394,
+            "operation": "property-read-or-reference"
+          },
+          {
+            "line": 8394,
+            "operation": "property-read-or-reference"
+          },
+          {
+            "line": 8394,
+            "operation": "property-read-or-reference"
+          },
+          {
+            "line": 8395,
+            "operation": "binary-conversion"
+          },
+          {
+            "line": 8395,
+            "operation": "binary-conversion"
+          },
+          {
+            "line": 8395,
+            "operation": "call:Math.random"
+          },
+          {
+            "line": 8395,
+            "operation": "property-read-or-reference"
+          },
+          {
+            "line": 8396,
+            "operation": "property-read-or-reference"
+          },
+          {
+            "line": 8396,
+            "operation": "seedrandom-call"
+          }
+        ]
+      }
+    },
+    {
+      "file": "main.js",
+      "name": "Game.last.descFunc",
+      "line": 11205,
+      "sha256": "a98bef1797a5dd3b12b7052f448ef93b09ec750983cae5a8ac38a60ac6b94f09",
+      "forbiddenBranch": null,
+      "unrestricted": {
+        "outcomes": [
+          "return:free"
+        ],
+        "seedCalls": [
+          {
+            "line": 11206,
+            "kind": "explicit-seed"
+          },
+          {
+            "line": 11207,
+            "kind": "restore-free"
+          },
+          {
+            "line": 11208,
+            "kind": "restore-free"
+          }
+        ],
+        "callsWhileSeeded": [
+          {
+            "line": 11207,
+            "target": "Math.random"
+          }
+        ],
+        "potentialExceptionalSitesWhileSeeded": [
+          {
+            "line": 11207,
+            "operation": "binary-conversion"
+          },
+          {
+            "line": 11207,
+            "operation": "call:Math.random"
+          },
+          {
+            "line": 11207,
+            "operation": "property-read-or-reference"
+          },
+          {
+            "line": 11207,
+            "operation": "property-read-or-reference"
+          },
+          {
+            "line": 11207,
+            "operation": "seedrandom-call"
+          },
+          {
+            "line": 11208,
+            "operation": "property-read-or-reference"
+          },
+          {
+            "line": 11208,
+            "operation": "seedrandom-call"
+          }
+        ]
+      },
+      "excludingForbiddenCloneBranch": {
+        "outcomes": [
+          "return:free"
+        ],
+        "seedCalls": [
+          {
+            "line": 11206,
+            "kind": "explicit-seed"
+          },
+          {
+            "line": 11207,
+            "kind": "restore-free"
+          },
+          {
+            "line": 11208,
+            "kind": "restore-free"
+          }
+        ],
+        "callsWhileSeeded": [
+          {
+            "line": 11207,
+            "target": "Math.random"
+          }
+        ],
+        "potentialExceptionalSitesWhileSeeded": [
+          {
+            "line": 11207,
+            "operation": "binary-conversion"
+          },
+          {
+            "line": 11207,
+            "operation": "call:Math.random"
+          },
+          {
+            "line": 11207,
+            "operation": "property-read-or-reference"
+          },
+          {
+            "line": 11207,
+            "operation": "property-read-or-reference"
+          },
+          {
+            "line": 11207,
+            "operation": "seedrandom-call"
+          },
+          {
+            "line": 11208,
+            "operation": "property-read-or-reference"
+          },
+          {
+            "line": 11208,
+            "operation": "seedrandom-call"
+          }
+        ]
+      }
+    },
+    {
+      "file": "main.js",
+      "name": "Game.loseShimmeringVeil",
+      "line": 11288,
+      "sha256": "40d3d0228932b38ace632decccfa6aaa4efbe1225626ef723878fce49473ac4a",
+      "forbiddenBranch": null,
+      "unrestricted": {
+        "outcomes": [
+          "normal:free",
+          "return:free"
+        ],
+        "seedCalls": [
+          {
+            "line": 11294,
+            "kind": "explicit-seed"
+          },
+          {
+            "line": 11295,
+            "kind": "explicit-seed"
+          },
+          {
+            "line": 11300,
+            "kind": "restore-free"
+          },
+          {
+            "line": 11303,
+            "kind": "restore-free"
+          }
+        ],
+        "callsWhileSeeded": [
+          {
+            "line": 11296,
+            "target": "Math.random"
+          },
+          {
+            "line": 11296,
+            "target": "Game.getVeilDefense"
+          },
+          {
+            "line": 11298,
+            "target": "loc"
+          },
+          {
+            "line": 11298,
+            "target": "Game.Notify"
+          },
+          {
+            "line": 11299,
+            "target": "Game.Win"
+          }
+        ],
+        "potentialExceptionalSitesWhileSeeded": [
+          {
+            "line": 11296,
+            "operation": "binary-conversion"
+          },
+          {
+            "line": 11296,
+            "operation": "call:Game.getVeilDefense"
+          },
+          {
+            "line": 11296,
+            "operation": "call:Math.random"
+          },
+          {
+            "line": 11296,
+            "operation": "property-read-or-reference"
+          },
+          {
+            "line": 11296,
+            "operation": "property-read-or-reference"
+          },
+          {
+            "line": 11298,
+            "operation": "call:Game.Notify"
+          },
+          {
+            "line": 11298,
+            "operation": "call:loc"
+          },
+          {
+            "line": 11298,
+            "operation": "property-read-or-reference"
+          },
+          {
+            "line": 11299,
+            "operation": "call:Game.Win"
+          },
+          {
+            "line": 11299,
+            "operation": "property-read-or-reference"
+          },
+          {
+            "line": 11300,
+            "operation": "property-read-or-reference"
+          },
+          {
+            "line": 11300,
+            "operation": "seedrandom-call"
+          },
+          {
+            "line": 11303,
+            "operation": "property-read-or-reference"
+          },
+          {
+            "line": 11303,
+            "operation": "seedrandom-call"
+          }
+        ]
+      },
+      "excludingForbiddenCloneBranch": {
+        "outcomes": [
+          "normal:free",
+          "return:free"
+        ],
+        "seedCalls": [
+          {
+            "line": 11294,
+            "kind": "explicit-seed"
+          },
+          {
+            "line": 11295,
+            "kind": "explicit-seed"
+          },
+          {
+            "line": 11300,
+            "kind": "restore-free"
+          },
+          {
+            "line": 11303,
+            "kind": "restore-free"
+          }
+        ],
+        "callsWhileSeeded": [
+          {
+            "line": 11296,
+            "target": "Math.random"
+          },
+          {
+            "line": 11296,
+            "target": "Game.getVeilDefense"
+          },
+          {
+            "line": 11298,
+            "target": "loc"
+          },
+          {
+            "line": 11298,
+            "target": "Game.Notify"
+          },
+          {
+            "line": 11299,
+            "target": "Game.Win"
+          }
+        ],
+        "potentialExceptionalSitesWhileSeeded": [
+          {
+            "line": 11296,
+            "operation": "binary-conversion"
+          },
+          {
+            "line": 11296,
+            "operation": "call:Game.getVeilDefense"
+          },
+          {
+            "line": 11296,
+            "operation": "call:Math.random"
+          },
+          {
+            "line": 11296,
+            "operation": "property-read-or-reference"
+          },
+          {
+            "line": 11296,
+            "operation": "property-read-or-reference"
+          },
+          {
+            "line": 11298,
+            "operation": "call:Game.Notify"
+          },
+          {
+            "line": 11298,
+            "operation": "call:loc"
+          },
+          {
+            "line": 11298,
+            "operation": "property-read-or-reference"
+          },
+          {
+            "line": 11299,
+            "operation": "call:Game.Win"
+          },
+          {
+            "line": 11299,
+            "operation": "property-read-or-reference"
+          },
+          {
+            "line": 11300,
+            "operation": "property-read-or-reference"
+          },
+          {
+            "line": 11300,
+            "operation": "seedrandom-call"
+          },
+          {
+            "line": 11303,
+            "operation": "property-read-or-reference"
+          },
+          {
+            "line": 11303,
+            "operation": "seedrandom-call"
+          }
+        ]
+      }
+    },
+    {
+      "file": "main.js",
+      "name": "Game.last.descFunc",
+      "line": 11393,
+      "sha256": "8dd491b25bd6cf7fdea800d71d494c6d9dbaf34d1ca53b064344ff477ceee0d3",
+      "forbiddenBranch": null,
+      "unrestricted": {
+        "outcomes": [
+          "return:free"
+        ],
+        "seedCalls": [
+          {
+            "line": 11394,
+            "kind": "explicit-seed"
+          },
+          {
+            "line": 11396,
+            "kind": "restore-free"
+          }
+        ],
+        "callsWhileSeeded": [
+          {
+            "line": 11395,
+            "target": "Math.random"
+          },
+          {
+            "line": 11395,
+            "target": "Math.floor"
+          },
+          {
+            "line": 11395,
+            "target": "Math.random"
+          },
+          {
+            "line": 11395,
+            "target": "Math.floor"
+          },
+          {
+            "line": 11395,
+            "target": "Math.random"
+          },
+          {
+            "line": 11395,
+            "target": "Math.floor"
+          },
+          {
+            "line": 11395,
+            "target": "Math.random"
+          },
+          {
+            "line": 11395,
+            "target": "Math.floor"
+          },
+          {
+            "line": 11395,
+            "target": "Math.random"
+          },
+          {
+            "line": 11395,
+            "target": "Math.floor"
+          },
+          {
+            "line": 11395,
+            "target": "choose"
+          }
+        ],
+        "potentialExceptionalSitesWhileSeeded": [
+          {
+            "line": 11395,
+            "operation": "binary-conversion"
+          },
+          {
+            "line": 11395,
+            "operation": "binary-conversion"
+          },
+          {
+            "line": 11395,
+            "operation": "binary-conversion"
+          },
+          {
+            "line": 11395,
+            "operation": "binary-conversion"
+          },
+          {
+            "line": 11395,
+            "operation": "binary-conversion"
+          },
+          {
+            "line": 11395,
+            "operation": "binary-conversion"
+          },
+          {
+            "line": 11395,
+            "operation": "binary-conversion"
+          },
+          {
+            "line": 11395,
+            "operation": "binary-conversion"
+          },
+          {
+            "line": 11395,
+            "operation": "binary-conversion"
+          },
+          {
+            "line": 11395,
+            "operation": "call:choose"
+          },
+          {
+            "line": 11395,
+            "operation": "call:Math.floor"
+          },
+          {
+            "line": 11395,
+            "operation": "call:Math.floor"
+          },
+          {
+            "line": 11395,
+            "operation": "call:Math.floor"
+          },
+          {
+            "line": 11395,
+            "operation": "call:Math.floor"
+          },
+          {
+            "line": 11395,
+            "operation": "call:Math.floor"
+          },
+          {
+            "line": 11395,
+            "operation": "call:Math.random"
+          },
+          {
+            "line": 11395,
+            "operation": "call:Math.random"
+          },
+          {
+            "line": 11395,
+            "operation": "call:Math.random"
+          },
+          {
+            "line": 11395,
+            "operation": "call:Math.random"
+          },
+          {
+            "line": 11395,
+            "operation": "call:Math.random"
+          },
+          {
+            "line": 11395,
+            "operation": "property-read-or-reference"
+          },
+          {
+            "line": 11395,
+            "operation": "property-read-or-reference"
+          },
+          {
+            "line": 11395,
+            "operation": "property-read-or-reference"
+          },
+          {
+            "line": 11395,
+            "operation": "property-read-or-reference"
+          },
+          {
+            "line": 11395,
+            "operation": "property-read-or-reference"
+          },
+          {
+            "line": 11395,
+            "operation": "property-read-or-reference"
+          },
+          {
+            "line": 11395,
+            "operation": "property-read-or-reference"
+          },
+          {
+            "line": 11395,
+            "operation": "property-read-or-reference"
+          },
+          {
+            "line": 11395,
+            "operation": "property-read-or-reference"
+          },
+          {
+            "line": 11395,
+            "operation": "property-read-or-reference"
+          },
+          {
+            "line": 11395,
+            "operation": "property-read-or-reference"
+          },
+          {
+            "line": 11395,
+            "operation": "property-read-or-reference"
+          },
+          {
+            "line": 11396,
+            "operation": "property-read-or-reference"
+          },
+          {
+            "line": 11396,
+            "operation": "seedrandom-call"
+          }
+        ]
+      },
+      "excludingForbiddenCloneBranch": {
+        "outcomes": [
+          "return:free"
+        ],
+        "seedCalls": [
+          {
+            "line": 11394,
+            "kind": "explicit-seed"
+          },
+          {
+            "line": 11396,
+            "kind": "restore-free"
+          }
+        ],
+        "callsWhileSeeded": [
+          {
+            "line": 11395,
+            "target": "Math.random"
+          },
+          {
+            "line": 11395,
+            "target": "Math.floor"
+          },
+          {
+            "line": 11395,
+            "target": "Math.random"
+          },
+          {
+            "line": 11395,
+            "target": "Math.floor"
+          },
+          {
+            "line": 11395,
+            "target": "Math.random"
+          },
+          {
+            "line": 11395,
+            "target": "Math.floor"
+          },
+          {
+            "line": 11395,
+            "target": "Math.random"
+          },
+          {
+            "line": 11395,
+            "target": "Math.floor"
+          },
+          {
+            "line": 11395,
+            "target": "Math.random"
+          },
+          {
+            "line": 11395,
+            "target": "Math.floor"
+          },
+          {
+            "line": 11395,
+            "target": "choose"
+          }
+        ],
+        "potentialExceptionalSitesWhileSeeded": [
+          {
+            "line": 11395,
+            "operation": "binary-conversion"
+          },
+          {
+            "line": 11395,
+            "operation": "binary-conversion"
+          },
+          {
+            "line": 11395,
+            "operation": "binary-conversion"
+          },
+          {
+            "line": 11395,
+            "operation": "binary-conversion"
+          },
+          {
+            "line": 11395,
+            "operation": "binary-conversion"
+          },
+          {
+            "line": 11395,
+            "operation": "binary-conversion"
+          },
+          {
+            "line": 11395,
+            "operation": "binary-conversion"
+          },
+          {
+            "line": 11395,
+            "operation": "binary-conversion"
+          },
+          {
+            "line": 11395,
+            "operation": "binary-conversion"
+          },
+          {
+            "line": 11395,
+            "operation": "call:choose"
+          },
+          {
+            "line": 11395,
+            "operation": "call:Math.floor"
+          },
+          {
+            "line": 11395,
+            "operation": "call:Math.floor"
+          },
+          {
+            "line": 11395,
+            "operation": "call:Math.floor"
+          },
+          {
+            "line": 11395,
+            "operation": "call:Math.floor"
+          },
+          {
+            "line": 11395,
+            "operation": "call:Math.floor"
+          },
+          {
+            "line": 11395,
+            "operation": "call:Math.random"
+          },
+          {
+            "line": 11395,
+            "operation": "call:Math.random"
+          },
+          {
+            "line": 11395,
+            "operation": "call:Math.random"
+          },
+          {
+            "line": 11395,
+            "operation": "call:Math.random"
+          },
+          {
+            "line": 11395,
+            "operation": "call:Math.random"
+          },
+          {
+            "line": 11395,
+            "operation": "property-read-or-reference"
+          },
+          {
+            "line": 11395,
+            "operation": "property-read-or-reference"
+          },
+          {
+            "line": 11395,
+            "operation": "property-read-or-reference"
+          },
+          {
+            "line": 11395,
+            "operation": "property-read-or-reference"
+          },
+          {
+            "line": 11395,
+            "operation": "property-read-or-reference"
+          },
+          {
+            "line": 11395,
+            "operation": "property-read-or-reference"
+          },
+          {
+            "line": 11395,
+            "operation": "property-read-or-reference"
+          },
+          {
+            "line": 11395,
+            "operation": "property-read-or-reference"
+          },
+          {
+            "line": 11395,
+            "operation": "property-read-or-reference"
+          },
+          {
+            "line": 11395,
+            "operation": "property-read-or-reference"
+          },
+          {
+            "line": 11395,
+            "operation": "property-read-or-reference"
+          },
+          {
+            "line": 11395,
+            "operation": "property-read-or-reference"
+          },
+          {
+            "line": 11396,
+            "operation": "property-read-or-reference"
+          },
+          {
+            "line": 11396,
+            "operation": "seedrandom-call"
+          }
+        ]
+      }
+    },
+    {
+      "file": "main.js",
+      "name": "Game.ClickSpecialPic",
+      "line": 14944,
+      "sha256": "2a3886e7b97894707f73d62be6816a96f7e94e2208617ada890d3b2124eaa083",
+      "forbiddenBranch": null,
+      "unrestricted": {
+        "outcomes": [
+          "normal:free"
+        ],
+        "seedCalls": [
+          {
+            "line": 14959,
+            "kind": "explicit-seed"
+          },
+          {
+            "line": 14968,
+            "kind": "restore-free"
+          }
+        ],
+        "callsWhileSeeded": [
+          {
+            "line": 14961,
+            "target": "shuffle"
+          },
+          {
+            "line": 14962,
+            "target": "<expression>.getMinutes"
+          },
+          {
+            "line": 14962,
+            "target": "Math.floor"
+          },
+          {
+            "line": 14963,
+            "target": "Game.Has"
+          },
+          {
+            "line": 14963,
+            "target": "Game.HasUnlocked"
+          },
+          {
+            "line": 14965,
+            "target": "Game.Unlock"
+          },
+          {
+            "line": 14966,
+            "target": "loc"
+          },
+          {
+            "line": 14966,
+            "target": "Game.Notify"
+          }
+        ],
+        "potentialExceptionalSitesWhileSeeded": [
+          {
+            "line": 14961,
+            "operation": "assignment-or-conversion"
+          },
+          {
+            "line": 14961,
+            "operation": "call:shuffle"
+          },
+          {
+            "line": 14962,
+            "operation": "binary-conversion"
+          },
+          {
+            "line": 14962,
+            "operation": "binary-conversion"
+          },
+          {
+            "line": 14962,
+            "operation": "call:<expression>.getMinutes"
+          },
+          {
+            "line": 14962,
+            "operation": "call:Math.floor"
+          },
+          {
+            "line": 14962,
+            "operation": "construct:Date"
+          },
+          {
+            "line": 14962,
+            "operation": "property-read-or-reference"
+          },
+          {
+            "line": 14962,
+            "operation": "property-read-or-reference"
+          },
+          {
+            "line": 14962,
+            "operation": "property-read-or-reference"
+          },
+          {
+            "line": 14962,
+            "operation": "property-read-or-reference"
+          },
+          {
+            "line": 14963,
+            "operation": "call:Game.Has"
+          },
+          {
+            "line": 14963,
+            "operation": "call:Game.HasUnlocked"
+          },
+          {
+            "line": 14963,
+            "operation": "property-read-or-reference"
+          },
+          {
+            "line": 14963,
+            "operation": "property-read-or-reference"
+          },
+          {
+            "line": 14963,
+            "operation": "unary-or-update-conversion"
+          },
+          {
+            "line": 14963,
+            "operation": "unary-or-update-conversion"
+          },
+          {
+            "line": 14965,
+            "operation": "call:Game.Unlock"
+          },
+          {
+            "line": 14965,
+            "operation": "property-read-or-reference"
+          },
+          {
+            "line": 14966,
+            "operation": "binary-conversion"
+          },
+          {
+            "line": 14966,
+            "operation": "call:Game.Notify"
+          },
+          {
+            "line": 14966,
+            "operation": "call:loc"
+          },
+          {
+            "line": 14966,
+            "operation": "property-read-or-reference"
+          },
+          {
+            "line": 14966,
+            "operation": "property-read-or-reference"
+          },
+          {
+            "line": 14968,
+            "operation": "property-read-or-reference"
+          },
+          {
+            "line": 14968,
+            "operation": "seedrandom-call"
+          }
+        ]
+      },
+      "excludingForbiddenCloneBranch": {
+        "outcomes": [
+          "normal:free"
+        ],
+        "seedCalls": [
+          {
+            "line": 14959,
+            "kind": "explicit-seed"
+          },
+          {
+            "line": 14968,
+            "kind": "restore-free"
+          }
+        ],
+        "callsWhileSeeded": [
+          {
+            "line": 14961,
+            "target": "shuffle"
+          },
+          {
+            "line": 14962,
+            "target": "<expression>.getMinutes"
+          },
+          {
+            "line": 14962,
+            "target": "Math.floor"
+          },
+          {
+            "line": 14963,
+            "target": "Game.Has"
+          },
+          {
+            "line": 14963,
+            "target": "Game.HasUnlocked"
+          },
+          {
+            "line": 14965,
+            "target": "Game.Unlock"
+          },
+          {
+            "line": 14966,
+            "target": "loc"
+          },
+          {
+            "line": 14966,
+            "target": "Game.Notify"
+          }
+        ],
+        "potentialExceptionalSitesWhileSeeded": [
+          {
+            "line": 14961,
+            "operation": "assignment-or-conversion"
+          },
+          {
+            "line": 14961,
+            "operation": "call:shuffle"
+          },
+          {
+            "line": 14962,
+            "operation": "binary-conversion"
+          },
+          {
+            "line": 14962,
+            "operation": "binary-conversion"
+          },
+          {
+            "line": 14962,
+            "operation": "call:<expression>.getMinutes"
+          },
+          {
+            "line": 14962,
+            "operation": "call:Math.floor"
+          },
+          {
+            "line": 14962,
+            "operation": "construct:Date"
+          },
+          {
+            "line": 14962,
+            "operation": "property-read-or-reference"
+          },
+          {
+            "line": 14962,
+            "operation": "property-read-or-reference"
+          },
+          {
+            "line": 14962,
+            "operation": "property-read-or-reference"
+          },
+          {
+            "line": 14962,
+            "operation": "property-read-or-reference"
+          },
+          {
+            "line": 14963,
+            "operation": "call:Game.Has"
+          },
+          {
+            "line": 14963,
+            "operation": "call:Game.HasUnlocked"
+          },
+          {
+            "line": 14963,
+            "operation": "property-read-or-reference"
+          },
+          {
+            "line": 14963,
+            "operation": "property-read-or-reference"
+          },
+          {
+            "line": 14963,
+            "operation": "unary-or-update-conversion"
+          },
+          {
+            "line": 14963,
+            "operation": "unary-or-update-conversion"
+          },
+          {
+            "line": 14965,
+            "operation": "call:Game.Unlock"
+          },
+          {
+            "line": 14965,
+            "operation": "property-read-or-reference"
+          },
+          {
+            "line": 14966,
+            "operation": "binary-conversion"
+          },
+          {
+            "line": 14966,
+            "operation": "call:Game.Notify"
+          },
+          {
+            "line": 14966,
+            "operation": "call:loc"
+          },
+          {
+            "line": 14966,
+            "operation": "property-read-or-reference"
+          },
+          {
+            "line": 14966,
+            "operation": "property-read-or-reference"
+          },
+          {
+            "line": 14968,
+            "operation": "property-read-or-reference"
+          },
+          {
+            "line": 14968,
+            "operation": "seedrandom-call"
+          }
+        ]
+      }
+    },
+    {
+      "file": "minigameGrimoire.js",
+      "name": "M.castSpell",
+      "line": 299,
+      "sha256": "dea0bf429b78803f9550b77a935963a833f38bfec76e3cf6ffbf0a018af5202c",
+      "forbiddenBranch": null,
+      "unrestricted": {
+        "outcomes": [
+          "return:free"
+        ],
+        "seedCalls": [
+          {
+            "line": 312,
+            "kind": "explicit-seed"
+          },
+          {
+            "line": 314,
+            "kind": "restore-free"
+          }
+        ],
+        "callsWhileSeeded": [
+          {
+            "line": 313,
+            "target": "Math.random"
+          },
+          {
+            "line": 313,
+            "target": "spell.win"
+          },
+          {
+            "line": 313,
+            "target": "spell.fail"
+          }
+        ],
+        "potentialExceptionalSitesWhileSeeded": [
+          {
+            "line": 313,
+            "operation": "assignment-or-conversion"
+          },
+          {
+            "line": 313,
+            "operation": "assignment-or-conversion"
+          },
+          {
+            "line": 313,
+            "operation": "assignment-or-conversion"
+          },
+          {
+            "line": 313,
+            "operation": "binary-conversion"
+          },
+          {
+            "line": 313,
+            "operation": "binary-conversion"
+          },
+          {
+            "line": 313,
+            "operation": "call:Math.random"
+          },
+          {
+            "line": 313,
+            "operation": "call:spell.fail"
+          },
+          {
+            "line": 313,
+            "operation": "call:spell.win"
+          },
+          {
+            "line": 313,
+            "operation": "property-read-or-reference"
+          },
+          {
+            "line": 313,
+            "operation": "property-read-or-reference"
+          },
+          {
+            "line": 313,
+            "operation": "property-read-or-reference"
+          },
+          {
+            "line": 313,
+            "operation": "property-read-or-reference"
+          },
+          {
+            "line": 313,
+            "operation": "unary-or-update-conversion"
+          },
+          {
+            "line": 314,
+            "operation": "property-read-or-reference"
+          },
+          {
+            "line": 314,
+            "operation": "seedrandom-call"
+          }
+        ]
+      },
+      "excludingForbiddenCloneBranch": {
+        "outcomes": [
+          "return:free"
+        ],
+        "seedCalls": [
+          {
+            "line": 312,
+            "kind": "explicit-seed"
+          },
+          {
+            "line": 314,
+            "kind": "restore-free"
+          }
+        ],
+        "callsWhileSeeded": [
+          {
+            "line": 313,
+            "target": "Math.random"
+          },
+          {
+            "line": 313,
+            "target": "spell.win"
+          },
+          {
+            "line": 313,
+            "target": "spell.fail"
+          }
+        ],
+        "potentialExceptionalSitesWhileSeeded": [
+          {
+            "line": 313,
+            "operation": "assignment-or-conversion"
+          },
+          {
+            "line": 313,
+            "operation": "assignment-or-conversion"
+          },
+          {
+            "line": 313,
+            "operation": "assignment-or-conversion"
+          },
+          {
+            "line": 313,
+            "operation": "binary-conversion"
+          },
+          {
+            "line": 313,
+            "operation": "binary-conversion"
+          },
+          {
+            "line": 313,
+            "operation": "call:Math.random"
+          },
+          {
+            "line": 313,
+            "operation": "call:spell.fail"
+          },
+          {
+            "line": 313,
+            "operation": "call:spell.win"
+          },
+          {
+            "line": 313,
+            "operation": "property-read-or-reference"
+          },
+          {
+            "line": 313,
+            "operation": "property-read-or-reference"
+          },
+          {
+            "line": 313,
+            "operation": "property-read-or-reference"
+          },
+          {
+            "line": 313,
+            "operation": "property-read-or-reference"
+          },
+          {
+            "line": 313,
+            "operation": "unary-or-update-conversion"
+          },
+          {
+            "line": 314,
+            "operation": "property-read-or-reference"
+          },
+          {
+            "line": 314,
+            "operation": "seedrandom-call"
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,46 @@
+import {pathToFileURL} from 'node:url';
+import {resolve} from 'node:path';
+import {createRequire} from 'node:module';
+import {createHash} from 'node:crypto';
+import {writeFileSync,readFileSync} from 'node:fs';
+import assert from 'node:assert/strict';
+const repository=pathToFileURL(resolve(process.cwd())+'/');
+const {loadGameSource}=await import(new URL('model/game-source.mjs',repository));
+const {runNativeEngine,EXPECTED_NATIVE_ENGINE}=await import(new URL('model/native-engine.mjs',repository));
+const acorn=createRequire(new URL('source/cookie-monster-plus/package.json',repository))('acorn');
+const source=loadGameSource();
+const hash=s=>createHash('sha256').update(s).digest('hex');
+const main=source.sources['main.js'],grimoire=source.sources['minigameGrimoire.js'];
+const extract=(text,name)=>{let start=text.indexOf(name+'=function');if(start<0)throw Error(name);let node=acorn.parseExpressionAt(text,start+name.length+1,{ecmaVersion:5});return {node,text:text.slice(node.start,node.end)}};
+const aura=extract(main,'Game.auraMult'),capacity=extract(grimoire,'M.computeMagicM'),cost=extract(grimoire,'M.getSpellCost'),logic=extract(grimoire,'M.logic'),cast=extract(grimoire,'M.castSpell');
+const economicPrefix=grimoire.slice(logic.node.body.body[0].start,logic.node.body.body[3].end);
+const payment=cast.node.body.body.find(n=>n.type==='IfStatement'&&grimoire.slice(n.test.start,n.test.end)==='out!=-1').consequent.body;
+const debitNodes=payment.filter(n=>n.type==='ExpressionStatement'&&/^M.magic(?:-=|=Math.max)/.test(grimoire.slice(n.start,n.end)));
+if(debitNodes.length!==2)throw Error('payment shape');
+const debit=grimoire.slice(debitNodes[0].start,debitNodes[1].end);
+const spellsStart=grimoire.indexOf('M.spells={')+'M.spells='.length;
+const spellTable=acorn.parseExpressionAt(grimoire,spellsStart,{ecmaVersion:5});
+const costObject=name=>{let n=spellTable.properties.find(p=>p.key.value===name).value;let ps=n.properties.filter(p=>['costMin','costPercent'].includes(p.key.name||p.key.value));return '{'+ps.map(p=>grimoire.slice(p.start,p.end)).join(',')+'}'};
+const fragments={aura:aura.text,capacity:capacity.text,cost:cost.text,economicPrefix,logicWrapper:'function(){'+economicPrefix+'}',debit,payWrapper:'function(cost){'+debit+'}',gamblerCost:costObject("gambler's fever dream"),conjureCost:costObject('conjure baked goods')};
+const worker=String.raw`
+const fs=require('fs'),vm=require('vm');const input=JSON.parse(fs.readFileSync(0,'utf8'));
+const f=input.fragments;
+const c=vm.createContext({Game:{dragonAura:0,dragonAura2:0,dragonAuras:[{name:'No aura'}],T:0},M:{parent:{amount:517,level:1},magic:0,magicM:0,spells:{}}});
+for(const [lhs,rhs] of [['Game.auraMult',f.aura],['M.computeMagicM',f.capacity],['M.getSpellCost',f.cost],['M.logicPrefix',f.logicWrapper],['M.pay',f.payWrapper],['M.spells['+JSON.stringify("gambler's fever dream")+']',f.gamblerCost],["M.spells['conjure baked goods']",f.conjureCost]])vm.runInContext(lhs+'=('+rhs+');',c);
+vm.runInContext('M.computeMagicM();M.magic=M.magicM;var selfCost=M.getSpellCost(M.spells["gambler\'s fever dream"]);var fullCost=M.getSpellCost(M.spells["conjure baked goods"]);var capturedCost=fullCost*0.5;M.pay(selfCost);M.pay(fullCost);',c);
+const initial={magicM:c.M.magicM,selfCost:c.selfCost,fullCost:c.fullCost,capturedCost:c.capturedCost,magic:c.M.magic};
+for(let t=1;t<=30;t++){c.Game.T=t;vm.runInContext('M.logicPrefix();',c)}
+const common=c.M.magic;c.Game.T=31;
+vm.runInContext('M.pay(capturedCost);M.logicPrefix();',c);const before=c.M.magic;
+c.M.magic=common;vm.runInContext('M.logicPrefix();M.pay(capturedCost);',c);const after=c.M.magic;
+function bits(x){const a=new ArrayBuffer(8),v=new DataView(a);v.setFloat64(0,x);return v.getBigUint64(0).toString()}
+process.stdout.write(JSON.stringify({versions:process.versions,initial,common,before,after,beforeBits:bits(before),afterBits:bits(after),strictlyMoreMagicAfterLogic:after>before,affordable:common>=c.capturedCost&&after>=0,gameEntryPointExecuted:false}));
+`;
+const result=runNativeEngine(worker,{fragments},{timeout:30000});
+for(const[key,value]of Object.entries(EXPECTED_NATIVE_ENGINE))if(result.versions[key]!==value)throw Error('engine mismatch '+key);
+if(!result.strictlyMoreMagicAfterLogic||!result.affordable)throw Error('witness failed');
+const report={schema:'cookie-source-timing-native-v1',sourceHashes:source.hashes,fragments:Object.fromEntries(Object.entries(fragments).map(([k,v])=>[k,{sha256:hash(v),text:v}])),workerSha256:hash(worker),result,scope:{sourceFragmentsExecuted:true,pinnedEngine:true,newSaveReachabilityProved:false,fullGameTrace:false,fullGameNonattainmentProved:false,interpretation:'A configured local source state exposes a noncommuting delayed spell payment and Logic magic update. Integer rounding of action times is not justified without an event-order equivalence proof. No optimality or nonattainment conclusion is drawn.'}};
+const output=new URL('model/timing-order-witness.json',repository);
+if(process.argv.includes('--check')) assert.deepEqual(JSON.parse(readFileSync(output,'utf8')),report,'Timing source witness is stale');
+else writeFileSync(output,JSON.stringify(report,null,2)+'\n');
+console.log(JSON.stringify({check:process.argv.includes('--check'),beforeBits:result.beforeBits,afterBits:result.afterBits,nativeEngine:result.versions.electron,v8:result.versions.v8,fullGameTrace:false}));

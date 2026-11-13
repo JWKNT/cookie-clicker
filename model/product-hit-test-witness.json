@@ -1,0 +1,322 @@
+{
+  "schemaVersion": 1,
+  "scope": "isolated-pinned-browser-layout-and-hit-testing",
+  "proves": [
+    "Fresh visible locked rows receive a bubbling click",
+    "The generic toggledOff rule hides later product rows from hit testing",
+    "Unlocked later rows receive a click after ordinary store scrolling"
+  ],
+  "doesNotProve": [
+    "A complete native new-save strategy",
+    "An exhaustive action-space refinement",
+    "Trusted-input event identity; the event is dispatched to the native hit-test result"
+  ],
+  "command": "node tools/audit-product-hit-test.mjs",
+  "sourceHashes": {
+    "main.js": "a8813ec2ee97edf5ebff6a3ce2037dcb65c08abd13c123bb92efda89b06ef4f7",
+    "minigameGarden.js": "184eacacd9325d493412dcda07f63d3a791939f83889b4349b6099d04be8e6c9",
+    "minigameMarket.js": "78538743673f3c1cd0e870a3695c77dcacd63febbe64b88f8a8fab9ea7e2863f",
+    "minigameGrimoire.js": "9efea1feb898dc9b719dd971bd27a71f083a8855b910013c524aea9b6d2a349d",
+    "minigamePantheon.js": "af08c31c4564d445cc2d1a7d101c4a63b57aa9b89991b93b8a65f4c0427573a0",
+    "base64.js": "875839c3e0c174c9358ce96923adfed6a6d2c090187a32deb35152dfac2c0e47",
+    "loc/EN.js": "ce48272a5fd5ab1f309dbb8fd7bd70188984ce14235a1d3d9215f3585101f433",
+    "index.html": "28488d9aef9bf31c4c023a0af01f0500a3b3e462b79bf7f2b09790025927a969",
+    "style.css": "90c1ad8750f88ad2f964b5910521e84a16f9ec4d9b30c26244625bc269c7f446"
+  },
+  "fixturePremises": [
+    "The second case assigns cookiesEarned=2^100, then runs 200ms of native timers solely to exercise unlocked store layout"
+  ],
+  "generatedMarkupSha256": [
+    {
+      "name": "fresh-locked",
+      "sha256": "57563fbd0cfe898bc2e27773dd96ccac48113505a09984ca393367bac05cc6c9"
+    },
+    {
+      "name": "earned-threshold-fixture",
+      "sha256": "16fe49088f3695065c9d54746dc3411f9d4acf0c091ea4dc0e6c7e3c0e8c40ff"
+    }
+  ],
+  "runtimeSha256": "2bd47e179d0a23409bfcbc267a744c8fb9f9eb27b2d74dee8603ec96659c64b5",
+  "nativeClickProductSource": "function(what)\r\n\t\t{\r\n\t\t\tGame.ObjectsById[what].buy();\r\n\t\t}",
+  "result": {
+    "viewport": {
+      "width": 800,
+      "height": 572
+    },
+    "cssRules": 511,
+    "cases": [
+      {
+        "name": "fresh-locked",
+        "expectedHitIds": [
+          0,
+          1
+        ],
+        "section": {
+          "overflowY": "scroll",
+          "scrollHeight": 572,
+          "clientHeight": 572
+        },
+        "results": [
+          {
+            "id": 0,
+            "className": "product locked disabled",
+            "opacity": "0.6",
+            "display": "block",
+            "visibility": "visible",
+            "pointerEvents": "auto",
+            "rectangle": {
+              "left": 483,
+              "top": 168,
+              "width": 300,
+              "height": 64
+            },
+            "point": {
+              "x": 633,
+              "y": 200
+            },
+            "scrollTop": 0,
+            "hitId": "product0",
+            "hitInsideProduct": true,
+            "bubbledClicks": 1
+          },
+          {
+            "id": 1,
+            "className": "product locked disabled",
+            "opacity": "0.6",
+            "display": "block",
+            "visibility": "visible",
+            "pointerEvents": "auto",
+            "rectangle": {
+              "left": 483,
+              "top": 232,
+              "width": 300,
+              "height": 64
+            },
+            "point": {
+              "x": 633,
+              "y": 264
+            },
+            "scrollTop": 0,
+            "hitId": "product1",
+            "hitInsideProduct": true,
+            "bubbledClicks": 1
+          },
+          {
+            "id": 2,
+            "className": "product locked disabled toggledOff",
+            "opacity": "0",
+            "display": "none",
+            "visibility": "visible",
+            "pointerEvents": "auto",
+            "rectangle": {
+              "left": 0,
+              "top": 0,
+              "width": 0,
+              "height": 0
+            },
+            "point": {
+              "x": 241.5,
+              "y": 0
+            },
+            "scrollTop": 0,
+            "hitId": "heralds",
+            "hitInsideProduct": false,
+            "bubbledClicks": 0
+          },
+          {
+            "id": 19,
+            "className": "product locked disabled toggledOff",
+            "opacity": "0",
+            "display": "none",
+            "visibility": "visible",
+            "pointerEvents": "auto",
+            "rectangle": {
+              "left": 0,
+              "top": 0,
+              "width": 0,
+              "height": 0
+            },
+            "point": {
+              "x": 241.5,
+              "y": 0
+            },
+            "scrollTop": 0,
+            "hitId": "heralds",
+            "hitInsideProduct": false,
+            "bubbledClicks": 0
+          }
+        ]
+      },
+      {
+        "name": "earned-threshold-fixture",
+        "expectedHitIds": [
+          0,
+          1,
+          2,
+          19
+        ],
+        "section": {
+          "overflowY": "scroll",
+          "scrollHeight": 1512,
+          "clientHeight": 572
+        },
+        "results": [
+          {
+            "id": 0,
+            "className": "product unlocked disabled",
+            "opacity": "0.6",
+            "display": "block",
+            "visibility": "visible",
+            "pointerEvents": "auto",
+            "rectangle": {
+              "left": 483,
+              "top": 168,
+              "width": 300,
+              "height": 64
+            },
+            "point": {
+              "x": 633,
+              "y": 200
+            },
+            "scrollTop": 0,
+            "hitId": "product0",
+            "hitInsideProduct": true,
+            "bubbledClicks": 1
+          },
+          {
+            "id": 1,
+            "className": "product unlocked disabled",
+            "opacity": "0.6",
+            "display": "block",
+            "visibility": "visible",
+            "pointerEvents": "auto",
+            "rectangle": {
+              "left": 483,
+              "top": 232,
+              "width": 300,
+              "height": 64
+            },
+            "point": {
+              "x": 633,
+              "y": 264
+            },
+            "scrollTop": 0,
+            "hitId": "product1",
+            "hitInsideProduct": true,
+            "bubbledClicks": 1
+          },
+          {
+            "id": 2,
+            "className": "product unlocked disabled",
+            "opacity": "0.6",
+            "display": "block",
+            "visibility": "visible",
+            "pointerEvents": "auto",
+            "rectangle": {
+              "left": 483,
+              "top": 254,
+              "width": 300,
+              "height": 64
+            },
+            "point": {
+              "x": 633,
+              "y": 286
+            },
+            "scrollTop": 42,
+            "hitId": "product2",
+            "hitInsideProduct": true,
+            "bubbledClicks": 1
+          },
+          {
+            "id": 19,
+            "className": "product unlocked disabled",
+            "opacity": "0.6",
+            "display": "block",
+            "visibility": "visible",
+            "pointerEvents": "auto",
+            "rectangle": {
+              "left": 483,
+              "top": 254,
+              "width": 300,
+              "height": 64
+            },
+            "point": {
+              "x": 633,
+              "y": 286
+            },
+            "scrollTop": 940,
+            "hitId": "product19",
+            "hitInsideProduct": true,
+            "bubbledClicks": 1
+          }
+        ]
+      }
+    ]
+  },
+  "renderer": {
+    "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 15_6_1) AppleWebKit/537.36 (KHTML, like Gecko) CookieClickerModelDOMAudit/1.0.0 Chrome/87.0.4280.141 Electron/11.5.0 Safari/537.36"
+  },
+  "consoleEvents": [],
+  "versions": {
+    "node": "12.18.3",
+    "v8": "8.7.220.31-electron.0",
+    "uv": "1.38.0",
+    "zlib": "1.2.11",
+    "brotli": "1.0.7",
+    "ares": "1.16.0",
+    "modules": "85",
+    "nghttp2": "1.41.0",
+    "napi": "6",
+    "llhttp": "2.0.4",
+    "http_parser": "2.9.3",
+    "openssl": "1.1.1",
+    "icu": "67.1",
+    "unicode": "13.0",
+    "electron": "11.5.0",
+    "chrome": "87.0.4280.141"
+  },
+  "appPath": "/private/var/folders/6k/y7fhskwn2ggdc_8rppvshctr0000gn/T/cookie-clicker-dom-audit-C8h1Xv/Cookie Clicker.app/Contents/Resources/app",
+  "resourcesPath": "/private/var/folders/6k/y7fhskwn2ggdc_8rppvshctr0000gn/T/cookie-clicker-dom-audit-C8h1Xv/Cookie Clicker.app/Contents/Resources",
+  "userData": "/var/folders/6k/y7fhskwn2ggdc_8rppvshctr0000gn/T/cookie-clicker-dom-audit-C8h1Xv/profile",
+  "gameEntryPointExecuted": false,
+  "externalNetworking": false,
+  "auditConfiguration": {
+    "networkServiceInProcess": true,
+    "hardwareAcceleration": false,
+    "nodeIntegration": false,
+    "contextIsolation": true,
+    "rendererSandbox": false,
+    "allowEval": false,
+    "allowDataAssets": false,
+    "allowInlineStyles": false,
+    "allowInlineScripts": false,
+    "documentMode": "data",
+    "captureConsoleEvents": false
+  },
+  "identity": {
+    "binary": "~/Library/Application Support/Steam/steamapps/common/Cookie Clicker/Cookie Clicker.app/Contents/MacOS/Cookie Clicker",
+    "versions": {
+      "node": "12.18.3",
+      "v8": "8.7.220.31-electron.0",
+      "uv": "1.38.0",
+      "zlib": "1.2.11",
+      "brotli": "1.0.7",
+      "ares": "1.16.0",
+      "modules": "85",
+      "nghttp2": "1.41.0",
+      "napi": "6",
+      "llhttp": "2.0.4",
+      "http_parser": "2.9.3",
+      "openssl": "1.1.1",
+      "cldr": "37.0",
+      "icu": "67.1",
+      "tz": "2020f",
+      "unicode": "13.0",
+      "electron": "11.5.0"
+    },
+    "arch": "arm64",
+    "platform": "darwin",
+    "gameEntryPointExecuted": false
+  },
+  "executableHash": "6d8020c65f288d375dd6307dd86a3bcbe2907efe272ee3b859998211ecfd345b"
+}

@@ -1,0 +1,350 @@
+{
+  "schema": "cookie-orbs-source-closure-audit-v1",
+  "sourceHashes": {
+    "main.js": "a8813ec2ee97edf5ebff6a3ce2037dcb65c08abd13c123bb92efda89b06ef4f7",
+    "minigameGarden.js": "184eacacd9325d493412dcda07f63d3a791939f83889b4349b6099d04be8e6c9",
+    "minigameMarket.js": "78538743673f3c1cd0e870a3695c77dcacd63febbe64b88f8a8fab9ea7e2863f",
+    "minigameGrimoire.js": "9efea1feb898dc9b719dd971bd27a71f083a8855b910013c524aea9b6d2a349d",
+    "minigamePantheon.js": "af08c31c4564d445cc2d1a7d101c4a63b57aa9b89991b93b8a65f4c0427573a0",
+    "base64.js": "875839c3e0c174c9358ce96923adfed6a6d2c090187a32deb35152dfac2c0e47",
+    "loc/EN.js": "ce48272a5fd5ab1f309dbb8fd7bd70188984ce14235a1d3d9215f3585101f433",
+    "index.html": "28488d9aef9bf31c4c023a0af01f0500a3b3e462b79bf7f2b09790025927a969"
+  },
+  "sourceFragments": {
+    "choose": {
+      "sha256": "2a2c7b1c1d45b981f713f0e6ae3edffd81a50dfee873970c26011a32b50906f2",
+      "text": "function choose(arr) {return arr[Math.floor(Math.random()*arr.length)];}"
+    },
+    "aura": {
+      "sha256": "9ede509f3ac180b215dd23cce16a9c3519b371342df458dc71abe5a1ee9d2851",
+      "text": "function(what)\r\n\t\t{\r\n\t\t\tvar n=0;\r\n\t\t\tif (Game.dragonAuras[Game.dragonAura].name==what || Game.dragonAuras[Game.dragonAura2].name==what) n=1;\r\n\t\t\tif ((Game.dragonAuras[Game.dragonAura].name=='Reality Bending' || Game.dragonAuras[Game.dragonAura2].name=='Reality Bending') && Game.dragonLevel>=Game.dragonAurasBN[what].id+4) n+=0.1;\r\n\t\t\treturn n;\r\n\t\t}"
+    },
+    "selection": {
+      "sha256": "cd8cd31e36dd02e54a1ccbbba81620a0a73f2f058255687fad5b72643c0b4982",
+      "text": "var list=[];\r\n\t\t\t\t\tif (me.wrath>0) list.push('clot','multiply cookies','ruin cookies');\r\n\t\t\t\t\telse list.push('frenzy','multiply cookies');\r\n\t\t\t\t\tif (me.wrath>0 && Game.hasGod && Game.hasGod('scorn')) list.push('clot','ruin cookies','clot','ruin cookies');\r\n\t\t\t\t\tif (me.wrath>0 && Math.random()<0.3) list.push('blood frenzy','chain cookie','cookie storm');\r\n\t\t\t\t\telse if (Math.random()<0.03 && Game.cookiesEarned>=100000) list.push('chain cookie','cookie storm');\r\n\t\t\t\t\tif (Math.random()<0.05 && Game.season=='fools') list.push('everything must go');\r\n\t\t\t\t\tif (Math.random()<0.1 && (Math.random()<0.05 || !Game.hasBuff('Dragonflight'))) list.push('click frenzy');\r\n\t\t\t\t\tif (me.wrath && Math.random()<0.1) list.push('cursed finger');\r\n\t\t\t\t\t\r\n\t\t\t\t\tif (Game.BuildingsOwned>=10 && Math.random()<0.25) list.push('building special');\r\n\t\t\t\t\t\r\n\t\t\t\t\tif (Game.canLumps() && Math.random()<0.0005) list.push('free sugar lump');\r\n\t\t\t\t\t\r\n\t\t\t\t\tif ((me.wrath==0 && Math.random()<0.15) || Math.random()<0.05)\r\n\t\t\t\t\t{\r\n\t\t\t\t\t\t//if (Game.hasAura('Reaper of Fields')) list.push('dragon harvest');\r\n\t\t\t\t\t\tif (Math.random()<Game.auraMult('Reaper of Fields')) list.push('dragon harvest');\r\n\t\t\t\t\t\t//if (Game.hasAura('Dragonflight')) list.push('dragonflight');\r\n\t\t\t\t\t\tif (Math.random()<Game.auraMult('Dragonflight')) list.push('dragonflight');\r\n\t\t\t\t\t}\r\n\t\t\t\t\t\r\n\t\t\t\t\tif (this.last!='' && Math.random()<0.8 && list.indexOf(this.last)!=-1) list.splice(list.indexOf(this.last),1);//80% chance to force a different one\r\n\t\t\t\t\tif (Math.random()<0.0001) list.push('blab');\r\n\t\t\t\t\tvar choice=choose(list);\r\n\t\t\t\t\t\r\n\t\t\t\t\tif (this.chain>0) choice='chain cookie';\r\n\t\t\t\t\tif (me.force!='') {this.chain=0;choice=me.force;me.force='';}\r\n\t\t\t\t\tif (choice!='chain cookie') this.chain=0;\r\n\t\t\t\t\t\r\n\t\t\t\t\tthis.last=choice;"
+    },
+    "chainBreak": {
+      "sha256": "489e01215b12f908b198e0471f8c73157fb475c2fb3e7d6857e418e88bb09c1c",
+      "text": "if (Math.random()<0.01 || nextMoni>=maxPayout)\r\n\t\t\t\t\t\t{\r\n\t\t\t\t\t\t\tthis.chain=0;\r\n\t\t\t\t\t\t\tpopup=loc(\"Cookie chain\")+'<br><small>'+loc(\"+%1!\",loc(\"%1 cookie\",LBeautify(moni)))+'<br>'+loc(\"Cookie chain over. You made %1.\",loc(\"%1 cookie\",LBeautify(this.totalFromChain)))+'</small>';\r\n\t\t\t\t\t\t}\r\n\t\t\t\t\t\telse\r\n\t\t\t\t\t\t{\r\n\t\t\t\t\t\t\tpopup=loc(\"Cookie chain\")+'<br><small>'+loc(\"+%1!\",loc(\"%1 cookie\",LBeautify(moni)))+'</small>';\r\n\t\t\t\t\t\t}"
+    }
+  },
+  "listProjection": {
+    "kind": "all syntactic conditional branches, no predicate assumptions",
+    "branchPaths": 3840,
+    "uniqueLists": 3072,
+    "minLength": 2,
+    "maxLength": 18,
+    "firstEntries": [
+      "clot",
+      "frenzy"
+    ],
+    "pushSites": [
+      {
+        "line": 5426,
+        "values": [
+          "clot",
+          "multiply cookies",
+          "ruin cookies"
+        ]
+      },
+      {
+        "line": 5427,
+        "values": [
+          "frenzy",
+          "multiply cookies"
+        ]
+      },
+      {
+        "line": 5428,
+        "values": [
+          "clot",
+          "ruin cookies",
+          "clot",
+          "ruin cookies"
+        ]
+      },
+      {
+        "line": 5429,
+        "values": [
+          "blood frenzy",
+          "chain cookie",
+          "cookie storm"
+        ]
+      },
+      {
+        "line": 5430,
+        "values": [
+          "chain cookie",
+          "cookie storm"
+        ]
+      },
+      {
+        "line": 5431,
+        "values": [
+          "everything must go"
+        ]
+      },
+      {
+        "line": 5432,
+        "values": [
+          "click frenzy"
+        ]
+      },
+      {
+        "line": 5433,
+        "values": [
+          "cursed finger"
+        ]
+      },
+      {
+        "line": 5435,
+        "values": [
+          "building special"
+        ]
+      },
+      {
+        "line": 5437,
+        "values": [
+          "free sugar lump"
+        ]
+      },
+      {
+        "line": 5442,
+        "values": [
+          "dragon harvest"
+        ]
+      },
+      {
+        "line": 5444,
+        "values": [
+          "dragonflight"
+        ]
+      },
+      {
+        "line": 5448,
+        "values": [
+          "blab"
+        ]
+      }
+    ],
+    "allListsSha256": "68e494ecb7c80ea8d20b017ff87e1de2785073e3f7a44c51c7c613ac0a3f28de"
+  },
+  "native": {
+    "versions": {
+      "node": "12.18.3",
+      "v8": "8.7.220.31-electron.0",
+      "uv": "1.38.0",
+      "zlib": "1.2.11",
+      "brotli": "1.0.7",
+      "ares": "1.16.0",
+      "modules": "85",
+      "nghttp2": "1.41.0",
+      "napi": "6",
+      "llhttp": "2.0.4",
+      "http_parser": "2.9.3",
+      "openssl": "1.1.1",
+      "cldr": "37.0",
+      "icu": "67.1",
+      "tz": "2020f",
+      "unicode": "13.0",
+      "electron": "11.5.0"
+    },
+    "listsChecked": 3072,
+    "zeroChoices": 2,
+    "highBits": "4607182418800017407",
+    "antiRepeatBypassed": true,
+    "chainZeroBreaks": true,
+    "aura": [
+      {
+        "slots": [
+          0,
+          0
+        ],
+        "value": 0,
+        "eligible": false,
+        "zeroPasses": false
+      },
+      {
+        "slots": [
+          0,
+          1
+        ],
+        "value": 1,
+        "eligible": true,
+        "zeroPasses": true
+      },
+      {
+        "slots": [
+          0,
+          2
+        ],
+        "value": 0.1,
+        "eligible": true,
+        "zeroPasses": true
+      },
+      {
+        "slots": [
+          1,
+          0
+        ],
+        "value": 1,
+        "eligible": true,
+        "zeroPasses": true
+      },
+      {
+        "slots": [
+          1,
+          1
+        ],
+        "value": 1,
+        "eligible": true,
+        "zeroPasses": true
+      },
+      {
+        "slots": [
+          1,
+          2
+        ],
+        "value": 1.1,
+        "eligible": true,
+        "zeroPasses": true
+      },
+      {
+        "slots": [
+          2,
+          0
+        ],
+        "value": 0.1,
+        "eligible": true,
+        "zeroPasses": true
+      },
+      {
+        "slots": [
+          2,
+          1
+        ],
+        "value": 1.1,
+        "eligible": true,
+        "zeroPasses": true
+      },
+      {
+        "slots": [
+          2,
+          2
+        ],
+        "value": 0.1,
+        "eligible": true,
+        "zeroPasses": true
+      }
+    ],
+    "intervalLengths": [
+      {
+        "n": 2,
+        "indexAtLower": 0,
+        "indexAtUpper": 0
+      },
+      {
+        "n": 3,
+        "indexAtLower": 0,
+        "indexAtUpper": 0
+      },
+      {
+        "n": 4,
+        "indexAtLower": 0,
+        "indexAtUpper": 0
+      },
+      {
+        "n": 5,
+        "indexAtLower": 0,
+        "indexAtUpper": 0
+      },
+      {
+        "n": 6,
+        "indexAtLower": 0,
+        "indexAtUpper": 0
+      },
+      {
+        "n": 7,
+        "indexAtLower": 0,
+        "indexAtUpper": 0
+      },
+      {
+        "n": 8,
+        "indexAtLower": 0,
+        "indexAtUpper": 0
+      },
+      {
+        "n": 9,
+        "indexAtLower": 0,
+        "indexAtUpper": 0
+      },
+      {
+        "n": 10,
+        "indexAtLower": 0,
+        "indexAtUpper": 0
+      },
+      {
+        "n": 11,
+        "indexAtLower": 0,
+        "indexAtUpper": 0
+      },
+      {
+        "n": 12,
+        "indexAtLower": 0,
+        "indexAtUpper": 0
+      },
+      {
+        "n": 13,
+        "indexAtLower": 0,
+        "indexAtUpper": 0
+      },
+      {
+        "n": 14,
+        "indexAtLower": 0,
+        "indexAtUpper": 0
+      },
+      {
+        "n": 15,
+        "indexAtLower": 0,
+        "indexAtUpper": 0
+      },
+      {
+        "n": 16,
+        "indexAtLower": 0,
+        "indexAtUpper": 0
+      },
+      {
+        "n": 17,
+        "indexAtLower": 0,
+        "indexAtUpper": 0
+      },
+      {
+        "n": 18,
+        "indexAtLower": 0,
+        "indexAtUpper": 0
+      }
+    ],
+    "gameEntryPointExecuted": false
+  },
+  "workerSha256": "a08ea4ae6c2a5f17db0ca38383ea8f1dae0b68cd47d91b8eef442ea12234182d",
+  "scope": {
+    "fullCallbackExecuted": false,
+    "newSaveReachabilityProved": false,
+    "sourcePhaseInvariantProved": false,
+    "universalAllPolicyClosureProved": false,
+    "wholeGameAttainmentProved": false
+  },
+  "conditionalArgument": {
+    "episode": "Consecutive eligible highest-building sale/rebuy and unforced Orbs-pop cycles at fixed elapsed time. Leaving this control episode is an exit. No reload, Reset, intervening automatic task, forced shimmer, or mutation of the buff/chain table is silently erased.",
+    "event": "At a qualified sale, draw0 passes the positive aura test. If a chain is active, a pop draw0 at its break test clears it. For the next unchained pop, the largest IID53 draw bypasses anti-repeat removal if that test is evaluated; draw0 in native choose selects index0, Frenzy or Clot. Native gainBuff writes the entry before DOM work. Every further Orbs spawn requires an empty buff table.",
+    "designatedDrawsAtMost": 5,
+    "probabilityLowerBound": "2^(-265)",
+    "tailBound": "If each eligible cycle returns through these source branches in free-IID phase, P(at least 2k further cycles without exit or a blocking buff) <= (1-2^(-265))^k. This is a mathematical argument over the source projection, not yet a Lean source-refinement theorem.",
+    "open": [
+      "Public hit-test reachability of opacity-zero newly created shimmer",
+      "Full free-RNG phase and exception/callee preservation",
+      "All-policy interleavings, especially save-current reload/initial Logic and resource-funded spells",
+      "Native retained heap/UI quotient"
+    ]
+  }
+}

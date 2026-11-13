@@ -1,0 +1,70 @@
+{
+  "schemaVersion": 1,
+  "scope": "pinned-browser-source-and-runtime-diagnostics-not-a-compiler-refinement-proof",
+  "reproduction": "node tools/audit-timer-host.mjs",
+  "installedFrameworkVersion": "11.5.0",
+  "frameworkVersionEvidence": "Contents/Frameworks/Electron Framework.framework/Resources/Info.plist: CFBundleVersion",
+  "officialRelease": "https://releases.electronjs.org/release/v11.5.0",
+  "chromiumVersion": "87.0.4280.141",
+  "v8Version": "8.7.220.31",
+  "timerSemantics": "chromium-87-long-min1-preincrement5-zero-host-latency-v1",
+  "sources": [
+    {
+      "file": "dom_timer.cc",
+      "url": "https://github.com/chromium/chromium/blob/87.0.4280.141/third_party/blink/renderer/core/frame/dom_timer.cc",
+      "sha256": "3bc750762efc6ec905085a7aa4277dd4c15f71a8b48b41e4dc4a780e64a63f8c"
+    },
+    {
+      "file": "dom_timer_coordinator.cc",
+      "url": "https://github.com/chromium/chromium/blob/87.0.4280.141/third_party/blink/renderer/core/frame/dom_timer_coordinator.cc",
+      "sha256": "9bf18e3b11e56625ff73a599b34e2d707b31d5895950379f9002140c4b809127"
+    },
+    {
+      "file": "dom_timer_coordinator.h",
+      "url": "https://github.com/chromium/chromium/blob/87.0.4280.141/third_party/blink/renderer/core/frame/dom_timer_coordinator.h",
+      "sha256": "20f359d8cd8d22786bf8a8c3c6c05ddd3e74f4238d27ce34efe3242717647636"
+    },
+    {
+      "file": "window_or_worker_global_scope.idl",
+      "url": "https://github.com/chromium/chromium/blob/87.0.4280.141/third_party/blink/renderer/core/frame/window_or_worker_global_scope.idl",
+      "sha256": "847aa6b7624257e526abc9f54ac1791519b394b73727bc14a32ae4e8e534c449"
+    },
+    {
+      "file": "timer.cc",
+      "url": "https://github.com/chromium/chromium/blob/87.0.4280.141/third_party/blink/renderer/platform/timer.cc",
+      "sha256": "93b09063811f38d390bbc22bf6c453960a551fe2607f1a36e0a0d3bfb01609a8"
+    },
+    {
+      "file": "LICENSE",
+      "url": "https://github.com/chromium/chromium/blob/87.0.4280.141/LICENSE",
+      "sha256": "be76fc63abf4a9044933479fd904db700ff3f989929ed96fd3abedf10358bc7b"
+    }
+  ],
+  "rules": {
+    "timeoutConversion": "Web IDL signed long, before native delay clamps",
+    "minimumDelayMilliseconds": 1,
+    "nesting": "Increment before the >=5 test; minimum4ms at that new nesting level",
+    "nestedZeroDelayFireOffsetsMs": [
+      1,
+      2,
+      3,
+      4,
+      8,
+      12,
+      16,
+      20
+    ],
+    "interval": "Schedule the next task before its callback; callback-created timers inherit the current task nesting, before the interval increment",
+    "activeHtmlTimerIdMaximum": 2147483647,
+    "idAllocation": "Circular positive signed32 IDs; skip every active ID; a fully occupied native allocator does not return",
+    "nativeLoopTimerMilliseconds": 33,
+    "inputAndAssetLatency": "Zero; this does not remove the native timer minimum"
+  },
+  "runtimeSha256": "2bd47e179d0a23409bfcbc267a744c8fb9f9eb27b2d74dee8603ec96659c64b5",
+  "remainingCorrespondence": [
+    "The browser scheduler and compiler have not been formally refined to this adapter",
+    "The adapter uses deterministic deadline/initialization order across timer task categories",
+    "Timer-ID exhaustion is reported as a diagnostic error, not silently scored as game failure",
+    "Runtime clock/calendar arithmetic is still finite host JavaScript; the accepted unbounded mathematical clock is a separate model"
+  ]
+}

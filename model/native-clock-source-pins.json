@@ -1,0 +1,115 @@
+{
+  "schemaVersion": 1,
+  "tag": "87.0.4280.141",
+  "scope": "Pinned native internal clock and deadline representation; not a trace-and-cost refinement or a change to the agreed clock assumptions.",
+  "files": [
+    {
+      "path": "base/time/time.h",
+      "url": "https://chromium.googlesource.com/chromium/src/+/refs/tags/87.0.4280.141/base/time/time.h?format=TEXT",
+      "bytes": 45908,
+      "sha256": "dfba50309d3fda460d0fbdcc218141a2631f018bf9558c315cffd98674832b84"
+    },
+    {
+      "path": "base/time/time.cc",
+      "url": "https://chromium.googlesource.com/chromium/src/+/refs/tags/87.0.4280.141/base/time/time.cc?format=TEXT",
+      "bytes": 18629,
+      "sha256": "ea1d9baa0b0f3ec70873335821d4d2fc3947caea79e21bf61ec5fffeb9a20f86"
+    },
+    {
+      "path": "base/task/sequence_manager/task_queue_impl.cc",
+      "url": "https://chromium.googlesource.com/chromium/src/+/refs/tags/87.0.4280.141/base/task/sequence_manager/task_queue_impl.cc?format=TEXT",
+      "bytes": 53007,
+      "sha256": "944a39427f7389bef30d7bb1d24a012890cd7e916be4c76228bb36899ccd04c3"
+    },
+    {
+      "path": "base/task/sequence_manager/real_time_domain.cc",
+      "url": "https://chromium.googlesource.com/chromium/src/+/refs/tags/87.0.4280.141/base/task/sequence_manager/real_time_domain.cc?format=TEXT",
+      "bytes": 1491,
+      "sha256": "57b5852d526aeee637a7f4508e8363538a70648cc3dddae8b64d35eaeb272f2d"
+    },
+    {
+      "path": "base/task/sequence_manager/time_domain.cc",
+      "url": "https://chromium.googlesource.com/chromium/src/+/refs/tags/87.0.4280.141/base/task/sequence_manager/time_domain.cc?format=TEXT",
+      "bytes": 5415,
+      "sha256": "4dbefa2d39fddae8a405bcd30c2c1fc1010ef2504ce6a0f09c24cab2c0f3d261"
+    },
+    {
+      "path": "third_party/blink/public/common/input/web_input_event.h",
+      "url": "https://chromium.googlesource.com/chromium/src/+/refs/tags/87.0.4280.141/third_party/blink/public/common/input/web_input_event.h?format=TEXT",
+      "bytes": 13692,
+      "sha256": "b02562c025946c9dd1e76c6ea96276a3883319414b573b9fec8b7d9d393d344d"
+    },
+    {
+      "path": "ui/events/cocoa/cocoa_event_utils.mm",
+      "url": "https://chromium.googlesource.com/chromium/src/+/refs/tags/87.0.4280.141/ui/events/cocoa/cocoa_event_utils.mm?format=TEXT",
+      "bytes": 6083,
+      "sha256": "4432f2342f6ba4050ecedd3ff9a00cb6d36de336edcb8871ce3bac98218fa3df"
+    },
+    {
+      "path": "third_party/blink/renderer/platform/timer.cc",
+      "url": "https://chromium.googlesource.com/chromium/src/+/refs/tags/87.0.4280.141/third_party/blink/renderer/platform/timer.cc?format=TEXT",
+      "bytes": 5385,
+      "sha256": "9c8f9f44de0ab6feba8bfa5eb5709c758233f0e009b6f4b6a4028098c746f862"
+    },
+    {
+      "path": "base/time/time_mac.cc",
+      "url": "https://chromium.googlesource.com/chromium/src/+/refs/tags/87.0.4280.141/base/time/time_mac.cc?format=TEXT",
+      "bytes": 7734,
+      "sha256": "5b4ac91c1d01adb72943b42d7f25620a9d578ac778494560c67e05008b942142"
+    },
+    {
+      "path": "ui/events/cocoa/events_mac.mm",
+      "url": "https://chromium.googlesource.com/chromium/src/+/refs/tags/87.0.4280.141/ui/events/cocoa/events_mac.mm?format=TEXT",
+      "bytes": 10301,
+      "sha256": "cd90420d936585f023eda7d207eba9f8b3a0bea975ed377db6657eecd2cb1781"
+    },
+    {
+      "path": "ui/events/event_utils.cc",
+      "url": "https://chromium.googlesource.com/chromium/src/+/refs/tags/87.0.4280.141/ui/events/event_utils.cc?format=TEXT",
+      "bytes": 6309,
+      "sha256": "1c2fcf3a04c01d8bc9991f4b9f1d2c8e4ae18780d18ef0f76fa243c8f8ade3ba"
+    },
+    {
+      "path": "content/browser/renderer_host/input/web_input_event_builders_mac.mm",
+      "url": "https://chromium.googlesource.com/chromium/src/+/refs/tags/87.0.4280.141/content/browser/renderer_host/input/web_input_event_builders_mac.mm?format=TEXT",
+      "bytes": 30660,
+      "sha256": "18f185c0770d72de735adfb518a87ebf1a9c91d66135fcd5107ddc7cc98dfd79"
+    },
+    {
+      "path": "third_party/blink/renderer/platform/scheduler/main_thread/main_thread_scheduler_impl.cc",
+      "url": "https://chromium.googlesource.com/chromium/src/+/refs/tags/87.0.4280.141/third_party/blink/renderer/platform/scheduler/main_thread/main_thread_scheduler_impl.cc?format=TEXT",
+      "bytes": 111447,
+      "sha256": "4cf8593092cd471b9254cf23f7d15fe00663d7dd6d41d578568bf31df0ad6e61"
+    },
+    {
+      "path": "ui/events/event_utils.h",
+      "url": "https://chromium.googlesource.com/chromium/src/+/refs/tags/87.0.4280.141/ui/events/event_utils.h?format=TEXT",
+      "bytes": 7846,
+      "sha256": "8c4f9b5d92d91be28b838ccb3de09b103d5716d2c1d4a19e2d50cff4e54502e9"
+    },
+    {
+      "path": "ui/events/base_event_utils.cc",
+      "url": "https://chromium.googlesource.com/chromium/src/+/refs/tags/87.0.4280.141/ui/events/base_event_utils.cc?format=TEXT",
+      "bytes": 2724,
+      "sha256": "04dd16e68199f4e6c64f73a120570f85a0c1e9883a7a9720e0b79e0f9027fd8e"
+    },
+    {
+      "path": "ui/events/base_event_utils.h",
+      "url": "https://chromium.googlesource.com/chromium/src/+/refs/tags/87.0.4280.141/ui/events/base_event_utils.h?format=TEXT",
+      "bytes": 1859,
+      "sha256": "6e7fa328f49e3632cd4428a541b361440dd80c67027024c830b6109bef308dbc"
+    },
+    {
+      "path": "base/time/default_tick_clock.cc",
+      "url": "https://chromium.googlesource.com/chromium/src/+/refs/tags/87.0.4280.141/base/time/default_tick_clock.cc?format=TEXT",
+      "bytes": 590,
+      "sha256": "eb96e53e2626d8c5aa17159ef634b7f2332127cdef2e7631d98ff8bf5236b4f1"
+    },
+    {
+      "path": "base/numerics/safe_conversions.h",
+      "url": "https://chromium.googlesource.com/chromium/src/+/refs/tags/87.0.4280.141/base/numerics/safe_conversions.h?format=TEXT",
+      "bytes": 16039,
+      "sha256": "97b36d3ebe6a1216dcc5da28949bfb27857bb8ca609daabf72b2ad485ba609c9"
+    }
+  ]
+}

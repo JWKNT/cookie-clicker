@@ -1,0 +1,100 @@
+{
+  "schema": "cookie-clicker-inline-handler-host-v1",
+  "engine": {
+    "node": "12.18.3",
+    "v8": "8.7.220.31-electron.0",
+    "uv": "1.38.0",
+    "zlib": "1.2.11",
+    "brotli": "1.0.7",
+    "ares": "1.16.0",
+    "modules": "85",
+    "nghttp2": "1.41.0",
+    "napi": "6",
+    "llhttp": "2.0.4",
+    "http_parser": "2.9.3",
+    "openssl": "1.1.1",
+    "icu": "67.1",
+    "unicode": "13.0",
+    "electron": "11.5.0",
+    "chrome": "87.0.4280.141"
+  },
+  "executableHash": "6d8020c65f288d375dd6307dd86a3bcbe2907efe272ee3b859998211ecfd345b",
+  "source": {
+    "url": "https://github.com/chromium/chromium/blob/87.0.4280.141/third_party/blink/renderer/bindings/core/v8/js_event_handler_for_content_attribute.cc",
+    "path": "model/browser-source/chromium-87/js_event_handler_for_content_attribute.cc",
+    "sha256": "b0cd1f72c0cca8b7686eb2612c61a0b238e28d1dff63eb9901df9caaf3f5b6e4"
+  },
+  "initialUnscopables": {
+    "Element": [
+      "slot",
+      "prepend",
+      "append",
+      "replaceChildren",
+      "before",
+      "after",
+      "replaceWith",
+      "remove"
+    ],
+    "Document": [
+      "fullscreen",
+      "prepend",
+      "append",
+      "replaceChildren"
+    ],
+    "HTMLElement": [
+      "slot",
+      "prepend",
+      "append",
+      "replaceChildren",
+      "before",
+      "after",
+      "replaceWith",
+      "remove"
+    ]
+  },
+  "nativeFunctionProperties": [
+    {
+      "name": "length",
+      "kind": "data",
+      "writable": false,
+      "enumerable": false,
+      "configurable": true,
+      "value": 1
+    },
+    {
+      "name": "name",
+      "kind": "data",
+      "writable": false,
+      "enumerable": false,
+      "configurable": true,
+      "value": "onclick"
+    },
+    {
+      "name": "arguments",
+      "kind": "data",
+      "writable": false,
+      "enumerable": false,
+      "configurable": false,
+      "value": null
+    },
+    {
+      "name": "caller",
+      "kind": "data",
+      "writable": false,
+      "enumerable": false,
+      "configurable": false,
+      "value": null
+    },
+    {
+      "name": "prototype",
+      "kind": "data",
+      "writable": true,
+      "enumerable": false,
+      "configurable": false,
+      "value": null
+    }
+  ],
+  "customUnscopablesMutationObserved": "undefined",
+  "modelCustomSymbolMutationSupported": false,
+  "fullSourceRefinementVerified": false
+}

@@ -1,0 +1,106 @@
+{
+  "schemaVersion": 1,
+  "status": "portable-archive-native-checker-not-Lean-proof",
+  "files": [
+    {
+      "path": "check.log",
+      "sha256": "b48c3adbcb822c2926b2bf4fe90743401f4ee4fb47310af7ec9cc8a110126240",
+      "bytes": 352
+    },
+    {
+      "path": "model/certificates/veil-first-counter.bin.gz",
+      "sha256": "1b096023fc1091cb61922fee995a5e9b432ccc7fb6bdc3c0c42e2d6c0b5815ff",
+      "bytes": 4370457
+    },
+    {
+      "path": "model/experiments/veil-seed-cover/free-veils-receipt.json",
+      "sha256": "8151ef727b5f1e97058a0a2c210f3e14de0ee3afbfec5b33c889f11be8ad9d01",
+      "bytes": 7097
+    },
+    {
+      "path": "model/experiments/veil-seed-cover/free-veils.mjs",
+      "sha256": "6819362b379699a32ba8f738c333be51501c6e3f5b35f3ff82af5fefe8b71143",
+      "bytes": 2858
+    },
+    {
+      "path": "model/experiments/veil-seed-cover/original-checkpoint.json",
+      "sha256": "07793617154997f349d652599a4655150de431c25578acdfc79df20241794cee",
+      "bytes": 3859
+    },
+    {
+      "path": "model/experiments/veil-seed-cover/preflight.json",
+      "sha256": "6977580cc2337362c45acd3d412024bb121e6424d599624af1a5570b670b0b9c",
+      "bytes": 1768
+    },
+    {
+      "path": "model/experiments/veil-seed-cover/preflight.mjs",
+      "sha256": "b1006e6878799026d535fcae485c5973278ccbb3d8544681a889ee1460cd2a0e",
+      "bytes": 3117
+    },
+    {
+      "path": "model/experiments/veil-seed-cover/scan.json",
+      "sha256": "73aa54bf2041073de00c4cf72e752505f9378d19550032dc2a7240982ba6ac5b",
+      "bytes": 547
+    },
+    {
+      "path": "model/experiments/veil-seed-cover/scan.log",
+      "sha256": "cac71628eb2c350a30405f40caa96fc732add07a9369c046929170c12f4f037c",
+      "bytes": 523
+    },
+    {
+      "path": "model/veil-cover-witness.json",
+      "sha256": "d9dd91e3aae447b8c74e2804a3c3ce6259419605f6cf4443641246d9b0607599",
+      "bytes": 7155
+    },
+    {
+      "path": "tools/audit-veil-cover.mjs",
+      "sha256": "9b73afe26fe28712efcf1c139da5adec34d2940dfc79d2151b48c61099366a2a",
+      "bytes": 7779
+    },
+    {
+      "path": "tools/veil-cover/arc4-short.hpp",
+      "sha256": "3eab311f39865396bbb7ad0b46bf206c166d1f4cf8ac0572de9fb17d81b621a7",
+      "bytes": 1874
+    },
+    {
+      "path": "tools/veil-cover/free-veils-fixture.mjs",
+      "sha256": "a0ec75cb78207a2acf215ca0ba184db9edec9d0757a78d7f4f86267186b52460",
+      "bytes": 2554
+    },
+    {
+      "path": "tools/veil-cover/scan.cpp",
+      "sha256": "22b055b24adc9a0c3e2bd388c58fcff82cfa8b95a1ce965cde8b561a4c093574",
+      "bytes": 3311
+    }
+  ],
+  "sharedBaseline": {
+    "model/game-source.mjs": "d4805b5a6cff893cf5dfce7ef04d10e5fa3045229735c1bc83e6f06efcd055e6",
+    "model/native-engine.mjs": "e541d54fd104c2164626cd5cd663340e743ca1ef7f3bda9b406360b3c3ee407d",
+    "model/seed-inference.mjs": "ecc430ef1f0786f93b20bf8e1606c55e28d23dd810c7ae696df87d259ceee687",
+    "model/runtime.mjs": "a5e95f8c741f259b458e9885d194a6c3bf5c36c22933149b77e6e19fe9fd0da4"
+  },
+  "validation": {
+    "command": "node tools/audit-veil-cover.mjs --check",
+    "exitCode": 0,
+    "result": {
+      "scope": "exhaustive-native-evidence-not-kernel-proof",
+      "archiveIntegrity": true,
+      "certificateBytes": 11881376,
+      "maximumSufficientCounter": 34,
+      "pinnedNativePreflightOutputs": 6192,
+      "preflightBitExact": true,
+      "suppliedEntryFixtureClicks": 35,
+      "exhaustivePredicatesRecomputed": false,
+      "kernelChecked": false,
+      "engine": {
+        "electron": "11.5.0",
+        "v8": "8.7.220.31-electron.0"
+      }
+    }
+  },
+  "archive": "Only compressed certificate is included. Raw certificate hash and original source/receipt hashes are retained. Original absolute-path scripts remain clearly historical; the new auditor and supplied-entry fixture use repository-relative paths.",
+  "reproduction": "After copy to the repository, use --check for archive/native preflight/35-click fixture. --scan explicitly reruns the exhaustive original C++ domain into temporary files and compares the raw hash; it never overwrites history. No --scan was run for this portable checkpoint.",
+  "notIncluded": "Local symlinks to shared dependencies and source/node_modules are only the isolated validation setup and must not be copied.",
+  "proofBoundary": "All-seed native evidence remains distinct from a kernel-checked certificate, full route properness and expected-time optimality.",
+  "publicationNote": "On 13 November 2026 the absolute paths of the audit machine in preflight.mjs and free-veils.mjs were changed to paths in the repository, for publication. The scripts have no other change, and no result was calculated again. The digests in this file are the digests of the published files. The original digests were 251cf8c6663e6e1e3ef7df0dec2fe5a13bfaf4f33121f1773a52896dd6ab4f4a (preflight.mjs) and 43ae14bce7a9b55e8719c69b0d390813632ae36a079ae16455cf7646c10d3180 (free-veils.mjs). The digest of model/native-engine.mjs also changed: the engine path in a witness now has ~ for the home folder. Its original digest was e3366a51590078ddf0994bf7cefe235ec42f4b3e5c8cfdc50081d940981f6d28."
+}

@@ -1,0 +1,16 @@
+{
+  "requestSha256": "52fb65af37571ac769cdc90d8d3841917250d47f0af4fe4e3c6c3edec906a5aa",
+  "executableSha256": "28e794bd05d268f8086adbd1683f615106d6fbf3af5c452f5f7e4b0291293f37",
+  "budgetSeconds": 600,
+  "arguments": [
+    "--execute"
+  ],
+  "postLoadTaskBudget": 3,
+  "profile": "configured-English initialization then explicitly prepared funded one-Cursor profile; omitted Steam wrapper; no player save; not new-save funding proof",
+  "status": "returned",
+  "exitCode": 0,
+  "finalStateAvailable": true,
+  "seconds": 93.38407487503719,
+  "cpuSeconds": 93.262106,
+  "peakResidentBytes": 959348736
+}

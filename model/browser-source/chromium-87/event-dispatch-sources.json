@@ -1,0 +1,52 @@
+{
+  "version": "87.0.4280.141",
+  "purpose": "Source inputs for the partial Lean base-Event dispatch model; not a source-refinement certificate.",
+  "files": [
+    {
+      "path": "event_dispatcher.cc",
+      "sha256": "e5185296efca8b50d7a07b852e903cdbd80e84c7449a372835427b204044a87c",
+      "url": "https://chromium.googlesource.com/chromium/src/+/refs/tags/87.0.4280.141/third_party/blink/renderer/core/dom/events/event_dispatcher.cc"
+    },
+    {
+      "path": "event_target.cc",
+      "sha256": "95c8590271cc5f74c2cb68eef7019b47e072625714b1175c28bf18419660c98f",
+      "url": "https://chromium.googlesource.com/chromium/src/+/refs/tags/87.0.4280.141/third_party/blink/renderer/core/dom/events/event_target.cc"
+    },
+    {
+      "path": "event_path.cc",
+      "sha256": "372f22131fd94bf3f2f4d6f726404dcac037aeb91142897807d143c90d84c34c",
+      "url": "https://chromium.googlesource.com/chromium/src/+/refs/tags/87.0.4280.141/third_party/blink/renderer/core/dom/events/event_path.cc"
+    },
+    {
+      "path": "window_event_context.cc",
+      "sha256": "7763f91fc6e7443641fd1161a42b72f7c33ca9b3dca18e849775ab7b8efadc67",
+      "url": "https://chromium.googlesource.com/chromium/src/+/refs/tags/87.0.4280.141/third_party/blink/renderer/core/dom/events/window_event_context.cc"
+    },
+    {
+      "path": "event_target.idl",
+      "sha256": "fe075d547287f4fbea2e51e5394f30e052948a46dab0ba2a3d75815930e52347",
+      "url": "https://chromium.googlesource.com/chromium/src/+/refs/tags/87.0.4280.141/third_party/blink/renderer/core/dom/events/event_target.idl"
+    },
+    {
+      "path": "event_listener_options.idl",
+      "sha256": "f0eb6842cb052551dbddfc83309218781b167726aed83a5dc7c15efebe7d2ad5",
+      "url": "https://chromium.googlesource.com/chromium/src/+/refs/tags/87.0.4280.141/third_party/blink/renderer/core/dom/events/event_listener_options.idl"
+    },
+    {
+      "path": "add_event_listener_options.idl",
+      "sha256": "c247597cf7b3f5039c5f7a0d4d9c90db0a281d8bab1826b40450284cec0c298e",
+      "url": "https://chromium.googlesource.com/chromium/src/+/refs/tags/87.0.4280.141/third_party/blink/renderer/core/dom/events/add_event_listener_options.idl"
+    }
+  ],
+  "licenses": [
+    {
+      "path": "LICENSE",
+      "source": "Chromium BSD license; source-specific notices are retained."
+    },
+    {
+      "path": "COPYING.LIB",
+      "url": "https://www.gnu.org/licenses/old-licenses/lgpl-2.0.txt",
+      "sha256": "cc535c21133c895b56b374c8a1dc1eb948d99003ed2b47372069456b62f42b24"
+    }
+  ]
+}

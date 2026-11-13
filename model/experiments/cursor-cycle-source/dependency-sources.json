@@ -1,0 +1,2741 @@
+{
+  "description": "Source snapshot; existing compiled dependencies must come from these files. Build script verifies the full superset before linking.",
+  "requiredSourceFiles": [
+    {
+      "path": "lean/JavaScriptAstMain.lean",
+      "sha256": "c1257bc6594265e9f55a1e753a587a8a22e171ce5e336bc53a8723b58ded18d5"
+    },
+    {
+      "path": "model/javascript-ast.mjs",
+      "sha256": "a1a38ed4636ccb361d88af83f4290fe58b334f14d9f371be6c1a80e34fd7e546"
+    },
+    {
+      "path": "model/game-source.mjs",
+      "sha256": "d4805b5a6cff893cf5dfce7ef04d10e5fa3045229735c1bc83e6f06efcd055e6"
+    },
+    {
+      "path": "model/css-ast.mjs",
+      "sha256": "36abccd3a06410c4adce3d2d6417d3bc0a7dfead3d158363ea2f800eb5b3ebba"
+    },
+    {
+      "path": "model/browser-fixture-config.json",
+      "sha256": "a9ed6e79e89896bbde96ab0e1cb852e1f3f4930c4ee383c4d7f64ce8f346bc18"
+    },
+    {
+      "path": "lean/lean-toolchain",
+      "sha256": "3aac669c7a910ec2389f4e4f921b605adf6ebf2d1e0c9b9cd0be4d33f3f5db71"
+    },
+    {
+      "path": "lean/CookieClicker/AdaptiveHandPicked.lean",
+      "sha256": "3b424b146f321d6d3c9eb8d9da8e83796a067e5fd87ed07c8611c0969e35810c"
+    },
+    {
+      "path": "lean/CookieClicker/Arc4ConstructorOrbit.lean",
+      "sha256": "8c1d9dfe79f9ee89fb3f325e09a0215ebbca9b3f537fbb743f9438c9d994ef91"
+    },
+    {
+      "path": "lean/CookieClicker/Arc4NonzeroPrefix.lean",
+      "sha256": "0c63792a659c229f379f1f754835da59cc35163c2ad385d018d6f31673c4a3a4"
+    },
+    {
+      "path": "lean/CookieClicker/Arc4Orbit.lean",
+      "sha256": "ec62d8d6e8175163e58128a10c9a1892a2520f85b3d2bc351cd02de9c2282f03"
+    },
+    {
+      "path": "lean/CookieClicker/Arc4ZeroOrigin.lean",
+      "sha256": "401c1541d0ab26d3a4c075458c9a9bf8712e4a1892be437c34d12a3eaa1c0ea2"
+    },
+    {
+      "path": "lean/CookieClicker/Binary64WaitLattice.lean",
+      "sha256": "aae05842df66b23bb6603bc802bd69636333feef6e69f08374e29fbe34d053fa"
+    },
+    {
+      "path": "lean/CookieClicker/BootstrapArithmetic.lean",
+      "sha256": "0122abec30208868480774f22fd40cfc7a14789a903519e02dcafd9453f40fe8"
+    },
+    {
+      "path": "lean/CookieClicker/Checks.lean",
+      "sha256": "3bfe5d76517dd49042fb1803b697440493a6f835bea5326d681cb6697f48acc2"
+    },
+    {
+      "path": "lean/CookieClicker/ChromiumTimerIds.lean",
+      "sha256": "dd7691bc3bd3ded5a827479e7363fa34424701294964a56a488f1e0b95150e20"
+    },
+    {
+      "path": "lean/CookieClicker/CollectionEnvelope.lean",
+      "sha256": "dc7966f7e7d668461d2dd82e5cc8f0c8debdbfbef65bc4c61bf268b3a32d4f6e"
+    },
+    {
+      "path": "lean/CookieClicker/CollectionEnvelopeFractional.lean",
+      "sha256": "1c3a465fdac2d03e4c0d9fe4dbbe37bdb7ad2d59098e65ab892ee03e36bb11d1"
+    },
+    {
+      "path": "lean/CookieClicker/CollectionEnvelopeNative.lean",
+      "sha256": "559a94c25c123765aa5e3938c8aad323f05a409927da2fa6fff2128659cef476"
+    },
+    {
+      "path": "lean/CookieClicker/Completion.lean",
+      "sha256": "08f7896786ab738d8c117f29b1c4056cc1ddfeb7742217b98f9bb6cb75548c6f"
+    },
+    {
+      "path": "lean/CookieClicker/FiniteClockObstruction.lean",
+      "sha256": "a7992e4a65164bd10031b5afd7b4fac2a17ca278913bd26d545fb80d6fafefb7"
+    },
+    {
+      "path": "lean/CookieClicker/FiniteInvertibleOrbit.lean",
+      "sha256": "8131db69eb3d19e778bd804403912c0d316160b6fa7a42dedc61341004c3b744"
+    },
+    {
+      "path": "lean/CookieClicker/FullCompletion.lean",
+      "sha256": "c2760181a489628373ee906501092918c864f7ac8c653a6179824d397c718014"
+    },
+    {
+      "path": "lean/CookieClicker/FullCompletionChecks.lean",
+      "sha256": "4f74b72e05d44df4219f4e35ecdf054dadb6cf29280b3cb8fcece2f5d28d3c25"
+    },
+    {
+      "path": "lean/CookieClicker/FullCompletionConsequences.lean",
+      "sha256": "cbfb3ea30131fda4d535005d75166b8dd627f2069668d8d0c1892c2b1209cb10"
+    },
+    {
+      "path": "lean/CookieClicker/FullObservation.lean",
+      "sha256": "a58920d5f664211195a8ff39c51bf3b74b1a4554c1cb5905b0e40c5f3eb9f8d0"
+    },
+    {
+      "path": "lean/CookieClicker/GardenAge.lean",
+      "sha256": "6d4e92a5dd7bd4447acddaf0cae2a63c0573cd0896e1b5fd81cc8f0b980c48c2"
+    },
+    {
+      "path": "lean/CookieClicker/GardenInvariant.lean",
+      "sha256": "ef1c8977663aace50599b87f4feead221dd96b3ab68aa3c1ae90eb83c50ffd60"
+    },
+    {
+      "path": "lean/CookieClicker/GodzamokRounding.lean",
+      "sha256": "259abe76179eacae7f1a0e416e2f26fcea2a26d3365910d20a8c23e6e01603ae"
+    },
+    {
+      "path": "lean/CookieClicker/HandPicked.lean",
+      "sha256": "58e08bcf977bc226fa57aec97e08f55f164de5422ac6fb8e200f8de613f42c33"
+    },
+    {
+      "path": "lean/CookieClicker/HandPickedExpectation.lean",
+      "sha256": "d403c6b2edffde13ef7e5e1e109e11ad0a0502add5b038ad8de94c91b19f94a0"
+    },
+    {
+      "path": "lean/CookieClicker/HittingTime.lean",
+      "sha256": "e2d24eea91cc5769c07ef18b96fd52f85de42bf7cf9fa5dda945e8f9c8e70e96"
+    },
+    {
+      "path": "lean/CookieClicker/Inventory.lean",
+      "sha256": "fc78f0e2802598ea54adb24c9e882a56387dc2b2130c4249213901d68aabf884"
+    },
+    {
+      "path": "lean/CookieClicker/JavaScriptAchievementCountCall.lean",
+      "sha256": "8dcc1052c00cfcc6572b7f21f33778c8309b97ecc02bab2681a1f7770d5859a5"
+    },
+    {
+      "path": "lean/CookieClicker/JavaScriptAchievementCountSyntax.lean",
+      "sha256": "645aa9ed6457dbf888498aed309173b0b72e4419d5a0395faf7d615658050cee"
+    },
+    {
+      "path": "lean/CookieClicker/JavaScriptAllocatedGameRead.lean",
+      "sha256": "c66d8d7b7adf9a12ac17ee75314a01f1cff3a67cff8e3b6f6712960b16d0d8f7"
+    },
+    {
+      "path": "lean/CookieClicker/JavaScriptArc4ByteArithmetic.lean",
+      "sha256": "5c5a355e4d52c4c6a53b03a611a7a19f71587831ec324acfac23ecfaf0c1456a"
+    },
+    {
+      "path": "lean/CookieClicker/JavaScriptArc4Bytes.lean",
+      "sha256": "7388af36a81d184e84a24338289c8fe7f471c2c2713fc46ebdb07ba98068426b"
+    },
+    {
+      "path": "lean/CookieClicker/JavaScriptArc4ConstructorComplete.lean",
+      "sha256": "cdac80ccffd50f8d2d3522508d4f531c7ecc696b18c2c853eaa4216213a886ec"
+    },
+    {
+      "path": "lean/CookieClicker/JavaScriptArc4ConstructorDispatch.lean",
+      "sha256": "7da1576050dd0b468d0b45b2c62e5380f9356becf102b0dffc499b0eb427c814"
+    },
+    {
+      "path": "lean/CookieClicker/JavaScriptArc4ConstructorEntry.lean",
+      "sha256": "458b0c5ae2d6ef10f33edaa8d5a15a17a676aef79bdf147f1c417be41e7fd307"
+    },
+    {
+      "path": "lean/CookieClicker/JavaScriptArc4ConstructorFinalFrame.lean",
+      "sha256": "88d909d7dcfc9ae187b58de763cc4ac98bd81647636601f96337994543b92a0c"
+    },
+    {
+      "path": "lean/CookieClicker/JavaScriptArc4ConstructorInstance.lean",
+      "sha256": "383518a526ad1ed6930a87343f8901fd7e4301d83cfdea5c367b8cf52bfe4444"
+    },
+    {
+      "path": "lean/CookieClicker/JavaScriptArc4ConstructorLoops.lean",
+      "sha256": "6014aae839069d521953f8cfdb339b4b1958d023d628b73defb73270f63ccd7d"
+    },
+    {
+      "path": "lean/CookieClicker/JavaScriptArc4ConstructorMemory.lean",
+      "sha256": "f1b236997d1dba5c8b91b4ee5a319d1492085c772a4e31490a209cc0fc333437"
+    },
+    {
+      "path": "lean/CookieClicker/JavaScriptArc4ConstructorPrefix.lean",
+      "sha256": "d68d29b224081ac035585639b7707d107479de1b75a460bf7af0cc659101585c"
+    },
+    {
+      "path": "lean/CookieClicker/JavaScriptArc4ConstructorRetained.lean",
+      "sha256": "2bb1bbbaf8bf37e6db24c3dfbc0c2503fdeac303d431ea260993125addc2f8b7"
+    },
+    {
+      "path": "lean/CookieClicker/JavaScriptArc4ConstructorSetup.lean",
+      "sha256": "6d56e83179e87e08758ecd45fefa0478606265f2cb0f27a3659addce3d08d535"
+    },
+    {
+      "path": "lean/CookieClicker/JavaScriptArc4EmptyKey.lean",
+      "sha256": "1777a5b2fddb7c8afbe47f5ea85b2b4df36d752550a5a6b5ad48fe180c68372d"
+    },
+    {
+      "path": "lean/CookieClicker/JavaScriptArc4EmptyKeyFrame.lean",
+      "sha256": "ad33d97285e79185d00312ef16de14980eb4604e3f9638d9fc68eb605f193169"
+    },
+    {
+      "path": "lean/CookieClicker/JavaScriptArc4Generate.lean",
+      "sha256": "f48b4231bc9396a4a28525f9d900dbc6bccc1ea0e2c93c2219795343425078e3"
+    },
+    {
+      "path": "lean/CookieClicker/JavaScriptArc4GenerateBody.lean",
+      "sha256": "cb91b7b17840b2262e575906213e7e4506afff48caa1fbc5a214f0501d1bda3f"
+    },
+    {
+      "path": "lean/CookieClicker/JavaScriptArc4GenerateComplete.lean",
+      "sha256": "f070da4d6f3bd3536a62d7c7f9e3f852f4a1fbac5165cd1a9c1a4344e795db3c"
+    },
+    {
+      "path": "lean/CookieClicker/JavaScriptArc4GenerateCursor.lean",
+      "sha256": "2562104378ac92a08ba44aad95d383c1e996466cba6e868caa390ee05438a4fe"
+    },
+    {
+      "path": "lean/CookieClicker/JavaScriptArc4GenerateGuard.lean",
+      "sha256": "724055b320700b7effd162b3a6c844d016540c69b9c0567cc8415d81c26fd87c"
+    },
+    {
+      "path": "lean/CookieClicker/JavaScriptArc4GenerateOutput.lean",
+      "sha256": "9768610d5391bcf29c1c2a9059697c47c9aad0a2adcdeefe0bb155181e0986bb"
+    },
+    {
+      "path": "lean/CookieClicker/JavaScriptArc4GenerateRead.lean",
+      "sha256": "ef49966e5924988f7f1e2fcb309a2c281cdb28f536681b34b23717b6a861375d"
+    },
+    {
+      "path": "lean/CookieClicker/JavaScriptArc4GenerateRetained.lean",
+      "sha256": "d302e1975e5bb03745d7496a385c838a78e53ffa9a4f64e6ae1eef8e46248180"
+    },
+    {
+      "path": "lean/CookieClicker/JavaScriptArc4GenerateWrites.lean",
+      "sha256": "3d3ad5111fa1f43033f932ee49262c5e8ac22a6ed0eb77ef43b7cb9e2747ca38"
+    },
+    {
+      "path": "lean/CookieClicker/JavaScriptArc4GeneratorAllocation.lean",
+      "sha256": "8b8a05895f8db8845a5184c16787977b671520f2fd2735c2ece9c59900b2da9f"
+    },
+    {
+      "path": "lean/CookieClicker/JavaScriptArc4GeneratorBodyComplete.lean",
+      "sha256": "7fd291fa20fd2442c8f2b1a9b5bc3a960af477a4aaa6423650d7b1d9fd6ade5f"
+    },
+    {
+      "path": "lean/CookieClicker/JavaScriptArc4GeneratorCall.lean",
+      "sha256": "bb33f16aa0dd1f4d70bb9085ebed94fce536e416beaeeeb071d51c360a048b14"
+    },
+    {
+      "path": "lean/CookieClicker/JavaScriptArc4GeneratorEntry.lean",
+      "sha256": "239362d79505c76c532866cc0e21cc47ee10542737becbaf1136fdbf9c2098c7"
+    },
+    {
+      "path": "lean/CookieClicker/JavaScriptArc4GeneratorInitialize.lean",
+      "sha256": "89cc6c51386da5318cceab112e2d39dfe168a7d6a2127303b5aaa5b975c142aa"
+    },
+    {
+      "path": "lean/CookieClicker/JavaScriptArc4GeneratorInstall.lean",
+      "sha256": "c45eccb49484017b444f280c81202f073e606c551e007bd190cd923db278c201"
+    },
+    {
+      "path": "lean/CookieClicker/JavaScriptArc4GeneratorInstalledFrame.lean",
+      "sha256": "95cc90a1bcb95b2622c9a1ddb02cf9ef3f7bcd1009f16dd9521fe9b3490ff8b1"
+    },
+    {
+      "path": "lean/CookieClicker/JavaScriptArc4GeneratorLocals.lean",
+      "sha256": "447bb94b9562401e2845d4688bef09ede941eb69d9c08d90d7a07452e8be1f0c"
+    },
+    {
+      "path": "lean/CookieClicker/JavaScriptArc4GeneratorReturn.lean",
+      "sha256": "aff445b2fa1a11d1125b55331b538d81856c7c4c2b8901586263acb472b3dbca"
+    },
+    {
+      "path": "lean/CookieClicker/JavaScriptArc4Identity.lean",
+      "sha256": "1fc64492c8a55cac3b4ca942f479741f500dfc750d8023b0ac911080d328ab0c"
+    },
+    {
+      "path": "lean/CookieClicker/JavaScriptArc4IdentityComplete.lean",
+      "sha256": "43c613d0211d6afe7f3d9d6c13bd958a100a0d4a87fd8616ef1b623f26ce2bd5"
+    },
+    {
+      "path": "lean/CookieClicker/JavaScriptArc4IdentityLoop.lean",
+      "sha256": "4cdbeb28b82c55398267094e18805e6f21597aee67fde6ec3e8eb089625c288d"
+    },
+    {
+      "path": "lean/CookieClicker/JavaScriptArc4IdentityRetained.lean",
+      "sha256": "d71d8d7086bec29a52ce51695b37d5dd4cf7b114851240a74d87cf7ab8aba153"
+    },
+    {
+      "path": "lean/CookieClicker/JavaScriptArc4Initialized.lean",
+      "sha256": "e755fd0d127239ef94c0ac3a32eb65ffaa30d86c2b77bd2d17ce86980a9dad77"
+    },
+    {
+      "path": "lean/CookieClicker/JavaScriptArc4Initializers.lean",
+      "sha256": "4cc66e20197b22622518e3c27ed5ff7cd5ecb9e32a433669890eced4b39bf2ce"
+    },
+    {
+      "path": "lean/CookieClicker/JavaScriptArc4Instance.lean",
+      "sha256": "bb9cd4dbf56a6d496675b091d817205c01634246349309b29ae238ff17521d75"
+    },
+    {
+      "path": "lean/CookieClicker/JavaScriptArc4Locals.lean",
+      "sha256": "0a991a867e0aff36732307accb2295fd4f0dcf5ad35444b4f765beba756971b0"
+    },
+    {
+      "path": "lean/CookieClicker/JavaScriptArc4LoopInterlude.lean",
+      "sha256": "1cad8a38bc42c93a96c4127f383a6458e56d75399c0428a95ffe1af47408a032"
+    },
+    {
+      "path": "lean/CookieClicker/JavaScriptArc4NamedProperty.lean",
+      "sha256": "db564287bd2a4885d5773c4c3f8b260ce0584903e8b6dad5a706bf2256aaf09e"
+    },
+    {
+      "path": "lean/CookieClicker/JavaScriptArc4Normalize.lean",
+      "sha256": "9905df8d4ee0b6f722976058f11373c25065df5fb0b1d577cf334132fd7d0c77"
+    },
+    {
+      "path": "lean/CookieClicker/JavaScriptArc4Orbit.lean",
+      "sha256": "5a6a47e45495754ae4de72f47d2982d43b102fa3befd0956ec1ffc22b299a4e8"
+    },
+    {
+      "path": "lean/CookieClicker/JavaScriptArc4Permutation.lean",
+      "sha256": "906f2a212cd2b9047c6e34d97e87f80ae69e8374f33ebe30f7950898f163435b"
+    },
+    {
+      "path": "lean/CookieClicker/JavaScriptArc4Schedule.lean",
+      "sha256": "0df3b98b743fe535f930746ef83ffcdf4b3c0e645956731fa6c3fe7fb3873b97"
+    },
+    {
+      "path": "lean/CookieClicker/JavaScriptArc4ScheduleBody.lean",
+      "sha256": "34a87f0730a440c1fbb615cde6cab3a6d968e6fb41c86eb252e720980857de38"
+    },
+    {
+      "path": "lean/CookieClicker/JavaScriptArc4ScheduleComplete.lean",
+      "sha256": "27032e0ed866d9277e3f63fe64b5d71f2d99bfba28540950976a206dd4de467a"
+    },
+    {
+      "path": "lean/CookieClicker/JavaScriptArc4ScheduleCursor.lean",
+      "sha256": "784779c9a8e9588d3dbe583cb81e6875bad85637b45db87cce0a240eb0a2e422"
+    },
+    {
+      "path": "lean/CookieClicker/JavaScriptArc4ScheduleIteration.lean",
+      "sha256": "527052339ad8d7f05475801ce1d7f1aabdd4d3da7014a37dfde30a65c6107191"
+    },
+    {
+      "path": "lean/CookieClicker/JavaScriptArc4ScheduleRead.lean",
+      "sha256": "b4f6b22b2aae5a8766bc45c485c44b365c34630725751ce0b2a6f015a8963af3"
+    },
+    {
+      "path": "lean/CookieClicker/JavaScriptArc4ScheduleWrites.lean",
+      "sha256": "a1c5f0b8489df3c066e46cf85af3de29d7cba44b5b38f07c100f5f123a492912"
+    },
+    {
+      "path": "lean/CookieClicker/JavaScriptArrayIndexBound.lean",
+      "sha256": "de5f7e1c6f7b6b61bcf3980995fd77646dbb8554ef59aadc71a9836fb6ab6985"
+    },
+    {
+      "path": "lean/CookieClicker/JavaScriptArrayPair.lean",
+      "sha256": "794d2d1e388e27e3a8ce6d4c99990f5dfade3b906fab962bb9c058e4cf4fce88"
+    },
+    {
+      "path": "lean/CookieClicker/JavaScriptArrayPairCall.lean",
+      "sha256": "7ac459828f780f41ff7f748ef56f1a4c296cc4ea6783dc05ea833d89418eb7e2"
+    },
+    {
+      "path": "lean/CookieClicker/JavaScriptArrayPairShape.lean",
+      "sha256": "b9443514d8147b8dcc15252881142b4c4d2cddcb84f6a827b77a19c935959554"
+    },
+    {
+      "path": "lean/CookieClicker/JavaScriptArrayPop.lean",
+      "sha256": "81677495eebccdcb0d4fb2599ccee4fe9ced7f80b2d0ec8156e697a9af63b97d"
+    },
+    {
+      "path": "lean/CookieClicker/JavaScriptArrayPopData.lean",
+      "sha256": "d7629e75516687f786f297e92ed94e01e64c35dcad63f8bb82b43fb0d87ae6ca"
+    },
+    {
+      "path": "lean/CookieClicker/JavaScriptArrayPopEmpty.lean",
+      "sha256": "11967b39cfbcc4bf3790c96e1ae0a3855359a33f3c3952feb1390ed351fa517c"
+    },
+    {
+      "path": "lean/CookieClicker/JavaScriptArrayQueue.lean",
+      "sha256": "490ef32b9a8547d072895ad2139ebee03e2c9ec556206ec643b404db6f12e076"
+    },
+    {
+      "path": "lean/CookieClicker/JavaScriptArrayQueueInvocation.lean",
+      "sha256": "bab93dbd0672b6a3b9d66f37e908f8b1dcfd453234b73297935825ce8bd6a764"
+    },
+    {
+      "path": "lean/CookieClicker/JavaScriptArraySort.lean",
+      "sha256": "0444289d84e5cf5ecd27ab3cd8ab3820fb9d54fc67654ee13d4a356218fcb529"
+    },
+    {
+      "path": "lean/CookieClicker/JavaScriptArrayUnshift.lean",
+      "sha256": "2342cdcc8b3c5fd62b98e6493b4cbbf438037e601f62cfe2e28b4e9dea03594b"
+    },
+    {
+      "path": "lean/CookieClicker/JavaScriptArrayUnshiftBound.lean",
+      "sha256": "b86bebd48a3110ff23bc2de60144f3adf70887daa7758ebb8b6e7ad77fab65d4"
+    },
+    {
+      "path": "lean/CookieClicker/JavaScriptArrayUnshiftCall.lean",
+      "sha256": "2ebc7ba1fac4625188222f18332261120c89b9615fea5d6ebe1413a41a67bf3f"
+    },
+    {
+      "path": "lean/CookieClicker/JavaScriptArrayUnshiftFinish.lean",
+      "sha256": "3e6731d7726c5bd319104f443fbd4862c8697938c6c508af6fcf7a7c6942db09"
+    },
+    {
+      "path": "lean/CookieClicker/JavaScriptArrayUnshiftLoop.lean",
+      "sha256": "37e8440017900da53d2450849bacd0ed4fc81951c493e31288072281b0e30051"
+    },
+    {
+      "path": "lean/CookieClicker/JavaScriptAudioBody.lean",
+      "sha256": "b2f38970bad1e24ae61dcd022a516e07b7459e04a781f0aa23501c2405f1f758"
+    },
+    {
+      "path": "lean/CookieClicker/JavaScriptAudioCall.lean",
+      "sha256": "82b8c3c23832ce34c5d34799b5be8ab77c5db1ebadc1a17d2f0705c0237d7e2e"
+    },
+    {
+      "path": "lean/CookieClicker/JavaScriptAudioEnvironment.lean",
+      "sha256": "e51ddabf7c25efacee862ed20e09a45672d1191560589ad2c80fe78aaa25fddf"
+    },
+    {
+      "path": "lean/CookieClicker/JavaScriptAudioEnvironmentExplicit.lean",
+      "sha256": "7844ed1a8213240efc1b6c72c90562aef189f666c7d055e8185ca5a14c5123d4"
+    },
+    {
+      "path": "lean/CookieClicker/JavaScriptAudioExpression.lean",
+      "sha256": "a12e8983db27d0de2b7047cd616251a5baf56fe724ce644f3826da3955b0e1d2"
+    },
+    {
+      "path": "lean/CookieClicker/JavaScriptAudioInvocation.lean",
+      "sha256": "5dd49e9367a39577686ab1d7c46dd1492c480065c26f50fc8933daed50fc4d04"
+    },
+    {
+      "path": "lean/CookieClicker/JavaScriptAudioLocals.lean",
+      "sha256": "0d5870ecc6e632c49e080ae6e7a7754ca55f2e5e0856ae4445f16a5fe371c6b1"
+    },
+    {
+      "path": "lean/CookieClicker/JavaScriptAudioMuted.lean",
+      "sha256": "4d7947148f26de8025b077ac0a53935291bca6e72f23e3bbcfa3925bb330ab39"
+    },
+    {
+      "path": "lean/CookieClicker/JavaScriptAudioSyntax.lean",
+      "sha256": "4489a61d6feea8783c143ef22a2b0403f9889cc77e1ac0d5d75b70fe709ba327"
+    },
+    {
+      "path": "lean/CookieClicker/JavaScriptAuraBody.lean",
+      "sha256": "8b4ad2a6e400b00ee6c5b237d45e19b5667f10ea652acadd0c736f92c8ed33a0"
+    },
+    {
+      "path": "lean/CookieClicker/JavaScriptAuraCall.lean",
+      "sha256": "dce450dcf136cd0163c5c5780ea770877973886880099c710ef21e38f14358d3"
+    },
+    {
+      "path": "lean/CookieClicker/JavaScriptAuraLocals.lean",
+      "sha256": "2cb9792cb37b82c5ec899790388eac6bbac7af284a1854818a37e809b5912d00"
+    },
+    {
+      "path": "lean/CookieClicker/JavaScriptAuraRead.lean",
+      "sha256": "90109444530f63c9ca4244efe9e9c1e76c5c38ac3400d67791a812fe6a0d15a9"
+    },
+    {
+      "path": "lean/CookieClicker/JavaScriptAuraSource.lean",
+      "sha256": "ca77876407b605d4ce5f601d305473d23ff9431f529c3d2f280ee4d044ca1843"
+    },
+    {
+      "path": "lean/CookieClicker/JavaScriptAuraSyntax.lean",
+      "sha256": "1b4013b3cd84fec1fe66fe5515004a9a427fe3ece65b208d9521ee790933c969"
+    },
+    {
+      "path": "lean/CookieClicker/JavaScriptBankCycleBridge.lean",
+      "sha256": "21b4e61075ce5c96548fea794aee4ad45a40a5580626e50b0f1e39cb322f87ca"
+    },
+    {
+      "path": "lean/CookieClicker/JavaScriptBindingWrite.lean",
+      "sha256": "08f2a7ab34274a382f2d25d0b7425d1c1ca0af02aa99b311cf563f8222fdcdc8"
+    },
+    {
+      "path": "lean/CookieClicker/JavaScriptBootstrapLadder.lean",
+      "sha256": "3bdf30849ecaa5570fa1a82271b34346a2846b0c8e5951d1a54184344362a275"
+    },
+    {
+      "path": "lean/CookieClicker/JavaScriptBoundedAddition.lean",
+      "sha256": "6d71dff92105cda99c8f203705d2eef9f6fa4908232b888ec1ec894d5554f89c"
+    },
+    {
+      "path": "lean/CookieClicker/JavaScriptBoundedBank.lean",
+      "sha256": "199f1562ff1396c27adafd6f859ed7e5c8262d2e216edda17ef451c879ae4086"
+    },
+    {
+      "path": "lean/CookieClicker/JavaScriptBoundedSubtraction.lean",
+      "sha256": "15559c5f55d4c0c775655c07b6609809e381123b857cea3f317dc5cea0f1127e"
+    },
+    {
+      "path": "lean/CookieClicker/JavaScriptBrowser.lean",
+      "sha256": "82366177e5b9daeefa69f02f012bb2030f6ee9d4e24c5cc22e30a90e3a6d7104"
+    },
+    {
+      "path": "lean/CookieClicker/JavaScriptBrowserAnimation.lean",
+      "sha256": "1d9eeedfb2dd38e1c7a68aa6aabaa190560b2746c9171b552cfa045288ffddd3"
+    },
+    {
+      "path": "lean/CookieClicker/JavaScriptBrowserAnimationState.lean",
+      "sha256": "89992c64351a994022c8d7c4699684cea64811c2304c5baea42212b7486d4161"
+    },
+    {
+      "path": "lean/CookieClicker/JavaScriptBrowserAssets.lean",
+      "sha256": "51e715b8deb8eedcd0f048173edf9e1642b8cc661857b3b4537f1b3edd0a64f4"
+    },
+    {
+      "path": "lean/CookieClicker/JavaScriptBrowserCanvas.lean",
+      "sha256": "f7632a20afee0cbabf58ae8b5464999fe9cff412f4f323cf7211384364e564ac"
+    },
+    {
+      "path": "lean/CookieClicker/JavaScriptBrowserCanvasImage.lean",
+      "sha256": "db12d8b1e62f4f010df8c5be88f72ea47783608edebfd2e653706fefcc36bfd0"
+    },
+    {
+      "path": "lean/CookieClicker/JavaScriptBrowserCanvasImageAssets.lean",
+      "sha256": "d50c650d178c4d273e04058280e6580540d30b467fbbb5e4fe0226949abf31fe"
+    },
+    {
+      "path": "lean/CookieClicker/JavaScriptBrowserCanvasState.lean",
+      "sha256": "cf2467a73dffc7a4c46d4825a13ad1b18f1c89a22fd0b3a1ce8f39d00fe767b5"
+    },
+    {
+      "path": "lean/CookieClicker/JavaScriptBrowserCatalogue.lean",
+      "sha256": "a73f75533d77c4c96f54facaab0194fc1f24c23a1687c9dfeef945d66494bc7a"
+    },
+    {
+      "path": "lean/CookieClicker/JavaScriptBrowserConsole.lean",
+      "sha256": "a695096ea5be0a46c805ff2283de908d3652a4679b986920e1d050f1376cdf73"
+    },
+    {
+      "path": "lean/CookieClicker/JavaScriptBrowserCookieState.lean",
+      "sha256": "93440677ae8b374c48935ad5f3ee93310083214255842cb37705eb4b3cfed62f"
+    },
+    {
+      "path": "lean/CookieClicker/JavaScriptBrowserCookies.lean",
+      "sha256": "a0bd2234a5c06068bdeb248e6378f34638c17badf5a53489fb75529845012967"
+    },
+    {
+      "path": "lean/CookieClicker/JavaScriptBrowserCoreStep.lean",
+      "sha256": "672c060fd27e6012c0357f5e74a832a7d5455099be8cdeccebae191af5200630"
+    },
+    {
+      "path": "lean/CookieClicker/JavaScriptBrowserCoreTrace.lean",
+      "sha256": "75b9676500015b391ebb6b52b5b00a6bf824c7bd904867f4ed42a45492c76f95"
+    },
+    {
+      "path": "lean/CookieClicker/JavaScriptBrowserDocument.lean",
+      "sha256": "677d641ae29a6b041758c1a6e9b49b4bba3bdc8f54777235e473ec2d477c71a7"
+    },
+    {
+      "path": "lean/CookieClicker/JavaScriptBrowserEnvironment.lean",
+      "sha256": "a90295cce9661acd66beec8a04580ea11c56d8ce434349a06f5c0ec2ef569509"
+    },
+    {
+      "path": "lean/CookieClicker/JavaScriptBrowserEventData.lean",
+      "sha256": "b755b8a9635714fbc0fcad9e0fc37be0e6919ac209189dda9685e3c891e54084"
+    },
+    {
+      "path": "lean/CookieClicker/JavaScriptBrowserEventState.lean",
+      "sha256": "f2207b39ed6757fe4e5d3dfd261129b55b9f950ce6016126c033725b962c5b96"
+    },
+    {
+      "path": "lean/CookieClicker/JavaScriptBrowserEvents.lean",
+      "sha256": "2c48881c8c226a85dd54da0a1edfad4fe3cdea6aacf6183c6d1de088f32acbd1"
+    },
+    {
+      "path": "lean/CookieClicker/JavaScriptBrowserFocus.lean",
+      "sha256": "9dcfcc36c4a524184a5a23dafa7d6bb088672742ca6540ac2293278fe77bca8f"
+    },
+    {
+      "path": "lean/CookieClicker/JavaScriptBrowserFocusState.lean",
+      "sha256": "214c5e6c91ef1076834c21b95bbb0a7da61497292959f191b909eaa72dd4ab6c"
+    },
+    {
+      "path": "lean/CookieClicker/JavaScriptBrowserGeometry.lean",
+      "sha256": "b6a5ca9d5d6a7a622b6b37c4c49eacfb179ad1166808d40c3a58a1eca2e3a345"
+    },
+    {
+      "path": "lean/CookieClicker/JavaScriptBrowserGeometryState.lean",
+      "sha256": "b1c7698f0eea259ea4fe76253a3f15bc6e117e04237c891503a9ba5193ff1a9a"
+    },
+    {
+      "path": "lean/CookieClicker/JavaScriptBrowserInline.lean",
+      "sha256": "1decf94eadfc866f040c85171da0872fb375026d7d69a2d99c604a3a5132a793"
+    },
+    {
+      "path": "lean/CookieClicker/JavaScriptBrowserInput.lean",
+      "sha256": "3282469e5a7cf7c984334408cfa22d723c1c6ca29ceec273328e1de4f1a04759"
+    },
+    {
+      "path": "lean/CookieClicker/JavaScriptBrowserInputState.lean",
+      "sha256": "e6ae7e19efa45e2e4c555e6ada8ddf4fbb47735bd582aec995a8d31388473290"
+    },
+    {
+      "path": "lean/CookieClicker/JavaScriptBrowserInterfaces.lean",
+      "sha256": "8e397857371658021ae258c6e42598d7d947f4fdbb06ba59322f4f253c37c38a"
+    },
+    {
+      "path": "lean/CookieClicker/JavaScriptBrowserLayout.lean",
+      "sha256": "e59c1721f864cd64cc4b35352f0362cdf2603b65bc3cc609d5304d3ff00b81da"
+    },
+    {
+      "path": "lean/CookieClicker/JavaScriptBrowserMetrics.lean",
+      "sha256": "bd9c87e0f24b843db6295762d24966873e28eef671dc8124c0be558d0adc2d83"
+    },
+    {
+      "path": "lean/CookieClicker/JavaScriptBrowserNodeList.lean",
+      "sha256": "930a9ebde87c19f8d3ddb00dc0038ac54795689668afc37e069831919420e3ac"
+    },
+    {
+      "path": "lean/CookieClicker/JavaScriptBrowserResources.lean",
+      "sha256": "af7d52001e6c5a9d6883b9bc34a7cc59b72433c37c74d263e844c14fefe58aa9"
+    },
+    {
+      "path": "lean/CookieClicker/JavaScriptBrowserRuntime.lean",
+      "sha256": "7c0abc3c39d526be3cada474d8f358cb40bba1af17de7627a8ca8d25b7c2e4f4"
+    },
+    {
+      "path": "lean/CookieClicker/JavaScriptBrowserStorage.lean",
+      "sha256": "3c963034fbc3eb897f54fff0625fac3d39c260a5cd756ca5db76bd3670a82bb1"
+    },
+    {
+      "path": "lean/CookieClicker/JavaScriptBrowserStorageState.lean",
+      "sha256": "166d0a35b87481d95cf47554b6312f3801b5907fe707c6cb03053608971ccd5a"
+    },
+    {
+      "path": "lean/CookieClicker/JavaScriptBrowserStyle.lean",
+      "sha256": "346b769d41b9445daed171a0c6c86eb50085227d3147d2510c4625b1a00185da"
+    },
+    {
+      "path": "lean/CookieClicker/JavaScriptBrowserTextArea.lean",
+      "sha256": "21f4be4e3b860c787c693676af5549bdbb1f383f402120cfd635fb991072bd99"
+    },
+    {
+      "path": "lean/CookieClicker/JavaScriptBrowserTextSelection.lean",
+      "sha256": "505eacc5e571720eb2a9021c32df1965939b7454c432f90099afa7044af582db"
+    },
+    {
+      "path": "lean/CookieClicker/JavaScriptBrowserTextSelectionState.lean",
+      "sha256": "c6357ae51d14cfbf46c99377bcfa60e40b32a64f3e7cbab9dbbe20d6dc25529c"
+    },
+    {
+      "path": "lean/CookieClicker/JavaScriptBrowserTime.lean",
+      "sha256": "d31ee56793cc04942f69cb0b8de21bff08c44e20a53704df61bc55b01a5d03ec"
+    },
+    {
+      "path": "lean/CookieClicker/JavaScriptBrowserTokenList.lean",
+      "sha256": "6d48624b58f5f86e27cc7d931e94886488a0b45f5ea64e12728df5db95030987"
+    },
+    {
+      "path": "lean/CookieClicker/JavaScriptBrowserWindowName.lean",
+      "sha256": "35ece82131be387ca123e270d4ae288b7430421770b5dbf93d5b8ae9a8d517a2"
+    },
+    {
+      "path": "lean/CookieClicker/JavaScriptBuildingCallbackSyntax.lean",
+      "sha256": "fb8ee5d1a84bd099b135d17226e0680c8ebd5a46142bc50b7fc8775611fcbb6e"
+    },
+    {
+      "path": "lean/CookieClicker/JavaScriptBuildingConstructorSyntax.lean",
+      "sha256": "f0d7ffb18de297b3f91326af5f13e0b4a7b8f9689ef223449ed61bfcedff324f"
+    },
+    {
+      "path": "lean/CookieClicker/JavaScriptBuildingCpsArithmetic.lean",
+      "sha256": "0960460b2827ae8e6e66edc29dfe5e4559291f68628d83fb2d33789a8de61bc9"
+    },
+    {
+      "path": "lean/CookieClicker/JavaScriptBuildingCpsCases.lean",
+      "sha256": "e86e810c6757a6beee8ef7d58539cb2a946954daf5519fbc149d54a30e8f9cc2"
+    },
+    {
+      "path": "lean/CookieClicker/JavaScriptBuildingCpsPrefix.lean",
+      "sha256": "8ada9972225657f63ddfffa3cfc3283d093ccff4196f9adbe2c844a6d292d2b8"
+    },
+    {
+      "path": "lean/CookieClicker/JavaScriptBuildingCpsRead.lean",
+      "sha256": "707b711a70cbd51c2ab19c6002a7f24a7a0465fe41ddf68bef801c0cf4b265f2"
+    },
+    {
+      "path": "lean/CookieClicker/JavaScriptBuildingDigits.lean",
+      "sha256": "b998f6d18fa18b97a611a53bcf3de0d6541ed8a0cc22d5727b866e0ce6d7cf78"
+    },
+    {
+      "path": "lean/CookieClicker/JavaScriptBuildingInitialFields.lean",
+      "sha256": "d8337e6d1d49bcc043ac3fcfa87d81c49f1981535dee0ddb95b81c57ddf88445"
+    },
+    {
+      "path": "lean/CookieClicker/JavaScriptBuildingMathRead.lean",
+      "sha256": "f07ae66e62242c50e3c55bf4a134c376a9881c5b1c861acb70f67ba3b4399a61"
+    },
+    {
+      "path": "lean/CookieClicker/JavaScriptBuildingStore.lean",
+      "sha256": "6781591700504c57097ade49aec1ba4111174d3c75bddb8e5806bee8e69d604a"
+    },
+    {
+      "path": "lean/CookieClicker/JavaScriptBuiltins.lean",
+      "sha256": "77e2dfba507f34373e5f47a625b6464a9255568afae532115cee266b32f01756"
+    },
+    {
+      "path": "lean/CookieClicker/JavaScriptCalendar.lean",
+      "sha256": "853679ca460e88dc45002a260cd9607e75f0a52856e3176a106e2e01951791e4"
+    },
+    {
+      "path": "lean/CookieClicker/JavaScriptCanLumpsCall.lean",
+      "sha256": "e6a677bf6d10d5e5a935de0ae6eb86663810589d59b40fc953da0ce00d3420a0"
+    },
+    {
+      "path": "lean/CookieClicker/JavaScriptCanLumpsPrelude.lean",
+      "sha256": "7270f526ecc432a75b60487e515facee9738f12c6fbe724832cad40583fc1af6"
+    },
+    {
+      "path": "lean/CookieClicker/JavaScriptCanvasDeferred.lean",
+      "sha256": "0578b6a05953cd5ea7c0b2bcba517af841f122fbd2c0667d0e3d6ec0451aedba"
+    },
+    {
+      "path": "lean/CookieClicker/JavaScriptCanvasImageRealization.lean",
+      "sha256": "f30b184227caebf29555670527953310822030b86005933c6855267d0f85508a"
+    },
+    {
+      "path": "lean/CookieClicker/JavaScriptCanvasMatrix.lean",
+      "sha256": "0664d06983e0c30cc68ecdb6ebd33d3e33d60cffa6666dfb256a124a81c4bb38"
+    },
+    {
+      "path": "lean/CookieClicker/JavaScriptCapturedRead.lean",
+      "sha256": "248d58e9d8347075696214a647feb9ec2dd93a47c942e9d5da572f3de98305eb"
+    },
+    {
+      "path": "lean/CookieClicker/JavaScriptChoiceArraySource.lean",
+      "sha256": "3f8801f9aba1994a4007c60ea223001a18bc9ffc1610e7071ca91ff1d0b01f08"
+    },
+    {
+      "path": "lean/CookieClicker/JavaScriptChoiceInvocation.lean",
+      "sha256": "03de0a809861b5bf60e0102dd41ed77688410d18d0e43ec267aca54193c93989"
+    },
+    {
+      "path": "lean/CookieClicker/JavaScriptChoicePrelude.lean",
+      "sha256": "90d67c4240ea17fbeeb6720ba28dbe832a913a4d8bd6e8e6d3ef032e1e3e3dfb"
+    },
+    {
+      "path": "lean/CookieClicker/JavaScriptChoiceSource.lean",
+      "sha256": "3b4d9857005dd639f6e2db0ecea3bf3d5ef1c9f0d84103c82a2d9ef932c696ee"
+    },
+    {
+      "path": "lean/CookieClicker/JavaScriptChoiceSyntax.lean",
+      "sha256": "4517c215a6dec9d4278fce231a76e17354d3c39f83e092f39f03fa7a99e6804f"
+    },
+    {
+      "path": "lean/CookieClicker/JavaScriptClockSemantics.lean",
+      "sha256": "f96c9fdd1e8e7e1bda61007b0d29dac6dce8358158c683c7cf35cda79be6cea0"
+    },
+    {
+      "path": "lean/CookieClicker/JavaScriptClockValue.lean",
+      "sha256": "444abce7bf29c3fb2df543e47de08e0ee4ca871a5071f666fae52b9b63e22e1f"
+    },
+    {
+      "path": "lean/CookieClicker/JavaScriptCommonCpsAllocation.lean",
+      "sha256": "39886ab26df19ad16d13e6698318496f849fd46eca444b211985aa74d6711cf5"
+    },
+    {
+      "path": "lean/CookieClicker/JavaScriptCommonCpsBody.lean",
+      "sha256": "dc3415a57a7161e605af4b4ffd166fc24cf1f7e4430496c96a208531844fae5e"
+    },
+    {
+      "path": "lean/CookieClicker/JavaScriptCommonCpsComplete.lean",
+      "sha256": "ab6bb786b2b5a82ccf1313a61a2b1b29f73dc03cbe91155818db5b8d103d881a"
+    },
+    {
+      "path": "lean/CookieClicker/JavaScriptCommonCpsLocals.lean",
+      "sha256": "77d3f332c106f14d516bf5565764d69acd4a932ca51e2c76a86ec36dd1945c03"
+    },
+    {
+      "path": "lean/CookieClicker/JavaScriptCommonCpsSource.lean",
+      "sha256": "b485883c3007d57a39a3346e23d99f4bc0a8bc73bccd38ae3284a48f4051e40a"
+    },
+    {
+      "path": "lean/CookieClicker/JavaScriptCompletion.lean",
+      "sha256": "7bd650608520dd12410c951ab0d5be66c550e731d8557ecb7e2f5ba89ea3613d"
+    },
+    {
+      "path": "lean/CookieClicker/JavaScriptCompletionCounts.lean",
+      "sha256": "ef24e6562af178ea55eb300c25e6be8746e25dab9d4d5f37829bfdfb44096a93"
+    },
+    {
+      "path": "lean/CookieClicker/JavaScriptCompletionMonitor.lean",
+      "sha256": "88fb0d0ecb608c5e6b1231d89168ffa759f9111e5f3569a1f8394f04f295660d"
+    },
+    {
+      "path": "lean/CookieClicker/JavaScriptComputeCps.lean",
+      "sha256": "659885e39ecb956a02d75086a5c6a214a45caa4e6ebf7f108f8e9ed51d754c09"
+    },
+    {
+      "path": "lean/CookieClicker/JavaScriptComputeCpsCall.lean",
+      "sha256": "9edebbf2860a16d3e796aaf15fe3bc2a69fadfc1aa7de526f5e3dd2b5f256adf"
+    },
+    {
+      "path": "lean/CookieClicker/JavaScriptControlledExecution.lean",
+      "sha256": "b38535458a2b1854ec20db681d6d696186a981b57e8c2fc57ff4ecf599265b05"
+    },
+    {
+      "path": "lean/CookieClicker/JavaScriptCounterEnvironment.lean",
+      "sha256": "4d80ef1c9a4a361a6c3788e617c79c40628087e0bcddf6a0418b882bd2c2923e"
+    },
+    {
+      "path": "lean/CookieClicker/JavaScriptCounterFrame.lean",
+      "sha256": "2d424991391d7482e319e3121bc843377b0088ba170d58cec482dac1db8814bd"
+    },
+    {
+      "path": "lean/CookieClicker/JavaScriptCounterLadder.lean",
+      "sha256": "17b37645ea6f11308bb3ea78c375d7d307e50ea00129dac54883660c1a2fa74a"
+    },
+    {
+      "path": "lean/CookieClicker/JavaScriptCounterLens.lean",
+      "sha256": "98f1e36c4370f2b138b9c49ec2a4d0ba7b3d36d74acb6c12de927b83ab1596ca"
+    },
+    {
+      "path": "lean/CookieClicker/JavaScriptCounterSource.lean",
+      "sha256": "2b509275e9013a350ba545b0b7f7896fc0340b6bce871d98fa64c7827ff22252"
+    },
+    {
+      "path": "lean/CookieClicker/JavaScriptCounterSyntax.lean",
+      "sha256": "6b6d2f2bba0bbd4c794216aba402c1156627910c41451bbadb2f308d86dbab6b"
+    },
+    {
+      "path": "lean/CookieClicker/JavaScriptCssBorder.lean",
+      "sha256": "296273eae20d98399053468ba3f1a7cdca0c4228da9bff209f6619abae1d3382"
+    },
+    {
+      "path": "lean/CookieClicker/JavaScriptCssCascade.lean",
+      "sha256": "7fb84776179e3693f3d5ddbd096e63bacc5095b69ffd8220fa0e8de2f9b75602"
+    },
+    {
+      "path": "lean/CookieClicker/JavaScriptCssColor.lean",
+      "sha256": "78bdf401f71a00347644d0c40fab626c323080998c529c3aca5fb73f92eaec4d"
+    },
+    {
+      "path": "lean/CookieClicker/JavaScriptCssColorAlpha.lean",
+      "sha256": "4ce6b0d6e8cc24a9fccd694979429151882a1fe981d6d92657172d8c90df2ec8"
+    },
+    {
+      "path": "lean/CookieClicker/JavaScriptCssDecode.lean",
+      "sha256": "ebb42585b1a61039e3d8e62373351e2e99d806558cbb9519c77d6590b55a07dc"
+    },
+    {
+      "path": "lean/CookieClicker/JavaScriptCssFont.lean",
+      "sha256": "3183d19240f01ba1dfd2c20aefa0c62693bb1a0efc2c70f7c7d467be6d97dc87"
+    },
+    {
+      "path": "lean/CookieClicker/JavaScriptCssHeight.lean",
+      "sha256": "4d3b18ac19ca1b465d25f0c904e94783efba4414dbb05130845ee5021ad379b2"
+    },
+    {
+      "path": "lean/CookieClicker/JavaScriptCssLayout.lean",
+      "sha256": "d3068c8f05ace4b1fb575ffee5ab8115d4a668d2f9ec9f65d2de28040fd38f9e"
+    },
+    {
+      "path": "lean/CookieClicker/JavaScriptCssNumber.lean",
+      "sha256": "72fdb1452f55182f13d14e43806a12cca8ca4eac320c821b70b3ffb3e1550717"
+    },
+    {
+      "path": "lean/CookieClicker/JavaScriptCssOpacity.lean",
+      "sha256": "13fbacd7544cd58f3c82ab629b1b085c0baef7fd23dd492f20b367b47b0398d9"
+    },
+    {
+      "path": "lean/CookieClicker/JavaScriptCssOverflow.lean",
+      "sha256": "48c6c4c6791cceb71840241c21a6e65d81f9535f3e8dbd114f700669982f744c"
+    },
+    {
+      "path": "lean/CookieClicker/JavaScriptCssParser.lean",
+      "sha256": "333d7ad4a9deb7b6ad664a52f9ba0eacb6628a090dbf05ccb616e3bba2d140bb"
+    },
+    {
+      "path": "lean/CookieClicker/JavaScriptCssPositionNumber.lean",
+      "sha256": "a89b88c13b6adaa6a97f58a0da89881ddd1df6b1d46123236720a09584f406cc"
+    },
+    {
+      "path": "lean/CookieClicker/JavaScriptCssProperties.lean",
+      "sha256": "6e911cd75a59059b07063238473dec3a426ddb985c02768670a10d806c4b801c"
+    },
+    {
+      "path": "lean/CookieClicker/JavaScriptCssSyntax.lean",
+      "sha256": "fd0b7322ba7d81ea4efbec7bc0a642d15fc1e5d6be016c71527e40925a0d92d5"
+    },
+    {
+      "path": "lean/CookieClicker/JavaScriptCssTransform.lean",
+      "sha256": "c936f7be34f07cfac5f0d93054604523de665c7aeb8f0fdda27c1af1239240d3"
+    },
+    {
+      "path": "lean/CookieClicker/JavaScriptCssWidth.lean",
+      "sha256": "1f495ef76003bb4a7dbe13f9e22e4b880bc1d6b0e70ba60ac22350002a92d60d"
+    },
+    {
+      "path": "lean/CookieClicker/JavaScriptCursorAllocation.lean",
+      "sha256": "81c4d78eee938db2a1929c048588a505e2ca4248b381f9daad729afe1d450b42"
+    },
+    {
+      "path": "lean/CookieClicker/JavaScriptCursorArithmeticBody.lean",
+      "sha256": "3431287fa32af77f601aca72cb52fe2ca536434e43d35ad8f6f0c795449d7c71"
+    },
+    {
+      "path": "lean/CookieClicker/JavaScriptCursorBoards.lean",
+      "sha256": "07b383fc6224cca0b87a8ceb01d9f13fb3fb7f1ec28df0cd5effbbe701cc5499"
+    },
+    {
+      "path": "lean/CookieClicker/JavaScriptCursorBuyAllocation.lean",
+      "sha256": "b91a3b1f023b0ef7cafa7ebb6f4a10108f35cd6765248c9b48cfc16775ba1312"
+    },
+    {
+      "path": "lean/CookieClicker/JavaScriptCursorBuyCall.lean",
+      "sha256": "e1b15f8ded2bdcf34e7873efdc2df208c4bcac862b353904fa7c959bf1e7d3f6"
+    },
+    {
+      "path": "lean/CookieClicker/JavaScriptCursorBuyClauses.lean",
+      "sha256": "a079a3525db6c98de6e6c896a6709e97526f7ad483542986f95b49abc73247aa"
+    },
+    {
+      "path": "lean/CookieClicker/JavaScriptCursorBuyComplete.lean",
+      "sha256": "86107b47d83b519fdcd8780b2c4de90735a16eb6a04193ca09a026e6fff7ada3"
+    },
+    {
+      "path": "lean/CookieClicker/JavaScriptCursorBuyInvocation.lean",
+      "sha256": "a404a87a159c5ca9e04d042994f75446ee42f29fd022f20d38d31f60a829b68a"
+    },
+    {
+      "path": "lean/CookieClicker/JavaScriptCursorBuyOriginal.lean",
+      "sha256": "84911417b67088454e582f61656f3c2e09f2b4034e6c499b39d49df63cb06e57"
+    },
+    {
+      "path": "lean/CookieClicker/JavaScriptCursorBuyPrelude.lean",
+      "sha256": "f0b7e034670b4a6417b955fbb576c0b926057cec2e6d3f8db15d9a42bfadb74a"
+    },
+    {
+      "path": "lean/CookieClicker/JavaScriptCursorBuyRead.lean",
+      "sha256": "c1b65f22e2aed30ff33b5940aa07c698f78384ba1856765df2cb2fb2fb487124"
+    },
+    {
+      "path": "lean/CookieClicker/JavaScriptCursorBuyRetained.lean",
+      "sha256": "e96239955625297117ddef441bb720bb801bc01e1f3dab5397d31dc5f60dc3ef"
+    },
+    {
+      "path": "lean/CookieClicker/JavaScriptCursorBuyWorld.lean",
+      "sha256": "d76879d2beaa760567f55508edec1159236c072051789bdfc2c389d84acc50ef"
+    },
+    {
+      "path": "lean/CookieClicker/JavaScriptCursorCall.lean",
+      "sha256": "fd062d90c53f14a39c9996450145ffe340b572f043f925070a8908670bd30bbc"
+    },
+    {
+      "path": "lean/CookieClicker/JavaScriptCursorComplete.lean",
+      "sha256": "6cfe33ebdf59f56ee022518c738baf72c2df33a5cbdded5cbf6e6a98a6e8a0d0"
+    },
+    {
+      "path": "lean/CookieClicker/JavaScriptCursorComputeCall.lean",
+      "sha256": "ca6630848a2c2b61ff116d572fe2f4b2c36151e4c9aa984424b3b180504d2c45"
+    },
+    {
+      "path": "lean/CookieClicker/JavaScriptCursorCount.lean",
+      "sha256": "f2604920e966169b6ea87946b5d8f1ff665e7b158aacedea49b74c55b2a2690e"
+    },
+    {
+      "path": "lean/CookieClicker/JavaScriptCursorCountRegistry.lean",
+      "sha256": "788ce5cdc6d3f361bbdb2c7537de8fc917eb191b42cf921449b546a639380141"
+    },
+    {
+      "path": "lean/CookieClicker/JavaScriptCursorCycleSyntax.lean",
+      "sha256": "1280170cb719596cce09b4133a6932b89cecf243c4e31ffe11169a194f167076"
+    },
+    {
+      "path": "lean/CookieClicker/JavaScriptCursorDomFrame.lean",
+      "sha256": "498d6745a3e72df5fe46143f6fbc78338c48261902578a81ae9a004e70a645b9"
+    },
+    {
+      "path": "lean/CookieClicker/JavaScriptCursorGetPriceArithmetic.lean",
+      "sha256": "e3be5e75e6650fac6aee61fe389fc6d21e7ac3cec273a3a819108788022d6aaf"
+    },
+    {
+      "path": "lean/CookieClicker/JavaScriptCursorGetPriceBody.lean",
+      "sha256": "78ecdea1accd34daa954da39246410205bd890c71815fa2b868e55ef180efb18"
+    },
+    {
+      "path": "lean/CookieClicker/JavaScriptCursorGetPriceCall.lean",
+      "sha256": "6de9df5cfa2b6d828178db1f4a3b7925d8c90211ac82f181a0170d82f9ee79a8"
+    },
+    {
+      "path": "lean/CookieClicker/JavaScriptCursorGetPriceComplete.lean",
+      "sha256": "b52844c21e0293221cc2998e4d5b39ec0179a7212b77f8fb65f10ebbdf5774d6"
+    },
+    {
+      "path": "lean/CookieClicker/JavaScriptCursorGetPriceLocals.lean",
+      "sha256": "9f363efe6342a34a7f6572b505081b9ab467c7705acd6d050ac0d9fb8b6d6d04"
+    },
+    {
+      "path": "lean/CookieClicker/JavaScriptCursorGetPriceRead.lean",
+      "sha256": "9d8a2d807584e4dc907b840861bc6ace78c682e02c1747e0f511b4e3165bcc31"
+    },
+    {
+      "path": "lean/CookieClicker/JavaScriptCursorGetPriceRetention.lean",
+      "sha256": "1bdd6b1276e1ccad8d7914b932029cc41da5dc9d43106885e0b464e4c807805e"
+    },
+    {
+      "path": "lean/CookieClicker/JavaScriptCursorGetPriceSource.lean",
+      "sha256": "a33deaf169da9bb530d5077f49b3265ec18335bea436915ff87cfb8baebb9889"
+    },
+    {
+      "path": "lean/CookieClicker/JavaScriptCursorGuards.lean",
+      "sha256": "3d8c9a762954e3bde8f2ee6dadca5003dcfc3b1d1653bb6bbe55d4605fd092ed"
+    },
+    {
+      "path": "lean/CookieClicker/JavaScriptCursorHasSum.lean",
+      "sha256": "6ef46832a0b420b0c74572d2a1e276d6fd568fff8a7a662bf0fbc4c84ed00f95"
+    },
+    {
+      "path": "lean/CookieClicker/JavaScriptCursorHelpersBody.lean",
+      "sha256": "95f7c0aea5e4a58cb97b1b15871063f9e0627f67e7a55d53daab5ec838709ae8"
+    },
+    {
+      "path": "lean/CookieClicker/JavaScriptCursorLeafCalls.lean",
+      "sha256": "3e05bcdef6a47af26d460e1ac3f4111c0b6e528f2096e15a85bfad916fe2da2f"
+    },
+    {
+      "path": "lean/CookieClicker/JavaScriptCursorLeafInputs.lean",
+      "sha256": "7474d104e5846caa076e3ecaaf1e913cdfc336e8cdb425a5e4b6078412108b1a"
+    },
+    {
+      "path": "lean/CookieClicker/JavaScriptCursorLocals.lean",
+      "sha256": "3000ce8bc893e9ba20a3ea246531d6fb799acfbd063a63e855db7e6d91ed293a"
+    },
+    {
+      "path": "lean/CookieClicker/JavaScriptCursorLoop.lean",
+      "sha256": "3173184021e4b6cd2af6495933742992390ec468a06add894886cce26cbbac55"
+    },
+    {
+      "path": "lean/CookieClicker/JavaScriptCursorPrefix.lean",
+      "sha256": "608afd335cf397e7904b126f313022a261bcbd80d0029688e35a951942f85c66"
+    },
+    {
+      "path": "lean/CookieClicker/JavaScriptCursorPriceChecked.lean",
+      "sha256": "faa4d60a002017c4d974b3fd16f95881ead99a0ca362094b0c4ebb6d5ee41d1e"
+    },
+    {
+      "path": "lean/CookieClicker/JavaScriptCursorPriceProfile.lean",
+      "sha256": "5045286dab5d7c96e6ac862445c1f2195c8ee71f1273d43e6ec0a786a78cf25d"
+    },
+    {
+      "path": "lean/CookieClicker/JavaScriptCursorQuoteArithmetic.lean",
+      "sha256": "0c79de01930640419ea8208ed07648655cbc765603e84da0ca2c702ecf11e6de"
+    },
+    {
+      "path": "lean/CookieClicker/JavaScriptCursorQuoteCatalogue.lean",
+      "sha256": "a08b4423accdf23da64a8225f8a4428d04d099bb83e13533d65c9bb15c093cc7"
+    },
+    {
+      "path": "lean/CookieClicker/JavaScriptCursorQuoteLocals.lean",
+      "sha256": "be2d9d5cc0f816a615138e073a9104b1a003d0667a2bbb422b5c7a677bed5fc2"
+    },
+    {
+      "path": "lean/CookieClicker/JavaScriptCursorQuoteLoop.lean",
+      "sha256": "037c21a1e09285a3f2430f0aae37186916c03ce7eb1eb774defa0d315f920774"
+    },
+    {
+      "path": "lean/CookieClicker/JavaScriptCursorQuoteMultiply.lean",
+      "sha256": "890d6f822352a8a8c4cd7b2b49a319d81e300e538762cc4640c8cfed7c25d054"
+    },
+    {
+      "path": "lean/CookieClicker/JavaScriptCursorQuotePrefix.lean",
+      "sha256": "48ef889fc6fb33726774ab8b3c60875b79fda00999bcd662a4a6ef155bad6da5"
+    },
+    {
+      "path": "lean/CookieClicker/JavaScriptCursorQuoteRead.lean",
+      "sha256": "76c50e1f121bf990e260d0066a6d9a3b2d88e30cc853b310ec8f0c9718da509c"
+    },
+    {
+      "path": "lean/CookieClicker/JavaScriptCursorQuoteRegistry.lean",
+      "sha256": "462b2a1b10af2f7f32432b54368dc0720351fdd0d5df67bb8a184f06f84a8361"
+    },
+    {
+      "path": "lean/CookieClicker/JavaScriptCursorQuoteSource.lean",
+      "sha256": "46074132a0b3f372d19db99326688230e330bfe72aa8d2cc8948f66769659f7e"
+    },
+    {
+      "path": "lean/CookieClicker/JavaScriptCursorQuoteStep.lean",
+      "sha256": "5721a758675000119af4b1094157342ad417919bbe77b8f2119c4061e7d7a88a"
+    },
+    {
+      "path": "lean/CookieClicker/JavaScriptCursorQuoteTail.lean",
+      "sha256": "9cdb9531e6ff14c2088730c29839614661c74945caa1b83e06c6c3194354a08a"
+    },
+    {
+      "path": "lean/CookieClicker/JavaScriptCursorReturn.lean",
+      "sha256": "9c98067dcb2c103133e3e1e2839ac14269d104167a0b47674b5620e457422a0b"
+    },
+    {
+      "path": "lean/CookieClicker/JavaScriptCursorReturnInputs.lean",
+      "sha256": "cc3a7182349dcab24a595914c0aaffb4a32a1a98c45f5bcbb97a1ca9c402ae94"
+    },
+    {
+      "path": "lean/CookieClicker/JavaScriptCursorReverseCall.lean",
+      "sha256": "6c60c6a74830dc366f6ce3a29b01ab0b22e3ef319a7fdc4eb1c27975c406f153"
+    },
+    {
+      "path": "lean/CookieClicker/JavaScriptCursorReverseComplete.lean",
+      "sha256": "2ce140d9977f93aae059b2ded34ae2bbf60b11f85d7177e1033936c2e0cff7ae"
+    },
+    {
+      "path": "lean/CookieClicker/JavaScriptCursorReverseTail.lean",
+      "sha256": "5089bc80677d88f4dcb11b3dbd7eec82b18133d39209dd6dcfc1376770aa50bb"
+    },
+    {
+      "path": "lean/CookieClicker/JavaScriptCursorSellBody.lean",
+      "sha256": "d0b2d53433d74723e0bc572f9ed1de70c35b78636831de133d953ad589a86851"
+    },
+    {
+      "path": "lean/CookieClicker/JavaScriptCursorSellCall.lean",
+      "sha256": "a4d2b3b1d26688a8dde5720a3fda69f693ea99a63b973d9ea80c4957c20a98f7"
+    },
+    {
+      "path": "lean/CookieClicker/JavaScriptCursorSellLocals.lean",
+      "sha256": "2e62dc0b9ae70e3e8164daea05e6e923a63a4c5df5302a2887e54d6d910f51f5"
+    },
+    {
+      "path": "lean/CookieClicker/JavaScriptCursorSellRegistry.lean",
+      "sha256": "7c27dcfb38366f1470adf14dc6c383bcf63c3f9d9d7a80041c37fc3cb5007db4"
+    },
+    {
+      "path": "lean/CookieClicker/JavaScriptCursorSellSource.lean",
+      "sha256": "82f0064420f896a35dce78cd5d874a760f993c1892870e2dad018284d21c8f21"
+    },
+    {
+      "path": "lean/CookieClicker/JavaScriptCursorSource.lean",
+      "sha256": "4c363d5787593a1ed386aac739bed9f3d4127155f9e2f2ec13ef5cf26fab19c0"
+    },
+    {
+      "path": "lean/CookieClicker/JavaScriptCursorStyleFrame.lean",
+      "sha256": "8ce5add3a98d84635de7df800214da48a596bece4dd5a899f657fa6039106aec"
+    },
+    {
+      "path": "lean/CookieClicker/JavaScriptCursorSumCall.lean",
+      "sha256": "023e16ae03ba20bce7225ce65876cedc224835f7256b2596d555b248762c7396"
+    },
+    {
+      "path": "lean/CookieClicker/JavaScriptCursorTierCall.lean",
+      "sha256": "def7d2b1ee778406d3e4b3a657ce7edb177c9484442c90006d5212c4d28a25f9"
+    },
+    {
+      "path": "lean/CookieClicker/JavaScriptCylinder.lean",
+      "sha256": "b8d1b0f7d8f77c5a39b56cd230247bcfc9f4c43a8e14616bb05b4b93a0f5ad19"
+    },
+    {
+      "path": "lean/CookieClicker/JavaScriptDataPropertyPath.lean",
+      "sha256": "6a8bf17ffee1cf2bb4ba9df483e8ead15277bf5e5c38c061ebfac20ad58e42e3"
+    },
+    {
+      "path": "lean/CookieClicker/JavaScriptDate.lean",
+      "sha256": "341022ceee0090adc82cbb307070d8ec5640231a22d32b47dc0520dfbb38e607"
+    },
+    {
+      "path": "lean/CookieClicker/JavaScriptDecode.lean",
+      "sha256": "70dffd29b1b0a4b108b5d5cf54e68892274ee89481a99fad28a87ae3d71fd6b0"
+    },
+    {
+      "path": "lean/CookieClicker/JavaScriptDenseArray.lean",
+      "sha256": "cea9ed5cfbf9a2203974666a87a8a774999855a90d04464919fb7ce3e25b9b7c"
+    },
+    {
+      "path": "lean/CookieClicker/JavaScriptDenseArrayState.lean",
+      "sha256": "e128b811b29ad5b6e2e67eef9080ec9c157f171a4067c368cddecaeb2caa35b1"
+    },
+    {
+      "path": "lean/CookieClicker/JavaScriptDescriptorRead.lean",
+      "sha256": "f24fbfaf1d8053a9aa2fc8c4f5df33a6c7e4c8ebff1cfdd80b2f6651c5e6d08b"
+    },
+    {
+      "path": "lean/CookieClicker/JavaScriptDomSyntax.lean",
+      "sha256": "2af4d62633025417134762a9852ecfdd9eff55c3a2337f0598a80580ce3baa1d"
+    },
+    {
+      "path": "lean/CookieClicker/JavaScriptDyadicArithmeticBridge.lean",
+      "sha256": "dd7d42e843fd580bced704aa284b9e3b0abfe2c007a42ac76e443171adf2857f"
+    },
+    {
+      "path": "lean/CookieClicker/JavaScriptDynamicFunction.lean",
+      "sha256": "ecc792c73596f114bb80ffb0d2ebb7d9de39bca3d37a54c831d05c54934489f8"
+    },
+    {
+      "path": "lean/CookieClicker/JavaScriptEffCall.lean",
+      "sha256": "46cc198076c5e1ab22ea6703a137d6a169876bff114ac1779f41b95e12cdda73"
+    },
+    {
+      "path": "lean/CookieClicker/JavaScriptEncoding.lean",
+      "sha256": "ce35bd34513c24f88a2315d090dcd7734b4f67fc71dbaebfba752e4bb9f48369"
+    },
+    {
+      "path": "lean/CookieClicker/JavaScriptEnumerationEquality.lean",
+      "sha256": "865f3f00e1c39c57243d663b879b8cef6adb138022374373220560098c6799f5"
+    },
+    {
+      "path": "lean/CookieClicker/JavaScriptEnumerationFrame.lean",
+      "sha256": "d535e0ea7364ff60570a30ca98814ea55a1146c24554ca1b7f64a11e30a0d7a3"
+    },
+    {
+      "path": "lean/CookieClicker/JavaScriptEnvironment.lean",
+      "sha256": "b448227ebbdda4d3b24dc8b4b16ab1812b86cd622358634360800362c67ca797"
+    },
+    {
+      "path": "lean/CookieClicker/JavaScriptEnvironmentAppend.lean",
+      "sha256": "e9bae115c1919c92a6293d0722bc170f164a8a4e4b138e470d60d8e1b23e85d9"
+    },
+    {
+      "path": "lean/CookieClicker/JavaScriptEscapeComplete.lean",
+      "sha256": "bf8be946e88c7e8fe42f55f96cb8f06a98c8c6099ca221954e403e95bcb90e2e"
+    },
+    {
+      "path": "lean/CookieClicker/JavaScriptEscapeEntry.lean",
+      "sha256": "cb0fdd5fb821429eaf598ff302785f1d7493e2160854a4b88388f9105848473d"
+    },
+    {
+      "path": "lean/CookieClicker/JavaScriptEscapeHostStep.lean",
+      "sha256": "70d0ef8cc3a5536cc236bb40494fa986ba4ca86f64cdedf9d4767d18ba117905"
+    },
+    {
+      "path": "lean/CookieClicker/JavaScriptEscapeInput.lean",
+      "sha256": "a965cfa1af6b6b3ea30896ccbcd6439aea90971bdf24e70838881736eeacff05"
+    },
+    {
+      "path": "lean/CookieClicker/JavaScriptEscapePath.lean",
+      "sha256": "008e55cc9f694e1323ad21ce7f7b5d60878ce7e84d7bfb1b0e620e91b058e966"
+    },
+    {
+      "path": "lean/CookieClicker/JavaScriptEscapeReduction.lean",
+      "sha256": "ecf2d29bfeb31ed7d906648548b83af5095f81b318f9e352d9f8482b425ca1cf"
+    },
+    {
+      "path": "lean/CookieClicker/JavaScriptEscapeReturned.lean",
+      "sha256": "ffce3f72c1bbbce6215903d2cb1af25b418df0e6b33d808d40d77a4055de47e2"
+    },
+    {
+      "path": "lean/CookieClicker/JavaScriptEscapeSpan.lean",
+      "sha256": "a900c997945d3d1432b922e7fd233d2f399f6f26c892483baf95bd7990e4dafd"
+    },
+    {
+      "path": "lean/CookieClicker/JavaScriptEscapeSyntax.lean",
+      "sha256": "4cfade95154242774590ffbe47ec39175d4ca3b07a11fef067a2e6a0532248f9"
+    },
+    {
+      "path": "lean/CookieClicker/JavaScriptEscapeTime.lean",
+      "sha256": "6242f3f8372b5d401c4c0053377302508134a2e9d9e9809503260c45845871f4"
+    },
+    {
+      "path": "lean/CookieClicker/JavaScriptEval.lean",
+      "sha256": "7c138fb393640608039e6c0dcb6df114e1927ee263d1dc53f5c33b0caf2700da"
+    },
+    {
+      "path": "lean/CookieClicker/JavaScriptExecution.lean",
+      "sha256": "ceec089915b6fb964b958f224cf826dee34c0a2261603f3fa8132339bbbff508"
+    },
+    {
+      "path": "lean/CookieClicker/JavaScriptExternalInput.lean",
+      "sha256": "90848f307026222bbc2830756a24db5cd4abc099a60c327055c49d264474c1df"
+    },
+    {
+      "path": "lean/CookieClicker/JavaScriptFractionalArithmeticBridge.lean",
+      "sha256": "2b9363d7755543e5e7bbaed115c4d75d6a461b965cedf1c4a264ead23d671a20"
+    },
+    {
+      "path": "lean/CookieClicker/JavaScriptFractionalRoundingBridge.lean",
+      "sha256": "92c7a081ac7b0ab1580a1c85a7e6a718ce38eadbd30918ab409a2593fb581d6d"
+    },
+    {
+      "path": "lean/CookieClicker/JavaScriptFundingClick.lean",
+      "sha256": "ef8d46584c7a6349f01c3b769463f7aef5dc289db727090d3bdfd8a6d970f271"
+    },
+    {
+      "path": "lean/CookieClicker/JavaScriptFundingCredit.lean",
+      "sha256": "7b7eb9df2a5218476b55b4dc1558a26c9dbd8f4f51ca51ce4ccf72b9554ef080"
+    },
+    {
+      "path": "lean/CookieClicker/JavaScriptFundingCycle.lean",
+      "sha256": "5bc551e3b69935c55edeb7bccec32bb355fffee47d93a6e81c6b71071166d42f"
+    },
+    {
+      "path": "lean/CookieClicker/JavaScriptFundingEpisode.lean",
+      "sha256": "8437f08e4791e209f04410544797eeb56917f1e78acf1053dcf14c1fee99252e"
+    },
+    {
+      "path": "lean/CookieClicker/JavaScriptFundingProfile.lean",
+      "sha256": "3dbf69741ececf68d0a0aaca3895c0309e3aa31b44ea851d26c8f42a78927883"
+    },
+    {
+      "path": "lean/CookieClicker/JavaScriptFundingProgress.lean",
+      "sha256": "cea14f4196d95a62d0e8e54f3e878db2ae94de9ad200228b9bdaf17fec96ec38"
+    },
+    {
+      "path": "lean/CookieClicker/JavaScriptGainHelpersSyntax.lean",
+      "sha256": "a642ed1abaf3fcef4050ae0ff8446d27d9e101e20143904abe1aa5ffa8318d42"
+    },
+    {
+      "path": "lean/CookieClicker/JavaScriptGainsCacheCreate.lean",
+      "sha256": "2c37db51677c1f1883691e277a1d2c49bfa34975a92412da565ede4ceef5642b"
+    },
+    {
+      "path": "lean/CookieClicker/JavaScriptGainsCacheWrites.lean",
+      "sha256": "6e0e13ea225c1f2a6c79e1ed463312d78262ffb47a97223de895c9107a08f112"
+    },
+    {
+      "path": "lean/CookieClicker/JavaScriptGainsCommonCache.lean",
+      "sha256": "9057ccbc8b1f53f13bcf9000d17affdcea21f19579a1aec0233a10822eeef3fe"
+    },
+    {
+      "path": "lean/CookieClicker/JavaScriptGainsCursorCache.lean",
+      "sha256": "a8e5fca1672cb28f59f8a2619bd52b7bd0a23855a870b53adcbbe601dc8090e3"
+    },
+    {
+      "path": "lean/CookieClicker/JavaScriptGainsGrandmaCache.lean",
+      "sha256": "cab9b43dba58a042089260b46d10017a0413536c978ae88d31666a51754d2566"
+    },
+    {
+      "path": "lean/CookieClicker/JavaScriptGainsLevel.lean",
+      "sha256": "7b659ca6267f53e7f6bb517b77ecafbda27027ebc4a8368f926b1a76a29075cb"
+    },
+    {
+      "path": "lean/CookieClicker/JavaScriptGainsLoopPrelude.lean",
+      "sha256": "66eb444a9da7323da31f494d251ab5531efed295cfad8d08712e2c93d0fb8619"
+    },
+    {
+      "path": "lean/CookieClicker/JavaScriptGainsLoopSyntax.lean",
+      "sha256": "cb83dbd0e2151e2c00c1410b1b9565e5a072226ae2b6a32878185a1739daad70"
+    },
+    {
+      "path": "lean/CookieClicker/JavaScriptGainsMilk.lean",
+      "sha256": "d2b81f182c1c8de8a9ee96d779d80929336ee600244d975e5e96fc3041bd6c5e"
+    },
+    {
+      "path": "lean/CookieClicker/JavaScriptGlobalCall.lean",
+      "sha256": "1add9798943aea65b68b3830a19841b6762120ac0e68ca9f3171d796e9c0659f"
+    },
+    {
+      "path": "lean/CookieClicker/JavaScriptGlobalData.lean",
+      "sha256": "7c1e577e7f3d53e3ea4f14e45d54405c8b8328ec18b5125189c3193d4f691e5a"
+    },
+    {
+      "path": "lean/CookieClicker/JavaScriptGodzamokSource.lean",
+      "sha256": "8374991293f7f4f9507631ea7e39f2d58cba7d9e803b1db175b5838d67530bbc"
+    },
+    {
+      "path": "lean/CookieClicker/JavaScriptGodzamokSyntax.lean",
+      "sha256": "f8659c4070bfbe56144692bda2b85c4c4aa881914b4ce9d71100600f33449c92"
+    },
+    {
+      "path": "lean/CookieClicker/JavaScriptGrandmaAllocation.lean",
+      "sha256": "4350a6a14b16a3ecc8165ed515acba53cb31cabb47d3593ec976068e77d95d45"
+    },
+    {
+      "path": "lean/CookieClicker/JavaScriptGrandmaAura.lean",
+      "sha256": "df61d57d045a1c0a92876a10c2df20c1e2b77ef720041870243fb6106a865199"
+    },
+    {
+      "path": "lean/CookieClicker/JavaScriptGrandmaBoards.lean",
+      "sha256": "4076452e5014654d83e3cc477308107aca9971736651c7df6fcedc95cbf8b2df"
+    },
+    {
+      "path": "lean/CookieClicker/JavaScriptGrandmaBody.lean",
+      "sha256": "3cf941217561b8da3c64ee0501465415bbb40295ed5b5e9f33ccd460f06c6776"
+    },
+    {
+      "path": "lean/CookieClicker/JavaScriptGrandmaCall.lean",
+      "sha256": "687a6f3604f4737823d872de2038a7ae129f9cb20ce7b81f2bd60658e3e12559"
+    },
+    {
+      "path": "lean/CookieClicker/JavaScriptGrandmaComplete.lean",
+      "sha256": "7b1b8867e6c5679ca4e427802cc6f4669d6ea1f0d68e446e0af29d2bb400c51b"
+    },
+    {
+      "path": "lean/CookieClicker/JavaScriptGrandmaCount.lean",
+      "sha256": "2dbf9c66876f3643e6c8ab7e2d244087d7c1b2492a6eefb4d5c7a4c0406b0102"
+    },
+    {
+      "path": "lean/CookieClicker/JavaScriptGrandmaCountRegistry.lean",
+      "sha256": "0301dbe9a2faa6fc3ea38c054e29d791376429609e8e2398705d8f037f537e2d"
+    },
+    {
+      "path": "lean/CookieClicker/JavaScriptGrandmaEff.lean",
+      "sha256": "23d2c2a9a82fe2089f1b1b79ab81552fa02b261e2e8e060caca8d945c4d1ce88"
+    },
+    {
+      "path": "lean/CookieClicker/JavaScriptGrandmaGuards.lean",
+      "sha256": "073d6f80f6cb9ec1179f2012c2849ba5f7d6390af586211a5918b1bdd8b368ba"
+    },
+    {
+      "path": "lean/CookieClicker/JavaScriptGrandmaLocals.lean",
+      "sha256": "0fa3b193651ee93ca0e378a7e2bd376a17f185f6348336d427e7ec2f176336c7"
+    },
+    {
+      "path": "lean/CookieClicker/JavaScriptGrandmaLoop.lean",
+      "sha256": "86978843be438aa591615c7ab9a47323ac22909928434f9412e4e30b525f87f4"
+    },
+    {
+      "path": "lean/CookieClicker/JavaScriptGrandmaMagic.lean",
+      "sha256": "3fb67620067cb7d0782035f457715f5a79286e19860ba17aed4f361a2b333578"
+    },
+    {
+      "path": "lean/CookieClicker/JavaScriptGrandmaPrefix.lean",
+      "sha256": "feec5b3a23a2d2dfb4611126befcefd17288dd74e295d57ed3767f8db65c5a48"
+    },
+    {
+      "path": "lean/CookieClicker/JavaScriptGrandmaReturn.lean",
+      "sha256": "36eb6e553ed0b968089dd49757c519138dd66802e50cb224d55e01910672ffa3"
+    },
+    {
+      "path": "lean/CookieClicker/JavaScriptGrandmaSource.lean",
+      "sha256": "13fca385bd4793dcb5de711fd50bd4680d220b881636b5b46fc4a1cb0e6c16c8"
+    },
+    {
+      "path": "lean/CookieClicker/JavaScriptGrandmaSynergies.lean",
+      "sha256": "7cf4369f2d1305f6402f2b093a0fc4b6b603f6ec55065862398bd35462e24cdc"
+    },
+    {
+      "path": "lean/CookieClicker/JavaScriptGrandmaTiered.lean",
+      "sha256": "056db562f661bf4710e6e771d8f7171b681962b07ad510c951083f1f52cb7c41"
+    },
+    {
+      "path": "lean/CookieClicker/JavaScriptHasAuraCall.lean",
+      "sha256": "ea55b129cbcb42f3d99d0a8484024727b97969d48f769cdee7e4ff582a8e1693"
+    },
+    {
+      "path": "lean/CookieClicker/JavaScriptHasBuffCall.lean",
+      "sha256": "1571edc8dc3abbe5cb75ff551c52fc478868767cdd3eff532fecb4e37fc553b5"
+    },
+    {
+      "path": "lean/CookieClicker/JavaScriptHasCall.lean",
+      "sha256": "6b4676d6028464fca135f76311fd4ef9af65bdd9110f6f9b9125b3080c41ecab"
+    },
+    {
+      "path": "lean/CookieClicker/JavaScriptHasEnvironment.lean",
+      "sha256": "b91e153f2d9242eecb7607561dccfe109fc350f4625ad7c7a1e0ed7ec907e1e5"
+    },
+    {
+      "path": "lean/CookieClicker/JavaScriptHasFrame.lean",
+      "sha256": "ba157b1771e3bf13e59c451bed4fd37aee0bd3b27760ff4dc6ca2785d99ad234"
+    },
+    {
+      "path": "lean/CookieClicker/JavaScriptHasGuard.lean",
+      "sha256": "22de07b474484f84ab6f35bbdf3cca315918a550dfaffabe9c9bf2351eba1443"
+    },
+    {
+      "path": "lean/CookieClicker/JavaScriptHasInvocation.lean",
+      "sha256": "e70d8fe358324e02710c5a8627823164706ba0141ac3076d0337d4eeb69f9932"
+    },
+    {
+      "path": "lean/CookieClicker/JavaScriptHasPrelude.lean",
+      "sha256": "03378b1b170b81a5acd9dec6d641e8a515e159ff0af5e94a9af63e492029181c"
+    },
+    {
+      "path": "lean/CookieClicker/JavaScriptHeapExtension.lean",
+      "sha256": "188badfa6c5aa51eae6d0818a99723530527287fb79f5d96e7af9ee838aeeb6e"
+    },
+    {
+      "path": "lean/CookieClicker/JavaScriptHeavenlyAllocation.lean",
+      "sha256": "f35c86e41593c3c42ab96793b5b0220844f4dddeec9ca1d983b5988eba8e08c7"
+    },
+    {
+      "path": "lean/CookieClicker/JavaScriptHeavenlyAura.lean",
+      "sha256": "0c8568bb2c89cb7f3df6b77008abbc2c51ec84ad9ed73b9a50268399bfa03949"
+    },
+    {
+      "path": "lean/CookieClicker/JavaScriptHeavenlyBody.lean",
+      "sha256": "65a74a82ee9ebac0d29bffd8c567d73ec6eba7298dfb0a72b0b01d0bef1449af"
+    },
+    {
+      "path": "lean/CookieClicker/JavaScriptHeavenlyCall.lean",
+      "sha256": "0b1a452e136974cf67fa403a015f591c534e411e9f33cbb77dfcf54083ac5f20"
+    },
+    {
+      "path": "lean/CookieClicker/JavaScriptHeavenlyComplete.lean",
+      "sha256": "08eb76cf75b4c870c5894fd6189beed81a86c385419f4775cb82c080a56ce600"
+    },
+    {
+      "path": "lean/CookieClicker/JavaScriptHeavenlyGuards.lean",
+      "sha256": "9a63025f449c9ac35fea487fa7605d4993a726778ef84de0c5046c6aa14adedc"
+    },
+    {
+      "path": "lean/CookieClicker/JavaScriptHeavenlyLocals.lean",
+      "sha256": "50fd7f4399a7590f070c1c0994b1e68fe30b611347f62d73c77bb1054ae47613"
+    },
+    {
+      "path": "lean/CookieClicker/JavaScriptHeavenlySource.lean",
+      "sha256": "4600f55c4232c88be92a21869a70b2a11287cc12046802eb80dada845c1d4c44"
+    },
+    {
+      "path": "lean/CookieClicker/JavaScriptHtmlEntities.lean",
+      "sha256": "9c9d299915418dff7d8b4f87329bc7109f2fe268d5abf9efebac2886108fe5d3"
+    },
+    {
+      "path": "lean/CookieClicker/JavaScriptIdentifierPath.lean",
+      "sha256": "775f40afc6c9400f90765ef165a487090ccdf93d998f68d980f14816e40c87fc"
+    },
+    {
+      "path": "lean/CookieClicker/JavaScriptIndexBits.lean",
+      "sha256": "bd5bfa0648dd70e0c49d9086a503eff4ed04c989e2cb07fb73e00fd553eba30d"
+    },
+    {
+      "path": "lean/CookieClicker/JavaScriptLexer.lean",
+      "sha256": "a8f256a6fc07444501f7edf5461041680d5d415b50f6bc9cee11b87fe1852d71"
+    },
+    {
+      "path": "lean/CookieClicker/JavaScriptLocCall.lean",
+      "sha256": "7d68663b357bf2d00c8a78e52024794ba6c43c556285fec8cab753b18850ec42"
+    },
+    {
+      "path": "lean/CookieClicker/JavaScriptLocComplete.lean",
+      "sha256": "5763b7572d8892c926ee3d16fe16d9bf382105424de139c6bdfc1ce4a923fea3"
+    },
+    {
+      "path": "lean/CookieClicker/JavaScriptLocLocals.lean",
+      "sha256": "9d77c8871d83abbee2cf771311864dee39a3385ef65b6b4a879e36d54e0a05b7"
+    },
+    {
+      "path": "lean/CookieClicker/JavaScriptLocParseCall.lean",
+      "sha256": "c485a8d2500ad9e410cb741803bef3519edcf11d69dcb5a158b524045e9812e9"
+    },
+    {
+      "path": "lean/CookieClicker/JavaScriptLocPrefix.lean",
+      "sha256": "81c89531900f94d4984f0127dfc7e3dd6508250255ef4057e25fee237192a397"
+    },
+    {
+      "path": "lean/CookieClicker/JavaScriptLocSource.lean",
+      "sha256": "2a4e9a2f15cc67f8f21e110aabb5899321e85e5fcf551abf276ff8508c8d9f34"
+    },
+    {
+      "path": "lean/CookieClicker/JavaScriptLocSuffix.lean",
+      "sha256": "5102afbe311939a4f5190f19c183b7579b10b0969248832814527df2269c8621"
+    },
+    {
+      "path": "lean/CookieClicker/JavaScriptLocalizationSyntax.lean",
+      "sha256": "cba17d3faabd00bd6bf6bf4cbc2eb2048ea02bf690e4d6fc94e1e3c351f44320"
+    },
+    {
+      "path": "lean/CookieClicker/JavaScriptLoopArithmeticBridge.lean",
+      "sha256": "a2a0450ba080bc90979c6a67dcb3026d0dff761347d8227f6903357ee171cc6a"
+    },
+    {
+      "path": "lean/CookieClicker/JavaScriptLoopSource.lean",
+      "sha256": "fbb74595354e2410eddd91fde93cdccf3b2b091cde03a861851f7ec08a420316"
+    },
+    {
+      "path": "lean/CookieClicker/JavaScriptLoopSyntax.lean",
+      "sha256": "fb9b1ef6381971f8e426bc02c0a287a6c35a5db6c1b78650ab856479dc7ee29b"
+    },
+    {
+      "path": "lean/CookieClicker/JavaScriptLumpAge.lean",
+      "sha256": "6d90eb415518d479d92bec10325715f57d9b6fab240e7ff142909c4b755b8b85"
+    },
+    {
+      "path": "lean/CookieClicker/JavaScriptLumpChoice.lean",
+      "sha256": "047932417e17cd471a5292dcd2023eeb0d62a895dadd287ac77a9d456fde72de"
+    },
+    {
+      "path": "lean/CookieClicker/JavaScriptLumpClickPrefix.lean",
+      "sha256": "f2fa152cd5cb01bcd4f86d5d77847981d4b394810ad0be446314238d0756c214"
+    },
+    {
+      "path": "lean/CookieClicker/JavaScriptLumpEligibility.lean",
+      "sha256": "3051c4d08073f768a6edb7dcceeb838fc7d85beda2bcd4be1e240b29d89a7b9a"
+    },
+    {
+      "path": "lean/CookieClicker/JavaScriptLumpHandPicked.lean",
+      "sha256": "47718eb976489f897fea97dc21fb0604012abfcce66a616ff72c13d4db2f2aec"
+    },
+    {
+      "path": "lean/CookieClicker/JavaScriptLumpPrefix.lean",
+      "sha256": "70d34364544cb7663cec14dcc867489c1d51bb4f14768ddac177ea185821e3bc"
+    },
+    {
+      "path": "lean/CookieClicker/JavaScriptLumpSource.lean",
+      "sha256": "f96d4437016934c2cf2fe08084bd4cf07326dab3fc632fcafcb1bc5c99d4658b"
+    },
+    {
+      "path": "lean/CookieClicker/JavaScriptLumpSourceComposition.lean",
+      "sha256": "11fb603a9feae67aa3d459c6a0a0bf324105d8558b80ca11e5f70e058fdffd87"
+    },
+    {
+      "path": "lean/CookieClicker/JavaScriptLumpSyntax.lean",
+      "sha256": "784eeb6cd1dce33df1704fcd5c635e99c89e4624373463b44c00c7884b584bb1"
+    },
+    {
+      "path": "lean/CookieClicker/JavaScriptLumpWin.lean",
+      "sha256": "ff7c3cb1f092d78fe73330412436f66e08fc2e7637875f77325755cadeec0c0e"
+    },
+    {
+      "path": "lean/CookieClicker/JavaScriptMath.lean",
+      "sha256": "66d2254d4f54bf8d8329bb81bdddbe216c0f03d623a40d33485451d75bd246e6"
+    },
+    {
+      "path": "lean/CookieClicker/JavaScriptMathMemberCallTwo.lean",
+      "sha256": "4b97f2ce766378cf01a149162fc0594e210dc793724864f606f57712dbc36da2"
+    },
+    {
+      "path": "lean/CookieClicker/JavaScriptMathMinCall.lean",
+      "sha256": "fa45bdad7357e9390a01e273c0f170be47c7d1ef384e6e5faf7671e3eece0718"
+    },
+    {
+      "path": "lean/CookieClicker/JavaScriptMemberCall.lean",
+      "sha256": "b57be19af637db95287c1f70af246da9ff9ea189679663946f3357274029304a"
+    },
+    {
+      "path": "lean/CookieClicker/JavaScriptMemberCallEmpty.lean",
+      "sha256": "ebe1a2f48077c7ad315a5869b55703ed23d096cb521d21a97fe024ecde1d2dc2"
+    },
+    {
+      "path": "lean/CookieClicker/JavaScriptMemberCallTwo.lean",
+      "sha256": "ab6e853d84c2a352eeba44cfae714f929d5e4a8e37b6190c77036d39380ed376"
+    },
+    {
+      "path": "lean/CookieClicker/JavaScriptMixkeyApply.lean",
+      "sha256": "b37ee0a1a259441720052a6498ac95bf2afaf17087de53e2f87a5f31f061df93"
+    },
+    {
+      "path": "lean/CookieClicker/JavaScriptMixkeyApplyRuntime.lean",
+      "sha256": "29e10b11a64e2e4060fd399dc56e5a5e26f84c904ec56e9b36ca492c57058065"
+    },
+    {
+      "path": "lean/CookieClicker/JavaScriptMixkeyArray.lean",
+      "sha256": "0c2cf065c2d8467195b5fa99c75b05b14824b913a8574c6f1b999248c78459ff"
+    },
+    {
+      "path": "lean/CookieClicker/JavaScriptMixkeyIndex.lean",
+      "sha256": "38ac8f6079d798226ed349bdd61cbe144104ef8b769b3710e7de5ad9db5ddbbb"
+    },
+    {
+      "path": "lean/CookieClicker/JavaScriptMixkeyRetention.lean",
+      "sha256": "4bb75c1fcc22e7670368cb57b13ae98f0ad9649bcadda22f4a4a9783362f3edf"
+    },
+    {
+      "path": "lean/CookieClicker/JavaScriptMixkeyString.lean",
+      "sha256": "e2147d2b2ad3ee40c9e84e0ee232a5473267cfaab8f3fd5905905ea887df7bf1"
+    },
+    {
+      "path": "lean/CookieClicker/JavaScriptMixkeyToString.lean",
+      "sha256": "ce7a7fb2c704b37bcfb00844786918619c55dd982e69c8014b8e37dabac33a7a"
+    },
+    {
+      "path": "lean/CookieClicker/JavaScriptMixkeyToStringRuntime.lean",
+      "sha256": "16b31d367bc4e99af4e0e2129b50f0099d2481a2930a20906f99bbd3c0a37397"
+    },
+    {
+      "path": "lean/CookieClicker/JavaScriptModHookBody.lean",
+      "sha256": "4b53f3e2cc62187dd9b4e7f77f9e8a0a2f348d0f01335bf21218a90c4064d0f8"
+    },
+    {
+      "path": "lean/CookieClicker/JavaScriptModHookCall.lean",
+      "sha256": "2fce8516f7231e378e7b3a1dd4512ea159510ce40bd70f3498552fde2e583692"
+    },
+    {
+      "path": "lean/CookieClicker/JavaScriptModHookLocals.lean",
+      "sha256": "383ca77d64529112f9510788d5a383dd9760186f18b9b6dd16ef847db081ae15"
+    },
+    {
+      "path": "lean/CookieClicker/JavaScriptModHookSource.lean",
+      "sha256": "b4a4b9e29190697d672193527a33433f5e15acbd418cbe1bbf1e32f7fbb74c04"
+    },
+    {
+      "path": "lean/CookieClicker/JavaScriptMouseAllocation.lean",
+      "sha256": "cb29888e82b0772c4eb3455b093e66df8fc893042705a9569944aea04064a5f9"
+    },
+    {
+      "path": "lean/CookieClicker/JavaScriptMouseArithmeticBody.lean",
+      "sha256": "ede1ce48dc487f83e2161bcd73fa28ff3a92cdc3061d0115af0ed4d602e1cae1"
+    },
+    {
+      "path": "lean/CookieClicker/JavaScriptMouseAura.lean",
+      "sha256": "180bd223fd49e75fffdd12404c78e653da91e22cd7b0a7742492cf1ff19a65be"
+    },
+    {
+      "path": "lean/CookieClicker/JavaScriptMouseBoards.lean",
+      "sha256": "3bbc3d2a058345e7e7062cee36eb281d57587f2acfcc94ab6b7b411db6a4bd6a"
+    },
+    {
+      "path": "lean/CookieClicker/JavaScriptMouseBody.lean",
+      "sha256": "122b4a396f1693f001899171b3f7b4a2d8ad66b770de3073f02f4c58115f3a4b"
+    },
+    {
+      "path": "lean/CookieClicker/JavaScriptMouseBuff.lean",
+      "sha256": "662e174888c6ff949be60183291aa4d7d3054ddf44138f179889ac0f165559ea"
+    },
+    {
+      "path": "lean/CookieClicker/JavaScriptMouseCall.lean",
+      "sha256": "7c3bcfa93b5767007e0e100f75da897988b504bc1430ce78bd5cbfc4e826d5d4"
+    },
+    {
+      "path": "lean/CookieClicker/JavaScriptMouseComplete.lean",
+      "sha256": "ac367c0b60eaca1166d3c54b8dda773f8b950a5b065a65a7d18fe161afa97841"
+    },
+    {
+      "path": "lean/CookieClicker/JavaScriptMouseComputeCall.lean",
+      "sha256": "afe033bf9085dfdb34f25564d1c35197911a3c096c0fe1ca0c2757760d3d09df"
+    },
+    {
+      "path": "lean/CookieClicker/JavaScriptMouseCount.lean",
+      "sha256": "cb69c339191e6ffb11511ecb68f12d0afeeb0303dc81837ec77c7432545e5f96"
+    },
+    {
+      "path": "lean/CookieClicker/JavaScriptMouseCountRegistry.lean",
+      "sha256": "2db48db3e3ad7cfad893f487d9398372f3252c53c47a0067cb0b0d5dc5376b0c"
+    },
+    {
+      "path": "lean/CookieClicker/JavaScriptMouseEff.lean",
+      "sha256": "89c333f620780e5dedabd0eae1ba3e3a628c28e1454d9416111e7e4b17330166"
+    },
+    {
+      "path": "lean/CookieClicker/JavaScriptMouseEmpty.lean",
+      "sha256": "bd102aac4dc8aa8cccac586f7af790b60df89e29647ab21379378ceea0fd756a"
+    },
+    {
+      "path": "lean/CookieClicker/JavaScriptMouseGuards.lean",
+      "sha256": "ef5d52210f782b2200bbea6be2a9fc6b55ff795fb49ec17b62127e0354add98f"
+    },
+    {
+      "path": "lean/CookieClicker/JavaScriptMouseHasSum.lean",
+      "sha256": "c34847ce23a80a7cca19730271427a52c9a75f04c34c98b211ad183d947d8bf2"
+    },
+    {
+      "path": "lean/CookieClicker/JavaScriptMouseLocals.lean",
+      "sha256": "ef6c04ac163fdcbb5f9e3d6e43872d6912e4511e9454c24fe236bf2e2bb55533"
+    },
+    {
+      "path": "lean/CookieClicker/JavaScriptMouseLoop.lean",
+      "sha256": "57679013934125e4cc60b7ba04936670375b82fda2aa35465972c9b16617b806"
+    },
+    {
+      "path": "lean/CookieClicker/JavaScriptMouseMachine.lean",
+      "sha256": "699f20359012683825d8f23a53514f7b2a8dbafcca23d1f17984ce1928922a8c"
+    },
+    {
+      "path": "lean/CookieClicker/JavaScriptMouseModHook.lean",
+      "sha256": "d320440b3960705c9ee2e8fecfdb70ee8505fce2c73c820fb2815b52bf4ee7fe"
+    },
+    {
+      "path": "lean/CookieClicker/JavaScriptMouseOut.lean",
+      "sha256": "ced9dee4dad608584ce9e674cb32bec97237dc595d3b8b157ab3f577837144ee"
+    },
+    {
+      "path": "lean/CookieClicker/JavaScriptMousePrefix.lean",
+      "sha256": "3c3268e616ef2f547f2f319906d3db56f16af4e005204e6239068efbff3d04b1"
+    },
+    {
+      "path": "lean/CookieClicker/JavaScriptMouseSource.lean",
+      "sha256": "fbd9e723bdd85f34a03cb1812655cfcbf5afc8598f0b678f10ebf4e99fc0bc07"
+    },
+    {
+      "path": "lean/CookieClicker/JavaScriptMouseSubtract.lean",
+      "sha256": "a4ca2d2755e964cd259258e18c13c267f7df606a32f119ddd979377bcaeda00d"
+    },
+    {
+      "path": "lean/CookieClicker/JavaScriptNativeMemberCall.lean",
+      "sha256": "412d87358ac0f889b31cc78550d181fe73a1643bba3dc2698c6391c0040d1760"
+    },
+    {
+      "path": "lean/CookieClicker/JavaScriptNativeMixkey.lean",
+      "sha256": "2f9a73a74a90e704f709b852775119807fa650b0b47b86038074008d32e7f224"
+    },
+    {
+      "path": "lean/CookieClicker/JavaScriptNativeMixkeyCode.lean",
+      "sha256": "f9425700b5422d79d7557fa0cdf04ea75b07ccdf93e3689a3f907278afa7662d"
+    },
+    {
+      "path": "lean/CookieClicker/JavaScriptNativeMixkeyComplete.lean",
+      "sha256": "61f317d51b979eaac1d0e2fff603fb625879f79499e32a2d5969d00ab9fa58c9"
+    },
+    {
+      "path": "lean/CookieClicker/JavaScriptNativeMixkeyFinish.lean",
+      "sha256": "d3e4c2079b8c02d8e1de91be39efd1add85812cba26e186e47c2e2726ce544e1"
+    },
+    {
+      "path": "lean/CookieClicker/JavaScriptNativeMixkeyFrame.lean",
+      "sha256": "9ceda697e335b2d29f37b4a91a84d95c3aaf680089e5773a650c3ead041ad7fb"
+    },
+    {
+      "path": "lean/CookieClicker/JavaScriptNativeMixkeyIteration.lean",
+      "sha256": "67084a348c63bc6eb2abb5165ec642ce845009e3792b4e8d55654e81da2a7a92"
+    },
+    {
+      "path": "lean/CookieClicker/JavaScriptNativeMixkeyLoop.lean",
+      "sha256": "1baa76ee65e2a1945b2ade75e727b05f5bd25c4deae4c646b82e276e2e02e6f6"
+    },
+    {
+      "path": "lean/CookieClicker/JavaScriptNativeMixkeyRetention.lean",
+      "sha256": "d29be0e175e41b0cbc0cf2ff405d8677c1f8638c87a1293f0dd73bef56b6a45c"
+    },
+    {
+      "path": "lean/CookieClicker/JavaScriptNativeMixkeyReturn.lean",
+      "sha256": "a1be3cfaca2a0a4567b1992e404677b7eb4e9bfe3b941607b4f57e8574722429"
+    },
+    {
+      "path": "lean/CookieClicker/JavaScriptNativeMixkeyString.lean",
+      "sha256": "d7ce8fe2180d1db980a686cdf4055cf8a08e69c3cc355ef857b9b036aaccc690"
+    },
+    {
+      "path": "lean/CookieClicker/JavaScriptNativeMixkeyTraversal.lean",
+      "sha256": "1c119981a614b7f9b189255c48441ca065ae4f437b5cc606e8d2d02bb5ff24d8"
+    },
+    {
+      "path": "lean/CookieClicker/JavaScriptNaturalArithmetic.lean",
+      "sha256": "daaaff0fd32aa8b7df811ee7cd437881ec6bb495be91356caa490dea5047f34d"
+    },
+    {
+      "path": "lean/CookieClicker/JavaScriptNaturalRemainder.lean",
+      "sha256": "9264df675fd75e2636210761e85d40526fb95ef218a84f439809e766a3e72a0d"
+    },
+    {
+      "path": "lean/CookieClicker/JavaScriptNoteSource.lean",
+      "sha256": "9572edf3a278dd936a0f84f9606459a03c3364b9ea2f4ea033dad9ef857220cb"
+    },
+    {
+      "path": "lean/CookieClicker/JavaScriptNotificationSyntax.lean",
+      "sha256": "fa1f3bd28bd26a1d6af413e8f5da1ceb2409a1aa0c3a6466427f4a7d08a8cf14"
+    },
+    {
+      "path": "lean/CookieClicker/JavaScriptNotifyFast.lean",
+      "sha256": "7967d21d7005c6be562c4103ee6e2bf89e2b283ab9cffdfae73e4369bc5f28f7"
+    },
+    {
+      "path": "lean/CookieClicker/JavaScriptNotifyHeader.lean",
+      "sha256": "a77e03b967f016b3d1fcdba227e2b4a533539fa426170322be48c629081ae414"
+    },
+    {
+      "path": "lean/CookieClicker/JavaScriptNotifyLocals.lean",
+      "sha256": "33e93907657930a15f7ec3b723000a423e1bcfcda19dcf37ea5c29e1ea07d136"
+    },
+    {
+      "path": "lean/CookieClicker/JavaScriptNotifyQuick.lean",
+      "sha256": "e2261ff3d255db403cd12dfc6daf4e7f38dded58cf758b86cbafd30497ff6c55"
+    },
+    {
+      "path": "lean/CookieClicker/JavaScriptNotifySource.lean",
+      "sha256": "3ebd9d9c4bf4d046cb6d916b3aab75d61cada24c01f95dffc358934593ab22ac"
+    },
+    {
+      "path": "lean/CookieClicker/JavaScriptNumber.lean",
+      "sha256": "08b8bd44639fef95378f71aa50a4d2915e9ced6662ceb45eaa0c7656621b6d5d"
+    },
+    {
+      "path": "lean/CookieClicker/JavaScriptNumberString.lean",
+      "sha256": "b0083c7d15525cf30f9a74e3701a3469fa37c06be916390666a5b89a2985a726"
+    },
+    {
+      "path": "lean/CookieClicker/JavaScriptObjectBuiltins.lean",
+      "sha256": "88aabac95ec105f8291af0f9fe6b7ceb96dfcabff526ea62d4311e2374ef654c"
+    },
+    {
+      "path": "lean/CookieClicker/JavaScriptOrbsEpisode.lean",
+      "sha256": "0c64a8cf58048987cb4abe5c9c9fccc726d0333a5bd52a2107cbe5dd1d87e67f"
+    },
+    {
+      "path": "lean/CookieClicker/JavaScriptOrbsSchema.lean",
+      "sha256": "b964277cc6cdc22ab8a297ce151d01edc858ad55986cea7d4acbd4f61f5755cd"
+    },
+    {
+      "path": "lean/CookieClicker/JavaScriptOrbsSelection.lean",
+      "sha256": "e1469871c9cbf639386d68d14ac67ea9c6d3e5927f4e4089f39b48381a1c0b1b"
+    },
+    {
+      "path": "lean/CookieClicker/JavaScriptOrbsSyntax.lean",
+      "sha256": "1497c9e94f375a46e9da0aea0721b69830b4e369b6c67e71f68352027c5697cb"
+    },
+    {
+      "path": "lean/CookieClicker/JavaScriptPantheonBody.lean",
+      "sha256": "4d9485f3d29213a76f24dd51275d44baee1b6cf7ef943e0f2903afa820ed4c88"
+    },
+    {
+      "path": "lean/CookieClicker/JavaScriptPantheonCall.lean",
+      "sha256": "6c6455c593f85998be746593f5245e1dea84ceb0d08ce1810f3f297b43eef733"
+    },
+    {
+      "path": "lean/CookieClicker/JavaScriptPantheonLocals.lean",
+      "sha256": "e05cedacac54bf4a5d530d44809695b69b73db3dba8357f3c0aadda80c20ad67"
+    },
+    {
+      "path": "lean/CookieClicker/JavaScriptPantheonRead.lean",
+      "sha256": "0d0817a06eb989aec6145e95ce4f9e66d8faef261cdffaaaf76c623554d5134c"
+    },
+    {
+      "path": "lean/CookieClicker/JavaScriptPantheonRuinCall.lean",
+      "sha256": "016c02694f4d057f88afcc8eac0114815cc6ffba3165387f516bbbfe74489a61"
+    },
+    {
+      "path": "lean/CookieClicker/JavaScriptPantheonSource.lean",
+      "sha256": "70a2e849abdd45e98ba31d69b9c9769b978975f0a4c8f181d93e9eb5903e0d73"
+    },
+    {
+      "path": "lean/CookieClicker/JavaScriptParseLocBody.lean",
+      "sha256": "8581c6fb26c42aefebe1acfa07e46f8a691358ea8ab3317a715b032357d31bde"
+    },
+    {
+      "path": "lean/CookieClicker/JavaScriptParseLocCall.lean",
+      "sha256": "824ececfe47df957a7b4310f29b1dab0c12126fae0e9625e898031529d5c1c24"
+    },
+    {
+      "path": "lean/CookieClicker/JavaScriptParser.lean",
+      "sha256": "6315f4938716fdd9580350daf08a2ee9f875120cbbd397b7dea11c11b71d7ebc"
+    },
+    {
+      "path": "lean/CookieClicker/JavaScriptPriceArithmetic.lean",
+      "sha256": "6cdbe68057799a9127bb3faf2889996c14fc760deca5bb3cfb3a52303d5bf574"
+    },
+    {
+      "path": "lean/CookieClicker/JavaScriptPriceCall.lean",
+      "sha256": "4ef41ec5b82d2feb599ec5cf5451e4e1c11ddab40f98958d6db6f82e4282d6c9"
+    },
+    {
+      "path": "lean/CookieClicker/JavaScriptPriceCallRetention.lean",
+      "sha256": "ce97b11e62b9e00061274b750d06a801afbc0f2dfac25f6ac341c96a84dcdd18"
+    },
+    {
+      "path": "lean/CookieClicker/JavaScriptPriceCalls.lean",
+      "sha256": "6a9e1d7bf9b007b44691719acae54e35869d718289845bf7c9c9f83658415efb"
+    },
+    {
+      "path": "lean/CookieClicker/JavaScriptPriceComplete.lean",
+      "sha256": "32c760909c6b63ef76242c417f640ef6709d9719579a92d8588e1b158622e7f7"
+    },
+    {
+      "path": "lean/CookieClicker/JavaScriptPriceGod.lean",
+      "sha256": "10a8c6e1430d5cd7e90cf39d503f81de68587e82ead158a7aae2d7ca1fb86c57"
+    },
+    {
+      "path": "lean/CookieClicker/JavaScriptPriceLocals.lean",
+      "sha256": "3e527389ef38235f639e9c0c3a12d233dfe3ba3ac7bdc80c9e7928677c830213"
+    },
+    {
+      "path": "lean/CookieClicker/JavaScriptPriceRegistry.lean",
+      "sha256": "c281c6fff62f7d3fbf80f443577e9e39832b74f46b672fdc5871a784eaf92dba"
+    },
+    {
+      "path": "lean/CookieClicker/JavaScriptPriceRegistryAdvance.lean",
+      "sha256": "afdad8ad2da2a55bdf3eb5507e339c3df1b136480bef6aca9508dcf0290da8ee"
+    },
+    {
+      "path": "lean/CookieClicker/JavaScriptPriceRegistryCall.lean",
+      "sha256": "a85de95e45908a593d87a406a065bf854f398117207fdf910741860b6f27e6cc"
+    },
+    {
+      "path": "lean/CookieClicker/JavaScriptPriceRegistryComplete.lean",
+      "sha256": "ce20995204345fe8db02906c1c652701060fbbf27912145e56628391fa0b382e"
+    },
+    {
+      "path": "lean/CookieClicker/JavaScriptPriceRegistryDom.lean",
+      "sha256": "73dfb2ca5b283b1034d8c373ffefadfe971ee2a73b7bd3bf022ebfafebe5a24b"
+    },
+    {
+      "path": "lean/CookieClicker/JavaScriptPriceRegistryExecution.lean",
+      "sha256": "2280d3002f685d93c1eea6acb4168c519f78e2eef307e73b182cbc06d97d043c"
+    },
+    {
+      "path": "lean/CookieClicker/JavaScriptPriceRegistryHelpers.lean",
+      "sha256": "4b80164f0474fe17342f346b9bc9ed338c94916cf3444734c0d8ac7e5d646a6b"
+    },
+    {
+      "path": "lean/CookieClicker/JavaScriptPriceRegistryProfileWrite.lean",
+      "sha256": "c4e0e608241d611056d53c1f1d2a38d2e9eeb3f044a69d77f22a81270df16d62"
+    },
+    {
+      "path": "lean/CookieClicker/JavaScriptPriceRegistryScope.lean",
+      "sha256": "608e5d67b67b2f10af25dd151bd5846e31ae15cc042fc74e588b5492a5d7abb0"
+    },
+    {
+      "path": "lean/CookieClicker/JavaScriptPriceRegistryUpgradeWrite.lean",
+      "sha256": "214d0206683fb7fb19174a82e30de6ed5dd83e4ca22f2ae500109ffa5d4a70a6"
+    },
+    {
+      "path": "lean/CookieClicker/JavaScriptPriceRegistryWrite.lean",
+      "sha256": "807bfb11c73fa5b5b071bfdbdba4772d5092c8e71c94d0685bccdcdf4710f6e6"
+    },
+    {
+      "path": "lean/CookieClicker/JavaScriptPriceRetention.lean",
+      "sha256": "5106753675bedf7d0bc2405e3a342ebec728c2cf8b751cc7125eba63fe7e503b"
+    },
+    {
+      "path": "lean/CookieClicker/JavaScriptPriceSource.lean",
+      "sha256": "91f489485ee84394cb7eb9c92a67e7cd32037a941b506725c1af53fad74f7ffc"
+    },
+    {
+      "path": "lean/CookieClicker/JavaScriptPriceStages.lean",
+      "sha256": "aa8d904ea8835cc9f21cc82c2c47b983b9dc152b1b0ad028529d023171801c60"
+    },
+    {
+      "path": "lean/CookieClicker/JavaScriptPriceStatements.lean",
+      "sha256": "66d8047a4859263041050c28d758123ba0e0cd2726960cc471a1f60fc8c2e5eb"
+    },
+    {
+      "path": "lean/CookieClicker/JavaScriptPrivateController.lean",
+      "sha256": "b83d9a6bbe1ce5548f9f32bb86ab22f9c590c8f1a519520c18864a476f6f7390"
+    },
+    {
+      "path": "lean/CookieClicker/JavaScriptProductionArithmetic.lean",
+      "sha256": "cb658f6d59548882807699ffb76d2a06a898ccd0ddb58b7773293dbafddb4470"
+    },
+    {
+      "path": "lean/CookieClicker/JavaScriptProductionLeaf.lean",
+      "sha256": "74f04723a1a160e89b374693891b92924228dbe96d3282b939af461cb5fa9829"
+    },
+    {
+      "path": "lean/CookieClicker/JavaScriptProductionSyntax.lean",
+      "sha256": "7adac6efe0d38f06c5aa533de21276a939ebb26b65a9e4c4bddf0b8393b30db6"
+    },
+    {
+      "path": "lean/CookieClicker/JavaScriptPropertyAssign.lean",
+      "sha256": "b8894d630f372af2150ecc58f0bef852f706a6ca08fc53ad0b4fd37075011c58"
+    },
+    {
+      "path": "lean/CookieClicker/JavaScriptPropertyAssignCreate.lean",
+      "sha256": "7041f5578a5344bae22c0f945b046c3d5b98ea7ed8313fc0b297c42bbafdf307"
+    },
+    {
+      "path": "lean/CookieClicker/JavaScriptPropertyCompound.lean",
+      "sha256": "82d40a29387f9fc508faa96b538b1682fc0e9be6e7a9b756377da1fb4df306d3"
+    },
+    {
+      "path": "lean/CookieClicker/JavaScriptPropertyComputed.lean",
+      "sha256": "5eda51d223a8ec7a6542a71efb15bc27dcab24205602ab7e3a33490524c3059b"
+    },
+    {
+      "path": "lean/CookieClicker/JavaScriptPropertyCreate.lean",
+      "sha256": "15da46c9fa5e5ec5b852aa83904cda8df954b3b04e73969003125e98875045aa"
+    },
+    {
+      "path": "lean/CookieClicker/JavaScriptPropertyFrame.lean",
+      "sha256": "fa00cfbadab57139884ec1e9e0308e56417e1af01ec5c6cf1c26df6b09292367"
+    },
+    {
+      "path": "lean/CookieClicker/JavaScriptRandom.lean",
+      "sha256": "79b185e2d0bead64f023f51905baf7466d2e59129d82088d91899ebdb1193dba"
+    },
+    {
+      "path": "lean/CookieClicker/JavaScriptRandomChoiceBridge.lean",
+      "sha256": "adff515d50031658466a3ce1ea19a83d6e87f90664844c2797d8e8f7e44722b3"
+    },
+    {
+      "path": "lean/CookieClicker/JavaScriptRandomSmallChoiceBridge.lean",
+      "sha256": "0023ff51293568db3f1c72d44738132cc332962e0f3225dde91b4aef75f98032"
+    },
+    {
+      "path": "lean/CookieClicker/JavaScriptReadCombinators.lean",
+      "sha256": "1fad17b5fb9dd1b377779e2cd4b4a7fa01ac984b3605ed5f4348fed3dcf45c64"
+    },
+    {
+      "path": "lean/CookieClicker/JavaScriptRegExp.lean",
+      "sha256": "f209fa570a4567ba4c4d4c0cb0f1d53a451d728de9f92cad369d33b4a34ecf92"
+    },
+    {
+      "path": "lean/CookieClicker/JavaScriptReloadGateSource.lean",
+      "sha256": "2b9e2b49f391390a325d8d1063f3cb8161a55d8177d5a0c34486faa531b05d0c"
+    },
+    {
+      "path": "lean/CookieClicker/JavaScriptReloadGateSyntax.lean",
+      "sha256": "f8f91bf02bb29d8a95cea93e00704b0483e945cebe0548f80fba17efe6d46c87"
+    },
+    {
+      "path": "lean/CookieClicker/JavaScriptReloadGateTime.lean",
+      "sha256": "c672e3a41900f4e9c537805500a3ca9a0cfa2cc1f29cdeeef3c8dfbaccaaebf5"
+    },
+    {
+      "path": "lean/CookieClicker/JavaScriptRetainedArc4Accumulator.lean",
+      "sha256": "6b14c96fe7b16acf42cd0ce9c9dedd5304561985bf038861893d5be12e5e5c4f"
+    },
+    {
+      "path": "lean/CookieClicker/JavaScriptRetainedArc4Generate.lean",
+      "sha256": "53d3a4b60298bf23a0efcbc7e40560202f915d62968c0e77993600c891b7809d"
+    },
+    {
+      "path": "lean/CookieClicker/JavaScriptRetainedArc4GenerateBody.lean",
+      "sha256": "3e0b11f612c31fd558c83cf00091997aaa0ddc1c7250dda37cf7858b084cf5cc"
+    },
+    {
+      "path": "lean/CookieClicker/JavaScriptRetainedArc4GenerateComplete.lean",
+      "sha256": "03400a4e831084eb3ca50ee16942db3128d64cb20711233ef28b3bb84d31a1bd"
+    },
+    {
+      "path": "lean/CookieClicker/JavaScriptRetainedArc4GenerateCursor.lean",
+      "sha256": "bccb6567101b271683da40946a33d833805fe31fedea5255e6194814b4d0e731"
+    },
+    {
+      "path": "lean/CookieClicker/JavaScriptRetainedArc4GenerateGuard.lean",
+      "sha256": "163f6796a411f75827efbc5fdac1dde8a1c688ad5e5c06db9ee582c395d4096e"
+    },
+    {
+      "path": "lean/CookieClicker/JavaScriptRetainedArc4GenerateOutput.lean",
+      "sha256": "1685401ef717d03353b5cb2092ac14109d279eccab9b9365f82586268c3ca7a1"
+    },
+    {
+      "path": "lean/CookieClicker/JavaScriptRetainedArc4GenerateRead.lean",
+      "sha256": "40620d1395ddc18f7a97f19059ab91355960b555a22ddb63e09869f573a0ce51"
+    },
+    {
+      "path": "lean/CookieClicker/JavaScriptRetainedArc4GenerateRetained.lean",
+      "sha256": "00a2e0ff42fa844c6b76588717d2e57f11dc498d10e7290c1b46ad2c704a9767"
+    },
+    {
+      "path": "lean/CookieClicker/JavaScriptRetainedArc4GenerateWrites.lean",
+      "sha256": "dd3d04e2e6fbe61e1fa9404e03ab78864fc7efb6be5d44ee1ee471e457e175f2"
+    },
+    {
+      "path": "lean/CookieClicker/JavaScriptRetainedArc4GeneratorBodyComplete.lean",
+      "sha256": "d428fd133a22ee9493a8c6424630c1dcaf82704dc85944d5d611c23c8d47013a"
+    },
+    {
+      "path": "lean/CookieClicker/JavaScriptRetainedArc4GeneratorCall.lean",
+      "sha256": "6c21d2b49bd6fdf2042aa277e385a7a0527bec7e6a43b844e13ae4c95ccd0df6"
+    },
+    {
+      "path": "lean/CookieClicker/JavaScriptRetainedArc4GeneratorEntry.lean",
+      "sha256": "bcc57bdb8a73e803c1e8ad23a750fd7d2ddc5d0ddbc4701e52483ef48e23efab"
+    },
+    {
+      "path": "lean/CookieClicker/JavaScriptRetainedArc4GeneratorInitialize.lean",
+      "sha256": "a50ca42762e3aff3e427ef89fe37c7778164933f1c341c08352255b68fa4a93e"
+    },
+    {
+      "path": "lean/CookieClicker/JavaScriptRetainedArc4GeneratorLocals.lean",
+      "sha256": "51ee82a1b193ca575d2a4b00d00492611217796aa4b88686bd0f4fef1a85db51"
+    },
+    {
+      "path": "lean/CookieClicker/JavaScriptRetainedArc4GeneratorMemory.lean",
+      "sha256": "406e34f66cdffe1c48bca84607ce3d9982350b5ab790544b3862c738c4705a9d"
+    },
+    {
+      "path": "lean/CookieClicker/JavaScriptRetainedArc4GeneratorReturn.lean",
+      "sha256": "fc894d85e0787ac0b6548f1580cb7367a5658851baa465cb57735cfe3edb41f0"
+    },
+    {
+      "path": "lean/CookieClicker/JavaScriptRetainedArc4Orbit.lean",
+      "sha256": "6c686c5cff25e0d4c4f049fc947536b041002f2ca8406137cf921da49996c565"
+    },
+    {
+      "path": "lean/CookieClicker/JavaScriptRoundingBridge.lean",
+      "sha256": "0089a24b5c6fabb65b5ae45492449f37aa5a578a7c0114f9849cfd1fb99faca8"
+    },
+    {
+      "path": "lean/CookieClicker/JavaScriptRoundingOrder.lean",
+      "sha256": "bf5ef22e830fb5f79872a0c76aa35a0eb130d8d499346909dd3256c606bf3eb6"
+    },
+    {
+      "path": "lean/CookieClicker/JavaScriptScaledArithmeticBridge.lean",
+      "sha256": "8681f77f83b05054daaad747ebc3c5ed1b42dd5ab5648dfa0fefd0068c21524f"
+    },
+    {
+      "path": "lean/CookieClicker/JavaScriptScaledOrder.lean",
+      "sha256": "2e33af162bab92157605e9940115289d477bffae996f12f51dba8d965b90570e"
+    },
+    {
+      "path": "lean/CookieClicker/JavaScriptSeedRuntimeCapture.lean",
+      "sha256": "9a497da4f52c619000c28982aaec9804e60e0179e2301cc552de6a9aef8646ea"
+    },
+    {
+      "path": "lean/CookieClicker/JavaScriptSeedrandomArc4Syntax.lean",
+      "sha256": "7c9b9b1d5cdb999812783440ab4b2e3411869b059fce06b48f6cf337ac436e22"
+    },
+    {
+      "path": "lean/CookieClicker/JavaScriptSeedrandomBodyChecks.lean",
+      "sha256": "0ddcc956901c2ede76975fcecf7c665da62f964bf4b4dff3fff6932f2ecac9c4"
+    },
+    {
+      "path": "lean/CookieClicker/JavaScriptSeedrandomCapturedDraw.lean",
+      "sha256": "d641475d2301cbb08e59b1c60eb16a08341d032bf6e3f867adf7f861c1814920"
+    },
+    {
+      "path": "lean/CookieClicker/JavaScriptSeedrandomCapturedDrawEvaluation.lean",
+      "sha256": "5a008f9bcfa97bfd357254371ae55f87314ecdaf2f08daeb848588de8d0a86cf"
+    },
+    {
+      "path": "lean/CookieClicker/JavaScriptSeedrandomCapturedFrame.lean",
+      "sha256": "eaf2b9223b526529b35feeaaddf5e7d6c835c0aeb16d7f21422be7955400e10e"
+    },
+    {
+      "path": "lean/CookieClicker/JavaScriptSeedrandomCapturedInvocation.lean",
+      "sha256": "99e672008bde2f3ea2c89f26dfe7d1bd17142927ee8e40fc79e594b725c3e58f"
+    },
+    {
+      "path": "lean/CookieClicker/JavaScriptSeedrandomCapturedRuntime.lean",
+      "sha256": "df262004e87a15906256b19e82ebbb69ca6f6a6926c5da9f810378de2fcf0c43"
+    },
+    {
+      "path": "lean/CookieClicker/JavaScriptSeedrandomDrawBacking.lean",
+      "sha256": "3c3284833f787d7507ffb6a1438cff534e46402ec97964a8aa5e80b09bd2f7c8"
+    },
+    {
+      "path": "lean/CookieClicker/JavaScriptSeedrandomDrawCalls.lean",
+      "sha256": "54ecdc32204df53ba0a5edfc33ccd578d6b1042ff9e899347dd0b1cbd02df49c"
+    },
+    {
+      "path": "lean/CookieClicker/JavaScriptSeedrandomDrawComplete.lean",
+      "sha256": "2d9eacc7cef44e4a3443b43f23cb81de2c233760786dbbac74b40ae21efe73a8"
+    },
+    {
+      "path": "lean/CookieClicker/JavaScriptSeedrandomDrawCursor.lean",
+      "sha256": "be994b41a04d02f0f6502bd6bc6a4f936670760c4026062e82ea925c0b682f8c"
+    },
+    {
+      "path": "lean/CookieClicker/JavaScriptSeedrandomDrawEntry.lean",
+      "sha256": "db59c6a2f9aa66e297f130b62fa147f56aeed04e33753a4c24820896e67c912e"
+    },
+    {
+      "path": "lean/CookieClicker/JavaScriptSeedrandomDrawEvaluation.lean",
+      "sha256": "c7dc68af74a57764cd71d613f593084ced3039d0607b729d29dbe3e5645be61a"
+    },
+    {
+      "path": "lean/CookieClicker/JavaScriptSeedrandomDrawFactory.lean",
+      "sha256": "255591471aedd7bafe2f3e30e5f07773bca7e4ee9731b7c2bc742a8ec0bcad98"
+    },
+    {
+      "path": "lean/CookieClicker/JavaScriptSeedrandomDrawGenerator.lean",
+      "sha256": "cb960cb1cb3029a8e9c0a71855a951b0f44b5fb9f6df08304c41d02f5a5208e3"
+    },
+    {
+      "path": "lean/CookieClicker/JavaScriptSeedrandomDrawInspect.lean",
+      "sha256": "a49c7d4ea9e40ff079eaec4a6dd7d81ddebdbfa184f0d3f214f0cc726779d04f"
+    },
+    {
+      "path": "lean/CookieClicker/JavaScriptSeedrandomDrawInvocation.lean",
+      "sha256": "f298a10c561af4bc9da50713fe5eb3ae4714957cb410c6bd0432c79e0c1cbbe8"
+    },
+    {
+      "path": "lean/CookieClicker/JavaScriptSeedrandomDrawLocals.lean",
+      "sha256": "c199fbe0ba3b8a81ee20716e91c9ddb0d91a1c75784517b7d0683f8b91a76bb1"
+    },
+    {
+      "path": "lean/CookieClicker/JavaScriptSeedrandomDrawShrinkComplete.lean",
+      "sha256": "4578c56cbe95c876c95dd71eeb2511326086ec31822e3012812342a7a904de0a"
+    },
+    {
+      "path": "lean/CookieClicker/JavaScriptSeedrandomDrawSource.lean",
+      "sha256": "2f86ef0ca447966329f065a385e129342cd879559adc71ac6e6bf80adc721430"
+    },
+    {
+      "path": "lean/CookieClicker/JavaScriptSeedrandomDrawTermination.lean",
+      "sha256": "87f8205d2aff4416da9491f4a949bfaf274804ba4697d1f3dc3d0bfc523209a4"
+    },
+    {
+      "path": "lean/CookieClicker/JavaScriptSeedrandomEntropyMixing.lean",
+      "sha256": "8afd3f0cd9b41516dc62756978acc65ecc363f8044a573c184b9d870f2b34e07"
+    },
+    {
+      "path": "lean/CookieClicker/JavaScriptSeedrandomEntropyPrefix.lean",
+      "sha256": "2913410356a37c9bf8b420116abb7d9153dfe5af78e7a9ddfce9b01f660be1a3"
+    },
+    {
+      "path": "lean/CookieClicker/JavaScriptSeedrandomEntropyString.lean",
+      "sha256": "8b5943b5022a6000af7bfa628cb35f72f5689ddf35991fe3f2a45dc097b92778"
+    },
+    {
+      "path": "lean/CookieClicker/JavaScriptSeedrandomEntry.lean",
+      "sha256": "da44fee61b7e63f12e06d34e0c9964ec418511b533475862a044c5300afd4e42"
+    },
+    {
+      "path": "lean/CookieClicker/JavaScriptSeedrandomFlatten.lean",
+      "sha256": "4021959c19abe67cdd1acfd1ff1f9364aceda8e2dc376bc1a1cdc87d84df8c12"
+    },
+    {
+      "path": "lean/CookieClicker/JavaScriptSeedrandomFrameInspection.lean",
+      "sha256": "9827242cd2b5dba8f7cb0c4038f5f34a61c77310444380bf1d70cece65fd7c9f"
+    },
+    {
+      "path": "lean/CookieClicker/JavaScriptSeedrandomFrameTransport.lean",
+      "sha256": "8c83370656a54371212278ed7b59ed40213ba5a4eb05ab67bd9f2f35d469bb33"
+    },
+    {
+      "path": "lean/CookieClicker/JavaScriptSeedrandomInvocation.lean",
+      "sha256": "93b0ac0d40b22e7d808cfd97401bb17d55136c8a6b328d7f8f1974ea740f5b0b"
+    },
+    {
+      "path": "lean/CookieClicker/JavaScriptSeedrandomMixkeySyntax.lean",
+      "sha256": "8271d26732ae422fd76000eb7bcb2b8d34a43897646f0ccaccc417c6fdcd129d"
+    },
+    {
+      "path": "lean/CookieClicker/JavaScriptSeedrandomNativeInspect.lean",
+      "sha256": "de03fbaf16c977b0f7cdd7716bbba8cd75e3fdb6711bc43a0a1bdd100e64cc74"
+    },
+    {
+      "path": "lean/CookieClicker/JavaScriptSeedrandomNormalizationArithmetic.lean",
+      "sha256": "cce2c9a9df967067fe2c261f71d74a2f51478f7b38d25599e2284d085f1da238"
+    },
+    {
+      "path": "lean/CookieClicker/JavaScriptSeedrandomNormalizationGuards.lean",
+      "sha256": "50fd39d65d4df78c72a5e099bed92b350fdced8d3915b894f5deb5896784d0f2"
+    },
+    {
+      "path": "lean/CookieClicker/JavaScriptSeedrandomNormalizationLoops.lean",
+      "sha256": "f66f89685325b4018dfcbc004d627ad5628c9454562b28849d5c93db43751ca9"
+    },
+    {
+      "path": "lean/CookieClicker/JavaScriptSeedrandomPoolInspector.lean",
+      "sha256": "8bc1336ae086b99f9fa46495a2e625203fa53d04ae220e340674a8db996df1ee"
+    },
+    {
+      "path": "lean/CookieClicker/JavaScriptSeedrandomRandomClosure.lean",
+      "sha256": "ff764d3c75b0795bf2bbc242d7ebfa62f70affccc338b21600242befdf9cffb6"
+    },
+    {
+      "path": "lean/CookieClicker/JavaScriptSeedrandomReset.lean",
+      "sha256": "b21aae4276122e8ffd85d034b10793e316258cbfbe17b00e6f26b52e2007fe2c"
+    },
+    {
+      "path": "lean/CookieClicker/JavaScriptSeedrandomReturnP.lean",
+      "sha256": "5cef298ef5f0ac49014a47bd3ce28462b7d7840d0c0afb8611c6550ea5ba73d1"
+    },
+    {
+      "path": "lean/CookieClicker/JavaScriptSeedrandomSetup.lean",
+      "sha256": "e58421f73fef59026473c63e68ffab0a40bf85acdc727ad7c7b99ad4cada7c84"
+    },
+    {
+      "path": "lean/CookieClicker/JavaScriptSeedrandomSetupComplete.lean",
+      "sha256": "9c914a0fe720df5982a5a8e11345d2132f987e6fb6de279f2378a8d542987dd6"
+    },
+    {
+      "path": "lean/CookieClicker/JavaScriptSeedrandomSetupFinish.lean",
+      "sha256": "2f4c9bac5030a10c88f5344ac6092d8c8d5d63fd783969b25269353c1ba1a94a"
+    },
+    {
+      "path": "lean/CookieClicker/JavaScriptSeedrandomSetupLocals.lean",
+      "sha256": "a39c546450a9fef49c7874575170641ebced76ef6b9993e3a1a9a1c6967b2535"
+    },
+    {
+      "path": "lean/CookieClicker/JavaScriptSeedrandomSource.lean",
+      "sha256": "364280efcfdc30cfb31bd11c77dde0f636c578c43179748fb3f98a08ccd4495f"
+    },
+    {
+      "path": "lean/CookieClicker/JavaScriptSeedrandomSyntax.lean",
+      "sha256": "0b6163396d40eea56adbc99c10bcbb7e36e68d02c1e371895905e8ba16f89925"
+    },
+    {
+      "path": "lean/CookieClicker/JavaScriptSourceArrayQueue.lean",
+      "sha256": "687f1ddcac6b4afdb3cb89d001814f756cfbed261b0316566847c4af7fb4585a"
+    },
+    {
+      "path": "lean/CookieClicker/JavaScriptSourceBinding.lean",
+      "sha256": "d08712651a45f718dec91524a5dc886c167439bd5d322a88d8b287fd3ca0e812"
+    },
+    {
+      "path": "lean/CookieClicker/JavaScriptSourceRead.lean",
+      "sha256": "1dcc212dff1f81b16da5c0115ce488774a7084726598ae98c29f088488933ce4"
+    },
+    {
+      "path": "lean/CookieClicker/JavaScriptState.lean",
+      "sha256": "88f780a3dd09c5f629ac1018b446324bd6d9048cdd8adc35db03e93cbe228ab5"
+    },
+    {
+      "path": "lean/CookieClicker/JavaScriptStringConstructor.lean",
+      "sha256": "bff732aa809d6c3d3ba3cc2dbff0062fb938aa38ad7c87df171c13b7b867458d"
+    },
+    {
+      "path": "lean/CookieClicker/JavaScriptStringRegExp.lean",
+      "sha256": "d00aba0b9b6eadead939077efe3f89050115d8ffe1db5b5cfb4d6af012b55b8e"
+    },
+    {
+      "path": "lean/CookieClicker/JavaScriptSynergyBody.lean",
+      "sha256": "acd94e618ab5cbf56e3278ea5935ae5af0f6d48a52fe7a29ea1e5ca739968492"
+    },
+    {
+      "path": "lean/CookieClicker/JavaScriptSyntax.lean",
+      "sha256": "0f62d79517efa5e4dd583e6dfff8760fe2bcaa77763dd94b1c1f36195d268e7d"
+    },
+    {
+      "path": "lean/CookieClicker/JavaScriptSyntaxEquality.lean",
+      "sha256": "485d6e8437a3416a276652343d3caa0529411ec07bda532ad93138248c7d8896"
+    },
+    {
+      "path": "lean/CookieClicker/JavaScriptTextControl.lean",
+      "sha256": "83c06090e85e8e10860bf7bd966b281de5f09ab1de87d0420cc0ba2666bbfde0"
+    },
+    {
+      "path": "lean/CookieClicker/JavaScriptThresholdBridge.lean",
+      "sha256": "696dca5f4715e93ee18df74a2d6a596be5bb0986fc4d7b83c033833de1d10ea6"
+    },
+    {
+      "path": "lean/CookieClicker/JavaScriptTieredAllocation.lean",
+      "sha256": "9cf622acc073f060b0a1b64c4aeb33b053319e5c0cac1f3828c247383dbef857"
+    },
+    {
+      "path": "lean/CookieClicker/JavaScriptTieredCall.lean",
+      "sha256": "80b67ef3994715fc82b587a2e81e3e5d9f5f6416385bd5432035fadd5372dfd7"
+    },
+    {
+      "path": "lean/CookieClicker/JavaScriptTieredComplete.lean",
+      "sha256": "ee008648fb5d2b258529e2a8e03c9d0b24f93c79ff85ed0a313e1b16e898094a"
+    },
+    {
+      "path": "lean/CookieClicker/JavaScriptTieredInvocation.lean",
+      "sha256": "8dd322383081c13c1209b10f372301c16f97fded9aa9e42cefdbc31289147353"
+    },
+    {
+      "path": "lean/CookieClicker/JavaScriptTieredLocals.lean",
+      "sha256": "fa960534202637e12e61531f430e0c85371c893b50fb34fc59959729ceecdc57"
+    },
+    {
+      "path": "lean/CookieClicker/JavaScriptTieredRegistry.lean",
+      "sha256": "33e12044861b7d45a05d7a930488025e0aa66c4a57b140e1d82642090477ffb7"
+    },
+    {
+      "path": "lean/CookieClicker/JavaScriptTieredSource.lean",
+      "sha256": "9fb223d59c8bb534ad14e8bd7aef351ec994b089535d6ca3b280d8f0dd3c5bb6"
+    },
+    {
+      "path": "lean/CookieClicker/JavaScriptTieredSuffix.lean",
+      "sha256": "20d0bf512afa660af0af7376669774db9eb85884a3215af79154e12a7eeb7382"
+    },
+    {
+      "path": "lean/CookieClicker/JavaScriptTimSortSyntax.lean",
+      "sha256": "84b2b36d9e262a51b04b573dbff2bc1e43681bc7ca49d095b88b5607eb37ea3c"
+    },
+    {
+      "path": "lean/CookieClicker/JavaScriptTimestampFlattenRuntime.lean",
+      "sha256": "559a210176aca93d0b86de3853d42d5dc380fa04eacb1c79a701e97631e46994"
+    },
+    {
+      "path": "lean/CookieClicker/JavaScriptTimestampIterationRuntime.lean",
+      "sha256": "337870f64e0495b6eb793e3a7453df00fa354e3deb3e724bef321ac2814b5a63"
+    },
+    {
+      "path": "lean/CookieClicker/JavaScriptTimestampMixkey.lean",
+      "sha256": "ed33addf2d8b469e0b568a23ed15065a92a39d5f2796cde64efcbe4aed2fd452"
+    },
+    {
+      "path": "lean/CookieClicker/JavaScriptTimestampMixkeyCode.lean",
+      "sha256": "583b5884c08d8c01bd4da225b603adc6fb38d7f308496ad2f6814b3d3fbaeb75"
+    },
+    {
+      "path": "lean/CookieClicker/JavaScriptTimestampMixkeyCodeRuntime.lean",
+      "sha256": "ef4d1fbbc12562b8d148a0e2af816f5786148c8f1d8fb2a35868b6090022153b"
+    },
+    {
+      "path": "lean/CookieClicker/JavaScriptTimestampMixkeyComplete.lean",
+      "sha256": "1c2739ebf2b5651814d6b6cfcd30b0e6350ddc78e64d53423c511f23c4347093"
+    },
+    {
+      "path": "lean/CookieClicker/JavaScriptTimestampMixkeyFinish.lean",
+      "sha256": "4e04a3d1d1e5a65bf9e82a9169670ff65859f2317738e82149aa26f70b6b471b"
+    },
+    {
+      "path": "lean/CookieClicker/JavaScriptTimestampMixkeyFinishRuntime.lean",
+      "sha256": "63e275e86a8a60d46341287567548c806baee4c86b672d2ef94ac7f35f115e0e"
+    },
+    {
+      "path": "lean/CookieClicker/JavaScriptTimestampMixkeyFrame.lean",
+      "sha256": "d0a1f0b130a28af07bb1ee3c6768e4ec6f934f90ab7e41b041c6ac789649d716"
+    },
+    {
+      "path": "lean/CookieClicker/JavaScriptTimestampMixkeyIteration.lean",
+      "sha256": "b025366d32515a84395471ec91eb2cc3ed13d6c3a48e3cef053ad710a673f59b"
+    },
+    {
+      "path": "lean/CookieClicker/JavaScriptTimestampMixkeyLoop.lean",
+      "sha256": "9fa369cbe9972e8f03870f7c06553da6834ede925216b17a0299e7bfdde4c611"
+    },
+    {
+      "path": "lean/CookieClicker/JavaScriptTimestampMixkeyLoopRuntime.lean",
+      "sha256": "00096cb0fbcb0fe96e9911cf27d4762b8111c5ee01cd138b910dd1c7db0ca146"
+    },
+    {
+      "path": "lean/CookieClicker/JavaScriptTimestampMixkeyReturn.lean",
+      "sha256": "90adc8324db284fc19a7eb35250855b2bb2bdda46f4bdf2be038af8e8352006a"
+    },
+    {
+      "path": "lean/CookieClicker/JavaScriptTimestampMixkeyReturnRuntime.lean",
+      "sha256": "b5a50f64ee271cc206e1413c95f40b415d3e482b708e8952dd5297a8c7f7a8ae"
+    },
+    {
+      "path": "lean/CookieClicker/JavaScriptTimestampMixkeyRuntime.lean",
+      "sha256": "a0c9381521b184b0ab1663ae6ba9d0339f7aba1ac2330c0cb8624febc2e25953"
+    },
+    {
+      "path": "lean/CookieClicker/JavaScriptTimestampMixkeyRuntimeComplete.lean",
+      "sha256": "74f5fbeaa09bd400a1fb7079d9398f3a6205353a65558e283e048c179b468fae"
+    },
+    {
+      "path": "lean/CookieClicker/JavaScriptTimestampMixkeyTraversal.lean",
+      "sha256": "58a7043d4833762407a41303fd9b4b07c5abd4e6248a407ede74678ef7315e81"
+    },
+    {
+      "path": "lean/CookieClicker/JavaScriptTimestampSeedArc4Complete.lean",
+      "sha256": "fdaf3c304008b8b72fa081051179e890dff7a8149a12b7be0704a3dd660d5f60"
+    },
+    {
+      "path": "lean/CookieClicker/JavaScriptTimestampSeedArc4Frame.lean",
+      "sha256": "0a4d79eb5f1facfa9536ab62abb083f6ebf8bbaff2a3a8b2158f3cdd288c016d"
+    },
+    {
+      "path": "lean/CookieClicker/JavaScriptTimestampSeedArc4Prelude.lean",
+      "sha256": "b87fc7c30959b75ec2571949cc9b634df502f24c46a1382c5458ad9effe49f1f"
+    },
+    {
+      "path": "lean/CookieClicker/JavaScriptTimestampSeedEntropyEntry.lean",
+      "sha256": "5ebc6790dbe6c90c8e28359c03e3d794e27cba11dba395ccd7cbb09341482325"
+    },
+    {
+      "path": "lean/CookieClicker/JavaScriptTimestampSeedEntropyFrame.lean",
+      "sha256": "6023c90da5029057acb40868f4b533143c59de370451b064a90c445cdb78f4b7"
+    },
+    {
+      "path": "lean/CookieClicker/JavaScriptTimestampSeedFlatten.lean",
+      "sha256": "9127a3f5226e637882d5cfb8b9da4d129d935d25ad6fae84b4c6656bf74391ea"
+    },
+    {
+      "path": "lean/CookieClicker/JavaScriptTimestampSeedMixing.lean",
+      "sha256": "66dd7906795670ee740a9587936affcdb2a7dbddc6102b11bddbb872f14b1cbf"
+    },
+    {
+      "path": "lean/CookieClicker/JavaScriptTimestampSeedMixingCapture.lean",
+      "sha256": "8f7dd9053f321f37fa4ef196f1dc9fe4f230ea1af838d8e94e19f801d45dabdc"
+    },
+    {
+      "path": "lean/CookieClicker/JavaScriptTimestampSeedMixingFrame.lean",
+      "sha256": "2331f49221791f7ea9f0a24b95466f002cce3b70b5622c03879326af8ff908b9"
+    },
+    {
+      "path": "lean/CookieClicker/JavaScriptTimestampSeedReturnedEnvironment.lean",
+      "sha256": "6865adc7124f3ce34001ead23a1b4ed027fbd57ad21a9ec84f52f8e28dea4dda"
+    },
+    {
+      "path": "lean/CookieClicker/JavaScriptTimestampSeedRuntime.lean",
+      "sha256": "6e9d4260e1b9722b27596a062355fc89d02ee594ef8cf6a4d237f32d4cb8a57f"
+    },
+    {
+      "path": "lean/CookieClicker/JavaScriptTimestampSeedRuntimeComplete.lean",
+      "sha256": "66f5a1568e2293f17e0a4e75cbfb6ee2ffd7ff7a26f6597a78ed67b1c5b32b67"
+    },
+    {
+      "path": "lean/CookieClicker/JavaScriptTimestampSeedRuntimeEntry.lean",
+      "sha256": "bed5c9ea7319630a13d5f7ace47cc957303a5afbce61c38d3a7c06ed5e717064"
+    },
+    {
+      "path": "lean/CookieClicker/JavaScriptTimestampSeedRuntimeSource.lean",
+      "sha256": "f3d9b92f79b57a305fc81b8938970c9fa0cc7dc3abbb3769fdef735a975a375c"
+    },
+    {
+      "path": "lean/CookieClicker/JavaScriptTimestampSeedSetup.lean",
+      "sha256": "cbcdd7126a7353ebd1b50f10290613d2b49a6a0ee42be80f18f579ba915f03b3"
+    },
+    {
+      "path": "lean/CookieClicker/JavaScriptTimestampSeedSetupFactory.lean",
+      "sha256": "27790001cf8bfdb97bfe607fe9bbb13fd370c14a86922b5fb0e105e849c9c998"
+    },
+    {
+      "path": "lean/CookieClicker/JavaScriptTimestampSeedSetupOriginalFrame.lean",
+      "sha256": "422b1e846f14631cf66dced832bf930d5bb431e02529adaf9e54267f9d294a94"
+    },
+    {
+      "path": "lean/CookieClicker/JavaScriptTimestampText.lean",
+      "sha256": "39d73d1213c43df77ce714f7fae955bd820450034cf7ef263c1c8b2e590d1e37"
+    },
+    {
+      "path": "lean/CookieClicker/JavaScriptTimestampTextSemantics.lean",
+      "sha256": "0a14c190e3a05643495edb5a0b9cc20ba6d422e907dff20757eb7caca6fbedef"
+    },
+    {
+      "path": "lean/CookieClicker/JavaScriptTimestampTraversalRuntime.lean",
+      "sha256": "66dff0c669ed6efc351c627830dff464c437b34fd5da92a9ceceffe0ccd88217"
+    },
+    {
+      "path": "lean/CookieClicker/JavaScriptTimingOrderWitness.lean",
+      "sha256": "302b387e04a7cbe2b4c1cd43c29587c2b7358fb741b81f148cdeee55bdf96d58"
+    },
+    {
+      "path": "lean/CookieClicker/JavaScriptTypeofRead.lean",
+      "sha256": "180cc9ebe3d3bafd2647878076e8701ededeaf407f9d1f8329bcb921f6754254"
+    },
+    {
+      "path": "lean/CookieClicker/JavaScriptUnicode.lean",
+      "sha256": "b782d2577533652f4867fe95421a2ca0c82d833fc6a6b329ebc1341bbc906a0e"
+    },
+    {
+      "path": "lean/CookieClicker/JavaScriptUnicodeData.lean",
+      "sha256": "8fe5173f188654bd2d8687fcbfde6a003c0fac33b5172623a98b4405966a0365"
+    },
+    {
+      "path": "lean/CookieClicker/JavaScriptUnlockAlready.lean",
+      "sha256": "372e18a8da6b18c2384123fa17106e54abb24be73e5bdd2e845d9a5f349d0016"
+    },
+    {
+      "path": "lean/CookieClicker/JavaScriptUnlockArrayAllocation.lean",
+      "sha256": "1200b70932ffd832abd0dc40fd45132a97608c4d17861ab4f9c6418cce334c64"
+    },
+    {
+      "path": "lean/CookieClicker/JavaScriptUnlockArrayBody.lean",
+      "sha256": "683c1bf935b8b0bf8e7c6236105b52158ca769efd22f3b4eb35c0131c7d7c8ee"
+    },
+    {
+      "path": "lean/CookieClicker/JavaScriptUnlockArrayCall.lean",
+      "sha256": "d02c2372a68673dd7d90f4730108aa71c064e4f82c7607ff18ac3184ce329657"
+    },
+    {
+      "path": "lean/CookieClicker/JavaScriptUnlockArrayCallWorld.lean",
+      "sha256": "cadcd479571883cdabcd9a67a5762642851936ef20471a27e8387d0a0faf1e0e"
+    },
+    {
+      "path": "lean/CookieClicker/JavaScriptUnlockArrayComplete.lean",
+      "sha256": "1a5ecbd577ab832b006712cb1ea7d4d76ef554414d45cbd29c1dcbd630a81c38"
+    },
+    {
+      "path": "lean/CookieClicker/JavaScriptUnlockArrayIteration.lean",
+      "sha256": "826d415045260019129d5c58b941ff867738bce5f3ddbed84fef9bc6ea271f8e"
+    },
+    {
+      "path": "lean/CookieClicker/JavaScriptUnlockArrayLocals.lean",
+      "sha256": "60886f1670b54d19faeeb6b6e2a3d75c5adeb49ade3f42da76144fdaba5885cf"
+    },
+    {
+      "path": "lean/CookieClicker/JavaScriptUnlockArrayLoop.lean",
+      "sha256": "38b3003e15195ae13456226e6c822118ddadc3a17a79efa36efb3840a232265e"
+    },
+    {
+      "path": "lean/CookieClicker/JavaScriptUnlockArrayPrelude.lean",
+      "sha256": "c0dbcf30cb6000ae65896634e5e3154c80dfd37a436b75de2ff7d6f29233d23c"
+    },
+    {
+      "path": "lean/CookieClicker/JavaScriptUnlockArrayWorld.lean",
+      "sha256": "df6ef02914bd74492af2e329abe7b48c29448062fc1e353c808dffd968738732"
+    },
+    {
+      "path": "lean/CookieClicker/JavaScriptUnlockEnvironment.lean",
+      "sha256": "5baf0d2457f943406d8157e3a7570c0552d581d145bdc406d2f2f21b9ca198f0"
+    },
+    {
+      "path": "lean/CookieClicker/JavaScriptUnlockFrame.lean",
+      "sha256": "dd97e415a2030c6d2a443f15ac40b37a092e13bd30686d38298c175a3a46a851"
+    },
+    {
+      "path": "lean/CookieClicker/JavaScriptUnlockInvocation.lean",
+      "sha256": "36f9c491ed684080a2f398956bfe0bfcf3400a1f801bedcb529987e7e5a0c3a3"
+    },
+    {
+      "path": "lean/CookieClicker/JavaScriptUnlockPairCall.lean",
+      "sha256": "b29210b4a2e4d5c9c3725fa889e80859f3d1dd6f8e0695c884aa5f28956d4e50"
+    },
+    {
+      "path": "lean/CookieClicker/JavaScriptUnlockPairRetained.lean",
+      "sha256": "7f88f2b319c66e139b5d9715f828843e292e22365172744ac22413154431db81"
+    },
+    {
+      "path": "lean/CookieClicker/JavaScriptUnlockPairWorld.lean",
+      "sha256": "bff74a6ee314c818e2262c5d1e3c27c74fb466d7a2424f395f1989fb4b863d0a"
+    },
+    {
+      "path": "lean/CookieClicker/JavaScriptWinAlreadyWon.lean",
+      "sha256": "ace94d3e6d4cab1c046d38a18866562325fac250415d4bb50a0325a1d52e5588"
+    },
+    {
+      "path": "lean/CookieClicker/JavaScriptWinCall.lean",
+      "sha256": "e040acf8174e2a54eea27d7bf35bc86e74c6ac87004ec85e01376a2fddf795fe"
+    },
+    {
+      "path": "lean/CookieClicker/JavaScriptWinEnvironment.lean",
+      "sha256": "6c709b5927df30671426be431c16d0c438975b9cc3c1c8369c83b8f680d19164"
+    },
+    {
+      "path": "lean/CookieClicker/JavaScriptWinFrame.lean",
+      "sha256": "df02a770d48b4385b57effe52a403ba680643b622c8427b444af05fb5ebeaa42"
+    },
+    {
+      "path": "lean/CookieClicker/JavaScriptWinInvocation.lean",
+      "sha256": "3dd88ebfba65d01263fddca539e2d082e2c73499ff3c806db0feef681a6fce20"
+    },
+    {
+      "path": "lean/CookieClicker/JavaScriptWinPrelude.lean",
+      "sha256": "9585e6ae53ef763c5e7f8634b7f788477944703bfc7652f1b13d01ad6621be15"
+    },
+    {
+      "path": "lean/CookieClicker/JavaScriptWinSyntax.lean",
+      "sha256": "4cd9b98c2916391875edb3648f2bc787df66780ddadd42465520445e27ebf985"
+    },
+    {
+      "path": "lean/CookieClicker/MarketForcingEvent.lean",
+      "sha256": "e3ff3194475e99c4604676d4c54a97d1bc6cf8b26527194aad3ca968ee6e7c10"
+    },
+    {
+      "path": "lean/CookieClicker/MarketRecurrence.lean",
+      "sha256": "cea0ed650b7c4b29f08e78cb1444511462341fd879709a54758faa56b760cb05"
+    },
+    {
+      "path": "lean/CookieClicker/NativeRngPhase.lean",
+      "sha256": "6251915efe64203db3e96e7f5f904257a6a142f2db3f84171578d39a7cd45b23"
+    },
+    {
+      "path": "lean/CookieClicker/ObservationJson.lean",
+      "sha256": "c626603f9719bfacb34f63036309d77ab6042250511b162c27d2fee7cc37ec30"
+    },
+    {
+      "path": "lean/CookieClicker/Optimal.lean",
+      "sha256": "074b0338a8a78839e0f1afbf5125e5744c5194db3c053b8071297db2ccf46a46"
+    },
+    {
+      "path": "lean/CookieClicker/PetRetry.lean",
+      "sha256": "2b5c1a906d3bfba5923bd78f1eb3fb5b3b926151d22fc3aee28e934c27a5a49c"
+    },
+    {
+      "path": "lean/CookieClicker/PolicySemantics.lean",
+      "sha256": "1477bf13d7c9c5a0880bf02bcc38ef09b2f2d05ed8778daf4977096e80cc31ea"
+    },
+    {
+      "path": "lean/CookieClicker/RandomizedHittingTime.lean",
+      "sha256": "b3b7a5454456a8b4f82a337134d220820e9ddc5643315b7d3610934f4ba68e9c"
+    },
+    {
+      "path": "lean/CookieClicker/RngPhase.lean",
+      "sha256": "8e0acfc63d2a03a902dbcbe0b40a405f22fe4f2e69cf0537e52e073c4c21321a"
+    },
+    {
+      "path": "lean/CookieClicker/SeededWitness.lean",
+      "sha256": "0acf49d32b9f3b66116b207526bc83ee2a7302fedd4781c2050bb6e09705e35b"
+    },
+    {
+      "path": "lean/CookieClicker/StartupSeed.lean",
+      "sha256": "e441c8108d58593aea23ec0247b7957db5c95d6add9a0aa83c592affeec73a32"
+    },
+    {
+      "path": "lean/CookieClicker/Stochastic.lean",
+      "sha256": "aa04410a3481023273a6a5445d9f58b926df99124e2ef727e41292ae77ce710a"
+    },
+    {
+      "path": "lean/CookieClicker/SugarClock.lean",
+      "sha256": "6e884224622c0cc54e7754bb1f17781bd1056b9b7dcea3e8704e191d5623ed2e"
+    },
+    {
+      "path": "lean/CookieClicker/Trace.lean",
+      "sha256": "767668c3ac399b6a8a9b62ff9b7bedb79523a60ec207f143b6aaaf304f79e928"
+    },
+    {
+      "path": "lean/CookieClicker/Unbounded.lean",
+      "sha256": "c6debbeb32c153eacc7e475882e0a41b2736346bbfe83d8b961bdbf0bc1807b8"
+    },
+    {
+      "path": "lean/CookieClicker/UniformRandom.lean",
+      "sha256": "ff19094be86255da7b65d488aeb5509059ea9354d98eaf5d11f0ee78cf36cf1b"
+    },
+    {
+      "path": "lean/CookieClicker/Waiting.lean",
+      "sha256": "14a85ccb48943b9f5436f958d428875f8b25729056638e68ac2bd4ca17e0bdf8"
+    }
+  ]
+}

@@ -1,0 +1,72 @@
+{
+  "sourceHashes": {
+    "main.js": "a8813ec2ee97edf5ebff6a3ce2037dcb65c08abd13c123bb92efda89b06ef4f7",
+    "minigameGarden.js": "184eacacd9325d493412dcda07f63d3a791939f83889b4349b6099d04be8e6c9",
+    "minigameMarket.js": "78538743673f3c1cd0e870a3695c77dcacd63febbe64b88f8a8fab9ea7e2863f",
+    "minigameGrimoire.js": "9efea1feb898dc9b719dd971bd27a71f083a8855b910013c524aea9b6d2a349d",
+    "minigamePantheon.js": "af08c31c4564d445cc2d1a7d101c4a63b57aa9b89991b93b8a65f4c0427573a0",
+    "base64.js": "875839c3e0c174c9358ce96923adfed6a6d2c090187a32deb35152dfac2c0e47",
+    "loc/EN.js": "ce48272a5fd5ab1f309dbb8fd7bd70188984ce14235a1d3d9215f3585101f433",
+    "index.html": "28488d9aef9bf31c4c023a0af01f0500a3b3e462b79bf7f2b09790025927a969"
+  },
+  "writes": [
+    {
+      "file": "main.js",
+      "line": 9366,
+      "path": [
+        "Game",
+        "Upgrades"
+      ],
+      "source": "Game.Upgrades={}"
+    },
+    {
+      "file": "main.js",
+      "line": 9367,
+      "path": [
+        "Game",
+        "UpgradesById"
+      ],
+      "source": "Game.UpgradesById={}"
+    },
+    {
+      "file": "main.js",
+      "line": 9368,
+      "path": [
+        "Game",
+        "UpgradesN"
+      ],
+      "source": "Game.UpgradesN=0"
+    },
+    {
+      "file": "main.js",
+      "line": 9402,
+      "path": [
+        "Game",
+        "Upgrades",
+        "*"
+      ],
+      "source": "Game.Upgrades[this.name]=this"
+    },
+    {
+      "file": "main.js",
+      "line": 9403,
+      "path": [
+        "Game",
+        "UpgradesById",
+        "*"
+      ],
+      "source": "Game.UpgradesById[this.id]=this"
+    },
+    {
+      "file": "main.js",
+      "line": 9404,
+      "path": [
+        "Game",
+        "UpgradesN"
+      ],
+      "source": "Game.UpgradesN++"
+    }
+  ],
+  "aliases": [],
+  "scope": "Direct source write and table-alias audit, not a whole-program alias or dynamic-code proof. The optimization relies on the pinned vanilla catalogue-entry/name identity contract; custom injected replacement of one entry without the native constructor is outside this contract."
+}

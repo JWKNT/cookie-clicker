@@ -1,0 +1,23 @@
+{
+  "config": {
+    "clickRate": 50,
+    "inputBatchMilliseconds": 1000,
+    "lowEffects": true,
+    "earlyFunding": {
+      "cycles": 16384,
+      "batchCycles": 249
+    },
+    "helperSetup": true
+  },
+  "environment": {
+    "randomSeed": 1,
+    "recordAudit": false,
+    "maintenanceReload": {
+      "firstMs": 604800000,
+      "everyMs": 604800000
+    }
+  },
+  "horizon": 31536000000,
+  "policySha256": "fad0bf030fe6c2d881341cb4e3cff1cebe3da8042ea1c45e22ea74d93477188c",
+  "startedAtUtc": "2026-10-31T23:36:58.290Z"
+}

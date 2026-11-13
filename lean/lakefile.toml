@@ -1,0 +1,66 @@
+name = "CookieClicker"
+version = "0.1.0"
+defaultTargets = ["CookieClicker", "completion", "tracecheck", "marketcheck", "jsnumbercheck", "jsastcheck", "jsunicodecheck", "jsregexpcheck", "jsdomsyntaxcheck", "jsencodingcheck", "jscalendarcheck", "jscompletioncheck", "jscompletionmonitorcheck", "jsparsercheck", "jscsscheck", "jscanvasmatrixcheck"]
+
+[[lean_lib]]
+name = "CookieClicker"
+
+[[lean_exe]]
+name = "completion"
+root = "CompletionMain"
+
+[[lean_exe]]
+name = "tracecheck"
+root = "TraceMain"
+
+[[lean_exe]]
+name = "marketcheck"
+root = "MarketMain"
+
+[[lean_exe]]
+name = "jsnumbercheck"
+root = "JavaScriptNumberMain"
+
+[[lean_exe]]
+name = "jsastcheck"
+root = "JavaScriptAstMain"
+
+[[lean_exe]]
+name = "jsunicodecheck"
+root = "JavaScriptUnicodeMain"
+
+[[lean_exe]]
+name = "jsregexpcheck"
+root = "JavaScriptRegExpMain"
+
+[[lean_exe]]
+name = "jsdomsyntaxcheck"
+root = "JavaScriptDomSyntaxMain"
+
+[[lean_exe]]
+name = "jsencodingcheck"
+root = "JavaScriptEncodingMain"
+
+[[lean_exe]]
+name = "jscalendarcheck"
+root = "JavaScriptCalendarMain"
+
+[[lean_exe]]
+name = "jscompletioncheck"
+root = "JavaScriptCompletionMain"
+
+[[lean_exe]]
+name = "jsparsercheck"
+root = "JavaScriptParserMain"
+
+[[lean_exe]]
+name = "jscsscheck"
+root = "JavaScriptCssMain"
+
+[[lean_exe]]
+name = "jscanvasmatrixcheck"
+root = "JavaScriptCanvasMatrixMain"
+
+[[lean_exe]]
+name = "jscompletionmonitorcheck"
+root = "JavaScriptCompletionMonitorMain"

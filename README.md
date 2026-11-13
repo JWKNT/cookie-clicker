@@ -1,11 +1,12 @@
-# Cookie Clicker: four rules and the Cookie Monster+ patcher
+# Cookie Clicker: four rules, the Cookie Monster+ patcher and an audit
 
 [Guide](https://jehlp.net/cookie-clicker/) · [Paper (PDF)](https://jehlp.net/cookie-clicker/paper.pdf) · [Download the patcher](https://jehlp.net/cookie-clicker/tools.html)
 
 This repository contains a guide to four decisions in *Cookie Clicker*, the paper with the proofs, and a
 patcher. Each decision has a rule that is exact in a small model of the game. No rule is proved for the whole
 game. The patcher installs Cookie Monster+, a version of the Cookie Monster mod that plays by these rules, in
-the Steam version of the game.
+the Steam version of the game. The repository also holds the audit of October 2026, with Lean proofs and a
+model of the game engine.
 
 | Folder | Contents |
 | --- | --- |
@@ -16,6 +17,12 @@ the Steam version of the game.
 | `patcher/` | The patcher and its double-click launchers for macOS and Windows. |
 | `mod/` | The Cookie Monster+ build that the patcher installs, with its SHA-256 manifest. |
 | `source/` | The full, readable Cookie Monster+ source and the build steps. |
+| `paper/AUDIT.md`, `paper/cookie-clicker-optimal-play.pdf` | The notes of the audit, and its report of 54 pages. |
+| `lean/` | The Lean project of the audit: 766 modules. |
+| `model/` | The game model of the audit: the completion target, an adapter for the installed game, policies and records. |
+| `tools/` | `build_release.py` for a release of the mod, and the tools of the audit. |
+| `tests/` | The tests of the page, of the paper and of the audit. |
+| `THIRD-PARTY.md` | Material from other projects, and what comes from the game. |
 
 ## Install Cookie Monster+
 
@@ -68,6 +75,50 @@ gives two examples in which a rule loses time outside its model.
 Lean 4 has checked the method for a fixed list of purchases, the example with three items and the inequality
 of rule 5. The files are in [paper/lean](paper/lean).
 
+## The audit of October 2026
+
+An audit of the first paper and of the mod ran from 29 to 31 October 2026. Its question was the least expected
+time from a new save to all normal achievements, upgrades and unlocks. Shadow achievements and some long
+sugar lump goals are not in that target. The question is open: the audit has no fastest strategy, and it has
+no proof for the whole game.
+
+The audit found claims of the first paper that had no proof. The short paper has two of its examples. It
+also corrected the mod: these corrections are in Cookie Monster+ 2.053.21.
+
+- [paper/AUDIT.md](paper/AUDIT.md) has the notes of the audit, claim by claim.
+- [paper/cookie-clicker-optimal-play.pdf](paper/cookie-clicker-optimal-play.pdf) is the report of the audit,
+  54 pages. The short paper `paper.pdf` replaces it as the paper of this repository.
+- [lean/](lean/README.md) has 766 Lean modules, for Lean 4.33.1 without Mathlib. They hold the completion
+  target of the game as a predicate, results on finite purchase models and on finite models with chance, and
+  a model of the JavaScript engine and of the browser that runs single functions of the game. Its README
+  states each result and its limit.
+- [model/](model/README.md) has the completion target: 598 normal achievements, 845 upgrades, 17 switches,
+  all 34 Garden seeds, and the last milk, which needs 600 normal achievements. It also has an adapter that
+  runs an installed copy of the game in separate storage, policies for experiments, and the records of runs.
+- `tools/` has the tools that made and checked these files.
+
+The audit reads an installed copy of Cookie Clicker 2.053 for Steam. This repository does not hold the game.
+Two records of one experiment hold the complete program of the game, and they are not here:
+[THIRD-PARTY.md](THIRD-PARTY.md) and [model/experiments/README.md](model/experiments/README.md) give the
+details.
+
+### Check the audit
+
+```sh
+npm ci
+npm ci --prefix source/cookie-monster-plus
+npm test
+cd lean && lake build
+```
+
+Three test files use a parser from the packages of the mod, so install those packages first. Without the
+game, `npm test` skips each test that needs it. On 13 November 2026, on a machine without the
+game, 148 of the 437 tests passed and 289 were skipped. `lake build` in `lean/` passed from an empty state: 1,107
+jobs in about 20 minutes on 12 processor cores.
+`npm run test:lean` runs `python3 lean/check.py --engine`, which also compares the Lean model with the
+game. It needs the game, and it did not run for this publication. The notes of the audit record its results
+of October 2026.
+
 ## Development
 
 ```sh
@@ -92,4 +143,5 @@ Lean proofs, run `lake build` in `paper/lean/` with Lean 4.33.1.
 the Cookie Monster+ changes in `source/` are under the MIT License. The build also includes jscolor 2.5.2, which
 is under the GPL 3.0 or later, so `mod/main.js` as a whole is under the GPL 3.0 or later.
 [mod/LICENSE.md](mod/LICENSE.md) lists each part. The Latin Modern Math font has its own license in
-`assets/fonts/`. No new license is granted for the other files.
+`assets/fonts/`. [THIRD-PARTY.md](THIRD-PARTY.md) lists the material from other projects in the audit folders,
+and their licenses. No new license is granted for the other files.

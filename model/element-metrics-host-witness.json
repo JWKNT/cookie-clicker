@@ -1,0 +1,55 @@
+{
+  "schema": "cookie-clicker-element-metrics-v1",
+  "versions": {
+    "node": "12.18.3",
+    "v8": "8.7.220.31-electron.0",
+    "uv": "1.38.0",
+    "zlib": "1.2.11",
+    "brotli": "1.0.7",
+    "ares": "1.16.0",
+    "modules": "85",
+    "nghttp2": "1.41.0",
+    "napi": "6",
+    "llhttp": "2.0.4",
+    "http_parser": "2.9.3",
+    "openssl": "1.1.1",
+    "icu": "67.1",
+    "unicode": "13.0",
+    "electron": "11.5.0",
+    "chrome": "87.0.4280.141"
+  },
+  "executableHash": "6d8020c65f288d375dd6307dd86a3bcbe2907efe272ee3b859998211ecfd345b",
+  "sources": [
+    {
+      "file": "model/browser-source/chromium-87/html_element.cc",
+      "url": "https://github.com/chromium/chromium/blob/87.0.4280.141/third_party/blink/renderer/core/html/html_element.cc",
+      "sha256": "254843a5cf6758ff7977118a822220c828c5bbdd83b0289143e1442612abe713"
+    },
+    {
+      "file": "model/browser-source/chromium-87/element.cc",
+      "url": "https://github.com/chromium/chromium/blob/87.0.4280.141/third_party/blink/renderer/core/dom/element.cc",
+      "sha256": "63a93ef5c8b04a21fb0ef6f674d4a72eb220b922b7e1a6fb410e7f1dfc31c7d0"
+    }
+  ],
+  "implemented": [
+    "HTMLElement offsetWidth and non-root Element clientWidth from the source-derived horizontal used-width solver, including its supported padding, border, margin and positioned-box cases",
+    "HTMLElement offsetHeight and non-root Element clientHeight from definite source-derived vertical boxes, including positioned stretch, integral padding/borders and min/max constraints",
+    "Detached known elements have no layout box and return zero",
+    "Native receiver branding and getter construction rules"
+  ],
+  "boundaries": [
+    "Root client dimensions require layout-view/viewport overflow propagation and scrollbar state; innerWidth is not substituted",
+    "Quirks and limited-quirks document modes remain explicit",
+    "Unsupported fractional CSS units, transforms, zoom, inline/replaced layout, content-dependent heights, percentage vertical edges, scrollbars and offset-parent coordinates remain explicit",
+    "Finite native comparisons do not prove a complete Chromium renderer refinement"
+  ],
+  "check": {
+    "command": "node lean/check_javascript_metrics.mjs --engine",
+    "cases": 80,
+    "passed": 80,
+    "nativeComparisons": 64,
+    "sourceFixtures": 6,
+    "gameEntryPointExecuted": false,
+    "rendererRefinementVerified": false
+  }
+}

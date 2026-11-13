@@ -1,0 +1,6357 @@
+{
+  "schema": 1,
+  "scope": "native-CSS-name-and-expansion-table-not-value-parser-or-renderer",
+  "versions": {
+    "node": "12.18.3",
+    "v8": "8.7.220.31-electron.0",
+    "uv": "1.38.0",
+    "zlib": "1.2.11",
+    "brotli": "1.0.7",
+    "ares": "1.16.0",
+    "modules": "85",
+    "nghttp2": "1.41.0",
+    "napi": "6",
+    "llhttp": "2.0.4",
+    "http_parser": "2.9.3",
+    "openssl": "1.1.1",
+    "icu": "67.1",
+    "unicode": "13.0",
+    "electron": "11.5.0",
+    "chrome": "87.0.4280.141"
+  },
+  "executableSha256": "6d8020c65f288d375dd6307dd86a3bcbe2907efe272ee3b859998211ecfd345b",
+  "gameEntryPointExecuted": false,
+  "externalNetworking": false,
+  "inspection": "Each own property of a detached empty CSS declaration is assigned the CSS-wide keyword initial. The canonical serialized name, accepted aliases and longhand property names are recorded.",
+  "properties": [
+    {
+      "javascriptName": "alignContent",
+      "cssName": "align-content",
+      "aliases": [
+        "align-content"
+      ],
+      "longhands": [
+        "align-content"
+      ],
+      "initialAccepted": true
+    },
+    {
+      "javascriptName": "alignItems",
+      "cssName": "align-items",
+      "aliases": [
+        "align-items"
+      ],
+      "longhands": [
+        "align-items"
+      ],
+      "initialAccepted": true
+    },
+    {
+      "javascriptName": "alignSelf",
+      "cssName": "align-self",
+      "aliases": [
+        "align-self"
+      ],
+      "longhands": [
+        "align-self"
+      ],
+      "initialAccepted": true
+    },
+    {
+      "javascriptName": "alignmentBaseline",
+      "cssName": "alignment-baseline",
+      "aliases": [
+        "alignment-baseline"
+      ],
+      "longhands": [
+        "alignment-baseline"
+      ],
+      "initialAccepted": true
+    },
+    {
+      "javascriptName": "all",
+      "cssName": "all",
+      "aliases": [
+        "all"
+      ],
+      "longhands": [
+        "all"
+      ],
+      "initialAccepted": true
+    },
+    {
+      "javascriptName": "animation",
+      "cssName": "animation",
+      "aliases": [
+        "animation"
+      ],
+      "longhands": [
+        "animation-duration",
+        "animation-timing-function",
+        "animation-delay",
+        "animation-iteration-count",
+        "animation-direction",
+        "animation-fill-mode",
+        "animation-play-state",
+        "animation-name"
+      ],
+      "initialAccepted": true
+    },
+    {
+      "javascriptName": "animationDelay",
+      "cssName": "animation-delay",
+      "aliases": [
+        "animation-delay"
+      ],
+      "longhands": [
+        "animation-delay"
+      ],
+      "initialAccepted": true
+    },
+    {
+      "javascriptName": "animationDirection",
+      "cssName": "animation-direction",
+      "aliases": [
+        "animation-direction"
+      ],
+      "longhands": [
+        "animation-direction"
+      ],
+      "initialAccepted": true
+    },
+    {
+      "javascriptName": "animationDuration",
+      "cssName": "animation-duration",
+      "aliases": [
+        "animation-duration"
+      ],
+      "longhands": [
+        "animation-duration"
+      ],
+      "initialAccepted": true
+    },
+    {
+      "javascriptName": "animationFillMode",
+      "cssName": "animation-fill-mode",
+      "aliases": [
+        "animation-fill-mode"
+      ],
+      "longhands": [
+        "animation-fill-mode"
+      ],
+      "initialAccepted": true
+    },
+    {
+      "javascriptName": "animationIterationCount",
+      "cssName": "animation-iteration-count",
+      "aliases": [
+        "animation-iteration-count"
+      ],
+      "longhands": [
+        "animation-iteration-count"
+      ],
+      "initialAccepted": true
+    },
+    {
+      "javascriptName": "animationName",
+      "cssName": "animation-name",
+      "aliases": [
+        "animation-name"
+      ],
+      "longhands": [
+        "animation-name"
+      ],
+      "initialAccepted": true
+    },
+    {
+      "javascriptName": "animationPlayState",
+      "cssName": "animation-play-state",
+      "aliases": [
+        "animation-play-state"
+      ],
+      "longhands": [
+        "animation-play-state"
+      ],
+      "initialAccepted": true
+    },
+    {
+      "javascriptName": "animationTimingFunction",
+      "cssName": "animation-timing-function",
+      "aliases": [
+        "animation-timing-function"
+      ],
+      "longhands": [
+        "animation-timing-function"
+      ],
+      "initialAccepted": true
+    },
+    {
+      "javascriptName": "appearance",
+      "cssName": "appearance",
+      "aliases": [
+        "appearance"
+      ],
+      "longhands": [
+        "appearance"
+      ],
+      "initialAccepted": true
+    },
+    {
+      "javascriptName": "ascentOverride",
+      "cssName": null,
+      "aliases": [],
+      "longhands": [],
+      "initialAccepted": false
+    },
+    {
+      "javascriptName": "backdropFilter",
+      "cssName": "backdrop-filter",
+      "aliases": [
+        "backdrop-filter"
+      ],
+      "longhands": [
+        "backdrop-filter"
+      ],
+      "initialAccepted": true
+    },
+    {
+      "javascriptName": "backfaceVisibility",
+      "cssName": "backface-visibility",
+      "aliases": [
+        "backface-visibility"
+      ],
+      "longhands": [
+        "backface-visibility"
+      ],
+      "initialAccepted": true
+    },
+    {
+      "javascriptName": "background",
+      "cssName": "background",
+      "aliases": [
+        "background"
+      ],
+      "longhands": [
+        "background-image",
+        "background-position-x",
+        "background-position-y",
+        "background-size",
+        "background-repeat-x",
+        "background-repeat-y",
+        "background-attachment",
+        "background-origin",
+        "background-clip",
+        "background-color"
+      ],
+      "initialAccepted": true
+    },
+    {
+      "javascriptName": "backgroundAttachment",
+      "cssName": "background-attachment",
+      "aliases": [
+        "background-attachment"
+      ],
+      "longhands": [
+        "background-attachment"
+      ],
+      "initialAccepted": true
+    },
+    {
+      "javascriptName": "backgroundBlendMode",
+      "cssName": "background-blend-mode",
+      "aliases": [
+        "background-blend-mode"
+      ],
+      "longhands": [
+        "background-blend-mode"
+      ],
+      "initialAccepted": true
+    },
+    {
+      "javascriptName": "backgroundClip",
+      "cssName": "background-clip",
+      "aliases": [
+        "background-clip"
+      ],
+      "longhands": [
+        "background-clip"
+      ],
+      "initialAccepted": true
+    },
+    {
+      "javascriptName": "backgroundColor",
+      "cssName": "background-color",
+      "aliases": [
+        "background-color"
+      ],
+      "longhands": [
+        "background-color"
+      ],
+      "initialAccepted": true
+    },
+    {
+      "javascriptName": "backgroundImage",
+      "cssName": "background-image",
+      "aliases": [
+        "background-image"
+      ],
+      "longhands": [
+        "background-image"
+      ],
+      "initialAccepted": true
+    },
+    {
+      "javascriptName": "backgroundOrigin",
+      "cssName": "background-origin",
+      "aliases": [
+        "background-origin"
+      ],
+      "longhands": [
+        "background-origin"
+      ],
+      "initialAccepted": true
+    },
+    {
+      "javascriptName": "backgroundPosition",
+      "cssName": "background-position",
+      "aliases": [
+        "background-position"
+      ],
+      "longhands": [
+        "background-position-x",
+        "background-position-y"
+      ],
+      "initialAccepted": true
+    },
+    {
+      "javascriptName": "backgroundPositionX",
+      "cssName": "background-position-x",
+      "aliases": [
+        "background-position-x"
+      ],
+      "longhands": [
+        "background-position-x"
+      ],
+      "initialAccepted": true
+    },
+    {
+      "javascriptName": "backgroundPositionY",
+      "cssName": "background-position-y",
+      "aliases": [
+        "background-position-y"
+      ],
+      "longhands": [
+        "background-position-y"
+      ],
+      "initialAccepted": true
+    },
+    {
+      "javascriptName": "backgroundRepeat",
+      "cssName": "background-repeat",
+      "aliases": [
+        "background-repeat"
+      ],
+      "longhands": [
+        "background-repeat-x",
+        "background-repeat-y"
+      ],
+      "initialAccepted": true
+    },
+    {
+      "javascriptName": "backgroundRepeatX",
+      "cssName": "background-repeat-x",
+      "aliases": [
+        "background-repeat-x"
+      ],
+      "longhands": [
+        "background-repeat-x"
+      ],
+      "initialAccepted": true
+    },
+    {
+      "javascriptName": "backgroundRepeatY",
+      "cssName": "background-repeat-y",
+      "aliases": [
+        "background-repeat-y"
+      ],
+      "longhands": [
+        "background-repeat-y"
+      ],
+      "initialAccepted": true
+    },
+    {
+      "javascriptName": "backgroundSize",
+      "cssName": "background-size",
+      "aliases": [
+        "background-size"
+      ],
+      "longhands": [
+        "background-size"
+      ],
+      "initialAccepted": true
+    },
+    {
+      "javascriptName": "baselineShift",
+      "cssName": "baseline-shift",
+      "aliases": [
+        "baseline-shift"
+      ],
+      "longhands": [
+        "baseline-shift"
+      ],
+      "initialAccepted": true
+    },
+    {
+      "javascriptName": "blockSize",
+      "cssName": "block-size",
+      "aliases": [
+        "block-size"
+      ],
+      "longhands": [
+        "block-size"
+      ],
+      "initialAccepted": true
+    },
+    {
+      "javascriptName": "border",
+      "cssName": "border",
+      "aliases": [
+        "border"
+      ],
+      "longhands": [
+        "border-top-color",
+        "border-top-style",
+        "border-top-width",
+        "border-right-color",
+        "border-right-style",
+        "border-right-width",
+        "border-bottom-color",
+        "border-bottom-style",
+        "border-bottom-width",
+        "border-left-color",
+        "border-left-style",
+        "border-left-width",
+        "border-image-source",
+        "border-image-slice",
+        "border-image-width",
+        "border-image-outset",
+        "border-image-repeat"
+      ],
+      "initialAccepted": true
+    },
+    {
+      "javascriptName": "borderBlock",
+      "cssName": "border-block",
+      "aliases": [
+        "border-block"
+      ],
+      "longhands": [
+        "border-block-start-color",
+        "border-block-start-style",
+        "border-block-start-width",
+        "border-block-end-color",
+        "border-block-end-style",
+        "border-block-end-width"
+      ],
+      "initialAccepted": true
+    },
+    {
+      "javascriptName": "borderBlockColor",
+      "cssName": "border-block-color",
+      "aliases": [
+        "border-block-color"
+      ],
+      "longhands": [
+        "border-block-start-color",
+        "border-block-end-color"
+      ],
+      "initialAccepted": true
+    },
+    {
+      "javascriptName": "borderBlockEnd",
+      "cssName": "border-block-end",
+      "aliases": [
+        "border-block-end"
+      ],
+      "longhands": [
+        "border-block-end-width",
+        "border-block-end-style",
+        "border-block-end-color"
+      ],
+      "initialAccepted": true
+    },
+    {
+      "javascriptName": "borderBlockEndColor",
+      "cssName": "border-block-end-color",
+      "aliases": [
+        "border-block-end-color"
+      ],
+      "longhands": [
+        "border-block-end-color"
+      ],
+      "initialAccepted": true
+    },
+    {
+      "javascriptName": "borderBlockEndStyle",
+      "cssName": "border-block-end-style",
+      "aliases": [
+        "border-block-end-style"
+      ],
+      "longhands": [
+        "border-block-end-style"
+      ],
+      "initialAccepted": true
+    },
+    {
+      "javascriptName": "borderBlockEndWidth",
+      "cssName": "border-block-end-width",
+      "aliases": [
+        "border-block-end-width"
+      ],
+      "longhands": [
+        "border-block-end-width"
+      ],
+      "initialAccepted": true
+    },
+    {
+      "javascriptName": "borderBlockStart",
+      "cssName": "border-block-start",
+      "aliases": [
+        "border-block-start"
+      ],
+      "longhands": [
+        "border-block-start-width",
+        "border-block-start-style",
+        "border-block-start-color"
+      ],
+      "initialAccepted": true
+    },
+    {
+      "javascriptName": "borderBlockStartColor",
+      "cssName": "border-block-start-color",
+      "aliases": [
+        "border-block-start-color"
+      ],
+      "longhands": [
+        "border-block-start-color"
+      ],
+      "initialAccepted": true
+    },
+    {
+      "javascriptName": "borderBlockStartStyle",
+      "cssName": "border-block-start-style",
+      "aliases": [
+        "border-block-start-style"
+      ],
+      "longhands": [
+        "border-block-start-style"
+      ],
+      "initialAccepted": true
+    },
+    {
+      "javascriptName": "borderBlockStartWidth",
+      "cssName": "border-block-start-width",
+      "aliases": [
+        "border-block-start-width"
+      ],
+      "longhands": [
+        "border-block-start-width"
+      ],
+      "initialAccepted": true
+    },
+    {
+      "javascriptName": "borderBlockStyle",
+      "cssName": "border-block-style",
+      "aliases": [
+        "border-block-style"
+      ],
+      "longhands": [
+        "border-block-start-style",
+        "border-block-end-style"
+      ],
+      "initialAccepted": true
+    },
+    {
+      "javascriptName": "borderBlockWidth",
+      "cssName": "border-block-width",
+      "aliases": [
+        "border-block-width"
+      ],
+      "longhands": [
+        "border-block-start-width",
+        "border-block-end-width"
+      ],
+      "initialAccepted": true
+    },
+    {
+      "javascriptName": "borderBottom",
+      "cssName": "border-bottom",
+      "aliases": [
+        "border-bottom"
+      ],
+      "longhands": [
+        "border-bottom-width",
+        "border-bottom-style",
+        "border-bottom-color"
+      ],
+      "initialAccepted": true
+    },
+    {
+      "javascriptName": "borderBottomColor",
+      "cssName": "border-bottom-color",
+      "aliases": [
+        "border-bottom-color"
+      ],
+      "longhands": [
+        "border-bottom-color"
+      ],
+      "initialAccepted": true
+    },
+    {
+      "javascriptName": "borderBottomLeftRadius",
+      "cssName": "border-bottom-left-radius",
+      "aliases": [
+        "border-bottom-left-radius"
+      ],
+      "longhands": [
+        "border-bottom-left-radius"
+      ],
+      "initialAccepted": true
+    },
+    {
+      "javascriptName": "borderBottomRightRadius",
+      "cssName": "border-bottom-right-radius",
+      "aliases": [
+        "border-bottom-right-radius"
+      ],
+      "longhands": [
+        "border-bottom-right-radius"
+      ],
+      "initialAccepted": true
+    },
+    {
+      "javascriptName": "borderBottomStyle",
+      "cssName": "border-bottom-style",
+      "aliases": [
+        "border-bottom-style"
+      ],
+      "longhands": [
+        "border-bottom-style"
+      ],
+      "initialAccepted": true
+    },
+    {
+      "javascriptName": "borderBottomWidth",
+      "cssName": "border-bottom-width",
+      "aliases": [
+        "border-bottom-width"
+      ],
+      "longhands": [
+        "border-bottom-width"
+      ],
+      "initialAccepted": true
+    },
+    {
+      "javascriptName": "borderCollapse",
+      "cssName": "border-collapse",
+      "aliases": [
+        "border-collapse"
+      ],
+      "longhands": [
+        "border-collapse"
+      ],
+      "initialAccepted": true
+    },
+    {
+      "javascriptName": "borderColor",
+      "cssName": "border-color",
+      "aliases": [
+        "border-color"
+      ],
+      "longhands": [
+        "border-top-color",
+        "border-right-color",
+        "border-bottom-color",
+        "border-left-color"
+      ],
+      "initialAccepted": true
+    },
+    {
+      "javascriptName": "borderImage",
+      "cssName": "border-image",
+      "aliases": [
+        "border-image"
+      ],
+      "longhands": [
+        "border-image-source",
+        "border-image-slice",
+        "border-image-width",
+        "border-image-outset",
+        "border-image-repeat"
+      ],
+      "initialAccepted": true
+    },
+    {
+      "javascriptName": "borderImageOutset",
+      "cssName": "border-image-outset",
+      "aliases": [
+        "border-image-outset"
+      ],
+      "longhands": [
+        "border-image-outset"
+      ],
+      "initialAccepted": true
+    },
+    {
+      "javascriptName": "borderImageRepeat",
+      "cssName": "border-image-repeat",
+      "aliases": [
+        "border-image-repeat"
+      ],
+      "longhands": [
+        "border-image-repeat"
+      ],
+      "initialAccepted": true
+    },
+    {
+      "javascriptName": "borderImageSlice",
+      "cssName": "border-image-slice",
+      "aliases": [
+        "border-image-slice"
+      ],
+      "longhands": [
+        "border-image-slice"
+      ],
+      "initialAccepted": true
+    },
+    {
+      "javascriptName": "borderImageSource",
+      "cssName": "border-image-source",
+      "aliases": [
+        "border-image-source"
+      ],
+      "longhands": [
+        "border-image-source"
+      ],
+      "initialAccepted": true
+    },
+    {
+      "javascriptName": "borderImageWidth",
+      "cssName": "border-image-width",
+      "aliases": [
+        "border-image-width"
+      ],
+      "longhands": [
+        "border-image-width"
+      ],
+      "initialAccepted": true
+    },
+    {
+      "javascriptName": "borderInline",
+      "cssName": "border-inline",
+      "aliases": [
+        "border-inline"
+      ],
+      "longhands": [
+        "border-inline-start-color",
+        "border-inline-start-style",
+        "border-inline-start-width",
+        "border-inline-end-color",
+        "border-inline-end-style",
+        "border-inline-end-width"
+      ],
+      "initialAccepted": true
+    },
+    {
+      "javascriptName": "borderInlineColor",
+      "cssName": "border-inline-color",
+      "aliases": [
+        "border-inline-color"
+      ],
+      "longhands": [
+        "border-inline-start-color",
+        "border-inline-end-color"
+      ],
+      "initialAccepted": true
+    },
+    {
+      "javascriptName": "borderInlineEnd",
+      "cssName": "border-inline-end",
+      "aliases": [
+        "border-inline-end"
+      ],
+      "longhands": [
+        "border-inline-end-width",
+        "border-inline-end-style",
+        "border-inline-end-color"
+      ],
+      "initialAccepted": true
+    },
+    {
+      "javascriptName": "borderInlineEndColor",
+      "cssName": "border-inline-end-color",
+      "aliases": [
+        "border-inline-end-color"
+      ],
+      "longhands": [
+        "border-inline-end-color"
+      ],
+      "initialAccepted": true
+    },
+    {
+      "javascriptName": "borderInlineEndStyle",
+      "cssName": "border-inline-end-style",
+      "aliases": [
+        "border-inline-end-style"
+      ],
+      "longhands": [
+        "border-inline-end-style"
+      ],
+      "initialAccepted": true
+    },
+    {
+      "javascriptName": "borderInlineEndWidth",
+      "cssName": "border-inline-end-width",
+      "aliases": [
+        "border-inline-end-width"
+      ],
+      "longhands": [
+        "border-inline-end-width"
+      ],
+      "initialAccepted": true
+    },
+    {
+      "javascriptName": "borderInlineStart",
+      "cssName": "border-inline-start",
+      "aliases": [
+        "border-inline-start"
+      ],
+      "longhands": [
+        "border-inline-start-width",
+        "border-inline-start-style",
+        "border-inline-start-color"
+      ],
+      "initialAccepted": true
+    },
+    {
+      "javascriptName": "borderInlineStartColor",
+      "cssName": "border-inline-start-color",
+      "aliases": [
+        "border-inline-start-color"
+      ],
+      "longhands": [
+        "border-inline-start-color"
+      ],
+      "initialAccepted": true
+    },
+    {
+      "javascriptName": "borderInlineStartStyle",
+      "cssName": "border-inline-start-style",
+      "aliases": [
+        "border-inline-start-style"
+      ],
+      "longhands": [
+        "border-inline-start-style"
+      ],
+      "initialAccepted": true
+    },
+    {
+      "javascriptName": "borderInlineStartWidth",
+      "cssName": "border-inline-start-width",
+      "aliases": [
+        "border-inline-start-width"
+      ],
+      "longhands": [
+        "border-inline-start-width"
+      ],
+      "initialAccepted": true
+    },
+    {
+      "javascriptName": "borderInlineStyle",
+      "cssName": "border-inline-style",
+      "aliases": [
+        "border-inline-style"
+      ],
+      "longhands": [
+        "border-inline-start-style",
+        "border-inline-end-style"
+      ],
+      "initialAccepted": true
+    },
+    {
+      "javascriptName": "borderInlineWidth",
+      "cssName": "border-inline-width",
+      "aliases": [
+        "border-inline-width"
+      ],
+      "longhands": [
+        "border-inline-start-width",
+        "border-inline-end-width"
+      ],
+      "initialAccepted": true
+    },
+    {
+      "javascriptName": "borderLeft",
+      "cssName": "border-left",
+      "aliases": [
+        "border-left"
+      ],
+      "longhands": [
+        "border-left-width",
+        "border-left-style",
+        "border-left-color"
+      ],
+      "initialAccepted": true
+    },
+    {
+      "javascriptName": "borderLeftColor",
+      "cssName": "border-left-color",
+      "aliases": [
+        "border-left-color"
+      ],
+      "longhands": [
+        "border-left-color"
+      ],
+      "initialAccepted": true
+    },
+    {
+      "javascriptName": "borderLeftStyle",
+      "cssName": "border-left-style",
+      "aliases": [
+        "border-left-style"
+      ],
+      "longhands": [
+        "border-left-style"
+      ],
+      "initialAccepted": true
+    },
+    {
+      "javascriptName": "borderLeftWidth",
+      "cssName": "border-left-width",
+      "aliases": [
+        "border-left-width"
+      ],
+      "longhands": [
+        "border-left-width"
+      ],
+      "initialAccepted": true
+    },
+    {
+      "javascriptName": "borderRadius",
+      "cssName": "border-radius",
+      "aliases": [
+        "border-radius"
+      ],
+      "longhands": [
+        "border-top-left-radius",
+        "border-top-right-radius",
+        "border-bottom-right-radius",
+        "border-bottom-left-radius"
+      ],
+      "initialAccepted": true
+    },
+    {
+      "javascriptName": "borderRight",
+      "cssName": "border-right",
+      "aliases": [
+        "border-right"
+      ],
+      "longhands": [
+        "border-right-width",
+        "border-right-style",
+        "border-right-color"
+      ],
+      "initialAccepted": true
+    },
+    {
+      "javascriptName": "borderRightColor",
+      "cssName": "border-right-color",
+      "aliases": [
+        "border-right-color"
+      ],
+      "longhands": [
+        "border-right-color"
+      ],
+      "initialAccepted": true
+    },
+    {
+      "javascriptName": "borderRightStyle",
+      "cssName": "border-right-style",
+      "aliases": [
+        "border-right-style"
+      ],
+      "longhands": [
+        "border-right-style"
+      ],
+      "initialAccepted": true
+    },
+    {
+      "javascriptName": "borderRightWidth",
+      "cssName": "border-right-width",
+      "aliases": [
+        "border-right-width"
+      ],
+      "longhands": [
+        "border-right-width"
+      ],
+      "initialAccepted": true
+    },
+    {
+      "javascriptName": "borderSpacing",
+      "cssName": "border-spacing",
+      "aliases": [
+        "border-spacing"
+      ],
+      "longhands": [
+        "-webkit-border-horizontal-spacing",
+        "-webkit-border-vertical-spacing"
+      ],
+      "initialAccepted": true
+    },
+    {
+      "javascriptName": "borderStyle",
+      "cssName": "border-style",
+      "aliases": [
+        "border-style"
+      ],
+      "longhands": [
+        "border-top-style",
+        "border-right-style",
+        "border-bottom-style",
+        "border-left-style"
+      ],
+      "initialAccepted": true
+    },
+    {
+      "javascriptName": "borderTop",
+      "cssName": "border-top",
+      "aliases": [
+        "border-top"
+      ],
+      "longhands": [
+        "border-top-width",
+        "border-top-style",
+        "border-top-color"
+      ],
+      "initialAccepted": true
+    },
+    {
+      "javascriptName": "borderTopColor",
+      "cssName": "border-top-color",
+      "aliases": [
+        "border-top-color"
+      ],
+      "longhands": [
+        "border-top-color"
+      ],
+      "initialAccepted": true
+    },
+    {
+      "javascriptName": "borderTopLeftRadius",
+      "cssName": "border-top-left-radius",
+      "aliases": [
+        "border-top-left-radius"
+      ],
+      "longhands": [
+        "border-top-left-radius"
+      ],
+      "initialAccepted": true
+    },
+    {
+      "javascriptName": "borderTopRightRadius",
+      "cssName": "border-top-right-radius",
+      "aliases": [
+        "border-top-right-radius"
+      ],
+      "longhands": [
+        "border-top-right-radius"
+      ],
+      "initialAccepted": true
+    },
+    {
+      "javascriptName": "borderTopStyle",
+      "cssName": "border-top-style",
+      "aliases": [
+        "border-top-style"
+      ],
+      "longhands": [
+        "border-top-style"
+      ],
+      "initialAccepted": true
+    },
+    {
+      "javascriptName": "borderTopWidth",
+      "cssName": "border-top-width",
+      "aliases": [
+        "border-top-width"
+      ],
+      "longhands": [
+        "border-top-width"
+      ],
+      "initialAccepted": true
+    },
+    {
+      "javascriptName": "borderWidth",
+      "cssName": "border-width",
+      "aliases": [
+        "border-width"
+      ],
+      "longhands": [
+        "border-top-width",
+        "border-right-width",
+        "border-bottom-width",
+        "border-left-width"
+      ],
+      "initialAccepted": true
+    },
+    {
+      "javascriptName": "bottom",
+      "cssName": "bottom",
+      "aliases": [
+        "bottom"
+      ],
+      "longhands": [
+        "bottom"
+      ],
+      "initialAccepted": true
+    },
+    {
+      "javascriptName": "boxShadow",
+      "cssName": "box-shadow",
+      "aliases": [
+        "box-shadow"
+      ],
+      "longhands": [
+        "box-shadow"
+      ],
+      "initialAccepted": true
+    },
+    {
+      "javascriptName": "boxSizing",
+      "cssName": "box-sizing",
+      "aliases": [
+        "box-sizing"
+      ],
+      "longhands": [
+        "box-sizing"
+      ],
+      "initialAccepted": true
+    },
+    {
+      "javascriptName": "breakAfter",
+      "cssName": "break-after",
+      "aliases": [
+        "break-after"
+      ],
+      "longhands": [
+        "break-after"
+      ],
+      "initialAccepted": true
+    },
+    {
+      "javascriptName": "breakBefore",
+      "cssName": "break-before",
+      "aliases": [
+        "break-before"
+      ],
+      "longhands": [
+        "break-before"
+      ],
+      "initialAccepted": true
+    },
+    {
+      "javascriptName": "breakInside",
+      "cssName": "break-inside",
+      "aliases": [
+        "break-inside"
+      ],
+      "longhands": [
+        "break-inside"
+      ],
+      "initialAccepted": true
+    },
+    {
+      "javascriptName": "bufferedRendering",
+      "cssName": "buffered-rendering",
+      "aliases": [
+        "buffered-rendering"
+      ],
+      "longhands": [
+        "buffered-rendering"
+      ],
+      "initialAccepted": true
+    },
+    {
+      "javascriptName": "captionSide",
+      "cssName": "caption-side",
+      "aliases": [
+        "caption-side"
+      ],
+      "longhands": [
+        "caption-side"
+      ],
+      "initialAccepted": true
+    },
+    {
+      "javascriptName": "caretColor",
+      "cssName": "caret-color",
+      "aliases": [
+        "caret-color"
+      ],
+      "longhands": [
+        "caret-color"
+      ],
+      "initialAccepted": true
+    },
+    {
+      "javascriptName": "clear",
+      "cssName": "clear",
+      "aliases": [
+        "clear"
+      ],
+      "longhands": [
+        "clear"
+      ],
+      "initialAccepted": true
+    },
+    {
+      "javascriptName": "clip",
+      "cssName": "clip",
+      "aliases": [
+        "clip"
+      ],
+      "longhands": [
+        "clip"
+      ],
+      "initialAccepted": true
+    },
+    {
+      "javascriptName": "clipPath",
+      "cssName": "clip-path",
+      "aliases": [
+        "clip-path"
+      ],
+      "longhands": [
+        "clip-path"
+      ],
+      "initialAccepted": true
+    },
+    {
+      "javascriptName": "clipRule",
+      "cssName": "clip-rule",
+      "aliases": [
+        "clip-rule"
+      ],
+      "longhands": [
+        "clip-rule"
+      ],
+      "initialAccepted": true
+    },
+    {
+      "javascriptName": "color",
+      "cssName": "color",
+      "aliases": [
+        "color"
+      ],
+      "longhands": [
+        "color"
+      ],
+      "initialAccepted": true
+    },
+    {
+      "javascriptName": "colorInterpolation",
+      "cssName": "color-interpolation",
+      "aliases": [
+        "color-interpolation"
+      ],
+      "longhands": [
+        "color-interpolation"
+      ],
+      "initialAccepted": true
+    },
+    {
+      "javascriptName": "colorInterpolationFilters",
+      "cssName": "color-interpolation-filters",
+      "aliases": [
+        "color-interpolation-filters"
+      ],
+      "longhands": [
+        "color-interpolation-filters"
+      ],
+      "initialAccepted": true
+    },
+    {
+      "javascriptName": "colorRendering",
+      "cssName": "color-rendering",
+      "aliases": [
+        "color-rendering"
+      ],
+      "longhands": [
+        "color-rendering"
+      ],
+      "initialAccepted": true
+    },
+    {
+      "javascriptName": "colorScheme",
+      "cssName": "color-scheme",
+      "aliases": [
+        "color-scheme"
+      ],
+      "longhands": [
+        "color-scheme"
+      ],
+      "initialAccepted": true
+    },
+    {
+      "javascriptName": "columnCount",
+      "cssName": "column-count",
+      "aliases": [
+        "column-count"
+      ],
+      "longhands": [
+        "column-count"
+      ],
+      "initialAccepted": true
+    },
+    {
+      "javascriptName": "columnFill",
+      "cssName": "column-fill",
+      "aliases": [
+        "column-fill"
+      ],
+      "longhands": [
+        "column-fill"
+      ],
+      "initialAccepted": true
+    },
+    {
+      "javascriptName": "columnGap",
+      "cssName": "column-gap",
+      "aliases": [
+        "column-gap"
+      ],
+      "longhands": [
+        "column-gap"
+      ],
+      "initialAccepted": true
+    },
+    {
+      "javascriptName": "columnRule",
+      "cssName": "column-rule",
+      "aliases": [
+        "column-rule"
+      ],
+      "longhands": [
+        "column-rule-width",
+        "column-rule-style",
+        "column-rule-color"
+      ],
+      "initialAccepted": true
+    },
+    {
+      "javascriptName": "columnRuleColor",
+      "cssName": "column-rule-color",
+      "aliases": [
+        "column-rule-color"
+      ],
+      "longhands": [
+        "column-rule-color"
+      ],
+      "initialAccepted": true
+    },
+    {
+      "javascriptName": "columnRuleStyle",
+      "cssName": "column-rule-style",
+      "aliases": [
+        "column-rule-style"
+      ],
+      "longhands": [
+        "column-rule-style"
+      ],
+      "initialAccepted": true
+    },
+    {
+      "javascriptName": "columnRuleWidth",
+      "cssName": "column-rule-width",
+      "aliases": [
+        "column-rule-width"
+      ],
+      "longhands": [
+        "column-rule-width"
+      ],
+      "initialAccepted": true
+    },
+    {
+      "javascriptName": "columnSpan",
+      "cssName": "column-span",
+      "aliases": [
+        "column-span"
+      ],
+      "longhands": [
+        "column-span"
+      ],
+      "initialAccepted": true
+    },
+    {
+      "javascriptName": "columnWidth",
+      "cssName": "column-width",
+      "aliases": [
+        "column-width"
+      ],
+      "longhands": [
+        "column-width"
+      ],
+      "initialAccepted": true
+    },
+    {
+      "javascriptName": "columns",
+      "cssName": "columns",
+      "aliases": [
+        "columns"
+      ],
+      "longhands": [
+        "column-width",
+        "column-count"
+      ],
+      "initialAccepted": true
+    },
+    {
+      "javascriptName": "contain",
+      "cssName": "contain",
+      "aliases": [
+        "contain"
+      ],
+      "longhands": [
+        "contain"
+      ],
+      "initialAccepted": true
+    },
+    {
+      "javascriptName": "containIntrinsicSize",
+      "cssName": "contain-intrinsic-size",
+      "aliases": [
+        "contain-intrinsic-size"
+      ],
+      "longhands": [
+        "contain-intrinsic-size"
+      ],
+      "initialAccepted": true
+    },
+    {
+      "javascriptName": "content",
+      "cssName": "content",
+      "aliases": [
+        "content"
+      ],
+      "longhands": [
+        "content"
+      ],
+      "initialAccepted": true
+    },
+    {
+      "javascriptName": "contentVisibility",
+      "cssName": "content-visibility",
+      "aliases": [
+        "content-visibility"
+      ],
+      "longhands": [
+        "content-visibility"
+      ],
+      "initialAccepted": true
+    },
+    {
+      "javascriptName": "counterIncrement",
+      "cssName": "counter-increment",
+      "aliases": [
+        "counter-increment"
+      ],
+      "longhands": [
+        "counter-increment"
+      ],
+      "initialAccepted": true
+    },
+    {
+      "javascriptName": "counterReset",
+      "cssName": "counter-reset",
+      "aliases": [
+        "counter-reset"
+      ],
+      "longhands": [
+        "counter-reset"
+      ],
+      "initialAccepted": true
+    },
+    {
+      "javascriptName": "counterSet",
+      "cssName": "counter-set",
+      "aliases": [
+        "counter-set"
+      ],
+      "longhands": [
+        "counter-set"
+      ],
+      "initialAccepted": true
+    },
+    {
+      "javascriptName": "cursor",
+      "cssName": "cursor",
+      "aliases": [
+        "cursor"
+      ],
+      "longhands": [
+        "cursor"
+      ],
+      "initialAccepted": true
+    },
+    {
+      "javascriptName": "cx",
+      "cssName": "cx",
+      "aliases": [
+        "cx"
+      ],
+      "longhands": [
+        "cx"
+      ],
+      "initialAccepted": true
+    },
+    {
+      "javascriptName": "cy",
+      "cssName": "cy",
+      "aliases": [
+        "cy"
+      ],
+      "longhands": [
+        "cy"
+      ],
+      "initialAccepted": true
+    },
+    {
+      "javascriptName": "d",
+      "cssName": "d",
+      "aliases": [
+        "d"
+      ],
+      "longhands": [
+        "d"
+      ],
+      "initialAccepted": true
+    },
+    {
+      "javascriptName": "descentOverride",
+      "cssName": null,
+      "aliases": [],
+      "longhands": [],
+      "initialAccepted": false
+    },
+    {
+      "javascriptName": "direction",
+      "cssName": "direction",
+      "aliases": [
+        "direction"
+      ],
+      "longhands": [
+        "direction"
+      ],
+      "initialAccepted": true
+    },
+    {
+      "javascriptName": "display",
+      "cssName": "display",
+      "aliases": [
+        "display"
+      ],
+      "longhands": [
+        "display"
+      ],
+      "initialAccepted": true
+    },
+    {
+      "javascriptName": "dominantBaseline",
+      "cssName": "dominant-baseline",
+      "aliases": [
+        "dominant-baseline"
+      ],
+      "longhands": [
+        "dominant-baseline"
+      ],
+      "initialAccepted": true
+    },
+    {
+      "javascriptName": "emptyCells",
+      "cssName": "empty-cells",
+      "aliases": [
+        "empty-cells"
+      ],
+      "longhands": [
+        "empty-cells"
+      ],
+      "initialAccepted": true
+    },
+    {
+      "javascriptName": "epubCaptionSide",
+      "cssName": null,
+      "aliases": [],
+      "longhands": [],
+      "initialAccepted": false,
+      "assignedValue": "initial"
+    },
+    {
+      "javascriptName": "epubTextCombine",
+      "cssName": null,
+      "aliases": [],
+      "longhands": [],
+      "initialAccepted": false,
+      "assignedValue": "initial"
+    },
+    {
+      "javascriptName": "epubTextEmphasis",
+      "cssName": null,
+      "aliases": [],
+      "longhands": [],
+      "initialAccepted": false,
+      "assignedValue": "initial"
+    },
+    {
+      "javascriptName": "epubTextEmphasisColor",
+      "cssName": null,
+      "aliases": [],
+      "longhands": [],
+      "initialAccepted": false,
+      "assignedValue": "initial"
+    },
+    {
+      "javascriptName": "epubTextEmphasisStyle",
+      "cssName": null,
+      "aliases": [],
+      "longhands": [],
+      "initialAccepted": false,
+      "assignedValue": "initial"
+    },
+    {
+      "javascriptName": "epubTextOrientation",
+      "cssName": null,
+      "aliases": [],
+      "longhands": [],
+      "initialAccepted": false,
+      "assignedValue": "initial"
+    },
+    {
+      "javascriptName": "epubTextTransform",
+      "cssName": null,
+      "aliases": [],
+      "longhands": [],
+      "initialAccepted": false,
+      "assignedValue": "initial"
+    },
+    {
+      "javascriptName": "epubWordBreak",
+      "cssName": null,
+      "aliases": [],
+      "longhands": [],
+      "initialAccepted": false,
+      "assignedValue": "initial"
+    },
+    {
+      "javascriptName": "epubWritingMode",
+      "cssName": null,
+      "aliases": [],
+      "longhands": [],
+      "initialAccepted": false,
+      "assignedValue": "initial"
+    },
+    {
+      "javascriptName": "fill",
+      "cssName": "fill",
+      "aliases": [
+        "fill"
+      ],
+      "longhands": [
+        "fill"
+      ],
+      "initialAccepted": true
+    },
+    {
+      "javascriptName": "fillOpacity",
+      "cssName": "fill-opacity",
+      "aliases": [
+        "fill-opacity"
+      ],
+      "longhands": [
+        "fill-opacity"
+      ],
+      "initialAccepted": true
+    },
+    {
+      "javascriptName": "fillRule",
+      "cssName": "fill-rule",
+      "aliases": [
+        "fill-rule"
+      ],
+      "longhands": [
+        "fill-rule"
+      ],
+      "initialAccepted": true
+    },
+    {
+      "javascriptName": "filter",
+      "cssName": "filter",
+      "aliases": [
+        "filter"
+      ],
+      "longhands": [
+        "filter"
+      ],
+      "initialAccepted": true
+    },
+    {
+      "javascriptName": "flex",
+      "cssName": "flex",
+      "aliases": [
+        "flex"
+      ],
+      "longhands": [
+        "flex-grow",
+        "flex-shrink",
+        "flex-basis"
+      ],
+      "initialAccepted": true
+    },
+    {
+      "javascriptName": "flexBasis",
+      "cssName": "flex-basis",
+      "aliases": [
+        "flex-basis"
+      ],
+      "longhands": [
+        "flex-basis"
+      ],
+      "initialAccepted": true
+    },
+    {
+      "javascriptName": "flexDirection",
+      "cssName": "flex-direction",
+      "aliases": [
+        "flex-direction"
+      ],
+      "longhands": [
+        "flex-direction"
+      ],
+      "initialAccepted": true
+    },
+    {
+      "javascriptName": "flexFlow",
+      "cssName": "flex-flow",
+      "aliases": [
+        "flex-flow"
+      ],
+      "longhands": [
+        "flex-direction",
+        "flex-wrap"
+      ],
+      "initialAccepted": true
+    },
+    {
+      "javascriptName": "flexGrow",
+      "cssName": "flex-grow",
+      "aliases": [
+        "flex-grow"
+      ],
+      "longhands": [
+        "flex-grow"
+      ],
+      "initialAccepted": true
+    },
+    {
+      "javascriptName": "flexShrink",
+      "cssName": "flex-shrink",
+      "aliases": [
+        "flex-shrink"
+      ],
+      "longhands": [
+        "flex-shrink"
+      ],
+      "initialAccepted": true
+    },
+    {
+      "javascriptName": "flexWrap",
+      "cssName": "flex-wrap",
+      "aliases": [
+        "flex-wrap"
+      ],
+      "longhands": [
+        "flex-wrap"
+      ],
+      "initialAccepted": true
+    },
+    {
+      "javascriptName": "float",
+      "cssName": "float",
+      "aliases": [
+        "float"
+      ],
+      "longhands": [
+        "float"
+      ],
+      "initialAccepted": true
+    },
+    {
+      "javascriptName": "floodColor",
+      "cssName": "flood-color",
+      "aliases": [
+        "flood-color"
+      ],
+      "longhands": [
+        "flood-color"
+      ],
+      "initialAccepted": true
+    },
+    {
+      "javascriptName": "floodOpacity",
+      "cssName": "flood-opacity",
+      "aliases": [
+        "flood-opacity"
+      ],
+      "longhands": [
+        "flood-opacity"
+      ],
+      "initialAccepted": true
+    },
+    {
+      "javascriptName": "font",
+      "cssName": "font",
+      "aliases": [
+        "font"
+      ],
+      "longhands": [
+        "font-style",
+        "font-variant-ligatures",
+        "font-variant-caps",
+        "font-variant-numeric",
+        "font-variant-east-asian",
+        "font-weight",
+        "font-stretch",
+        "font-size",
+        "line-height",
+        "font-family"
+      ],
+      "initialAccepted": true
+    },
+    {
+      "javascriptName": "fontDisplay",
+      "cssName": null,
+      "aliases": [],
+      "longhands": [],
+      "initialAccepted": false
+    },
+    {
+      "javascriptName": "fontFamily",
+      "cssName": "font-family",
+      "aliases": [
+        "font-family"
+      ],
+      "longhands": [
+        "font-family"
+      ],
+      "initialAccepted": true
+    },
+    {
+      "javascriptName": "fontFeatureSettings",
+      "cssName": "font-feature-settings",
+      "aliases": [
+        "font-feature-settings"
+      ],
+      "longhands": [
+        "font-feature-settings"
+      ],
+      "initialAccepted": true
+    },
+    {
+      "javascriptName": "fontKerning",
+      "cssName": "font-kerning",
+      "aliases": [
+        "font-kerning"
+      ],
+      "longhands": [
+        "font-kerning"
+      ],
+      "initialAccepted": true
+    },
+    {
+      "javascriptName": "fontOpticalSizing",
+      "cssName": "font-optical-sizing",
+      "aliases": [
+        "font-optical-sizing"
+      ],
+      "longhands": [
+        "font-optical-sizing"
+      ],
+      "initialAccepted": true
+    },
+    {
+      "javascriptName": "fontSize",
+      "cssName": "font-size",
+      "aliases": [
+        "font-size"
+      ],
+      "longhands": [
+        "font-size"
+      ],
+      "initialAccepted": true
+    },
+    {
+      "javascriptName": "fontStretch",
+      "cssName": "font-stretch",
+      "aliases": [
+        "font-stretch"
+      ],
+      "longhands": [
+        "font-stretch"
+      ],
+      "initialAccepted": true
+    },
+    {
+      "javascriptName": "fontStyle",
+      "cssName": "font-style",
+      "aliases": [
+        "font-style"
+      ],
+      "longhands": [
+        "font-style"
+      ],
+      "initialAccepted": true
+    },
+    {
+      "javascriptName": "fontVariant",
+      "cssName": "font-variant",
+      "aliases": [
+        "font-variant"
+      ],
+      "longhands": [
+        "font-variant-ligatures",
+        "font-variant-caps",
+        "font-variant-numeric",
+        "font-variant-east-asian"
+      ],
+      "initialAccepted": true
+    },
+    {
+      "javascriptName": "fontVariantCaps",
+      "cssName": "font-variant-caps",
+      "aliases": [
+        "font-variant-caps"
+      ],
+      "longhands": [
+        "font-variant-caps"
+      ],
+      "initialAccepted": true
+    },
+    {
+      "javascriptName": "fontVariantEastAsian",
+      "cssName": "font-variant-east-asian",
+      "aliases": [
+        "font-variant-east-asian"
+      ],
+      "longhands": [
+        "font-variant-east-asian"
+      ],
+      "initialAccepted": true
+    },
+    {
+      "javascriptName": "fontVariantLigatures",
+      "cssName": "font-variant-ligatures",
+      "aliases": [
+        "font-variant-ligatures"
+      ],
+      "longhands": [
+        "font-variant-ligatures"
+      ],
+      "initialAccepted": true
+    },
+    {
+      "javascriptName": "fontVariantNumeric",
+      "cssName": "font-variant-numeric",
+      "aliases": [
+        "font-variant-numeric"
+      ],
+      "longhands": [
+        "font-variant-numeric"
+      ],
+      "initialAccepted": true
+    },
+    {
+      "javascriptName": "fontVariationSettings",
+      "cssName": "font-variation-settings",
+      "aliases": [
+        "font-variation-settings"
+      ],
+      "longhands": [
+        "font-variation-settings"
+      ],
+      "initialAccepted": true
+    },
+    {
+      "javascriptName": "fontWeight",
+      "cssName": "font-weight",
+      "aliases": [
+        "font-weight"
+      ],
+      "longhands": [
+        "font-weight"
+      ],
+      "initialAccepted": true
+    },
+    {
+      "javascriptName": "gap",
+      "cssName": "gap",
+      "aliases": [
+        "gap"
+      ],
+      "longhands": [
+        "row-gap",
+        "column-gap"
+      ],
+      "initialAccepted": true
+    },
+    {
+      "javascriptName": "grid",
+      "cssName": "grid",
+      "aliases": [
+        "grid"
+      ],
+      "longhands": [
+        "grid-template-rows",
+        "grid-template-columns",
+        "grid-template-areas",
+        "grid-auto-flow",
+        "grid-auto-rows",
+        "grid-auto-columns"
+      ],
+      "initialAccepted": true
+    },
+    {
+      "javascriptName": "gridArea",
+      "cssName": "grid-area",
+      "aliases": [
+        "grid-area"
+      ],
+      "longhands": [
+        "grid-row-start",
+        "grid-column-start",
+        "grid-row-end",
+        "grid-column-end"
+      ],
+      "initialAccepted": true
+    },
+    {
+      "javascriptName": "gridAutoColumns",
+      "cssName": "grid-auto-columns",
+      "aliases": [
+        "grid-auto-columns"
+      ],
+      "longhands": [
+        "grid-auto-columns"
+      ],
+      "initialAccepted": true
+    },
+    {
+      "javascriptName": "gridAutoFlow",
+      "cssName": "grid-auto-flow",
+      "aliases": [
+        "grid-auto-flow"
+      ],
+      "longhands": [
+        "grid-auto-flow"
+      ],
+      "initialAccepted": true
+    },
+    {
+      "javascriptName": "gridAutoRows",
+      "cssName": "grid-auto-rows",
+      "aliases": [
+        "grid-auto-rows"
+      ],
+      "longhands": [
+        "grid-auto-rows"
+      ],
+      "initialAccepted": true
+    },
+    {
+      "javascriptName": "gridColumn",
+      "cssName": "grid-column",
+      "aliases": [
+        "grid-column"
+      ],
+      "longhands": [
+        "grid-column-start",
+        "grid-column-end"
+      ],
+      "initialAccepted": true
+    },
+    {
+      "javascriptName": "gridColumnEnd",
+      "cssName": "grid-column-end",
+      "aliases": [
+        "grid-column-end"
+      ],
+      "longhands": [
+        "grid-column-end"
+      ],
+      "initialAccepted": true
+    },
+    {
+      "javascriptName": "gridColumnGap",
+      "cssName": "column-gap",
+      "aliases": [
+        "column-gap",
+        "grid-column-gap"
+      ],
+      "longhands": [
+        "column-gap"
+      ],
+      "initialAccepted": true
+    },
+    {
+      "javascriptName": "gridColumnStart",
+      "cssName": "grid-column-start",
+      "aliases": [
+        "grid-column-start"
+      ],
+      "longhands": [
+        "grid-column-start"
+      ],
+      "initialAccepted": true
+    },
+    {
+      "javascriptName": "gridGap",
+      "cssName": "gap",
+      "aliases": [
+        "gap",
+        "grid-gap"
+      ],
+      "longhands": [
+        "row-gap",
+        "column-gap"
+      ],
+      "initialAccepted": true
+    },
+    {
+      "javascriptName": "gridRow",
+      "cssName": "grid-row",
+      "aliases": [
+        "grid-row"
+      ],
+      "longhands": [
+        "grid-row-start",
+        "grid-row-end"
+      ],
+      "initialAccepted": true
+    },
+    {
+      "javascriptName": "gridRowEnd",
+      "cssName": "grid-row-end",
+      "aliases": [
+        "grid-row-end"
+      ],
+      "longhands": [
+        "grid-row-end"
+      ],
+      "initialAccepted": true
+    },
+    {
+      "javascriptName": "gridRowGap",
+      "cssName": "row-gap",
+      "aliases": [
+        "row-gap",
+        "grid-row-gap"
+      ],
+      "longhands": [
+        "row-gap"
+      ],
+      "initialAccepted": true
+    },
+    {
+      "javascriptName": "gridRowStart",
+      "cssName": "grid-row-start",
+      "aliases": [
+        "grid-row-start"
+      ],
+      "longhands": [
+        "grid-row-start"
+      ],
+      "initialAccepted": true
+    },
+    {
+      "javascriptName": "gridTemplate",
+      "cssName": "grid-template",
+      "aliases": [
+        "grid-template"
+      ],
+      "longhands": [
+        "grid-template-rows",
+        "grid-template-columns",
+        "grid-template-areas"
+      ],
+      "initialAccepted": true
+    },
+    {
+      "javascriptName": "gridTemplateAreas",
+      "cssName": "grid-template-areas",
+      "aliases": [
+        "grid-template-areas"
+      ],
+      "longhands": [
+        "grid-template-areas"
+      ],
+      "initialAccepted": true
+    },
+    {
+      "javascriptName": "gridTemplateColumns",
+      "cssName": "grid-template-columns",
+      "aliases": [
+        "grid-template-columns"
+      ],
+      "longhands": [
+        "grid-template-columns"
+      ],
+      "initialAccepted": true
+    },
+    {
+      "javascriptName": "gridTemplateRows",
+      "cssName": "grid-template-rows",
+      "aliases": [
+        "grid-template-rows"
+      ],
+      "longhands": [
+        "grid-template-rows"
+      ],
+      "initialAccepted": true
+    },
+    {
+      "javascriptName": "height",
+      "cssName": "height",
+      "aliases": [
+        "height"
+      ],
+      "longhands": [
+        "height"
+      ],
+      "initialAccepted": true
+    },
+    {
+      "javascriptName": "hyphens",
+      "cssName": "hyphens",
+      "aliases": [
+        "hyphens"
+      ],
+      "longhands": [
+        "hyphens"
+      ],
+      "initialAccepted": true
+    },
+    {
+      "javascriptName": "imageOrientation",
+      "cssName": "image-orientation",
+      "aliases": [
+        "image-orientation"
+      ],
+      "longhands": [
+        "image-orientation"
+      ],
+      "initialAccepted": true
+    },
+    {
+      "javascriptName": "imageRendering",
+      "cssName": "image-rendering",
+      "aliases": [
+        "image-rendering"
+      ],
+      "longhands": [
+        "image-rendering"
+      ],
+      "initialAccepted": true
+    },
+    {
+      "javascriptName": "inherits",
+      "cssName": null,
+      "aliases": [],
+      "longhands": [],
+      "initialAccepted": false
+    },
+    {
+      "javascriptName": "initialValue",
+      "cssName": null,
+      "aliases": [],
+      "longhands": [],
+      "initialAccepted": false
+    },
+    {
+      "javascriptName": "inlineSize",
+      "cssName": "inline-size",
+      "aliases": [
+        "inline-size"
+      ],
+      "longhands": [
+        "inline-size"
+      ],
+      "initialAccepted": true
+    },
+    {
+      "javascriptName": "inset",
+      "cssName": "inset",
+      "aliases": [
+        "inset"
+      ],
+      "longhands": [
+        "top",
+        "right",
+        "bottom",
+        "left"
+      ],
+      "initialAccepted": true
+    },
+    {
+      "javascriptName": "insetBlock",
+      "cssName": "inset-block",
+      "aliases": [
+        "inset-block"
+      ],
+      "longhands": [
+        "inset-block-start",
+        "inset-block-end"
+      ],
+      "initialAccepted": true
+    },
+    {
+      "javascriptName": "insetBlockEnd",
+      "cssName": "inset-block-end",
+      "aliases": [
+        "inset-block-end"
+      ],
+      "longhands": [
+        "inset-block-end"
+      ],
+      "initialAccepted": true
+    },
+    {
+      "javascriptName": "insetBlockStart",
+      "cssName": "inset-block-start",
+      "aliases": [
+        "inset-block-start"
+      ],
+      "longhands": [
+        "inset-block-start"
+      ],
+      "initialAccepted": true
+    },
+    {
+      "javascriptName": "insetInline",
+      "cssName": "inset-inline",
+      "aliases": [
+        "inset-inline"
+      ],
+      "longhands": [
+        "inset-inline-start",
+        "inset-inline-end"
+      ],
+      "initialAccepted": true
+    },
+    {
+      "javascriptName": "insetInlineEnd",
+      "cssName": "inset-inline-end",
+      "aliases": [
+        "inset-inline-end"
+      ],
+      "longhands": [
+        "inset-inline-end"
+      ],
+      "initialAccepted": true
+    },
+    {
+      "javascriptName": "insetInlineStart",
+      "cssName": "inset-inline-start",
+      "aliases": [
+        "inset-inline-start"
+      ],
+      "longhands": [
+        "inset-inline-start"
+      ],
+      "initialAccepted": true
+    },
+    {
+      "javascriptName": "isolation",
+      "cssName": "isolation",
+      "aliases": [
+        "isolation"
+      ],
+      "longhands": [
+        "isolation"
+      ],
+      "initialAccepted": true
+    },
+    {
+      "javascriptName": "justifyContent",
+      "cssName": "justify-content",
+      "aliases": [
+        "justify-content"
+      ],
+      "longhands": [
+        "justify-content"
+      ],
+      "initialAccepted": true
+    },
+    {
+      "javascriptName": "justifyItems",
+      "cssName": "justify-items",
+      "aliases": [
+        "justify-items"
+      ],
+      "longhands": [
+        "justify-items"
+      ],
+      "initialAccepted": true
+    },
+    {
+      "javascriptName": "justifySelf",
+      "cssName": "justify-self",
+      "aliases": [
+        "justify-self"
+      ],
+      "longhands": [
+        "justify-self"
+      ],
+      "initialAccepted": true
+    },
+    {
+      "javascriptName": "left",
+      "cssName": "left",
+      "aliases": [
+        "left"
+      ],
+      "longhands": [
+        "left"
+      ],
+      "initialAccepted": true
+    },
+    {
+      "javascriptName": "letterSpacing",
+      "cssName": "letter-spacing",
+      "aliases": [
+        "letter-spacing"
+      ],
+      "longhands": [
+        "letter-spacing"
+      ],
+      "initialAccepted": true
+    },
+    {
+      "javascriptName": "lightingColor",
+      "cssName": "lighting-color",
+      "aliases": [
+        "lighting-color"
+      ],
+      "longhands": [
+        "lighting-color"
+      ],
+      "initialAccepted": true
+    },
+    {
+      "javascriptName": "lineBreak",
+      "cssName": "line-break",
+      "aliases": [
+        "line-break"
+      ],
+      "longhands": [
+        "line-break"
+      ],
+      "initialAccepted": true
+    },
+    {
+      "javascriptName": "lineGapOverride",
+      "cssName": null,
+      "aliases": [],
+      "longhands": [],
+      "initialAccepted": false
+    },
+    {
+      "javascriptName": "lineHeight",
+      "cssName": "line-height",
+      "aliases": [
+        "line-height"
+      ],
+      "longhands": [
+        "line-height"
+      ],
+      "initialAccepted": true
+    },
+    {
+      "javascriptName": "listStyle",
+      "cssName": "list-style",
+      "aliases": [
+        "list-style"
+      ],
+      "longhands": [
+        "list-style-position",
+        "list-style-image",
+        "list-style-type"
+      ],
+      "initialAccepted": true
+    },
+    {
+      "javascriptName": "listStyleImage",
+      "cssName": "list-style-image",
+      "aliases": [
+        "list-style-image"
+      ],
+      "longhands": [
+        "list-style-image"
+      ],
+      "initialAccepted": true
+    },
+    {
+      "javascriptName": "listStylePosition",
+      "cssName": "list-style-position",
+      "aliases": [
+        "list-style-position"
+      ],
+      "longhands": [
+        "list-style-position"
+      ],
+      "initialAccepted": true
+    },
+    {
+      "javascriptName": "listStyleType",
+      "cssName": "list-style-type",
+      "aliases": [
+        "list-style-type"
+      ],
+      "longhands": [
+        "list-style-type"
+      ],
+      "initialAccepted": true
+    },
+    {
+      "javascriptName": "margin",
+      "cssName": "margin",
+      "aliases": [
+        "margin"
+      ],
+      "longhands": [
+        "margin-top",
+        "margin-right",
+        "margin-bottom",
+        "margin-left"
+      ],
+      "initialAccepted": true
+    },
+    {
+      "javascriptName": "marginBlock",
+      "cssName": "margin-block",
+      "aliases": [
+        "margin-block"
+      ],
+      "longhands": [
+        "margin-block-start",
+        "margin-block-end"
+      ],
+      "initialAccepted": true
+    },
+    {
+      "javascriptName": "marginBlockEnd",
+      "cssName": "margin-block-end",
+      "aliases": [
+        "margin-block-end"
+      ],
+      "longhands": [
+        "margin-block-end"
+      ],
+      "initialAccepted": true
+    },
+    {
+      "javascriptName": "marginBlockStart",
+      "cssName": "margin-block-start",
+      "aliases": [
+        "margin-block-start"
+      ],
+      "longhands": [
+        "margin-block-start"
+      ],
+      "initialAccepted": true
+    },
+    {
+      "javascriptName": "marginBottom",
+      "cssName": "margin-bottom",
+      "aliases": [
+        "margin-bottom"
+      ],
+      "longhands": [
+        "margin-bottom"
+      ],
+      "initialAccepted": true
+    },
+    {
+      "javascriptName": "marginInline",
+      "cssName": "margin-inline",
+      "aliases": [
+        "margin-inline"
+      ],
+      "longhands": [
+        "margin-inline-start",
+        "margin-inline-end"
+      ],
+      "initialAccepted": true
+    },
+    {
+      "javascriptName": "marginInlineEnd",
+      "cssName": "margin-inline-end",
+      "aliases": [
+        "margin-inline-end"
+      ],
+      "longhands": [
+        "margin-inline-end"
+      ],
+      "initialAccepted": true
+    },
+    {
+      "javascriptName": "marginInlineStart",
+      "cssName": "margin-inline-start",
+      "aliases": [
+        "margin-inline-start"
+      ],
+      "longhands": [
+        "margin-inline-start"
+      ],
+      "initialAccepted": true
+    },
+    {
+      "javascriptName": "marginLeft",
+      "cssName": "margin-left",
+      "aliases": [
+        "margin-left"
+      ],
+      "longhands": [
+        "margin-left"
+      ],
+      "initialAccepted": true
+    },
+    {
+      "javascriptName": "marginRight",
+      "cssName": "margin-right",
+      "aliases": [
+        "margin-right"
+      ],
+      "longhands": [
+        "margin-right"
+      ],
+      "initialAccepted": true
+    },
+    {
+      "javascriptName": "marginTop",
+      "cssName": "margin-top",
+      "aliases": [
+        "margin-top"
+      ],
+      "longhands": [
+        "margin-top"
+      ],
+      "initialAccepted": true
+    },
+    {
+      "javascriptName": "marker",
+      "cssName": "marker",
+      "aliases": [
+        "marker"
+      ],
+      "longhands": [
+        "marker-start",
+        "marker-mid",
+        "marker-end"
+      ],
+      "initialAccepted": true
+    },
+    {
+      "javascriptName": "markerEnd",
+      "cssName": "marker-end",
+      "aliases": [
+        "marker-end"
+      ],
+      "longhands": [
+        "marker-end"
+      ],
+      "initialAccepted": true
+    },
+    {
+      "javascriptName": "markerMid",
+      "cssName": "marker-mid",
+      "aliases": [
+        "marker-mid"
+      ],
+      "longhands": [
+        "marker-mid"
+      ],
+      "initialAccepted": true
+    },
+    {
+      "javascriptName": "markerStart",
+      "cssName": "marker-start",
+      "aliases": [
+        "marker-start"
+      ],
+      "longhands": [
+        "marker-start"
+      ],
+      "initialAccepted": true
+    },
+    {
+      "javascriptName": "mask",
+      "cssName": "mask",
+      "aliases": [
+        "mask"
+      ],
+      "longhands": [
+        "mask"
+      ],
+      "initialAccepted": true
+    },
+    {
+      "javascriptName": "maskType",
+      "cssName": "mask-type",
+      "aliases": [
+        "mask-type"
+      ],
+      "longhands": [
+        "mask-type"
+      ],
+      "initialAccepted": true
+    },
+    {
+      "javascriptName": "maxBlockSize",
+      "cssName": "max-block-size",
+      "aliases": [
+        "max-block-size"
+      ],
+      "longhands": [
+        "max-block-size"
+      ],
+      "initialAccepted": true
+    },
+    {
+      "javascriptName": "maxHeight",
+      "cssName": "max-height",
+      "aliases": [
+        "max-height"
+      ],
+      "longhands": [
+        "max-height"
+      ],
+      "initialAccepted": true
+    },
+    {
+      "javascriptName": "maxInlineSize",
+      "cssName": "max-inline-size",
+      "aliases": [
+        "max-inline-size"
+      ],
+      "longhands": [
+        "max-inline-size"
+      ],
+      "initialAccepted": true
+    },
+    {
+      "javascriptName": "maxWidth",
+      "cssName": "max-width",
+      "aliases": [
+        "max-width"
+      ],
+      "longhands": [
+        "max-width"
+      ],
+      "initialAccepted": true
+    },
+    {
+      "javascriptName": "maxZoom",
+      "cssName": null,
+      "aliases": [],
+      "longhands": [],
+      "initialAccepted": false
+    },
+    {
+      "javascriptName": "minBlockSize",
+      "cssName": "min-block-size",
+      "aliases": [
+        "min-block-size"
+      ],
+      "longhands": [
+        "min-block-size"
+      ],
+      "initialAccepted": true
+    },
+    {
+      "javascriptName": "minHeight",
+      "cssName": "min-height",
+      "aliases": [
+        "min-height"
+      ],
+      "longhands": [
+        "min-height"
+      ],
+      "initialAccepted": true
+    },
+    {
+      "javascriptName": "minInlineSize",
+      "cssName": "min-inline-size",
+      "aliases": [
+        "min-inline-size"
+      ],
+      "longhands": [
+        "min-inline-size"
+      ],
+      "initialAccepted": true
+    },
+    {
+      "javascriptName": "minWidth",
+      "cssName": "min-width",
+      "aliases": [
+        "min-width"
+      ],
+      "longhands": [
+        "min-width"
+      ],
+      "initialAccepted": true
+    },
+    {
+      "javascriptName": "minZoom",
+      "cssName": null,
+      "aliases": [],
+      "longhands": [],
+      "initialAccepted": false
+    },
+    {
+      "javascriptName": "mixBlendMode",
+      "cssName": "mix-blend-mode",
+      "aliases": [
+        "mix-blend-mode"
+      ],
+      "longhands": [
+        "mix-blend-mode"
+      ],
+      "initialAccepted": true
+    },
+    {
+      "javascriptName": "objectFit",
+      "cssName": "object-fit",
+      "aliases": [
+        "object-fit"
+      ],
+      "longhands": [
+        "object-fit"
+      ],
+      "initialAccepted": true
+    },
+    {
+      "javascriptName": "objectPosition",
+      "cssName": "object-position",
+      "aliases": [
+        "object-position"
+      ],
+      "longhands": [
+        "object-position"
+      ],
+      "initialAccepted": true
+    },
+    {
+      "javascriptName": "offset",
+      "cssName": "offset",
+      "aliases": [
+        "offset"
+      ],
+      "longhands": [
+        "offset-path",
+        "offset-distance",
+        "offset-rotate"
+      ],
+      "initialAccepted": true
+    },
+    {
+      "javascriptName": "offsetDistance",
+      "cssName": "offset-distance",
+      "aliases": [
+        "offset-distance"
+      ],
+      "longhands": [
+        "offset-distance"
+      ],
+      "initialAccepted": true
+    },
+    {
+      "javascriptName": "offsetPath",
+      "cssName": "offset-path",
+      "aliases": [
+        "offset-path"
+      ],
+      "longhands": [
+        "offset-path"
+      ],
+      "initialAccepted": true
+    },
+    {
+      "javascriptName": "offsetRotate",
+      "cssName": "offset-rotate",
+      "aliases": [
+        "offset-rotate"
+      ],
+      "longhands": [
+        "offset-rotate"
+      ],
+      "initialAccepted": true
+    },
+    {
+      "javascriptName": "opacity",
+      "cssName": "opacity",
+      "aliases": [
+        "opacity"
+      ],
+      "longhands": [
+        "opacity"
+      ],
+      "initialAccepted": true
+    },
+    {
+      "javascriptName": "order",
+      "cssName": "order",
+      "aliases": [
+        "order"
+      ],
+      "longhands": [
+        "order"
+      ],
+      "initialAccepted": true
+    },
+    {
+      "javascriptName": "orientation",
+      "cssName": null,
+      "aliases": [],
+      "longhands": [],
+      "initialAccepted": false
+    },
+    {
+      "javascriptName": "orphans",
+      "cssName": "orphans",
+      "aliases": [
+        "orphans"
+      ],
+      "longhands": [
+        "orphans"
+      ],
+      "initialAccepted": true
+    },
+    {
+      "javascriptName": "outline",
+      "cssName": "outline",
+      "aliases": [
+        "outline"
+      ],
+      "longhands": [
+        "outline-color",
+        "outline-style",
+        "outline-width"
+      ],
+      "initialAccepted": true
+    },
+    {
+      "javascriptName": "outlineColor",
+      "cssName": "outline-color",
+      "aliases": [
+        "outline-color"
+      ],
+      "longhands": [
+        "outline-color"
+      ],
+      "initialAccepted": true
+    },
+    {
+      "javascriptName": "outlineOffset",
+      "cssName": "outline-offset",
+      "aliases": [
+        "outline-offset"
+      ],
+      "longhands": [
+        "outline-offset"
+      ],
+      "initialAccepted": true
+    },
+    {
+      "javascriptName": "outlineStyle",
+      "cssName": "outline-style",
+      "aliases": [
+        "outline-style"
+      ],
+      "longhands": [
+        "outline-style"
+      ],
+      "initialAccepted": true
+    },
+    {
+      "javascriptName": "outlineWidth",
+      "cssName": "outline-width",
+      "aliases": [
+        "outline-width"
+      ],
+      "longhands": [
+        "outline-width"
+      ],
+      "initialAccepted": true
+    },
+    {
+      "javascriptName": "overflow",
+      "cssName": "overflow",
+      "aliases": [
+        "overflow"
+      ],
+      "longhands": [
+        "overflow-x",
+        "overflow-y"
+      ],
+      "initialAccepted": true
+    },
+    {
+      "javascriptName": "overflowAnchor",
+      "cssName": "overflow-anchor",
+      "aliases": [
+        "overflow-anchor"
+      ],
+      "longhands": [
+        "overflow-anchor"
+      ],
+      "initialAccepted": true
+    },
+    {
+      "javascriptName": "overflowWrap",
+      "cssName": "overflow-wrap",
+      "aliases": [
+        "overflow-wrap"
+      ],
+      "longhands": [
+        "overflow-wrap"
+      ],
+      "initialAccepted": true
+    },
+    {
+      "javascriptName": "overflowX",
+      "cssName": "overflow-x",
+      "aliases": [
+        "overflow-x"
+      ],
+      "longhands": [
+        "overflow-x"
+      ],
+      "initialAccepted": true
+    },
+    {
+      "javascriptName": "overflowY",
+      "cssName": "overflow-y",
+      "aliases": [
+        "overflow-y"
+      ],
+      "longhands": [
+        "overflow-y"
+      ],
+      "initialAccepted": true
+    },
+    {
+      "javascriptName": "overscrollBehavior",
+      "cssName": "overscroll-behavior",
+      "aliases": [
+        "overscroll-behavior"
+      ],
+      "longhands": [
+        "overscroll-behavior-x",
+        "overscroll-behavior-y"
+      ],
+      "initialAccepted": true
+    },
+    {
+      "javascriptName": "overscrollBehaviorBlock",
+      "cssName": "overscroll-behavior-block",
+      "aliases": [
+        "overscroll-behavior-block"
+      ],
+      "longhands": [
+        "overscroll-behavior-block"
+      ],
+      "initialAccepted": true
+    },
+    {
+      "javascriptName": "overscrollBehaviorInline",
+      "cssName": "overscroll-behavior-inline",
+      "aliases": [
+        "overscroll-behavior-inline"
+      ],
+      "longhands": [
+        "overscroll-behavior-inline"
+      ],
+      "initialAccepted": true
+    },
+    {
+      "javascriptName": "overscrollBehaviorX",
+      "cssName": "overscroll-behavior-x",
+      "aliases": [
+        "overscroll-behavior-x"
+      ],
+      "longhands": [
+        "overscroll-behavior-x"
+      ],
+      "initialAccepted": true
+    },
+    {
+      "javascriptName": "overscrollBehaviorY",
+      "cssName": "overscroll-behavior-y",
+      "aliases": [
+        "overscroll-behavior-y"
+      ],
+      "longhands": [
+        "overscroll-behavior-y"
+      ],
+      "initialAccepted": true
+    },
+    {
+      "javascriptName": "padding",
+      "cssName": "padding",
+      "aliases": [
+        "padding"
+      ],
+      "longhands": [
+        "padding-top",
+        "padding-right",
+        "padding-bottom",
+        "padding-left"
+      ],
+      "initialAccepted": true
+    },
+    {
+      "javascriptName": "paddingBlock",
+      "cssName": "padding-block",
+      "aliases": [
+        "padding-block"
+      ],
+      "longhands": [
+        "padding-block-start",
+        "padding-block-end"
+      ],
+      "initialAccepted": true
+    },
+    {
+      "javascriptName": "paddingBlockEnd",
+      "cssName": "padding-block-end",
+      "aliases": [
+        "padding-block-end"
+      ],
+      "longhands": [
+        "padding-block-end"
+      ],
+      "initialAccepted": true
+    },
+    {
+      "javascriptName": "paddingBlockStart",
+      "cssName": "padding-block-start",
+      "aliases": [
+        "padding-block-start"
+      ],
+      "longhands": [
+        "padding-block-start"
+      ],
+      "initialAccepted": true
+    },
+    {
+      "javascriptName": "paddingBottom",
+      "cssName": "padding-bottom",
+      "aliases": [
+        "padding-bottom"
+      ],
+      "longhands": [
+        "padding-bottom"
+      ],
+      "initialAccepted": true
+    },
+    {
+      "javascriptName": "paddingInline",
+      "cssName": "padding-inline",
+      "aliases": [
+        "padding-inline"
+      ],
+      "longhands": [
+        "padding-inline-start",
+        "padding-inline-end"
+      ],
+      "initialAccepted": true
+    },
+    {
+      "javascriptName": "paddingInlineEnd",
+      "cssName": "padding-inline-end",
+      "aliases": [
+        "padding-inline-end"
+      ],
+      "longhands": [
+        "padding-inline-end"
+      ],
+      "initialAccepted": true
+    },
+    {
+      "javascriptName": "paddingInlineStart",
+      "cssName": "padding-inline-start",
+      "aliases": [
+        "padding-inline-start"
+      ],
+      "longhands": [
+        "padding-inline-start"
+      ],
+      "initialAccepted": true
+    },
+    {
+      "javascriptName": "paddingLeft",
+      "cssName": "padding-left",
+      "aliases": [
+        "padding-left"
+      ],
+      "longhands": [
+        "padding-left"
+      ],
+      "initialAccepted": true
+    },
+    {
+      "javascriptName": "paddingRight",
+      "cssName": "padding-right",
+      "aliases": [
+        "padding-right"
+      ],
+      "longhands": [
+        "padding-right"
+      ],
+      "initialAccepted": true
+    },
+    {
+      "javascriptName": "paddingTop",
+      "cssName": "padding-top",
+      "aliases": [
+        "padding-top"
+      ],
+      "longhands": [
+        "padding-top"
+      ],
+      "initialAccepted": true
+    },
+    {
+      "javascriptName": "page",
+      "cssName": "page",
+      "aliases": [
+        "page"
+      ],
+      "longhands": [
+        "page"
+      ],
+      "initialAccepted": true
+    },
+    {
+      "javascriptName": "pageBreakAfter",
+      "cssName": "break-after",
+      "aliases": [
+        "break-after",
+        "page-break-after"
+      ],
+      "longhands": [
+        "break-after"
+      ],
+      "initialAccepted": true
+    },
+    {
+      "javascriptName": "pageBreakBefore",
+      "cssName": "break-before",
+      "aliases": [
+        "break-before",
+        "page-break-before"
+      ],
+      "longhands": [
+        "break-before"
+      ],
+      "initialAccepted": true
+    },
+    {
+      "javascriptName": "pageBreakInside",
+      "cssName": "break-inside",
+      "aliases": [
+        "break-inside",
+        "page-break-inside"
+      ],
+      "longhands": [
+        "break-inside"
+      ],
+      "initialAccepted": true
+    },
+    {
+      "javascriptName": "pageOrientation",
+      "cssName": "page-orientation",
+      "aliases": [
+        "page-orientation"
+      ],
+      "longhands": [
+        "page-orientation"
+      ],
+      "initialAccepted": true
+    },
+    {
+      "javascriptName": "paintOrder",
+      "cssName": "paint-order",
+      "aliases": [
+        "paint-order"
+      ],
+      "longhands": [
+        "paint-order"
+      ],
+      "initialAccepted": true
+    },
+    {
+      "javascriptName": "perspective",
+      "cssName": "perspective",
+      "aliases": [
+        "perspective"
+      ],
+      "longhands": [
+        "perspective"
+      ],
+      "initialAccepted": true
+    },
+    {
+      "javascriptName": "perspectiveOrigin",
+      "cssName": "perspective-origin",
+      "aliases": [
+        "perspective-origin"
+      ],
+      "longhands": [
+        "perspective-origin"
+      ],
+      "initialAccepted": true
+    },
+    {
+      "javascriptName": "placeContent",
+      "cssName": "place-content",
+      "aliases": [
+        "place-content"
+      ],
+      "longhands": [
+        "align-content",
+        "justify-content"
+      ],
+      "initialAccepted": true
+    },
+    {
+      "javascriptName": "placeItems",
+      "cssName": "place-items",
+      "aliases": [
+        "place-items"
+      ],
+      "longhands": [
+        "align-items",
+        "justify-items"
+      ],
+      "initialAccepted": true
+    },
+    {
+      "javascriptName": "placeSelf",
+      "cssName": "place-self",
+      "aliases": [
+        "place-self"
+      ],
+      "longhands": [
+        "align-self",
+        "justify-self"
+      ],
+      "initialAccepted": true
+    },
+    {
+      "javascriptName": "pointerEvents",
+      "cssName": "pointer-events",
+      "aliases": [
+        "pointer-events"
+      ],
+      "longhands": [
+        "pointer-events"
+      ],
+      "initialAccepted": true
+    },
+    {
+      "javascriptName": "position",
+      "cssName": "position",
+      "aliases": [
+        "position"
+      ],
+      "longhands": [
+        "position"
+      ],
+      "initialAccepted": true
+    },
+    {
+      "javascriptName": "quotes",
+      "cssName": "quotes",
+      "aliases": [
+        "quotes"
+      ],
+      "longhands": [
+        "quotes"
+      ],
+      "initialAccepted": true
+    },
+    {
+      "javascriptName": "r",
+      "cssName": "r",
+      "aliases": [
+        "r"
+      ],
+      "longhands": [
+        "r"
+      ],
+      "initialAccepted": true
+    },
+    {
+      "javascriptName": "resize",
+      "cssName": "resize",
+      "aliases": [
+        "resize"
+      ],
+      "longhands": [
+        "resize"
+      ],
+      "initialAccepted": true
+    },
+    {
+      "javascriptName": "right",
+      "cssName": "right",
+      "aliases": [
+        "right"
+      ],
+      "longhands": [
+        "right"
+      ],
+      "initialAccepted": true
+    },
+    {
+      "javascriptName": "rowGap",
+      "cssName": "row-gap",
+      "aliases": [
+        "row-gap"
+      ],
+      "longhands": [
+        "row-gap"
+      ],
+      "initialAccepted": true
+    },
+    {
+      "javascriptName": "rubyPosition",
+      "cssName": "ruby-position",
+      "aliases": [
+        "ruby-position"
+      ],
+      "longhands": [
+        "ruby-position"
+      ],
+      "initialAccepted": true
+    },
+    {
+      "javascriptName": "rx",
+      "cssName": "rx",
+      "aliases": [
+        "rx"
+      ],
+      "longhands": [
+        "rx"
+      ],
+      "initialAccepted": true
+    },
+    {
+      "javascriptName": "ry",
+      "cssName": "ry",
+      "aliases": [
+        "ry"
+      ],
+      "longhands": [
+        "ry"
+      ],
+      "initialAccepted": true
+    },
+    {
+      "javascriptName": "scrollBehavior",
+      "cssName": "scroll-behavior",
+      "aliases": [
+        "scroll-behavior"
+      ],
+      "longhands": [
+        "scroll-behavior"
+      ],
+      "initialAccepted": true
+    },
+    {
+      "javascriptName": "scrollMargin",
+      "cssName": "scroll-margin",
+      "aliases": [
+        "scroll-margin"
+      ],
+      "longhands": [
+        "scroll-margin-top",
+        "scroll-margin-right",
+        "scroll-margin-bottom",
+        "scroll-margin-left"
+      ],
+      "initialAccepted": true
+    },
+    {
+      "javascriptName": "scrollMarginBlock",
+      "cssName": "scroll-margin-block",
+      "aliases": [
+        "scroll-margin-block"
+      ],
+      "longhands": [
+        "scroll-margin-block-start",
+        "scroll-margin-block-end"
+      ],
+      "initialAccepted": true
+    },
+    {
+      "javascriptName": "scrollMarginBlockEnd",
+      "cssName": "scroll-margin-block-end",
+      "aliases": [
+        "scroll-margin-block-end"
+      ],
+      "longhands": [
+        "scroll-margin-block-end"
+      ],
+      "initialAccepted": true
+    },
+    {
+      "javascriptName": "scrollMarginBlockStart",
+      "cssName": "scroll-margin-block-start",
+      "aliases": [
+        "scroll-margin-block-start"
+      ],
+      "longhands": [
+        "scroll-margin-block-start"
+      ],
+      "initialAccepted": true
+    },
+    {
+      "javascriptName": "scrollMarginBottom",
+      "cssName": "scroll-margin-bottom",
+      "aliases": [
+        "scroll-margin-bottom"
+      ],
+      "longhands": [
+        "scroll-margin-bottom"
+      ],
+      "initialAccepted": true
+    },
+    {
+      "javascriptName": "scrollMarginInline",
+      "cssName": "scroll-margin-inline",
+      "aliases": [
+        "scroll-margin-inline"
+      ],
+      "longhands": [
+        "scroll-margin-inline-start",
+        "scroll-margin-inline-end"
+      ],
+      "initialAccepted": true
+    },
+    {
+      "javascriptName": "scrollMarginInlineEnd",
+      "cssName": "scroll-margin-inline-end",
+      "aliases": [
+        "scroll-margin-inline-end"
+      ],
+      "longhands": [
+        "scroll-margin-inline-end"
+      ],
+      "initialAccepted": true
+    },
+    {
+      "javascriptName": "scrollMarginInlineStart",
+      "cssName": "scroll-margin-inline-start",
+      "aliases": [
+        "scroll-margin-inline-start"
+      ],
+      "longhands": [
+        "scroll-margin-inline-start"
+      ],
+      "initialAccepted": true
+    },
+    {
+      "javascriptName": "scrollMarginLeft",
+      "cssName": "scroll-margin-left",
+      "aliases": [
+        "scroll-margin-left"
+      ],
+      "longhands": [
+        "scroll-margin-left"
+      ],
+      "initialAccepted": true
+    },
+    {
+      "javascriptName": "scrollMarginRight",
+      "cssName": "scroll-margin-right",
+      "aliases": [
+        "scroll-margin-right"
+      ],
+      "longhands": [
+        "scroll-margin-right"
+      ],
+      "initialAccepted": true
+    },
+    {
+      "javascriptName": "scrollMarginTop",
+      "cssName": "scroll-margin-top",
+      "aliases": [
+        "scroll-margin-top"
+      ],
+      "longhands": [
+        "scroll-margin-top"
+      ],
+      "initialAccepted": true
+    },
+    {
+      "javascriptName": "scrollPadding",
+      "cssName": "scroll-padding",
+      "aliases": [
+        "scroll-padding"
+      ],
+      "longhands": [
+        "scroll-padding-top",
+        "scroll-padding-right",
+        "scroll-padding-bottom",
+        "scroll-padding-left"
+      ],
+      "initialAccepted": true
+    },
+    {
+      "javascriptName": "scrollPaddingBlock",
+      "cssName": "scroll-padding-block",
+      "aliases": [
+        "scroll-padding-block"
+      ],
+      "longhands": [
+        "scroll-padding-block-start",
+        "scroll-padding-block-end"
+      ],
+      "initialAccepted": true
+    },
+    {
+      "javascriptName": "scrollPaddingBlockEnd",
+      "cssName": "scroll-padding-block-end",
+      "aliases": [
+        "scroll-padding-block-end"
+      ],
+      "longhands": [
+        "scroll-padding-block-end"
+      ],
+      "initialAccepted": true
+    },
+    {
+      "javascriptName": "scrollPaddingBlockStart",
+      "cssName": "scroll-padding-block-start",
+      "aliases": [
+        "scroll-padding-block-start"
+      ],
+      "longhands": [
+        "scroll-padding-block-start"
+      ],
+      "initialAccepted": true
+    },
+    {
+      "javascriptName": "scrollPaddingBottom",
+      "cssName": "scroll-padding-bottom",
+      "aliases": [
+        "scroll-padding-bottom"
+      ],
+      "longhands": [
+        "scroll-padding-bottom"
+      ],
+      "initialAccepted": true
+    },
+    {
+      "javascriptName": "scrollPaddingInline",
+      "cssName": "scroll-padding-inline",
+      "aliases": [
+        "scroll-padding-inline"
+      ],
+      "longhands": [
+        "scroll-padding-inline-start",
+        "scroll-padding-inline-end"
+      ],
+      "initialAccepted": true
+    },
+    {
+      "javascriptName": "scrollPaddingInlineEnd",
+      "cssName": "scroll-padding-inline-end",
+      "aliases": [
+        "scroll-padding-inline-end"
+      ],
+      "longhands": [
+        "scroll-padding-inline-end"
+      ],
+      "initialAccepted": true
+    },
+    {
+      "javascriptName": "scrollPaddingInlineStart",
+      "cssName": "scroll-padding-inline-start",
+      "aliases": [
+        "scroll-padding-inline-start"
+      ],
+      "longhands": [
+        "scroll-padding-inline-start"
+      ],
+      "initialAccepted": true
+    },
+    {
+      "javascriptName": "scrollPaddingLeft",
+      "cssName": "scroll-padding-left",
+      "aliases": [
+        "scroll-padding-left"
+      ],
+      "longhands": [
+        "scroll-padding-left"
+      ],
+      "initialAccepted": true
+    },
+    {
+      "javascriptName": "scrollPaddingRight",
+      "cssName": "scroll-padding-right",
+      "aliases": [
+        "scroll-padding-right"
+      ],
+      "longhands": [
+        "scroll-padding-right"
+      ],
+      "initialAccepted": true
+    },
+    {
+      "javascriptName": "scrollPaddingTop",
+      "cssName": "scroll-padding-top",
+      "aliases": [
+        "scroll-padding-top"
+      ],
+      "longhands": [
+        "scroll-padding-top"
+      ],
+      "initialAccepted": true
+    },
+    {
+      "javascriptName": "scrollSnapAlign",
+      "cssName": "scroll-snap-align",
+      "aliases": [
+        "scroll-snap-align"
+      ],
+      "longhands": [
+        "scroll-snap-align"
+      ],
+      "initialAccepted": true
+    },
+    {
+      "javascriptName": "scrollSnapStop",
+      "cssName": "scroll-snap-stop",
+      "aliases": [
+        "scroll-snap-stop"
+      ],
+      "longhands": [
+        "scroll-snap-stop"
+      ],
+      "initialAccepted": true
+    },
+    {
+      "javascriptName": "scrollSnapType",
+      "cssName": "scroll-snap-type",
+      "aliases": [
+        "scroll-snap-type"
+      ],
+      "longhands": [
+        "scroll-snap-type"
+      ],
+      "initialAccepted": true
+    },
+    {
+      "javascriptName": "shapeImageThreshold",
+      "cssName": "shape-image-threshold",
+      "aliases": [
+        "shape-image-threshold"
+      ],
+      "longhands": [
+        "shape-image-threshold"
+      ],
+      "initialAccepted": true
+    },
+    {
+      "javascriptName": "shapeMargin",
+      "cssName": "shape-margin",
+      "aliases": [
+        "shape-margin"
+      ],
+      "longhands": [
+        "shape-margin"
+      ],
+      "initialAccepted": true
+    },
+    {
+      "javascriptName": "shapeOutside",
+      "cssName": "shape-outside",
+      "aliases": [
+        "shape-outside"
+      ],
+      "longhands": [
+        "shape-outside"
+      ],
+      "initialAccepted": true
+    },
+    {
+      "javascriptName": "shapeRendering",
+      "cssName": "shape-rendering",
+      "aliases": [
+        "shape-rendering"
+      ],
+      "longhands": [
+        "shape-rendering"
+      ],
+      "initialAccepted": true
+    },
+    {
+      "javascriptName": "size",
+      "cssName": "size",
+      "aliases": [
+        "size"
+      ],
+      "longhands": [
+        "size"
+      ],
+      "initialAccepted": true
+    },
+    {
+      "javascriptName": "speak",
+      "cssName": "speak",
+      "aliases": [
+        "speak"
+      ],
+      "longhands": [
+        "speak"
+      ],
+      "initialAccepted": true
+    },
+    {
+      "javascriptName": "src",
+      "cssName": null,
+      "aliases": [],
+      "longhands": [],
+      "initialAccepted": false
+    },
+    {
+      "javascriptName": "stopColor",
+      "cssName": "stop-color",
+      "aliases": [
+        "stop-color"
+      ],
+      "longhands": [
+        "stop-color"
+      ],
+      "initialAccepted": true
+    },
+    {
+      "javascriptName": "stopOpacity",
+      "cssName": "stop-opacity",
+      "aliases": [
+        "stop-opacity"
+      ],
+      "longhands": [
+        "stop-opacity"
+      ],
+      "initialAccepted": true
+    },
+    {
+      "javascriptName": "stroke",
+      "cssName": "stroke",
+      "aliases": [
+        "stroke"
+      ],
+      "longhands": [
+        "stroke"
+      ],
+      "initialAccepted": true
+    },
+    {
+      "javascriptName": "strokeDasharray",
+      "cssName": "stroke-dasharray",
+      "aliases": [
+        "stroke-dasharray"
+      ],
+      "longhands": [
+        "stroke-dasharray"
+      ],
+      "initialAccepted": true
+    },
+    {
+      "javascriptName": "strokeDashoffset",
+      "cssName": "stroke-dashoffset",
+      "aliases": [
+        "stroke-dashoffset"
+      ],
+      "longhands": [
+        "stroke-dashoffset"
+      ],
+      "initialAccepted": true
+    },
+    {
+      "javascriptName": "strokeLinecap",
+      "cssName": "stroke-linecap",
+      "aliases": [
+        "stroke-linecap"
+      ],
+      "longhands": [
+        "stroke-linecap"
+      ],
+      "initialAccepted": true
+    },
+    {
+      "javascriptName": "strokeLinejoin",
+      "cssName": "stroke-linejoin",
+      "aliases": [
+        "stroke-linejoin"
+      ],
+      "longhands": [
+        "stroke-linejoin"
+      ],
+      "initialAccepted": true
+    },
+    {
+      "javascriptName": "strokeMiterlimit",
+      "cssName": "stroke-miterlimit",
+      "aliases": [
+        "stroke-miterlimit"
+      ],
+      "longhands": [
+        "stroke-miterlimit"
+      ],
+      "initialAccepted": true
+    },
+    {
+      "javascriptName": "strokeOpacity",
+      "cssName": "stroke-opacity",
+      "aliases": [
+        "stroke-opacity"
+      ],
+      "longhands": [
+        "stroke-opacity"
+      ],
+      "initialAccepted": true
+    },
+    {
+      "javascriptName": "strokeWidth",
+      "cssName": "stroke-width",
+      "aliases": [
+        "stroke-width"
+      ],
+      "longhands": [
+        "stroke-width"
+      ],
+      "initialAccepted": true
+    },
+    {
+      "javascriptName": "syntax",
+      "cssName": null,
+      "aliases": [],
+      "longhands": [],
+      "initialAccepted": false
+    },
+    {
+      "javascriptName": "tabSize",
+      "cssName": "tab-size",
+      "aliases": [
+        "tab-size"
+      ],
+      "longhands": [
+        "tab-size"
+      ],
+      "initialAccepted": true
+    },
+    {
+      "javascriptName": "tableLayout",
+      "cssName": "table-layout",
+      "aliases": [
+        "table-layout"
+      ],
+      "longhands": [
+        "table-layout"
+      ],
+      "initialAccepted": true
+    },
+    {
+      "javascriptName": "textAlign",
+      "cssName": "text-align",
+      "aliases": [
+        "text-align"
+      ],
+      "longhands": [
+        "text-align"
+      ],
+      "initialAccepted": true
+    },
+    {
+      "javascriptName": "textAlignLast",
+      "cssName": "text-align-last",
+      "aliases": [
+        "text-align-last"
+      ],
+      "longhands": [
+        "text-align-last"
+      ],
+      "initialAccepted": true
+    },
+    {
+      "javascriptName": "textAnchor",
+      "cssName": "text-anchor",
+      "aliases": [
+        "text-anchor"
+      ],
+      "longhands": [
+        "text-anchor"
+      ],
+      "initialAccepted": true
+    },
+    {
+      "javascriptName": "textCombineUpright",
+      "cssName": "text-combine-upright",
+      "aliases": [
+        "text-combine-upright"
+      ],
+      "longhands": [
+        "text-combine-upright"
+      ],
+      "initialAccepted": true
+    },
+    {
+      "javascriptName": "textDecoration",
+      "cssName": "text-decoration",
+      "aliases": [
+        "text-decoration"
+      ],
+      "longhands": [
+        "text-decoration-line",
+        "text-decoration-thickness",
+        "text-decoration-style",
+        "text-decoration-color"
+      ],
+      "initialAccepted": true
+    },
+    {
+      "javascriptName": "textDecorationColor",
+      "cssName": "text-decoration-color",
+      "aliases": [
+        "text-decoration-color"
+      ],
+      "longhands": [
+        "text-decoration-color"
+      ],
+      "initialAccepted": true
+    },
+    {
+      "javascriptName": "textDecorationLine",
+      "cssName": "text-decoration-line",
+      "aliases": [
+        "text-decoration-line"
+      ],
+      "longhands": [
+        "text-decoration-line"
+      ],
+      "initialAccepted": true
+    },
+    {
+      "javascriptName": "textDecorationSkipInk",
+      "cssName": "text-decoration-skip-ink",
+      "aliases": [
+        "text-decoration-skip-ink"
+      ],
+      "longhands": [
+        "text-decoration-skip-ink"
+      ],
+      "initialAccepted": true
+    },
+    {
+      "javascriptName": "textDecorationStyle",
+      "cssName": "text-decoration-style",
+      "aliases": [
+        "text-decoration-style"
+      ],
+      "longhands": [
+        "text-decoration-style"
+      ],
+      "initialAccepted": true
+    },
+    {
+      "javascriptName": "textDecorationThickness",
+      "cssName": "text-decoration-thickness",
+      "aliases": [
+        "text-decoration-thickness"
+      ],
+      "longhands": [
+        "text-decoration-thickness"
+      ],
+      "initialAccepted": true
+    },
+    {
+      "javascriptName": "textIndent",
+      "cssName": "text-indent",
+      "aliases": [
+        "text-indent"
+      ],
+      "longhands": [
+        "text-indent"
+      ],
+      "initialAccepted": true
+    },
+    {
+      "javascriptName": "textOrientation",
+      "cssName": "text-orientation",
+      "aliases": [
+        "text-orientation"
+      ],
+      "longhands": [
+        "text-orientation"
+      ],
+      "initialAccepted": true
+    },
+    {
+      "javascriptName": "textOverflow",
+      "cssName": "text-overflow",
+      "aliases": [
+        "text-overflow"
+      ],
+      "longhands": [
+        "text-overflow"
+      ],
+      "initialAccepted": true
+    },
+    {
+      "javascriptName": "textRendering",
+      "cssName": "text-rendering",
+      "aliases": [
+        "text-rendering"
+      ],
+      "longhands": [
+        "text-rendering"
+      ],
+      "initialAccepted": true
+    },
+    {
+      "javascriptName": "textShadow",
+      "cssName": "text-shadow",
+      "aliases": [
+        "text-shadow"
+      ],
+      "longhands": [
+        "text-shadow"
+      ],
+      "initialAccepted": true
+    },
+    {
+      "javascriptName": "textSizeAdjust",
+      "cssName": "text-size-adjust",
+      "aliases": [
+        "text-size-adjust"
+      ],
+      "longhands": [
+        "text-size-adjust"
+      ],
+      "initialAccepted": true
+    },
+    {
+      "javascriptName": "textTransform",
+      "cssName": "text-transform",
+      "aliases": [
+        "text-transform"
+      ],
+      "longhands": [
+        "text-transform"
+      ],
+      "initialAccepted": true
+    },
+    {
+      "javascriptName": "textUnderlineOffset",
+      "cssName": "text-underline-offset",
+      "aliases": [
+        "text-underline-offset"
+      ],
+      "longhands": [
+        "text-underline-offset"
+      ],
+      "initialAccepted": true
+    },
+    {
+      "javascriptName": "textUnderlinePosition",
+      "cssName": "text-underline-position",
+      "aliases": [
+        "text-underline-position"
+      ],
+      "longhands": [
+        "text-underline-position"
+      ],
+      "initialAccepted": true
+    },
+    {
+      "javascriptName": "top",
+      "cssName": "top",
+      "aliases": [
+        "top"
+      ],
+      "longhands": [
+        "top"
+      ],
+      "initialAccepted": true
+    },
+    {
+      "javascriptName": "touchAction",
+      "cssName": "touch-action",
+      "aliases": [
+        "touch-action"
+      ],
+      "longhands": [
+        "touch-action"
+      ],
+      "initialAccepted": true
+    },
+    {
+      "javascriptName": "transform",
+      "cssName": "transform",
+      "aliases": [
+        "transform"
+      ],
+      "longhands": [
+        "transform"
+      ],
+      "initialAccepted": true
+    },
+    {
+      "javascriptName": "transformBox",
+      "cssName": "transform-box",
+      "aliases": [
+        "transform-box"
+      ],
+      "longhands": [
+        "transform-box"
+      ],
+      "initialAccepted": true
+    },
+    {
+      "javascriptName": "transformOrigin",
+      "cssName": "transform-origin",
+      "aliases": [
+        "transform-origin"
+      ],
+      "longhands": [
+        "transform-origin"
+      ],
+      "initialAccepted": true
+    },
+    {
+      "javascriptName": "transformStyle",
+      "cssName": "transform-style",
+      "aliases": [
+        "transform-style"
+      ],
+      "longhands": [
+        "transform-style"
+      ],
+      "initialAccepted": true
+    },
+    {
+      "javascriptName": "transition",
+      "cssName": "transition",
+      "aliases": [
+        "transition"
+      ],
+      "longhands": [
+        "transition-property",
+        "transition-duration",
+        "transition-timing-function",
+        "transition-delay"
+      ],
+      "initialAccepted": true
+    },
+    {
+      "javascriptName": "transitionDelay",
+      "cssName": "transition-delay",
+      "aliases": [
+        "transition-delay"
+      ],
+      "longhands": [
+        "transition-delay"
+      ],
+      "initialAccepted": true
+    },
+    {
+      "javascriptName": "transitionDuration",
+      "cssName": "transition-duration",
+      "aliases": [
+        "transition-duration"
+      ],
+      "longhands": [
+        "transition-duration"
+      ],
+      "initialAccepted": true
+    },
+    {
+      "javascriptName": "transitionProperty",
+      "cssName": "transition-property",
+      "aliases": [
+        "transition-property"
+      ],
+      "longhands": [
+        "transition-property"
+      ],
+      "initialAccepted": true
+    },
+    {
+      "javascriptName": "transitionTimingFunction",
+      "cssName": "transition-timing-function",
+      "aliases": [
+        "transition-timing-function"
+      ],
+      "longhands": [
+        "transition-timing-function"
+      ],
+      "initialAccepted": true
+    },
+    {
+      "javascriptName": "unicodeBidi",
+      "cssName": "unicode-bidi",
+      "aliases": [
+        "unicode-bidi"
+      ],
+      "longhands": [
+        "unicode-bidi"
+      ],
+      "initialAccepted": true
+    },
+    {
+      "javascriptName": "unicodeRange",
+      "cssName": null,
+      "aliases": [],
+      "longhands": [],
+      "initialAccepted": false
+    },
+    {
+      "javascriptName": "userSelect",
+      "cssName": "user-select",
+      "aliases": [
+        "user-select"
+      ],
+      "longhands": [
+        "user-select"
+      ],
+      "initialAccepted": true
+    },
+    {
+      "javascriptName": "userZoom",
+      "cssName": null,
+      "aliases": [],
+      "longhands": [],
+      "initialAccepted": false
+    },
+    {
+      "javascriptName": "vectorEffect",
+      "cssName": "vector-effect",
+      "aliases": [
+        "vector-effect"
+      ],
+      "longhands": [
+        "vector-effect"
+      ],
+      "initialAccepted": true
+    },
+    {
+      "javascriptName": "verticalAlign",
+      "cssName": "vertical-align",
+      "aliases": [
+        "vertical-align"
+      ],
+      "longhands": [
+        "vertical-align"
+      ],
+      "initialAccepted": true
+    },
+    {
+      "javascriptName": "visibility",
+      "cssName": "visibility",
+      "aliases": [
+        "visibility"
+      ],
+      "longhands": [
+        "visibility"
+      ],
+      "initialAccepted": true
+    },
+    {
+      "javascriptName": "webkitAlignContent",
+      "cssName": "align-content",
+      "aliases": [
+        "align-content",
+        "-webkit-align-content"
+      ],
+      "longhands": [
+        "align-content"
+      ],
+      "initialAccepted": true
+    },
+    {
+      "javascriptName": "webkitAlignItems",
+      "cssName": "align-items",
+      "aliases": [
+        "align-items",
+        "-webkit-align-items"
+      ],
+      "longhands": [
+        "align-items"
+      ],
+      "initialAccepted": true
+    },
+    {
+      "javascriptName": "webkitAlignSelf",
+      "cssName": "align-self",
+      "aliases": [
+        "align-self",
+        "-webkit-align-self"
+      ],
+      "longhands": [
+        "align-self"
+      ],
+      "initialAccepted": true
+    },
+    {
+      "javascriptName": "webkitAnimation",
+      "cssName": "animation",
+      "aliases": [
+        "animation",
+        "-webkit-animation"
+      ],
+      "longhands": [
+        "animation-duration",
+        "animation-timing-function",
+        "animation-delay",
+        "animation-iteration-count",
+        "animation-direction",
+        "animation-fill-mode",
+        "animation-play-state",
+        "animation-name"
+      ],
+      "initialAccepted": true
+    },
+    {
+      "javascriptName": "webkitAnimationDelay",
+      "cssName": "animation-delay",
+      "aliases": [
+        "animation-delay",
+        "-webkit-animation-delay"
+      ],
+      "longhands": [
+        "animation-delay"
+      ],
+      "initialAccepted": true
+    },
+    {
+      "javascriptName": "webkitAnimationDirection",
+      "cssName": "animation-direction",
+      "aliases": [
+        "animation-direction",
+        "-webkit-animation-direction"
+      ],
+      "longhands": [
+        "animation-direction"
+      ],
+      "initialAccepted": true
+    },
+    {
+      "javascriptName": "webkitAnimationDuration",
+      "cssName": "animation-duration",
+      "aliases": [
+        "animation-duration",
+        "-webkit-animation-duration"
+      ],
+      "longhands": [
+        "animation-duration"
+      ],
+      "initialAccepted": true
+    },
+    {
+      "javascriptName": "webkitAnimationFillMode",
+      "cssName": "animation-fill-mode",
+      "aliases": [
+        "animation-fill-mode",
+        "-webkit-animation-fill-mode"
+      ],
+      "longhands": [
+        "animation-fill-mode"
+      ],
+      "initialAccepted": true
+    },
+    {
+      "javascriptName": "webkitAnimationIterationCount",
+      "cssName": "animation-iteration-count",
+      "aliases": [
+        "animation-iteration-count",
+        "-webkit-animation-iteration-count"
+      ],
+      "longhands": [
+        "animation-iteration-count"
+      ],
+      "initialAccepted": true
+    },
+    {
+      "javascriptName": "webkitAnimationName",
+      "cssName": "animation-name",
+      "aliases": [
+        "animation-name",
+        "-webkit-animation-name"
+      ],
+      "longhands": [
+        "animation-name"
+      ],
+      "initialAccepted": true
+    },
+    {
+      "javascriptName": "webkitAnimationPlayState",
+      "cssName": "animation-play-state",
+      "aliases": [
+        "animation-play-state",
+        "-webkit-animation-play-state"
+      ],
+      "longhands": [
+        "animation-play-state"
+      ],
+      "initialAccepted": true
+    },
+    {
+      "javascriptName": "webkitAnimationTimingFunction",
+      "cssName": "animation-timing-function",
+      "aliases": [
+        "animation-timing-function",
+        "-webkit-animation-timing-function"
+      ],
+      "longhands": [
+        "animation-timing-function"
+      ],
+      "initialAccepted": true
+    },
+    {
+      "javascriptName": "webkitAppRegion",
+      "cssName": "-webkit-app-region",
+      "aliases": [
+        "-webkit-app-region"
+      ],
+      "longhands": [
+        "-webkit-app-region"
+      ],
+      "initialAccepted": true
+    },
+    {
+      "javascriptName": "webkitAppearance",
+      "cssName": "appearance",
+      "aliases": [
+        "appearance",
+        "-webkit-appearance"
+      ],
+      "longhands": [
+        "appearance"
+      ],
+      "initialAccepted": true
+    },
+    {
+      "javascriptName": "webkitBackfaceVisibility",
+      "cssName": "backface-visibility",
+      "aliases": [
+        "backface-visibility",
+        "-webkit-backface-visibility"
+      ],
+      "longhands": [
+        "backface-visibility"
+      ],
+      "initialAccepted": true
+    },
+    {
+      "javascriptName": "webkitBackgroundClip",
+      "cssName": "background-clip",
+      "aliases": [
+        "background-clip",
+        "-webkit-background-clip"
+      ],
+      "longhands": [
+        "background-clip"
+      ],
+      "initialAccepted": true
+    },
+    {
+      "javascriptName": "webkitBackgroundOrigin",
+      "cssName": "background-origin",
+      "aliases": [
+        "background-origin",
+        "-webkit-background-origin"
+      ],
+      "longhands": [
+        "background-origin"
+      ],
+      "initialAccepted": true
+    },
+    {
+      "javascriptName": "webkitBackgroundSize",
+      "cssName": "background-size",
+      "aliases": [
+        "background-size",
+        "-webkit-background-size"
+      ],
+      "longhands": [
+        "background-size"
+      ],
+      "initialAccepted": true
+    },
+    {
+      "javascriptName": "webkitBorderAfter",
+      "cssName": "border-block-end",
+      "aliases": [
+        "border-block-end",
+        "-webkit-border-after"
+      ],
+      "longhands": [
+        "border-block-end-width",
+        "border-block-end-style",
+        "border-block-end-color"
+      ],
+      "initialAccepted": true
+    },
+    {
+      "javascriptName": "webkitBorderAfterColor",
+      "cssName": "border-block-end-color",
+      "aliases": [
+        "border-block-end-color",
+        "-webkit-border-after-color"
+      ],
+      "longhands": [
+        "border-block-end-color"
+      ],
+      "initialAccepted": true
+    },
+    {
+      "javascriptName": "webkitBorderAfterStyle",
+      "cssName": "border-block-end-style",
+      "aliases": [
+        "border-block-end-style",
+        "-webkit-border-after-style"
+      ],
+      "longhands": [
+        "border-block-end-style"
+      ],
+      "initialAccepted": true
+    },
+    {
+      "javascriptName": "webkitBorderAfterWidth",
+      "cssName": "border-block-end-width",
+      "aliases": [
+        "border-block-end-width",
+        "-webkit-border-after-width"
+      ],
+      "longhands": [
+        "border-block-end-width"
+      ],
+      "initialAccepted": true
+    },
+    {
+      "javascriptName": "webkitBorderBefore",
+      "cssName": "border-block-start",
+      "aliases": [
+        "border-block-start",
+        "-webkit-border-before"
+      ],
+      "longhands": [
+        "border-block-start-width",
+        "border-block-start-style",
+        "border-block-start-color"
+      ],
+      "initialAccepted": true
+    },
+    {
+      "javascriptName": "webkitBorderBeforeColor",
+      "cssName": "border-block-start-color",
+      "aliases": [
+        "border-block-start-color",
+        "-webkit-border-before-color"
+      ],
+      "longhands": [
+        "border-block-start-color"
+      ],
+      "initialAccepted": true
+    },
+    {
+      "javascriptName": "webkitBorderBeforeStyle",
+      "cssName": "border-block-start-style",
+      "aliases": [
+        "border-block-start-style",
+        "-webkit-border-before-style"
+      ],
+      "longhands": [
+        "border-block-start-style"
+      ],
+      "initialAccepted": true
+    },
+    {
+      "javascriptName": "webkitBorderBeforeWidth",
+      "cssName": "border-block-start-width",
+      "aliases": [
+        "border-block-start-width",
+        "-webkit-border-before-width"
+      ],
+      "longhands": [
+        "border-block-start-width"
+      ],
+      "initialAccepted": true
+    },
+    {
+      "javascriptName": "webkitBorderBottomLeftRadius",
+      "cssName": "border-bottom-left-radius",
+      "aliases": [
+        "border-bottom-left-radius",
+        "-webkit-border-bottom-left-radius"
+      ],
+      "longhands": [
+        "border-bottom-left-radius"
+      ],
+      "initialAccepted": true
+    },
+    {
+      "javascriptName": "webkitBorderBottomRightRadius",
+      "cssName": "border-bottom-right-radius",
+      "aliases": [
+        "border-bottom-right-radius",
+        "-webkit-border-bottom-right-radius"
+      ],
+      "longhands": [
+        "border-bottom-right-radius"
+      ],
+      "initialAccepted": true
+    },
+    {
+      "javascriptName": "webkitBorderEnd",
+      "cssName": "border-inline-end",
+      "aliases": [
+        "border-inline-end",
+        "-webkit-border-end"
+      ],
+      "longhands": [
+        "border-inline-end-width",
+        "border-inline-end-style",
+        "border-inline-end-color"
+      ],
+      "initialAccepted": true
+    },
+    {
+      "javascriptName": "webkitBorderEndColor",
+      "cssName": "border-inline-end-color",
+      "aliases": [
+        "border-inline-end-color",
+        "-webkit-border-end-color"
+      ],
+      "longhands": [
+        "border-inline-end-color"
+      ],
+      "initialAccepted": true
+    },
+    {
+      "javascriptName": "webkitBorderEndStyle",
+      "cssName": "border-inline-end-style",
+      "aliases": [
+        "border-inline-end-style",
+        "-webkit-border-end-style"
+      ],
+      "longhands": [
+        "border-inline-end-style"
+      ],
+      "initialAccepted": true
+    },
+    {
+      "javascriptName": "webkitBorderEndWidth",
+      "cssName": "border-inline-end-width",
+      "aliases": [
+        "border-inline-end-width",
+        "-webkit-border-end-width"
+      ],
+      "longhands": [
+        "border-inline-end-width"
+      ],
+      "initialAccepted": true
+    },
+    {
+      "javascriptName": "webkitBorderHorizontalSpacing",
+      "cssName": "-webkit-border-horizontal-spacing",
+      "aliases": [
+        "-webkit-border-horizontal-spacing"
+      ],
+      "longhands": [
+        "-webkit-border-horizontal-spacing"
+      ],
+      "initialAccepted": true
+    },
+    {
+      "javascriptName": "webkitBorderImage",
+      "cssName": "-webkit-border-image",
+      "aliases": [
+        "-webkit-border-image"
+      ],
+      "longhands": [
+        "-webkit-border-image"
+      ],
+      "initialAccepted": true
+    },
+    {
+      "javascriptName": "webkitBorderRadius",
+      "cssName": "border-radius",
+      "aliases": [
+        "border-radius",
+        "-webkit-border-radius"
+      ],
+      "longhands": [
+        "border-top-left-radius",
+        "border-top-right-radius",
+        "border-bottom-right-radius",
+        "border-bottom-left-radius"
+      ],
+      "initialAccepted": true
+    },
+    {
+      "javascriptName": "webkitBorderStart",
+      "cssName": "border-inline-start",
+      "aliases": [
+        "border-inline-start",
+        "-webkit-border-start"
+      ],
+      "longhands": [
+        "border-inline-start-width",
+        "border-inline-start-style",
+        "border-inline-start-color"
+      ],
+      "initialAccepted": true
+    },
+    {
+      "javascriptName": "webkitBorderStartColor",
+      "cssName": "border-inline-start-color",
+      "aliases": [
+        "border-inline-start-color",
+        "-webkit-border-start-color"
+      ],
+      "longhands": [
+        "border-inline-start-color"
+      ],
+      "initialAccepted": true
+    },
+    {
+      "javascriptName": "webkitBorderStartStyle",
+      "cssName": "border-inline-start-style",
+      "aliases": [
+        "border-inline-start-style",
+        "-webkit-border-start-style"
+      ],
+      "longhands": [
+        "border-inline-start-style"
+      ],
+      "initialAccepted": true
+    },
+    {
+      "javascriptName": "webkitBorderStartWidth",
+      "cssName": "border-inline-start-width",
+      "aliases": [
+        "border-inline-start-width",
+        "-webkit-border-start-width"
+      ],
+      "longhands": [
+        "border-inline-start-width"
+      ],
+      "initialAccepted": true
+    },
+    {
+      "javascriptName": "webkitBorderTopLeftRadius",
+      "cssName": "border-top-left-radius",
+      "aliases": [
+        "border-top-left-radius",
+        "-webkit-border-top-left-radius"
+      ],
+      "longhands": [
+        "border-top-left-radius"
+      ],
+      "initialAccepted": true
+    },
+    {
+      "javascriptName": "webkitBorderTopRightRadius",
+      "cssName": "border-top-right-radius",
+      "aliases": [
+        "border-top-right-radius",
+        "-webkit-border-top-right-radius"
+      ],
+      "longhands": [
+        "border-top-right-radius"
+      ],
+      "initialAccepted": true
+    },
+    {
+      "javascriptName": "webkitBorderVerticalSpacing",
+      "cssName": "-webkit-border-vertical-spacing",
+      "aliases": [
+        "-webkit-border-vertical-spacing"
+      ],
+      "longhands": [
+        "-webkit-border-vertical-spacing"
+      ],
+      "initialAccepted": true
+    },
+    {
+      "javascriptName": "webkitBoxAlign",
+      "cssName": "-webkit-box-align",
+      "aliases": [
+        "-webkit-box-align"
+      ],
+      "longhands": [
+        "-webkit-box-align"
+      ],
+      "initialAccepted": true
+    },
+    {
+      "javascriptName": "webkitBoxDecorationBreak",
+      "cssName": "-webkit-box-decoration-break",
+      "aliases": [
+        "-webkit-box-decoration-break"
+      ],
+      "longhands": [
+        "-webkit-box-decoration-break"
+      ],
+      "initialAccepted": true
+    },
+    {
+      "javascriptName": "webkitBoxDirection",
+      "cssName": "-webkit-box-direction",
+      "aliases": [
+        "-webkit-box-direction"
+      ],
+      "longhands": [
+        "-webkit-box-direction"
+      ],
+      "initialAccepted": true
+    },
+    {
+      "javascriptName": "webkitBoxFlex",
+      "cssName": "-webkit-box-flex",
+      "aliases": [
+        "-webkit-box-flex"
+      ],
+      "longhands": [
+        "-webkit-box-flex"
+      ],
+      "initialAccepted": true
+    },
+    {
+      "javascriptName": "webkitBoxOrdinalGroup",
+      "cssName": "-webkit-box-ordinal-group",
+      "aliases": [
+        "-webkit-box-ordinal-group"
+      ],
+      "longhands": [
+        "-webkit-box-ordinal-group"
+      ],
+      "initialAccepted": true
+    },
+    {
+      "javascriptName": "webkitBoxOrient",
+      "cssName": "-webkit-box-orient",
+      "aliases": [
+        "-webkit-box-orient"
+      ],
+      "longhands": [
+        "-webkit-box-orient"
+      ],
+      "initialAccepted": true
+    },
+    {
+      "javascriptName": "webkitBoxPack",
+      "cssName": "-webkit-box-pack",
+      "aliases": [
+        "-webkit-box-pack"
+      ],
+      "longhands": [
+        "-webkit-box-pack"
+      ],
+      "initialAccepted": true
+    },
+    {
+      "javascriptName": "webkitBoxReflect",
+      "cssName": "-webkit-box-reflect",
+      "aliases": [
+        "-webkit-box-reflect"
+      ],
+      "longhands": [
+        "-webkit-box-reflect"
+      ],
+      "initialAccepted": true
+    },
+    {
+      "javascriptName": "webkitBoxShadow",
+      "cssName": "box-shadow",
+      "aliases": [
+        "box-shadow",
+        "-webkit-box-shadow"
+      ],
+      "longhands": [
+        "box-shadow"
+      ],
+      "initialAccepted": true
+    },
+    {
+      "javascriptName": "webkitBoxSizing",
+      "cssName": "box-sizing",
+      "aliases": [
+        "box-sizing",
+        "-webkit-box-sizing"
+      ],
+      "longhands": [
+        "box-sizing"
+      ],
+      "initialAccepted": true
+    },
+    {
+      "javascriptName": "webkitClipPath",
+      "cssName": "clip-path",
+      "aliases": [
+        "clip-path",
+        "-webkit-clip-path"
+      ],
+      "longhands": [
+        "clip-path"
+      ],
+      "initialAccepted": true
+    },
+    {
+      "javascriptName": "webkitColumnBreakAfter",
+      "cssName": "break-after",
+      "aliases": [
+        "break-after",
+        "-webkit-column-break-after"
+      ],
+      "longhands": [
+        "break-after"
+      ],
+      "initialAccepted": true
+    },
+    {
+      "javascriptName": "webkitColumnBreakBefore",
+      "cssName": "break-before",
+      "aliases": [
+        "break-before",
+        "-webkit-column-break-before"
+      ],
+      "longhands": [
+        "break-before"
+      ],
+      "initialAccepted": true
+    },
+    {
+      "javascriptName": "webkitColumnBreakInside",
+      "cssName": "break-inside",
+      "aliases": [
+        "break-inside",
+        "-webkit-column-break-inside"
+      ],
+      "longhands": [
+        "break-inside"
+      ],
+      "initialAccepted": true
+    },
+    {
+      "javascriptName": "webkitColumnCount",
+      "cssName": "column-count",
+      "aliases": [
+        "column-count",
+        "-webkit-column-count"
+      ],
+      "longhands": [
+        "column-count"
+      ],
+      "initialAccepted": true
+    },
+    {
+      "javascriptName": "webkitColumnGap",
+      "cssName": "column-gap",
+      "aliases": [
+        "column-gap",
+        "-webkit-column-gap"
+      ],
+      "longhands": [
+        "column-gap"
+      ],
+      "initialAccepted": true
+    },
+    {
+      "javascriptName": "webkitColumnRule",
+      "cssName": "column-rule",
+      "aliases": [
+        "column-rule",
+        "-webkit-column-rule"
+      ],
+      "longhands": [
+        "column-rule-width",
+        "column-rule-style",
+        "column-rule-color"
+      ],
+      "initialAccepted": true
+    },
+    {
+      "javascriptName": "webkitColumnRuleColor",
+      "cssName": "column-rule-color",
+      "aliases": [
+        "column-rule-color",
+        "-webkit-column-rule-color"
+      ],
+      "longhands": [
+        "column-rule-color"
+      ],
+      "initialAccepted": true
+    },
+    {
+      "javascriptName": "webkitColumnRuleStyle",
+      "cssName": "column-rule-style",
+      "aliases": [
+        "column-rule-style",
+        "-webkit-column-rule-style"
+      ],
+      "longhands": [
+        "column-rule-style"
+      ],
+      "initialAccepted": true
+    },
+    {
+      "javascriptName": "webkitColumnRuleWidth",
+      "cssName": "column-rule-width",
+      "aliases": [
+        "column-rule-width",
+        "-webkit-column-rule-width"
+      ],
+      "longhands": [
+        "column-rule-width"
+      ],
+      "initialAccepted": true
+    },
+    {
+      "javascriptName": "webkitColumnSpan",
+      "cssName": "column-span",
+      "aliases": [
+        "column-span",
+        "-webkit-column-span"
+      ],
+      "longhands": [
+        "column-span"
+      ],
+      "initialAccepted": true
+    },
+    {
+      "javascriptName": "webkitColumnWidth",
+      "cssName": "column-width",
+      "aliases": [
+        "column-width",
+        "-webkit-column-width"
+      ],
+      "longhands": [
+        "column-width"
+      ],
+      "initialAccepted": true
+    },
+    {
+      "javascriptName": "webkitColumns",
+      "cssName": "columns",
+      "aliases": [
+        "columns",
+        "-webkit-columns"
+      ],
+      "longhands": [
+        "column-width",
+        "column-count"
+      ],
+      "initialAccepted": true
+    },
+    {
+      "javascriptName": "webkitFilter",
+      "cssName": "filter",
+      "aliases": [
+        "filter",
+        "-webkit-filter"
+      ],
+      "longhands": [
+        "filter"
+      ],
+      "initialAccepted": true
+    },
+    {
+      "javascriptName": "webkitFlex",
+      "cssName": "flex",
+      "aliases": [
+        "flex",
+        "-webkit-flex"
+      ],
+      "longhands": [
+        "flex-grow",
+        "flex-shrink",
+        "flex-basis"
+      ],
+      "initialAccepted": true
+    },
+    {
+      "javascriptName": "webkitFlexBasis",
+      "cssName": "flex-basis",
+      "aliases": [
+        "flex-basis",
+        "-webkit-flex-basis"
+      ],
+      "longhands": [
+        "flex-basis"
+      ],
+      "initialAccepted": true
+    },
+    {
+      "javascriptName": "webkitFlexDirection",
+      "cssName": "flex-direction",
+      "aliases": [
+        "flex-direction",
+        "-webkit-flex-direction"
+      ],
+      "longhands": [
+        "flex-direction"
+      ],
+      "initialAccepted": true
+    },
+    {
+      "javascriptName": "webkitFlexFlow",
+      "cssName": "flex-flow",
+      "aliases": [
+        "flex-flow",
+        "-webkit-flex-flow"
+      ],
+      "longhands": [
+        "flex-direction",
+        "flex-wrap"
+      ],
+      "initialAccepted": true
+    },
+    {
+      "javascriptName": "webkitFlexGrow",
+      "cssName": "flex-grow",
+      "aliases": [
+        "flex-grow",
+        "-webkit-flex-grow"
+      ],
+      "longhands": [
+        "flex-grow"
+      ],
+      "initialAccepted": true
+    },
+    {
+      "javascriptName": "webkitFlexShrink",
+      "cssName": "flex-shrink",
+      "aliases": [
+        "flex-shrink",
+        "-webkit-flex-shrink"
+      ],
+      "longhands": [
+        "flex-shrink"
+      ],
+      "initialAccepted": true
+    },
+    {
+      "javascriptName": "webkitFlexWrap",
+      "cssName": "flex-wrap",
+      "aliases": [
+        "flex-wrap",
+        "-webkit-flex-wrap"
+      ],
+      "longhands": [
+        "flex-wrap"
+      ],
+      "initialAccepted": true
+    },
+    {
+      "javascriptName": "webkitFontFeatureSettings",
+      "cssName": "font-feature-settings",
+      "aliases": [
+        "font-feature-settings",
+        "-webkit-font-feature-settings"
+      ],
+      "longhands": [
+        "font-feature-settings"
+      ],
+      "initialAccepted": true
+    },
+    {
+      "javascriptName": "webkitFontSmoothing",
+      "cssName": "-webkit-font-smoothing",
+      "aliases": [
+        "-webkit-font-smoothing"
+      ],
+      "longhands": [
+        "-webkit-font-smoothing"
+      ],
+      "initialAccepted": true
+    },
+    {
+      "javascriptName": "webkitHighlight",
+      "cssName": "-webkit-highlight",
+      "aliases": [
+        "-webkit-highlight"
+      ],
+      "longhands": [
+        "-webkit-highlight"
+      ],
+      "initialAccepted": true
+    },
+    {
+      "javascriptName": "webkitHyphenateCharacter",
+      "cssName": "-webkit-hyphenate-character",
+      "aliases": [
+        "-webkit-hyphenate-character"
+      ],
+      "longhands": [
+        "-webkit-hyphenate-character"
+      ],
+      "initialAccepted": true
+    },
+    {
+      "javascriptName": "webkitJustifyContent",
+      "cssName": "justify-content",
+      "aliases": [
+        "justify-content",
+        "-webkit-justify-content"
+      ],
+      "longhands": [
+        "justify-content"
+      ],
+      "initialAccepted": true
+    },
+    {
+      "javascriptName": "webkitLineBreak",
+      "cssName": "-webkit-line-break",
+      "aliases": [
+        "-webkit-line-break"
+      ],
+      "longhands": [
+        "-webkit-line-break"
+      ],
+      "initialAccepted": true
+    },
+    {
+      "javascriptName": "webkitLineClamp",
+      "cssName": "-webkit-line-clamp",
+      "aliases": [
+        "-webkit-line-clamp"
+      ],
+      "longhands": [
+        "-webkit-line-clamp"
+      ],
+      "initialAccepted": true
+    },
+    {
+      "javascriptName": "webkitLocale",
+      "cssName": "-webkit-locale",
+      "aliases": [
+        "-webkit-locale"
+      ],
+      "longhands": [
+        "-webkit-locale"
+      ],
+      "initialAccepted": true
+    },
+    {
+      "javascriptName": "webkitLogicalHeight",
+      "cssName": "block-size",
+      "aliases": [
+        "block-size",
+        "-webkit-logical-height"
+      ],
+      "longhands": [
+        "block-size"
+      ],
+      "initialAccepted": true
+    },
+    {
+      "javascriptName": "webkitLogicalWidth",
+      "cssName": "inline-size",
+      "aliases": [
+        "inline-size",
+        "-webkit-logical-width"
+      ],
+      "longhands": [
+        "inline-size"
+      ],
+      "initialAccepted": true
+    },
+    {
+      "javascriptName": "webkitMarginAfter",
+      "cssName": "margin-block-end",
+      "aliases": [
+        "margin-block-end",
+        "-webkit-margin-after"
+      ],
+      "longhands": [
+        "margin-block-end"
+      ],
+      "initialAccepted": true
+    },
+    {
+      "javascriptName": "webkitMarginBefore",
+      "cssName": "margin-block-start",
+      "aliases": [
+        "margin-block-start",
+        "-webkit-margin-before"
+      ],
+      "longhands": [
+        "margin-block-start"
+      ],
+      "initialAccepted": true
+    },
+    {
+      "javascriptName": "webkitMarginEnd",
+      "cssName": "margin-inline-end",
+      "aliases": [
+        "margin-inline-end",
+        "-webkit-margin-end"
+      ],
+      "longhands": [
+        "margin-inline-end"
+      ],
+      "initialAccepted": true
+    },
+    {
+      "javascriptName": "webkitMarginStart",
+      "cssName": "margin-inline-start",
+      "aliases": [
+        "margin-inline-start",
+        "-webkit-margin-start"
+      ],
+      "longhands": [
+        "margin-inline-start"
+      ],
+      "initialAccepted": true
+    },
+    {
+      "javascriptName": "webkitMask",
+      "cssName": "-webkit-mask",
+      "aliases": [
+        "-webkit-mask"
+      ],
+      "longhands": [
+        "-webkit-mask-image",
+        "-webkit-mask-position-x",
+        "-webkit-mask-position-y",
+        "-webkit-mask-size",
+        "-webkit-mask-repeat-x",
+        "-webkit-mask-repeat-y",
+        "-webkit-mask-origin",
+        "-webkit-mask-clip"
+      ],
+      "initialAccepted": true
+    },
+    {
+      "javascriptName": "webkitMaskBoxImage",
+      "cssName": "-webkit-mask-box-image",
+      "aliases": [
+        "-webkit-mask-box-image"
+      ],
+      "longhands": [
+        "-webkit-mask-box-image-source",
+        "-webkit-mask-box-image-slice",
+        "-webkit-mask-box-image-width",
+        "-webkit-mask-box-image-outset",
+        "-webkit-mask-box-image-repeat"
+      ],
+      "initialAccepted": true
+    },
+    {
+      "javascriptName": "webkitMaskBoxImageOutset",
+      "cssName": "-webkit-mask-box-image-outset",
+      "aliases": [
+        "-webkit-mask-box-image-outset"
+      ],
+      "longhands": [
+        "-webkit-mask-box-image-outset"
+      ],
+      "initialAccepted": true
+    },
+    {
+      "javascriptName": "webkitMaskBoxImageRepeat",
+      "cssName": "-webkit-mask-box-image-repeat",
+      "aliases": [
+        "-webkit-mask-box-image-repeat"
+      ],
+      "longhands": [
+        "-webkit-mask-box-image-repeat"
+      ],
+      "initialAccepted": true
+    },
+    {
+      "javascriptName": "webkitMaskBoxImageSlice",
+      "cssName": "-webkit-mask-box-image-slice",
+      "aliases": [
+        "-webkit-mask-box-image-slice"
+      ],
+      "longhands": [
+        "-webkit-mask-box-image-slice"
+      ],
+      "initialAccepted": true
+    },
+    {
+      "javascriptName": "webkitMaskBoxImageSource",
+      "cssName": "-webkit-mask-box-image-source",
+      "aliases": [
+        "-webkit-mask-box-image-source"
+      ],
+      "longhands": [
+        "-webkit-mask-box-image-source"
+      ],
+      "initialAccepted": true
+    },
+    {
+      "javascriptName": "webkitMaskBoxImageWidth",
+      "cssName": "-webkit-mask-box-image-width",
+      "aliases": [
+        "-webkit-mask-box-image-width"
+      ],
+      "longhands": [
+        "-webkit-mask-box-image-width"
+      ],
+      "initialAccepted": true
+    },
+    {
+      "javascriptName": "webkitMaskClip",
+      "cssName": "-webkit-mask-clip",
+      "aliases": [
+        "-webkit-mask-clip"
+      ],
+      "longhands": [
+        "-webkit-mask-clip"
+      ],
+      "initialAccepted": true
+    },
+    {
+      "javascriptName": "webkitMaskComposite",
+      "cssName": "-webkit-mask-composite",
+      "aliases": [
+        "-webkit-mask-composite"
+      ],
+      "longhands": [
+        "-webkit-mask-composite"
+      ],
+      "initialAccepted": true
+    },
+    {
+      "javascriptName": "webkitMaskImage",
+      "cssName": "-webkit-mask-image",
+      "aliases": [
+        "-webkit-mask-image"
+      ],
+      "longhands": [
+        "-webkit-mask-image"
+      ],
+      "initialAccepted": true
+    },
+    {
+      "javascriptName": "webkitMaskOrigin",
+      "cssName": "-webkit-mask-origin",
+      "aliases": [
+        "-webkit-mask-origin"
+      ],
+      "longhands": [
+        "-webkit-mask-origin"
+      ],
+      "initialAccepted": true
+    },
+    {
+      "javascriptName": "webkitMaskPosition",
+      "cssName": "-webkit-mask-position",
+      "aliases": [
+        "-webkit-mask-position"
+      ],
+      "longhands": [
+        "-webkit-mask-position-x",
+        "-webkit-mask-position-y"
+      ],
+      "initialAccepted": true
+    },
+    {
+      "javascriptName": "webkitMaskPositionX",
+      "cssName": "-webkit-mask-position-x",
+      "aliases": [
+        "-webkit-mask-position-x"
+      ],
+      "longhands": [
+        "-webkit-mask-position-x"
+      ],
+      "initialAccepted": true
+    },
+    {
+      "javascriptName": "webkitMaskPositionY",
+      "cssName": "-webkit-mask-position-y",
+      "aliases": [
+        "-webkit-mask-position-y"
+      ],
+      "longhands": [
+        "-webkit-mask-position-y"
+      ],
+      "initialAccepted": true
+    },
+    {
+      "javascriptName": "webkitMaskRepeat",
+      "cssName": "-webkit-mask-repeat",
+      "aliases": [
+        "-webkit-mask-repeat"
+      ],
+      "longhands": [
+        "-webkit-mask-repeat-x",
+        "-webkit-mask-repeat-y"
+      ],
+      "initialAccepted": true
+    },
+    {
+      "javascriptName": "webkitMaskRepeatX",
+      "cssName": "-webkit-mask-repeat-x",
+      "aliases": [
+        "-webkit-mask-repeat-x"
+      ],
+      "longhands": [
+        "-webkit-mask-repeat-x"
+      ],
+      "initialAccepted": true
+    },
+    {
+      "javascriptName": "webkitMaskRepeatY",
+      "cssName": "-webkit-mask-repeat-y",
+      "aliases": [
+        "-webkit-mask-repeat-y"
+      ],
+      "longhands": [
+        "-webkit-mask-repeat-y"
+      ],
+      "initialAccepted": true
+    },
+    {
+      "javascriptName": "webkitMaskSize",
+      "cssName": "-webkit-mask-size",
+      "aliases": [
+        "-webkit-mask-size"
+      ],
+      "longhands": [
+        "-webkit-mask-size"
+      ],
+      "initialAccepted": true
+    },
+    {
+      "javascriptName": "webkitMaxLogicalHeight",
+      "cssName": "max-block-size",
+      "aliases": [
+        "max-block-size",
+        "-webkit-max-logical-height"
+      ],
+      "longhands": [
+        "max-block-size"
+      ],
+      "initialAccepted": true
+    },
+    {
+      "javascriptName": "webkitMaxLogicalWidth",
+      "cssName": "max-inline-size",
+      "aliases": [
+        "max-inline-size",
+        "-webkit-max-logical-width"
+      ],
+      "longhands": [
+        "max-inline-size"
+      ],
+      "initialAccepted": true
+    },
+    {
+      "javascriptName": "webkitMinLogicalHeight",
+      "cssName": "min-block-size",
+      "aliases": [
+        "min-block-size",
+        "-webkit-min-logical-height"
+      ],
+      "longhands": [
+        "min-block-size"
+      ],
+      "initialAccepted": true
+    },
+    {
+      "javascriptName": "webkitMinLogicalWidth",
+      "cssName": "min-inline-size",
+      "aliases": [
+        "min-inline-size",
+        "-webkit-min-logical-width"
+      ],
+      "longhands": [
+        "min-inline-size"
+      ],
+      "initialAccepted": true
+    },
+    {
+      "javascriptName": "webkitOpacity",
+      "cssName": "opacity",
+      "aliases": [
+        "opacity",
+        "-webkit-opacity"
+      ],
+      "longhands": [
+        "opacity"
+      ],
+      "initialAccepted": true
+    },
+    {
+      "javascriptName": "webkitOrder",
+      "cssName": "order",
+      "aliases": [
+        "order",
+        "-webkit-order"
+      ],
+      "longhands": [
+        "order"
+      ],
+      "initialAccepted": true
+    },
+    {
+      "javascriptName": "webkitPaddingAfter",
+      "cssName": "padding-block-end",
+      "aliases": [
+        "padding-block-end",
+        "-webkit-padding-after"
+      ],
+      "longhands": [
+        "padding-block-end"
+      ],
+      "initialAccepted": true
+    },
+    {
+      "javascriptName": "webkitPaddingBefore",
+      "cssName": "padding-block-start",
+      "aliases": [
+        "padding-block-start",
+        "-webkit-padding-before"
+      ],
+      "longhands": [
+        "padding-block-start"
+      ],
+      "initialAccepted": true
+    },
+    {
+      "javascriptName": "webkitPaddingEnd",
+      "cssName": "padding-inline-end",
+      "aliases": [
+        "padding-inline-end",
+        "-webkit-padding-end"
+      ],
+      "longhands": [
+        "padding-inline-end"
+      ],
+      "initialAccepted": true
+    },
+    {
+      "javascriptName": "webkitPaddingStart",
+      "cssName": "padding-inline-start",
+      "aliases": [
+        "padding-inline-start",
+        "-webkit-padding-start"
+      ],
+      "longhands": [
+        "padding-inline-start"
+      ],
+      "initialAccepted": true
+    },
+    {
+      "javascriptName": "webkitPerspective",
+      "cssName": "perspective",
+      "aliases": [
+        "perspective",
+        "-webkit-perspective"
+      ],
+      "longhands": [
+        "perspective"
+      ],
+      "initialAccepted": true
+    },
+    {
+      "javascriptName": "webkitPerspectiveOrigin",
+      "cssName": "perspective-origin",
+      "aliases": [
+        "perspective-origin",
+        "-webkit-perspective-origin"
+      ],
+      "longhands": [
+        "perspective-origin"
+      ],
+      "initialAccepted": true
+    },
+    {
+      "javascriptName": "webkitPerspectiveOriginX",
+      "cssName": "-webkit-perspective-origin-x",
+      "aliases": [
+        "-webkit-perspective-origin-x"
+      ],
+      "longhands": [
+        "-webkit-perspective-origin-x"
+      ],
+      "initialAccepted": true
+    },
+    {
+      "javascriptName": "webkitPerspectiveOriginY",
+      "cssName": "-webkit-perspective-origin-y",
+      "aliases": [
+        "-webkit-perspective-origin-y"
+      ],
+      "longhands": [
+        "-webkit-perspective-origin-y"
+      ],
+      "initialAccepted": true
+    },
+    {
+      "javascriptName": "webkitPrintColorAdjust",
+      "cssName": "-webkit-print-color-adjust",
+      "aliases": [
+        "-webkit-print-color-adjust"
+      ],
+      "longhands": [
+        "-webkit-print-color-adjust"
+      ],
+      "initialAccepted": true
+    },
+    {
+      "javascriptName": "webkitRtlOrdering",
+      "cssName": "-webkit-rtl-ordering",
+      "aliases": [
+        "-webkit-rtl-ordering"
+      ],
+      "longhands": [
+        "-webkit-rtl-ordering"
+      ],
+      "initialAccepted": true
+    },
+    {
+      "javascriptName": "webkitRubyPosition",
+      "cssName": "-webkit-ruby-position",
+      "aliases": [
+        "-webkit-ruby-position"
+      ],
+      "longhands": [
+        "-webkit-ruby-position"
+      ],
+      "initialAccepted": true
+    },
+    {
+      "javascriptName": "webkitShapeImageThreshold",
+      "cssName": "shape-image-threshold",
+      "aliases": [
+        "shape-image-threshold",
+        "-webkit-shape-image-threshold"
+      ],
+      "longhands": [
+        "shape-image-threshold"
+      ],
+      "initialAccepted": true
+    },
+    {
+      "javascriptName": "webkitShapeMargin",
+      "cssName": "shape-margin",
+      "aliases": [
+        "shape-margin",
+        "-webkit-shape-margin"
+      ],
+      "longhands": [
+        "shape-margin"
+      ],
+      "initialAccepted": true
+    },
+    {
+      "javascriptName": "webkitShapeOutside",
+      "cssName": "shape-outside",
+      "aliases": [
+        "shape-outside",
+        "-webkit-shape-outside"
+      ],
+      "longhands": [
+        "shape-outside"
+      ],
+      "initialAccepted": true
+    },
+    {
+      "javascriptName": "webkitTapHighlightColor",
+      "cssName": "-webkit-tap-highlight-color",
+      "aliases": [
+        "-webkit-tap-highlight-color"
+      ],
+      "longhands": [
+        "-webkit-tap-highlight-color"
+      ],
+      "initialAccepted": true
+    },
+    {
+      "javascriptName": "webkitTextCombine",
+      "cssName": "-webkit-text-combine",
+      "aliases": [
+        "-webkit-text-combine"
+      ],
+      "longhands": [
+        "-webkit-text-combine"
+      ],
+      "initialAccepted": true
+    },
+    {
+      "javascriptName": "webkitTextDecorationsInEffect",
+      "cssName": "-webkit-text-decorations-in-effect",
+      "aliases": [
+        "-webkit-text-decorations-in-effect"
+      ],
+      "longhands": [
+        "-webkit-text-decorations-in-effect"
+      ],
+      "initialAccepted": true
+    },
+    {
+      "javascriptName": "webkitTextEmphasis",
+      "cssName": "-webkit-text-emphasis",
+      "aliases": [
+        "-webkit-text-emphasis"
+      ],
+      "longhands": [
+        "-webkit-text-emphasis-style",
+        "-webkit-text-emphasis-color"
+      ],
+      "initialAccepted": true
+    },
+    {
+      "javascriptName": "webkitTextEmphasisColor",
+      "cssName": "-webkit-text-emphasis-color",
+      "aliases": [
+        "-webkit-text-emphasis-color"
+      ],
+      "longhands": [
+        "-webkit-text-emphasis-color"
+      ],
+      "initialAccepted": true
+    },
+    {
+      "javascriptName": "webkitTextEmphasisPosition",
+      "cssName": "-webkit-text-emphasis-position",
+      "aliases": [
+        "-webkit-text-emphasis-position"
+      ],
+      "longhands": [
+        "-webkit-text-emphasis-position"
+      ],
+      "initialAccepted": true
+    },
+    {
+      "javascriptName": "webkitTextEmphasisStyle",
+      "cssName": "-webkit-text-emphasis-style",
+      "aliases": [
+        "-webkit-text-emphasis-style"
+      ],
+      "longhands": [
+        "-webkit-text-emphasis-style"
+      ],
+      "initialAccepted": true
+    },
+    {
+      "javascriptName": "webkitTextFillColor",
+      "cssName": "-webkit-text-fill-color",
+      "aliases": [
+        "-webkit-text-fill-color"
+      ],
+      "longhands": [
+        "-webkit-text-fill-color"
+      ],
+      "initialAccepted": true
+    },
+    {
+      "javascriptName": "webkitTextOrientation",
+      "cssName": "-webkit-text-orientation",
+      "aliases": [
+        "-webkit-text-orientation"
+      ],
+      "longhands": [
+        "-webkit-text-orientation"
+      ],
+      "initialAccepted": true
+    },
+    {
+      "javascriptName": "webkitTextSecurity",
+      "cssName": "-webkit-text-security",
+      "aliases": [
+        "-webkit-text-security"
+      ],
+      "longhands": [
+        "-webkit-text-security"
+      ],
+      "initialAccepted": true
+    },
+    {
+      "javascriptName": "webkitTextSizeAdjust",
+      "cssName": "text-size-adjust",
+      "aliases": [
+        "text-size-adjust",
+        "-webkit-text-size-adjust"
+      ],
+      "longhands": [
+        "text-size-adjust"
+      ],
+      "initialAccepted": true
+    },
+    {
+      "javascriptName": "webkitTextStroke",
+      "cssName": "-webkit-text-stroke",
+      "aliases": [
+        "-webkit-text-stroke"
+      ],
+      "longhands": [
+        "-webkit-text-stroke-width",
+        "-webkit-text-stroke-color"
+      ],
+      "initialAccepted": true
+    },
+    {
+      "javascriptName": "webkitTextStrokeColor",
+      "cssName": "-webkit-text-stroke-color",
+      "aliases": [
+        "-webkit-text-stroke-color"
+      ],
+      "longhands": [
+        "-webkit-text-stroke-color"
+      ],
+      "initialAccepted": true
+    },
+    {
+      "javascriptName": "webkitTextStrokeWidth",
+      "cssName": "-webkit-text-stroke-width",
+      "aliases": [
+        "-webkit-text-stroke-width"
+      ],
+      "longhands": [
+        "-webkit-text-stroke-width"
+      ],
+      "initialAccepted": true
+    },
+    {
+      "javascriptName": "webkitTransform",
+      "cssName": "transform",
+      "aliases": [
+        "transform",
+        "-webkit-transform"
+      ],
+      "longhands": [
+        "transform"
+      ],
+      "initialAccepted": true
+    },
+    {
+      "javascriptName": "webkitTransformOrigin",
+      "cssName": "transform-origin",
+      "aliases": [
+        "transform-origin",
+        "-webkit-transform-origin"
+      ],
+      "longhands": [
+        "transform-origin"
+      ],
+      "initialAccepted": true
+    },
+    {
+      "javascriptName": "webkitTransformOriginX",
+      "cssName": "-webkit-transform-origin-x",
+      "aliases": [
+        "-webkit-transform-origin-x"
+      ],
+      "longhands": [
+        "-webkit-transform-origin-x"
+      ],
+      "initialAccepted": true
+    },
+    {
+      "javascriptName": "webkitTransformOriginY",
+      "cssName": "-webkit-transform-origin-y",
+      "aliases": [
+        "-webkit-transform-origin-y"
+      ],
+      "longhands": [
+        "-webkit-transform-origin-y"
+      ],
+      "initialAccepted": true
+    },
+    {
+      "javascriptName": "webkitTransformOriginZ",
+      "cssName": "-webkit-transform-origin-z",
+      "aliases": [
+        "-webkit-transform-origin-z"
+      ],
+      "longhands": [
+        "-webkit-transform-origin-z"
+      ],
+      "initialAccepted": true
+    },
+    {
+      "javascriptName": "webkitTransformStyle",
+      "cssName": "transform-style",
+      "aliases": [
+        "transform-style",
+        "-webkit-transform-style"
+      ],
+      "longhands": [
+        "transform-style"
+      ],
+      "initialAccepted": true
+    },
+    {
+      "javascriptName": "webkitTransition",
+      "cssName": "transition",
+      "aliases": [
+        "transition",
+        "-webkit-transition"
+      ],
+      "longhands": [
+        "transition-property",
+        "transition-duration",
+        "transition-timing-function",
+        "transition-delay"
+      ],
+      "initialAccepted": true
+    },
+    {
+      "javascriptName": "webkitTransitionDelay",
+      "cssName": "transition-delay",
+      "aliases": [
+        "transition-delay",
+        "-webkit-transition-delay"
+      ],
+      "longhands": [
+        "transition-delay"
+      ],
+      "initialAccepted": true
+    },
+    {
+      "javascriptName": "webkitTransitionDuration",
+      "cssName": "transition-duration",
+      "aliases": [
+        "transition-duration",
+        "-webkit-transition-duration"
+      ],
+      "longhands": [
+        "transition-duration"
+      ],
+      "initialAccepted": true
+    },
+    {
+      "javascriptName": "webkitTransitionProperty",
+      "cssName": "transition-property",
+      "aliases": [
+        "transition-property",
+        "-webkit-transition-property"
+      ],
+      "longhands": [
+        "transition-property"
+      ],
+      "initialAccepted": true
+    },
+    {
+      "javascriptName": "webkitTransitionTimingFunction",
+      "cssName": "transition-timing-function",
+      "aliases": [
+        "transition-timing-function",
+        "-webkit-transition-timing-function"
+      ],
+      "longhands": [
+        "transition-timing-function"
+      ],
+      "initialAccepted": true
+    },
+    {
+      "javascriptName": "webkitUserDrag",
+      "cssName": "-webkit-user-drag",
+      "aliases": [
+        "-webkit-user-drag"
+      ],
+      "longhands": [
+        "-webkit-user-drag"
+      ],
+      "initialAccepted": true
+    },
+    {
+      "javascriptName": "webkitUserModify",
+      "cssName": "-webkit-user-modify",
+      "aliases": [
+        "-webkit-user-modify"
+      ],
+      "longhands": [
+        "-webkit-user-modify"
+      ],
+      "initialAccepted": true
+    },
+    {
+      "javascriptName": "webkitUserSelect",
+      "cssName": "user-select",
+      "aliases": [
+        "user-select",
+        "-webkit-user-select"
+      ],
+      "longhands": [
+        "user-select"
+      ],
+      "initialAccepted": true
+    },
+    {
+      "javascriptName": "webkitWritingMode",
+      "cssName": "-webkit-writing-mode",
+      "aliases": [
+        "-webkit-writing-mode"
+      ],
+      "longhands": [
+        "-webkit-writing-mode"
+      ],
+      "initialAccepted": true
+    },
+    {
+      "javascriptName": "whiteSpace",
+      "cssName": "white-space",
+      "aliases": [
+        "white-space"
+      ],
+      "longhands": [
+        "white-space"
+      ],
+      "initialAccepted": true
+    },
+    {
+      "javascriptName": "widows",
+      "cssName": "widows",
+      "aliases": [
+        "widows"
+      ],
+      "longhands": [
+        "widows"
+      ],
+      "initialAccepted": true
+    },
+    {
+      "javascriptName": "width",
+      "cssName": "width",
+      "aliases": [
+        "width"
+      ],
+      "longhands": [
+        "width"
+      ],
+      "initialAccepted": true
+    },
+    {
+      "javascriptName": "willChange",
+      "cssName": "will-change",
+      "aliases": [
+        "will-change"
+      ],
+      "longhands": [
+        "will-change"
+      ],
+      "initialAccepted": true
+    },
+    {
+      "javascriptName": "wordBreak",
+      "cssName": "word-break",
+      "aliases": [
+        "word-break"
+      ],
+      "longhands": [
+        "word-break"
+      ],
+      "initialAccepted": true
+    },
+    {
+      "javascriptName": "wordSpacing",
+      "cssName": "word-spacing",
+      "aliases": [
+        "word-spacing"
+      ],
+      "longhands": [
+        "word-spacing"
+      ],
+      "initialAccepted": true
+    },
+    {
+      "javascriptName": "wordWrap",
+      "cssName": "overflow-wrap",
+      "aliases": [
+        "overflow-wrap",
+        "word-wrap"
+      ],
+      "longhands": [
+        "overflow-wrap"
+      ],
+      "initialAccepted": true
+    },
+    {
+      "javascriptName": "writingMode",
+      "cssName": "writing-mode",
+      "aliases": [
+        "writing-mode"
+      ],
+      "longhands": [
+        "writing-mode"
+      ],
+      "initialAccepted": true
+    },
+    {
+      "javascriptName": "x",
+      "cssName": "x",
+      "aliases": [
+        "x"
+      ],
+      "longhands": [
+        "x"
+      ],
+      "initialAccepted": true
+    },
+    {
+      "javascriptName": "y",
+      "cssName": "y",
+      "aliases": [
+        "y"
+      ],
+      "longhands": [
+        "y"
+      ],
+      "initialAccepted": true
+    },
+    {
+      "javascriptName": "zIndex",
+      "cssName": "z-index",
+      "aliases": [
+        "z-index"
+      ],
+      "longhands": [
+        "z-index"
+      ],
+      "initialAccepted": true
+    },
+    {
+      "javascriptName": "zoom",
+      "cssName": "zoom",
+      "aliases": [
+        "zoom"
+      ],
+      "longhands": [
+        "zoom"
+      ],
+      "initialAccepted": true
+    }
+  ],
+  "propertiesSha256": "f127d3a2f04b69030cf8b84ed34c345f29ec7b41be343f7df6fb8c427bd2acd7"
+}

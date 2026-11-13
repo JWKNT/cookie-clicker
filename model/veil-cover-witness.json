@@ -1,0 +1,168 @@
+{
+  "schemaVersion": 1,
+  "scope": "exhaustive-native-evidence-not-kernel-proof",
+  "sourceHashes": {
+    "main.js": "a8813ec2ee97edf5ebff6a3ce2037dcb65c08abd13c123bb92efda89b06ef4f7",
+    "minigameGarden.js": "184eacacd9325d493412dcda07f63d3a791939f83889b4349b6099d04be8e6c9",
+    "minigameMarket.js": "78538743673f3c1cd0e870a3695c77dcacd63febbe64b88f8a8fab9ea7e2863f",
+    "minigameGrimoire.js": "9efea1feb898dc9b719dd971bd27a71f083a8855b910013c524aea9b6d2a349d",
+    "minigamePantheon.js": "af08c31c4564d445cc2d1a7d101c4a63b57aa9b89991b93b8a65f4c0427573a0",
+    "base64.js": "875839c3e0c174c9358ce96923adfed6a6d2c090187a32deb35152dfac2c0e47",
+    "loc/EN.js": "ce48272a5fd5ab1f309dbb8fd7bd70188984ce14235a1d3d9215f3585101f433",
+    "index.html": "28488d9aef9bf31c4c023a0af01f0500a3b3e462b79bf7f2b09790025927a969"
+  },
+  "domainSize": 11881376,
+  "allStartupSeedsCovered": true,
+  "maximumSufficientCounter": 34,
+  "firstMaximumSeed": "awjiu",
+  "unresolvedSeeds": 0,
+  "zeroInitialSixByteWordsThroughSelectedCounter": 0,
+  "histogram": [
+    4687672,
+    2841532,
+    1715442,
+    1039825,
+    629685,
+    381210,
+    231721,
+    140004,
+    84718,
+    51060,
+    30922,
+    18730,
+    11419,
+    6806,
+    4127,
+    2570,
+    1594,
+    972,
+    528,
+    306,
+    212,
+    130,
+    78,
+    30,
+    31,
+    23,
+    6,
+    7,
+    6,
+    4,
+    3,
+    0,
+    2,
+    0,
+    1
+  ],
+  "certificateEncoding": "One unsigned byte per five-letter lowercase seed in lexicographic order; a sufficient counter0..34, not necessarily the first successful native output.",
+  "certificate": {
+    "path": "model/certificates/veil-first-counter.bin.gz",
+    "bytes": 11881376,
+    "sha256": "6d8770c7f4dc48309d3f8cdaf5fa31831bb61cbe39eb4b7d1cb8c03f0a1afb33",
+    "compressedBytes": 4370457,
+    "compressedSha256": "1b096023fc1091cb61922fee995a5e9b432ccc7fb6bdc3c0c42e2d6c0b5815ff"
+  },
+  "originalProvenance": {
+    "checkpoint": "model/experiments/veil-seed-cover/original-checkpoint.json",
+    "checkpointSha256": "07793617154997f349d652599a4655150de431c25578acdfc79df20241794cee",
+    "archivedFiles": [
+      {
+        "originalPath": "arc4-short.hpp",
+        "path": "tools/veil-cover/arc4-short.hpp",
+        "sha256": "3eab311f39865396bbb7ad0b46bf206c166d1f4cf8ac0572de9fb17d81b621a7"
+      },
+      {
+        "originalPath": "scan.cpp",
+        "path": "tools/veil-cover/scan.cpp",
+        "sha256": "22b055b24adc9a0c3e2bd388c58fcff82cfa8b95a1ce965cde8b561a4c093574"
+      },
+      {
+        "originalPath": "checkpoint.json",
+        "path": "model/experiments/veil-seed-cover/original-checkpoint.json",
+        "sha256": "07793617154997f349d652599a4655150de431c25578acdfc79df20241794cee"
+      },
+      {
+        "originalPath": "scan.json",
+        "path": "model/experiments/veil-seed-cover/scan.json",
+        "sha256": "73aa54bf2041073de00c4cf72e752505f9378d19550032dc2a7240982ba6ac5b"
+      },
+      {
+        "originalPath": "scan.log",
+        "path": "model/experiments/veil-seed-cover/scan.log",
+        "sha256": "cac71628eb2c350a30405f40caa96fc732add07a9369c046929170c12f4f037c"
+      },
+      {
+        "originalPath": "preflight.json",
+        "path": "model/experiments/veil-seed-cover/preflight.json",
+        "sha256": "6977580cc2337362c45acd3d412024bb121e6424d599624af1a5570b670b0b9c"
+      },
+      {
+        "originalPath": "preflight.mjs",
+        "path": "model/experiments/veil-seed-cover/preflight.mjs",
+        "sha256": "b1006e6878799026d535fcae485c5973278ccbb3d8544681a889ee1460cd2a0e"
+      },
+      {
+        "originalPath": "free-veils.mjs",
+        "path": "model/experiments/veil-seed-cover/free-veils.mjs",
+        "sha256": "6819362b379699a32ba8f738c333be51501c6e3f5b35f3ff82af5fefe8b71143"
+      },
+      {
+        "originalPath": "free-veils-receipt.json",
+        "path": "model/experiments/veil-seed-cover/free-veils-receipt.json",
+        "sha256": "8151ef727b5f1e97058a0a2c210f3e14de0ee3afbfec5b33c889f11be8ad9d01"
+      },
+      {
+        "originalPath": "first-counter.bin.gz",
+        "path": "model/certificates/veil-first-counter.bin.gz",
+        "sha256": "1b096023fc1091cb61922fee995a5e9b432ccc7fb6bdc3c0c42e2d6c0b5815ff"
+      }
+    ],
+    "omittedFiles": [
+      {
+        "path": "first-counter.bin",
+        "reason": "The compressed certificate decodes to this exact raw hash.",
+        "sha256": "6d8770c7f4dc48309d3f8cdaf5fa31831bb61cbe39eb4b7d1cb8c03f0a1afb33"
+      },
+      {
+        "path": "samples.txt",
+        "reason": "The portable auditor regenerates the exact deterministic input text.",
+        "sha256": "bc04c5d7f88c369118d5f9afef8eb859a74750c9f0ebe009b908654e75be9ff2"
+      }
+    ],
+    "publicationNote": "On 13 November 2026 the absolute paths of the audit machine in preflight.mjs and free-veils.mjs were changed to paths in the repository, for publication. The scripts have no other change, and no result was calculated again. The digests in this file are the digests of the published files. The original digests were 251cf8c6663e6e1e3ef7df0dec2fe5a13bfaf4f33121f1773a52896dd6ab4f4a (preflight.mjs) and 43ae14bce7a9b55e8719c69b0d390813632ae36a079ae16455cf7646c10d3180 (free-veils.mjs)."
+  },
+  "reproduction": {
+    "archiveAndNativePreflight": "node tools/audit-veil-cover.mjs --check",
+    "freshExhaustiveRecomputation": "node tools/audit-veil-cover.mjs --scan",
+    "scanStatus": "The original exhaustive scan is retained. The portable adaptation has not run another full scan.",
+    "suppliedEntrySourceFixture": "node tools/veil-cover/free-veils-fixture.mjs"
+  },
+  "preflight": {
+    "sampleInputs": 6192,
+    "binary64Draws": 6192,
+    "matchesNativeAndIndependentJsAndCpp": true,
+    "sampleInputSha256": "bc04c5d7f88c369118d5f9afef8eb859a74750c9f0ebe009b908654e75be9ff2",
+    "sampleOutputSha256": "46e969dfe525091cab49e590ef4cc038af4d346f51479291c6e6dd2436ae64f4",
+    "seedrandomLibrarySha256": "a6c6d6219add3214812ad4d6dd8311ddb2b5d9551090344ce047a6226045b7be"
+  },
+  "sufficientPredicate": "For every seed, all initial six-byte words at counters0..c are nonzero; at selected c, the leading output byte after the native256-byte discard is in1..101. The conservative bound102/256 is below native four-upgrade defense.",
+  "nativeOrder": "ClickCookie calls loseShimmeringVeil before cookieClicks++, so first accepted fresh-run click uses seed/0.",
+  "scopeLimits": [
+    "No policy reads this certificate or a seed; it only performs consecutive direct clicks and observes the native award.",
+    "Archive hash and histogram checks do not re-prove each per-seed ARC4 predicate. --scan explicitly recomputes the original finite domain.",
+    "Native preflight covers6192 outputs, not all game executions or physical input delivery.",
+    "The separately archived free-veil source fixture supplies prior milestones, funding and worst seed; it is not a new-save trajectory."
+  ],
+  "remainingProofObligations": [
+    "Kernel-checked complete finite certificate with ARC4/source refinement.",
+    "Full source/input and termination bridge for final reset, zero-production preparation, toggle purchases and accepted clicks.",
+    "Reachable new-save entry and all remaining full-game goals; finite expectation and optimality."
+  ],
+  "portableAudit": {
+    "tool": "tools/audit-veil-cover.mjs",
+    "toolSha256": "9b73afe26fe28712efcf1c139da5adec34d2940dfc79d2151b48c61099366a2a",
+    "fixture": "tools/veil-cover/free-veils-fixture.mjs",
+    "fixtureSha256": "a0ec75cb78207a2acf215ca0ba184db9edec9d0757a78d7f4f86267186b52460",
+    "checkResult": "Archive integrity, regenerated6192-input preflight and actual35-click supplied-entry fixture passed. No new exhaustive scan was run."
+  }
+}

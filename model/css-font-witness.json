@@ -1,0 +1,58 @@
+{
+  "schema": 1,
+  "scope": "fixed integer-pixel Canvas font shorthand and retained family data",
+  "chromiumVersion": "87.0.4280.141",
+  "sources": [
+    {
+      "file": "canvas_rendering_context_2d.cc",
+      "url": "https://github.com/chromium/chromium/blob/87.0.4280.141/third_party/blink/renderer/modules/canvas/canvas2d/canvas_rendering_context_2d.cc",
+      "sha256": "7cf392b5041a28087fee5f01577e26a10c40cb5dd06d41e6d1c538f8d4272888"
+    },
+    {
+      "file": "canvas_font_cache.cc",
+      "url": "https://github.com/chromium/chromium/blob/87.0.4280.141/third_party/blink/renderer/core/html/canvas/canvas_font_cache.cc",
+      "sha256": "b846257b61e9cc524b057cdcb14e23e0da19678e634bc25bedd0f145047f132f"
+    }
+  ],
+  "mainSourceHash": "a8813ec2ee97edf5ebff6a3ce2037dcb65c08abd13c123bb92efda89b06ef4f7",
+  "statements": [
+    {
+      "line": 6001,
+      "source": "ctx.font='20px Merriweather';"
+    },
+    {
+      "line": 8351,
+      "source": "ctx.font='9px Merriweather';"
+    },
+    {
+      "line": 8385,
+      "source": "ctx.font='14px Merriweather';"
+    },
+    {
+      "line": 8424,
+      "source": "ctx.font='9px Merriweather';"
+    },
+    {
+      "line": 14605,
+      "source": "ctx.font='14px Merriweather';"
+    }
+  ],
+  "implementation": {
+    "grammar": "Integer px size0..1024, ordered ASCII unescaped family identifiers/strings, five base generic families, native EOF closing of a final quoted string. Invalid accepted-grammar values do not change state; other grammar remains explicit.",
+    "metadata": "Size, ordered family names, generic-vs-literal flag and original source are retained independently of getter serialization.",
+    "text": "Native normalized px size, canonical base generic names, space-containing family quoting and comma-space family list. The getter string is not used as a font-identity substitute.",
+    "state": "Canvas snapshot includes parsed font metadata and public getter text; save/restore/reset use the same stored drawing state."
+  },
+  "validation": [
+    "node lean/check_javascript_font.mjs --engine",
+    "node lean/check_javascript_canvas.mjs --engine"
+  ],
+  "remaining": [
+    "General font shorthand and escaped/non-ASCII family grammar",
+    "Relative/system/platform font resolution and environment-dependent description fields",
+    "Full style/layout flush and font-cache lifecycle refinement",
+    "Font loading, glyph shaping, metrics and text rasterization"
+  ],
+  "fontMetricsVerified": false,
+  "rendererRefinementVerified": false
+}

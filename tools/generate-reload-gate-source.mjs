@@ -1,0 +1,31 @@
+import assert from 'node:assert/strict';
+import {createRequire} from 'node:module';
+import {createHash} from 'node:crypto';
+import {readFileSync,writeFileSync} from 'node:fs';
+import {compileJavaScript} from '../model/javascript-ast.mjs';
+import {loadGameSource} from '../model/game-source.mjs';
+const require=createRequire(new URL('../source/cookie-monster-plus/package.json',import.meta.url)),acorn=require('acorn');
+const source=loadGameSource(),main=source.sources['main.js'],full=acorn.parse(main,{ecmaVersion:5});
+const initStart=main.indexOf('Game.Init=function');
+const init=acorn.parseExpressionAt(main,initStart+'Game.Init='.length,{ecmaVersion:5});
+const scheduling=init.body.body.find(n=>n.type==='IfStatement'&&main.slice(n.start,n.end).includes('else if (App.saveData) setTimeout'));
+assert(scheduling);const texts={scheduling:main.slice(scheduling.start,scheduling.end),exportSave:main.slice(acorn.parseExpressionAt(main,main.indexOf('Game.ExportSave=function')+'Game.ExportSave='.length,{ecmaVersion:5}).start,acorn.parseExpressionAt(main,main.indexOf('Game.ExportSave=function')+'Game.ExportSave='.length,{ecmaVersion:5}).end)};
+delete texts.exportSave;
+const definitions=[];for(const[name,text]of Object.entries(texts)){
+ const ast=compileJavaScript(text,{name:'native-reload-gate-'+name});const render=id=>{const n=ast.nodes[id],r=render,opt=id=>id===null?'none':`(some ${r(id)})`,list=ids=>'['+ids.map(r).join(',')+']';
+ if(n.tag==='identifier')return`(.identifier ${JSON.stringify(n.name)})`;if(n.tag==='this')return'.this';
+ if(n.tag==='literal')return'(.literal '+(n.literalKind==='number'?`(.number ${n.bits})`:n.literalKind==='string'?`(.string [${n.units.join(',')}])`:n.literalKind==='boolean'?`(.boolean ${n.value})`:'.null')+')';
+ if(n.tag==='member')return`(.member ${r(n.object)} ${r(n.property)} ${n.computed})`;
+ if(['binary','logical','assignment'].includes(n.tag))return`(.${n.tag} .${n.operator} ${r(n.left)} ${r(n.right)})`;
+ if(n.tag==='unary')return`(.unary .${n.operator} ${r(n.argument)})`;
+ if(n.tag==='function')return`(.function ${n.name===null?'none':`(some ${JSON.stringify(n.name)})`} [${n.parameters.map(JSON.stringify).join(',')}] ${list(n.body)} ${n.strict} ${n.sourceText===null?'none':`(some [${n.sourceText.join(',')}])`})`;
+ if(n.tag==='call')return`(.call ${r(n.callee)} ${list(n.arguments)})`;
+ if(n.tag==='expression')return`(.expression ${r(n.expression)})`;
+ if(n.tag==='block')return`(.block ${list(n.body)})`;
+ if(n.tag==='ifThenElse')return`(.ifThenElse ${r(n.test)} ${r(n.consequent)} ${opt(n.alternate)})`;
+ if(n.tag==='variable')return'(.variable ['+n.declarations.map(d=>`(${JSON.stringify(d.name)},${opt(d.value)})`).join(',')+'])';
+ throw Error(n.tag);};
+ const root=ast.nodes[ast.units[0].root];definitions.push(`-- Source fragment SHA-256: ${createHash('sha256').update(text).digest('hex')}\ndef ${name} : Stmt := .block [${root.body.map(render).join(',')}]`);
+}
+const result=`import CookieClicker.JavaScriptSyntax\n\n/- Generated from pinned main.js ${source.hashes['main.js']}.\nActual startup branching and callback source text are retained.\nThe Steam source paths both register a100ms timer before saved-state loading. -/\nnamespace CookieClicker.JavaScript.ReloadGateSyntax\n${definitions.join('\n\n')}\nend CookieClicker.JavaScript.ReloadGateSyntax\n`;
+const path=new URL('../lean/CookieClicker/JavaScriptReloadGateSyntax.lean',import.meta.url);if(process.argv.includes('--check'))assert.equal(readFileSync(path,'utf8'),result);else writeFileSync(path,result);console.log(JSON.stringify({check:process.argv.includes('--check'),sha256:createHash('sha256').update(result).digest('hex')}));

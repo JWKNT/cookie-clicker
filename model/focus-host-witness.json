@@ -1,0 +1,90 @@
+{
+  "schema": "cookie-clicker-focus-host-v1",
+  "versions": {
+    "node": "12.18.3",
+    "v8": "8.7.220.31-electron.0",
+    "uv": "1.38.0",
+    "zlib": "1.2.11",
+    "brotli": "1.0.7",
+    "ares": "1.16.0",
+    "modules": "85",
+    "nghttp2": "1.41.0",
+    "napi": "6",
+    "llhttp": "2.0.4",
+    "http_parser": "2.9.3",
+    "openssl": "1.1.1",
+    "icu": "67.1",
+    "unicode": "13.0",
+    "electron": "11.5.0",
+    "chrome": "87.0.4280.141"
+  },
+  "executableHash": "6d8020c65f288d375dd6307dd86a3bcbe2907efe272ee3b859998211ecfd345b",
+  "sources": [
+    {
+      "file": "model/browser-source/chromium-87/focus_event.cc",
+      "url": "https://github.com/chromium/chromium/blob/87.0.4280.141/third_party/blink/renderer/core/events/focus_event.cc",
+      "sha256": "3d45b0aaf72394979ed3c37eed5faeae64a220fb86789fbaf10c518216e1586f"
+    },
+    {
+      "file": "model/browser-source/chromium-87/focus_event.idl",
+      "url": "https://github.com/chromium/chromium/blob/87.0.4280.141/third_party/blink/renderer/core/events/focus_event.idl",
+      "sha256": "af9e146bd36c17c9f4547f977f28042775c27619c8f07d7c4e1faaf7e9ac0a38"
+    },
+    {
+      "file": "model/browser-source/chromium-87/focus_event_init.idl",
+      "url": "https://github.com/chromium/chromium/blob/87.0.4280.141/third_party/blink/renderer/core/events/focus_event_init.idl",
+      "sha256": "0dc55a6545f25d4c98f30ed4e7234dd231d25215102379af5e016961b7369edc"
+    },
+    {
+      "file": "model/browser-source/chromium-87/focus_controller.cc",
+      "url": "https://github.com/chromium/chromium/blob/87.0.4280.141/third_party/blink/renderer/core/page/focus_controller.cc",
+      "sha256": "78583967c3edc2bdb4be1b030678edddeabfeb33b9ad904b14171b66a7702fa3"
+    },
+    {
+      "file": "model/browser-source/chromium-87/element.cc",
+      "url": "https://github.com/chromium/chromium/blob/87.0.4280.141/third_party/blink/renderer/core/dom/element.cc",
+      "sha256": "63a93ef5c8b04a21fb0ef6f674d4a72eb220b922b7e1a6fb410e7f1dfc31c7d0"
+    },
+    {
+      "file": "model/browser-source/chromium-87/document.cc",
+      "url": "https://github.com/chromium/chromium/blob/87.0.4280.141/third_party/blink/renderer/core/dom/document.cc",
+      "sha256": "29f1e9d8b8e3bb79e32adef7f950a51e799389a971587a4d7e24ca8940304e29"
+    }
+  ],
+  "implemented": [
+    "FocusEvent constructor with ordered native dictionary reads and source conversion continuations",
+    "Synthetic FocusEvent dispatch in the single-document tree, including connected/detached relatedTarget cleanup",
+    "HTMLElement focus with preventScroll:true on supported noneditable CSS boxes",
+    "Synchronous blur, focusout, DOMFocusOut, focus, focusin, DOMFocusIn source callbacks with native nested-focus checks",
+    "Document activeElement and explicitly configured page focus",
+    "Native tabIndex reflected signed32 conversion and HTML integer prefix parsing",
+    "Ordinary div/span focus returns with no callback when the inherited editing style is read-only and no valid tabindex exists. Native spatial-navigation and keyboard-scroller feature defaults are explicit.",
+    "Textarea focus with preventScroll uses the separate FrameSelection host. See text-selection-host-witness.json."
+  ],
+  "observations": {
+    "focusedSubtreeRemoval": "Chromium87 dispatches blur/focusout/DOMFocusOut synchronously before removal",
+    "noBodyActiveElement": "null, including a body nested below head",
+    "missingTabIndexSetterArgument": "undefined converts to zero",
+    "nativeFocusFlags": {
+      "trusted": true,
+      "cancelable": false,
+      "composed": true,
+      "view": "window"
+    }
+  },
+  "boundaries": [
+    "Native pointer targeting, keyboard default actions and full trusted input action class remain unimplemented",
+    "Default scroll-into-view, native text editing and arbitrary document selections remain explicit model requirements",
+    "DOM/CSS mutations while a node is focused remain unresolved until native focus invalidation/removal lifecycle is implemented",
+    "Page focus is an explicit environment value; unconfigured is not false",
+    "Uncatalogued element interfaces and unsupported layout remain unresolved"
+  ],
+  "check": {
+    "command": "node lean/check_javascript_focus.mjs --engine",
+    "cases": 96,
+    "passed": 96,
+    "nativeComparisons": 87,
+    "gameEntryPointExecuted": false,
+    "fullFocusRefinementVerified": false
+  }
+}

@@ -1,0 +1,7 @@
+[
+  {
+    "name": "diagnostic-source-mouse-sequence.js",
+    "taskBudget": 1,
+    "source": "var auditCookie=document.getElementById('bigCookie');function auditMouse(type,detail,buttons){return auditCookie.dispatchEvent(new MouseEvent(type,{bubbles:true,cancelable:true,composed:true,view:null,detail:detail,button:0,buttons:buttons,clientX:128,clientY:128}));}auditMouse('mouseover',0,0);auditMouse('mousemove',0,0);auditMouse('mousedown',1,1);auditMouse('mouseup',1,0);auditMouse('click',1,0);"
+  }
+]

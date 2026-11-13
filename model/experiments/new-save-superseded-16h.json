@@ -1,0 +1,114 @@
+{
+  "status": "interrupted/superseded",
+  "runnerStatus": "interrupted",
+  "reason": "The immutable controller predates duration, reload-recovery and reinvestment fixes. Parent requested graceful stop; SIGTERM handler wrote the final observation. No action or engine failure occurred.",
+  "summary": {
+    "elapsedMs": 59908600,
+    "decisions": 62200,
+    "stage": "early-income-growth",
+    "bank": 302855968301317800,
+    "earned": 20567728380388290000,
+    "cps": 44827614764277.6,
+    "click": 3137933130507.4316,
+    "ascensions": 0,
+    "prestige": 0,
+    "lumps": 0,
+    "lump": {
+      "available": true,
+      "type": 0,
+      "ageMs": 47428099,
+      "matureAge": 72000000,
+      "ripeAge": 82800000,
+      "overripeAge": 86400000,
+      "nextRefill": 0
+    },
+    "temple": {
+      "amount": 80,
+      "level": 0
+    },
+    "normalWon": 84,
+    "buff": null,
+    "hardcore": true,
+    "neverclick": true,
+    "wallSeconds": 1737.5472998749997,
+    "rss": 1423998976
+  },
+  "policySha256WithoutFinalLf": "582927dceb0113004ae82627834ca4010dca8c6101156175ce9957c3a8d468f9",
+  "scope": "Genuine initialized new-save, observation-only fixed controller; no resource/achievement injection, no save restore/retries, no seeded timing search. Summary-only Node23/LCGseed1 diagnostic, no independent full replay, no finite-expectation or completion certificate. No scheduled maintenance reload. No Temple level or funding burst reached.",
+  "separateMilestone": "The earlier first-reset-result.json is a different controller/run and is not merged into this path.",
+  "rerun": "node tools/run-archived-policy.mjs 108000000 1000000 rerun (starts a new isolated save; not executed for this checkpoint). The original runner regenerated source and is preserved as provenance only.",
+  "executionRuntime": {
+    "node": "v23.6.0",
+    "v8": "12.9.202.28-node.12",
+    "platform": "darwin",
+    "architecture": "arm64"
+  },
+  "files": [
+    {
+      "path": "bounded-route-30h-policy.js",
+      "sha256": "48a21077b147cb741ce02021c9e44fa616e1d562095cc29f460bf034e59d8299"
+    },
+    {
+      "path": "bounded-route-30h-result.json",
+      "sha256": "6e389022e606ec9e506576f88c7804442635705b8b74161f070398e2ce73a1c2"
+    },
+    {
+      "path": "bounded-route-30h.log",
+      "sha256": "882a7be71955ac4874b9158835c3b76f02cf3665fe682b99c7047e7297873c92"
+    },
+    {
+      "path": "tools/run-full-route.mjs",
+      "sha256": "4d97aa66c66395203c73238ec94e7e46fdc5c43ae79abdf377d2d70b5e50037f"
+    },
+    {
+      "path": "model/runtime.mjs",
+      "sha256": "427c41595d8e6195c44130b408cd52aafbc003dddaa4a049a66f340e1380a2e5"
+    },
+    {
+      "path": "model/maintenance-schedule.mjs",
+      "sha256": "c22546088c4608890baf738a95da9dd395681b139c3cff984380772800725f83"
+    },
+    {
+      "path": "model/policy-runtime.mjs",
+      "sha256": "bcf17efb2539d9ed2c8673d6de9bd81a09426ee6249ce9677395b96843ba4207"
+    },
+    {
+      "path": "model/evaluate-policy.mjs",
+      "sha256": "05c65fd4302c46afae1c2f8c179d7c02d7fc6865c71080dff1bbdc88ae445b46"
+    },
+    {
+      "path": "model/game-source.mjs",
+      "sha256": "d4805b5a6cff893cf5dfce7ef04d10e5fa3045229735c1bc83e6f06efcd055e6"
+    },
+    {
+      "path": "model/completion.mjs",
+      "sha256": "d6777fe839d7c75e6cde91bb5a8f19668542818c296ec5d811e882c3fa3a6e12"
+    },
+    {
+      "path": "model/catalogue.json",
+      "sha256": "a9b36f37e69618bb35d08cd71f4f66d2292fa53fba205d8118bf421beda1bff6"
+    },
+    {
+      "path": "model/completion-profile.json",
+      "sha256": "28363b84e5bbc1d3b688eb2f0596e71669c2fc8c17fcae08501ab6c85f66179d"
+    },
+    {
+      "path": "model/completion-requirements.json",
+      "sha256": "9d9ebaa27cf1a2bb890a4c514bf2583c4c307a90ee2c6bdfe15d52dfb235aaf3"
+    },
+    {
+      "path": "model/mathematical-assumptions.json",
+      "sha256": "6aba263e99e09e5573e8954258747aed34496b4466a5e275ab969f0668fb8835"
+    },
+    {
+      "path": "tools/run-archived-policy.mjs",
+      "sha256": "d8b152ad52f16966bc7a018ecf03ef87462f247435515a0c8420768c87c94865"
+    }
+  ],
+  "snapshotArchive": {
+    "path": "dist/experiments/new-save-superseded-16h.tar.gz",
+    "bytes": 190062,
+    "sha256": "146d311d9df283acf5db53f6be6957ca6b9936fd58642f37709be641712be977",
+    "scope": "Frozen interrupted source-adapter experiment and exact listed dependencies. No complete replay history or full-game certificate."
+  }
+}

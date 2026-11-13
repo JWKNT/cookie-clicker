@@ -1,0 +1,2155 @@
+{
+  "schemaVersion": 1,
+  "scope": "funded-native-implications-only",
+  "doesNotProve": [
+    "new-save reachability",
+    "funding or rebuild income",
+    "execution of the large Godzamok loops",
+    "stochastic completion",
+    "optimality"
+  ],
+  "sourceHashes": {
+    "main.js": "a8813ec2ee97edf5ebff6a3ce2037dcb65c08abd13c123bb92efda89b06ef4f7",
+    "minigameGarden.js": "184eacacd9325d493412dcda07f63d3a791939f83889b4349b6099d04be8e6c9",
+    "minigameMarket.js": "78538743673f3c1cd0e870a3695c77dcacd63febbe64b88f8a8fab9ea7e2863f",
+    "minigameGrimoire.js": "9efea1feb898dc9b719dd971bd27a71f083a8855b910013c524aea9b6d2a349d",
+    "minigamePantheon.js": "af08c31c4564d445cc2d1a7d101c4a63b57aa9b89991b93b8a65f4c0427573a0",
+    "base64.js": "875839c3e0c174c9358ce96923adfed6a6d2c090187a32deb35152dfac2c0e47",
+    "loc/EN.js": "ce48272a5fd5ab1f309dbb8fd7bd70188984ce14235a1d3d9215f3585101f433",
+    "index.html": "28488d9aef9bf31c4c023a0af01f0500a3b3e462b79bf7f2b09790025927a969"
+  },
+  "randomSeed": 1,
+  "premises": [
+    {
+      "kind": "funding",
+      "exponent": 90,
+      "reason": "Income endpoint assumed before purchases",
+      "priorBank": 0,
+      "priorEarned": 0
+    },
+    {
+      "kind": "lump",
+      "amount": 1,
+      "reason": "One previously harvested lump for Temple level 1"
+    },
+    {
+      "kind": "macro-endpoint",
+      "multiplier": 9007199254740992,
+      "bankBeforeCycle": 5.3127337259047963e+26,
+      "bankAfterCycle": 5.3127337259047963e+26,
+      "reason": "Endpoint of a finite unit-increment Godzamok loop; its iterations are not executed by this diagnostic"
+    },
+    {
+      "kind": "macro-endpoint",
+      "multiplier": 9007199254740992,
+      "bankBeforeCycle": 5.445555708727203e+27,
+      "bankAfterCycle": 5.445555708727203e+27,
+      "reason": "Endpoint of a finite unit-increment Godzamok loop; its iterations are not executed by this diagnostic"
+    },
+    {
+      "kind": "funding",
+      "exponent": 140,
+      "reason": "Income endpoint assumed before native ascension",
+      "priorBank": 5.445555708727627e+27,
+      "priorEarned": 2.7315727288050124e+29
+    },
+    {
+      "kind": "funding",
+      "exponent": 140,
+      "reason": "Rebuild funding after native reset is an independent premise",
+      "priorBank": 0,
+      "priorEarned": 0
+    },
+    {
+      "kind": "macro-endpoint",
+      "multiplier": 9007199254740992,
+      "bankBeforeCycle": 8.9424006271237e+41,
+      "bankAfterCycle": 8.9424006271237e+41,
+      "reason": "Endpoint of a finite unit-increment Godzamok loop; its iterations are not executed by this diagnostic"
+    },
+    {
+      "kind": "macro-endpoint",
+      "multiplier": 9007199254740992,
+      "bankBeforeCycle": 7.079654423693794e+44,
+      "bankAfterCycle": 7.079654423693794e+44,
+      "reason": "Endpoint of a finite unit-increment Godzamok loop; its iterations are not executed by this diagnostic"
+    },
+    {
+      "kind": "funding",
+      "exponent": 190,
+      "reason": "Income endpoint assumed before native ascension",
+      "priorBank": 7.079654423694437e+44,
+      "priorEarned": 4.698715485761846e+46
+    },
+    {
+      "kind": "funding",
+      "exponent": 190,
+      "reason": "Rebuild funding after native reset is an independent premise",
+      "priorBank": 0,
+      "priorEarned": 0
+    },
+    {
+      "kind": "macro-endpoint",
+      "multiplier": 9007199254740992,
+      "bankBeforeCycle": 7.225580530509447e+55,
+      "bankAfterCycle": 7.225580530509447e+55,
+      "reason": "Endpoint of a finite unit-increment Godzamok loop; its iterations are not executed by this diagnostic"
+    },
+    {
+      "kind": "macro-endpoint",
+      "multiplier": 9007199254740992,
+      "bankBeforeCycle": 2.0095642471282488e+58,
+      "bankAfterCycle": 2.0095642471282488e+58,
+      "reason": "Endpoint of a finite unit-increment Godzamok loop; its iterations are not executed by this diagnostic"
+    },
+    {
+      "kind": "funding",
+      "exponent": 220,
+      "reason": "Income endpoint assumed before purchases",
+      "priorBank": 2.0095642471282516e+58,
+      "priorEarned": 3.475493975999649e+58
+    },
+    {
+      "kind": "macro-endpoint",
+      "multiplier": 9007199254740992,
+      "bankBeforeCycle": 1.1423468686808532e+65,
+      "bankAfterCycle": 1.1423468686808532e+65,
+      "reason": "Endpoint of a finite unit-increment Godzamok loop; its iterations are not executed by this diagnostic"
+    },
+    {
+      "kind": "macro-endpoint",
+      "multiplier": 9007199254740992,
+      "bankBeforeCycle": 1.1430505095351573e+65,
+      "bankAfterCycle": 1.1430505095351573e+65,
+      "reason": "Endpoint of a finite unit-increment Godzamok loop; its iterations are not executed by this diagnostic"
+    },
+    {
+      "kind": "funding",
+      "exponent": 240,
+      "reason": "Income endpoint assumed before native ascension",
+      "priorBank": 1.1430505095351573e+65,
+      "priorEarned": 1.6850670307823453e+66
+    },
+    {
+      "kind": "funding",
+      "exponent": 240,
+      "reason": "Rebuild funding after native reset is an independent premise",
+      "priorBank": 0,
+      "priorEarned": 0
+    },
+    {
+      "kind": "macro-endpoint",
+      "multiplier": 9007199254740992,
+      "bankBeforeCycle": 1.751069452143514e+72,
+      "bankAfterCycle": 1.751069452143514e+72,
+      "reason": "Endpoint of a finite unit-increment Godzamok loop; its iterations are not executed by this diagnostic"
+    },
+    {
+      "kind": "macro-endpoint",
+      "multiplier": 9007199254740992,
+      "bankBeforeCycle": 1.751074798249154e+72,
+      "bankAfterCycle": 1.751074798249154e+72,
+      "reason": "Endpoint of a finite unit-increment Godzamok loop; its iterations are not executed by this diagnostic"
+    },
+    {
+      "kind": "funding",
+      "exponent": 270,
+      "reason": "Income endpoint assumed before native ascension",
+      "priorBank": 1.751074798249154e+72,
+      "priorEarned": 1.7668524108840244e+72
+    },
+    {
+      "kind": "funding",
+      "exponent": 270,
+      "reason": "Rebuild funding after native reset is an independent premise",
+      "priorBank": 0,
+      "priorEarned": 0
+    },
+    {
+      "kind": "macro-endpoint",
+      "multiplier": 9007199254740992,
+      "bankBeforeCycle": 1.8971375900484128e+81,
+      "bankAfterCycle": 1.8971375900484128e+81,
+      "reason": "Endpoint of a finite unit-increment Godzamok loop; its iterations are not executed by this diagnostic"
+    },
+    {
+      "kind": "macro-endpoint",
+      "multiplier": 9007199254740992,
+      "bankBeforeCycle": 1.8971375900541279e+81,
+      "bankAfterCycle": 1.8971375900541279e+81,
+      "reason": "Endpoint of a finite unit-increment Godzamok loop; its iterations are not executed by this diagnostic"
+    },
+    {
+      "kind": "funding",
+      "exponent": 280,
+      "reason": "Income endpoint assumed before native ascension",
+      "priorBank": 1.8971375900541279e+81,
+      "priorEarned": 1.8971375900699036e+81
+    },
+    {
+      "kind": "funding",
+      "exponent": 280,
+      "reason": "Rebuild funding after native reset is an independent premise",
+      "priorBank": 0,
+      "priorEarned": 0
+    },
+    {
+      "kind": "macro-endpoint",
+      "multiplier": 9007199254740992,
+      "bankBeforeCycle": 1.942668892225714e+84,
+      "bankAfterCycle": 1.942668892225714e+84,
+      "reason": "Endpoint of a finite unit-increment Godzamok loop; its iterations are not executed by this diagnostic"
+    },
+    {
+      "kind": "macro-endpoint",
+      "multiplier": 9007199254740992,
+      "bankBeforeCycle": 1.9426688922257726e+84,
+      "bankAfterCycle": 1.9426688922257726e+84,
+      "reason": "Endpoint of a finite unit-increment Godzamok loop; its iterations are not executed by this diagnostic"
+    },
+    {
+      "kind": "funding",
+      "exponent": 286,
+      "reason": "Income endpoint assumed before native ascension",
+      "priorBank": 1.9426688922257726e+84,
+      "priorEarned": 1.9426688922257877e+84
+    },
+    {
+      "kind": "funding",
+      "exponent": 286,
+      "reason": "Rebuild funding after native reset is an independent premise",
+      "priorBank": 0,
+      "priorEarned": 0
+    },
+    {
+      "kind": "macro-endpoint",
+      "multiplier": 9007199254740992,
+      "bankBeforeCycle": 1.2433080910244666e+86,
+      "bankAfterCycle": 1.2433080910244666e+86,
+      "reason": "Endpoint of a finite unit-increment Godzamok loop; its iterations are not executed by this diagnostic"
+    },
+    {
+      "kind": "macro-endpoint",
+      "multiplier": 9007199254740992,
+      "bankBeforeCycle": 1.243308091024469e+86,
+      "bankAfterCycle": 1.243308091024469e+86,
+      "reason": "Endpoint of a finite unit-increment Godzamok loop; its iterations are not executed by this diagnostic"
+    }
+  ],
+  "rows": [
+    {
+      "bankExponent": 90,
+      "count": 0,
+      "cursorCount": 10,
+      "targetExponent": 140,
+      "ascend": false,
+      "ascension": null,
+      "prestige": 0,
+      "remainingBank": 5.445555708727627e+27,
+      "ordinaryUpgrades": 81,
+      "normalAchievements": 62,
+      "heavenlyPower": 0,
+      "rawCps": 6361490477221157,
+      "cps": 6361490477221157,
+      "nativeClick": 6.875905474256272e+30,
+      "incomeClick": {
+        "amount": 2.719193328411379e+29,
+        "bankBefore": 5.3127337259078145e+26,
+        "bankAfter": 2.7245060621372868e+29,
+        "earnedBefore": 1.2379400393139483e+27,
+        "earnedAfter": 2.7315727288045184e+29
+      },
+      "clickProbe": {
+        "target": 1.393796574908164e+42,
+        "before": 1.3937965749081638e+42,
+        "targetUlp": 3.094850098213451e+26,
+        "amount": 6.875905474256272e+30,
+        "amountOverTargetUlp": 22217.2488361407,
+        "accepted": true,
+        "counters": {
+          "cookies": {
+            "after": 1.3937965749150398e+42,
+            "increment": 6.875983205705734e+30,
+            "crossed": true
+          },
+          "cookiesEarned": {
+            "after": 1.3937965749150398e+42,
+            "increment": 6.875983205705734e+30,
+            "crossed": true
+          },
+          "handmadeCookies": {
+            "after": 1.3937965749150398e+42,
+            "increment": 6.875983205705734e+30,
+            "crossed": true
+          }
+        }
+      },
+      "production": [
+        {
+          "building": "Cursor",
+          "amount": 10,
+          "threshold": 1e+33,
+          "increment": 3.326269529479607,
+          "thresholdUlp": 144115188075855870,
+          "incrementOverUlp": 2.308063136085841e-17
+        },
+        {
+          "building": "Grandma",
+          "amount": 0,
+          "threshold": 1e+33,
+          "increment": 0,
+          "thresholdUlp": 144115188075855870,
+          "incrementOverUlp": 0
+        },
+        {
+          "building": "Farm",
+          "amount": 0,
+          "threshold": 1e+28,
+          "increment": 0,
+          "thresholdUlp": 2199023255552,
+          "incrementOverUlp": 0
+        },
+        {
+          "building": "Mine",
+          "amount": 101,
+          "threshold": 1.0000000000000001e+29,
+          "increment": 63159.20582575878,
+          "thresholdUlp": 17592186044416,
+          "incrementOverUlp": 3.590185191669592e-9
+        },
+        {
+          "building": "Factory",
+          "amount": 0,
+          "threshold": 1e+30,
+          "increment": 0,
+          "thresholdUlp": 140737488355328,
+          "incrementOverUlp": 0
+        },
+        {
+          "building": "Bank",
+          "amount": 0,
+          "threshold": 1e+31,
+          "increment": 0,
+          "thresholdUlp": 1125899906842624,
+          "incrementOverUlp": 0
+        },
+        {
+          "building": "Temple",
+          "amount": 1,
+          "threshold": 1e+32,
+          "increment": 6551.087838310085,
+          "thresholdUlp": 18014398509481984,
+          "incrementOverUlp": 3.6365842772168507e-13
+        },
+        {
+          "building": "Wizard tower",
+          "amount": 0,
+          "threshold": 1e+33,
+          "increment": 0,
+          "thresholdUlp": 144115188075855870,
+          "incrementOverUlp": 0
+        },
+        {
+          "building": "Shipment",
+          "amount": 0,
+          "threshold": 1.0000000000000001e+34,
+          "increment": 0,
+          "thresholdUlp": 1152921504606847000,
+          "incrementOverUlp": 0
+        },
+        {
+          "building": "Alchemy lab",
+          "amount": 0,
+          "threshold": 1e+35,
+          "increment": 0,
+          "thresholdUlp": 18446744073709552000,
+          "incrementOverUlp": 0
+        },
+        {
+          "building": "Portal",
+          "amount": 0,
+          "threshold": 9.999999999999999e+35,
+          "increment": 0,
+          "thresholdUlp": 147573952589676410000,
+          "incrementOverUlp": 0
+        },
+        {
+          "building": "Time machine",
+          "amount": 0,
+          "threshold": 1e+37,
+          "increment": 0,
+          "thresholdUlp": 1.1805916207174113e+21,
+          "incrementOverUlp": 0
+        },
+        {
+          "building": "Antimatter condenser",
+          "amount": 0,
+          "threshold": 1e+38,
+          "increment": 0,
+          "thresholdUlp": 1.888946593147858e+22,
+          "incrementOverUlp": 0
+        },
+        {
+          "building": "Prism",
+          "amount": 0,
+          "threshold": 1.0000000000000001e+39,
+          "increment": 0,
+          "thresholdUlp": 1.5111572745182865e+23,
+          "incrementOverUlp": 0
+        },
+        {
+          "building": "Chancemaker",
+          "amount": 0,
+          "threshold": 1e+40,
+          "increment": 0,
+          "thresholdUlp": 1.2089258196146292e+24,
+          "incrementOverUlp": 0
+        },
+        {
+          "building": "Fractal engine",
+          "amount": 0,
+          "threshold": 1e+41,
+          "increment": 0,
+          "thresholdUlp": 1.9342813113834067e+25,
+          "incrementOverUlp": 0
+        },
+        {
+          "building": "Javascript console",
+          "amount": 0,
+          "threshold": 9.999999999999999e+41,
+          "increment": 0,
+          "thresholdUlp": 1.5474250491067253e+26,
+          "incrementOverUlp": 0
+        },
+        {
+          "building": "Idleverse",
+          "amount": 0,
+          "threshold": 1e+43,
+          "increment": 0,
+          "thresholdUlp": 1.2379400392853803e+27,
+          "incrementOverUlp": 0
+        },
+        {
+          "building": "Cortex baker",
+          "amount": 0,
+          "threshold": 1e+44,
+          "increment": 0,
+          "thresholdUlp": 1.9807040628566084e+28,
+          "incrementOverUlp": 0
+        },
+        {
+          "building": "You",
+          "amount": 1,
+          "threshold": 1e+45,
+          "increment": 212049682504324.94,
+          "thresholdUlp": 1.5845632502852868e+29,
+          "incrementOverUlp": 1.3382216359375194e-15
+        }
+      ],
+      "quotedPurchaseCost": 2.6771171717177373e+29,
+      "nativePurchaseDebit": 2.677117171717738e+29,
+      "purchaseCount": 88,
+      "purchasesSha256": "6ea6876f5d468c7396fc18a599ce5fa1ea26e76d8b60b44c4501ef8411984b3e",
+      "everyPurchaseAffordable": true,
+      "minimumPurchaseBank": 5.312733725751827e+26
+    },
+    {
+      "bankExponent": 140,
+      "count": 200,
+      "cursorCount": 200,
+      "targetExponent": 190,
+      "ascend": true,
+      "ascension": {
+        "earned": 1.393796574908164e+42,
+        "resetCookies": 0,
+        "prestige": 11170341853,
+        "expectedNativePrestige": 11170341853,
+        "bankAfterReincarnate": 0
+      },
+      "prestige": 11170341853,
+      "remainingBank": 7.079654423694437e+44,
+      "ordinaryUpgrades": 288,
+      "normalAchievements": 230,
+      "heavenlyPower": 1,
+      "rawCps": 9.659722486019496e+32,
+      "cps": 9.659722486019496e+32,
+      "nativeClick": 1.3051056776561941e+48,
+      "incomeClick": {
+        "amount": 4.698576106103156e+46,
+        "bankBefore": 8.942400627645348e+41,
+        "bankAfter": 4.698665530109433e+46,
+        "earnedBefore": 1.3937965789943236e+42,
+        "earnedAfter": 4.698715485761056e+46
+      },
+      "clickProbe": {
+        "target": 1.5692754338466702e+57,
+        "before": 1.56927543384667e+57,
+        "targetUlp": 3.48449143727041e+41,
+        "amount": 1.3051056776561941e+48,
+        "amountOverTargetUlp": 3745469.607692748,
+        "accepted": true,
+        "counters": {
+          "cookies": {
+            "after": 1.5692754351517757e+57,
+            "increment": 1.3051056401307483e+48,
+            "crossed": true
+          },
+          "cookiesEarned": {
+            "after": 1.5692754351517757e+57,
+            "increment": 1.3051056401307483e+48,
+            "crossed": true
+          },
+          "handmadeCookies": {
+            "after": 1.5692754351517757e+57,
+            "increment": 1.3051056401307483e+48,
+            "crossed": true
+          }
+        }
+      },
+      "production": [
+        {
+          "building": "Cursor",
+          "amount": 200,
+          "threshold": 1e+33,
+          "increment": 2.945885241267296e+21,
+          "thresholdUlp": 144115188075855870,
+          "incrementOverUlp": 20441.185142239916
+        },
+        {
+          "building": "Grandma",
+          "amount": 200,
+          "threshold": 1e+33,
+          "increment": 1.3006249421435203e+22,
+          "thresholdUlp": 144115188075855870,
+          "incrementOverUlp": 90248.98482309365
+        },
+        {
+          "building": "Farm",
+          "amount": 200,
+          "threshold": 1e+28,
+          "increment": 1190757698495654700,
+          "thresholdUlp": 2199023255552,
+          "incrementOverUlp": 541493.9089385619
+        },
+        {
+          "building": "Mine",
+          "amount": 200,
+          "threshold": 1.0000000000000001e+29,
+          "increment": 4663800985774647000,
+          "thresholdUlp": 17592186044416,
+          "incrementOverUlp": 265106.3929178376
+        },
+        {
+          "building": "Factory",
+          "amount": 200,
+          "threshold": 1e+30,
+          "increment": 21499791778393760000,
+          "thresholdUlp": 140737488355328,
+          "incrementOverUlp": 152765.20868492412
+        },
+        {
+          "building": "Bank",
+          "amount": 200,
+          "threshold": 1e+31,
+          "increment": 104191298618369770000,
+          "thresholdUlp": 1125899906842624,
+          "incrementOverUlp": 92540.4629533675
+        },
+        {
+          "building": "Temple",
+          "amount": 200,
+          "threshold": 1e+32,
+          "increment": 547212700343678000000,
+          "thresholdUlp": 18014398509481984,
+          "incrementOverUlp": 30376.406964442882
+        },
+        {
+          "building": "Wizard tower",
+          "amount": 200,
+          "threshold": 1e+33,
+          "increment": 2.9107410407671553e+21,
+          "thresholdUlp": 144115188075855870,
+          "incrementOverUlp": 20197.323263631795
+        },
+        {
+          "building": "Shipment",
+          "amount": 200,
+          "threshold": 1.0000000000000001e+34,
+          "increment": 1.6585553657618045e+22,
+          "thresholdUlp": 1152921504606847000,
+          "incrementOverUlp": 14385.67464597151
+        },
+        {
+          "building": "Alchemy lab",
+          "amount": 200,
+          "threshold": 1e+35,
+          "increment": 9.922980820797123e+22,
+          "thresholdUlp": 18446744073709552000,
+          "incrementOverUlp": 5379.258681720117
+        },
+        {
+          "building": "Portal",
+          "amount": 200,
+          "threshold": 9.999999999999999e+35,
+          "increment": 6.064043834931574e+23,
+          "thresholdUlp": 147573952589676410000,
+          "incrementOverUlp": 4109.155937425089
+        },
+        {
+          "building": "Time machine",
+          "amount": 200,
+          "threshold": 1e+37,
+          "increment": 3.869962520110877e+24,
+          "thresholdUlp": 1.1805916207174113e+21,
+          "incrementOverUlp": 3277.9857591731957
+        },
+        {
+          "building": "Antimatter condenser",
+          "amount": 200,
+          "threshold": 1e+38,
+          "increment": 2.5213392176479956e+25,
+          "thresholdUlp": 1.888946593147858e+22,
+          "incrementOverUlp": 1334.785867845146
+        },
+        {
+          "building": "Prism",
+          "amount": 200,
+          "threshold": 1.0000000000000001e+39,
+          "increment": 1.6786375888515133e+26,
+          "thresholdUlp": 1.5111572745182865e+23,
+          "incrementOverUlp": 1110.8291752005857
+        },
+        {
+          "building": "Chancemaker",
+          "amount": 200,
+          "threshold": 1e+40,
+          "increment": 1.2022072917504203e+27,
+          "thresholdUlp": 1.2089258196146292e+24,
+          "incrementOverUlp": 994.4425640058291
+        },
+        {
+          "building": "Fractal engine",
+          "amount": 200,
+          "threshold": 1e+41,
+          "increment": 8.505412132111817e+27,
+          "thresholdUlp": 1.9342813113834067e+25,
+          "incrementOverUlp": 439.7195010910129
+        },
+        {
+          "building": "Javascript console",
+          "amount": 200,
+          "threshold": 9.999999999999999e+41,
+          "increment": 6.185324711630206e+28,
+          "thresholdUlp": 1.5474250491067253e+26,
+          "incrementOverUlp": 399.71724092231665
+        },
+        {
+          "building": "Idleverse",
+          "amount": 200,
+          "threshold": 1e+43,
+          "increment": 4.6327916707096565e+29,
+          "thresholdUlp": 1.2379400392853803e+27,
+          "incrementOverUlp": 374.23393086017364
+        },
+        {
+          "building": "Cortex baker",
+          "amount": 200,
+          "threshold": 1e+44,
+          "increment": 3.5489249053203826e+30,
+          "thresholdUlp": 1.9807040628566084e+28,
+          "incrementOverUlp": 179.17491925583556
+        },
+        {
+          "building": "You",
+          "amount": 200,
+          "threshold": 1e+45,
+          "increment": 2.8115112325591843e+31,
+          "thresholdUlp": 1.5845632502852868e+29,
+          "incrementOverUlp": 177.43130367645446
+        }
+      ],
+      "quotedPurchaseCost": 4.627918941524926e+46,
+      "nativePurchaseDebit": 4.627918941524928e+46,
+      "purchaseCount": 330,
+      "purchasesSha256": "bc7fce2df3e96880d5dbbeba8d779d0ad4e920bbd6be8a947cf0ce2d2326fabd",
+      "everyPurchaseAffordable": true,
+      "minimumPurchaseBank": 8.942400601366081e+41
+    },
+    {
+      "bankExponent": 190,
+      "count": 450,
+      "cursorCount": 450,
+      "targetExponent": 220,
+      "ascend": true,
+      "ascension": {
+        "earned": 1.5692754338466702e+57,
+        "resetCookies": 1.393796574908164e+42,
+        "prestige": 1162072058024506,
+        "expectedNativePrestige": 1162072058024506,
+        "bankAfterReincarnate": 0
+      },
+      "prestige": 1162072058024506,
+      "remainingBank": 2.0095642471282516e+58,
+      "ordinaryUpgrades": 423,
+      "normalAchievements": 402,
+      "heavenlyPower": 1,
+      "rawCps": 4.061994620615671e+44,
+      "cps": 4.061994620615671e+44,
+      "nativeClick": 5.488079237935708e+59,
+      "incomeClick": {
+        "amount": 3.318566432614186e+58,
+        "bankBefore": 7.225580530511903e+55,
+        "bankAfter": 3.325792013144698e+58,
+        "earnedBefore": 1.5692754338511502e+57,
+        "earnedAfter": 3.475493975999301e+58
+      },
+      "clickProbe": {
+        "target": 1.684996666696915e+66,
+        "before": 1.6849966666969148e+66,
+        "targetUlp": 3.7414441915671115e+50,
+        "amount": 5.488079237935708e+59,
+        "amountOverTargetUlp": 1466834451.334423,
+        "accepted": true,
+        "counters": {
+          "cookies": {
+            "after": 1.6849972155048387e+66,
+            "increment": 5.488079238555205e+59,
+            "crossed": true
+          },
+          "cookiesEarned": {
+            "after": 1.6849972155048387e+66,
+            "increment": 5.488079238555205e+59,
+            "crossed": true
+          },
+          "handmadeCookies": {
+            "after": 1.6849972155048387e+66,
+            "increment": 5.488079238555205e+59,
+            "crossed": true
+          }
+        }
+      },
+      "production": [
+        {
+          "building": "Cursor",
+          "amount": 450,
+          "threshold": 1e+33,
+          "increment": 2.47534277276855e+38,
+          "thresholdUlp": 144115188075855870,
+          "incrementOverUlp": 1.7176140876044506e+21
+        },
+        {
+          "building": "Grandma",
+          "amount": 450,
+          "threshold": 1e+33,
+          "increment": 4.857235131318862e+33,
+          "thresholdUlp": 144115188075855870,
+          "incrementOverUlp": 33703839242552476
+        },
+        {
+          "building": "Farm",
+          "amount": 450,
+          "threshold": 1e+28,
+          "increment": 8.152707892533492e+29,
+          "thresholdUlp": 2199023255552,
+          "incrementOverUlp": 370742231668077300
+        },
+        {
+          "building": "Mine",
+          "amount": 450,
+          "threshold": 1.0000000000000001e+29,
+          "increment": 2.8302866604192973e+30,
+          "thresholdUlp": 17592186044416,
+          "incrementOverUlp": 160883170134371620
+        },
+        {
+          "building": "Factory",
+          "amount": 450,
+          "threshold": 1e+30,
+          "increment": 1.204377302306084e+31,
+          "thresholdUlp": 140737488355328,
+          "incrementOverUlp": 85576154326793400
+        },
+        {
+          "building": "Bank",
+          "amount": 450,
+          "threshold": 1e+31,
+          "increment": 5.512342268247076e+31,
+          "thresholdUlp": 1125899906842624,
+          "incrementOverUlp": 48959434446578920
+        },
+        {
+          "building": "Temple",
+          "amount": 450,
+          "threshold": 1e+32,
+          "increment": 2.77344005175045e+32,
+          "thresholdUlp": 18014398509481984,
+          "incrementOverUlp": 15395685014354676
+        },
+        {
+          "building": "Wizard tower",
+          "amount": 450,
+          "threshold": 1e+33,
+          "increment": 1.426723881193361e+33,
+          "thresholdUlp": 144115188075855870,
+          "incrementOverUlp": 9899885641771474
+        },
+        {
+          "building": "Shipment",
+          "amount": 450,
+          "threshold": 1.0000000000000001e+34,
+          "increment": 7.914479415154265e+33,
+          "thresholdUlp": 1152921504606847000,
+          "incrementOverUlp": 6864716620801647
+        },
+        {
+          "building": "Alchemy lab",
+          "amount": 450,
+          "threshold": 1e+35,
+          "increment": 4.632220393484938e+34,
+          "thresholdUlp": 18446744073709552000,
+          "incrementOverUlp": 2511131707024014
+        },
+        {
+          "building": "Portal",
+          "amount": 450,
+          "threshold": 9.999999999999999e+35,
+          "increment": 2.779332236090963e+35,
+          "thresholdUlp": 147573952589676410000,
+          "incrementOverUlp": 1883348780268010.5
+        },
+        {
+          "building": "Time machine",
+          "amount": 450,
+          "threshold": 1e+37,
+          "increment": 1.7463470883438213e+36,
+          "thresholdUlp": 1.1805916207174113e+21,
+          "incrementOverUlp": 1479213521168833
+        },
+        {
+          "building": "Antimatter condenser",
+          "amount": 450,
+          "threshold": 1e+38,
+          "increment": 1.122681779002804e+37,
+          "thresholdUlp": 1.888946593147858e+22,
+          "incrementOverUlp": 594342785060903.9
+        },
+        {
+          "building": "Prism",
+          "amount": 450,
+          "threshold": 1.0000000000000001e+39,
+          "increment": 7.388391527608476e+37,
+          "thresholdUlp": 1.5111572745182865e+23,
+          "incrementOverUlp": 488922738367102.3
+        },
+        {
+          "building": "Chancemaker",
+          "amount": 450,
+          "threshold": 1e+40,
+          "increment": 5.237972291094506e+38,
+          "thresholdUlp": 1.2089258196146292e+24,
+          "incrementOverUlp": 433274912828333.94
+        },
+        {
+          "building": "Fractal engine",
+          "amount": 450,
+          "threshold": 1e+41,
+          "increment": 3.6726890262630573e+39,
+          "thresholdUlp": 1.9342813113834067e+25,
+          "incrementOverUlp": 189873572403816.16
+        },
+        {
+          "building": "Javascript console",
+          "amount": 450,
+          "threshold": 9.999999999999999e+41,
+          "increment": 2.6496300650733845e+40,
+          "thresholdUlp": 1.5474250491067253e+26,
+          "incrementOverUlp": 171228329708306.3
+        },
+        {
+          "building": "Idleverse",
+          "amount": 450,
+          "threshold": 1e+43,
+          "increment": 1.9704307498786554e+41,
+          "thresholdUlp": 1.2379400392853803e+27,
+          "incrementOverUlp": 159170128386518.34
+        },
+        {
+          "building": "Cortex baker",
+          "amount": 450,
+          "threshold": 1e+44,
+          "increment": 1.499749473278888e+42,
+          "thresholdUlp": 1.9807040628566084e+28,
+          "incrementOverUlp": 75717998534113.23
+        },
+        {
+          "building": "You",
+          "amount": 450,
+          "threshold": 1e+45,
+          "increment": 1.1812162003386592e+43,
+          "thresholdUlp": 1.5845632502852868e+29,
+          "incrementOverUlp": 74545222484870.3
+        }
+      ],
+      "quotedPurchaseCost": 1.465929728871443e+58,
+      "nativePurchaseDebit": 1.4659297288714427e+58,
+      "purchaseCount": 525,
+      "purchasesSha256": "45f35a18064fb5aa85405cc5d4f48f31d5921ec111b0831e02ec7ae06e68b340",
+      "everyPurchaseAffordable": true,
+      "minimumPurchaseBank": 7.225580530063555e+55
+    },
+    {
+      "bankExponent": 220,
+      "count": 600,
+      "cursorCount": 1000,
+      "targetExponent": 240,
+      "ascend": false,
+      "ascension": null,
+      "prestige": 1162072058024506,
+      "remainingBank": 1.1430505095351573e+65,
+      "ordinaryUpgrades": 501,
+      "normalAchievements": 478,
+      "heavenlyPower": 1,
+      "rawCps": 5.207988516768109e+46,
+      "cps": 5.207988516768109e+46,
+      "nativeClick": 7.036408543040001e+61,
+      "incomeClick": {
+        "amount": 7.036408543040001e+61,
+        "bankBefore": 1.1423468686808532e+65,
+        "bankAfter": 1.1430505095351573e+65,
+        "earnedBefore": 1.684996666696915e+66,
+        "earnedAfter": 1.6850670307823453e+66
+      },
+      "clickProbe": {
+        "target": 1.7668470647783843e+72,
+        "before": 1.7668470647783841e+72,
+        "targetUlp": 3.9231885846166755e+56,
+        "amount": 7.036408543040001e+61,
+        "amountOverTargetUlp": 179354.32853344496,
+        "accepted": true,
+        "counters": {
+          "cookies": {
+            "after": 1.7668470648487483e+72,
+            "increment": 7.036415269996315e+61,
+            "crossed": true
+          },
+          "cookiesEarned": {
+            "after": 1.7668470648487483e+72,
+            "increment": 7.036415269996315e+61,
+            "crossed": true
+          },
+          "handmadeCookies": {
+            "after": 1.7668470648487483e+72,
+            "increment": 7.036415269996315e+61,
+            "crossed": true
+          }
+        }
+      },
+      "production": [
+        {
+          "building": "Cursor",
+          "amount": 1000,
+          "threshold": 1e+33,
+          "increment": 5.83959660423783e+42,
+          "thresholdUlp": 144115188075855870,
+          "incrementOverUlp": 4.052034127842323e+25
+        },
+        {
+          "building": "Grandma",
+          "amount": 600,
+          "threshold": 1e+33,
+          "increment": 1.0312860377069958e+36,
+          "thresholdUlp": 144115188075855870,
+          "incrementOverUlp": 7155984400229713000
+        },
+        {
+          "building": "Farm",
+          "amount": 600,
+          "threshold": 1e+28,
+          "increment": 2.2030646557461454e+32,
+          "thresholdUlp": 2199023255552,
+          "incrementOverUlp": 100183781603215970000
+        },
+        {
+          "building": "Mine",
+          "amount": 600,
+          "threshold": 1.0000000000000001e+29,
+          "increment": 7.396002772862059e+32,
+          "thresholdUlp": 17592186044416,
+          "incrementOverUlp": 42041408351349555000
+        },
+        {
+          "building": "Factory",
+          "amount": 600,
+          "threshold": 1e+30,
+          "increment": 3.068554341932131e+33,
+          "thresholdUlp": 140737488355328,
+          "incrementOverUlp": 21803389969449902000
+        },
+        {
+          "building": "Bank",
+          "amount": 600,
+          "threshold": 1e+31,
+          "increment": 1.3769154098413411e+34,
+          "thresholdUlp": 1125899906842624,
+          "incrementOverUlp": 12229465527736326000
+        },
+        {
+          "building": "Temple",
+          "amount": 600,
+          "threshold": 1e+32,
+          "increment": 6.818327747773195e+34,
+          "thresholdUlp": 18014398509481984,
+          "incrementOverUlp": 3784932227509194000
+        },
+        {
+          "building": "Wizard tower",
+          "amount": 600,
+          "threshold": 1e+33,
+          "increment": 3.461958744743944e+35,
+          "thresholdUlp": 144115188075855870,
+          "incrementOverUlp": 2402216442948207000
+        },
+        {
+          "building": "Shipment",
+          "amount": 600,
+          "threshold": 1.0000000000000001e+34,
+          "increment": 1.8995812592913193e+36,
+          "thresholdUlp": 1152921504606847000,
+          "incrementOverUlp": 1647624102509119000
+        },
+        {
+          "building": "Alchemy lab",
+          "amount": 600,
+          "threshold": 1e+35,
+          "increment": 1.1015323278730729e+37,
+          "thresholdUlp": 18446744073709552000,
+          "incrementOverUlp": 597141871471500300
+        },
+        {
+          "building": "Portal",
+          "amount": 600,
+          "threshold": 9.999999999999999e+35,
+          "increment": 6.556740046863528e+37,
+          "thresholdUlp": 147573952589676410000,
+          "incrementOverUlp": 444301987702009100
+        },
+        {
+          "building": "Time machine",
+          "amount": 600,
+          "threshold": 1e+37,
+          "increment": 4.091405789242842e+38,
+          "thresholdUlp": 1.1805916207174113e+21,
+          "incrementOverUlp": 346555550407567100
+        },
+        {
+          "building": "Antimatter condenser",
+          "amount": 600,
+          "threshold": 1e+38,
+          "increment": 2.614351076867585e+39,
+          "thresholdUlp": 1.888946593147858e+22,
+          "incrementOverUlp": 138402593612287780
+        },
+        {
+          "building": "Prism",
+          "amount": 600,
+          "threshold": 1.0000000000000001e+39,
+          "increment": 1.711309152231381e+40,
+          "thresholdUlp": 1.5111572745182865e+23,
+          "incrementOverUlp": 113244940224828500
+        },
+        {
+          "building": "Chancemaker",
+          "amount": 600,
+          "threshold": 1e+40,
+          "increment": 1.2074488978608685e+41,
+          "thresholdUlp": 1.2089258196146292e+24,
+          "incrementOverUlp": 99877831895903140
+        },
+        {
+          "building": "Fractal engine",
+          "amount": 600,
+          "threshold": 1e+41,
+          "increment": 8.430094345967395e+41,
+          "thresholdUlp": 1.9342813113834067e+25,
+          "incrementOverUlp": 43582566281107030
+        },
+        {
+          "building": "Javascript console",
+          "amount": 600,
+          "threshold": 9.999999999999999e+41,
+          "increment": 6.058427803301901e+42,
+          "thresholdUlp": 1.5474250491067253e+26,
+          "incrementOverUlp": 39151672042527816
+        },
+        {
+          "building": "Idleverse",
+          "amount": 600,
+          "threshold": 1e+43,
+          "increment": 4.489727747089801e+43,
+          "thresholdUlp": 1.2379400392853803e+27,
+          "incrementOverUlp": 36267731914395180
+        },
+        {
+          "building": "Cortex baker",
+          "amount": 600,
+          "threshold": 1e+44,
+          "increment": 3.4064192996410995e+44,
+          "thresholdUlp": 1.9807040628566084e+28,
+          "incrementOverUlp": 17198022478574098
+        },
+        {
+          "building": "You",
+          "amount": 600,
+          "threshold": 1e+45,
+          "increment": 1.33757496956016e+45,
+          "thresholdUlp": 1.5845632502852868e+29,
+          "incrementOverUlp": 8441284810305561
+        }
+      ],
+      "quotedPurchaseCost": 1.5707619798288317e+66,
+      "nativePurchaseDebit": 1.5707619798288296e+66,
+      "purchaseCount": 124,
+      "purchasesSha256": "68c7b358d5776c533041a44b27011de3efb695bf6ba7ec52d1f2bed49106c8ac",
+      "everyPurchaseAffordable": true,
+      "minimumPurchaseBank": 1.1423468686808532e+65
+    },
+    {
+      "bankExponent": 240,
+      "count": 700,
+      "cursorCount": 1000,
+      "targetExponent": 270,
+      "ascend": true,
+      "ascension": {
+        "earned": 1.7668470647783843e+72,
+        "resetCookies": 1.5692754338466716e+57,
+        "prestige": 120892581961462640000,
+        "expectedNativePrestige": 120892581961462640000,
+        "bankAfterReincarnate": 0
+      },
+      "prestige": 120892581961462640000,
+      "remainingBank": 1.751074798249154e+72,
+      "ordinaryUpgrades": 511,
+      "normalAchievements": 527,
+      "heavenlyPower": 1,
+      "rawCps": 5.935369573714447e+52,
+      "cps": 5.935369573714447e+52,
+      "nativeClick": 8.019158460145971e+67,
+      "incomeClick": {
+        "amount": 5.346105640097313e+66,
+        "bankBefore": 1.751069452143514e+72,
+        "bankAfter": 1.751074798249154e+72,
+        "earnedBefore": 1.7668470647783843e+72,
+        "earnedAfter": 1.7668524108840244e+72
+      },
+      "clickProbe": {
+        "target": 1.8971375900641885e+81,
+        "before": 1.8971375900641883e+81,
+        "targetUlp": 4.2124916667422875e+65,
+        "amount": 8.019158460145971e+67,
+        "amountOverTargetUlp": 190.36615605574724,
+        "accepted": true,
+        "counters": {
+          "cookies": {
+            "after": 1.8971375900642686e+81,
+            "increment": 8.024796625144058e+67,
+            "crossed": true
+          },
+          "cookiesEarned": {
+            "after": 1.8971375900642686e+81,
+            "increment": 8.024796625144058e+67,
+            "crossed": true
+          },
+          "handmadeCookies": {
+            "after": 1.8971375900642686e+81,
+            "increment": 8.024796625144058e+67,
+            "crossed": true
+          }
+        }
+      },
+      "production": [
+        {
+          "building": "Cursor",
+          "amount": 1000,
+          "threshold": 1e+33,
+          "increment": 3.607924930465916e+48,
+          "thresholdUlp": 144115188075855870,
+          "incrementOverUlp": 2.5035008305764857e+31
+        },
+        {
+          "building": "Grandma",
+          "amount": 700,
+          "threshold": 1e+33,
+          "increment": 6.37167746002228e+41,
+          "thresholdUlp": 144115188075855870,
+          "incrementOverUlp": 4.421239388501169e+24
+        },
+        {
+          "building": "Farm",
+          "amount": 700,
+          "threshold": 1e+28,
+          "increment": 1.5555853173882519e+38,
+          "thresholdUlp": 2199023255552,
+          "incrementOverUlp": 7.07398302160187e+25
+        },
+        {
+          "building": "Mine",
+          "amount": 700,
+          "threshold": 1.0000000000000001e+29,
+          "increment": 5.140723353556488e+38,
+          "thresholdUlp": 17592186044416,
+          "incrementOverUlp": 2.922162908337491e+25
+        },
+        {
+          "building": "Factory",
+          "amount": 700,
+          "threshold": 1e+30,
+          "increment": 2.1065217839632575e+39,
+          "thresholdUlp": 140737488355328,
+          "incrementOverUlp": 1.4967737513154998e+25
+        },
+        {
+          "building": "Bank",
+          "amount": 700,
+          "threshold": 1e+31,
+          "increment": 9.357817924913703e+39,
+          "thresholdUlp": 1125899906842624,
+          "incrementOverUlp": 8.311411936391358e+24
+        },
+        {
+          "building": "Temple",
+          "amount": 700,
+          "threshold": 1e+32,
+          "increment": 4.595587923894244e+40,
+          "thresholdUlp": 18014398509481984,
+          "incrementOverUlp": 2.5510637623983557e+24
+        },
+        {
+          "building": "Wizard tower",
+          "amount": 700,
+          "threshold": 1e+33,
+          "increment": 2.3171739623595833e+41,
+          "thresholdUlp": 144115188075855870,
+          "incrementOverUlp": 1.607862428170947e+24
+        },
+        {
+          "building": "Shipment",
+          "amount": 700,
+          "threshold": 1.0000000000000001e+34,
+          "increment": 1.2639130703779545e+42,
+          "thresholdUlp": 1152921504606847000,
+          "incrementOverUlp": 1.096269837389282e+24
+        },
+        {
+          "building": "Alchemy lab",
+          "amount": 700,
+          "threshold": 1e+35,
+          "increment": 7.29180617525743e+42,
+          "thresholdUlp": 18446744073709552000,
+          "incrementOverUlp": 3.9528960482786614e+23
+        },
+        {
+          "building": "Portal",
+          "amount": 700,
+          "threshold": 9.999999999999999e+35,
+          "increment": 4.3210703260784764e+43,
+          "thresholdUlp": 147573952589676410000,
+          "incrementOverUlp": 2.928071146873082e+23
+        },
+        {
+          "building": "Time machine",
+          "amount": 700,
+          "threshold": 1e+37,
+          "increment": 2.6858152745531538e+44,
+          "thresholdUlp": 1.1805916207174113e+21,
+          "incrementOverUlp": 2.2749740277853757e+23
+        },
+        {
+          "building": "Antimatter condenser",
+          "amount": 700,
+          "threshold": 1e+38,
+          "increment": 1.7102599938331065e+45,
+          "thresholdUlp": 1.888946593147858e+22,
+          "incrementOverUlp": 9.054041019672361e+22
+        },
+        {
+          "building": "Prism",
+          "amount": 700,
+          "threshold": 1.0000000000000001e+39,
+          "increment": 1.1160514451574564e+46,
+          "thresholdUlp": 1.5111572745182865e+23,
+          "incrementOverUlp": 7.385408944368293e+22
+        },
+        {
+          "building": "Chancemaker",
+          "amount": 700,
+          "threshold": 1e+40,
+          "increment": 7.852714342584926e+46,
+          "thresholdUlp": 1.2089258196146292e+24,
+          "incrementOverUlp": 6.495613060103345e+22
+        },
+        {
+          "building": "Fractal engine",
+          "amount": 700,
+          "threshold": 1e+41,
+          "increment": 5.468854631443073e+47,
+          "thresholdUlp": 1.9342813113834067e+25,
+          "incrementOverUlp": 2.8273315775003396e+22
+        },
+        {
+          "building": "Javascript console",
+          "amount": 700,
+          "threshold": 9.999999999999999e+41,
+          "increment": 3.921371320916219e+48,
+          "thresholdUlp": 1.5474250491067253e+26,
+          "incrementOverUlp": 2.5341268213151197e+22
+        },
+        {
+          "building": "Idleverse",
+          "amount": 700,
+          "threshold": 1e+43,
+          "increment": 2.9000120809513403e+49,
+          "thresholdUlp": 1.2379400392853803e+27,
+          "incrementOverUlp": 2.342611103059092e+22
+        },
+        {
+          "building": "Cortex baker",
+          "amount": 700,
+          "threshold": 1e+44,
+          "increment": 2.196120448077532e+50,
+          "thresholdUlp": 1.9807040628566084e+28,
+          "incrementOverUlp": 1.1087574813726822e+22
+        },
+        {
+          "building": "You",
+          "amount": 700,
+          "threshold": 1e+45,
+          "increment": 1.7216764580468932e+51,
+          "thresholdUlp": 1.5845632502852868e+29,
+          "incrementOverUlp": 1.086530599354062e+22
+        }
+      ],
+      "quotedPurchaseCost": 1.5777612634875762e+70,
+      "nativePurchaseDebit": 1.5777612634870346e+70,
+      "purchaseCount": 656,
+      "purchasesSha256": "51488094357550902999d90e24941677b451d3cf727b37d07d309766160203e6",
+      "everyPurchaseAffordable": true,
+      "minimumPurchaseBank": 1.751069452143514e+72
+    },
+    {
+      "bankExponent": 270,
+      "count": 700,
+      "cursorCount": 1000,
+      "targetExponent": 280,
+      "ascend": true,
+      "ascension": {
+        "earned": 1.8971375900641885e+81,
+        "resetCookies": 1.766847064778386e+72,
+        "prestige": 1.2379400396696838e+23,
+        "expectedNativePrestige": 1.2379400396696838e+23,
+        "bankAfterReincarnate": 0
+      },
+      "prestige": 1.2379400396696838e+23,
+      "remainingBank": 1.8971375900541279e+81,
+      "ordinaryUpgrades": 511,
+      "normalAchievements": 529,
+      "heavenlyPower": 1,
+      "rawCps": 6.345129514966174e+55,
+      "cps": 6.345129514966174e+55,
+      "nativeClick": 8.572776875765757e+70,
+      "incomeClick": {
+        "amount": 5.71518458384384e+69,
+        "bankBefore": 1.8971375900484128e+81,
+        "bankAfter": 1.8971375900541279e+81,
+        "earnedBefore": 1.8971375900641885e+81,
+        "earnedAfter": 1.8971375900699036e+81
+      },
+      "clickProbe": {
+        "target": 1.942668892225729e+84,
+        "before": 1.9426688922257289e+84,
+        "targetUlp": 4.3135914667441024e+68,
+        "amount": 8.572776875765757e+70,
+        "amountOverTargetUlp": 198.73872947538277,
+        "accepted": true,
+        "counters": {
+          "cookies": {
+            "after": 1.9426688922258145e+84,
+            "increment": 8.562479061487043e+70,
+            "crossed": true
+          },
+          "cookiesEarned": {
+            "after": 1.9426688922258145e+84,
+            "increment": 8.562479061487043e+70,
+            "crossed": true
+          },
+          "handmadeCookies": {
+            "after": 1.9426688922258145e+84,
+            "increment": 8.562479061487043e+70,
+            "crossed": true
+          }
+        }
+      },
+      "production": [
+        {
+          "building": "Cursor",
+          "amount": 1000,
+          "threshold": 1e+33,
+          "increment": 3.857005141763215e+51,
+          "thresholdUlp": 144115188075855870,
+          "incrementOverUlp": 2.676334946551961e+34
+        },
+        {
+          "building": "Grandma",
+          "amount": 700,
+          "threshold": 1e+33,
+          "increment": 6.811558776470746e+44,
+          "thresholdUlp": 144115188075855870,
+          "incrementOverUlp": 4.7264683670158636e+27
+        },
+        {
+          "building": "Farm",
+          "amount": 700,
+          "threshold": 1e+28,
+          "increment": 1.6629782169118031e+41,
+          "thresholdUlp": 2199023255552,
+          "incrementOverUlp": 7.562349387225382e+28
+        },
+        {
+          "building": "Mine",
+          "amount": 700,
+          "threshold": 1.0000000000000001e+29,
+          "increment": 5.4956233262007245e+41,
+          "thresholdUlp": 17592186044416,
+          "incrementOverUlp": 3.1239001863245474e+28
+        },
+        {
+          "building": "Factory",
+          "amount": 700,
+          "threshold": 1e+30,
+          "increment": 2.251949668734733e+42,
+          "thresholdUlp": 140737488355328,
+          "incrementOverUlp": 1.6001064784168286e+28
+        },
+        {
+          "building": "Bank",
+          "amount": 700,
+          "threshold": 1e+31,
+          "increment": 1.0003853336110066e+43,
+          "thresholdUlp": 1125899906842624,
+          "incrementOverUlp": 8.885206646978064e+27
+        },
+        {
+          "building": "Temple",
+          "amount": 700,
+          "threshold": 1e+32,
+          "increment": 4.912853397311696e+43,
+          "thresholdUlp": 18014398509481984,
+          "incrementOverUlp": 2.7271814791516833e+27
+        },
+        {
+          "building": "Wizard tower",
+          "amount": 700,
+          "threshold": 1e+33,
+          "increment": 2.4771446356082068e+44,
+          "thresholdUlp": 144115188075855870,
+          "incrementOverUlp": 1.718864381111828e+27
+        },
+        {
+          "building": "Shipment",
+          "amount": 700,
+          "threshold": 1.0000000000000001e+34,
+          "increment": 1.3511698012408401e+45,
+          "thresholdUlp": 1152921504606847000,
+          "incrementOverUlp": 1.1719529871217009e+27
+        },
+        {
+          "building": "Alchemy lab",
+          "amount": 700,
+          "threshold": 1e+35,
+          "increment": 7.795210391774078e+45,
+          "thresholdUlp": 18446744073709552000,
+          "incrementOverUlp": 4.2257920208715176e+26
+        },
+        {
+          "building": "Portal",
+          "amount": 700,
+          "threshold": 9.999999999999999e+35,
+          "increment": 4.619383935866119e+46,
+          "thresholdUlp": 147573952589676410000,
+          "incrementOverUlp": 3.130216311756679e+26
+        },
+        {
+          "building": "Time machine",
+          "amount": 700,
+          "threshold": 1e+37,
+          "increment": 2.8712358276367854e+47,
+          "thresholdUlp": 1.1805916207174113e+21,
+          "incrementOverUlp": 2.4320313453453266e+26
+        },
+        {
+          "building": "Antimatter condenser",
+          "amount": 700,
+          "threshold": 1e+38,
+          "increment": 1.8283311646161016e+48,
+          "thresholdUlp": 1.888946593147858e+22,
+          "incrementOverUlp": 9.6791045932604e+25
+        },
+        {
+          "building": "Prism",
+          "amount": 700,
+          "threshold": 1.0000000000000001e+39,
+          "increment": 1.193100257185421e+49,
+          "thresholdUlp": 1.5111572745182865e+23,
+          "incrementOverUlp": 7.89527521260649e+25
+        },
+        {
+          "building": "Chancemaker",
+          "amount": 700,
+          "threshold": 1e+40,
+          "increment": 8.394841960372084e+49,
+          "thresholdUlp": 1.2089258196146292e+24,
+          "incrementOverUlp": 6.94405051506644e+25
+        },
+        {
+          "building": "Fractal engine",
+          "amount": 700,
+          "threshold": 1e+41,
+          "increment": 5.846407793830558e+50,
+          "thresholdUlp": 1.9342813113834067e+25,
+          "incrementOverUlp": 3.0225219875847226e+25
+        },
+        {
+          "building": "Javascript console",
+          "amount": 700,
+          "threshold": 9.999999999999999e+41,
+          "increment": 4.192090921798504e+51,
+          "thresholdUlp": 1.5474250491067253e+26,
+          "incrementOverUlp": 2.709075262946307e+25
+        },
+        {
+          "building": "Idleverse",
+          "amount": 700,
+          "threshold": 1e+43,
+          "increment": 3.1002201328951487e+52,
+          "thresholdUlp": 1.2379400392853803e+27,
+          "incrementOverUlp": 2.5043378794701543e+25
+        },
+        {
+          "building": "Cortex baker",
+          "amount": 700,
+          "threshold": 1e+44,
+          "increment": 2.347733953287251e+53,
+          "thresholdUlp": 1.9807040628566084e+28,
+          "incrementOverUlp": 1.1853027402293028e+25
+        },
+        {
+          "building": "You",
+          "amount": 700,
+          "threshold": 1e+45,
+          "increment": 1.8405357869466568e+54,
+          "thresholdUlp": 1.5845632502852868e+29,
+          "incrementOverUlp": 1.1615413815859256e+25
+        }
+      ],
+      "quotedPurchaseCost": 1.5777612634875762e+70,
+      "nativePurchaseDebit": 1.5775781291949867e+70,
+      "purchaseCount": 656,
+      "purchasesSha256": "6bbf95efeb003beac94c0f4593b017abb957f865cd0323351517f8775948cf13",
+      "everyPurchaseAffordable": true,
+      "minimumPurchaseBank": 1.8971375900484128e+81
+    },
+    {
+      "bankExponent": 280,
+      "count": 700,
+      "cursorCount": 1000,
+      "targetExponent": 286,
+      "ascend": true,
+      "ascension": {
+        "earned": 1.942668892225729e+84,
+        "resetCookies": 1.8971375918310356e+81,
+        "prestige": 1.248171412680192e+24,
+        "expectedNativePrestige": 1.248171412680192e+24,
+        "bankAfterReincarnate": 0
+      },
+      "prestige": 1.248171412680192e+24,
+      "remainingBank": 1.9426688922257726e+84,
+      "ordinaryUpgrades": 511,
+      "normalAchievements": 530,
+      "heavenlyPower": 1,
+      "rawCps": 6.536440966460914e+56,
+      "cps": 6.536440966460914e+56,
+      "nativeClick": 8.831253930264788e+71,
+      "incomeClick": {
+        "amount": 5.887502620176523e+70,
+        "bankBefore": 1.942668892225714e+84,
+        "bankAfter": 1.9426688922257726e+84,
+        "earnedBefore": 1.942668892225729e+84,
+        "earnedAfter": 1.9426688922257877e+84
+      },
+      "clickProbe": {
+        "target": 1.2433080910244666e+86,
+        "before": 1.2433080910244665e+86,
+        "targetUlp": 2.7606985387162255e+70,
+        "amount": 8.831253930264788e+71,
+        "amountOverTargetUlp": 31.989200582442006,
+        "accepted": true,
+        "counters": {
+          "cookies": {
+            "after": 1.2433080910244752e+86,
+            "increment": 8.69620039695611e+71,
+            "crossed": true
+          },
+          "cookiesEarned": {
+            "after": 1.2433080910244752e+86,
+            "increment": 8.69620039695611e+71,
+            "crossed": true
+          },
+          "handmadeCookies": {
+            "after": 1.2433080910244752e+86,
+            "increment": 8.69620039695611e+71,
+            "crossed": true
+          }
+        }
+      },
+      "production": [
+        {
+          "building": "Cursor",
+          "amount": 1000,
+          "threshold": 1e+33,
+          "increment": 3.973297370369888e+52,
+          "thresholdUlp": 144115188075855870,
+          "incrementOverUlp": 2.7570288901670238e+35
+        },
+        {
+          "building": "Grandma",
+          "amount": 700,
+          "threshold": 1e+33,
+          "increment": 7.01693349630817e+45,
+          "thresholdUlp": 144115188075855870,
+          "incrementOverUlp": 4.868975706165519e+28
+        },
+        {
+          "building": "Farm",
+          "amount": 700,
+          "threshold": 1e+28,
+          "increment": 1.7131185293721117e+42,
+          "thresholdUlp": 2199023255552,
+          "incrementOverUlp": 7.790361129864831e+29
+        },
+        {
+          "building": "Mine",
+          "amount": 700,
+          "threshold": 1.0000000000000001e+29,
+          "increment": 5.661321390034401e+42,
+          "thresholdUlp": 17592186044416,
+          "incrementOverUlp": 3.218088630793773e+29
+        },
+        {
+          "building": "Factory",
+          "amount": 700,
+          "threshold": 1e+30,
+          "increment": 2.3198480085247345e+43,
+          "thresholdUlp": 140737488355328,
+          "incrementOverUlp": 1.648351150524785e+29
+        },
+        {
+          "building": "Bank",
+          "amount": 700,
+          "threshold": 1e+31,
+          "increment": 1.0305478653254109e+44,
+          "thresholdUlp": 1125899906842624,
+          "incrementOverUlp": 9.15310374450061e+28
+        },
+        {
+          "building": "Temple",
+          "amount": 700,
+          "threshold": 1e+32,
+          "increment": 5.060980415397562e+44,
+          "thresholdUlp": 18014398509481984,
+          "incrementOverUlp": 2.8094084921756812e+28
+        },
+        {
+          "building": "Wizard tower",
+          "amount": 700,
+          "threshold": 1e+33,
+          "increment": 2.5518328093772077e+45,
+          "thresholdUlp": 144115188075855870,
+          "incrementOverUlp": 1.7706897124777963e+28
+        },
+        {
+          "building": "Shipment",
+          "amount": 700,
+          "threshold": 1.0000000000000001e+34,
+          "increment": 1.3919088051148408e+46,
+          "thresholdUlp": 1152921504606847000,
+          "incrementOverUlp": 1.2072884403257704e+28
+        },
+        {
+          "building": "Alchemy lab",
+          "amount": 700,
+          "threshold": 1e+35,
+          "increment": 8.030243106431774e+46,
+          "thresholdUlp": 18446744073709552000,
+          "incrementOverUlp": 4.3532035107900377e+27
+        },
+        {
+          "building": "Portal",
+          "amount": 700,
+          "threshold": 9.999999999999999e+35,
+          "increment": 4.758662581589198e+47,
+          "thresholdUlp": 147573952589676410000,
+          "incrementOverUlp": 3.224595193177805e+27
+        },
+        {
+          "building": "Time machine",
+          "amount": 700,
+          "threshold": 1e+37,
+          "increment": 2.9578062108690375e+48,
+          "thresholdUlp": 1.1805916207174113e+21,
+          "incrementOverUlp": 2.5053593121994754e+27
+        },
+        {
+          "building": "Antimatter condenser",
+          "amount": 700,
+          "threshold": 1e+38,
+          "increment": 1.8834570195085434e+49,
+          "thresholdUlp": 1.888946593147858e+22,
+          "incrementOverUlp": 9.970938439132011e+26
+        },
+        {
+          "building": "Prism",
+          "amount": 700,
+          "threshold": 1.0000000000000001e+39,
+          "increment": 1.2290733199010852e+50,
+          "thresholdUlp": 1.5111572745182865e+23,
+          "incrementOverUlp": 8.133324973026904e+26
+        },
+        {
+          "building": "Chancemaker",
+          "amount": 700,
+          "threshold": 1e+40,
+          "increment": 8.647954114618833e+50,
+          "thresholdUlp": 1.2089258196146292e+24,
+          "incrementOverUlp": 7.153419981860882e+26
+        },
+        {
+          "building": "Fractal engine",
+          "amount": 700,
+          "threshold": 1e+41,
+          "increment": 6.022682329823831e+51,
+          "thresholdUlp": 1.9342813113834067e+25,
+          "incrementOverUlp": 3.113653786747483e+26
+        },
+        {
+          "building": "Javascript console",
+          "amount": 700,
+          "threshold": 9.999999999999999e+41,
+          "increment": 4.318486292792199e+52,
+          "thresholdUlp": 1.5474250491067253e+26,
+          "incrementOverUlp": 2.790756357010707e+26
+        },
+        {
+          "building": "Idleverse",
+          "amount": 700,
+          "threshold": 1e+43,
+          "increment": 3.1936946021204703e+53,
+          "thresholdUlp": 1.2379400392853803e+27,
+          "incrementOverUlp": 2.5798459543840904e+26
+        },
+        {
+          "building": "Cortex baker",
+          "amount": 700,
+          "threshold": 1e+44,
+          "increment": 2.4185202767606284e+54,
+          "thresholdUlp": 1.9807040628566084e+28,
+          "incrementOverUlp": 1.2210407006852872e+26
+        },
+        {
+          "building": "You",
+          "amount": 700,
+          "threshold": 1e+45,
+          "increment": 1.896029622351946e+55,
+          "thresholdUlp": 1.5845632502852868e+29,
+          "incrementOverUlp": 1.1965629153715275e+26
+        }
+      ],
+      "quotedPurchaseCost": 1.5777612634875762e+70,
+      "nativePurchaseDebit": 1.5097570133604358e+70,
+      "purchaseCount": 656,
+      "purchasesSha256": "24d07751e0d7b5b157424bee8b2442e4f192c61fadd7f791ce4307d39f8865e9",
+      "everyPurchaseAffordable": true,
+      "minimumPurchaseBank": 1.942668892225714e+84
+    },
+    {
+      "bankExponent": 286,
+      "count": 700,
+      "cursorCount": 1000,
+      "targetExponent": 286,
+      "ascend": true,
+      "ascension": {
+        "earned": 1.2433080910244666e+86,
+        "resetCookies": 1.94456602981756e+84,
+        "prestige": 5.016947493355736e+24,
+        "expectedNativePrestige": 5.016947493355736e+24,
+        "bankAfterReincarnate": 0
+      },
+      "prestige": 5.016947493355736e+24,
+      "remainingBank": 1.243308091024469e+86,
+      "ordinaryUpgrades": 511,
+      "normalAchievements": 530,
+      "heavenlyPower": 1,
+      "rawCps": 2.627281861209881e+57,
+      "cps": 2.627281861209881e+57,
+      "nativeClick": 3.549667683342625e+72,
+      "incomeClick": {
+        "amount": 2.366445122228417e+71,
+        "bankBefore": 1.2433080910244666e+86,
+        "bankAfter": 1.243308091024469e+86,
+        "earnedBefore": 1.2433080910244666e+86,
+        "earnedAfter": 1.243308091024469e+86
+      },
+      "clickProbe": {
+        "target": 1.2433080910244666e+86,
+        "before": 1.2433080910244665e+86,
+        "targetUlp": 2.7606985387162255e+70,
+        "amount": 3.549667683342625e+72,
+        "amountOverTargetUlp": 128.57860550733238,
+        "accepted": true,
+        "counters": {
+          "cookies": {
+            "after": 1.243308091024502e+86,
+            "increment": 3.54749762225035e+72,
+            "crossed": true
+          },
+          "cookiesEarned": {
+            "after": 1.243308091024502e+86,
+            "increment": 3.54749762225035e+72,
+            "crossed": true
+          },
+          "handmadeCookies": {
+            "after": 1.243308091024502e+86,
+            "increment": 3.54749762225035e+72,
+            "crossed": true
+          }
+        }
+      },
+      "production": [
+        {
+          "building": "Cursor",
+          "amount": 1000,
+          "threshold": 1e+33,
+          "increment": 1.5970422075146192e+53,
+          "thresholdUlp": 144115188075855870,
+          "incrementOverUlp": 1.1081706438005734e+36
+        },
+        {
+          "building": "Grandma",
+          "amount": 700,
+          "threshold": 1e+33,
+          "increment": 2.8204128501673246e+46,
+          "thresholdUlp": 144115188075855870,
+          "incrementOverUlp": 1.957054553252766e+29
+        },
+        {
+          "building": "Farm",
+          "amount": 700,
+          "threshold": 1e+28,
+          "increment": 6.88577355997882e+42,
+          "thresholdUlp": 2199023255552,
+          "incrementOverUlp": 3.1312872852044255e+30
+        },
+        {
+          "building": "Mine",
+          "amount": 700,
+          "threshold": 1.0000000000000001e+29,
+          "increment": 2.275532981149251e+43,
+          "thresholdUlp": 17592186044416,
+          "incrementOverUlp": 1.2934907437905002e+30
+        },
+        {
+          "building": "Factory",
+          "amount": 700,
+          "threshold": 1e+30,
+          "increment": 9.324485029137986e+43,
+          "thresholdUlp": 140737488355328,
+          "incrementOverUlp": 6.625445102157802e+29
+        },
+        {
+          "building": "Bank",
+          "amount": 700,
+          "threshold": 1e+31,
+          "increment": 4.142223157174759e+44,
+          "thresholdUlp": 1125899906842624,
+          "incrementOverUlp": 3.679033217784741e+29
+        },
+        {
+          "building": "Temple",
+          "amount": 700,
+          "threshold": 1e+32,
+          "increment": 2.0342296539567438e+45,
+          "thresholdUlp": 18014398509481984,
+          "incrementOverUlp": 1.1292242995990208e+29
+        },
+        {
+          "building": "Wizard tower",
+          "amount": 700,
+          "threshold": 1e+33,
+          "increment": 1.0256933532051785e+46,
+          "thresholdUlp": 144115188075855870,
+          "incrementOverUlp": 7.117177355833577e+28
+        },
+        {
+          "building": "Shipment",
+          "amount": 700,
+          "threshold": 1.0000000000000001e+34,
+          "increment": 5.594691017482791e+46,
+          "thresholdUlp": 1152921504606847000,
+          "incrementOverUlp": 4.852620924431984e+28
+        },
+        {
+          "building": "Alchemy lab",
+          "amount": 700,
+          "threshold": 1e+35,
+          "increment": 3.2277063562400724e+47,
+          "thresholdUlp": 18446744073709552000,
+          "incrementOverUlp": 1.749743121790379e+28
+        },
+        {
+          "building": "Portal",
+          "amount": 700,
+          "threshold": 9.999999999999999e+35,
+          "increment": 1.912714877771894e+48,
+          "thresholdUlp": 147573952589676410000,
+          "incrementOverUlp": 1.296106016141021e+28
+        },
+        {
+          "building": "Time machine",
+          "amount": 700,
+          "threshold": 1e+37,
+          "increment": 1.1888718412150934e+49,
+          "thresholdUlp": 1.1805916207174113e+21,
+          "incrementOverUlp": 1.0070136195720671e+28
+        },
+        {
+          "building": "Antimatter condenser",
+          "amount": 700,
+          "threshold": 1e+38,
+          "increment": 7.570438544635805e+49,
+          "thresholdUlp": 1.888946593147858e+22,
+          "incrementOverUlp": 4.0077567952940136e+27
+        },
+        {
+          "building": "Prism",
+          "amount": 700,
+          "threshold": 1.0000000000000001e+39,
+          "increment": 4.9401838952452204e+50,
+          "thresholdUlp": 1.5111572745182865e+23,
+          "incrementOverUlp": 3.269139472474835e+27
+        },
+        {
+          "building": "Chancemaker",
+          "amount": 700,
+          "threshold": 1e+40,
+          "increment": 3.4759914605662314e+51,
+          "thresholdUlp": 1.2089258196146292e+24,
+          "incrementOverUlp": 2.8752727455802686e+27
+        },
+        {
+          "building": "Fractal engine",
+          "amount": 700,
+          "threshold": 1e+41,
+          "increment": 2.4207797671800543e+52,
+          "thresholdUlp": 1.9342813113834067e+25,
+          "incrementOverUlp": 1.2515138066699832e+27
+        },
+        {
+          "building": "Javascript console",
+          "amount": 700,
+          "threshold": 9.999999999999999e+41,
+          "increment": 1.7357887515779945e+53,
+          "thresholdUlp": 1.5474250491067253e+26,
+          "incrementOverUlp": 1.1217271896819849e+27
+        },
+        {
+          "building": "Idleverse",
+          "amount": 700,
+          "threshold": 1e+43,
+          "increment": 1.2836857154296455e+54,
+          "thresholdUlp": 1.2379400392853803e+27,
+          "incrementOverUlp": 1.036953062904947e+27
+        },
+        {
+          "building": "Cortex baker",
+          "amount": 700,
+          "threshold": 1e+44,
+          "increment": 9.721092084675981e+54,
+          "thresholdUlp": 1.9807040628566084e+28,
+          "incrementOverUlp": 4.907897281058757e+26
+        },
+        {
+          "building": "You",
+          "amount": 700,
+          "threshold": 1e+45,
+          "increment": 7.620973341122391e+55,
+          "thresholdUlp": 1.5845632502852868e+29,
+          "incrementOverUlp": 4.8095103428344066e+26
+        }
+      ],
+      "quotedPurchaseCost": 1.5777612634875762e+70,
+      "nativePurchaseDebit": 0,
+      "purchaseCount": 656,
+      "purchasesSha256": "b78a36cee60e5aa798fd4c1b48809a10a765d47040ae0f115a183f0acfb3a7a6",
+      "everyPurchaseAffordable": true,
+      "minimumPurchaseBank": 1.2433080910244666e+86
+    }
+  ],
+  "productionProbe": {
+    "nativeTicks": 1,
+    "counters": [
+      {
+        "building": "Cursor",
+        "threshold": 1e+33,
+        "before": 9.999999999999998e+32,
+        "after": 1.5970422075146192e+53,
+        "crossed": true
+      },
+      {
+        "building": "Grandma",
+        "threshold": 1e+33,
+        "before": 9.999999999999998e+32,
+        "after": 2.8204128501674245e+46,
+        "crossed": true
+      },
+      {
+        "building": "Farm",
+        "threshold": 1e+28,
+        "before": 9.999999999999997e+27,
+        "after": 6.88577355997883e+42,
+        "crossed": true
+      },
+      {
+        "building": "Mine",
+        "threshold": 1.0000000000000001e+29,
+        "before": 1e+29,
+        "after": 2.275532981149261e+43,
+        "crossed": true
+      },
+      {
+        "building": "Factory",
+        "threshold": 1e+30,
+        "before": 9.999999999999999e+29,
+        "after": 9.324485029138085e+43,
+        "crossed": true
+      },
+      {
+        "building": "Bank",
+        "threshold": 1e+31,
+        "before": 9.999999999999999e+30,
+        "after": 4.142223157174859e+44,
+        "crossed": true
+      },
+      {
+        "building": "Temple",
+        "threshold": 1e+32,
+        "before": 9.999999999999999e+31,
+        "after": 2.034229653956844e+45,
+        "crossed": true
+      },
+      {
+        "building": "Wizard tower",
+        "threshold": 1e+33,
+        "before": 9.999999999999998e+32,
+        "after": 1.0256933532052785e+46,
+        "crossed": true
+      },
+      {
+        "building": "Shipment",
+        "threshold": 1.0000000000000001e+34,
+        "before": 1e+34,
+        "after": 5.594691017483791e+46,
+        "crossed": true
+      },
+      {
+        "building": "Alchemy lab",
+        "threshold": 1e+35,
+        "before": 9.999999999999998e+34,
+        "after": 3.2277063562410723e+47,
+        "crossed": true
+      },
+      {
+        "building": "Portal",
+        "threshold": 9.999999999999999e+35,
+        "before": 9.999999999999997e+35,
+        "after": 1.912714877772894e+48,
+        "crossed": true
+      },
+      {
+        "building": "Time machine",
+        "threshold": 1e+37,
+        "before": 9.999999999999998e+36,
+        "after": 1.1888718412160934e+49,
+        "crossed": true
+      },
+      {
+        "building": "Antimatter condenser",
+        "threshold": 1e+38,
+        "before": 9.999999999999998e+37,
+        "after": 7.570438544645805e+49,
+        "crossed": true
+      },
+      {
+        "building": "Prism",
+        "threshold": 1.0000000000000001e+39,
+        "before": 1e+39,
+        "after": 4.94018389525522e+50,
+        "crossed": true
+      },
+      {
+        "building": "Chancemaker",
+        "threshold": 1e+40,
+        "before": 9.999999999999999e+39,
+        "after": 3.475991460576231e+51,
+        "crossed": true
+      },
+      {
+        "building": "Fractal engine",
+        "threshold": 1e+41,
+        "before": 9.999999999999998e+40,
+        "after": 2.4207797671900544e+52,
+        "crossed": true
+      },
+      {
+        "building": "Javascript console",
+        "threshold": 9.999999999999999e+41,
+        "before": 9.999999999999997e+41,
+        "after": 1.7357887515879945e+53,
+        "crossed": true
+      },
+      {
+        "building": "Idleverse",
+        "threshold": 1e+43,
+        "before": 9.999999999999999e+42,
+        "after": 1.2836857154396455e+54,
+        "crossed": true
+      },
+      {
+        "building": "Cortex baker",
+        "threshold": 1e+44,
+        "before": 9.999999999999999e+43,
+        "after": 9.721092084775981e+54,
+        "crossed": true
+      },
+      {
+        "building": "You",
+        "threshold": 1e+45,
+        "before": 9.999999999999998e+44,
+        "after": 7.620973341222391e+55,
+        "crossed": true
+      }
+    ]
+  },
+  "maxRawCpsGoal": 1e+56,
+  "reproduction": "node tools/probe-income-route.mjs --output model/income-route-witness.json",
+  "moduleSha256": "c4c00150d850d34616ad793b26f85a6d2f84ff465fc1de748f286c182de1bfec",
+  "runtimeSha256": "2bd47e179d0a23409bfcbc267a744c8fb9f9eb27b2d74dee8603ec96659c64b5",
+  "node": "v23.6.0"
+}

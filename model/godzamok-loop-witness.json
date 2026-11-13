@@ -1,0 +1,1077 @@
+{
+  "schemaVersion": 1,
+  "scope": "Pinned-source short-prefix diagnostics at explicitly supplied funded/Pantheon boundaries. No complete 2^56-cycle execution, new-save funding, physical-input refinement, expected-time or optimality claim.",
+  "contract": {
+    "status": "standalone-opt-in-finite-prefix-with-open-source-refinement",
+    "minimumBank": 1152921504606847000,
+    "maximumBankExclusive": 8.98846567431158e+307,
+    "maximumOriginalCursors": 1000,
+    "cyclesToCap": "72057594037927936",
+    "cap": 140737488355328,
+    "source": [
+      "main.js:7818-7828",
+      "main.js:7831-7854",
+      "main.js:7857-7917",
+      "main.js:8516-8546",
+      "main.js:8598-8601"
+    ],
+    "scalarTheorems": [
+      "CookieClicker.JavaScript.BankCycleBridge.every_finite_cycle_prefix_preserves_bank",
+      "CookieClicker.JavaScript.ScaledArithmeticBridge.native_cent_cap_reached"
+    ],
+    "entry": "Normal run; Hardcore and Neverclick won; diamond Godzamok; ready and owned Temple; no dragon auras; finite bank in [2^60,2^1023); at most 1000 Cursors. After setup, native Cursor sale price<=18 and rebuy quote<=15.",
+    "post": "One Cursor. Native sale proceeds and later setup-time production are retained. The original Cursor count is recorded, not restored. Each confirmed cycle preserves the observed bank, earned counter, other holdings, prices, elapsed time and buff deadline in the checked prefix.",
+    "open": [
+      "The mapping from the diagnostic snapshot to native public observations is not proved for exact frame, buff durations and Garden fields. Removing the exact multiplier read does not certify the full information interface.",
+      "Prove the whole native buy/sell, refresh, audio, free-draw and source-control composition for every iteration, including finite host-resource limits.",
+      "Refine semantic store controls to legal physical inputs and reconcile enormous real CPU time with the selected zero-input-latency mathematical model.",
+      "Prove a later native gains update, click schedule and resource use reach 2^90; account for the lower Cursor production and any restoration cost.",
+      "Prove new-save reachability of every entry condition and compose all remaining completion phases; no expected-time or global-optimality claim is made."
+    ]
+  },
+  "sourceHashes": {
+    "main.js": "a8813ec2ee97edf5ebff6a3ce2037dcb65c08abd13c123bb92efda89b06ef4f7",
+    "minigameGarden.js": "184eacacd9325d493412dcda07f63d3a791939f83889b4349b6099d04be8e6c9",
+    "minigameMarket.js": "78538743673f3c1cd0e870a3695c77dcacd63febbe64b88f8a8fab9ea7e2863f",
+    "minigameGrimoire.js": "9efea1feb898dc9b719dd971bd27a71f083a8855b910013c524aea9b6d2a349d",
+    "minigamePantheon.js": "af08c31c4564d445cc2d1a7d101c4a63b57aa9b89991b93b8a65f4c0427573a0",
+    "base64.js": "875839c3e0c174c9358ce96923adfed6a6d2c090187a32deb35152dfac2c0e47",
+    "loc/EN.js": "ce48272a5fd5ab1f309dbb8fd7bd70188984ce14235a1d3d9215f3585101f433",
+    "index.html": "28488d9aef9bf31c4c023a0af01f0500a3b3e462b79bf7f2b09790025927a969"
+  },
+  "executionRuntime": {
+    "node": "v23.6.0",
+    "v8": "12.9.202.28-node.12",
+    "platform": "darwin",
+    "architecture": "arm64"
+  },
+  "fileHashes": {
+    "model/godzamok-loop-policy.mjs": "d9d648f8355afc86837b340f2ae20aa3c1c23bbc897de1847f8c08c4b9dfe79a",
+    "model/runtime.mjs": "427c41595d8e6195c44130b408cd52aafbc003dddaa4a049a66f340e1380a2e5",
+    "model/policy-runtime.mjs": "bcf17efb2539d9ed2c8673d6de9bd81a09426ee6249ce9677395b96843ba4207",
+    "tools/probe-godzamok-loop.mjs": "e68fb0e6f0a79ce8d80f2fd9f6b9522c7811d351e3f081b0a975817a50676917"
+  },
+  "cases": [
+    {
+      "fixture": {
+        "name": "fresh-1024",
+        "amount": 1,
+        "free": 0,
+        "cycles": 1024,
+        "bank": 1152921504606847000
+      },
+      "before": {
+        "bank": 1152921504606847000,
+        "earned": 2305843009213694000,
+        "elapsedMs": 200,
+        "frame": 7,
+        "cursor": {
+          "amount": 1,
+          "bought": 1,
+          "free": 0,
+          "highest": 1,
+          "price": 18,
+          "sellMultiplier": 0.25
+        },
+        "templeAmount": 1,
+        "totalBuildings": 2,
+        "cps": 7878.1,
+        "mouseCps": 1,
+        "recalculateGains": true,
+        "buff": null,
+        "counts": {
+          "recordingMode": "summary-only",
+          "actionCount": 2,
+          "randomDrawCount": 29,
+          "reloadCount": 0
+        }
+      },
+      "loopEntry": {
+        "bank": 1152921504606847000,
+        "earned": 2305843009213694000,
+        "elapsedMs": 200,
+        "frame": 7,
+        "cursor": {
+          "amount": 1,
+          "bought": 1,
+          "free": 0,
+          "highest": 1,
+          "price": 18,
+          "sellMultiplier": 0.25
+        },
+        "templeAmount": 1,
+        "totalBuildings": 2,
+        "cps": 7878.1,
+        "mouseCps": 1,
+        "recalculateGains": true,
+        "buff": null,
+        "counts": {
+          "recordingMode": "summary-only",
+          "actionCount": 2,
+          "randomDrawCount": 29,
+          "reloadCount": 0
+        }
+      },
+      "after": {
+        "bank": 1152921504606847000,
+        "earned": 2305843009213694000,
+        "elapsedMs": 200,
+        "frame": 7,
+        "cursor": {
+          "amount": 1,
+          "bought": 1025,
+          "free": 0,
+          "highest": 1,
+          "price": 18,
+          "sellMultiplier": 0.25
+        },
+        "templeAmount": 1,
+        "totalBuildings": 2,
+        "cps": 7878.1,
+        "mouseCps": 1,
+        "recalculateGains": 1,
+        "buff": {
+          "multClick": 11.239999999999805,
+          "time": 300,
+          "maxTime": 300
+        },
+        "counts": {
+          "recordingMode": "summary-only",
+          "actionCount": 4106,
+          "randomDrawCount": 2077,
+          "reloadCount": 0
+        }
+      },
+      "decisions": 8,
+      "actionCount": 4104,
+      "waitCount": 0,
+      "batches": 8,
+      "expandedActionsSha256": "d82c6b6a2554bbc6cb0f92d6063b6fd080ad0f7d6968e1ce08b7c3dbe7bccaaf",
+      "policySha256": "2e2c386e9b299ba69f01ea116dd8ed184e4ba04271781d7c6ebff83cc27314f9",
+      "memory": {
+        "run": 0,
+        "phase": "complete",
+        "totalCycles": "1024",
+        "batchCycles": 128,
+        "completedCycles": "1024",
+        "remainingCycles": "0",
+        "originalCursors": 1,
+        "beforeSetupBank": 1152921504606847000,
+        "beforeSetupEarned": 2305843009213694000,
+        "beforeSetupElapsedMs": 200,
+        "afterSetupBank": 1152921504606847000,
+        "afterSetupEarned": 2305843009213694000,
+        "startBank": 1152921504606847000,
+        "startEarned": 2305843009213694000,
+        "startElapsedMs": 200,
+        "startFrame": 7,
+        "signature": "{\"price\":18,\"rebuy\":15,\"otherHoldings\":[[1,0,0],[2,0,0],[3,0,0],[4,0,0],[5,0,0],[6,1,1],[7,0,0],[8,0,0],[9,0,0],[10,0,0],[11,0,0],[12,0,0],[13,0,0],[14,0,0],[15,0,0],[16,0,0],[17,0,0],[18,0,0],[19,0,0]],\"owned\":[],\"slots\":[2,-1,-1],\"auras\":[0,0],\"otherBuffs\":[],\"garden\":null}",
+        "multiplier": 11.239999999999805,
+        "capReached": false,
+        "stopReason": "finite-count"
+      },
+      "individualInputChecks": true,
+      "batchReceipts": [
+        {
+          "issued": 128,
+          "confirmedBefore": "0",
+          "multClick": 2.279999999999995,
+          "bank": 1152921504606847000,
+          "earned": 2305843009213694000,
+          "time": 300,
+          "maxTime": 300,
+          "elapsedMs": 200,
+          "cursorAmount": 1,
+          "cursorBought": 129,
+          "price": 18
+        },
+        {
+          "issued": 128,
+          "confirmedBefore": "128",
+          "multClick": 3.5599999999999676,
+          "bank": 1152921504606847000,
+          "earned": 2305843009213694000,
+          "time": 300,
+          "maxTime": 300,
+          "elapsedMs": 200,
+          "cursorAmount": 1,
+          "cursorBought": 257,
+          "price": 18
+        },
+        {
+          "issued": 128,
+          "confirmedBefore": "256",
+          "multClick": 4.83999999999994,
+          "bank": 1152921504606847000,
+          "earned": 2305843009213694000,
+          "time": 300,
+          "maxTime": 300,
+          "elapsedMs": 200,
+          "cursorAmount": 1,
+          "cursorBought": 385,
+          "price": 18
+        },
+        {
+          "issued": 128,
+          "confirmedBefore": "384",
+          "multClick": 6.119999999999913,
+          "bank": 1152921504606847000,
+          "earned": 2305843009213694000,
+          "time": 300,
+          "maxTime": 300,
+          "elapsedMs": 200,
+          "cursorAmount": 1,
+          "cursorBought": 513,
+          "price": 18
+        },
+        {
+          "issued": 128,
+          "confirmedBefore": "512",
+          "multClick": 7.399999999999886,
+          "bank": 1152921504606847000,
+          "earned": 2305843009213694000,
+          "time": 300,
+          "maxTime": 300,
+          "elapsedMs": 200,
+          "cursorAmount": 1,
+          "cursorBought": 641,
+          "price": 18
+        },
+        {
+          "issued": 128,
+          "confirmedBefore": "640",
+          "multClick": 8.67999999999986,
+          "bank": 1152921504606847000,
+          "earned": 2305843009213694000,
+          "time": 300,
+          "maxTime": 300,
+          "elapsedMs": 200,
+          "cursorAmount": 1,
+          "cursorBought": 769,
+          "price": 18
+        },
+        {
+          "issued": 128,
+          "confirmedBefore": "768",
+          "multClick": 9.959999999999832,
+          "bank": 1152921504606847000,
+          "earned": 2305843009213694000,
+          "time": 300,
+          "maxTime": 300,
+          "elapsedMs": 200,
+          "cursorAmount": 1,
+          "cursorBought": 897,
+          "price": 18
+        },
+        {
+          "issued": 128,
+          "confirmedBefore": "896",
+          "multClick": 11.239999999999805,
+          "bank": 1152921504606847000,
+          "earned": 2305843009213694000,
+          "time": 300,
+          "maxTime": 300,
+          "elapsedMs": 200,
+          "cursorAmount": 1,
+          "cursorBought": 1025,
+          "price": 18
+        }
+      ]
+    },
+    {
+      "fixture": {
+        "name": "free-floor-257",
+        "amount": 1,
+        "free": 10,
+        "cycles": 257,
+        "bank": 1152921504606847000
+      },
+      "before": {
+        "bank": 1152921504606847000,
+        "earned": 2305843009213694000,
+        "elapsedMs": 200,
+        "frame": 7,
+        "cursor": {
+          "amount": 1,
+          "bought": 1,
+          "free": 10,
+          "highest": 1,
+          "price": 15,
+          "sellMultiplier": 0.25
+        },
+        "templeAmount": 1,
+        "totalBuildings": 2,
+        "cps": 7878.1,
+        "mouseCps": 1,
+        "recalculateGains": true,
+        "buff": null,
+        "counts": {
+          "recordingMode": "summary-only",
+          "actionCount": 2,
+          "randomDrawCount": 29,
+          "reloadCount": 0
+        }
+      },
+      "loopEntry": {
+        "bank": 1152921504606847000,
+        "earned": 2305843009213694000,
+        "elapsedMs": 200,
+        "frame": 7,
+        "cursor": {
+          "amount": 1,
+          "bought": 1,
+          "free": 10,
+          "highest": 1,
+          "price": 15,
+          "sellMultiplier": 0.25
+        },
+        "templeAmount": 1,
+        "totalBuildings": 2,
+        "cps": 7878.1,
+        "mouseCps": 1,
+        "recalculateGains": true,
+        "buff": null,
+        "counts": {
+          "recordingMode": "summary-only",
+          "actionCount": 2,
+          "randomDrawCount": 29,
+          "reloadCount": 0
+        }
+      },
+      "after": {
+        "bank": 1152921504606847000,
+        "earned": 2305843009213694000,
+        "elapsedMs": 200,
+        "frame": 7,
+        "cursor": {
+          "amount": 1,
+          "bought": 258,
+          "free": 10,
+          "highest": 1,
+          "price": 15,
+          "sellMultiplier": 0.25
+        },
+        "templeAmount": 1,
+        "totalBuildings": 2,
+        "cps": 7878.1,
+        "mouseCps": 1,
+        "recalculateGains": 1,
+        "buff": {
+          "multClick": 3.5699999999999674,
+          "time": 300,
+          "maxTime": 300
+        },
+        "counts": {
+          "recordingMode": "summary-only",
+          "actionCount": 1033,
+          "randomDrawCount": 543,
+          "reloadCount": 0
+        }
+      },
+      "decisions": 3,
+      "actionCount": 1031,
+      "waitCount": 0,
+      "batches": 3,
+      "expandedActionsSha256": "a0e0ef3398f86e08ec66db87ae119f341ca755b253f05949b9a5550651c9547b",
+      "policySha256": "6a37fd496a753c5ffab96049e9579cab9a27304fdd9753ad719b80ba5f424c13",
+      "memory": {
+        "run": 0,
+        "phase": "complete",
+        "totalCycles": "257",
+        "batchCycles": 128,
+        "completedCycles": "257",
+        "remainingCycles": "0",
+        "originalCursors": 1,
+        "beforeSetupBank": 1152921504606847000,
+        "beforeSetupEarned": 2305843009213694000,
+        "beforeSetupElapsedMs": 200,
+        "afterSetupBank": 1152921504606847000,
+        "afterSetupEarned": 2305843009213694000,
+        "startBank": 1152921504606847000,
+        "startEarned": 2305843009213694000,
+        "startElapsedMs": 200,
+        "startFrame": 7,
+        "signature": "{\"price\":15,\"rebuy\":15,\"otherHoldings\":[[1,0,0],[2,0,0],[3,0,0],[4,0,0],[5,0,0],[6,1,1],[7,0,0],[8,0,0],[9,0,0],[10,0,0],[11,0,0],[12,0,0],[13,0,0],[14,0,0],[15,0,0],[16,0,0],[17,0,0],[18,0,0],[19,0,0]],\"owned\":[],\"slots\":[2,-1,-1],\"auras\":[0,0],\"otherBuffs\":[],\"garden\":null}",
+        "multiplier": 3.5699999999999674,
+        "capReached": false,
+        "stopReason": "finite-count"
+      },
+      "individualInputChecks": true,
+      "batchReceipts": [
+        {
+          "issued": 128,
+          "confirmedBefore": "0",
+          "multClick": 2.279999999999995,
+          "bank": 1152921504606847000,
+          "earned": 2305843009213694000,
+          "time": 300,
+          "maxTime": 300,
+          "elapsedMs": 200,
+          "cursorAmount": 1,
+          "cursorBought": 129,
+          "price": 15
+        },
+        {
+          "issued": 128,
+          "confirmedBefore": "128",
+          "multClick": 3.5599999999999676,
+          "bank": 1152921504606847000,
+          "earned": 2305843009213694000,
+          "time": 300,
+          "maxTime": 300,
+          "elapsedMs": 200,
+          "cursorAmount": 1,
+          "cursorBought": 257,
+          "price": 15
+        },
+        {
+          "issued": 1,
+          "confirmedBefore": "256",
+          "multClick": 3.5699999999999674,
+          "bank": 1152921504606847000,
+          "earned": 2305843009213694000,
+          "time": 300,
+          "maxTime": 300,
+          "elapsedMs": 200,
+          "cursorAmount": 1,
+          "cursorBought": 258,
+          "price": 15
+        }
+      ]
+    },
+    {
+      "fixture": {
+        "name": "discounts-257",
+        "amount": 1,
+        "free": 0,
+        "cycles": 257,
+        "bank": 1152921504606847200,
+        "discount": true
+      },
+      "before": {
+        "bank": 1152921504606847200,
+        "earned": 2305843009213694500,
+        "elapsedMs": 200,
+        "frame": 7,
+        "cursor": {
+          "amount": 1,
+          "bought": 1,
+          "free": 0,
+          "highest": 1,
+          "price": 17,
+          "sellMultiplier": 0.25
+        },
+        "templeAmount": 1,
+        "totalBuildings": 2,
+        "cps": 9548.2572,
+        "mouseCps": 1,
+        "recalculateGains": true,
+        "buff": null,
+        "counts": {
+          "recordingMode": "summary-only",
+          "actionCount": 2,
+          "randomDrawCount": 29,
+          "reloadCount": 0
+        }
+      },
+      "loopEntry": {
+        "bank": 1152921504606847200,
+        "earned": 2305843009213694500,
+        "elapsedMs": 200,
+        "frame": 7,
+        "cursor": {
+          "amount": 1,
+          "bought": 1,
+          "free": 0,
+          "highest": 1,
+          "price": 17,
+          "sellMultiplier": 0.25
+        },
+        "templeAmount": 1,
+        "totalBuildings": 2,
+        "cps": 9548.2572,
+        "mouseCps": 1,
+        "recalculateGains": true,
+        "buff": null,
+        "counts": {
+          "recordingMode": "summary-only",
+          "actionCount": 2,
+          "randomDrawCount": 29,
+          "reloadCount": 0
+        }
+      },
+      "after": {
+        "bank": 1152921504606847200,
+        "earned": 2305843009213694500,
+        "elapsedMs": 200,
+        "frame": 7,
+        "cursor": {
+          "amount": 1,
+          "bought": 258,
+          "free": 0,
+          "highest": 1,
+          "price": 17,
+          "sellMultiplier": 0.25
+        },
+        "templeAmount": 1,
+        "totalBuildings": 2,
+        "cps": 9548.2572,
+        "mouseCps": 1,
+        "recalculateGains": 1,
+        "buff": {
+          "multClick": 3.5699999999999674,
+          "time": 300,
+          "maxTime": 300
+        },
+        "counts": {
+          "recordingMode": "summary-only",
+          "actionCount": 1033,
+          "randomDrawCount": 543,
+          "reloadCount": 0
+        }
+      },
+      "decisions": 3,
+      "actionCount": 1031,
+      "waitCount": 0,
+      "batches": 3,
+      "expandedActionsSha256": "a0e0ef3398f86e08ec66db87ae119f341ca755b253f05949b9a5550651c9547b",
+      "policySha256": "6a37fd496a753c5ffab96049e9579cab9a27304fdd9753ad719b80ba5f424c13",
+      "memory": {
+        "run": 0,
+        "phase": "complete",
+        "totalCycles": "257",
+        "batchCycles": 128,
+        "completedCycles": "257",
+        "remainingCycles": "0",
+        "originalCursors": 1,
+        "beforeSetupBank": 1152921504606847200,
+        "beforeSetupEarned": 2305843009213694500,
+        "beforeSetupElapsedMs": 200,
+        "afterSetupBank": 1152921504606847200,
+        "afterSetupEarned": 2305843009213694500,
+        "startBank": 1152921504606847200,
+        "startEarned": 2305843009213694500,
+        "startElapsedMs": 200,
+        "startFrame": 7,
+        "signature": "{\"price\":17,\"rebuy\":15,\"otherHoldings\":[[1,0,0],[2,0,0],[3,0,0],[4,0,0],[5,0,0],[6,1,1],[7,0,0],[8,0,0],[9,0,0],[10,0,0],[11,0,0],[12,0,0],[13,0,0],[14,0,0],[15,0,0],[16,0,0],[17,0,0],[18,0,0],[19,0,0]],\"owned\":[\"Divine discount\",\"Faberge egg\",\"Fortune #100\",\"Santa's dominion\",\"Season savings\"],\"slots\":[2,-1,-1],\"auras\":[0,0],\"otherBuffs\":[],\"garden\":null}",
+        "multiplier": 3.5699999999999674,
+        "capReached": false,
+        "stopReason": "finite-count"
+      },
+      "individualInputChecks": true,
+      "batchReceipts": [
+        {
+          "issued": 128,
+          "confirmedBefore": "0",
+          "multClick": 2.279999999999995,
+          "bank": 1152921504606847200,
+          "earned": 2305843009213694500,
+          "time": 300,
+          "maxTime": 300,
+          "elapsedMs": 200,
+          "cursorAmount": 1,
+          "cursorBought": 129,
+          "price": 17
+        },
+        {
+          "issued": 128,
+          "confirmedBefore": "128",
+          "multClick": 3.5599999999999676,
+          "bank": 1152921504606847200,
+          "earned": 2305843009213694500,
+          "time": 300,
+          "maxTime": 300,
+          "elapsedMs": 200,
+          "cursorAmount": 1,
+          "cursorBought": 257,
+          "price": 17
+        },
+        {
+          "issued": 1,
+          "confirmedBefore": "256",
+          "multClick": 3.5699999999999674,
+          "bank": 1152921504606847200,
+          "earned": 2305843009213694500,
+          "time": 300,
+          "maxTime": 300,
+          "elapsedMs": 200,
+          "cursorAmount": 1,
+          "cursorBought": 258,
+          "price": 17
+        }
+      ]
+    },
+    {
+      "fixture": {
+        "name": "lower-binade-257",
+        "amount": 1,
+        "free": 0,
+        "cycles": 257,
+        "bank": 2305843009213693700
+      },
+      "before": {
+        "bank": 2305843009213693700,
+        "earned": 4611686018427387400,
+        "elapsedMs": 200,
+        "frame": 7,
+        "cursor": {
+          "amount": 1,
+          "bought": 1,
+          "free": 0,
+          "highest": 1,
+          "price": 18,
+          "sellMultiplier": 0.25
+        },
+        "templeAmount": 1,
+        "totalBuildings": 2,
+        "cps": 7878.1,
+        "mouseCps": 1,
+        "recalculateGains": true,
+        "buff": null,
+        "counts": {
+          "recordingMode": "summary-only",
+          "actionCount": 2,
+          "randomDrawCount": 29,
+          "reloadCount": 0
+        }
+      },
+      "loopEntry": {
+        "bank": 2305843009213693700,
+        "earned": 4611686018427387400,
+        "elapsedMs": 200,
+        "frame": 7,
+        "cursor": {
+          "amount": 1,
+          "bought": 1,
+          "free": 0,
+          "highest": 1,
+          "price": 18,
+          "sellMultiplier": 0.25
+        },
+        "templeAmount": 1,
+        "totalBuildings": 2,
+        "cps": 7878.1,
+        "mouseCps": 1,
+        "recalculateGains": true,
+        "buff": null,
+        "counts": {
+          "recordingMode": "summary-only",
+          "actionCount": 2,
+          "randomDrawCount": 29,
+          "reloadCount": 0
+        }
+      },
+      "after": {
+        "bank": 2305843009213693700,
+        "earned": 4611686018427387400,
+        "elapsedMs": 200,
+        "frame": 7,
+        "cursor": {
+          "amount": 1,
+          "bought": 258,
+          "free": 0,
+          "highest": 1,
+          "price": 18,
+          "sellMultiplier": 0.25
+        },
+        "templeAmount": 1,
+        "totalBuildings": 2,
+        "cps": 7878.1,
+        "mouseCps": 1,
+        "recalculateGains": 1,
+        "buff": {
+          "multClick": 3.5699999999999674,
+          "time": 300,
+          "maxTime": 300
+        },
+        "counts": {
+          "recordingMode": "summary-only",
+          "actionCount": 1033,
+          "randomDrawCount": 543,
+          "reloadCount": 0
+        }
+      },
+      "decisions": 3,
+      "actionCount": 1031,
+      "waitCount": 0,
+      "batches": 3,
+      "expandedActionsSha256": "a0e0ef3398f86e08ec66db87ae119f341ca755b253f05949b9a5550651c9547b",
+      "policySha256": "6a37fd496a753c5ffab96049e9579cab9a27304fdd9753ad719b80ba5f424c13",
+      "memory": {
+        "run": 0,
+        "phase": "complete",
+        "totalCycles": "257",
+        "batchCycles": 128,
+        "completedCycles": "257",
+        "remainingCycles": "0",
+        "originalCursors": 1,
+        "beforeSetupBank": 2305843009213693700,
+        "beforeSetupEarned": 4611686018427387400,
+        "beforeSetupElapsedMs": 200,
+        "afterSetupBank": 2305843009213693700,
+        "afterSetupEarned": 4611686018427387400,
+        "startBank": 2305843009213693700,
+        "startEarned": 4611686018427387400,
+        "startElapsedMs": 200,
+        "startFrame": 7,
+        "signature": "{\"price\":18,\"rebuy\":15,\"otherHoldings\":[[1,0,0],[2,0,0],[3,0,0],[4,0,0],[5,0,0],[6,1,1],[7,0,0],[8,0,0],[9,0,0],[10,0,0],[11,0,0],[12,0,0],[13,0,0],[14,0,0],[15,0,0],[16,0,0],[17,0,0],[18,0,0],[19,0,0]],\"owned\":[],\"slots\":[2,-1,-1],\"auras\":[0,0],\"otherBuffs\":[],\"garden\":null}",
+        "multiplier": 3.5699999999999674,
+        "capReached": false,
+        "stopReason": "finite-count"
+      },
+      "individualInputChecks": true,
+      "batchReceipts": [
+        {
+          "issued": 128,
+          "confirmedBefore": "0",
+          "multClick": 2.279999999999995,
+          "bank": 2305843009213693700,
+          "earned": 4611686018427387400,
+          "time": 300,
+          "maxTime": 300,
+          "elapsedMs": 200,
+          "cursorAmount": 1,
+          "cursorBought": 129,
+          "price": 18
+        },
+        {
+          "issued": 128,
+          "confirmedBefore": "128",
+          "multClick": 3.5599999999999676,
+          "bank": 2305843009213693700,
+          "earned": 4611686018427387400,
+          "time": 300,
+          "maxTime": 300,
+          "elapsedMs": 200,
+          "cursorAmount": 1,
+          "cursorBought": 257,
+          "price": 18
+        },
+        {
+          "issued": 1,
+          "confirmedBefore": "256",
+          "multClick": 3.5699999999999674,
+          "bank": 2305843009213693700,
+          "earned": 4611686018427387400,
+          "time": 300,
+          "maxTime": 300,
+          "elapsedMs": 200,
+          "cursorAmount": 1,
+          "cursorBought": 258,
+          "price": 18
+        }
+      ]
+    },
+    {
+      "fixture": {
+        "name": "actual-setup-129",
+        "amount": 100,
+        "free": 10,
+        "cycles": 129,
+        "bank": 1152921504606847000
+      },
+      "before": {
+        "bank": 1152921504606847000,
+        "earned": 2305843009213694000,
+        "elapsedMs": 200,
+        "frame": 7,
+        "cursor": {
+          "amount": 100,
+          "bought": 100,
+          "free": 10,
+          "highest": 100,
+          "price": 4354085,
+          "sellMultiplier": 0.25
+        },
+        "templeAmount": 1,
+        "totalBuildings": 101,
+        "cps": 7888,
+        "mouseCps": 1,
+        "recalculateGains": true,
+        "buff": null,
+        "counts": {
+          "recordingMode": "summary-only",
+          "actionCount": 2,
+          "randomDrawCount": 29,
+          "reloadCount": 0
+        }
+      },
+      "loopEntry": {
+        "bank": 1152921504615270100,
+        "earned": 2305843009213850600,
+        "elapsedMs": 10300,
+        "frame": 313,
+        "cursor": {
+          "amount": 1,
+          "bought": 101,
+          "free": 10,
+          "highest": 100,
+          "price": 15,
+          "sellMultiplier": 0.25
+        },
+        "templeAmount": 1,
+        "totalBuildings": 2,
+        "cps": 7878.1,
+        "mouseCps": 1,
+        "recalculateGains": 0,
+        "buff": null,
+        "counts": {
+          "recordingMode": "summary-only",
+          "actionCount": 9,
+          "randomDrawCount": 7590,
+          "reloadCount": 0
+        }
+      },
+      "after": {
+        "bank": 1152921504615270100,
+        "earned": 2305843009213850600,
+        "elapsedMs": 10300,
+        "frame": 313,
+        "cursor": {
+          "amount": 1,
+          "bought": 230,
+          "free": 10,
+          "highest": 100,
+          "price": 15,
+          "sellMultiplier": 0.25
+        },
+        "templeAmount": 1,
+        "totalBuildings": 2,
+        "cps": 7878.1,
+        "mouseCps": 1,
+        "recalculateGains": 1,
+        "buff": {
+          "multClick": 2.2899999999999947,
+          "time": 300,
+          "maxTime": 300
+        },
+        "counts": {
+          "recordingMode": "summary-only",
+          "actionCount": 527,
+          "randomDrawCount": 7848,
+          "reloadCount": 0
+        }
+      },
+      "decisions": 4,
+      "actionCount": 525,
+      "waitCount": 1,
+      "batches": 2,
+      "expandedActionsSha256": "8e9d42f7e67c66033c50d0ffe970dbbf64f967d3ef8d21c9268546dd3ac21b5e",
+      "policySha256": "481b3ea10b808f9a6b734b6cd023c609adeff16922b0abb42f40978061d7b6b2",
+      "memory": {
+        "run": 0,
+        "phase": "complete",
+        "totalCycles": "129",
+        "batchCycles": 128,
+        "completedCycles": "129",
+        "remainingCycles": "0",
+        "originalCursors": 100,
+        "beforeSetupBank": 1152921504606847000,
+        "beforeSetupEarned": 2305843009213694000,
+        "beforeSetupElapsedMs": 200,
+        "afterSetupBank": 1152921504615191800,
+        "afterSetupEarned": 2305843009213694000,
+        "waitUntil": 10300,
+        "startBank": 1152921504615270100,
+        "startEarned": 2305843009213850600,
+        "startElapsedMs": 10300,
+        "startFrame": 313,
+        "signature": "{\"price\":15,\"rebuy\":15,\"otherHoldings\":[[1,0,0],[2,0,0],[3,0,0],[4,0,0],[5,0,0],[6,1,1],[7,0,0],[8,0,0],[9,0,0],[10,0,0],[11,0,0],[12,0,0],[13,0,0],[14,0,0],[15,0,0],[16,0,0],[17,0,0],[18,0,0],[19,0,0]],\"owned\":[],\"slots\":[2,-1,-1],\"auras\":[0,0],\"otherBuffs\":[],\"garden\":null}",
+        "multiplier": 2.2899999999999947,
+        "capReached": false,
+        "stopReason": "finite-count"
+      },
+      "individualInputChecks": true,
+      "batchReceipts": [
+        {
+          "issued": 128,
+          "confirmedBefore": "0",
+          "multClick": 2.279999999999995,
+          "bank": 1152921504615270100,
+          "earned": 2305843009213850600,
+          "time": 300,
+          "maxTime": 300,
+          "elapsedMs": 10300,
+          "cursorAmount": 1,
+          "cursorBought": 229,
+          "price": 15
+        },
+        {
+          "issued": 1,
+          "confirmedBefore": "128",
+          "multClick": 2.2899999999999947,
+          "bank": 1152921504615270100,
+          "earned": 2305843009213850600,
+          "time": 300,
+          "maxTime": 300,
+          "elapsedMs": 10300,
+          "cursorAmount": 1,
+          "cursorBought": 230,
+          "price": 15
+        }
+      ]
+    },
+    {
+      "fixture": {
+        "name": "bought-counter-stalled-257",
+        "amount": 1,
+        "free": 0,
+        "cycles": 257,
+        "bank": 1152921504606847000,
+        "bought": 9007199254740992
+      },
+      "before": {
+        "bank": 1152921504606847000,
+        "earned": 2305843009213694000,
+        "elapsedMs": 200,
+        "frame": 7,
+        "cursor": {
+          "amount": 1,
+          "bought": 9007199254740992,
+          "free": 0,
+          "highest": 1,
+          "price": 18,
+          "sellMultiplier": 0.25
+        },
+        "templeAmount": 1,
+        "totalBuildings": 2,
+        "cps": 7878.1,
+        "mouseCps": 1,
+        "recalculateGains": true,
+        "buff": null,
+        "counts": {
+          "recordingMode": "summary-only",
+          "actionCount": 2,
+          "randomDrawCount": 29,
+          "reloadCount": 0
+        }
+      },
+      "loopEntry": {
+        "bank": 1152921504606847000,
+        "earned": 2305843009213694000,
+        "elapsedMs": 200,
+        "frame": 7,
+        "cursor": {
+          "amount": 1,
+          "bought": 9007199254740992,
+          "free": 0,
+          "highest": 1,
+          "price": 18,
+          "sellMultiplier": 0.25
+        },
+        "templeAmount": 1,
+        "totalBuildings": 2,
+        "cps": 7878.1,
+        "mouseCps": 1,
+        "recalculateGains": true,
+        "buff": null,
+        "counts": {
+          "recordingMode": "summary-only",
+          "actionCount": 2,
+          "randomDrawCount": 29,
+          "reloadCount": 0
+        }
+      },
+      "after": {
+        "bank": 1152921504606847000,
+        "earned": 2305843009213694000,
+        "elapsedMs": 200,
+        "frame": 7,
+        "cursor": {
+          "amount": 1,
+          "bought": 9007199254740992,
+          "free": 0,
+          "highest": 1,
+          "price": 18,
+          "sellMultiplier": 0.25
+        },
+        "templeAmount": 1,
+        "totalBuildings": 2,
+        "cps": 7878.1,
+        "mouseCps": 1,
+        "recalculateGains": 1,
+        "buff": {
+          "multClick": 3.5699999999999674,
+          "time": 300,
+          "maxTime": 300
+        },
+        "counts": {
+          "recordingMode": "summary-only",
+          "actionCount": 1033,
+          "randomDrawCount": 543,
+          "reloadCount": 0
+        }
+      },
+      "decisions": 3,
+      "actionCount": 1031,
+      "waitCount": 0,
+      "batches": 3,
+      "expandedActionsSha256": "a0e0ef3398f86e08ec66db87ae119f341ca755b253f05949b9a5550651c9547b",
+      "policySha256": "6a37fd496a753c5ffab96049e9579cab9a27304fdd9753ad719b80ba5f424c13",
+      "memory": {
+        "run": 0,
+        "phase": "complete",
+        "totalCycles": "257",
+        "batchCycles": 128,
+        "completedCycles": "257",
+        "remainingCycles": "0",
+        "originalCursors": 1,
+        "beforeSetupBank": 1152921504606847000,
+        "beforeSetupEarned": 2305843009213694000,
+        "beforeSetupElapsedMs": 200,
+        "afterSetupBank": 1152921504606847000,
+        "afterSetupEarned": 2305843009213694000,
+        "startBank": 1152921504606847000,
+        "startEarned": 2305843009213694000,
+        "startElapsedMs": 200,
+        "startFrame": 7,
+        "signature": "{\"price\":18,\"rebuy\":15,\"otherHoldings\":[[1,0,0],[2,0,0],[3,0,0],[4,0,0],[5,0,0],[6,1,1],[7,0,0],[8,0,0],[9,0,0],[10,0,0],[11,0,0],[12,0,0],[13,0,0],[14,0,0],[15,0,0],[16,0,0],[17,0,0],[18,0,0],[19,0,0]],\"owned\":[],\"slots\":[2,-1,-1],\"auras\":[0,0],\"otherBuffs\":[],\"garden\":null}",
+        "multiplier": 3.5699999999999674,
+        "capReached": false,
+        "stopReason": "finite-count"
+      },
+      "individualInputChecks": true,
+      "batchReceipts": [
+        {
+          "issued": 128,
+          "confirmedBefore": "0",
+          "multClick": 2.279999999999995,
+          "bank": 1152921504606847000,
+          "earned": 2305843009213694000,
+          "time": 300,
+          "maxTime": 300,
+          "elapsedMs": 200,
+          "cursorAmount": 1,
+          "cursorBought": 9007199254740992,
+          "price": 18
+        },
+        {
+          "issued": 128,
+          "confirmedBefore": "128",
+          "multClick": 3.5599999999999676,
+          "bank": 1152921504606847000,
+          "earned": 2305843009213694000,
+          "time": 300,
+          "maxTime": 300,
+          "elapsedMs": 200,
+          "cursorAmount": 1,
+          "cursorBought": 9007199254740992,
+          "price": 18
+        },
+        {
+          "issued": 1,
+          "confirmedBefore": "256",
+          "multClick": 3.5699999999999674,
+          "bank": 1152921504606847000,
+          "earned": 2305843009213694000,
+          "time": 300,
+          "maxTime": 300,
+          "elapsedMs": 200,
+          "cursorAmount": 1,
+          "cursorBought": 9007199254740992,
+          "price": 18
+        }
+      ]
+    }
+  ]
+}

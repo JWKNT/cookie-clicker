@@ -1,0 +1,257 @@
+{
+  "schemaVersion": 1,
+  "scope": "isolated-native-textarea-comparison-and-new-save-export-diagnostic",
+  "doesNotProve": [
+    "The complete browser DOM contract",
+    "The full-game optimal policy",
+    "The full initialized source refinement"
+  ],
+  "reproduction": "node tools/audit-save-export.mjs",
+  "sourceHashes": {
+    "main.js": "a8813ec2ee97edf5ebff6a3ce2037dcb65c08abd13c123bb92efda89b06ef4f7",
+    "minigameGarden.js": "184eacacd9325d493412dcda07f63d3a791939f83889b4349b6099d04be8e6c9",
+    "minigameMarket.js": "78538743673f3c1cd0e870a3695c77dcacd63febbe64b88f8a8fab9ea7e2863f",
+    "minigameGrimoire.js": "9efea1feb898dc9b719dd971bd27a71f083a8855b910013c524aea9b6d2a349d",
+    "minigamePantheon.js": "af08c31c4564d445cc2d1a7d101c4a63b57aa9b89991b93b8a65f4c0427573a0",
+    "base64.js": "875839c3e0c174c9358ce96923adfed6a6d2c090187a32deb35152dfac2c0e47",
+    "loc/EN.js": "ce48272a5fd5ab1f309dbb8fd7bd70188984ce14235a1d3d9215f3585101f433",
+    "index.html": "28488d9aef9bf31c4c023a0af01f0500a3b3e462b79bf7f2b09790025927a969"
+  },
+  "runtimeSha256": "a5e95f8c741f259b458e9885d194a6c3bf5c36c22933149b77e6e19fe9fd0da4",
+  "probeSha256": "fd928c3209979069f22fb25248530dd767a1830a6464dfb7d1145e8b84dccf76",
+  "nativeFunctionHashes": {
+    "ExportSave": "9be038cce87765dd2e60bdddebb160bbee68821a67ac761ffc099a469faf62de",
+    "WriteSave": "15f6e67cf2674db889f985896bbf1143d7cd14943e573fb7c45bad938013c8e7"
+  },
+  "fixtures": [
+    {
+      "name": "native-export",
+      "content": "A%2BB!END!"
+    },
+    {
+      "name": "leading-LF",
+      "content": "\nA"
+    },
+    {
+      "name": "leading-CRLF",
+      "content": "\r\nA\r\nB"
+    },
+    {
+      "name": "two-leading-LF",
+      "content": "\n\nA"
+    },
+    {
+      "name": "character-references",
+      "content": "&lt;b&gt;&amp;&#39;"
+    },
+    {
+      "name": "RCDATA",
+      "content": "<b id=\"not-a-child\">A</b>"
+    }
+  ],
+  "adapterRows": [
+    {
+      "name": "native-export",
+      "value": "A%2BB!END!",
+      "defaultValue": "A%2BB!END!",
+      "textContent": "A%2BB!END!",
+      "readonlyAttribute": "",
+      "readOnly": true,
+      "elementChildren": 0
+    },
+    {
+      "name": "leading-LF",
+      "value": "A",
+      "defaultValue": "A",
+      "textContent": "A",
+      "readonlyAttribute": "",
+      "readOnly": true,
+      "elementChildren": 0
+    },
+    {
+      "name": "leading-CRLF",
+      "value": "A\nB",
+      "defaultValue": "A\nB",
+      "textContent": "A\nB",
+      "readonlyAttribute": "",
+      "readOnly": true,
+      "elementChildren": 0
+    },
+    {
+      "name": "two-leading-LF",
+      "value": "\nA",
+      "defaultValue": "\nA",
+      "textContent": "\nA",
+      "readonlyAttribute": "",
+      "readOnly": true,
+      "elementChildren": 0
+    },
+    {
+      "name": "character-references",
+      "value": "<b>&'",
+      "defaultValue": "<b>&'",
+      "textContent": "<b>&'",
+      "readonlyAttribute": "",
+      "readOnly": true,
+      "elementChildren": 0
+    },
+    {
+      "name": "RCDATA",
+      "value": "<b id=\"not-a-child\">A</b>",
+      "defaultValue": "<b id=\"not-a-child\">A</b>",
+      "textContent": "<b id=\"not-a-child\">A</b>",
+      "readonlyAttribute": "",
+      "readOnly": true,
+      "elementChildren": 0
+    }
+  ],
+  "export": {
+    "nativeOptionsAnchor": true,
+    "nativePromptId": "promptContentExportSave",
+    "readonlyTextareaId": "textareaPrompt",
+    "encodedLength": 3897,
+    "encodedSha256": "aa4ab9da8d66293f5e3e5a3a8fc721771f6b65a7384973c13fd64f9bb1c17a4f",
+    "decodedSha256": "1652ec7619a696662a2767f2e12cb0083d854e580c67b0ac3e9376042f144155",
+    "decodedSeedMatchesCurrentSeed": true,
+    "serializedSaveMatchesLastSaveData": true,
+    "persistentStorageUnchanged": true,
+    "before": {
+      "cookies": 1,
+      "time": 1793275200099,
+      "lastDate": 1793275200000,
+      "toSave": false,
+      "showBackupWarning": 1
+    },
+    "after": {
+      "cookies": 1,
+      "time": 1793275200099,
+      "lastDate": 1793275200099,
+      "toSave": false,
+      "showBackupWarning": 0
+    }
+  },
+  "result": [
+    {
+      "name": "native-export",
+      "value": "A%2BB!END!",
+      "defaultValue": "A%2BB!END!",
+      "textContent": "A%2BB!END!",
+      "readonlyAttribute": "",
+      "readOnly": true,
+      "elementChildren": 0
+    },
+    {
+      "name": "leading-LF",
+      "value": "A",
+      "defaultValue": "A",
+      "textContent": "A",
+      "readonlyAttribute": "",
+      "readOnly": true,
+      "elementChildren": 0
+    },
+    {
+      "name": "leading-CRLF",
+      "value": "A\nB",
+      "defaultValue": "A\nB",
+      "textContent": "A\nB",
+      "readonlyAttribute": "",
+      "readOnly": true,
+      "elementChildren": 0
+    },
+    {
+      "name": "two-leading-LF",
+      "value": "\nA",
+      "defaultValue": "\nA",
+      "textContent": "\nA",
+      "readonlyAttribute": "",
+      "readOnly": true,
+      "elementChildren": 0
+    },
+    {
+      "name": "character-references",
+      "value": "<b>&'",
+      "defaultValue": "<b>&'",
+      "textContent": "<b>&'",
+      "readonlyAttribute": "",
+      "readOnly": true,
+      "elementChildren": 0
+    },
+    {
+      "name": "RCDATA",
+      "value": "<b id=\"not-a-child\">A</b>",
+      "defaultValue": "<b id=\"not-a-child\">A</b>",
+      "textContent": "<b id=\"not-a-child\">A</b>",
+      "readonlyAttribute": "",
+      "readOnly": true,
+      "elementChildren": 0
+    }
+  ],
+  "renderer": {
+    "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 15_6_1) AppleWebKit/537.36 (KHTML, like Gecko) CookieClickerModelDOMAudit/1.0.0 Chrome/87.0.4280.141 Electron/11.5.0 Safari/537.36"
+  },
+  "consoleEvents": [],
+  "versions": {
+    "node": "12.18.3",
+    "v8": "8.7.220.31-electron.0",
+    "uv": "1.38.0",
+    "zlib": "1.2.11",
+    "brotli": "1.0.7",
+    "ares": "1.16.0",
+    "modules": "85",
+    "nghttp2": "1.41.0",
+    "napi": "6",
+    "llhttp": "2.0.4",
+    "http_parser": "2.9.3",
+    "openssl": "1.1.1",
+    "icu": "67.1",
+    "unicode": "13.0",
+    "electron": "11.5.0",
+    "chrome": "87.0.4280.141"
+  },
+  "appPath": "/private/var/folders/6k/y7fhskwn2ggdc_8rppvshctr0000gn/T/cookie-clicker-dom-audit-pTyxQa/Cookie Clicker.app/Contents/Resources/app",
+  "resourcesPath": "/private/var/folders/6k/y7fhskwn2ggdc_8rppvshctr0000gn/T/cookie-clicker-dom-audit-pTyxQa/Cookie Clicker.app/Contents/Resources",
+  "userData": "/var/folders/6k/y7fhskwn2ggdc_8rppvshctr0000gn/T/cookie-clicker-dom-audit-pTyxQa/profile",
+  "gameEntryPointExecuted": false,
+  "externalNetworking": false,
+  "auditConfiguration": {
+    "networkServiceInProcess": true,
+    "hardwareAcceleration": false,
+    "nodeIntegration": false,
+    "contextIsolation": true,
+    "rendererSandbox": false,
+    "allowEval": false,
+    "allowDataAssets": false,
+    "allowInlineStyles": false,
+    "allowInlineScripts": false,
+    "documentMode": "data",
+    "captureConsoleEvents": false,
+    "inputSequence": [],
+    "trustedInputSource": null
+  },
+  "identity": {
+    "binary": "~/Library/Application Support/Steam/steamapps/common/Cookie Clicker/Cookie Clicker.app/Contents/MacOS/Cookie Clicker",
+    "versions": {
+      "node": "12.18.3",
+      "v8": "8.7.220.31-electron.0",
+      "uv": "1.38.0",
+      "zlib": "1.2.11",
+      "brotli": "1.0.7",
+      "ares": "1.16.0",
+      "modules": "85",
+      "nghttp2": "1.41.0",
+      "napi": "6",
+      "llhttp": "2.0.4",
+      "http_parser": "2.9.3",
+      "openssl": "1.1.1",
+      "cldr": "37.0",
+      "icu": "67.1",
+      "tz": "2020f",
+      "unicode": "13.0",
+      "electron": "11.5.0"
+    },
+    "arch": "arm64",
+    "platform": "darwin",
+    "gameEntryPointExecuted": false
+  },
+  "executableHash": "6d8020c65f288d375dd6307dd86a3bcbe2907efe272ee3b859998211ecfd345b"
+}

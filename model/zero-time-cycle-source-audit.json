@@ -1,0 +1,225 @@
+{
+  "schemaVersion": 1,
+  "scope": "source audit of the proposed Cursor sale/rebuy route; not a whole-game transition or optimality theorem",
+  "sourceHashes": {
+    "main.js": "a8813ec2ee97edf5ebff6a3ce2037dcb65c08abd13c123bb92efda89b06ef4f7",
+    "minigameGarden.js": "184eacacd9325d493412dcda07f63d3a791939f83889b4349b6099d04be8e6c9",
+    "minigameMarket.js": "78538743673f3c1cd0e870a3695c77dcacd63febbe64b88f8a8fab9ea7e2863f",
+    "minigameGrimoire.js": "9efea1feb898dc9b719dd971bd27a71f083a8855b910013c524aea9b6d2a349d",
+    "minigamePantheon.js": "af08c31c4564d445cc2d1a7d101c4a63b57aa9b89991b93b8a65f4c0427573a0",
+    "base64.js": "875839c3e0c174c9358ce96923adfed6a6d2c090187a32deb35152dfac2c0e47",
+    "loc/EN.js": "ce48272a5fd5ab1f309dbb8fd7bd70188984ce14235a1d3d9215f3585101f433",
+    "index.html": "28488d9aef9bf31c4c023a0af01f0500a3b3e462b79bf7f2b09790025927a969"
+  },
+  "reproduction": "node tools/audit-zero-time-cycle.mjs",
+  "functions": [
+    {
+      "name": "buy",
+      "line": 7826,
+      "sha256": "b431e6a2c0f8e280a7670aa2b96a01c7f545d4e1792887a1d32ca19688b4d612",
+      "directCalls": [
+        "Game.Spend",
+        "Math.max",
+        "PlaySound",
+        "choose",
+        "l",
+        "null.classList.add",
+        "this.buyFunction",
+        "this.getPrice",
+        "this.refresh",
+        "this.sell"
+      ],
+      "constructors": [],
+      "directTimers": []
+    },
+    {
+      "name": "sell",
+      "line": 7857,
+      "sha256": "fa0840f8e3c55576464a72514b6521bb3851045776ca429ec51293e5f756ba0e",
+      "directCalls": [
+        "Game.Notify",
+        "Game.auraMult",
+        "Game.gainBuff",
+        "Game.hasBuff",
+        "Game.hasGod",
+        "Math.floor",
+        "Math.max",
+        "Math.random",
+        "PlaySound",
+        "choose",
+        "l",
+        "loc",
+        "null.classList.remove",
+        "this.getPrice",
+        "this.getSellMultiplier",
+        "this.refresh",
+        "this.sellFunction"
+      ],
+      "constructors": [
+        "Game.shimmer"
+      ],
+      "directTimers": []
+    },
+    {
+      "name": "getPrice",
+      "line": 7791,
+      "sha256": "24aa1dd0d28bb3daf18888889fa1b46fda04f7be67a474e01f50ae94b957eacb",
+      "directCalls": [
+        "Game.modifyBuildingPrice",
+        "Math.ceil",
+        "Math.max",
+        "Math.pow"
+      ],
+      "constructors": [],
+      "directTimers": []
+    },
+    {
+      "name": "getSumPrice",
+      "line": 7797,
+      "sha256": "b785433853de4252e3f696bbee9d185f386af4728dd23eddbf492bb8c61e8ce0",
+      "directCalls": [
+        "Game.modifyBuildingPrice",
+        "Math.ceil",
+        "Math.max",
+        "Math.pow"
+      ],
+      "constructors": [],
+      "directTimers": []
+    },
+    {
+      "name": "getReverseSumPrice",
+      "line": 7807,
+      "sha256": "34ea083cc01fad005712137812526242895a5f098c623e370658b8e00c555c1e",
+      "directCalls": [
+        "Game.modifyBuildingPrice",
+        "Math.ceil",
+        "Math.max",
+        "Math.pow",
+        "this.getSellMultiplier"
+      ],
+      "constructors": [],
+      "directTimers": []
+    },
+    {
+      "name": "getSellMultiplier",
+      "line": 7818,
+      "sha256": "c5f43a5000df6da00a4f28dfdb9afe9db77e49ca0a700c41fb31a6c7c09a9bf0",
+      "directCalls": [
+        "Game.auraMult"
+      ],
+      "constructors": [],
+      "directTimers": []
+    },
+    {
+      "name": "refresh",
+      "line": 8117,
+      "sha256": "7f98c50c403b89ed3153d4dac1fcbd46a35b705324c1b3609834d47ccd8041a3",
+      "directCalls": [
+        "l",
+        "null.classList.add",
+        "null.classList.remove",
+        "this.getPrice",
+        "this.getReverseSumPrice",
+        "this.getSumPrice",
+        "this.rebuild"
+      ],
+      "constructors": [],
+      "directTimers": []
+    },
+    {
+      "name": "rebuild",
+      "line": 8131,
+      "sha256": "d8e1647ebccb62c5f050704ad8cd194afd95fbae2f7d5b420966b6b3abfdc662",
+      "directCalls": [
+        "Beautify",
+        "Game.hasAura",
+        "Game.isMinigameReady",
+        "Math.round",
+        "l",
+        "loc",
+        "me.iconFunc",
+        "null.classList.add",
+        "null.classList.remove"
+      ],
+      "constructors": [],
+      "directTimers": []
+    },
+    {
+      "name": "modifyBuildingPrice",
+      "line": 8492,
+      "sha256": "95e0ff211097c3608a2f1df9691ef42c32d91ed493d8bf7ae183d6a79adad615",
+      "directCalls": [
+        "Game.Has",
+        "Game.auraMult",
+        "Game.eff",
+        "Game.hasBuff",
+        "Game.hasGod"
+      ],
+      "constructors": [],
+      "directTimers": []
+    },
+    {
+      "name": "storeBulkButton",
+      "line": 8516,
+      "sha256": "9597bf1fc6313fcf789b5f6868a8141d0525ba3171ccedf932081aa3daf34a35",
+      "directCalls": [
+        "PlaySound",
+        "l"
+      ],
+      "constructors": [],
+      "directTimers": []
+    },
+    {
+      "name": "PlaySound",
+      "line": 891,
+      "sha256": "cb418a507cfdc6886bd866006a78358cd669155cb2e0d90c4d621e46a37a3cd6",
+      "directCalls": [
+        "Math.pow",
+        "Math.random",
+        "PlaySound",
+        "sound.play",
+        "url.indexOf"
+      ],
+      "constructors": [
+        "Audio"
+      ],
+      "directTimers": []
+    },
+    {
+      "name": "tooltip.hide",
+      "line": 2418,
+      "sha256": "d7c335f2d142cd4a62b0cdf05eea19328e03a19776f93eacbe7300be7dcfa9a8",
+      "directCalls": [],
+      "constructors": [],
+      "directTimers": []
+    },
+    {
+      "name": "tooltip.wobble",
+      "line": 2447,
+      "sha256": "fd6e089132cc9e04c42309786fe88e1db9ccb8d5604a5f2f5be8fbd9e5ab498b",
+      "directCalls": [],
+      "constructors": [],
+      "directTimers": []
+    }
+  ],
+  "sourceFacts": {
+    "directTimerCallsInAuditedBodies": 0,
+    "audioPool": {
+      "instances": 12,
+      "initializerSha256": "139054b2bbb67dd414dbf586cfb6275cbd14fe0af6818b20c76992d62ff1d449",
+      "indexWrap": 12,
+      "cacheKey": "native sound URL",
+      "silenceAlternative": "The native volume control can set Game.volume=0. PlaySound then returns before allocation or playback."
+    },
+    "financialCycle": "With one Cursor and no price modifiers, amount changes1→0→1. Fresh free0 gives refund4 and rebuy15; Starter kit free>=1 gives refund3 and rebuy15. getPrice depends on amount/free, not bought. The bought counter may saturate without changing this price rule.",
+    "hostUpdates": "refresh/rebuild replace existing style/text/markup fields. storeBulkButton changes mode, bulk, classes and storeToRefresh. Tooltip mouseout/hide and disabled wobble do not schedule a timer.",
+    "bankArithmetic": "JavaScriptBankCycleBridge proves every canonical bank with exponent6..970 absorbs each integer refund0..4 and debit0..15, and any finite sequence of these refund-then-debit pairs preserves its bits. This includes bank>=2^58 below2^1023; callback entry and preservation still need refinement.",
+    "existingDevastation": "For success, sold1, Ruin in diamond and an existing Devastation object, the source branch adds the native cent to multClick and does not update time. Its actual helper composition is kernel checked in JavaScriptGodzamokSource."
+  },
+  "open": [
+    "The direct-call inventory is not a complete transitive no-timer proof; native DOM/audio callbacks and helper frames need refinement.",
+    "Prove the whole buy/sell source path and native visible input path, including price modifiers, affordability, amount and Game.BuildingsOwned invariants.",
+    "Prove initialization and preservation of the entry heap, plus absence of a due Logic callback during the same-time sequence.",
+    "This route-specific audit does not establish a finite zero-time quotient for all competitor policies."
+  ]
+}

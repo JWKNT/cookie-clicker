@@ -1,0 +1,3510 @@
+{
+  "schemaVersion": 1,
+  "status": "source-linked-controller-partition-not-reachability-or-optimality",
+  "sourceHashes": {
+    "main.js": "a8813ec2ee97edf5ebff6a3ce2037dcb65c08abd13c123bb92efda89b06ef4f7",
+    "minigameGarden.js": "184eacacd9325d493412dcda07f63d3a791939f83889b4349b6099d04be8e6c9",
+    "minigameMarket.js": "78538743673f3c1cd0e870a3695c77dcacd63febbe64b88f8a8fab9ea7e2863f",
+    "minigameGrimoire.js": "9efea1feb898dc9b719dd971bd27a71f083a8855b910013c524aea9b6d2a349d",
+    "minigamePantheon.js": "af08c31c4564d445cc2d1a7d101c4a63b57aa9b89991b93b8a65f4c0427573a0",
+    "base64.js": "875839c3e0c174c9358ce96923adfed6a6d2c090187a32deb35152dfac2c0e47",
+    "loc/EN.js": "ce48272a5fd5ab1f309dbb8fd7bd70188984ce14235a1d3d9215f3585101f433",
+    "index.html": "28488d9aef9bf31c4c023a0af01f0500a3b3e462b79bf7f2b09790025927a969"
+  },
+  "policySha256": "1f697aa9ff18f57ca0c7108f83da649ab9f6caa2568094408acb6bb74632d3c8",
+  "tailPolicySha256": "bac6915a87e120c36aa841472198c11538c5b478594d63848b66227e04507037",
+  "normalCatalogueCount": 622,
+  "requiredCount": 598,
+  "counts": {
+    "prefix": 52,
+    "direct-veil": 1,
+    "tail": 545
+  },
+  "ownership": [
+    {
+      "name": "Wholesome",
+      "native": [
+        {
+          "line": 16388,
+          "call": "Game.Win('Wholesome')",
+          "enclosingCondition": "Game.Has('Heavenly key')"
+        }
+      ]
+    },
+    {
+      "name": "You win a cookie",
+      "native": [
+        {
+          "line": 16487,
+          "call": "Game.Win('You win a cookie')",
+          "enclosingCondition": "Game.cookiesEarned>=1e14 && !Game.HasAchiev('You win a cookie')"
+        }
+      ]
+    },
+    {
+      "name": "One with everything",
+      "native": [
+        {
+          "line": 16409,
+          "call": "Game.Win('One with everything')",
+          "enclosingCondition": "minAmount>=1"
+        }
+      ]
+    },
+    {
+      "name": "Mathematician",
+      "native": [
+        {
+          "line": 16410,
+          "call": "Game.Win('Mathematician')",
+          "enclosingCondition": "mathematician==1"
+        }
+      ]
+    },
+    {
+      "name": "Base 10",
+      "native": [
+        {
+          "line": 16411,
+          "call": "Game.Win('Base 10')",
+          "enclosingCondition": "base10==1"
+        }
+      ]
+    },
+    {
+      "name": "Centennial",
+      "native": [
+        {
+          "line": 16412,
+          "call": "Game.Win('Centennial')",
+          "enclosingCondition": "minAmount>=100"
+        }
+      ]
+    },
+    {
+      "name": "Centennial and a half",
+      "native": [
+        {
+          "line": 16413,
+          "call": "Game.Win('Centennial and a half')",
+          "enclosingCondition": "minAmount>=150"
+        }
+      ]
+    },
+    {
+      "name": "Bicentennial",
+      "native": [
+        {
+          "line": 16414,
+          "call": "Game.Win('Bicentennial')",
+          "enclosingCondition": "minAmount>=200"
+        }
+      ]
+    },
+    {
+      "name": "Bicentennial and a half",
+      "native": [
+        {
+          "line": 16415,
+          "call": "Game.Win('Bicentennial and a half')",
+          "enclosingCondition": "minAmount>=250"
+        }
+      ]
+    },
+    {
+      "name": "Tricentennial",
+      "native": [
+        {
+          "line": 16416,
+          "call": "Game.Win('Tricentennial')",
+          "enclosingCondition": "minAmount>=300"
+        }
+      ]
+    },
+    {
+      "name": "Tricentennial and a half",
+      "native": [
+        {
+          "line": 16417,
+          "call": "Game.Win('Tricentennial and a half')",
+          "enclosingCondition": "minAmount>=350"
+        }
+      ]
+    },
+    {
+      "name": "Quadricentennial",
+      "native": [
+        {
+          "line": 16418,
+          "call": "Game.Win('Quadricentennial')",
+          "enclosingCondition": "minAmount>=400"
+        }
+      ]
+    },
+    {
+      "name": "Quadricentennial and a half",
+      "native": [
+        {
+          "line": 16419,
+          "call": "Game.Win('Quadricentennial and a half')",
+          "enclosingCondition": "minAmount>=450"
+        }
+      ]
+    },
+    {
+      "name": "Quincentennial",
+      "native": [
+        {
+          "line": 16420,
+          "call": "Game.Win('Quincentennial')",
+          "enclosingCondition": "minAmount>=500"
+        }
+      ]
+    },
+    {
+      "name": "Quincentennial and a half",
+      "native": [
+        {
+          "line": 16421,
+          "call": "Game.Win('Quincentennial and a half')",
+          "enclosingCondition": "minAmount>=550"
+        }
+      ]
+    },
+    {
+      "name": "Sexcentennial",
+      "native": [
+        {
+          "line": 16422,
+          "call": "Game.Win('Sexcentennial')",
+          "enclosingCondition": "minAmount>=600"
+        }
+      ]
+    },
+    {
+      "name": "Sexcentennial and a half",
+      "native": [
+        {
+          "line": 16423,
+          "call": "Game.Win('Sexcentennial and a half')",
+          "enclosingCondition": "minAmount>=650"
+        }
+      ]
+    },
+    {
+      "name": "Builder",
+      "native": [
+        {
+          "line": 16458,
+          "call": "Game.Win('Builder')",
+          "enclosingCondition": "buildingsOwned>=100"
+        }
+      ]
+    },
+    {
+      "name": "Architect",
+      "native": [
+        {
+          "line": 16459,
+          "call": "Game.Win('Architect')",
+          "enclosingCondition": "buildingsOwned>=500"
+        }
+      ]
+    },
+    {
+      "name": "Engineer",
+      "native": [
+        {
+          "line": 16460,
+          "call": "Game.Win('Engineer')",
+          "enclosingCondition": "buildingsOwned>=1000"
+        }
+      ]
+    },
+    {
+      "name": "Lord of Constructs",
+      "native": [
+        {
+          "line": 16461,
+          "call": "Game.Win('Lord of Constructs')",
+          "enclosingCondition": "buildingsOwned>=2500"
+        }
+      ]
+    },
+    {
+      "name": "Grand design",
+      "native": [
+        {
+          "line": 16462,
+          "call": "Game.Win('Grand design')",
+          "enclosingCondition": "buildingsOwned>=5000"
+        }
+      ]
+    },
+    {
+      "name": "Ecumenopolis",
+      "native": [
+        {
+          "line": 16463,
+          "call": "Game.Win('Ecumenopolis')",
+          "enclosingCondition": "buildingsOwned>=7500"
+        }
+      ]
+    },
+    {
+      "name": "Myriad",
+      "native": [
+        {
+          "line": 16464,
+          "call": "Game.Win('Myriad')",
+          "enclosingCondition": "buildingsOwned>=10000"
+        }
+      ]
+    },
+    {
+      "name": "Enhancer",
+      "native": [
+        {
+          "line": 16465,
+          "call": "Game.Win('Enhancer')",
+          "enclosingCondition": "Game.UpgradesOwned>=20"
+        }
+      ]
+    },
+    {
+      "name": "Augmenter",
+      "native": [
+        {
+          "line": 16466,
+          "call": "Game.Win('Augmenter')",
+          "enclosingCondition": "Game.UpgradesOwned>=50"
+        }
+      ]
+    },
+    {
+      "name": "Upgrader",
+      "native": [
+        {
+          "line": 16467,
+          "call": "Game.Win('Upgrader')",
+          "enclosingCondition": "Game.UpgradesOwned>=100"
+        }
+      ]
+    },
+    {
+      "name": "Lord of Progress",
+      "native": [
+        {
+          "line": 16468,
+          "call": "Game.Win('Lord of Progress')",
+          "enclosingCondition": "Game.UpgradesOwned>=200"
+        }
+      ]
+    },
+    {
+      "name": "The full picture",
+      "native": [
+        {
+          "line": 16469,
+          "call": "Game.Win('The full picture')",
+          "enclosingCondition": "Game.UpgradesOwned>=300"
+        }
+      ]
+    },
+    {
+      "name": "When there's nothing left to add",
+      "native": [
+        {
+          "line": 16470,
+          "call": "Game.Win('When there\\'s nothing left to add')",
+          "enclosingCondition": "Game.UpgradesOwned>=400"
+        }
+      ]
+    },
+    {
+      "name": "Kaizen",
+      "native": [
+        {
+          "line": 16471,
+          "call": "Game.Win('Kaizen')",
+          "enclosingCondition": "Game.UpgradesOwned>=500"
+        }
+      ]
+    },
+    {
+      "name": "Beyond quality",
+      "native": [
+        {
+          "line": 16472,
+          "call": "Game.Win('Beyond quality')",
+          "enclosingCondition": "Game.UpgradesOwned>=600"
+        }
+      ]
+    },
+    {
+      "name": "Oft we mar what's well",
+      "native": [
+        {
+          "line": 16473,
+          "call": "Game.Win('Oft we mar what\\'s well')",
+          "enclosingCondition": "Game.UpgradesOwned>=700"
+        }
+      ]
+    },
+    {
+      "name": "Polymath",
+      "native": [
+        {
+          "line": 16474,
+          "call": "Game.Win('Polymath')",
+          "enclosingCondition": "buildingsOwned>=4000 && Game.UpgradesOwned>=300"
+        }
+      ]
+    },
+    {
+      "name": "Renaissance baker",
+      "native": [
+        {
+          "line": 16475,
+          "call": "Game.Win('Renaissance baker')",
+          "enclosingCondition": "buildingsOwned>=8000 && Game.UpgradesOwned>=400"
+        }
+      ]
+    },
+    {
+      "name": "Jellicles",
+      "native": [
+        {
+          "line": 16484,
+          "call": "Game.Win('Jellicles')",
+          "enclosingCondition": "kittens>=10"
+        }
+      ]
+    },
+    {
+      "name": "Elder",
+      "native": [
+        {
+          "line": 16496,
+          "call": "Game.Win('Elder')",
+          "enclosingCondition": "!Game.HasAchiev('Elder') && grandmas>=7"
+        }
+      ]
+    },
+    {
+      "name": "Veteran",
+      "native": [
+        {
+          "line": 16497,
+          "call": "Game.Win('Veteran')",
+          "enclosingCondition": "!Game.HasAchiev('Veteran') && grandmas>=14"
+        }
+      ]
+    },
+    {
+      "name": "The elder scrolls",
+      "native": [
+        {
+          "line": 16502,
+          "call": "Game.Win('The elder scrolls')",
+          "enclosingCondition": "Game.Objects['Cursor'].amount+Game.Objects['Grandma'].amount>=777"
+        }
+      ]
+    }
+  ],
+  "partition": [
+    {
+      "id": 0,
+      "name": "Wake and bake",
+      "phase": "tail"
+    },
+    {
+      "id": 1,
+      "name": "Making some dough",
+      "phase": "tail"
+    },
+    {
+      "id": 2,
+      "name": "So baked right now",
+      "phase": "tail"
+    },
+    {
+      "id": 3,
+      "name": "Fledgling bakery",
+      "phase": "tail"
+    },
+    {
+      "id": 4,
+      "name": "Affluent bakery",
+      "phase": "tail"
+    },
+    {
+      "id": 5,
+      "name": "World-famous bakery",
+      "phase": "tail"
+    },
+    {
+      "id": 6,
+      "name": "Cosmic bakery",
+      "phase": "tail"
+    },
+    {
+      "id": 7,
+      "name": "Galactic bakery",
+      "phase": "tail"
+    },
+    {
+      "id": 8,
+      "name": "Universal bakery",
+      "phase": "tail"
+    },
+    {
+      "id": 9,
+      "name": "Timeless bakery",
+      "phase": "tail"
+    },
+    {
+      "id": 10,
+      "name": "Infinite bakery",
+      "phase": "tail"
+    },
+    {
+      "id": 11,
+      "name": "Immortal bakery",
+      "phase": "tail"
+    },
+    {
+      "id": 12,
+      "name": "Don't stop me now",
+      "phase": "tail"
+    },
+    {
+      "id": 13,
+      "name": "You can stop now",
+      "phase": "tail"
+    },
+    {
+      "id": 14,
+      "name": "Cookies all the way down",
+      "phase": "tail"
+    },
+    {
+      "id": 15,
+      "name": "Overdose",
+      "phase": "tail"
+    },
+    {
+      "id": 16,
+      "name": "Casual baking",
+      "phase": "tail"
+    },
+    {
+      "id": 17,
+      "name": "Hardcore baking",
+      "phase": "tail"
+    },
+    {
+      "id": 18,
+      "name": "Steady tasty stream",
+      "phase": "tail"
+    },
+    {
+      "id": 19,
+      "name": "Cookie monster",
+      "phase": "tail"
+    },
+    {
+      "id": 20,
+      "name": "Mass producer",
+      "phase": "tail"
+    },
+    {
+      "id": 21,
+      "name": "Cookie vortex",
+      "phase": "tail"
+    },
+    {
+      "id": 22,
+      "name": "Cookie pulsar",
+      "phase": "tail"
+    },
+    {
+      "id": 23,
+      "name": "Cookie quasar",
+      "phase": "tail"
+    },
+    {
+      "id": 24,
+      "name": "Oh hey, you're still here",
+      "phase": "tail"
+    },
+    {
+      "id": 25,
+      "name": "Let's never bake again",
+      "phase": "tail"
+    },
+    {
+      "id": 26,
+      "name": "Sacrifice",
+      "phase": "prefix"
+    },
+    {
+      "id": 27,
+      "name": "Oblivion",
+      "phase": "prefix"
+    },
+    {
+      "id": 28,
+      "name": "From scratch",
+      "phase": "prefix"
+    },
+    {
+      "id": 29,
+      "name": "Neverclick",
+      "phase": "prefix"
+    },
+    {
+      "id": 30,
+      "name": "Clicktastic",
+      "phase": "tail"
+    },
+    {
+      "id": 31,
+      "name": "Clickathlon",
+      "phase": "tail"
+    },
+    {
+      "id": 32,
+      "name": "Clickolympics",
+      "phase": "tail"
+    },
+    {
+      "id": 33,
+      "name": "Clickorama",
+      "phase": "tail"
+    },
+    {
+      "id": 34,
+      "name": "Click",
+      "phase": "tail"
+    },
+    {
+      "id": 35,
+      "name": "Double-click",
+      "phase": "tail"
+    },
+    {
+      "id": 36,
+      "name": "Mouse wheel",
+      "phase": "tail"
+    },
+    {
+      "id": 37,
+      "name": "Of Mice and Men",
+      "phase": "tail"
+    },
+    {
+      "id": 38,
+      "name": "The Digital",
+      "phase": "tail"
+    },
+    {
+      "id": 39,
+      "name": "Just wrong",
+      "phase": "prefix"
+    },
+    {
+      "id": 40,
+      "name": "Grandma's cookies",
+      "phase": "tail"
+    },
+    {
+      "id": 41,
+      "name": "Sloppy kisses",
+      "phase": "tail"
+    },
+    {
+      "id": 42,
+      "name": "Retirement home",
+      "phase": "tail"
+    },
+    {
+      "id": 43,
+      "name": "Bought the farm",
+      "phase": "tail"
+    },
+    {
+      "id": 44,
+      "name": "Reap what you sow",
+      "phase": "tail"
+    },
+    {
+      "id": 45,
+      "name": "Farm ill",
+      "phase": "tail"
+    },
+    {
+      "id": 46,
+      "name": "Production chain",
+      "phase": "tail"
+    },
+    {
+      "id": 47,
+      "name": "Industrial revolution",
+      "phase": "tail"
+    },
+    {
+      "id": 48,
+      "name": "Global warming",
+      "phase": "tail"
+    },
+    {
+      "id": 49,
+      "name": "You know the drill",
+      "phase": "tail"
+    },
+    {
+      "id": 50,
+      "name": "Excavation site",
+      "phase": "tail"
+    },
+    {
+      "id": 51,
+      "name": "Hollow the planet",
+      "phase": "tail"
+    },
+    {
+      "id": 52,
+      "name": "Expedition",
+      "phase": "tail"
+    },
+    {
+      "id": 53,
+      "name": "Galactic highway",
+      "phase": "tail"
+    },
+    {
+      "id": 54,
+      "name": "Far far away",
+      "phase": "tail"
+    },
+    {
+      "id": 55,
+      "name": "Transmutation",
+      "phase": "tail"
+    },
+    {
+      "id": 56,
+      "name": "Transmogrification",
+      "phase": "tail"
+    },
+    {
+      "id": 57,
+      "name": "Gold member",
+      "phase": "tail"
+    },
+    {
+      "id": 58,
+      "name": "A whole new world",
+      "phase": "tail"
+    },
+    {
+      "id": 59,
+      "name": "Now you're thinking",
+      "phase": "tail"
+    },
+    {
+      "id": 60,
+      "name": "Dimensional shift",
+      "phase": "tail"
+    },
+    {
+      "id": 61,
+      "name": "Time warp",
+      "phase": "tail"
+    },
+    {
+      "id": 62,
+      "name": "Alternate timeline",
+      "phase": "tail"
+    },
+    {
+      "id": 63,
+      "name": "Rewriting history",
+      "phase": "tail"
+    },
+    {
+      "id": 64,
+      "name": "One with everything",
+      "phase": "tail"
+    },
+    {
+      "id": 65,
+      "name": "Mathematician",
+      "phase": "tail"
+    },
+    {
+      "id": 66,
+      "name": "Base 10",
+      "phase": "tail"
+    },
+    {
+      "id": 67,
+      "name": "Golden cookie",
+      "phase": "prefix"
+    },
+    {
+      "id": 68,
+      "name": "Lucky cookie",
+      "phase": "prefix"
+    },
+    {
+      "id": 69,
+      "name": "A stroke of luck",
+      "phase": "prefix"
+    },
+    {
+      "id": 71,
+      "name": "Uncanny clicker",
+      "phase": "prefix"
+    },
+    {
+      "id": 72,
+      "name": "Builder",
+      "phase": "tail"
+    },
+    {
+      "id": 73,
+      "name": "Architect",
+      "phase": "tail"
+    },
+    {
+      "id": 74,
+      "name": "Enhancer",
+      "phase": "tail"
+    },
+    {
+      "id": 75,
+      "name": "Augmenter",
+      "phase": "tail"
+    },
+    {
+      "id": 76,
+      "name": "Cookie-dunker",
+      "phase": "prefix"
+    },
+    {
+      "id": 77,
+      "name": "Fortune",
+      "phase": "prefix"
+    },
+    {
+      "id": 79,
+      "name": "Elder nap",
+      "phase": "tail"
+    },
+    {
+      "id": 80,
+      "name": "Elder slumber",
+      "phase": "tail"
+    },
+    {
+      "id": 81,
+      "name": "Elder",
+      "phase": "tail"
+    },
+    {
+      "id": 82,
+      "name": "Elder calm",
+      "phase": "tail"
+    },
+    {
+      "id": 83,
+      "name": "Engineer",
+      "phase": "tail"
+    },
+    {
+      "id": 84,
+      "name": "Leprechaun",
+      "phase": "prefix"
+    },
+    {
+      "id": 85,
+      "name": "Black cat's paw",
+      "phase": "prefix"
+    },
+    {
+      "id": 86,
+      "name": "Nihilism",
+      "phase": "prefix"
+    },
+    {
+      "id": 87,
+      "name": "Antibatter",
+      "phase": "tail"
+    },
+    {
+      "id": 88,
+      "name": "Quirky quarks",
+      "phase": "tail"
+    },
+    {
+      "id": 89,
+      "name": "It does matter!",
+      "phase": "tail"
+    },
+    {
+      "id": 90,
+      "name": "Upgrader",
+      "phase": "tail"
+    },
+    {
+      "id": 91,
+      "name": "Centennial",
+      "phase": "tail"
+    },
+    {
+      "id": 92,
+      "name": "Hardcore",
+      "phase": "prefix"
+    },
+    {
+      "id": 100,
+      "name": "Clickasmic",
+      "phase": "tail"
+    },
+    {
+      "id": 101,
+      "name": "Friend of the ancients",
+      "phase": "tail"
+    },
+    {
+      "id": 102,
+      "name": "Ruler of the ancients",
+      "phase": "tail"
+    },
+    {
+      "id": 103,
+      "name": "Wholesome",
+      "phase": "tail"
+    },
+    {
+      "id": 105,
+      "name": "Itchscratcher",
+      "phase": "tail"
+    },
+    {
+      "id": 106,
+      "name": "Wrinklesquisher",
+      "phase": "tail"
+    },
+    {
+      "id": 107,
+      "name": "Moistburster",
+      "phase": "tail"
+    },
+    {
+      "id": 108,
+      "name": "Spooky cookies",
+      "phase": "tail"
+    },
+    {
+      "id": 109,
+      "name": "Coming to town",
+      "phase": "tail"
+    },
+    {
+      "id": 110,
+      "name": "All hail Santa",
+      "phase": "tail"
+    },
+    {
+      "id": 111,
+      "name": "Let it snow",
+      "phase": "tail"
+    },
+    {
+      "id": 112,
+      "name": "Oh deer",
+      "phase": "tail"
+    },
+    {
+      "id": 113,
+      "name": "Sleigh of hand",
+      "phase": "tail"
+    },
+    {
+      "id": 114,
+      "name": "Reindeer sleigher",
+      "phase": "tail"
+    },
+    {
+      "id": 115,
+      "name": "Perfected agriculture",
+      "phase": "tail"
+    },
+    {
+      "id": 116,
+      "name": "Ultimate automation",
+      "phase": "tail"
+    },
+    {
+      "id": 117,
+      "name": "Can you dig it",
+      "phase": "tail"
+    },
+    {
+      "id": 118,
+      "name": "Type II civilization",
+      "phase": "tail"
+    },
+    {
+      "id": 119,
+      "name": "Gild wars",
+      "phase": "tail"
+    },
+    {
+      "id": 120,
+      "name": "Brain-split",
+      "phase": "tail"
+    },
+    {
+      "id": 121,
+      "name": "Time duke",
+      "phase": "tail"
+    },
+    {
+      "id": 122,
+      "name": "Molecular maestro",
+      "phase": "tail"
+    },
+    {
+      "id": 123,
+      "name": "Lone photon",
+      "phase": "tail"
+    },
+    {
+      "id": 124,
+      "name": "Dazzling glimmer",
+      "phase": "tail"
+    },
+    {
+      "id": 125,
+      "name": "Blinding flash",
+      "phase": "tail"
+    },
+    {
+      "id": 126,
+      "name": "Unending glow",
+      "phase": "tail"
+    },
+    {
+      "id": 127,
+      "name": "Lord of Constructs",
+      "phase": "tail"
+    },
+    {
+      "id": 128,
+      "name": "Lord of Progress",
+      "phase": "tail"
+    },
+    {
+      "id": 129,
+      "name": "Bicentennial",
+      "phase": "tail"
+    },
+    {
+      "id": 130,
+      "name": "Lovely cookies",
+      "phase": "tail"
+    },
+    {
+      "id": 131,
+      "name": "Centennial and a half",
+      "phase": "tail"
+    },
+    {
+      "id": 132,
+      "name": "Tiny cookie",
+      "phase": "prefix"
+    },
+    {
+      "id": 133,
+      "name": "You win a cookie",
+      "phase": "tail"
+    },
+    {
+      "id": 134,
+      "name": "Click delegator",
+      "phase": "tail"
+    },
+    {
+      "id": 135,
+      "name": "Gushing grannies",
+      "phase": "tail"
+    },
+    {
+      "id": 136,
+      "name": "I hate manure",
+      "phase": "tail"
+    },
+    {
+      "id": 137,
+      "name": "Never dig down",
+      "phase": "tail"
+    },
+    {
+      "id": 138,
+      "name": "The incredible machine",
+      "phase": "tail"
+    },
+    {
+      "id": 139,
+      "name": "And beyond",
+      "phase": "tail"
+    },
+    {
+      "id": 140,
+      "name": "Magnum Opus",
+      "phase": "tail"
+    },
+    {
+      "id": 141,
+      "name": "With strange eons",
+      "phase": "tail"
+    },
+    {
+      "id": 142,
+      "name": "Spacetime jigamaroo",
+      "phase": "tail"
+    },
+    {
+      "id": 143,
+      "name": "Supermassive",
+      "phase": "tail"
+    },
+    {
+      "id": 144,
+      "name": "Praise the sun",
+      "phase": "tail"
+    },
+    {
+      "id": 145,
+      "name": "Clickageddon",
+      "phase": "tail"
+    },
+    {
+      "id": 146,
+      "name": "Clicknarok",
+      "phase": "tail"
+    },
+    {
+      "id": 147,
+      "name": "Extreme polydactyly",
+      "phase": "tail"
+    },
+    {
+      "id": 148,
+      "name": "Dr. T",
+      "phase": "tail"
+    },
+    {
+      "id": 149,
+      "name": "The old never bothered me anyway",
+      "phase": "tail"
+    },
+    {
+      "id": 150,
+      "name": "Homegrown",
+      "phase": "tail"
+    },
+    {
+      "id": 151,
+      "name": "Technocracy",
+      "phase": "tail"
+    },
+    {
+      "id": 152,
+      "name": "The center of the Earth",
+      "phase": "tail"
+    },
+    {
+      "id": 153,
+      "name": "We come in peace",
+      "phase": "tail"
+    },
+    {
+      "id": 154,
+      "name": "The secrets of the universe",
+      "phase": "tail"
+    },
+    {
+      "id": 155,
+      "name": "Realm of the Mad God",
+      "phase": "tail"
+    },
+    {
+      "id": 156,
+      "name": "Forever and ever",
+      "phase": "tail"
+    },
+    {
+      "id": 157,
+      "name": "Walk the planck",
+      "phase": "tail"
+    },
+    {
+      "id": 158,
+      "name": "Rise and shine",
+      "phase": "tail"
+    },
+    {
+      "id": 161,
+      "name": "Dematerialize",
+      "phase": "prefix"
+    },
+    {
+      "id": 162,
+      "name": "Nil zero zilch",
+      "phase": "prefix"
+    },
+    {
+      "id": 163,
+      "name": "Transcendence",
+      "phase": "prefix"
+    },
+    {
+      "id": 164,
+      "name": "Obliterate",
+      "phase": "prefix"
+    },
+    {
+      "id": 165,
+      "name": "Negative void",
+      "phase": "prefix"
+    },
+    {
+      "id": 166,
+      "name": "The hunt is on",
+      "phase": "tail"
+    },
+    {
+      "id": 167,
+      "name": "Egging on",
+      "phase": "tail"
+    },
+    {
+      "id": 168,
+      "name": "Mass Easteria",
+      "phase": "tail"
+    },
+    {
+      "id": 169,
+      "name": "Hide & seek champion",
+      "phase": "tail"
+    },
+    {
+      "id": 170,
+      "name": "What's in a name",
+      "phase": "prefix"
+    },
+    {
+      "id": 171,
+      "name": "Pretty penny",
+      "phase": "tail"
+    },
+    {
+      "id": 172,
+      "name": "Fit the bill",
+      "phase": "tail"
+    },
+    {
+      "id": 173,
+      "name": "A loan in the dark",
+      "phase": "tail"
+    },
+    {
+      "id": 174,
+      "name": "Need for greed",
+      "phase": "tail"
+    },
+    {
+      "id": 175,
+      "name": "It's the economy, stupid",
+      "phase": "tail"
+    },
+    {
+      "id": 176,
+      "name": "Your time to shrine",
+      "phase": "tail"
+    },
+    {
+      "id": 177,
+      "name": "Shady sect",
+      "phase": "tail"
+    },
+    {
+      "id": 178,
+      "name": "New-age cult",
+      "phase": "tail"
+    },
+    {
+      "id": 179,
+      "name": "Organized religion",
+      "phase": "tail"
+    },
+    {
+      "id": 180,
+      "name": "Fanaticism",
+      "phase": "tail"
+    },
+    {
+      "id": 181,
+      "name": "Bewitched",
+      "phase": "tail"
+    },
+    {
+      "id": 182,
+      "name": "The sorcerer's apprentice",
+      "phase": "tail"
+    },
+    {
+      "id": 183,
+      "name": "Charms and enchantments",
+      "phase": "tail"
+    },
+    {
+      "id": 184,
+      "name": "Curses and maledictions",
+      "phase": "tail"
+    },
+    {
+      "id": 185,
+      "name": "Magic kingdom",
+      "phase": "tail"
+    },
+    {
+      "id": 186,
+      "name": "Vested interest",
+      "phase": "tail"
+    },
+    {
+      "id": 187,
+      "name": "New world order",
+      "phase": "tail"
+    },
+    {
+      "id": 188,
+      "name": "Hocus pocus",
+      "phase": "tail"
+    },
+    {
+      "id": 189,
+      "name": "Finger clickin' good",
+      "phase": "tail"
+    },
+    {
+      "id": 190,
+      "name": "Panic at the bingo",
+      "phase": "tail"
+    },
+    {
+      "id": 191,
+      "name": "Rake in the dough",
+      "phase": "tail"
+    },
+    {
+      "id": 192,
+      "name": "Quarry on",
+      "phase": "tail"
+    },
+    {
+      "id": 193,
+      "name": "Yes I love technology",
+      "phase": "tail"
+    },
+    {
+      "id": 194,
+      "name": "Paid in full",
+      "phase": "tail"
+    },
+    {
+      "id": 195,
+      "name": "Church of Cookiology",
+      "phase": "tail"
+    },
+    {
+      "id": 196,
+      "name": "Too many rabbits, not enough hats",
+      "phase": "tail"
+    },
+    {
+      "id": 197,
+      "name": "The most precious cargo",
+      "phase": "tail"
+    },
+    {
+      "id": 198,
+      "name": "The Aureate",
+      "phase": "tail"
+    },
+    {
+      "id": 199,
+      "name": "Ever more hideous",
+      "phase": "tail"
+    },
+    {
+      "id": 200,
+      "name": "Be kind, rewind",
+      "phase": "tail"
+    },
+    {
+      "id": 201,
+      "name": "Infinitesimal",
+      "phase": "tail"
+    },
+    {
+      "id": 202,
+      "name": "A still more glorious dawn",
+      "phase": "tail"
+    },
+    {
+      "id": 203,
+      "name": "Rebirth",
+      "phase": "prefix"
+    },
+    {
+      "id": 204,
+      "name": "Here you go",
+      "phase": "prefix"
+    },
+    {
+      "id": 205,
+      "name": "Resurrection",
+      "phase": "prefix"
+    },
+    {
+      "id": 206,
+      "name": "Reincarnation",
+      "phase": "prefix"
+    },
+    {
+      "id": 208,
+      "name": "The agemaster",
+      "phase": "tail"
+    },
+    {
+      "id": 209,
+      "name": "To oldly go",
+      "phase": "tail"
+    },
+    {
+      "id": 210,
+      "name": "Gardener extraordinaire",
+      "phase": "tail"
+    },
+    {
+      "id": 211,
+      "name": "Tectonic ambassador",
+      "phase": "tail"
+    },
+    {
+      "id": 212,
+      "name": "Rise of the machines",
+      "phase": "tail"
+    },
+    {
+      "id": 213,
+      "name": "Acquire currency",
+      "phase": "tail"
+    },
+    {
+      "id": 214,
+      "name": "Zealotry",
+      "phase": "tail"
+    },
+    {
+      "id": 215,
+      "name": "The wizarding world",
+      "phase": "tail"
+    },
+    {
+      "id": 216,
+      "name": "Parsec-masher",
+      "phase": "tail"
+    },
+    {
+      "id": 217,
+      "name": "The work of a lifetime",
+      "phase": "tail"
+    },
+    {
+      "id": 218,
+      "name": "A place lost in time",
+      "phase": "tail"
+    },
+    {
+      "id": 219,
+      "name": "Heat death",
+      "phase": "tail"
+    },
+    {
+      "id": 220,
+      "name": "Microcosm",
+      "phase": "tail"
+    },
+    {
+      "id": 221,
+      "name": "Bright future",
+      "phase": "tail"
+    },
+    {
+      "id": 222,
+      "name": "Here be dragon",
+      "phase": "prefix"
+    },
+    {
+      "id": 223,
+      "name": "How?",
+      "phase": "tail"
+    },
+    {
+      "id": 224,
+      "name": "The land of milk and cookies",
+      "phase": "tail"
+    },
+    {
+      "id": 225,
+      "name": "He who controls the cookies controls the universe",
+      "phase": "tail"
+    },
+    {
+      "id": 226,
+      "name": "Tonight on Hoarders",
+      "phase": "tail"
+    },
+    {
+      "id": 227,
+      "name": "Are you gonna eat all that?",
+      "phase": "tail"
+    },
+    {
+      "id": 228,
+      "name": "We're gonna need a bigger bakery",
+      "phase": "tail"
+    },
+    {
+      "id": 229,
+      "name": "In the mouth of madness",
+      "phase": "tail"
+    },
+    {
+      "id": 230,
+      "name": "Brought to you by the letter <div style=\"display:inline-block;background:url(img/money.png);width:16px;height:16px;\"></div>",
+      "phase": "tail"
+    },
+    {
+      "id": 231,
+      "name": "A world filled with cookies",
+      "phase": "tail"
+    },
+    {
+      "id": 232,
+      "name": "When this baby hits 36 quadrillion cookies per hour",
+      "phase": "tail"
+    },
+    {
+      "id": 233,
+      "name": "Fast and delicious",
+      "phase": "tail"
+    },
+    {
+      "id": 234,
+      "name": "Cookiehertz : a really, really tasty hertz",
+      "phase": "tail"
+    },
+    {
+      "id": 235,
+      "name": "Woops, you solved world hunger",
+      "phase": "tail"
+    },
+    {
+      "id": 236,
+      "name": "Turbopuns",
+      "phase": "tail"
+    },
+    {
+      "id": 237,
+      "name": "Faster menner",
+      "phase": "tail"
+    },
+    {
+      "id": 238,
+      "name": "And yet you're still hungry",
+      "phase": "tail"
+    },
+    {
+      "id": 239,
+      "name": "The Abakening",
+      "phase": "tail"
+    },
+    {
+      "id": 240,
+      "name": "There's really no hard limit to how long these achievement names can be and to be quite honest I'm rather curious to see how far we can go.<br>Adolphus W. Green (1844–1917) started as the Principal of the Groton School in 1864. By 1865, he became second assistant librarian at the New York Mercantile Library; from 1867 to 1869, he was promoted to full librarian. From 1869 to 1873, he worked for Evarts, Southmayd & Choate, a law firm co-founded by William M. Evarts, Charles Ferdinand Southmayd and Joseph Hodges Choate. He was admitted to the New York State Bar Association in 1873.<br>Anyway, how's your day been?",
+      "phase": "tail"
+    },
+    {
+      "id": 241,
+      "name": "Fast",
+      "phase": "tail"
+    },
+    {
+      "id": 242,
+      "name": "Bicentennial and a half",
+      "phase": "tail"
+    },
+    {
+      "id": 243,
+      "name": "Tabloid addiction",
+      "phase": "prefix"
+    },
+    {
+      "id": 244,
+      "name": "Clickastrophe",
+      "phase": "tail"
+    },
+    {
+      "id": 245,
+      "name": "Clickataclysm",
+      "phase": "tail"
+    },
+    {
+      "id": 246,
+      "name": "Thumbs, phalanges, metacarpals",
+      "phase": "tail"
+    },
+    {
+      "id": 247,
+      "name": "Polymath",
+      "phase": "tail"
+    },
+    {
+      "id": 248,
+      "name": "The elder scrolls",
+      "phase": "tail"
+    },
+    {
+      "id": 249,
+      "name": "To crumbs, you say?",
+      "phase": "prefix"
+    },
+    {
+      "id": 250,
+      "name": "Seedy business",
+      "phase": "tail"
+    },
+    {
+      "id": 251,
+      "name": "Freak fracking",
+      "phase": "tail"
+    },
+    {
+      "id": 252,
+      "name": "Modern times",
+      "phase": "tail"
+    },
+    {
+      "id": 253,
+      "name": "The nerve of war",
+      "phase": "tail"
+    },
+    {
+      "id": 254,
+      "name": "Wololo",
+      "phase": "tail"
+    },
+    {
+      "id": 255,
+      "name": "And now for my next trick, I'll need a volunteer from the audience",
+      "phase": "tail"
+    },
+    {
+      "id": 256,
+      "name": "It's not delivery",
+      "phase": "tail"
+    },
+    {
+      "id": 257,
+      "name": "Gold, Jerry! Gold!",
+      "phase": "tail"
+    },
+    {
+      "id": 258,
+      "name": "Forbidden zone",
+      "phase": "tail"
+    },
+    {
+      "id": 259,
+      "name": "cookie clicker forever and forever a hundred years cookie clicker, all day long forever, forever a hundred times, over and over cookie clicker adventures dot com",
+      "phase": "tail"
+    },
+    {
+      "id": 260,
+      "name": "Scientists baffled everywhere",
+      "phase": "tail"
+    },
+    {
+      "id": 261,
+      "name": "Harmony of the spheres",
+      "phase": "tail"
+    },
+    {
+      "id": 263,
+      "name": "Early bird",
+      "phase": "prefix"
+    },
+    {
+      "id": 264,
+      "name": "Fading luck",
+      "phase": "prefix"
+    },
+    {
+      "id": 265,
+      "name": "Eldeer",
+      "phase": "prefix"
+    },
+    {
+      "id": 266,
+      "name": "Dude, sweet",
+      "phase": "prefix"
+    },
+    {
+      "id": 267,
+      "name": "Sugar rush",
+      "phase": "prefix"
+    },
+    {
+      "id": 269,
+      "name": "Hand-picked",
+      "phase": "tail"
+    },
+    {
+      "id": 273,
+      "name": "Tricentennial",
+      "phase": "tail"
+    },
+    {
+      "id": 274,
+      "name": "Knead for speed",
+      "phase": "tail"
+    },
+    {
+      "id": 275,
+      "name": "Well the cookies start coming and they don't stop coming",
+      "phase": "tail"
+    },
+    {
+      "id": 276,
+      "name": "I don't know if you've noticed but all these icons are very slightly off-center",
+      "phase": "tail"
+    },
+    {
+      "id": 277,
+      "name": "The proof of the cookie is in the baking",
+      "phase": "tail"
+    },
+    {
+      "id": 278,
+      "name": "If it's worth doing, it's worth overdoing",
+      "phase": "tail"
+    },
+    {
+      "id": 279,
+      "name": "The dreams in which I'm baking are the best I've ever had",
+      "phase": "tail"
+    },
+    {
+      "id": 280,
+      "name": "Set for life",
+      "phase": "tail"
+    },
+    {
+      "id": 281,
+      "name": "You and the beanstalk",
+      "phase": "tail"
+    },
+    {
+      "id": 282,
+      "name": "Romancing the stone",
+      "phase": "tail"
+    },
+    {
+      "id": 283,
+      "name": "Ex machina",
+      "phase": "tail"
+    },
+    {
+      "id": 284,
+      "name": "And I need it now",
+      "phase": "tail"
+    },
+    {
+      "id": 285,
+      "name": "Pray on the weak",
+      "phase": "tail"
+    },
+    {
+      "id": 286,
+      "name": "It's a kind of magic",
+      "phase": "tail"
+    },
+    {
+      "id": 287,
+      "name": "Make it so",
+      "phase": "tail"
+    },
+    {
+      "id": 288,
+      "name": "All that glitters is gold",
+      "phase": "tail"
+    },
+    {
+      "id": 289,
+      "name": "H̸̷͓̳̳̯̟͕̟͍͍̣͡ḛ̢̦̰̺̮̝͖͖̘̪͉͘͡ ̠̦͕̤̪̝̥̰̠̫̖̣͙̬͘ͅC̨̦̺̩̲̥͉̭͚̜̻̝̣̼͙̮̯̪o̴̡͇̘͎̞̲͇̦̲͞͡m̸̩̺̝̣̹̱͚̬̥̫̳̼̞̘̯͘ͅẹ͇̺̜́̕͢s̶̙̟̱̥̮̯̰̦͓͇͖͖̝͘͘͞",
+      "phase": "tail"
+    },
+    {
+      "id": 290,
+      "name": "Way back then",
+      "phase": "tail"
+    },
+    {
+      "id": 291,
+      "name": "Exotic matter",
+      "phase": "tail"
+    },
+    {
+      "id": 292,
+      "name": "At the end of the tunnel",
+      "phase": "tail"
+    },
+    {
+      "id": 293,
+      "name": "Click (starring Adam Sandler)",
+      "phase": "tail"
+    },
+    {
+      "id": 294,
+      "name": "Frantiquities",
+      "phase": "tail"
+    },
+    {
+      "id": 295,
+      "name": "Overgrowth",
+      "phase": "tail"
+    },
+    {
+      "id": 296,
+      "name": "Sedimentalism",
+      "phase": "tail"
+    },
+    {
+      "id": 297,
+      "name": "Labor of love",
+      "phase": "tail"
+    },
+    {
+      "id": 298,
+      "name": "Reverse funnel system",
+      "phase": "tail"
+    },
+    {
+      "id": 299,
+      "name": "Thus spoke you",
+      "phase": "tail"
+    },
+    {
+      "id": 300,
+      "name": "Manafest destiny",
+      "phase": "tail"
+    },
+    {
+      "id": 301,
+      "name": "Neither snow nor rain nor heat nor gloom of night",
+      "phase": "tail"
+    },
+    {
+      "id": 302,
+      "name": "I've got the Midas touch",
+      "phase": "tail"
+    },
+    {
+      "id": 303,
+      "name": "Which eternal lie",
+      "phase": "tail"
+    },
+    {
+      "id": 304,
+      "name": "D&eacute;j&agrave; vu",
+      "phase": "tail"
+    },
+    {
+      "id": 305,
+      "name": "Powers of Ten",
+      "phase": "tail"
+    },
+    {
+      "id": 306,
+      "name": "Now the dark days are gone",
+      "phase": "tail"
+    },
+    {
+      "id": 321,
+      "name": "Bibbidi-bobbidi-boo",
+      "phase": "prefix"
+    },
+    {
+      "id": 322,
+      "name": "I'm the wiz",
+      "phase": "prefix"
+    },
+    {
+      "id": 323,
+      "name": "A wizard is you",
+      "phase": "prefix"
+    },
+    {
+      "id": 325,
+      "name": "Lucked out",
+      "phase": "tail"
+    },
+    {
+      "id": 326,
+      "name": "What are the odds",
+      "phase": "tail"
+    },
+    {
+      "id": 327,
+      "name": "Grandma needs a new pair of shoes",
+      "phase": "tail"
+    },
+    {
+      "id": 328,
+      "name": "Million to one shot, doc",
+      "phase": "tail"
+    },
+    {
+      "id": 329,
+      "name": "As luck would have it",
+      "phase": "tail"
+    },
+    {
+      "id": 330,
+      "name": "Ever in your favor",
+      "phase": "tail"
+    },
+    {
+      "id": 331,
+      "name": "Be a lady",
+      "phase": "tail"
+    },
+    {
+      "id": 332,
+      "name": "Dicey business",
+      "phase": "tail"
+    },
+    {
+      "id": 333,
+      "name": "Fingers crossed",
+      "phase": "tail"
+    },
+    {
+      "id": 334,
+      "name": "Just a statistic",
+      "phase": "tail"
+    },
+    {
+      "id": 335,
+      "name": "Murphy's wild guess",
+      "phase": "tail"
+    },
+    {
+      "id": 337,
+      "name": "The ultimate clickdown",
+      "phase": "tail"
+    },
+    {
+      "id": 338,
+      "name": "Aged well",
+      "phase": "tail"
+    },
+    {
+      "id": 339,
+      "name": "101st birthday",
+      "phase": "tail"
+    },
+    {
+      "id": 340,
+      "name": "But wait 'til you get older",
+      "phase": "tail"
+    },
+    {
+      "id": 341,
+      "name": "Harvest moon",
+      "phase": "tail"
+    },
+    {
+      "id": 342,
+      "name": "Mine?",
+      "phase": "tail"
+    },
+    {
+      "id": 343,
+      "name": "In full gear",
+      "phase": "tail"
+    },
+    {
+      "id": 344,
+      "name": "Treacle tart economics",
+      "phase": "tail"
+    },
+    {
+      "id": 345,
+      "name": "Holy cookies, grandma!",
+      "phase": "tail"
+    },
+    {
+      "id": 346,
+      "name": "The Prestige",
+      "phase": "tail"
+    },
+    {
+      "id": 347,
+      "name": "That's just peanuts to space",
+      "phase": "tail"
+    },
+    {
+      "id": 348,
+      "name": "Worth its weight in lead",
+      "phase": "tail"
+    },
+    {
+      "id": 349,
+      "name": "What happens in the vortex stays in the vortex",
+      "phase": "tail"
+    },
+    {
+      "id": 350,
+      "name": "Invited to yesterday's party",
+      "phase": "tail"
+    },
+    {
+      "id": 351,
+      "name": "Downsizing",
+      "phase": "tail"
+    },
+    {
+      "id": 352,
+      "name": "My eyes",
+      "phase": "tail"
+    },
+    {
+      "id": 353,
+      "name": "Maybe a chance in hell, actually",
+      "phase": "tail"
+    },
+    {
+      "id": 354,
+      "name": "Make like a tree",
+      "phase": "tail"
+    },
+    {
+      "id": 355,
+      "name": "Cave story",
+      "phase": "tail"
+    },
+    {
+      "id": 356,
+      "name": "In-cog-neato",
+      "phase": "tail"
+    },
+    {
+      "id": 357,
+      "name": "Save your breath because that's all you've got left",
+      "phase": "tail"
+    },
+    {
+      "id": 358,
+      "name": "Vengeful and almighty",
+      "phase": "tail"
+    },
+    {
+      "id": 359,
+      "name": "Spell it out for you",
+      "phase": "tail"
+    },
+    {
+      "id": 360,
+      "name": "Space space space space space",
+      "phase": "tail"
+    },
+    {
+      "id": 361,
+      "name": "Don't get used to yourself, you're gonna have to change",
+      "phase": "tail"
+    },
+    {
+      "id": 362,
+      "name": "Objects in the mirror dimension are closer than they appear",
+      "phase": "tail"
+    },
+    {
+      "id": 363,
+      "name": "Groundhog day",
+      "phase": "tail"
+    },
+    {
+      "id": 364,
+      "name": "A matter of perspective",
+      "phase": "tail"
+    },
+    {
+      "id": 365,
+      "name": "Optical illusion",
+      "phase": "tail"
+    },
+    {
+      "id": 366,
+      "name": "Jackpot",
+      "phase": "tail"
+    },
+    {
+      "id": 368,
+      "name": "Running with scissors",
+      "phase": "tail"
+    },
+    {
+      "id": 369,
+      "name": "Rarefied air",
+      "phase": "tail"
+    },
+    {
+      "id": 370,
+      "name": "Push it to the limit",
+      "phase": "tail"
+    },
+    {
+      "id": 371,
+      "name": "Green cookies sleep furiously",
+      "phase": "tail"
+    },
+    {
+      "id": 372,
+      "name": "Panic! at Nabisco",
+      "phase": "tail"
+    },
+    {
+      "id": 373,
+      "name": "Bursting at the seams",
+      "phase": "tail"
+    },
+    {
+      "id": 374,
+      "name": "Just about full",
+      "phase": "tail"
+    },
+    {
+      "id": 375,
+      "name": "Hungry for more",
+      "phase": "tail"
+    },
+    {
+      "id": 376,
+      "name": "All the other kids with the pumped up clicks",
+      "phase": "tail"
+    },
+    {
+      "id": 377,
+      "name": "One...more...click...",
+      "phase": "tail"
+    },
+    {
+      "id": 378,
+      "name": "Botany enthusiast",
+      "phase": "tail"
+    },
+    {
+      "id": 379,
+      "name": "Green, aching thumb",
+      "phase": "tail"
+    },
+    {
+      "id": 380,
+      "name": "In the garden of Eden (baby)",
+      "phase": "tail"
+    },
+    {
+      "id": 381,
+      "name": "Keeper of the conservatory",
+      "phase": "tail"
+    },
+    {
+      "id": 382,
+      "name": "Seedless to nay",
+      "phase": "tail"
+    },
+    {
+      "id": 383,
+      "name": "You get nothing",
+      "phase": "prefix"
+    },
+    {
+      "id": 384,
+      "name": "Humble rebeginnings",
+      "phase": "prefix"
+    },
+    {
+      "id": 385,
+      "name": "The end of the world",
+      "phase": "prefix"
+    },
+    {
+      "id": 386,
+      "name": "Oh, you're back",
+      "phase": "prefix"
+    },
+    {
+      "id": 387,
+      "name": "Lazarus",
+      "phase": "prefix"
+    },
+    {
+      "id": 388,
+      "name": "Leisurely pace",
+      "phase": "tail"
+    },
+    {
+      "id": 389,
+      "name": "Hypersonic",
+      "phase": "tail"
+    },
+    {
+      "id": 390,
+      "name": "Feed me, Orteil",
+      "phase": "tail"
+    },
+    {
+      "id": 391,
+      "name": "And then what?",
+      "phase": "tail"
+    },
+    {
+      "id": 392,
+      "name": "Tricentennial and a half",
+      "phase": "tail"
+    },
+    {
+      "id": 393,
+      "name": "Quadricentennial",
+      "phase": "tail"
+    },
+    {
+      "id": 394,
+      "name": "Quadricentennial and a half",
+      "phase": "tail"
+    },
+    {
+      "id": 395,
+      "name": "Quincentennial",
+      "phase": "tail"
+    },
+    {
+      "id": 398,
+      "name": "With her finger and her thumb",
+      "phase": "tail"
+    },
+    {
+      "id": 399,
+      "name": "Defense of the ancients",
+      "phase": "tail"
+    },
+    {
+      "id": 400,
+      "name": "Sharpest tool in the shed",
+      "phase": "tail"
+    },
+    {
+      "id": 401,
+      "name": "Hey now, you're a rock",
+      "phase": "tail"
+    },
+    {
+      "id": 402,
+      "name": "Break the mold",
+      "phase": "tail"
+    },
+    {
+      "id": 403,
+      "name": "Get the show on, get paid",
+      "phase": "tail"
+    },
+    {
+      "id": 404,
+      "name": "My world's on fire, how about yours",
+      "phase": "tail"
+    },
+    {
+      "id": 405,
+      "name": "The meteor men beg to differ",
+      "phase": "tail"
+    },
+    {
+      "id": 406,
+      "name": "Only shooting stars",
+      "phase": "tail"
+    },
+    {
+      "id": 407,
+      "name": "We could all use a little change",
+      "phase": "tail"
+    },
+    {
+      "id": 408,
+      "name": "Your brain gets smart but your head gets dumb",
+      "phase": "tail"
+    },
+    {
+      "id": 409,
+      "name": "The years start coming",
+      "phase": "tail"
+    },
+    {
+      "id": 410,
+      "name": "What a concept",
+      "phase": "tail"
+    },
+    {
+      "id": 411,
+      "name": "You'll never shine if you don't glow",
+      "phase": "tail"
+    },
+    {
+      "id": 412,
+      "name": "You'll never know if you don't go",
+      "phase": "tail"
+    },
+    {
+      "id": 413,
+      "name": "Self-contained",
+      "phase": "tail"
+    },
+    {
+      "id": 414,
+      "name": "Threw you for a loop",
+      "phase": "tail"
+    },
+    {
+      "id": 415,
+      "name": "The sum of its parts",
+      "phase": "tail"
+    },
+    {
+      "id": 416,
+      "name": "Bears repeating",
+      "phase": "tail"
+    },
+    {
+      "id": 417,
+      "name": "More of the same",
+      "phase": "tail"
+    },
+    {
+      "id": 418,
+      "name": "Last recurse",
+      "phase": "tail"
+    },
+    {
+      "id": 419,
+      "name": "Out of one, many",
+      "phase": "tail"
+    },
+    {
+      "id": 420,
+      "name": "An example of recursion",
+      "phase": "tail"
+    },
+    {
+      "id": 421,
+      "name": "For more information on this achievement, please refer to its title",
+      "phase": "tail"
+    },
+    {
+      "id": 422,
+      "name": "I'm so meta, even this achievement",
+      "phase": "tail"
+    },
+    {
+      "id": 423,
+      "name": "Never get bored",
+      "phase": "tail"
+    },
+    {
+      "id": 424,
+      "name": "The needs of the many",
+      "phase": "tail"
+    },
+    {
+      "id": 425,
+      "name": "Eating its own",
+      "phase": "tail"
+    },
+    {
+      "id": 426,
+      "name": "We must go deeper",
+      "phase": "tail"
+    },
+    {
+      "id": 428,
+      "name": "Gotta go fast",
+      "phase": "tail"
+    },
+    {
+      "id": 429,
+      "name": "I think it's safe to say you've got it made",
+      "phase": "tail"
+    },
+    {
+      "id": 430,
+      "name": "Renaissance baker",
+      "phase": "tail"
+    },
+    {
+      "id": 431,
+      "name": "Veteran",
+      "phase": "tail"
+    },
+    {
+      "id": 432,
+      "name": "Thick-skinned",
+      "phase": "direct-veil"
+    },
+    {
+      "id": 433,
+      "name": "F12",
+      "phase": "tail"
+    },
+    {
+      "id": 434,
+      "name": "Variable success",
+      "phase": "tail"
+    },
+    {
+      "id": 435,
+      "name": "No comments",
+      "phase": "tail"
+    },
+    {
+      "id": 436,
+      "name": "Up to code",
+      "phase": "tail"
+    },
+    {
+      "id": 437,
+      "name": "Works on my machine",
+      "phase": "tail"
+    },
+    {
+      "id": 438,
+      "name": "Technical debt",
+      "phase": "tail"
+    },
+    {
+      "id": 439,
+      "name": "Mind your language",
+      "phase": "tail"
+    },
+    {
+      "id": 440,
+      "name": "Inconsolable",
+      "phase": "tail"
+    },
+    {
+      "id": 441,
+      "name": "Closure",
+      "phase": "tail"
+    },
+    {
+      "id": 442,
+      "name": "Dude what if we're all living in a simulation like what if we're all just code on a computer somewhere",
+      "phase": "tail"
+    },
+    {
+      "id": 443,
+      "name": "Taking the back streets",
+      "phase": "tail"
+    },
+    {
+      "id": 444,
+      "name": "Inherited prototype",
+      "phase": "tail"
+    },
+    {
+      "id": 445,
+      "name": "A model of document object",
+      "phase": "tail"
+    },
+    {
+      "id": 446,
+      "name": "First-class citizen",
+      "phase": "tail"
+    },
+    {
+      "id": 448,
+      "name": "Bake him away, toys",
+      "phase": "tail"
+    },
+    {
+      "id": 449,
+      "name": "You're #1 so why try harder",
+      "phase": "tail"
+    },
+    {
+      "id": 450,
+      "name": "Haven't even begun to peak",
+      "phase": "tail"
+    },
+    {
+      "id": 451,
+      "name": "A sometimes food",
+      "phase": "tail"
+    },
+    {
+      "id": 452,
+      "name": "Not enough of a good thing",
+      "phase": "tail"
+    },
+    {
+      "id": 453,
+      "name": "Horn of plenty",
+      "phase": "tail"
+    },
+    {
+      "id": 454,
+      "name": "Smurf account",
+      "phase": "prefix"
+    },
+    {
+      "id": 455,
+      "name": "If at first you don't succeed",
+      "phase": "prefix"
+    },
+    {
+      "id": 456,
+      "name": "O Fortuna",
+      "phase": "tail"
+    },
+    {
+      "id": 457,
+      "name": "Initial public offering",
+      "phase": "tail"
+    },
+    {
+      "id": 458,
+      "name": "Rookie numbers",
+      "phase": "tail"
+    },
+    {
+      "id": 459,
+      "name": "No nobility in poverty",
+      "phase": "tail"
+    },
+    {
+      "id": 460,
+      "name": "Full warehouses",
+      "phase": "tail"
+    },
+    {
+      "id": 461,
+      "name": "Make my day",
+      "phase": "tail"
+    },
+    {
+      "id": 462,
+      "name": "Buy buy buy",
+      "phase": "tail"
+    },
+    {
+      "id": 464,
+      "name": "Pyramid scheme",
+      "phase": "tail"
+    },
+    {
+      "id": 465,
+      "name": "Jellicles",
+      "phase": "tail"
+    },
+    {
+      "id": 466,
+      "name": "Quincentennial and a half",
+      "phase": "tail"
+    },
+    {
+      "id": 467,
+      "name": "What did we even eat before these",
+      "phase": "tail"
+    },
+    {
+      "id": 468,
+      "name": "Heavy flow",
+      "phase": "tail"
+    },
+    {
+      "id": 469,
+      "name": "More you say?",
+      "phase": "tail"
+    },
+    {
+      "id": 470,
+      "name": "Large and in charge",
+      "phase": "tail"
+    },
+    {
+      "id": 471,
+      "name": "Absolutely stuffed",
+      "phase": "tail"
+    },
+    {
+      "id": 472,
+      "name": "It's only wafer-thin",
+      "phase": "tail"
+    },
+    {
+      "id": 473,
+      "name": "Clickety split",
+      "phase": "tail"
+    },
+    {
+      "id": 474,
+      "name": "Gotta hand it to you",
+      "phase": "tail"
+    },
+    {
+      "id": 475,
+      "name": "Okay boomer",
+      "phase": "tail"
+    },
+    {
+      "id": 476,
+      "name": "Overripe",
+      "phase": "tail"
+    },
+    {
+      "id": 477,
+      "name": "Rock on",
+      "phase": "tail"
+    },
+    {
+      "id": 478,
+      "name": "Self-manmade man",
+      "phase": "tail"
+    },
+    {
+      "id": 479,
+      "name": "Checks out",
+      "phase": "tail"
+    },
+    {
+      "id": 480,
+      "name": "Living on a prayer",
+      "phase": "tail"
+    },
+    {
+      "id": 481,
+      "name": "Higitus figitus migitus mum",
+      "phase": "tail"
+    },
+    {
+      "id": 482,
+      "name": "The incredible journey",
+      "phase": "tail"
+    },
+    {
+      "id": 483,
+      "name": "Just a phase",
+      "phase": "tail"
+    },
+    {
+      "id": 484,
+      "name": "Don't let me leave, Murph",
+      "phase": "tail"
+    },
+    {
+      "id": 485,
+      "name": "Caveman to cosmos",
+      "phase": "tail"
+    },
+    {
+      "id": 486,
+      "name": "Particular tastes",
+      "phase": "tail"
+    },
+    {
+      "id": 487,
+      "name": "A light snack",
+      "phase": "tail"
+    },
+    {
+      "id": 488,
+      "name": "Tempting fate",
+      "phase": "tail"
+    },
+    {
+      "id": 489,
+      "name": "Tautological",
+      "phase": "tail"
+    },
+    {
+      "id": 490,
+      "name": "Curly braces",
+      "phase": "tail"
+    },
+    {
+      "id": 492,
+      "name": "Olden days",
+      "phase": "prefix"
+    },
+    {
+      "id": 493,
+      "name": "The devil's workshop",
+      "phase": "tail"
+    },
+    {
+      "id": 494,
+      "name": "In the green",
+      "phase": "tail"
+    },
+    {
+      "id": 495,
+      "name": "Mountain out of a molehill, but like in a good way",
+      "phase": "tail"
+    },
+    {
+      "id": 496,
+      "name": "The wheels of progress",
+      "phase": "tail"
+    },
+    {
+      "id": 497,
+      "name": "That's rich",
+      "phase": "tail"
+    },
+    {
+      "id": 498,
+      "name": "Preaches and cream",
+      "phase": "tail"
+    },
+    {
+      "id": 499,
+      "name": "Magic thinking",
+      "phase": "tail"
+    },
+    {
+      "id": 500,
+      "name": "Is there life on Mars?",
+      "phase": "tail"
+    },
+    {
+      "id": 501,
+      "name": "Bad chemistry",
+      "phase": "tail"
+    },
+    {
+      "id": 502,
+      "name": "Reduced to gibbering heaps",
+      "phase": "tail"
+    },
+    {
+      "id": 503,
+      "name": "Back already?",
+      "phase": "tail"
+    },
+    {
+      "id": 504,
+      "name": "Nuclear throne",
+      "phase": "tail"
+    },
+    {
+      "id": 505,
+      "name": "Making light of the situation",
+      "phase": "tail"
+    },
+    {
+      "id": 506,
+      "name": "Flip a cookie. Chips, I win. Crust, you lose.",
+      "phase": "tail"
+    },
+    {
+      "id": 507,
+      "name": "In and of itself",
+      "phase": "tail"
+    },
+    {
+      "id": 508,
+      "name": "Duck typing",
+      "phase": "tail"
+    },
+    {
+      "id": 509,
+      "name": "They'll never know what hit 'em",
+      "phase": "tail"
+    },
+    {
+      "id": 510,
+      "name": "Well-versed",
+      "phase": "tail"
+    },
+    {
+      "id": 511,
+      "name": "Ripe for the picking",
+      "phase": "tail"
+    },
+    {
+      "id": 512,
+      "name": "Unreal",
+      "phase": "tail"
+    },
+    {
+      "id": 513,
+      "name": "Once you've seen one",
+      "phase": "tail"
+    },
+    {
+      "id": 514,
+      "name": "Spoils and plunder",
+      "phase": "tail"
+    },
+    {
+      "id": 515,
+      "name": "Nobody exists on purpose, nobody belongs anywhere",
+      "phase": "tail"
+    },
+    {
+      "id": 516,
+      "name": "Hyperspace expressway",
+      "phase": "tail"
+    },
+    {
+      "id": 517,
+      "name": "Versatile",
+      "phase": "tail"
+    },
+    {
+      "id": 518,
+      "name": "You are inevitable",
+      "phase": "tail"
+    },
+    {
+      "id": 519,
+      "name": "Away from this place",
+      "phase": "tail"
+    },
+    {
+      "id": 520,
+      "name": "Everywhere at once",
+      "phase": "tail"
+    },
+    {
+      "id": 521,
+      "name": "Reject reality, substitute your own",
+      "phase": "tail"
+    },
+    {
+      "id": 522,
+      "name": "Fringe",
+      "phase": "tail"
+    },
+    {
+      "id": 523,
+      "name": "Coherence",
+      "phase": "tail"
+    },
+    {
+      "id": 524,
+      "name": "Earth-616",
+      "phase": "tail"
+    },
+    {
+      "id": 526,
+      "name": "Grand design",
+      "phase": "tail"
+    },
+    {
+      "id": 527,
+      "name": "Ecumenopolis",
+      "phase": "tail"
+    },
+    {
+      "id": 528,
+      "name": "The full picture",
+      "phase": "tail"
+    },
+    {
+      "id": 529,
+      "name": "When there's nothing left to add",
+      "phase": "tail"
+    },
+    {
+      "id": 530,
+      "name": "Sexcentennial",
+      "phase": "tail"
+    },
+    {
+      "id": 531,
+      "name": "Keep going until I say stop",
+      "phase": "tail"
+    },
+    {
+      "id": 532,
+      "name": "But I didn't say stop, did I?",
+      "phase": "tail"
+    },
+    {
+      "id": 533,
+      "name": "With unrivaled fervor",
+      "phase": "tail"
+    },
+    {
+      "id": 534,
+      "name": "Think big",
+      "phase": "tail"
+    },
+    {
+      "id": 535,
+      "name": "Hypersize me",
+      "phase": "tail"
+    },
+    {
+      "id": 536,
+      "name": "Max capacity",
+      "phase": "tail"
+    },
+    {
+      "id": 537,
+      "name": "Liquid assets",
+      "phase": "tail"
+    },
+    {
+      "id": 538,
+      "name": "Stifling the press",
+      "phase": "prefix"
+    },
+    {
+      "id": 539,
+      "name": "It's big brain time",
+      "phase": "tail"
+    },
+    {
+      "id": 540,
+      "name": "Just my imagination",
+      "phase": "tail"
+    },
+    {
+      "id": 541,
+      "name": "Now there's an idea",
+      "phase": "tail"
+    },
+    {
+      "id": 542,
+      "name": "The organ that named itself",
+      "phase": "tail"
+    },
+    {
+      "id": 543,
+      "name": "Gyrification",
+      "phase": "tail"
+    },
+    {
+      "id": 544,
+      "name": "A trademarked portmanteau of \"imagination\" and \"engineering\"",
+      "phase": "tail"
+    },
+    {
+      "id": 545,
+      "name": "Mindfulness",
+      "phase": "tail"
+    },
+    {
+      "id": 546,
+      "name": "The 10% myth",
+      "phase": "tail"
+    },
+    {
+      "id": 547,
+      "name": "Don't think about it too hard",
+      "phase": "tail"
+    },
+    {
+      "id": 548,
+      "name": "Though fools seldom differ",
+      "phase": "tail"
+    },
+    {
+      "id": 549,
+      "name": "Looking kind of dumb",
+      "phase": "tail"
+    },
+    {
+      "id": 550,
+      "name": "A beautiful mind",
+      "phase": "tail"
+    },
+    {
+      "id": 551,
+      "name": "Cardinal synapses",
+      "phase": "tail"
+    },
+    {
+      "id": 552,
+      "name": "Positive thinking",
+      "phase": "tail"
+    },
+    {
+      "id": 553,
+      "name": "The thought that counts",
+      "phase": "tail"
+    },
+    {
+      "id": 554,
+      "name": "Unthinkable",
+      "phase": "tail"
+    },
+    {
+      "id": 556,
+      "name": "They moistly come at night",
+      "phase": "tail"
+    },
+    {
+      "id": 557,
+      "name": "It's grown on you",
+      "phase": "tail"
+    },
+    {
+      "id": 558,
+      "name": "Don't let the walls cave in on you",
+      "phase": "tail"
+    },
+    {
+      "id": 559,
+      "name": "Replaced by robots",
+      "phase": "tail"
+    },
+    {
+      "id": 560,
+      "name": "Financial prodigy",
+      "phase": "tail"
+    },
+    {
+      "id": 561,
+      "name": "And I will pray to a big god",
+      "phase": "tail"
+    },
+    {
+      "id": 562,
+      "name": "Shosple Colupis",
+      "phase": "tail"
+    },
+    {
+      "id": 563,
+      "name": "False vacuum",
+      "phase": "tail"
+    },
+    {
+      "id": 564,
+      "name": "Metallic taste",
+      "phase": "tail"
+    },
+    {
+      "id": 565,
+      "name": "Swiss cheese",
+      "phase": "tail"
+    },
+    {
+      "id": 566,
+      "name": "But the future refused to change",
+      "phase": "tail"
+    },
+    {
+      "id": 567,
+      "name": "What's the dark matter with you",
+      "phase": "tail"
+    },
+    {
+      "id": 568,
+      "name": "Enlightenment",
+      "phase": "tail"
+    },
+    {
+      "id": 569,
+      "name": "Never tell me the odds",
+      "phase": "tail"
+    },
+    {
+      "id": 570,
+      "name": "Blowing an Apollonian gasket",
+      "phase": "tail"
+    },
+    {
+      "id": 571,
+      "name": "Get with the program",
+      "phase": "tail"
+    },
+    {
+      "id": 572,
+      "name": "Lost your cosmic marbles",
+      "phase": "tail"
+    },
+    {
+      "id": 573,
+      "name": "By will alone I set my mind in motion",
+      "phase": "tail"
+    },
+    {
+      "id": 574,
+      "name": "Ain't that a click in the head",
+      "phase": "tail"
+    },
+    {
+      "id": 575,
+      "name": "Sexcentennial and a half",
+      "phase": "tail"
+    },
+    {
+      "id": 576,
+      "name": "I am speed",
+      "phase": "tail"
+    },
+    {
+      "id": 577,
+      "name": "And on and on",
+      "phase": "tail"
+    },
+    {
+      "id": 578,
+      "name": "Fake it till you bake it",
+      "phase": "tail"
+    },
+    {
+      "id": 579,
+      "name": "History in the baking",
+      "phase": "tail"
+    },
+    {
+      "id": 580,
+      "name": "Baby it's old outside",
+      "phase": "prefix"
+    },
+    {
+      "id": 581,
+      "name": "Myriad",
+      "phase": "tail"
+    },
+    {
+      "id": 582,
+      "name": "Kaizen",
+      "phase": "tail"
+    },
+    {
+      "id": 583,
+      "name": "Beyond quality",
+      "phase": "tail"
+    },
+    {
+      "id": 584,
+      "name": "Everything happens so much",
+      "phase": "tail"
+    },
+    {
+      "id": 585,
+      "name": "I'll rest when I'm dead",
+      "phase": "tail"
+    },
+    {
+      "id": 586,
+      "name": "What do you get for the baker who has everything",
+      "phase": "tail"
+    },
+    {
+      "id": 587,
+      "name": "Bottomless pit",
+      "phase": "tail"
+    },
+    {
+      "id": 588,
+      "name": "All the stars in heaven",
+      "phase": "prefix"
+    },
+    {
+      "id": 589,
+      "name": "No time like the present",
+      "phase": "tail"
+    },
+    {
+      "id": 590,
+      "name": "Can we get much higher",
+      "phase": "tail"
+    },
+    {
+      "id": 591,
+      "name": "Speed's the name of the game (no it's not it's called Cookie Clicker)",
+      "phase": "tail"
+    },
+    {
+      "id": 592,
+      "name": "Rainy day fund",
+      "phase": "tail"
+    },
+    {
+      "id": 593,
+      "name": "And a little extra",
+      "phase": "tail"
+    },
+    {
+      "id": 594,
+      "name": "Grandmapocalypse",
+      "phase": "tail"
+    },
+    {
+      "id": 595,
+      "name": "Wrath cookie",
+      "phase": "prefix"
+    },
+    {
+      "id": 596,
+      "name": "No more room in hell",
+      "phase": "prefix"
+    },
+    {
+      "id": 598,
+      "name": "Wrinkler poker",
+      "phase": "tail"
+    },
+    {
+      "id": 599,
+      "name": "Septcentennial",
+      "phase": "tail"
+    },
+    {
+      "id": 600,
+      "name": "My own clone",
+      "phase": "tail"
+    },
+    {
+      "id": 601,
+      "name": "Multiplicity",
+      "phase": "tail"
+    },
+    {
+      "id": 602,
+      "name": "Born for this job",
+      "phase": "tail"
+    },
+    {
+      "id": 603,
+      "name": "Episode II",
+      "phase": "tail"
+    },
+    {
+      "id": 604,
+      "name": "Copy that",
+      "phase": "tail"
+    },
+    {
+      "id": 605,
+      "name": "Life finds a way",
+      "phase": "tail"
+    },
+    {
+      "id": 606,
+      "name": "Overcrowding",
+      "phase": "tail"
+    },
+    {
+      "id": 607,
+      "name": "Strength in numbers",
+      "phase": "tail"
+    },
+    {
+      "id": 608,
+      "name": "Army of me",
+      "phase": "tail"
+    },
+    {
+      "id": 609,
+      "name": "Know thyself",
+      "phase": "tail"
+    },
+    {
+      "id": 610,
+      "name": "Didn't make sense not to live",
+      "phase": "tail"
+    },
+    {
+      "id": 611,
+      "name": "Genetic bottleneck",
+      "phase": "tail"
+    },
+    {
+      "id": 612,
+      "name": "Despite everything, it's still you",
+      "phase": "tail"
+    },
+    {
+      "id": 613,
+      "name": "Everyone everywhere all at once",
+      "phase": "tail"
+    },
+    {
+      "id": 614,
+      "name": "Self-made",
+      "phase": "tail"
+    },
+    {
+      "id": 615,
+      "name": "Reproducible results",
+      "phase": "tail"
+    },
+    {
+      "id": 616,
+      "name": "That's all you",
+      "phase": "tail"
+    },
+    {
+      "id": 618,
+      "name": "And now you're even older",
+      "phase": "tail"
+    },
+    {
+      "id": 619,
+      "name": "Au naturel",
+      "phase": "tail"
+    },
+    {
+      "id": 620,
+      "name": "Dirt-rich",
+      "phase": "tail"
+    },
+    {
+      "id": 621,
+      "name": "Bots build bots",
+      "phase": "tail"
+    },
+    {
+      "id": 622,
+      "name": "Getting that bag",
+      "phase": "tail"
+    },
+    {
+      "id": 623,
+      "name": "The leader is good, the leader is great",
+      "phase": "tail"
+    },
+    {
+      "id": 624,
+      "name": "You don't think they could've used... it couldn't have been ma-",
+      "phase": "tail"
+    },
+    {
+      "id": 625,
+      "name": "Signed, sealed, delivered",
+      "phase": "tail"
+    },
+    {
+      "id": 626,
+      "name": "Sugar, spice, and everything nice",
+      "phase": "tail"
+    },
+    {
+      "id": 627,
+      "name": "Not even remotely close to Kansas anymore",
+      "phase": "tail"
+    },
+    {
+      "id": 628,
+      "name": "I only meant to stay a while",
+      "phase": "tail"
+    },
+    {
+      "id": 629,
+      "name": "Not 20 years away forever",
+      "phase": "tail"
+    },
+    {
+      "id": 630,
+      "name": "Bright side of the Moon",
+      "phase": "tail"
+    },
+    {
+      "id": 631,
+      "name": "Riding the Mersenne twister",
+      "phase": "tail"
+    },
+    {
+      "id": 632,
+      "name": "Divide and conquer",
+      "phase": "tail"
+    },
+    {
+      "id": 633,
+      "name": "Pebcakes",
+      "phase": "tail"
+    },
+    {
+      "id": 634,
+      "name": "Greener on the other sides",
+      "phase": "tail"
+    },
+    {
+      "id": 635,
+      "name": "Where is my mind",
+      "phase": "tail"
+    },
+    {
+      "id": 636,
+      "name": "Introspection",
+      "phase": "tail"
+    },
+    {
+      "id": 637,
+      "name": "Debt evasion",
+      "phase": "prefix"
+    },
+    {
+      "id": 638,
+      "name": "Oft we mar what's well",
+      "phase": "tail"
+    },
+    {
+      "id": 639,
+      "name": "Cookie Clicker",
+      "phase": "prefix"
+    },
+    {
+      "id": 640,
+      "name": "What's not clicking",
+      "phase": "tail"
+    },
+    {
+      "id": 641,
+      "name": "All on deck",
+      "phase": "tail"
+    },
+    {
+      "id": 642,
+      "name": "A round of applause",
+      "phase": "tail"
+    }
+  ],
+  "excludedNormalGoals": [
+    {
+      "id": 268,
+      "name": "Year's worth of cavities"
+    },
+    {
+      "id": 270,
+      "name": "Sugar sugar"
+    },
+    {
+      "id": 272,
+      "name": "Sweetmeats"
+    },
+    {
+      "id": 307,
+      "name": "Freaky jazz hands"
+    },
+    {
+      "id": 308,
+      "name": "Methuselah"
+    },
+    {
+      "id": 309,
+      "name": "Huge tracts of land"
+    },
+    {
+      "id": 310,
+      "name": "D-d-d-d-deeper"
+    },
+    {
+      "id": 311,
+      "name": "Patently genius"
+    },
+    {
+      "id": 312,
+      "name": "A capital idea"
+    },
+    {
+      "id": 313,
+      "name": "It belongs in a bakery"
+    },
+    {
+      "id": 314,
+      "name": "Motormouth"
+    },
+    {
+      "id": 315,
+      "name": "Been there done that"
+    },
+    {
+      "id": 316,
+      "name": "Phlogisticated substances"
+    },
+    {
+      "id": 317,
+      "name": "Bizarro world"
+    },
+    {
+      "id": 318,
+      "name": "The long now"
+    },
+    {
+      "id": 319,
+      "name": "Chubby hadrons"
+    },
+    {
+      "id": 320,
+      "name": "Palettable"
+    },
+    {
+      "id": 336,
+      "name": "Let's leaf it at that"
+    },
+    {
+      "id": 396,
+      "name": "Maillard reaction"
+    },
+    {
+      "id": 427,
+      "name": "Sierpinski rhomboids"
+    },
+    {
+      "id": 447,
+      "name": "Alexandria"
+    },
+    {
+      "id": 525,
+      "name": "Strange topologies"
+    },
+    {
+      "id": 555,
+      "name": "Gifted"
+    },
+    {
+      "id": 617,
+      "name": "Self-improvement"
+    }
+  ],
+  "limitations": [
+    "Static ownership guards are checked against pinned source; no source-loop preservation theorem is supplied.",
+    "The partition covers every required normal achievement; current upgrades and finite access retain the full completion predicate.",
+    "The new-save prefix, funding target, complete retry laws, calendar restoration and physical inputs remain unproved."
+  ]
+}

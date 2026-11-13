@@ -1,0 +1,44 @@
+[
+  {
+    "path": "event_handler.cc",
+    "url": "https://chromium.googlesource.com/chromium/src/+/refs/tags/87.0.4280.141/third_party/blink/renderer/core/input/event_handler.cc?format=TEXT",
+    "sha256": "2a51fb3bda802fdeec8afa2cb1a33d2d54d6c22637a57c7f21914b10397b0bb7",
+    "bytes": 104039
+  },
+  {
+    "path": "keyboard_event_manager.cc",
+    "url": "https://chromium.googlesource.com/chromium/src/+/refs/tags/87.0.4280.141/third_party/blink/renderer/core/input/keyboard_event_manager.cc?format=TEXT",
+    "sha256": "ecb5672e17ecc076e9cc86e775467bc6f9c134d2c2ab40c0797bc0b32d68d3c3",
+    "bytes": 24744
+  },
+  {
+    "path": "mouse_event_manager.h",
+    "url": "https://chromium.googlesource.com/chromium/src/+/refs/tags/87.0.4280.141/third_party/blink/renderer/core/input/mouse_event_manager.h?format=TEXT",
+    "sha256": "a4ca1de6a3bc927af39948b50d5a9f694c513de1055b16cf8429052d6641c018",
+    "bytes": 9700
+  },
+  {
+    "path": "pointer_event_manager.cc",
+    "url": "https://chromium.googlesource.com/chromium/src/+/refs/tags/87.0.4280.141/third_party/blink/renderer/core/input/pointer_event_manager.cc?format=TEXT",
+    "sha256": "b77dc785bbc1a3713d0a167328c2de4ebaec2547a1eb50c5ab4f4499eea0be5c",
+    "bytes": 45840
+  },
+  {
+    "path": "mouse_event_manager.cc",
+    "url": "https://chromium.googlesource.com/chromium/src/+/refs/tags/87.0.4280.141/third_party/blink/renderer/core/input/mouse_event_manager.cc?format=TEXT",
+    "sha256": "207d4117fe181c1b4155c59083c6701b5ae16635b0f207172d6c51650fd63bf5",
+    "bytes": 48280
+  },
+  {
+    "path": "dom_code_data.inc",
+    "url": "https://chromium.googlesource.com/chromium/src/+/refs/tags/87.0.4280.141/ui/events/keycodes/dom/dom_code_data.inc?format=TEXT",
+    "sha256": "ec0683ad4bea1c9eb360104cc8f44371b791b35d3607d6e3dd287c8478d0c749",
+    "bytes": 35127
+  },
+  {
+    "path": "keyboard_code_conversion_mac.mm",
+    "url": "https://chromium.googlesource.com/chromium/src/+/refs/tags/87.0.4280.141/ui/events/keycodes/keyboard_code_conversion_mac.mm?format=TEXT",
+    "sha256": "dace3915ace43674ecd3b65aab7c493aa5faa3f79f8392f4916a045dc0a4cfbd",
+    "bytes": 31680
+  }
+]

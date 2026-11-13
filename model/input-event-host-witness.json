@@ -1,0 +1,237 @@
+{
+  "schema": "cookie-clicker-input-events-v1",
+  "versions": {
+    "node": "12.18.3",
+    "v8": "8.7.220.31-electron.0",
+    "uv": "1.38.0",
+    "zlib": "1.2.11",
+    "brotli": "1.0.7",
+    "ares": "1.16.0",
+    "modules": "85",
+    "nghttp2": "1.41.0",
+    "napi": "6",
+    "llhttp": "2.0.4",
+    "http_parser": "2.9.3",
+    "openssl": "1.1.1",
+    "icu": "67.1",
+    "unicode": "13.0",
+    "electron": "11.5.0",
+    "chrome": "87.0.4280.141"
+  },
+  "executableHash": "6d8020c65f288d375dd6307dd86a3bcbe2907efe272ee3b859998211ecfd345b",
+  "dictionaryObservations": [
+    {
+      "name": "UIEvent",
+      "order": [
+        "bubbles",
+        "cancelable",
+        "composed",
+        "detail",
+        "sourceCapabilities",
+        "view"
+      ],
+      "properties": [
+        "view",
+        "detail",
+        "sourceCapabilities",
+        "which",
+        "initUIEvent",
+        "constructor"
+      ],
+      "view": null,
+      "detail": 0,
+      "which": 0
+    },
+    {
+      "name": "MouseEvent",
+      "order": [
+        "bubbles",
+        "cancelable",
+        "composed",
+        "detail",
+        "sourceCapabilities",
+        "view",
+        "altKey",
+        "ctrlKey",
+        "metaKey",
+        "modifierAltGraph",
+        "modifierCapsLock",
+        "modifierFn",
+        "modifierNumLock",
+        "modifierScrollLock",
+        "modifierSymbol",
+        "shiftKey",
+        "button",
+        "buttons",
+        "clientX",
+        "clientY",
+        "movementX",
+        "movementY",
+        "region",
+        "relatedTarget",
+        "screenX",
+        "screenY"
+      ],
+      "properties": [
+        "screenX",
+        "screenY",
+        "clientX",
+        "clientY",
+        "ctrlKey",
+        "shiftKey",
+        "altKey",
+        "metaKey",
+        "button",
+        "buttons",
+        "relatedTarget",
+        "pageX",
+        "pageY",
+        "x",
+        "y",
+        "offsetX",
+        "offsetY",
+        "movementX",
+        "movementY",
+        "fromElement",
+        "toElement",
+        "layerX",
+        "layerY",
+        "getModifierState",
+        "initMouseEvent",
+        "constructor"
+      ],
+      "view": null,
+      "detail": 0,
+      "which": 1
+    },
+    {
+      "name": "KeyboardEvent",
+      "order": [
+        "bubbles",
+        "cancelable",
+        "composed",
+        "detail",
+        "sourceCapabilities",
+        "view",
+        "altKey",
+        "ctrlKey",
+        "metaKey",
+        "modifierAltGraph",
+        "modifierCapsLock",
+        "modifierFn",
+        "modifierNumLock",
+        "modifierScrollLock",
+        "modifierSymbol",
+        "shiftKey",
+        "charCode",
+        "code",
+        "isComposing",
+        "key",
+        "keyCode",
+        "location",
+        "repeat"
+      ],
+      "properties": [
+        "key",
+        "code",
+        "location",
+        "ctrlKey",
+        "shiftKey",
+        "altKey",
+        "metaKey",
+        "repeat",
+        "isComposing",
+        "charCode",
+        "keyCode",
+        "DOM_KEY_LOCATION_STANDARD",
+        "DOM_KEY_LOCATION_LEFT",
+        "DOM_KEY_LOCATION_RIGHT",
+        "DOM_KEY_LOCATION_NUMPAD",
+        "getModifierState",
+        "initKeyboardEvent",
+        "constructor"
+      ],
+      "view": null,
+      "detail": 0,
+      "which": 0
+    }
+  ],
+  "sources": [
+    {
+      "path": "model/browser-source/chromium-87/mouse_event.idl",
+      "url": "https://github.com/chromium/chromium/blob/87.0.4280.141/third_party/blink/renderer/core/events/mouse_event.idl",
+      "sha256": "9c06e455c434e2cd69ebbe2f30bcc2c30b38a9843655a3412bdecc4e1f2c7e6d"
+    },
+    {
+      "path": "model/browser-source/chromium-87/mouse_event_init.idl",
+      "url": "https://github.com/chromium/chromium/blob/87.0.4280.141/third_party/blink/renderer/core/events/mouse_event_init.idl",
+      "sha256": "0b3bb03be4790accfa5a000fe23c128b40135c71e455289ac064540a10ccd08e"
+    },
+    {
+      "path": "model/browser-source/chromium-87/mouse_event.cc",
+      "url": "https://github.com/chromium/chromium/blob/87.0.4280.141/third_party/blink/renderer/core/events/mouse_event.cc",
+      "sha256": "07c122b8820dcd20dba940f5aaa5426677b3c9fa87ca607cc0e40fa82c786a88"
+    },
+    {
+      "path": "model/browser-source/chromium-87/mouse_event.h",
+      "url": "https://github.com/chromium/chromium/blob/87.0.4280.141/third_party/blink/renderer/core/events/mouse_event.h",
+      "sha256": "a118a2357fe7e19c56ef954401dc655979e18d330a675ab12816d3096b481fa0"
+    },
+    {
+      "path": "model/browser-source/chromium-87/ui_event.idl",
+      "url": "https://github.com/chromium/chromium/blob/87.0.4280.141/third_party/blink/renderer/core/events/ui_event.idl",
+      "sha256": "79fd7f05b8d9ae6baad8a55e344cd8319d2ccfa08bcdb0b39ffa227b1367b315"
+    },
+    {
+      "path": "model/browser-source/chromium-87/ui_event_init.idl",
+      "url": "https://github.com/chromium/chromium/blob/87.0.4280.141/third_party/blink/renderer/core/events/ui_event_init.idl",
+      "sha256": "98f271f5c62e8834302aab982d2d95871275eda4df613a679ff62f0acae158b7"
+    },
+    {
+      "path": "model/browser-source/chromium-87/ui_event.cc",
+      "url": "https://github.com/chromium/chromium/blob/87.0.4280.141/third_party/blink/renderer/core/events/ui_event.cc",
+      "sha256": "59cd3db308bf67731be5146619b3a4c912c9b17e6be8ab78d3a7faa0daf55514"
+    },
+    {
+      "path": "model/browser-source/chromium-87/ui_event_with_key_state.cc",
+      "url": "https://github.com/chromium/chromium/blob/87.0.4280.141/third_party/blink/renderer/core/events/ui_event_with_key_state.cc",
+      "sha256": "0aa3155c1022c5c14b503b20b9c6552ceacfa8c4c3656d37fa1ff1daf71ec155"
+    },
+    {
+      "path": "model/browser-source/chromium-87/ui_event_with_key_state.h",
+      "url": "https://github.com/chromium/chromium/blob/87.0.4280.141/third_party/blink/renderer/core/events/ui_event_with_key_state.h",
+      "sha256": "3511465d23ea60871da951017c8addafa18443e8d8d71623181b172d79626409"
+    },
+    {
+      "path": "model/browser-source/chromium-87/keyboard_event.idl",
+      "url": "https://github.com/chromium/chromium/blob/87.0.4280.141/third_party/blink/renderer/core/events/keyboard_event.idl",
+      "sha256": "67958bd37a0ba0508f03875a9bf3028fa306184b501bc16d0247afc3b65bb02a"
+    },
+    {
+      "path": "model/browser-source/chromium-87/keyboard_event_init.idl",
+      "url": "https://github.com/chromium/chromium/blob/87.0.4280.141/third_party/blink/renderer/core/events/keyboard_event_init.idl",
+      "sha256": "28f79bc3c0eee95d74c445718166470abb46ad227a60c31d54d67e636739ae1a"
+    },
+    {
+      "path": "model/browser-source/chromium-87/keyboard_event.cc",
+      "url": "https://github.com/chromium/chromium/blob/87.0.4280.141/third_party/blink/renderer/core/events/keyboard_event.cc",
+      "sha256": "760b2a6538d850c6eaea3d472bccf6a7a1673eb4329a25b3a58a25cd11edf743"
+    },
+    {
+      "path": "model/browser-source/chromium-87/event_modifier_init.idl",
+      "url": "https://github.com/chromium/chromium/blob/87.0.4280.141/third_party/blink/renderer/core/dom/events/event_modifier_init.idl",
+      "sha256": "aba100cb72aebec6f431baa8b822e0083c950a78cac45966d1478d97f05c762d"
+    }
+  ],
+  "selectedPlatform": "macOS",
+  "trustedInputRefinementVerified": false,
+  "unresolved": [
+    "target hit testing and layout-derived relative coordinates",
+    "view scroll snapshot",
+    "native focus and activation/default actions",
+    "related-target path retargeting",
+    "coordinate C++ int casts outside representable range",
+    "InputDeviceCapabilities non-null objects",
+    "legacy initUIEvent/initMouseEvent/initKeyboardEvent methods"
+  ]
+}

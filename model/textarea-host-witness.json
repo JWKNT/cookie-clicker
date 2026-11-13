@@ -1,0 +1,39 @@
+{
+  "schema": 1,
+  "scope": "textarea value/reflection and cached-selection projection",
+  "chromiumVersion": "87.0.4280.141",
+  "sources": [
+    {
+      "file": "html_text_area_element.cc",
+      "url": "https://github.com/chromium/chromium/blob/87.0.4280.141/third_party/blink/renderer/core/html/forms/html_text_area_element.cc",
+      "sha256": "32798cb274f7fd0dac02d1f356259be59727636807eb96dcceb90794f3a6cd6b"
+    },
+    {
+      "file": "html_text_area_element.idl",
+      "url": "https://github.com/chromium/chromium/blob/87.0.4280.141/third_party/blink/renderer/core/html/forms/html_text_area_element.idl",
+      "sha256": "0a8d62836bfabea39f553729bab05c8dfa0abf02e43d632e49aaa9a4b5982332"
+    },
+    {
+      "file": "text_control_element.cc",
+      "url": "https://github.com/chromium/chromium/blob/87.0.4280.141/third_party/blink/renderer/core/html/forms/text_control_element.cc",
+      "sha256": "a2de0d1116591a6bb6e15c2ef5d269360232239ef8a63cf9a689c6190a42de7e"
+    }
+  ],
+  "rules": {
+    "value": "Normalize CRLF and lone CR to LF; setting even an unchanged value sets the dirty flag. Changed values move the cached caret to the end.",
+    "defaultValue": "Concatenate direct text children; comments and nested element text do not contribute. ChildrenChanged updates nondirty value and clamps cached endpoints.",
+    "reflection": "readOnly, disabled and required use attribute presence and native boolean conversion; textLength counts UTF-16 code units.",
+    "conversion": "Actual source conversion callbacks and receiver checks; direct null value becomes empty text, while object conversion returning null becomes the string null.",
+    "domMutation": "Native value dependencies update on parsed-tree construction, textContent/innerHTML, insertion/removal and direct text-node changes.",
+    "export": "Native ExportSave supplies its current serialization as parsed readonly textarea content, then invokes focus and select. No direct save oracle is added."
+  },
+  "validation": [
+    "node lean/check_javascript_textarea.mjs --engine"
+  ],
+  "remaining": [
+    "Focus, selection mutation and animation-frame select-event dispatch",
+    "User editing, form reset, validation, custom-element reactions and textarea cloning",
+    "Style/layout/selection lifecycle and complete native form-control refinement"
+  ],
+  "formControlRefinementVerified": false
+}

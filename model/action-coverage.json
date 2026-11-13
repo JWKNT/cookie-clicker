@@ -1,0 +1,5986 @@
+{
+  "schemaVersion": 1,
+  "gameVersion": "2.053",
+  "edition": "steam",
+  "sourceHashes": {
+    "main.js": "a8813ec2ee97edf5ebff6a3ce2037dcb65c08abd13c123bb92efda89b06ef4f7",
+    "minigameGarden.js": "184eacacd9325d493412dcda07f63d3a791939f83889b4349b6099d04be8e6c9",
+    "minigameMarket.js": "78538743673f3c1cd0e870a3695c77dcacd63febbe64b88f8a8fab9ea7e2863f",
+    "minigameGrimoire.js": "9efea1feb898dc9b719dd971bd27a71f083a8855b910013c524aea9b6d2a349d",
+    "minigamePantheon.js": "af08c31c4564d445cc2d1a7d101c4a63b57aa9b89991b93b8a65f4c0427573a0",
+    "base64.js": "875839c3e0c174c9358ce96923adfed6a6d2c090187a32deb35152dfac2c0e47",
+    "loc/EN.js": "ce48272a5fd5ab1f309dbb8fd7bd70188984ce14235a1d3d9215f3585101f433",
+    "index.html": "28488d9aef9bf31c4c023a0af01f0500a3b3e462b79bf7f2b09790025927a969"
+  },
+  "scope": "AST inventory of listener calls, generated HTML handler literals, prompt/preference/choice callbacks, timer calls and selected autonomous entry points in the eight pinned source files.",
+  "completenessClaim": false,
+  "caveats": [
+    "Region mappings identify an implementation family, not verified callback equivalence.",
+    "Dynamic string concatenation, handler generation and browser layout require separate runtime evidence.",
+    "The policy action set combines UI events and guarded API operations. It neither enumerates all UI histories nor proves every API operation equivalent to one physical input.",
+    "The policy action set is still a reviewed subset; partial or unresolved entries must not be silently excluded from an optimality theorem."
+  ],
+  "actionModelBoundary": {
+    "scope": "Limits of this executable adapter, not restrictions proved sufficient for all-strategy comparison.",
+    "buildingPurchases": {
+      "source": "main.js:7797-7854,8516-8542",
+      "nativeUiQuantities": [
+        1,
+        10,
+        100
+      ],
+      "nativeUiMax": "There is no buy-Max control. Selecting All in buy mode changes the quantity to100; All is visible only in sell mode.",
+      "guardedApiAmountRange": [
+        1,
+        1000
+      ],
+      "guardedApiAffordability": "buy-building requires the full getSumPrice quote. The native buy loop can still purchase fewer copies because it debits each rounded getPrice separately.",
+      "quoteVsDebit": "getSumPrice rounds once after the raw sum and discounts. buy(amount) rounds and debits each copy. The quote is not an exact acquisition-cost certificate.",
+      "equivalenceLimit": "Several smaller batches invoke sound and refresh callbacks more often and permit interleavings. No event-history equivalence is claimed."
+    },
+    "buildingSales": {
+      "source": "main.js:7858-7905,8516-8542",
+      "nativeUiQuantities": [
+        1,
+        10,
+        100,
+        "all"
+      ],
+      "nativeUiAllPath": [
+        "store-bulk(id1)",
+        "store-bulk(id5)",
+        "click-product"
+      ],
+      "guardedApiAmountRange": "Positive safe integers up to the current holding."
+    },
+    "otherLimits": [
+      "market-buy and market-sell accept1..10000; native10000 is the Max/All sentinel, not a fixed numerical quantity.",
+      "resize accepts width200..16384 and height100..16384; these are adapter resource limits, not a native maximum screen size.",
+      "The policy sequence macro permits at most1000 inputs. It does not skip callbacks or infer an admissible infinite input sequence.",
+      "Explicit cookie-pointer phases preserve the mapped native handlers; general pointer paths, capture, focus and drag semantics remain partial.",
+      "tooltip-pointer supports native control IDs and statistics crates by type/data-id, dispatches existing handlers, and rejects selected CSS-hidden or covered controls. Anonymous non-crate targets and complete CSS hit testing remain partial."
+    ],
+    "maintenanceReloads": {
+      "authorizedClass": "Scheduled maintenance reloads are allowed; random-outcome retries remain forbidden.",
+      "adapterSubclass": "An immutable list of elapsed-ms requests or fixed-period schedule is selected before new-save startup. Lifecycle guards defer requests; overlapping requests coalesce. The policy cannot trigger a reload, supply a save, or alter the schedule after startup.",
+      "nativePath": "Visible Options → Change language → English; native Logic waits for minigame loading and save completion before App.reload. A fresh VM/DOM/timer queue then executes the pinned startup and native delayed LoadSave.",
+      "preservedState": "Only the current native serialized save, localStorage, elapsed clock and continuing free-draw stream cross navigation. Native serialization and load determine quantization, buff reconstruction, discarded shimmers and timer restart.",
+      "exportInteraction": "ExportSave clears toSave without persisting. Export remains available after a maintenance request, but a subsequent native reload without an App.save after that request is an inadmissible rollback trace, not a native game failure. The native Ctrl+S input can restore the save request before navigation.",
+      "limitation": "This implements a scheduled subclass. It does not prove equivalence to every allowed maintenance policy or a full browser navigation refinement."
+    },
+    "informationBoundary": "The policy receives public observations and their history, including the current native Export save textarea when opened through the Options anchor. Its encoded startup seed may be decoded under the user-approved rule. Direct private state, experiment RNG state and future draws are not exposed. The user allows scheduled current-save maintenance reloads and forbids import, save editing, outcome retries and deliberate native-UI manipulation of random outcomes."
+  },
+  "actionTypes": [
+    "wait",
+    "click",
+    "cookie-pointer",
+    "buy-building",
+    "sell-building",
+    "buy-upgrade",
+    "ascend",
+    "reincarnate",
+    "level-building",
+    "harvest-lump",
+    "prompt",
+    "close-prompt",
+    "click-shimmer",
+    "click-news",
+    "open-menu",
+    "export-save",
+    "preference",
+    "volume",
+    "key",
+    "visibility",
+    "tooltip-pointer",
+    "dismiss-note",
+    "jukebox-sound",
+    "customizer-gene",
+    "customizer-random",
+    "building-mute",
+    "minigame-open",
+    "upgrade-vault",
+    "buy-all-upgrades",
+    "click-product",
+    "name-bakery",
+    "tiny-cookie",
+    "achievement-slot",
+    "forgotten-madeleine",
+    "resize",
+    "select-cosmetic",
+    "gift-send",
+    "gift-redeem",
+    "permanent-slot",
+    "store-bulk",
+    "building-hover",
+    "building-press",
+    "wrinkler-hover",
+    "wrinkler-poke",
+    "minigame-refill",
+    "upgrade-santa",
+    "upgrade-dragon",
+    "dragon-aura",
+    "pet-dragon",
+    "garden-plant",
+    "garden-harvest",
+    "garden-harvest-all",
+    "garden-soil",
+    "garden-freeze",
+    "garden-sacrifice",
+    "cast-spell",
+    "pantheon-slot",
+    "market-buy",
+    "market-sell",
+    "market-office",
+    "market-broker",
+    "market-loan"
+  ],
+  "counts": {
+    "autonomous": 25,
+    "environment": 33,
+    "excluded": 33,
+    "helper": 2,
+    "inactive": 1,
+    "mapped-family": 221,
+    "partial": 19
+  },
+  "surfaces": [
+    {
+      "id": "index.html:51:0:html-handler",
+      "file": "index.html",
+      "line": 51,
+      "column": 0,
+      "endLine": 51,
+      "kind": "html-handler",
+      "symbol": "inline HTML",
+      "status": "environment",
+      "actions": [],
+      "note": "The inline tiny-globe startup draw executes in page-script order before native window.onload. Language-link pointer entry would start its animation interval, but this web top-bar control is hidden in the fixed-English Steam environment.",
+      "mappingScope": "individual source callsite review; not a transition equivalence proof"
+    },
+    {
+      "id": "index.html:89:0:html-handler",
+      "file": "index.html",
+      "line": 89,
+      "column": 0,
+      "endLine": 89,
+      "kind": "html-handler",
+      "symbol": "inline HTML",
+      "status": "mapped-family",
+      "actions": [
+        "close-prompt"
+      ],
+      "note": "Visible prompt close button plays tickOff and closes the native prompt; promptNoClose guards the action.",
+      "mappingScope": "individual source callsite review; not a transition equivalence proof"
+    },
+    {
+      "id": "index.html:150:0:html-handler",
+      "file": "index.html",
+      "line": 150,
+      "column": 0,
+      "endLine": 150,
+      "kind": "html-handler",
+      "symbol": "inline HTML",
+      "status": "mapped-family",
+      "actions": [
+        "tooltip-pointer"
+      ],
+      "note": "Leaving the visible tooltip dispatches the native mouseout handler and calls Game.tooltip.hide.",
+      "mappingScope": "individual source callsite review; not a transition equivalence proof"
+    },
+    {
+      "id": "main.js:698:913:timer",
+      "file": "main.js",
+      "line": 698,
+      "column": 913,
+      "endLine": 698,
+      "kind": "timer",
+      "symbol": "setTimeout",
+      "status": "autonomous",
+      "actions": [
+        "wait"
+      ],
+      "note": "Native callback is scheduled by the deterministic timer adapter; asynchronous browser APIs remain environment assumptions."
+    },
+    {
+      "id": "main.js:698:2658:timer",
+      "file": "main.js",
+      "line": 698,
+      "column": 2658,
+      "endLine": 698,
+      "kind": "timer",
+      "symbol": "setTimeout",
+      "status": "autonomous",
+      "actions": [
+        "wait"
+      ],
+      "note": "Native callback is scheduled by the deterministic timer adapter; asynchronous browser APIs remain environment assumptions."
+    },
+    {
+      "id": "main.js:744:0:helper",
+      "file": "main.js",
+      "line": 744,
+      "column": 0,
+      "endLine": 750,
+      "kind": "helper",
+      "symbol": "AddEvent",
+      "status": "helper",
+      "actions": [],
+      "note": "Generic handler-construction helper; call sites require individual coverage."
+    },
+    {
+      "id": "main.js:747:27:listener",
+      "file": "main.js",
+      "line": 747,
+      "column": 27,
+      "endLine": 747,
+      "kind": "listener",
+      "symbol": "el.addEventListener",
+      "event": null,
+      "status": "environment",
+      "actions": [],
+      "note": "Global browser, mod and locale services; game mods and external loading are outside the vanilla policy.",
+      "mappingScope": "reviewed source region; not a per-callback equivalence proof"
+    },
+    {
+      "id": "main.js:760:0:helper",
+      "file": "main.js",
+      "line": 760,
+      "column": 0,
+      "endLine": 770,
+      "kind": "helper",
+      "symbol": "FireEvent",
+      "status": "helper",
+      "actions": [],
+      "note": "Generic handler-construction helper; call sites require individual coverage."
+    },
+    {
+      "id": "main.js:853:49:timer",
+      "file": "main.js",
+      "line": 853,
+      "column": 49,
+      "endLine": 853,
+      "kind": "timer",
+      "symbol": "setTimeout",
+      "status": "autonomous",
+      "actions": [
+        "wait"
+      ],
+      "note": "Native callback is scheduled by the deterministic timer adapter; asynchronous browser APIs remain environment assumptions."
+    },
+    {
+      "id": "main.js:1181:223:generated-event-attribute",
+      "file": "main.js",
+      "line": 1181,
+      "column": 223,
+      "endLine": 1181,
+      "kind": "generated-event-attribute",
+      "symbol": "Game.clickStr",
+      "status": "environment",
+      "actions": [],
+      "note": "Global browser, mod and locale services; game mods and external loading are outside the vanilla policy.",
+      "mappingScope": "reviewed source region; not a per-callback equivalence proof"
+    },
+    {
+      "id": "main.js:1187:85:generated-event-attribute",
+      "file": "main.js",
+      "line": 1187,
+      "column": 85,
+      "endLine": 1187,
+      "kind": "generated-event-attribute",
+      "symbol": "Game.clickStr",
+      "status": "environment",
+      "actions": [],
+      "note": "Global browser, mod and locale services; game mods and external loading are outside the vanilla policy.",
+      "mappingScope": "reviewed source region; not a per-callback equivalence proof"
+    },
+    {
+      "id": "main.js:1188:2:prompt",
+      "file": "main.js",
+      "line": 1188,
+      "column": 2,
+      "endLine": 1188,
+      "kind": "prompt",
+      "symbol": "Game.Prompt",
+      "status": "environment",
+      "actions": [],
+      "note": "Global browser, mod and locale services; game mods and external loading are outside the vanilla policy.",
+      "mappingScope": "reviewed source region; not a per-callback equivalence proof"
+    },
+    {
+      "id": "main.js:1276:1:listener",
+      "file": "main.js",
+      "line": 1276,
+      "column": 1,
+      "endLine": 1276,
+      "kind": "listener",
+      "symbol": "AddEvent",
+      "event": "visibilitychange",
+      "status": "environment",
+      "actions": [],
+      "note": "Global browser, mod and locale services; game mods and external loading are outside the vanilla policy.",
+      "mappingScope": "reviewed source region; not a per-callback equivalence proof"
+    },
+    {
+      "id": "main.js:1941:262:generated-event-attribute",
+      "file": "main.js",
+      "line": 1941,
+      "column": 262,
+      "endLine": 1941,
+      "kind": "generated-event-attribute",
+      "symbol": "Game.clickStr",
+      "status": "environment",
+      "actions": [],
+      "note": "Sleep/resume and engine lifecycle remain environment operations; no retry load is exposed.",
+      "mappingScope": "reviewed source region; not a per-callback equivalence proof"
+    },
+    {
+      "id": "main.js:1987:2:generated-event-attribute",
+      "file": "main.js",
+      "line": 1987,
+      "column": 2,
+      "endLine": 1987,
+      "kind": "generated-event-attribute",
+      "symbol": "Game.clickStr",
+      "status": "mapped-family",
+      "actions": [
+        "resize"
+      ],
+      "note": "Viewport resize invokes native callbacks with adapter pane geometry.",
+      "mappingScope": "reviewed source region; not a per-callback equivalence proof"
+    },
+    {
+      "id": "main.js:2097:2:listener",
+      "file": "main.js",
+      "line": 2097,
+      "column": 2,
+      "endLine": 2101,
+      "kind": "listener",
+      "symbol": "window.addEventListener",
+      "event": "resize",
+      "status": "mapped-family",
+      "actions": [
+        "resize"
+      ],
+      "note": "Viewport resize invokes native callbacks with adapter pane geometry.",
+      "mappingScope": "reviewed source region; not a per-callback equivalence proof"
+    },
+    {
+      "id": "main.js:2213:240:generated-html-handler",
+      "file": "main.js",
+      "line": 2213,
+      "column": 240,
+      "endLine": 2213,
+      "kind": "generated-html-handler",
+      "symbol": "string literal",
+      "events": [
+        "click"
+      ],
+      "status": "mapped-family",
+      "actions": [
+        "name-bakery"
+      ],
+      "note": "Bakery naming and startup notices.",
+      "mappingScope": "reviewed source region; not a per-callback equivalence proof"
+    },
+    {
+      "id": "main.js:2271:3:prompt",
+      "file": "main.js",
+      "line": 2271,
+      "column": 3,
+      "endLine": 2271,
+      "kind": "prompt",
+      "symbol": "Game.Prompt",
+      "status": "mapped-family",
+      "actions": [
+        "name-bakery"
+      ],
+      "note": "Bakery naming and startup notices.",
+      "mappingScope": "reviewed source region; not a per-callback equivalence proof"
+    },
+    {
+      "id": "main.js:2279:2:listener",
+      "file": "main.js",
+      "line": 2279,
+      "column": 2,
+      "endLine": 2279,
+      "kind": "listener",
+      "symbol": "AddEvent",
+      "event": "click",
+      "status": "mapped-family",
+      "actions": [
+        "name-bakery"
+      ],
+      "note": "Bakery naming and startup notices.",
+      "mappingScope": "reviewed source region; not a per-callback equivalence proof"
+    },
+    {
+      "id": "main.js:2427:23:generated-html-handler",
+      "file": "main.js",
+      "line": 2427,
+      "column": 23,
+      "endLine": 2427,
+      "kind": "generated-html-handler",
+      "symbol": "string literal",
+      "events": [
+        "mouseout",
+        "mouseover"
+      ],
+      "status": "partial",
+      "actions": [
+        "tooltip-pointer"
+      ],
+      "note": "Static crate handlers on identified controls preserve Game.onCrate, drawing, and wobble. Anonymous non-crate targets and full browser hit testing remain outside this input contract.",
+      "mappingScope": "individual source callsite review; not a transition equivalence proof"
+    },
+    {
+      "id": "main.js:2428:15:generated-html-handler",
+      "file": "main.js",
+      "line": 2428,
+      "column": 15,
+      "endLine": 2428,
+      "kind": "generated-html-handler",
+      "symbol": "string literal",
+      "events": [
+        "mouseout",
+        "mouseover"
+      ],
+      "status": "partial",
+      "actions": [
+        "tooltip-pointer"
+      ],
+      "note": "Static tooltip handlers on identified controls preserve entry and delayed hide. Anonymous callers and complete CSS visibility remain separate obligations.",
+      "mappingScope": "individual source callsite review; not a transition equivalence proof"
+    },
+    {
+      "id": "main.js:2433:23:generated-html-handler",
+      "file": "main.js",
+      "line": 2433,
+      "column": 23,
+      "endLine": 2433,
+      "kind": "generated-html-handler",
+      "symbol": "string literal",
+      "events": [
+        "mouseout",
+        "mouseover"
+      ],
+      "status": "partial",
+      "actions": [
+        "tooltip-pointer"
+      ],
+      "note": "Native dynamic crate handlers preserve Game.onCrate, held-pointer gating, callback drawing, and modifier updates. Identified controls and native stats type/data-id crates are supported; other anonymous targets and full hit testing remain partial.",
+      "mappingScope": "individual source callsite review; not a transition equivalence proof"
+    },
+    {
+      "id": "main.js:2434:10:generated-html-handler",
+      "file": "main.js",
+      "line": 2434,
+      "column": 10,
+      "endLine": 2434,
+      "kind": "generated-html-handler",
+      "symbol": "string literal",
+      "events": [
+        "mouseout",
+        "mouseover"
+      ],
+      "status": "partial",
+      "actions": [
+        "tooltip-pointer"
+      ],
+      "note": "Dynamic tooltip entry and leave dispatch native handlers on identified controls. Callback-specific effects, anonymous targets, and general pointer geometry are not exhaustively verified.",
+      "mappingScope": "individual source callsite review; not a transition equivalence proof"
+    },
+    {
+      "id": "main.js:2444:3:listener",
+      "file": "main.js",
+      "line": 2444,
+      "column": 3,
+      "endLine": 2444,
+      "kind": "listener",
+      "symbol": "AddEvent",
+      "event": "mouseover",
+      "status": "partial",
+      "actions": [
+        "tooltip-pointer"
+      ],
+      "note": "Attached native tooltip listeners are dispatched on identified controls; native herald text is checked. Caller visibility and full browser geometry remain partial.",
+      "mappingScope": "individual source callsite review; not a transition equivalence proof"
+    },
+    {
+      "id": "main.js:2445:3:listener",
+      "file": "main.js",
+      "line": 2445,
+      "column": 3,
+      "endLine": 2445,
+      "kind": "listener",
+      "symbol": "AddEvent",
+      "event": "mouseout",
+      "status": "partial",
+      "actions": [
+        "tooltip-pointer"
+      ],
+      "note": "Native attached tooltip leave sets shouldHide. The represented target transition leaves the old tooltip before entering another; complete browser pointer paths remain partial.",
+      "mappingScope": "individual source callsite review; not a transition equivalence proof"
+    },
+    {
+      "id": "main.js:2535:3:listener",
+      "file": "main.js",
+      "line": 2535,
+      "column": 3,
+      "endLine": 2539,
+      "kind": "listener",
+      "symbol": "AddEvent",
+      "event": "click",
+      "status": "excluded",
+      "actions": [],
+      "note": "HTTPS switch is inside if (!App), absent from the Steam target; it also navigates to a different save slot.",
+      "mappingScope": "individual source callsite review; not a transition equivalence proof"
+    },
+    {
+      "id": "main.js:2541:3:listener",
+      "file": "main.js",
+      "line": 2541,
+      "column": 3,
+      "endLine": 2544,
+      "kind": "listener",
+      "symbol": "AddEvent",
+      "event": "click",
+      "status": "excluded",
+      "actions": [],
+      "note": "Top-bar language click is inside if (!App), absent from the Steam target. Steam locale changes require the external wrapper and reload.",
+      "mappingScope": "individual source callsite review; not a transition equivalence proof"
+    },
+    {
+      "id": "main.js:2612:3:prompt",
+      "file": "main.js",
+      "line": 2612,
+      "column": 3,
+      "endLine": 2612,
+      "kind": "prompt",
+      "symbol": "Game.Prompt",
+      "status": "mapped-family",
+      "actions": [
+        "export-save",
+        "prompt",
+        "close-prompt"
+      ],
+      "note": "User-authorized current native Export save inspection. The Options anchor calls ExportSave and WriteSave1; the readonly visible textarea is observable, including its encoded startup seed. Import, edits and restoration remain excluded.",
+      "mappingScope": "individual source callsite review; not a transition equivalence proof"
+    },
+    {
+      "id": "main.js:2618:2:prompt",
+      "file": "main.js",
+      "line": 2618,
+      "column": 2,
+      "endLine": 2618,
+      "kind": "prompt",
+      "symbol": "Game.Prompt",
+      "status": "excluded",
+      "actions": [],
+      "note": "Import-save prompt loads externally supplied state. Save editing and outcome-retry reloads are forbidden. Scheduled maintenance reloads use only the current native save, not this import control.",
+      "mappingScope": "individual source callsite review; not a transition equivalence proof"
+    },
+    {
+      "id": "main.js:3306:7:timer",
+      "file": "main.js",
+      "line": 3306,
+      "column": 7,
+      "endLine": 3306,
+      "kind": "timer",
+      "symbol": "setTimeout",
+      "status": "autonomous",
+      "actions": [
+        "wait"
+      ],
+      "note": "Native callback is scheduled by the deterministic timer adapter; asynchronous browser APIs remain environment assumptions."
+    },
+    {
+      "id": "main.js:3306:29:prompt",
+      "file": "main.js",
+      "line": 3306,
+      "column": 29,
+      "endLine": 3306,
+      "kind": "prompt",
+      "symbol": "Game.Prompt",
+      "status": "partial",
+      "actions": [
+        "export-save"
+      ],
+      "note": "Native current-save serialization and load run for immutable clock-scheduled maintenance. Current native export text may be inspected and decoded; save import, external transfer and outcome-retry reloads remain excluded. Full navigation refinement is unresolved.",
+      "mappingScope": "reviewed source region; not a per-callback equivalence proof"
+    },
+    {
+      "id": "main.js:3655:4:prompt",
+      "file": "main.js",
+      "line": 3655,
+      "column": 4,
+      "endLine": 3655,
+      "kind": "prompt",
+      "symbol": "Game.Prompt",
+      "status": "partial",
+      "actions": [
+        "export-save"
+      ],
+      "note": "Native current-save serialization and load run for immutable clock-scheduled maintenance. Current native export text may be inspected and decoded; save import, external transfer and outcome-retry reloads remain excluded. Full navigation refinement is unresolved.",
+      "mappingScope": "reviewed source region; not a per-callback equivalence proof"
+    },
+    {
+      "id": "main.js:3659:4:prompt",
+      "file": "main.js",
+      "line": 3659,
+      "column": 4,
+      "endLine": 3659,
+      "kind": "prompt",
+      "symbol": "Game.Prompt",
+      "status": "partial",
+      "actions": [
+        "export-save"
+      ],
+      "note": "Native current-save serialization and load run for immutable clock-scheduled maintenance. Current native export text may be inspected and decoded; save import, external transfer and outcome-retry reloads remain excluded. Full navigation refinement is unresolved.",
+      "mappingScope": "reviewed source region; not a per-callback equivalence proof"
+    },
+    {
+      "id": "main.js:3790:22:generated-event-attribute",
+      "file": "main.js",
+      "line": 3790,
+      "column": 22,
+      "endLine": 3790,
+      "kind": "generated-event-attribute",
+      "symbol": "Game.clickStr",
+      "status": "mapped-family",
+      "actions": [
+        "buy-upgrade",
+        "achievement-slot",
+        "reincarnate",
+        "key"
+      ],
+      "note": "Crate and ascension selection surfaces; pointer tooltip effects remain an environment boundary.",
+      "mappingScope": "reviewed source region; not a per-callback equivalence proof"
+    },
+    {
+      "id": "main.js:4032:41:generated-event-attribute",
+      "file": "main.js",
+      "line": 4032,
+      "column": 41,
+      "endLine": 4032,
+      "kind": "generated-event-attribute",
+      "symbol": "Game.clickStr",
+      "status": "mapped-family",
+      "actions": [
+        "buy-upgrade",
+        "achievement-slot",
+        "reincarnate",
+        "key"
+      ],
+      "note": "Crate and ascension selection surfaces; pointer tooltip effects remain an environment boundary.",
+      "mappingScope": "reviewed source region; not a per-callback equivalence proof"
+    },
+    {
+      "id": "main.js:4045:231:generated-event-attribute",
+      "file": "main.js",
+      "line": 4045,
+      "column": 231,
+      "endLine": 4045,
+      "kind": "generated-event-attribute",
+      "symbol": "Game.clickStr",
+      "status": "mapped-family",
+      "actions": [
+        "buy-upgrade",
+        "achievement-slot",
+        "reincarnate",
+        "key"
+      ],
+      "note": "Crate and ascension selection surfaces; pointer tooltip effects remain an environment boundary.",
+      "mappingScope": "reviewed source region; not a per-callback equivalence proof"
+    },
+    {
+      "id": "main.js:4045:275:generated-html-handler",
+      "file": "main.js",
+      "line": 4045,
+      "column": 275,
+      "endLine": 4045,
+      "kind": "generated-html-handler",
+      "symbol": "string literal",
+      "events": [
+        "mouseout",
+        "mouseover"
+      ],
+      "status": "mapped-family",
+      "actions": [
+        "buy-upgrade",
+        "achievement-slot",
+        "reincarnate",
+        "key"
+      ],
+      "note": "Crate and ascension selection surfaces; pointer tooltip effects remain an environment boundary.",
+      "mappingScope": "reviewed source region; not a per-callback equivalence proof"
+    },
+    {
+      "id": "main.js:4048:3:prompt",
+      "file": "main.js",
+      "line": 4048,
+      "column": 3,
+      "endLine": 4050,
+      "kind": "prompt",
+      "symbol": "Game.Prompt",
+      "status": "mapped-family",
+      "actions": [
+        "buy-upgrade",
+        "achievement-slot",
+        "reincarnate",
+        "key"
+      ],
+      "note": "Crate and ascension selection surfaces; pointer tooltip effects remain an environment boundary.",
+      "mappingScope": "reviewed source region; not a per-callback equivalence proof"
+    },
+    {
+      "id": "main.js:4071:2:listener",
+      "file": "main.js",
+      "line": 4071,
+      "column": 2,
+      "endLine": 4074,
+      "kind": "listener",
+      "symbol": "AddEvent",
+      "event": "click",
+      "status": "mapped-family",
+      "actions": [
+        "ascend",
+        "reincarnate",
+        "key"
+      ],
+      "note": "Native ascension and animation controls.",
+      "mappingScope": "reviewed source region; not a per-callback equivalence proof"
+    },
+    {
+      "id": "main.js:4119:16:prompt",
+      "file": "main.js",
+      "line": 4119,
+      "column": 16,
+      "endLine": 4119,
+      "kind": "prompt",
+      "symbol": "Game.Prompt",
+      "status": "mapped-family",
+      "actions": [
+        "ascend",
+        "reincarnate",
+        "key"
+      ],
+      "note": "Native ascension and animation controls.",
+      "mappingScope": "reviewed source region; not a per-callback equivalence proof"
+    },
+    {
+      "id": "main.js:4154:16:prompt",
+      "file": "main.js",
+      "line": 4154,
+      "column": 16,
+      "endLine": 4154,
+      "kind": "prompt",
+      "symbol": "Game.Prompt",
+      "status": "mapped-family",
+      "actions": [
+        "ascend",
+        "reincarnate",
+        "key"
+      ],
+      "note": "Native ascension and animation controls.",
+      "mappingScope": "reviewed source region; not a per-callback equivalence proof"
+    },
+    {
+      "id": "main.js:4154:830:generated-event-attribute",
+      "file": "main.js",
+      "line": 4154,
+      "column": 830,
+      "endLine": 4154,
+      "kind": "generated-event-attribute",
+      "symbol": "Game.clickStr",
+      "status": "mapped-family",
+      "actions": [
+        "ascend",
+        "reincarnate",
+        "key"
+      ],
+      "note": "Native ascension and animation controls.",
+      "mappingScope": "reviewed source region; not a per-callback equivalence proof"
+    },
+    {
+      "id": "main.js:4314:4:timer",
+      "file": "main.js",
+      "line": 4314,
+      "column": 4,
+      "endLine": 4314,
+      "kind": "timer",
+      "symbol": "setTimeout",
+      "status": "autonomous",
+      "actions": [
+        "wait"
+      ],
+      "note": "Native callback is scheduled by the deterministic timer adapter; asynchronous browser APIs remain environment assumptions."
+    },
+    {
+      "id": "main.js:4370:3:timer",
+      "file": "main.js",
+      "line": 4370,
+      "column": 3,
+      "endLine": 4370,
+      "kind": "timer",
+      "symbol": "setTimeout",
+      "status": "autonomous",
+      "actions": [
+        "wait"
+      ],
+      "note": "Native callback is scheduled by the deterministic timer adapter; asynchronous browser APIs remain environment assumptions."
+    },
+    {
+      "id": "main.js:4381:3:generated-html-handler",
+      "file": "main.js",
+      "line": 4381,
+      "column": 3,
+      "endLine": 4381,
+      "kind": "generated-html-handler",
+      "symbol": "string literal",
+      "events": [
+        "click"
+      ],
+      "status": "mapped-family",
+      "actions": [
+        "harvest-lump",
+        "minigame-refill",
+        "prompt"
+      ],
+      "note": "Lump click and native confirmation dialogs.",
+      "mappingScope": "reviewed source region; not a per-callback equivalence proof"
+    },
+    {
+      "id": "main.js:4524:3:rng-reset",
+      "file": "main.js",
+      "line": 4524,
+      "column": 3,
+      "endLine": 4524,
+      "kind": "rng-reset",
+      "symbol": "Math.seedrandom",
+      "explicitSeed": true,
+      "status": "environment",
+      "actions": [],
+      "note": "Explicit seeded generator is native; unseeded reset resumes the injected tape. No policy receives future draws."
+    },
+    {
+      "id": "main.js:4538:3:rng-reset",
+      "file": "main.js",
+      "line": 4538,
+      "column": 3,
+      "endLine": 4538,
+      "kind": "rng-reset",
+      "symbol": "Math.seedrandom",
+      "explicitSeed": false,
+      "status": "environment",
+      "actions": [],
+      "note": "Explicit seeded generator is native; unseeded reset resumes the injected tape. No policy receives future draws."
+    },
+    {
+      "id": "main.js:4580:5:prompt",
+      "file": "main.js",
+      "line": 4580,
+      "column": 5,
+      "endLine": 4580,
+      "kind": "prompt",
+      "symbol": "Game.Prompt",
+      "status": "mapped-family",
+      "actions": [
+        "harvest-lump",
+        "minigame-refill",
+        "prompt"
+      ],
+      "note": "Lump click and native confirmation dialogs.",
+      "mappingScope": "reviewed source region; not a per-callback equivalence proof"
+    },
+    {
+      "id": "main.js:4592:2:autonomous-step",
+      "file": "main.js",
+      "line": 4592,
+      "column": 2,
+      "endLine": 4650,
+      "kind": "autonomous-step",
+      "symbol": "Game.doLumps",
+      "status": "mapped-family",
+      "actions": [
+        "harvest-lump",
+        "minigame-refill",
+        "prompt"
+      ],
+      "note": "Lump click and native confirmation dialogs.",
+      "mappingScope": "reviewed source region; not a per-callback equivalence proof"
+    },
+    {
+      "id": "main.js:4852:3:listener",
+      "file": "main.js",
+      "line": 4852,
+      "column": 3,
+      "endLine": 4852,
+      "kind": "listener",
+      "symbol": "AddEvent",
+      "event": "click",
+      "status": "mapped-family",
+      "actions": [
+        "click",
+        "cookie-pointer"
+      ],
+      "note": "The existing click action invokes Game.ClickCookie directly. The pointer click phase dispatches the native big-cookie click listener, then bubbles to document; detail1 preserves the physical-pointer click throttle.",
+      "mappingScope": "individual source callsite review; not a transition equivalence proof"
+    },
+    {
+      "id": "main.js:4853:3:listener",
+      "file": "main.js",
+      "line": 4853,
+      "column": 3,
+      "endLine": 4853,
+      "kind": "listener",
+      "symbol": "AddEvent",
+      "event": "mousedown",
+      "status": "mapped-family",
+      "actions": [
+        "cookie-pointer"
+      ],
+      "note": "Native mousedown sets BigCookieState, optionally plays the cookie sound, and bubbles to the document mouseDown/clickFrom listener. Its incidental random draw is retained.",
+      "mappingScope": "individual source callsite review; not a transition equivalence proof"
+    },
+    {
+      "id": "main.js:4854:3:listener",
+      "file": "main.js",
+      "line": 4854,
+      "column": 3,
+      "endLine": 4854,
+      "kind": "listener",
+      "symbol": "AddEvent",
+      "event": "mouseup",
+      "status": "mapped-family",
+      "actions": [
+        "cookie-pointer"
+      ],
+      "note": "Native mouseup changes the cookie display state and bubbles to clear document mouseDown/clickFrom.",
+      "mappingScope": "individual source callsite review; not a transition equivalence proof"
+    },
+    {
+      "id": "main.js:4855:3:listener",
+      "file": "main.js",
+      "line": 4855,
+      "column": 3,
+      "endLine": 4855,
+      "kind": "listener",
+      "symbol": "AddEvent",
+      "event": "mouseout",
+      "status": "mapped-family",
+      "actions": [
+        "cookie-pointer"
+      ],
+      "note": "Native mouseout restores the cookie display state.",
+      "mappingScope": "individual source callsite review; not a transition equivalence proof"
+    },
+    {
+      "id": "main.js:4856:3:listener",
+      "file": "main.js",
+      "line": 4856,
+      "column": 3,
+      "endLine": 4856,
+      "kind": "listener",
+      "symbol": "AddEvent",
+      "event": "mouseover",
+      "status": "mapped-family",
+      "actions": [
+        "cookie-pointer"
+      ],
+      "note": "Native mouseover sets the hovered cookie display state; the enter action also dispatches native pointer coordinates at the visible cookie center.",
+      "mappingScope": "individual source callsite review; not a transition equivalence proof"
+    },
+    {
+      "id": "main.js:4857:3:listener",
+      "file": "main.js",
+      "line": 4857,
+      "column": 3,
+      "endLine": 4857,
+      "kind": "listener",
+      "symbol": "AddEvent",
+      "event": "mousemove",
+      "status": "mapped-family",
+      "actions": [
+        "click",
+        "key",
+        "visibility",
+        "wrinkler-hover",
+        "wrinkler-poke"
+      ],
+      "note": "Keyboard and targeted pointer inputs; arbitrary scroll/drag paths are not yet covered.",
+      "mappingScope": "reviewed source region; not a per-callback equivalence proof"
+    },
+    {
+      "id": "main.js:4858:3:listener",
+      "file": "main.js",
+      "line": 4858,
+      "column": 3,
+      "endLine": 4858,
+      "kind": "listener",
+      "symbol": "AddEvent",
+      "event": "mousedown",
+      "status": "mapped-family",
+      "actions": [
+        "click",
+        "key",
+        "visibility",
+        "wrinkler-hover",
+        "wrinkler-poke"
+      ],
+      "note": "Keyboard and targeted pointer inputs; arbitrary scroll/drag paths are not yet covered.",
+      "mappingScope": "reviewed source region; not a per-callback equivalence proof"
+    },
+    {
+      "id": "main.js:4859:3:listener",
+      "file": "main.js",
+      "line": 4859,
+      "column": 3,
+      "endLine": 4859,
+      "kind": "listener",
+      "symbol": "AddEvent",
+      "event": "mouseup",
+      "status": "mapped-family",
+      "actions": [
+        "click",
+        "key",
+        "visibility",
+        "wrinkler-hover",
+        "wrinkler-poke"
+      ],
+      "note": "Keyboard and targeted pointer inputs; arbitrary scroll/drag paths are not yet covered.",
+      "mappingScope": "reviewed source region; not a per-callback equivalence proof"
+    },
+    {
+      "id": "main.js:4860:3:listener",
+      "file": "main.js",
+      "line": 4860,
+      "column": 3,
+      "endLine": 4860,
+      "kind": "listener",
+      "symbol": "AddEvent",
+      "event": "click",
+      "status": "mapped-family",
+      "actions": [
+        "click",
+        "key",
+        "visibility",
+        "wrinkler-hover",
+        "wrinkler-poke"
+      ],
+      "note": "Keyboard and targeted pointer inputs; arbitrary scroll/drag paths are not yet covered.",
+      "mappingScope": "reviewed source region; not a per-callback equivalence proof"
+    },
+    {
+      "id": "main.js:4867:3:listener",
+      "file": "main.js",
+      "line": 4867,
+      "column": 3,
+      "endLine": 4867,
+      "kind": "listener",
+      "symbol": "AddEvent",
+      "event": "DOMMouseScroll",
+      "status": "mapped-family",
+      "actions": [
+        "click",
+        "key",
+        "visibility",
+        "wrinkler-hover",
+        "wrinkler-poke"
+      ],
+      "note": "Keyboard and targeted pointer inputs; arbitrary scroll/drag paths are not yet covered.",
+      "mappingScope": "reviewed source region; not a per-callback equivalence proof"
+    },
+    {
+      "id": "main.js:4868:3:listener",
+      "file": "main.js",
+      "line": 4868,
+      "column": 3,
+      "endLine": 4868,
+      "kind": "listener",
+      "symbol": "AddEvent",
+      "event": "mousewheel",
+      "status": "mapped-family",
+      "actions": [
+        "click",
+        "key",
+        "visibility",
+        "wrinkler-hover",
+        "wrinkler-poke"
+      ],
+      "note": "Keyboard and targeted pointer inputs; arbitrary scroll/drag paths are not yet covered.",
+      "mappingScope": "reviewed source region; not a per-callback equivalence proof"
+    },
+    {
+      "id": "main.js:4873:3:listener",
+      "file": "main.js",
+      "line": 4873,
+      "column": 3,
+      "endLine": 4873,
+      "kind": "listener",
+      "symbol": "AddEvent",
+      "event": "touchend",
+      "status": "mapped-family",
+      "actions": [
+        "click",
+        "key",
+        "visibility",
+        "wrinkler-hover",
+        "wrinkler-poke"
+      ],
+      "note": "Keyboard and targeted pointer inputs; arbitrary scroll/drag paths are not yet covered.",
+      "mappingScope": "reviewed source region; not a per-callback equivalence proof"
+    },
+    {
+      "id": "main.js:4874:3:listener",
+      "file": "main.js",
+      "line": 4874,
+      "column": 3,
+      "endLine": 4874,
+      "kind": "listener",
+      "symbol": "AddEvent",
+      "event": "touchstart",
+      "status": "mapped-family",
+      "actions": [
+        "click",
+        "key",
+        "visibility",
+        "wrinkler-hover",
+        "wrinkler-poke"
+      ],
+      "note": "Keyboard and targeted pointer inputs; arbitrary scroll/drag paths are not yet covered.",
+      "mappingScope": "reviewed source region; not a per-callback equivalence proof"
+    },
+    {
+      "id": "main.js:4875:3:listener",
+      "file": "main.js",
+      "line": 4875,
+      "column": 3,
+      "endLine": 4875,
+      "kind": "listener",
+      "symbol": "AddEvent",
+      "event": "touchend",
+      "status": "mapped-family",
+      "actions": [
+        "click",
+        "key",
+        "visibility",
+        "wrinkler-hover",
+        "wrinkler-poke"
+      ],
+      "note": "Keyboard and targeted pointer inputs; arbitrary scroll/drag paths are not yet covered.",
+      "mappingScope": "reviewed source region; not a per-callback equivalence proof"
+    },
+    {
+      "id": "main.js:4877:3:listener",
+      "file": "main.js",
+      "line": 4877,
+      "column": 3,
+      "endLine": 4877,
+      "kind": "listener",
+      "symbol": "AddEvent",
+      "event": "mousemove",
+      "status": "mapped-family",
+      "actions": [
+        "click",
+        "key",
+        "visibility",
+        "wrinkler-hover",
+        "wrinkler-poke"
+      ],
+      "note": "Keyboard and targeted pointer inputs; arbitrary scroll/drag paths are not yet covered.",
+      "mappingScope": "reviewed source region; not a per-callback equivalence proof"
+    },
+    {
+      "id": "main.js:4878:3:listener",
+      "file": "main.js",
+      "line": 4878,
+      "column": 3,
+      "endLine": 4878,
+      "kind": "listener",
+      "symbol": "AddEvent",
+      "event": "touchstart",
+      "status": "mapped-family",
+      "actions": [
+        "click",
+        "key",
+        "visibility",
+        "wrinkler-hover",
+        "wrinkler-poke"
+      ],
+      "note": "Keyboard and targeted pointer inputs; arbitrary scroll/drag paths are not yet covered.",
+      "mappingScope": "reviewed source region; not a per-callback equivalence proof"
+    },
+    {
+      "id": "main.js:4879:3:listener",
+      "file": "main.js",
+      "line": 4879,
+      "column": 3,
+      "endLine": 4879,
+      "kind": "listener",
+      "symbol": "AddEvent",
+      "event": "touchend",
+      "status": "mapped-family",
+      "actions": [
+        "click",
+        "key",
+        "visibility",
+        "wrinkler-hover",
+        "wrinkler-poke"
+      ],
+      "note": "Keyboard and targeted pointer inputs; arbitrary scroll/drag paths are not yet covered.",
+      "mappingScope": "reviewed source region; not a per-callback equivalence proof"
+    },
+    {
+      "id": "main.js:4880:3:listener",
+      "file": "main.js",
+      "line": 4880,
+      "column": 3,
+      "endLine": 4880,
+      "kind": "listener",
+      "symbol": "AddEvent",
+      "event": "touchend",
+      "status": "mapped-family",
+      "actions": [
+        "click",
+        "key",
+        "visibility",
+        "wrinkler-hover",
+        "wrinkler-poke"
+      ],
+      "note": "Keyboard and targeted pointer inputs; arbitrary scroll/drag paths are not yet covered.",
+      "mappingScope": "reviewed source region; not a per-callback equivalence proof"
+    },
+    {
+      "id": "main.js:4884:2:listener",
+      "file": "main.js",
+      "line": 4884,
+      "column": 2,
+      "endLine": 4896,
+      "kind": "listener",
+      "symbol": "AddEvent",
+      "event": "keyup",
+      "status": "mapped-family",
+      "actions": [
+        "click",
+        "key",
+        "visibility",
+        "wrinkler-hover",
+        "wrinkler-poke"
+      ],
+      "note": "Keyboard and targeted pointer inputs; arbitrary scroll/drag paths are not yet covered.",
+      "mappingScope": "reviewed source region; not a per-callback equivalence proof"
+    },
+    {
+      "id": "main.js:4897:2:listener",
+      "file": "main.js",
+      "line": 4897,
+      "column": 2,
+      "endLine": 4916,
+      "kind": "listener",
+      "symbol": "AddEvent",
+      "event": "keydown",
+      "status": "mapped-family",
+      "actions": [
+        "click",
+        "key",
+        "visibility",
+        "wrinkler-hover",
+        "wrinkler-poke"
+      ],
+      "note": "Keyboard and targeted pointer inputs; arbitrary scroll/drag paths are not yet covered.",
+      "mappingScope": "reviewed source region; not a per-callback equivalence proof"
+    },
+    {
+      "id": "main.js:4918:2:listener",
+      "file": "main.js",
+      "line": 4918,
+      "column": 2,
+      "endLine": 4920,
+      "kind": "listener",
+      "symbol": "AddEvent",
+      "event": "visibilitychange",
+      "status": "mapped-family",
+      "actions": [
+        "click",
+        "key",
+        "visibility",
+        "wrinkler-hover",
+        "wrinkler-poke"
+      ],
+      "note": "Keyboard and targeted pointer inputs; arbitrary scroll/drag paths are not yet covered.",
+      "mappingScope": "reviewed source region; not a per-callback equivalence proof"
+    },
+    {
+      "id": "main.js:4934:2:autonomous-step",
+      "file": "main.js",
+      "line": 4934,
+      "column": 2,
+      "endLine": 5172,
+      "kind": "autonomous-step",
+      "symbol": "Game.CalculateGains",
+      "status": "mapped-family",
+      "actions": [
+        "click-shimmer",
+        "wait"
+      ],
+      "note": "Shimmer interactions and autonomous production/buff transitions.",
+      "mappingScope": "reviewed source region; not a per-callback equivalence proof"
+    },
+    {
+      "id": "main.js:5198:27:listener",
+      "file": "main.js",
+      "line": 5198,
+      "column": 27,
+      "endLine": 5198,
+      "kind": "listener",
+      "symbol": "AddEvent",
+      "event": "click",
+      "status": "mapped-family",
+      "actions": [
+        "click-shimmer",
+        "wait"
+      ],
+      "note": "Shimmer interactions and autonomous production/buff transitions.",
+      "mappingScope": "reviewed source region; not a per-callback equivalence proof"
+    },
+    {
+      "id": "main.js:5199:9:listener",
+      "file": "main.js",
+      "line": 5199,
+      "column": 9,
+      "endLine": 5199,
+      "kind": "listener",
+      "symbol": "AddEvent",
+      "event": "touchend",
+      "status": "mapped-family",
+      "actions": [
+        "click-shimmer",
+        "wait"
+      ],
+      "note": "Shimmer interactions and autonomous production/buff transitions.",
+      "mappingScope": "reviewed source region; not a per-callback equivalence proof"
+    },
+    {
+      "id": "main.js:6211:193:generated-html-handler",
+      "file": "main.js",
+      "line": 6211,
+      "column": 193,
+      "endLine": 6211,
+      "kind": "generated-html-handler",
+      "symbol": "string literal",
+      "events": [
+        "click"
+      ],
+      "status": "mapped-family",
+      "actions": [
+        "dismiss-note"
+      ],
+      "note": "A visible notification close button plays tick and calls Game.CloseNote(id); native DOM handler is dispatched.",
+      "mappingScope": "individual source callsite review; not a transition equivalence proof"
+    },
+    {
+      "id": "main.js:6218:9:generated-html-handler",
+      "file": "main.js",
+      "line": 6218,
+      "column": 9,
+      "endLine": 6218,
+      "kind": "generated-html-handler",
+      "symbol": "string literal",
+      "events": [
+        "click"
+      ],
+      "status": "mapped-family",
+      "actions": [
+        "dismiss-note"
+      ],
+      "note": "The close-all notification control plays tick and calls Game.CloseNotes; available only when the native control exists.",
+      "mappingScope": "individual source callsite review; not a transition equivalence proof"
+    },
+    {
+      "id": "main.js:6285:2:listener",
+      "file": "main.js",
+      "line": 6285,
+      "column": 2,
+      "endLine": 6285,
+      "kind": "listener",
+      "symbol": "AddEvent",
+      "event": "click",
+      "status": "mapped-family",
+      "actions": [
+        "prompt",
+        "close-prompt",
+        "preference",
+        "volume"
+      ],
+      "note": "Native prompt and settings helpers.",
+      "mappingScope": "reviewed source region; not a per-callback equivalence proof"
+    },
+    {
+      "id": "main.js:6330:106:generated-event-attribute",
+      "file": "main.js",
+      "line": 6330,
+      "column": 106,
+      "endLine": 6330,
+      "kind": "generated-event-attribute",
+      "symbol": "Game.clickStr",
+      "status": "mapped-family",
+      "actions": [
+        "prompt",
+        "close-prompt",
+        "preference",
+        "volume"
+      ],
+      "note": "Native prompt and settings helpers.",
+      "mappingScope": "reviewed source region; not a per-callback equivalence proof"
+    },
+    {
+      "id": "main.js:6389:120:generated-event-attribute",
+      "file": "main.js",
+      "line": 6389,
+      "column": 120,
+      "endLine": 6389,
+      "kind": "generated-event-attribute",
+      "symbol": "Game.clickStr",
+      "status": "mapped-family",
+      "actions": [
+        "prompt",
+        "close-prompt",
+        "preference",
+        "volume"
+      ],
+      "note": "Native prompt and settings helpers.",
+      "mappingScope": "reviewed source region; not a per-callback equivalence proof"
+    },
+    {
+      "id": "main.js:6433:345:generated-html-handler",
+      "file": "main.js",
+      "line": 6433,
+      "column": 345,
+      "endLine": 6433,
+      "kind": "generated-html-handler",
+      "symbol": "string literal",
+      "events": [
+        "change"
+      ],
+      "status": "mapped-family",
+      "actions": [
+        "prompt",
+        "close-prompt",
+        "preference",
+        "volume"
+      ],
+      "note": "Native prompt and settings helpers.",
+      "mappingScope": "reviewed source region; not a per-callback equivalence proof"
+    },
+    {
+      "id": "main.js:6433:369:generated-html-handler",
+      "file": "main.js",
+      "line": 6433,
+      "column": 369,
+      "endLine": 6433,
+      "kind": "generated-html-handler",
+      "symbol": "string literal",
+      "events": [
+        "input"
+      ],
+      "status": "mapped-family",
+      "actions": [
+        "prompt",
+        "close-prompt",
+        "preference",
+        "volume"
+      ],
+      "note": "Native prompt and settings helpers.",
+      "mappingScope": "reviewed source region; not a per-callback equivalence proof"
+    },
+    {
+      "id": "main.js:6433:392:generated-html-handler",
+      "file": "main.js",
+      "line": 6433,
+      "column": 392,
+      "endLine": 6433,
+      "kind": "generated-html-handler",
+      "symbol": "string literal",
+      "events": [
+        "mouseup"
+      ],
+      "status": "mapped-family",
+      "actions": [
+        "prompt",
+        "close-prompt",
+        "preference",
+        "volume"
+      ],
+      "note": "Native prompt and settings helpers.",
+      "mappingScope": "reviewed source region; not a per-callback equivalence proof"
+    },
+    {
+      "id": "main.js:6538:38:generated-event-attribute",
+      "file": "main.js",
+      "line": 6538,
+      "column": 38,
+      "endLine": 6538,
+      "kind": "generated-event-attribute",
+      "symbol": "Game.clickStr",
+      "status": "mapped-family",
+      "actions": [
+        "tiny-cookie"
+      ],
+      "note": "Stats tiny-cookie click.",
+      "mappingScope": "reviewed source region; not a per-callback equivalence proof"
+    },
+    {
+      "id": "main.js:6570:3:prompt",
+      "file": "main.js",
+      "line": 6570,
+      "column": 3,
+      "endLine": 6574,
+      "kind": "prompt",
+      "symbol": "Game.Prompt",
+      "status": "partial",
+      "actions": [],
+      "note": "Immutable clock-scheduled maintenance clicks the native same-English selection and saves current state before a fresh realm. Other locales and adaptive outcome-retry reloads are excluded.",
+      "mappingScope": "reviewed source region; not a per-callback equivalence proof"
+    },
+    {
+      "id": "main.js:6579:4:listener",
+      "file": "main.js",
+      "line": 6579,
+      "column": 4,
+      "endLine": 6587,
+      "kind": "listener",
+      "symbol": "AddEvent",
+      "event": "click",
+      "status": "partial",
+      "actions": [],
+      "note": "Immutable clock-scheduled maintenance clicks the native same-English selection and saves current state before a fresh realm. Other locales and adaptive outcome-retry reloads are excluded.",
+      "mappingScope": "reviewed source region; not a per-callback equivalence proof"
+    },
+    {
+      "id": "main.js:6588:4:listener",
+      "file": "main.js",
+      "line": 6588,
+      "column": 4,
+      "endLine": 6591,
+      "kind": "listener",
+      "symbol": "AddEvent",
+      "event": "mouseover",
+      "status": "partial",
+      "actions": [],
+      "note": "Immutable clock-scheduled maintenance clicks the native same-English selection and saves current state before a fresh realm. Other locales and adaptive outcome-retry reloads are excluded.",
+      "mappingScope": "reviewed source region; not a per-callback equivalence proof"
+    },
+    {
+      "id": "main.js:6602:41:generated-event-attribute",
+      "file": "main.js",
+      "line": 6602,
+      "column": 41,
+      "endLine": 6602,
+      "kind": "generated-event-attribute",
+      "symbol": "Game.clickStr",
+      "status": "mapped-family",
+      "actions": [
+        "open-menu",
+        "export-save",
+        "preference",
+        "volume",
+        "gift-send",
+        "gift-redeem"
+      ],
+      "note": "Visible Steam preference controls; screen-reader reload, cloud/OS actions and save import are excluded.",
+      "mappingScope": "reviewed source region; not a per-callback equivalence proof"
+    },
+    {
+      "id": "main.js:6615:29:generated-event-attribute",
+      "file": "main.js",
+      "line": 6615,
+      "column": 29,
+      "endLine": 6615,
+      "kind": "generated-event-attribute",
+      "symbol": "Game.clickStr",
+      "status": "mapped-family",
+      "actions": [
+        "open-menu",
+        "export-save",
+        "preference",
+        "volume",
+        "gift-send",
+        "gift-redeem"
+      ],
+      "note": "Visible Steam preference controls; screen-reader reload, cloud/OS actions and save import are excluded.",
+      "mappingScope": "reviewed source region; not a per-callback equivalence proof"
+    },
+    {
+      "id": "main.js:6616:29:generated-event-attribute",
+      "file": "main.js",
+      "line": 6616,
+      "column": 29,
+      "endLine": 6616,
+      "kind": "generated-event-attribute",
+      "symbol": "Game.clickStr",
+      "status": "mapped-family",
+      "actions": [
+        "open-menu",
+        "export-save",
+        "preference",
+        "volume",
+        "gift-send",
+        "gift-redeem"
+      ],
+      "note": "Visible Steam preference controls; screen-reader reload, cloud/OS actions and save import are excluded.",
+      "mappingScope": "reviewed source region; not a per-callback equivalence proof"
+    },
+    {
+      "id": "main.js:6619:580:generated-event-attribute",
+      "file": "main.js",
+      "line": 6619,
+      "column": 580,
+      "endLine": 6619,
+      "kind": "generated-event-attribute",
+      "symbol": "Game.clickStr",
+      "status": "mapped-family",
+      "actions": [
+        "open-menu",
+        "export-save",
+        "preference",
+        "volume",
+        "gift-send",
+        "gift-redeem"
+      ],
+      "note": "Visible Steam preference controls; screen-reader reload, cloud/OS actions and save import are excluded.",
+      "mappingScope": "reviewed source region; not a per-callback equivalence proof"
+    },
+    {
+      "id": "main.js:6620:71:generated-event-attribute",
+      "file": "main.js",
+      "line": 6620,
+      "column": 71,
+      "endLine": 6620,
+      "kind": "generated-event-attribute",
+      "symbol": "Game.clickStr",
+      "status": "mapped-family",
+      "actions": [
+        "open-menu",
+        "export-save",
+        "preference",
+        "volume",
+        "gift-send",
+        "gift-redeem"
+      ],
+      "note": "Visible Steam preference controls; screen-reader reload, cloud/OS actions and save import are excluded.",
+      "mappingScope": "reviewed source region; not a per-callback equivalence proof"
+    },
+    {
+      "id": "main.js:6621:66:generated-event-attribute",
+      "file": "main.js",
+      "line": 6621,
+      "column": 66,
+      "endLine": 6621,
+      "kind": "generated-event-attribute",
+      "symbol": "Game.clickStr",
+      "status": "mapped-family",
+      "actions": [
+        "open-menu",
+        "export-save",
+        "preference",
+        "volume",
+        "gift-send",
+        "gift-redeem"
+      ],
+      "note": "Visible Steam preference controls; screen-reader reload, cloud/OS actions and save import are excluded.",
+      "mappingScope": "reviewed source region; not a per-callback equivalence proof"
+    },
+    {
+      "id": "main.js:6622:66:generated-event-attribute",
+      "file": "main.js",
+      "line": 6622,
+      "column": 66,
+      "endLine": 6622,
+      "kind": "generated-event-attribute",
+      "symbol": "Game.clickStr",
+      "status": "mapped-family",
+      "actions": [
+        "open-menu",
+        "export-save",
+        "preference",
+        "volume",
+        "gift-send",
+        "gift-redeem"
+      ],
+      "note": "Visible Steam preference controls; screen-reader reload, cloud/OS actions and save import are excluded.",
+      "mappingScope": "reviewed source region; not a per-callback equivalence proof"
+    },
+    {
+      "id": "main.js:6622:194:generated-event-attribute",
+      "file": "main.js",
+      "line": 6622,
+      "column": 194,
+      "endLine": 6622,
+      "kind": "generated-event-attribute",
+      "symbol": "Game.clickStr",
+      "status": "mapped-family",
+      "actions": [
+        "open-menu",
+        "export-save",
+        "preference",
+        "volume",
+        "gift-send",
+        "gift-redeem"
+      ],
+      "note": "Visible Steam preference controls; screen-reader reload, cloud/OS actions and save import are excluded.",
+      "mappingScope": "reviewed source region; not a per-callback equivalence proof"
+    },
+    {
+      "id": "main.js:6623:73:generated-event-attribute",
+      "file": "main.js",
+      "line": 6623,
+      "column": 73,
+      "endLine": 6623,
+      "kind": "generated-event-attribute",
+      "symbol": "Game.clickStr",
+      "status": "mapped-family",
+      "actions": [
+        "open-menu",
+        "export-save",
+        "preference",
+        "volume",
+        "gift-send",
+        "gift-redeem"
+      ],
+      "note": "Visible Steam preference controls; screen-reader reload, cloud/OS actions and save import are excluded.",
+      "mappingScope": "reviewed source region; not a per-callback equivalence proof"
+    },
+    {
+      "id": "main.js:6623:158:generated-html-handler",
+      "file": "main.js",
+      "line": 6623,
+      "column": 158,
+      "endLine": 6623,
+      "kind": "generated-html-handler",
+      "symbol": "string literal",
+      "events": [
+        "change"
+      ],
+      "status": "mapped-family",
+      "actions": [
+        "open-menu",
+        "export-save",
+        "preference",
+        "volume",
+        "gift-send",
+        "gift-redeem"
+      ],
+      "note": "Visible Steam preference controls; screen-reader reload, cloud/OS actions and save import are excluded.",
+      "mappingScope": "reviewed source region; not a per-callback equivalence proof"
+    },
+    {
+      "id": "main.js:6623:390:generated-event-attribute",
+      "file": "main.js",
+      "line": 6623,
+      "column": 390,
+      "endLine": 6623,
+      "kind": "generated-event-attribute",
+      "symbol": "Game.clickStr",
+      "status": "mapped-family",
+      "actions": [
+        "open-menu",
+        "export-save",
+        "preference",
+        "volume",
+        "gift-send",
+        "gift-redeem"
+      ],
+      "note": "Visible Steam preference controls; screen-reader reload, cloud/OS actions and save import are excluded.",
+      "mappingScope": "reviewed source region; not a per-callback equivalence proof"
+    },
+    {
+      "id": "main.js:6624:179:generated-event-attribute",
+      "file": "main.js",
+      "line": 6624,
+      "column": 179,
+      "endLine": 6624,
+      "kind": "generated-event-attribute",
+      "symbol": "Game.clickStr",
+      "status": "mapped-family",
+      "actions": [
+        "open-menu",
+        "export-save",
+        "preference",
+        "volume",
+        "gift-send",
+        "gift-redeem"
+      ],
+      "note": "Visible Steam preference controls; screen-reader reload, cloud/OS actions and save import are excluded.",
+      "mappingScope": "reviewed source region; not a per-callback equivalence proof"
+    },
+    {
+      "id": "main.js:6634:7:slider",
+      "file": "main.js",
+      "line": 6634,
+      "column": 7,
+      "endLine": 6634,
+      "kind": "slider",
+      "symbol": "Game.WriteSlider",
+      "control": "volumeSlider",
+      "status": "mapped-family",
+      "actions": [
+        "open-menu",
+        "export-save",
+        "preference",
+        "volume",
+        "gift-send",
+        "gift-redeem"
+      ],
+      "note": "Visible Steam preference controls; screen-reader reload, cloud/OS actions and save import are excluded.",
+      "mappingScope": "reviewed source region; not a per-callback equivalence proof"
+    },
+    {
+      "id": "main.js:6635:12:slider",
+      "file": "main.js",
+      "line": 6635,
+      "column": 12,
+      "endLine": 6635,
+      "kind": "slider",
+      "symbol": "Game.WriteSlider",
+      "control": "volumeMusicSlider",
+      "status": "mapped-family",
+      "actions": [
+        "open-menu",
+        "export-save",
+        "preference",
+        "volume",
+        "gift-send",
+        "gift-redeem"
+      ],
+      "note": "Visible Steam preference controls; screen-reader reload, cloud/OS actions and save import are excluded.",
+      "mappingScope": "reviewed source region; not a per-callback equivalence proof"
+    },
+    {
+      "id": "main.js:6638:12:preference",
+      "file": "main.js",
+      "line": 6638,
+      "column": 12,
+      "endLine": 6638,
+      "kind": "preference",
+      "symbol": "Game.WritePrefButton",
+      "preference": "bgMusic",
+      "control": "bgMusicButton",
+      "status": "mapped-family",
+      "actions": [
+        "open-menu",
+        "export-save",
+        "preference",
+        "volume",
+        "gift-send",
+        "gift-redeem"
+      ],
+      "note": "Visible Steam preference controls; screen-reader reload, cloud/OS actions and save import are excluded.",
+      "mappingScope": "reviewed source region; not a per-callback equivalence proof"
+    },
+    {
+      "id": "main.js:6639:12:preference",
+      "file": "main.js",
+      "line": 6639,
+      "column": 12,
+      "endLine": 6639,
+      "kind": "preference",
+      "symbol": "Game.WritePrefButton",
+      "preference": "fullscreen",
+      "control": "fullscreenButton",
+      "status": "mapped-family",
+      "actions": [
+        "open-menu",
+        "export-save",
+        "preference",
+        "volume",
+        "gift-send",
+        "gift-redeem"
+      ],
+      "note": "Visible Steam preference controls; screen-reader reload, cloud/OS actions and save import are excluded.",
+      "mappingScope": "reviewed source region; not a per-callback equivalence proof"
+    },
+    {
+      "id": "main.js:6640:7:preference",
+      "file": "main.js",
+      "line": 6640,
+      "column": 7,
+      "endLine": 6640,
+      "kind": "preference",
+      "symbol": "Game.WritePrefButton",
+      "preference": "fancy",
+      "control": "fancyButton",
+      "status": "mapped-family",
+      "actions": [
+        "open-menu",
+        "export-save",
+        "preference",
+        "volume",
+        "gift-send",
+        "gift-redeem"
+      ],
+      "note": "Visible Steam preference controls; screen-reader reload, cloud/OS actions and save import are excluded.",
+      "mappingScope": "reviewed source region; not a per-callback equivalence proof"
+    },
+    {
+      "id": "main.js:6641:7:preference",
+      "file": "main.js",
+      "line": 6641,
+      "column": 7,
+      "endLine": 6641,
+      "kind": "preference",
+      "symbol": "Game.WritePrefButton",
+      "preference": "filters",
+      "control": "filtersButton",
+      "status": "mapped-family",
+      "actions": [
+        "open-menu",
+        "export-save",
+        "preference",
+        "volume",
+        "gift-send",
+        "gift-redeem"
+      ],
+      "note": "Visible Steam preference controls; screen-reader reload, cloud/OS actions and save import are excluded.",
+      "mappingScope": "reviewed source region; not a per-callback equivalence proof"
+    },
+    {
+      "id": "main.js:6642:7:preference",
+      "file": "main.js",
+      "line": 6642,
+      "column": 7,
+      "endLine": 6642,
+      "kind": "preference",
+      "symbol": "Game.WritePrefButton",
+      "preference": "particles",
+      "control": "particlesButton",
+      "status": "mapped-family",
+      "actions": [
+        "open-menu",
+        "export-save",
+        "preference",
+        "volume",
+        "gift-send",
+        "gift-redeem"
+      ],
+      "note": "Visible Steam preference controls; screen-reader reload, cloud/OS actions and save import are excluded.",
+      "mappingScope": "reviewed source region; not a per-callback equivalence proof"
+    },
+    {
+      "id": "main.js:6643:7:preference",
+      "file": "main.js",
+      "line": 6643,
+      "column": 7,
+      "endLine": 6643,
+      "kind": "preference",
+      "symbol": "Game.WritePrefButton",
+      "preference": "numbers",
+      "control": "numbersButton",
+      "status": "mapped-family",
+      "actions": [
+        "open-menu",
+        "export-save",
+        "preference",
+        "volume",
+        "gift-send",
+        "gift-redeem"
+      ],
+      "note": "Visible Steam preference controls; screen-reader reload, cloud/OS actions and save import are excluded.",
+      "mappingScope": "reviewed source region; not a per-callback equivalence proof"
+    },
+    {
+      "id": "main.js:6644:7:preference",
+      "file": "main.js",
+      "line": 6644,
+      "column": 7,
+      "endLine": 6644,
+      "kind": "preference",
+      "symbol": "Game.WritePrefButton",
+      "preference": "milk",
+      "control": "milkButton",
+      "status": "mapped-family",
+      "actions": [
+        "open-menu",
+        "export-save",
+        "preference",
+        "volume",
+        "gift-send",
+        "gift-redeem"
+      ],
+      "note": "Visible Steam preference controls; screen-reader reload, cloud/OS actions and save import are excluded.",
+      "mappingScope": "reviewed source region; not a per-callback equivalence proof"
+    },
+    {
+      "id": "main.js:6645:7:preference",
+      "file": "main.js",
+      "line": 6645,
+      "column": 7,
+      "endLine": 6645,
+      "kind": "preference",
+      "symbol": "Game.WritePrefButton",
+      "preference": "cursors",
+      "control": "cursorsButton",
+      "status": "mapped-family",
+      "actions": [
+        "open-menu",
+        "export-save",
+        "preference",
+        "volume",
+        "gift-send",
+        "gift-redeem"
+      ],
+      "note": "Visible Steam preference controls; screen-reader reload, cloud/OS actions and save import are excluded.",
+      "mappingScope": "reviewed source region; not a per-callback equivalence proof"
+    },
+    {
+      "id": "main.js:6646:7:preference",
+      "file": "main.js",
+      "line": 6646,
+      "column": 7,
+      "endLine": 6646,
+      "kind": "preference",
+      "symbol": "Game.WritePrefButton",
+      "preference": "wobbly",
+      "control": "wobblyButton",
+      "status": "mapped-family",
+      "actions": [
+        "open-menu",
+        "export-save",
+        "preference",
+        "volume",
+        "gift-send",
+        "gift-redeem"
+      ],
+      "note": "Visible Steam preference controls; screen-reader reload, cloud/OS actions and save import are excluded.",
+      "mappingScope": "reviewed source region; not a per-callback equivalence proof"
+    },
+    {
+      "id": "main.js:6647:7:preference",
+      "file": "main.js",
+      "line": 6647,
+      "column": 7,
+      "endLine": 6647,
+      "kind": "preference",
+      "symbol": "Game.WritePrefButton",
+      "preference": "cookiesound",
+      "control": "cookiesoundButton",
+      "status": "mapped-family",
+      "actions": [
+        "open-menu",
+        "export-save",
+        "preference",
+        "volume",
+        "gift-send",
+        "gift-redeem"
+      ],
+      "note": "Visible Steam preference controls; screen-reader reload, cloud/OS actions and save import are excluded.",
+      "mappingScope": "reviewed source region; not a per-callback equivalence proof"
+    },
+    {
+      "id": "main.js:6648:7:preference",
+      "file": "main.js",
+      "line": 6648,
+      "column": 7,
+      "endLine": 6648,
+      "kind": "preference",
+      "symbol": "Game.WritePrefButton",
+      "preference": "crates",
+      "control": "cratesButton",
+      "status": "mapped-family",
+      "actions": [
+        "open-menu",
+        "export-save",
+        "preference",
+        "volume",
+        "gift-send",
+        "gift-redeem"
+      ],
+      "note": "Visible Steam preference controls; screen-reader reload, cloud/OS actions and save import are excluded.",
+      "mappingScope": "reviewed source region; not a per-callback equivalence proof"
+    },
+    {
+      "id": "main.js:6649:7:preference",
+      "file": "main.js",
+      "line": 6649,
+      "column": 7,
+      "endLine": 6649,
+      "kind": "preference",
+      "symbol": "Game.WritePrefButton",
+      "preference": "monospace",
+      "control": "monospaceButton",
+      "status": "mapped-family",
+      "actions": [
+        "open-menu",
+        "export-save",
+        "preference",
+        "volume",
+        "gift-send",
+        "gift-redeem"
+      ],
+      "note": "Visible Steam preference controls; screen-reader reload, cloud/OS actions and save import are excluded.",
+      "mappingScope": "reviewed source region; not a per-callback equivalence proof"
+    },
+    {
+      "id": "main.js:6650:7:preference",
+      "file": "main.js",
+      "line": 6650,
+      "column": 7,
+      "endLine": 6650,
+      "kind": "preference",
+      "symbol": "Game.WritePrefButton",
+      "preference": "format",
+      "control": "formatButton",
+      "status": "mapped-family",
+      "actions": [
+        "open-menu",
+        "export-save",
+        "preference",
+        "volume",
+        "gift-send",
+        "gift-redeem"
+      ],
+      "note": "Visible Steam preference controls; screen-reader reload, cloud/OS actions and save import are excluded.",
+      "mappingScope": "reviewed source region; not a per-callback equivalence proof"
+    },
+    {
+      "id": "main.js:6651:7:preference",
+      "file": "main.js",
+      "line": 6651,
+      "column": 7,
+      "endLine": 6651,
+      "kind": "preference",
+      "symbol": "Game.WritePrefButton",
+      "preference": "notifs",
+      "control": "notifsButton",
+      "status": "mapped-family",
+      "actions": [
+        "open-menu",
+        "export-save",
+        "preference",
+        "volume",
+        "gift-send",
+        "gift-redeem"
+      ],
+      "note": "Visible Steam preference controls; screen-reader reload, cloud/OS actions and save import are excluded.",
+      "mappingScope": "reviewed source region; not a per-callback equivalence proof"
+    },
+    {
+      "id": "main.js:6653:13:preference",
+      "file": "main.js",
+      "line": 6653,
+      "column": 13,
+      "endLine": 6653,
+      "kind": "preference",
+      "symbol": "Game.WritePrefButton",
+      "preference": "warn",
+      "control": "warnButton",
+      "status": "mapped-family",
+      "actions": [
+        "open-menu",
+        "export-save",
+        "preference",
+        "volume",
+        "gift-send",
+        "gift-redeem"
+      ],
+      "note": "Visible Steam preference controls; screen-reader reload, cloud/OS actions and save import are excluded.",
+      "mappingScope": "reviewed source region; not a per-callback equivalence proof"
+    },
+    {
+      "id": "main.js:6655:7:preference",
+      "file": "main.js",
+      "line": 6655,
+      "column": 7,
+      "endLine": 6655,
+      "kind": "preference",
+      "symbol": "Game.WritePrefButton",
+      "preference": "extraButtons",
+      "control": "extraButtonsButton",
+      "status": "mapped-family",
+      "actions": [
+        "open-menu",
+        "export-save",
+        "preference",
+        "volume",
+        "gift-send",
+        "gift-redeem"
+      ],
+      "note": "Visible Steam preference controls; screen-reader reload, cloud/OS actions and save import are excluded.",
+      "mappingScope": "reviewed source region; not a per-callback equivalence proof"
+    },
+    {
+      "id": "main.js:6656:7:preference",
+      "file": "main.js",
+      "line": 6656,
+      "column": 7,
+      "endLine": 6656,
+      "kind": "preference",
+      "symbol": "Game.WritePrefButton",
+      "preference": "askLumps",
+      "control": "askLumpsButton",
+      "status": "mapped-family",
+      "actions": [
+        "open-menu",
+        "export-save",
+        "preference",
+        "volume",
+        "gift-send",
+        "gift-redeem"
+      ],
+      "note": "Visible Steam preference controls; screen-reader reload, cloud/OS actions and save import are excluded.",
+      "mappingScope": "reviewed source region; not a per-callback equivalence proof"
+    },
+    {
+      "id": "main.js:6657:13:preference",
+      "file": "main.js",
+      "line": 6657,
+      "column": 13,
+      "endLine": 6657,
+      "kind": "preference",
+      "symbol": "Game.WritePrefButton",
+      "preference": "customGrandmas",
+      "control": "customGrandmasButton",
+      "status": "mapped-family",
+      "actions": [
+        "open-menu",
+        "export-save",
+        "preference",
+        "volume",
+        "gift-send",
+        "gift-redeem"
+      ],
+      "note": "Visible Steam preference controls; screen-reader reload, cloud/OS actions and save import are excluded.",
+      "mappingScope": "reviewed source region; not a per-callback equivalence proof"
+    },
+    {
+      "id": "main.js:6658:7:preference",
+      "file": "main.js",
+      "line": 6658,
+      "column": 7,
+      "endLine": 6658,
+      "kind": "preference",
+      "symbol": "Game.WritePrefButton",
+      "preference": "notScary",
+      "control": "notScaryButton",
+      "status": "mapped-family",
+      "actions": [
+        "open-menu",
+        "export-save",
+        "preference",
+        "volume",
+        "gift-send",
+        "gift-redeem"
+      ],
+      "note": "Visible Steam preference controls; screen-reader reload, cloud/OS actions and save import are excluded.",
+      "mappingScope": "reviewed source region; not a per-callback equivalence proof"
+    },
+    {
+      "id": "main.js:6659:7:preference",
+      "file": "main.js",
+      "line": 6659,
+      "column": 7,
+      "endLine": 6659,
+      "kind": "preference",
+      "symbol": "Game.WritePrefButton",
+      "preference": "timeout",
+      "control": "timeoutButton",
+      "status": "mapped-family",
+      "actions": [
+        "open-menu",
+        "export-save",
+        "preference",
+        "volume",
+        "gift-send",
+        "gift-redeem"
+      ],
+      "note": "Visible Steam preference controls; screen-reader reload, cloud/OS actions and save import are excluded.",
+      "mappingScope": "reviewed source region; not a per-callback equivalence proof"
+    },
+    {
+      "id": "main.js:6660:7:preference",
+      "file": "main.js",
+      "line": 6660,
+      "column": 7,
+      "endLine": 6660,
+      "kind": "preference",
+      "symbol": "Game.WritePrefButton",
+      "preference": "screenreader",
+      "control": "screenreaderButton",
+      "status": "mapped-family",
+      "actions": [
+        "open-menu",
+        "export-save",
+        "preference",
+        "volume",
+        "gift-send",
+        "gift-redeem"
+      ],
+      "note": "Visible Steam preference controls; screen-reader reload, cloud/OS actions and save import are excluded.",
+      "mappingScope": "reviewed source region; not a per-callback equivalence proof"
+    },
+    {
+      "id": "main.js:6663:71:generated-event-attribute",
+      "file": "main.js",
+      "line": 6663,
+      "column": 71,
+      "endLine": 6663,
+      "kind": "generated-event-attribute",
+      "symbol": "Game.clickStr",
+      "status": "mapped-family",
+      "actions": [
+        "open-menu",
+        "export-save",
+        "preference",
+        "volume",
+        "gift-send",
+        "gift-redeem"
+      ],
+      "note": "Visible Steam preference controls; screen-reader reload, cloud/OS actions and save import are excluded.",
+      "mappingScope": "reviewed source region; not a per-callback equivalence proof"
+    },
+    {
+      "id": "main.js:6687:109:generated-event-attribute",
+      "file": "main.js",
+      "line": 6687,
+      "column": 109,
+      "endLine": 6687,
+      "kind": "generated-event-attribute",
+      "symbol": "Game.clickStr",
+      "status": "mapped-family",
+      "actions": [
+        "open-menu",
+        "forgotten-madeleine",
+        "achievement-slot"
+      ],
+      "note": "Info/stats menu interactions; external links do not change economic state.",
+      "mappingScope": "reviewed source region; not a per-callback equivalence proof"
+    },
+    {
+      "id": "main.js:6958:6:listener",
+      "file": "main.js",
+      "line": 6958,
+      "column": 6,
+      "endLine": 6960,
+      "kind": "listener",
+      "symbol": "AddEvent",
+      "event": "click",
+      "status": "mapped-family",
+      "actions": [
+        "open-menu",
+        "forgotten-madeleine",
+        "achievement-slot"
+      ],
+      "note": "Info/stats menu interactions; external links do not change economic state.",
+      "mappingScope": "reviewed source region; not a per-callback equivalence proof"
+    },
+    {
+      "id": "main.js:6970:2:listener",
+      "file": "main.js",
+      "line": 6970,
+      "column": 2,
+      "endLine": 6970,
+      "kind": "listener",
+      "symbol": "AddEvent",
+      "event": "click",
+      "status": "mapped-family",
+      "actions": [
+        "open-menu",
+        "forgotten-madeleine",
+        "achievement-slot"
+      ],
+      "note": "Info/stats menu interactions; external links do not change economic state.",
+      "mappingScope": "reviewed source region; not a per-callback equivalence proof"
+    },
+    {
+      "id": "main.js:6971:2:listener",
+      "file": "main.js",
+      "line": 6971,
+      "column": 2,
+      "endLine": 6971,
+      "kind": "listener",
+      "symbol": "AddEvent",
+      "event": "click",
+      "status": "mapped-family",
+      "actions": [
+        "open-menu",
+        "forgotten-madeleine",
+        "achievement-slot"
+      ],
+      "note": "Info/stats menu interactions; external links do not change economic state.",
+      "mappingScope": "reviewed source region; not a per-callback equivalence proof"
+    },
+    {
+      "id": "main.js:6972:2:listener",
+      "file": "main.js",
+      "line": 6972,
+      "column": 2,
+      "endLine": 6972,
+      "kind": "listener",
+      "symbol": "AddEvent",
+      "event": "click",
+      "status": "mapped-family",
+      "actions": [
+        "open-menu",
+        "forgotten-madeleine",
+        "achievement-slot"
+      ],
+      "note": "Info/stats menu interactions; external links do not change economic state.",
+      "mappingScope": "reviewed source region; not a per-callback equivalence proof"
+    },
+    {
+      "id": "main.js:6973:2:listener",
+      "file": "main.js",
+      "line": 6973,
+      "column": 2,
+      "endLine": 6973,
+      "kind": "listener",
+      "symbol": "AddEvent",
+      "event": "click",
+      "status": "mapped-family",
+      "actions": [
+        "open-menu",
+        "forgotten-madeleine",
+        "achievement-slot"
+      ],
+      "note": "Info/stats menu interactions; external links do not change economic state.",
+      "mappingScope": "reviewed source region; not a per-callback equivalence proof"
+    },
+    {
+      "id": "main.js:7584:33:rng-reset",
+      "file": "main.js",
+      "line": 7584,
+      "column": 33,
+      "endLine": 7584,
+      "kind": "rng-reset",
+      "symbol": "Math.seedrandom",
+      "explicitSeed": true,
+      "status": "environment",
+      "actions": [],
+      "note": "Explicit seeded generator is native; unseeded reset resumes the injected tape. No policy receives future draws."
+    },
+    {
+      "id": "main.js:7584:292:rng-reset",
+      "file": "main.js",
+      "line": 7584,
+      "column": 292,
+      "endLine": 7584,
+      "kind": "rng-reset",
+      "symbol": "Math.seedrandom",
+      "explicitSeed": false,
+      "status": "environment",
+      "actions": [],
+      "note": "Explicit seeded generator is native; unseeded reset resumes the injected tape. No policy receives future draws."
+    },
+    {
+      "id": "main.js:7625:2:listener",
+      "file": "main.js",
+      "line": 7625,
+      "column": 2,
+      "endLine": 7657,
+      "kind": "listener",
+      "symbol": "AddEvent",
+      "event": "click",
+      "status": "mapped-family",
+      "actions": [
+        "click-news"
+      ],
+      "note": "News ticker and fortune click.",
+      "mappingScope": "reviewed source region; not a per-callback equivalence proof"
+    },
+    {
+      "id": "main.js:8209:41:generated-html-handler",
+      "file": "main.js",
+      "line": 8209,
+      "column": 41,
+      "endLine": 8209,
+      "kind": "generated-html-handler",
+      "symbol": "string literal",
+      "events": [
+        "click"
+      ],
+      "status": "mapped-family",
+      "actions": [
+        "buy-building",
+        "sell-building",
+        "click-product",
+        "store-bulk",
+        "level-building",
+        "minigame-open",
+        "building-mute"
+      ],
+      "note": "Building economic inputs and display controls.",
+      "mappingScope": "reviewed source region; not a per-callback equivalence proof"
+    },
+    {
+      "id": "main.js:8210:50:generated-html-handler",
+      "file": "main.js",
+      "line": 8210,
+      "column": 50,
+      "endLine": 8210,
+      "kind": "generated-html-handler",
+      "symbol": "string literal",
+      "events": [
+        "click"
+      ],
+      "status": "mapped-family",
+      "actions": [
+        "buy-building",
+        "sell-building",
+        "click-product",
+        "store-bulk",
+        "level-building",
+        "minigame-open",
+        "building-mute"
+      ],
+      "note": "Building economic inputs and display controls.",
+      "mappingScope": "reviewed source region; not a per-callback equivalence proof"
+    },
+    {
+      "id": "main.js:8211:245:generated-html-handler",
+      "file": "main.js",
+      "line": 8211,
+      "column": 245,
+      "endLine": 8211,
+      "kind": "generated-html-handler",
+      "symbol": "string literal",
+      "events": [
+        "click"
+      ],
+      "status": "mapped-family",
+      "actions": [
+        "buy-building",
+        "sell-building",
+        "click-product",
+        "store-bulk",
+        "level-building",
+        "minigame-open",
+        "building-mute"
+      ],
+      "note": "Building economic inputs and display controls.",
+      "mappingScope": "reviewed source region; not a per-callback equivalence proof"
+    },
+    {
+      "id": "main.js:8220:120:generated-event-attribute",
+      "file": "main.js",
+      "line": 8220,
+      "column": 120,
+      "endLine": 8220,
+      "kind": "generated-event-attribute",
+      "symbol": "Game.clickStr",
+      "status": "mapped-family",
+      "actions": [
+        "buy-building",
+        "sell-building",
+        "click-product",
+        "store-bulk",
+        "level-building",
+        "minigame-open",
+        "building-mute"
+      ],
+      "note": "Building economic inputs and display controls.",
+      "mappingScope": "reviewed source region; not a per-callback equivalence proof"
+    },
+    {
+      "id": "main.js:8299:8:rng-reset",
+      "file": "main.js",
+      "line": 8299,
+      "column": 8,
+      "endLine": 8299,
+      "kind": "rng-reset",
+      "symbol": "Math.seedrandom",
+      "explicitSeed": true,
+      "status": "environment",
+      "actions": [],
+      "note": "Explicit seeded generator is native; unseeded reset resumes the injected tape. No policy receives future draws."
+    },
+    {
+      "id": "main.js:8376:5:rng-reset",
+      "file": "main.js",
+      "line": 8376,
+      "column": 5,
+      "endLine": 8376,
+      "kind": "rng-reset",
+      "symbol": "Math.seedrandom",
+      "explicitSeed": false,
+      "status": "environment",
+      "actions": [],
+      "note": "Explicit seeded generator is native; unseeded reset resumes the injected tape. No policy receives future draws."
+    },
+    {
+      "id": "main.js:8387:7:rng-reset",
+      "file": "main.js",
+      "line": 8387,
+      "column": 7,
+      "endLine": 8387,
+      "kind": "rng-reset",
+      "symbol": "Math.seedrandom",
+      "explicitSeed": true,
+      "status": "environment",
+      "actions": [],
+      "note": "Explicit seeded generator is native; unseeded reset resumes the injected tape. No policy receives future draws."
+    },
+    {
+      "id": "main.js:8396:7:rng-reset",
+      "file": "main.js",
+      "line": 8396,
+      "column": 7,
+      "endLine": 8396,
+      "kind": "rng-reset",
+      "symbol": "Math.seedrandom",
+      "explicitSeed": false,
+      "status": "environment",
+      "actions": [],
+      "note": "Explicit seeded generator is native; unseeded reset resumes the injected tape. No policy receives future draws."
+    },
+    {
+      "id": "main.js:8421:7:rng-reset",
+      "file": "main.js",
+      "line": 8421,
+      "column": 7,
+      "endLine": 8421,
+      "kind": "rng-reset",
+      "symbol": "Math.seedrandom",
+      "explicitSeed": true,
+      "status": "environment",
+      "actions": [],
+      "note": "Explicit seeded generator is native; unseeded reset resumes the injected tape. No policy receives future draws."
+    },
+    {
+      "id": "main.js:8423:7:rng-reset",
+      "file": "main.js",
+      "line": 8423,
+      "column": 7,
+      "endLine": 8423,
+      "kind": "rng-reset",
+      "symbol": "Math.seedrandom",
+      "explicitSeed": true,
+      "status": "environment",
+      "actions": [],
+      "note": "Explicit seeded generator is native; unseeded reset resumes the injected tape. No policy receives future draws."
+    },
+    {
+      "id": "main.js:8558:67:generated-event-attribute",
+      "file": "main.js",
+      "line": 8558,
+      "column": 67,
+      "endLine": 8558,
+      "kind": "generated-event-attribute",
+      "symbol": "Game.clickStr",
+      "status": "mapped-family",
+      "actions": [
+        "buy-building",
+        "sell-building",
+        "click-product",
+        "store-bulk",
+        "level-building",
+        "minigame-open",
+        "building-mute"
+      ],
+      "note": "Building economic inputs and display controls.",
+      "mappingScope": "reviewed source region; not a per-callback equivalence proof"
+    },
+    {
+      "id": "main.js:8559:68:generated-event-attribute",
+      "file": "main.js",
+      "line": 8559,
+      "column": 68,
+      "endLine": 8559,
+      "kind": "generated-event-attribute",
+      "symbol": "Game.clickStr",
+      "status": "mapped-family",
+      "actions": [
+        "buy-building",
+        "sell-building",
+        "click-product",
+        "store-bulk",
+        "level-building",
+        "minigame-open",
+        "building-mute"
+      ],
+      "note": "Building economic inputs and display controls.",
+      "mappingScope": "reviewed source region; not a per-callback equivalence proof"
+    },
+    {
+      "id": "main.js:8560:67:generated-event-attribute",
+      "file": "main.js",
+      "line": 8560,
+      "column": 67,
+      "endLine": 8560,
+      "kind": "generated-event-attribute",
+      "symbol": "Game.clickStr",
+      "status": "mapped-family",
+      "actions": [
+        "buy-building",
+        "sell-building",
+        "click-product",
+        "store-bulk",
+        "level-building",
+        "minigame-open",
+        "building-mute"
+      ],
+      "note": "Building economic inputs and display controls.",
+      "mappingScope": "reviewed source region; not a per-callback equivalence proof"
+    },
+    {
+      "id": "main.js:8561:68:generated-event-attribute",
+      "file": "main.js",
+      "line": 8561,
+      "column": 68,
+      "endLine": 8561,
+      "kind": "generated-event-attribute",
+      "symbol": "Game.clickStr",
+      "status": "mapped-family",
+      "actions": [
+        "buy-building",
+        "sell-building",
+        "click-product",
+        "store-bulk",
+        "level-building",
+        "minigame-open",
+        "building-mute"
+      ],
+      "note": "Building economic inputs and display controls.",
+      "mappingScope": "reviewed source region; not a per-callback equivalence proof"
+    },
+    {
+      "id": "main.js:8562:69:generated-event-attribute",
+      "file": "main.js",
+      "line": 8562,
+      "column": 69,
+      "endLine": 8562,
+      "kind": "generated-event-attribute",
+      "symbol": "Game.clickStr",
+      "status": "mapped-family",
+      "actions": [
+        "buy-building",
+        "sell-building",
+        "click-product",
+        "store-bulk",
+        "level-building",
+        "minigame-open",
+        "building-mute"
+      ],
+      "note": "Building economic inputs and display controls.",
+      "mappingScope": "reviewed source region; not a per-callback equivalence proof"
+    },
+    {
+      "id": "main.js:8563:69:generated-event-attribute",
+      "file": "main.js",
+      "line": 8563,
+      "column": 69,
+      "endLine": 8563,
+      "kind": "generated-event-attribute",
+      "symbol": "Game.clickStr",
+      "status": "mapped-family",
+      "actions": [
+        "buy-building",
+        "sell-building",
+        "click-product",
+        "store-bulk",
+        "level-building",
+        "minigame-open",
+        "building-mute"
+      ],
+      "note": "Building economic inputs and display controls.",
+      "mappingScope": "reviewed source region; not a per-callback equivalence proof"
+    },
+    {
+      "id": "main.js:8589:5:listener",
+      "file": "main.js",
+      "line": 8589,
+      "column": 5,
+      "endLine": 8589,
+      "kind": "listener",
+      "symbol": "AddEvent",
+      "event": "click",
+      "status": "mapped-family",
+      "actions": [
+        "buy-building",
+        "sell-building",
+        "click-product",
+        "store-bulk",
+        "level-building",
+        "minigame-open",
+        "building-mute"
+      ],
+      "note": "Building economic inputs and display controls.",
+      "mappingScope": "reviewed source region; not a per-callback equivalence proof"
+    },
+    {
+      "id": "main.js:8593:5:listener",
+      "file": "main.js",
+      "line": 8593,
+      "column": 5,
+      "endLine": 8593,
+      "kind": "listener",
+      "symbol": "AddEvent",
+      "event": "touchend",
+      "status": "mapped-family",
+      "actions": [
+        "buy-building",
+        "sell-building",
+        "click-product",
+        "store-bulk",
+        "level-building",
+        "minigame-open",
+        "building-mute"
+      ],
+      "note": "Building economic inputs and display controls.",
+      "mappingScope": "reviewed source region; not a per-callback equivalence proof"
+    },
+    {
+      "id": "main.js:8633:5:timer",
+      "file": "main.js",
+      "line": 8633,
+      "column": 5,
+      "endLine": 8650,
+      "kind": "timer",
+      "symbol": "setTimeout",
+      "status": "autonomous",
+      "actions": [
+        "wait"
+      ],
+      "note": "Native callback is scheduled by the deterministic timer adapter; asynchronous browser APIs remain environment assumptions."
+    },
+    {
+      "id": "main.js:9245:3:prompt",
+      "file": "main.js",
+      "line": 9245,
+      "column": 3,
+      "endLine": 9245,
+      "kind": "prompt",
+      "symbol": "Game.Prompt",
+      "status": "mapped-family",
+      "actions": [
+        "customizer-gene",
+        "customizer-random"
+      ],
+      "note": "Clone customization; customizer import/export is an unresolved alternate input path.",
+      "mappingScope": "reviewed source region; not a per-callback equivalence proof"
+    },
+    {
+      "id": "main.js:9252:3:prompt",
+      "file": "main.js",
+      "line": 9252,
+      "column": 3,
+      "endLine": 9252,
+      "kind": "prompt",
+      "symbol": "Game.Prompt",
+      "status": "mapped-family",
+      "actions": [
+        "customizer-gene",
+        "customizer-random"
+      ],
+      "note": "Clone customization; customizer import/export is an unresolved alternate input path.",
+      "mappingScope": "reviewed source region; not a per-callback equivalence proof"
+    },
+    {
+      "id": "main.js:9260:71:generated-event-attribute",
+      "file": "main.js",
+      "line": 9260,
+      "column": 71,
+      "endLine": 9260,
+      "kind": "generated-event-attribute",
+      "symbol": "Game.clickStr",
+      "status": "mapped-family",
+      "actions": [
+        "customizer-gene",
+        "customizer-random"
+      ],
+      "note": "Clone customization; customizer import/export is an unresolved alternate input path.",
+      "mappingScope": "reviewed source region; not a per-callback equivalence proof"
+    },
+    {
+      "id": "main.js:9260:473:generated-event-attribute",
+      "file": "main.js",
+      "line": 9260,
+      "column": 473,
+      "endLine": 9260,
+      "kind": "generated-event-attribute",
+      "symbol": "Game.clickStr",
+      "status": "mapped-family",
+      "actions": [
+        "customizer-gene",
+        "customizer-random"
+      ],
+      "note": "Clone customization; customizer import/export is an unresolved alternate input path.",
+      "mappingScope": "reviewed source region; not a per-callback equivalence proof"
+    },
+    {
+      "id": "main.js:9262:3:prompt",
+      "file": "main.js",
+      "line": 9262,
+      "column": 3,
+      "endLine": 9276,
+      "kind": "prompt",
+      "symbol": "Game.Prompt",
+      "status": "mapped-family",
+      "actions": [
+        "customizer-gene",
+        "customizer-random"
+      ],
+      "note": "Clone customization; customizer import/export is an unresolved alternate input path.",
+      "mappingScope": "reviewed source region; not a per-callback equivalence proof"
+    },
+    {
+      "id": "main.js:9263:4:generated-html-handler",
+      "file": "main.js",
+      "line": 9263,
+      "column": 4,
+      "endLine": 9263,
+      "kind": "generated-html-handler",
+      "symbol": "string literal",
+      "events": [
+        "click"
+      ],
+      "status": "mapped-family",
+      "actions": [
+        "customizer-gene",
+        "customizer-random"
+      ],
+      "note": "Clone customization; customizer import/export is an unresolved alternate input path.",
+      "mappingScope": "reviewed source region; not a per-callback equivalence proof"
+    },
+    {
+      "id": "main.js:9264:4:generated-html-handler",
+      "file": "main.js",
+      "line": 9264,
+      "column": 4,
+      "endLine": 9264,
+      "kind": "generated-html-handler",
+      "symbol": "string literal",
+      "events": [
+        "click"
+      ],
+      "status": "mapped-family",
+      "actions": [
+        "customizer-gene",
+        "customizer-random"
+      ],
+      "note": "Clone customization; customizer import/export is an unresolved alternate input path.",
+      "mappingScope": "reviewed source region; not a per-callback equivalence proof"
+    },
+    {
+      "id": "main.js:9267:5:generated-html-handler",
+      "file": "main.js",
+      "line": 9267,
+      "column": 5,
+      "endLine": 9267,
+      "kind": "generated-html-handler",
+      "symbol": "string literal",
+      "events": [
+        "click"
+      ],
+      "status": "mapped-family",
+      "actions": [
+        "customizer-gene",
+        "customizer-random"
+      ],
+      "note": "Clone customization; customizer import/export is an unresolved alternate input path.",
+      "mappingScope": "reviewed source region; not a per-callback equivalence proof"
+    },
+    {
+      "id": "main.js:9345:144:generated-event-attribute",
+      "file": "main.js",
+      "line": 9345,
+      "column": 144,
+      "endLine": 9345,
+      "kind": "generated-event-attribute",
+      "symbol": "Game.clickStr",
+      "status": "mapped-family",
+      "actions": [
+        "building-hover",
+        "building-mute"
+      ],
+      "note": "Building pointer entry is native; You-hover entry is policy-excluded except diagnostic mode.",
+      "mappingScope": "reviewed source region; not a per-callback equivalence proof"
+    },
+    {
+      "id": "main.js:9348:4:listener",
+      "file": "main.js",
+      "line": 9348,
+      "column": 4,
+      "endLine": 9348,
+      "kind": "listener",
+      "symbol": "AddEvent",
+      "event": "mouseover",
+      "status": "mapped-family",
+      "actions": [
+        "building-hover",
+        "building-mute"
+      ],
+      "note": "Building pointer entry is native; You-hover entry is policy-excluded except diagnostic mode.",
+      "mappingScope": "reviewed source region; not a per-callback equivalence proof"
+    },
+    {
+      "id": "main.js:9349:4:listener",
+      "file": "main.js",
+      "line": 9349,
+      "column": 4,
+      "endLine": 9349,
+      "kind": "listener",
+      "symbol": "AddEvent",
+      "event": "mouseout",
+      "status": "mapped-family",
+      "actions": [
+        "building-hover",
+        "building-mute"
+      ],
+      "note": "Building pointer entry is native; You-hover entry is policy-excluded except diagnostic mode.",
+      "mappingScope": "reviewed source region; not a per-callback equivalence proof"
+    },
+    {
+      "id": "main.js:9350:4:listener",
+      "file": "main.js",
+      "line": 9350,
+      "column": 4,
+      "endLine": 9350,
+      "kind": "listener",
+      "symbol": "AddEvent",
+      "event": "mousemove",
+      "status": "mapped-family",
+      "actions": [
+        "building-hover",
+        "building-mute"
+      ],
+      "note": "Building pointer entry is native; You-hover entry is policy-excluded except diagnostic mode.",
+      "mappingScope": "reviewed source region; not a per-callback equivalence proof"
+    },
+    {
+      "id": "main.js:9501:11:generated-html-handler",
+      "file": "main.js",
+      "line": 9501,
+      "column": 11,
+      "endLine": 9501,
+      "kind": "generated-html-handler",
+      "symbol": "string literal",
+      "events": [
+        "click"
+      ],
+      "status": "mapped-family",
+      "actions": [
+        "buy-upgrade",
+        "upgrade-vault",
+        "buy-all-upgrades",
+        "select-cosmetic",
+        "prompt"
+      ],
+      "note": "Upgrade purchase, choice and native confirmation callbacks.",
+      "mappingScope": "reviewed source region; not a per-callback equivalence proof"
+    },
+    {
+      "id": "main.js:9537:157:generated-event-attribute",
+      "file": "main.js",
+      "line": 9537,
+      "column": 157,
+      "endLine": 9537,
+      "kind": "generated-event-attribute",
+      "symbol": "Game.clickStr",
+      "status": "mapped-family",
+      "actions": [
+        "buy-upgrade",
+        "upgrade-vault",
+        "buy-all-upgrades",
+        "select-cosmetic",
+        "prompt"
+      ],
+      "note": "Upgrade purchase, choice and native confirmation callbacks.",
+      "mappingScope": "reviewed source region; not a per-callback equivalence proof"
+    },
+    {
+      "id": "main.js:9537:278:generated-html-handler",
+      "file": "main.js",
+      "line": 9537,
+      "column": 278,
+      "endLine": 9537,
+      "kind": "generated-html-handler",
+      "symbol": "string literal",
+      "events": [
+        "mouseout",
+        "mouseover"
+      ],
+      "status": "mapped-family",
+      "actions": [
+        "buy-upgrade",
+        "upgrade-vault",
+        "buy-all-upgrades",
+        "select-cosmetic",
+        "prompt"
+      ],
+      "note": "Upgrade purchase, choice and native confirmation callbacks.",
+      "mappingScope": "reviewed source region; not a per-callback equivalence proof"
+    },
+    {
+      "id": "main.js:9661:3:callback-property",
+      "file": "main.js",
+      "line": 9661,
+      "column": 3,
+      "endLine": 9661,
+      "kind": "callback-property",
+      "symbol": "upgrade.clickFunction",
+      "status": "mapped-family",
+      "actions": [
+        "buy-upgrade",
+        "upgrade-vault",
+        "buy-all-upgrades",
+        "select-cosmetic",
+        "prompt"
+      ],
+      "note": "Upgrade purchase, choice and native confirmation callbacks.",
+      "mappingScope": "reviewed source region; not a per-callback equivalence proof"
+    },
+    {
+      "id": "main.js:9661:36:prompt",
+      "file": "main.js",
+      "line": 9661,
+      "column": 36,
+      "endLine": 9661,
+      "kind": "prompt",
+      "symbol": "Game.Prompt",
+      "status": "mapped-family",
+      "actions": [
+        "buy-upgrade",
+        "upgrade-vault",
+        "buy-all-upgrades",
+        "select-cosmetic",
+        "prompt"
+      ],
+      "note": "Upgrade purchase, choice and native confirmation callbacks.",
+      "mappingScope": "reviewed source region; not a per-callback equivalence proof"
+    },
+    {
+      "id": "main.js:9748:60:generated-event-attribute",
+      "file": "main.js",
+      "line": 9748,
+      "column": 60,
+      "endLine": 9748,
+      "kind": "generated-event-attribute",
+      "symbol": "Game.clickStr",
+      "status": "mapped-family",
+      "actions": [
+        "buy-upgrade",
+        "upgrade-vault",
+        "buy-all-upgrades",
+        "select-cosmetic",
+        "prompt"
+      ],
+      "note": "Upgrade purchase, choice and native confirmation callbacks.",
+      "mappingScope": "reviewed source region; not a per-callback equivalence proof"
+    },
+    {
+      "id": "main.js:10514:159:callback-property",
+      "file": "main.js",
+      "line": 10514,
+      "column": 159,
+      "endLine": 10514,
+      "kind": "callback-property",
+      "symbol": "Game.last.activateFunction",
+      "status": "mapped-family",
+      "actions": [
+        "buy-upgrade",
+        "permanent-slot",
+        "prompt"
+      ],
+      "note": "Upgrade effects and permanent-slot selection.",
+      "mappingScope": "reviewed source region; not a per-callback equivalence proof"
+    },
+    {
+      "id": "main.js:10515:209:callback-property",
+      "file": "main.js",
+      "line": 10515,
+      "column": 209,
+      "endLine": 10515,
+      "kind": "callback-property",
+      "symbol": "Game.last.activateFunction",
+      "status": "mapped-family",
+      "actions": [
+        "buy-upgrade",
+        "permanent-slot",
+        "prompt"
+      ],
+      "note": "Upgrade effects and permanent-slot selection.",
+      "mappingScope": "reviewed source region; not a per-callback equivalence proof"
+    },
+    {
+      "id": "main.js:10516:213:callback-property",
+      "file": "main.js",
+      "line": 10516,
+      "column": 213,
+      "endLine": 10516,
+      "kind": "callback-property",
+      "symbol": "Game.last.activateFunction",
+      "status": "mapped-family",
+      "actions": [
+        "buy-upgrade",
+        "permanent-slot",
+        "prompt"
+      ],
+      "note": "Upgrade effects and permanent-slot selection.",
+      "mappingScope": "reviewed source region; not a per-callback equivalence proof"
+    },
+    {
+      "id": "main.js:10517:215:callback-property",
+      "file": "main.js",
+      "line": 10517,
+      "column": 215,
+      "endLine": 10517,
+      "kind": "callback-property",
+      "symbol": "Game.last.activateFunction",
+      "status": "mapped-family",
+      "actions": [
+        "buy-upgrade",
+        "permanent-slot",
+        "prompt"
+      ],
+      "note": "Upgrade effects and permanent-slot selection.",
+      "mappingScope": "reviewed source region; not a per-callback equivalence proof"
+    },
+    {
+      "id": "main.js:10518:215:callback-property",
+      "file": "main.js",
+      "line": 10518,
+      "column": 215,
+      "endLine": 10518,
+      "kind": "callback-property",
+      "symbol": "Game.last.activateFunction",
+      "status": "mapped-family",
+      "actions": [
+        "buy-upgrade",
+        "permanent-slot",
+        "prompt"
+      ],
+      "note": "Upgrade effects and permanent-slot selection.",
+      "mappingScope": "reviewed source region; not a per-callback equivalence proof"
+    },
+    {
+      "id": "main.js:10567:3:prompt",
+      "file": "main.js",
+      "line": 10567,
+      "column": 3,
+      "endLine": 10572,
+      "kind": "prompt",
+      "symbol": "Game.Prompt",
+      "status": "mapped-family",
+      "actions": [
+        "buy-upgrade",
+        "permanent-slot",
+        "prompt"
+      ],
+      "note": "Upgrade effects and permanent-slot selection.",
+      "mappingScope": "reviewed source region; not a per-callback equivalence proof"
+    },
+    {
+      "id": "main.js:10706:2:callback-property",
+      "file": "main.js",
+      "line": 10706,
+      "column": 2,
+      "endLine": 10729,
+      "kind": "callback-property",
+      "symbol": "Game.last.choicesFunction",
+      "status": "mapped-family",
+      "actions": [
+        "buy-upgrade",
+        "select-cosmetic",
+        "prompt"
+      ],
+      "note": "Season, research and toggle effects entered through native upgrade purchases.",
+      "mappingScope": "reviewed source region; not a per-callback equivalence proof"
+    },
+    {
+      "id": "main.js:10730:2:callback-property",
+      "file": "main.js",
+      "line": 10730,
+      "column": 2,
+      "endLine": 10731,
+      "kind": "callback-property",
+      "symbol": "Game.last.choicesPick",
+      "status": "mapped-family",
+      "actions": [
+        "buy-upgrade",
+        "select-cosmetic",
+        "prompt"
+      ],
+      "note": "Season, research and toggle effects entered through native upgrade purchases.",
+      "mappingScope": "reviewed source region; not a per-callback equivalence proof"
+    },
+    {
+      "id": "main.js:10786:2:callback-property",
+      "file": "main.js",
+      "line": 10786,
+      "column": 2,
+      "endLine": 10798,
+      "kind": "callback-property",
+      "symbol": "Game.last.choicesFunction",
+      "status": "mapped-family",
+      "actions": [
+        "buy-upgrade",
+        "select-cosmetic",
+        "prompt"
+      ],
+      "note": "Season, research and toggle effects entered through native upgrade purchases.",
+      "mappingScope": "reviewed source region; not a per-callback equivalence proof"
+    },
+    {
+      "id": "main.js:10799:2:callback-property",
+      "file": "main.js",
+      "line": 10799,
+      "column": 2,
+      "endLine": 10803,
+      "kind": "callback-property",
+      "symbol": "Game.last.choicesPick",
+      "status": "mapped-family",
+      "actions": [
+        "buy-upgrade",
+        "select-cosmetic",
+        "prompt"
+      ],
+      "note": "Season, research and toggle effects entered through native upgrade purchases.",
+      "mappingScope": "reviewed source region; not a per-callback equivalence proof"
+    },
+    {
+      "id": "main.js:10910:2:callback-property",
+      "file": "main.js",
+      "line": 10910,
+      "column": 2,
+      "endLine": 10928,
+      "kind": "callback-property",
+      "symbol": "Game.last.choicesFunction",
+      "status": "mapped-family",
+      "actions": [
+        "buy-upgrade",
+        "select-cosmetic",
+        "prompt"
+      ],
+      "note": "Season, research and toggle effects entered through native upgrade purchases.",
+      "mappingScope": "reviewed source region; not a per-callback equivalence proof"
+    },
+    {
+      "id": "main.js:10929:2:callback-property",
+      "file": "main.js",
+      "line": 10929,
+      "column": 2,
+      "endLine": 10930,
+      "kind": "callback-property",
+      "symbol": "Game.last.choicesPick",
+      "status": "mapped-family",
+      "actions": [
+        "buy-upgrade",
+        "select-cosmetic",
+        "prompt"
+      ],
+      "note": "Season, research and toggle effects entered through native upgrade purchases.",
+      "mappingScope": "reviewed source region; not a per-callback equivalence proof"
+    },
+    {
+      "id": "main.js:11040:2:callback-property",
+      "file": "main.js",
+      "line": 11040,
+      "column": 2,
+      "endLine": 11045,
+      "kind": "callback-property",
+      "symbol": "Game.last.clickFunction",
+      "status": "mapped-family",
+      "actions": [
+        "buy-upgrade",
+        "select-cosmetic",
+        "prompt"
+      ],
+      "note": "Season, research and toggle effects entered through native upgrade purchases.",
+      "mappingScope": "reviewed source region; not a per-callback equivalence proof"
+    },
+    {
+      "id": "main.js:11206:4:rng-reset",
+      "file": "main.js",
+      "line": 11206,
+      "column": 4,
+      "endLine": 11206,
+      "kind": "rng-reset",
+      "symbol": "Math.seedrandom",
+      "explicitSeed": true,
+      "status": "environment",
+      "actions": [],
+      "note": "Explicit seeded generator is native; unseeded reset resumes the injected tape. No policy receives future draws."
+    },
+    {
+      "id": "main.js:11207:28:rng-reset",
+      "file": "main.js",
+      "line": 11207,
+      "column": 28,
+      "endLine": 11207,
+      "kind": "rng-reset",
+      "symbol": "Math.seedrandom",
+      "explicitSeed": false,
+      "status": "environment",
+      "actions": [],
+      "note": "Explicit seeded generator is native; unseeded reset resumes the injected tape. No policy receives future draws."
+    },
+    {
+      "id": "main.js:11208:10:rng-reset",
+      "file": "main.js",
+      "line": 11208,
+      "column": 10,
+      "endLine": 11208,
+      "kind": "rng-reset",
+      "symbol": "Math.seedrandom",
+      "explicitSeed": false,
+      "status": "environment",
+      "actions": [],
+      "note": "Explicit seeded generator is native; unseeded reset resumes the injected tape. No policy receives future draws."
+    },
+    {
+      "id": "main.js:11294:28:rng-reset",
+      "file": "main.js",
+      "line": 11294,
+      "column": 28,
+      "endLine": 11294,
+      "kind": "rng-reset",
+      "symbol": "Math.seedrandom",
+      "explicitSeed": true,
+      "status": "environment",
+      "actions": [],
+      "note": "Explicit seeded generator is native; unseeded reset resumes the injected tape. No policy receives future draws."
+    },
+    {
+      "id": "main.js:11295:31:rng-reset",
+      "file": "main.js",
+      "line": 11295,
+      "column": 31,
+      "endLine": 11295,
+      "kind": "rng-reset",
+      "symbol": "Math.seedrandom",
+      "explicitSeed": true,
+      "status": "environment",
+      "actions": [],
+      "note": "Explicit seeded generator is native; unseeded reset resumes the injected tape. No policy receives future draws."
+    },
+    {
+      "id": "main.js:11300:5:rng-reset",
+      "file": "main.js",
+      "line": 11300,
+      "column": 5,
+      "endLine": 11300,
+      "kind": "rng-reset",
+      "symbol": "Math.seedrandom",
+      "explicitSeed": false,
+      "status": "environment",
+      "actions": [],
+      "note": "Explicit seeded generator is native; unseeded reset resumes the injected tape. No policy receives future draws."
+    },
+    {
+      "id": "main.js:11303:4:rng-reset",
+      "file": "main.js",
+      "line": 11303,
+      "column": 4,
+      "endLine": 11303,
+      "kind": "rng-reset",
+      "symbol": "Math.seedrandom",
+      "explicitSeed": false,
+      "status": "environment",
+      "actions": [],
+      "note": "Explicit seeded generator is native; unseeded reset resumes the injected tape. No policy receives future draws."
+    },
+    {
+      "id": "main.js:11394:4:rng-reset",
+      "file": "main.js",
+      "line": 11394,
+      "column": 4,
+      "endLine": 11394,
+      "kind": "rng-reset",
+      "symbol": "Math.seedrandom",
+      "explicitSeed": true,
+      "status": "environment",
+      "actions": [],
+      "note": "Explicit seeded generator is native; unseeded reset resumes the injected tape. No policy receives future draws."
+    },
+    {
+      "id": "main.js:11396:4:rng-reset",
+      "file": "main.js",
+      "line": 11396,
+      "column": 4,
+      "endLine": 11396,
+      "kind": "rng-reset",
+      "symbol": "Math.seedrandom",
+      "explicitSeed": false,
+      "status": "environment",
+      "actions": [],
+      "note": "Explicit seeded generator is native; unseeded reset resumes the injected tape. No policy receives future draws."
+    },
+    {
+      "id": "main.js:11863:17:timer",
+      "file": "main.js",
+      "line": 11863,
+      "column": 17,
+      "endLine": 11863,
+      "kind": "timer",
+      "symbol": "setTimeout",
+      "status": "autonomous",
+      "actions": [
+        "wait"
+      ],
+      "note": "Native callback is scheduled by the deterministic timer adapter; asynchronous browser APIs remain environment assumptions."
+    },
+    {
+      "id": "main.js:11873:2:callback-property",
+      "file": "main.js",
+      "line": 11873,
+      "column": 2,
+      "endLine": 11916,
+      "kind": "callback-property",
+      "symbol": "Game.last.choicesFunction",
+      "status": "partial",
+      "actions": [
+        "jukebox-sound"
+      ],
+      "note": "Jukebox choices render sound controls plus Steam Music controls. Sound callback is exposed, but the full menu depends on unpinned steam/steam.js Music initialization.",
+      "mappingScope": "individual source callsite review; not a transition equivalence proof"
+    },
+    {
+      "id": "main.js:11880:5:generated-html-handler",
+      "file": "main.js",
+      "line": 11880,
+      "column": 5,
+      "endLine": 11880,
+      "kind": "generated-html-handler",
+      "symbol": "string literal",
+      "events": [
+        "click"
+      ],
+      "status": "mapped-family",
+      "actions": [
+        "jukebox-sound"
+      ],
+      "note": "Previous sound invokes native setSound(onSound-1); explicit sound selection covers the resulting native callback.",
+      "mappingScope": "individual source callsite review; not a transition equivalence proof"
+    },
+    {
+      "id": "main.js:11881:5:generated-html-handler",
+      "file": "main.js",
+      "line": 11881,
+      "column": 5,
+      "endLine": 11881,
+      "kind": "generated-html-handler",
+      "symbol": "string literal",
+      "events": [
+        "click"
+      ],
+      "status": "mapped-family",
+      "actions": [
+        "jukebox-sound"
+      ],
+      "note": "Play current sound invokes native setSound(onSound). Audio itself is inert in the adapter.",
+      "mappingScope": "individual source callsite review; not a transition equivalence proof"
+    },
+    {
+      "id": "main.js:11882:5:generated-html-handler",
+      "file": "main.js",
+      "line": 11882,
+      "column": 5,
+      "endLine": 11882,
+      "kind": "generated-html-handler",
+      "symbol": "string literal",
+      "events": [
+        "click"
+      ],
+      "status": "mapped-family",
+      "actions": [
+        "jukebox-sound"
+      ],
+      "note": "Next sound invokes native setSound(onSound+1); explicit sound selection covers the resulting native callback.",
+      "mappingScope": "individual source callsite review; not a transition equivalence proof"
+    },
+    {
+      "id": "main.js:11884:8:generated-html-handler",
+      "file": "main.js",
+      "line": 11884,
+      "column": 8,
+      "endLine": 11884,
+      "kind": "generated-html-handler",
+      "symbol": "string literal",
+      "events": [
+        "change"
+      ],
+      "status": "mapped-family",
+      "actions": [
+        "jukebox-sound"
+      ],
+      "note": "Sound dropdown invokes native setSound with the selected index.",
+      "mappingScope": "individual source callsite review; not a transition equivalence proof"
+    },
+    {
+      "id": "main.js:11889:8:generated-html-handler",
+      "file": "main.js",
+      "line": 11889,
+      "column": 8,
+      "endLine": 11889,
+      "kind": "generated-html-handler",
+      "symbol": "string literal",
+      "events": [
+        "click"
+      ],
+      "status": "partial",
+      "actions": [],
+      "note": "Random sound chooses an index with Math.random, then calls setSound. No random-sound action is exposed; deliberate RNG manipulation is forbidden, but ordinary UI effects still need a precise admissibility treatment.",
+      "mappingScope": "individual source callsite review; not a transition equivalence proof"
+    },
+    {
+      "id": "main.js:11899:6:generated-html-handler",
+      "file": "main.js",
+      "line": 11899,
+      "column": 6,
+      "endLine": 11899,
+      "kind": "generated-html-handler",
+      "symbol": "string literal",
+      "events": [
+        "click"
+      ],
+      "status": "partial",
+      "actions": [],
+      "note": "Music play/pause delegates to external Steam Music and reads the audio paused state; this service is outside the eight pinned files.",
+      "mappingScope": "individual source callsite review; not a transition equivalence proof"
+    },
+    {
+      "id": "main.js:11900:83:generated-html-handler",
+      "file": "main.js",
+      "line": 11900,
+      "column": 83,
+      "endLine": 11900,
+      "kind": "generated-html-handler",
+      "symbol": "string literal",
+      "events": [
+        "click"
+      ],
+      "status": "partial",
+      "actions": [],
+      "note": "Music loop toggles jukebox.trackLooped and delegates looping to external Steam Music.",
+      "mappingScope": "individual source callsite review; not a transition equivalence proof"
+    },
+    {
+      "id": "main.js:11904:181:generated-html-handler",
+      "file": "main.js",
+      "line": 11904,
+      "column": 181,
+      "endLine": 11904,
+      "kind": "generated-html-handler",
+      "symbol": "string literal",
+      "events": [
+        "change",
+        "input"
+      ],
+      "status": "partial",
+      "actions": [],
+      "note": "Music scrub input/change writes external audio currentTime and starts a repeated time-display callback. Audio timing and callback interaction are not modeled.",
+      "mappingScope": "individual source callsite review; not a transition equivalence proof"
+    },
+    {
+      "id": "main.js:11906:84:generated-html-handler",
+      "file": "main.js",
+      "line": 11906,
+      "column": 84,
+      "endLine": 11906,
+      "kind": "generated-html-handler",
+      "symbol": "string literal",
+      "events": [
+        "click"
+      ],
+      "status": "partial",
+      "actions": [],
+      "note": "Music Auto toggles trackAuto and cues external Music; track dropdown selects a track and may change playback, filters and looping. Both handlers require the external Music service.",
+      "mappingScope": "individual source callsite review; not a transition equivalence proof"
+    },
+    {
+      "id": "main.js:11906:164:generated-html-handler",
+      "file": "main.js",
+      "line": 11906,
+      "column": 164,
+      "endLine": 11906,
+      "kind": "generated-html-handler",
+      "symbol": "string literal",
+      "events": [
+        "change"
+      ],
+      "status": "partial",
+      "actions": [],
+      "note": "Music Auto toggles trackAuto and cues external Music; track dropdown selects a track and may change playback, filters and looping. Both handlers require the external Music service.",
+      "mappingScope": "individual source callsite review; not a transition equivalence proof"
+    },
+    {
+      "id": "main.js:11911:97:generated-html-handler",
+      "file": "main.js",
+      "line": 11911,
+      "column": 97,
+      "endLine": 11911,
+      "kind": "generated-html-handler",
+      "symbol": "string literal",
+      "events": [
+        "click"
+      ],
+      "status": "inactive",
+      "actions": [],
+      "note": "Shuffle markup is inside an HTML comment, so it is not an active native UI input. The adapter parser ignores comment descendants.",
+      "mappingScope": "individual source callsite review; not a transition equivalence proof"
+    },
+    {
+      "id": "main.js:11913:4:timer",
+      "file": "main.js",
+      "line": 11913,
+      "column": 4,
+      "endLine": 11913,
+      "kind": "timer",
+      "symbol": "setTimeout",
+      "status": "autonomous",
+      "actions": [
+        "wait"
+      ],
+      "note": "Native callback is scheduled by the deterministic timer adapter; asynchronous browser APIs remain environment assumptions."
+    },
+    {
+      "id": "main.js:11944:3:prompt",
+      "file": "main.js",
+      "line": 11944,
+      "column": 3,
+      "endLine": 11950,
+      "kind": "prompt",
+      "symbol": "Game.Prompt",
+      "status": "mapped-family",
+      "actions": [
+        "gift-send",
+        "gift-redeem"
+      ],
+      "note": "Native gift forms with cooldown; optional design/icon controls remain unmodeled.",
+      "mappingScope": "reviewed source region; not a per-callback equivalence proof"
+    },
+    {
+      "id": "main.js:12011:4:listener",
+      "file": "main.js",
+      "line": 12011,
+      "column": 4,
+      "endLine": 12011,
+      "kind": "listener",
+      "symbol": ".addEventListener",
+      "event": "change",
+      "status": "mapped-family",
+      "actions": [
+        "gift-send",
+        "gift-redeem"
+      ],
+      "note": "Native gift forms with cooldown; optional design/icon controls remain unmodeled.",
+      "mappingScope": "reviewed source region; not a per-callback equivalence proof"
+    },
+    {
+      "id": "main.js:12012:4:listener",
+      "file": "main.js",
+      "line": 12012,
+      "column": 4,
+      "endLine": 12012,
+      "kind": "listener",
+      "symbol": ".addEventListener",
+      "event": "keyup",
+      "status": "mapped-family",
+      "actions": [
+        "gift-send",
+        "gift-redeem"
+      ],
+      "note": "Native gift forms with cooldown; optional design/icon controls remain unmodeled.",
+      "mappingScope": "reviewed source region; not a per-callback equivalence proof"
+    },
+    {
+      "id": "main.js:12013:4:listener",
+      "file": "main.js",
+      "line": 12013,
+      "column": 4,
+      "endLine": 12019,
+      "kind": "listener",
+      "symbol": ".addEventListener",
+      "event": "keyup",
+      "status": "mapped-family",
+      "actions": [
+        "gift-send",
+        "gift-redeem"
+      ],
+      "note": "Native gift forms with cooldown; optional design/icon controls remain unmodeled.",
+      "mappingScope": "reviewed source region; not a per-callback equivalence proof"
+    },
+    {
+      "id": "main.js:12021:4:listener",
+      "file": "main.js",
+      "line": 12021,
+      "column": 4,
+      "endLine": 12061,
+      "kind": "listener",
+      "symbol": ".addEventListener",
+      "event": "click",
+      "status": "mapped-family",
+      "actions": [
+        "gift-send",
+        "gift-redeem"
+      ],
+      "note": "Native gift forms with cooldown; optional design/icon controls remain unmodeled.",
+      "mappingScope": "reviewed source region; not a per-callback equivalence proof"
+    },
+    {
+      "id": "main.js:12046:5:prompt",
+      "file": "main.js",
+      "line": 12046,
+      "column": 5,
+      "endLine": 12058,
+      "kind": "prompt",
+      "symbol": "Game.Prompt",
+      "status": "mapped-family",
+      "actions": [
+        "gift-send",
+        "gift-redeem"
+      ],
+      "note": "Native gift forms with cooldown; optional design/icon controls remain unmodeled.",
+      "mappingScope": "reviewed source region; not a per-callback equivalence proof"
+    },
+    {
+      "id": "main.js:12068:3:prompt",
+      "file": "main.js",
+      "line": 12068,
+      "column": 3,
+      "endLine": 12270,
+      "kind": "prompt",
+      "symbol": "Game.Prompt",
+      "status": "mapped-family",
+      "actions": [
+        "gift-send",
+        "gift-redeem"
+      ],
+      "note": "Native gift forms with cooldown; optional design/icon controls remain unmodeled.",
+      "mappingScope": "reviewed source region; not a per-callback equivalence proof"
+    },
+    {
+      "id": "main.js:12100:5:listener",
+      "file": "main.js",
+      "line": 12100,
+      "column": 5,
+      "endLine": 12122,
+      "kind": "listener",
+      "symbol": ".addEventListener",
+      "event": "click",
+      "status": "mapped-family",
+      "actions": [
+        "gift-send",
+        "gift-redeem"
+      ],
+      "note": "Native gift forms with cooldown; optional design/icon controls remain unmodeled.",
+      "mappingScope": "reviewed source region; not a per-callback equivalence proof"
+    },
+    {
+      "id": "main.js:12113:7:listener",
+      "file": "main.js",
+      "line": 12113,
+      "column": 7,
+      "endLine": 12120,
+      "kind": "listener",
+      "symbol": ".addEventListener",
+      "event": "click",
+      "status": "mapped-family",
+      "actions": [
+        "gift-send",
+        "gift-redeem"
+      ],
+      "note": "Native gift forms with cooldown; optional design/icon controls remain unmodeled.",
+      "mappingScope": "reviewed source region; not a per-callback equivalence proof"
+    },
+    {
+      "id": "main.js:12165:6:listener",
+      "file": "main.js",
+      "line": 12165,
+      "column": 6,
+      "endLine": 12171,
+      "kind": "listener",
+      "symbol": ".addEventListener",
+      "event": "click",
+      "status": "mapped-family",
+      "actions": [
+        "gift-send",
+        "gift-redeem"
+      ],
+      "note": "Native gift forms with cooldown; optional design/icon controls remain unmodeled.",
+      "mappingScope": "reviewed source region; not a per-callback equivalence proof"
+    },
+    {
+      "id": "main.js:12174:7:listener",
+      "file": "main.js",
+      "line": 12174,
+      "column": 7,
+      "endLine": 12182,
+      "kind": "listener",
+      "symbol": ".addEventListener",
+      "event": "click",
+      "status": "mapped-family",
+      "actions": [
+        "gift-send",
+        "gift-redeem"
+      ],
+      "note": "Native gift forms with cooldown; optional design/icon controls remain unmodeled.",
+      "mappingScope": "reviewed source region; not a per-callback equivalence proof"
+    },
+    {
+      "id": "main.js:12185:5:listener",
+      "file": "main.js",
+      "line": 12185,
+      "column": 5,
+      "endLine": 12185,
+      "kind": "listener",
+      "symbol": ".addEventListener",
+      "event": "click",
+      "status": "mapped-family",
+      "actions": [
+        "gift-send",
+        "gift-redeem"
+      ],
+      "note": "Native gift forms with cooldown; optional design/icon controls remain unmodeled.",
+      "mappingScope": "reviewed source region; not a per-callback equivalence proof"
+    },
+    {
+      "id": "main.js:12186:5:listener",
+      "file": "main.js",
+      "line": 12186,
+      "column": 5,
+      "endLine": 12186,
+      "kind": "listener",
+      "symbol": ".addEventListener",
+      "event": "click",
+      "status": "mapped-family",
+      "actions": [
+        "gift-send",
+        "gift-redeem"
+      ],
+      "note": "Native gift forms with cooldown; optional design/icon controls remain unmodeled.",
+      "mappingScope": "reviewed source region; not a per-callback equivalence proof"
+    },
+    {
+      "id": "main.js:12195:5:listener",
+      "file": "main.js",
+      "line": 12195,
+      "column": 5,
+      "endLine": 12195,
+      "kind": "listener",
+      "symbol": ".addEventListener",
+      "event": "change",
+      "status": "mapped-family",
+      "actions": [
+        "gift-send",
+        "gift-redeem"
+      ],
+      "note": "Native gift forms with cooldown; optional design/icon controls remain unmodeled.",
+      "mappingScope": "reviewed source region; not a per-callback equivalence proof"
+    },
+    {
+      "id": "main.js:12196:5:listener",
+      "file": "main.js",
+      "line": 12196,
+      "column": 5,
+      "endLine": 12196,
+      "kind": "listener",
+      "symbol": ".addEventListener",
+      "event": "keyup",
+      "status": "mapped-family",
+      "actions": [
+        "gift-send",
+        "gift-redeem"
+      ],
+      "note": "Native gift forms with cooldown; optional design/icon controls remain unmodeled.",
+      "mappingScope": "reviewed source region; not a per-callback equivalence proof"
+    },
+    {
+      "id": "main.js:12197:5:listener",
+      "file": "main.js",
+      "line": 12197,
+      "column": 5,
+      "endLine": 12200,
+      "kind": "listener",
+      "symbol": ".addEventListener",
+      "event": "keyup",
+      "status": "mapped-family",
+      "actions": [
+        "gift-send",
+        "gift-redeem"
+      ],
+      "note": "Native gift forms with cooldown; optional design/icon controls remain unmodeled.",
+      "mappingScope": "reviewed source region; not a per-callback equivalence proof"
+    },
+    {
+      "id": "main.js:12201:5:listener",
+      "file": "main.js",
+      "line": 12201,
+      "column": 5,
+      "endLine": 12211,
+      "kind": "listener",
+      "symbol": ".addEventListener",
+      "event": "keyup",
+      "status": "mapped-family",
+      "actions": [
+        "gift-send",
+        "gift-redeem"
+      ],
+      "note": "Native gift forms with cooldown; optional design/icon controls remain unmodeled.",
+      "mappingScope": "reviewed source region; not a per-callback equivalence proof"
+    },
+    {
+      "id": "main.js:12212:5:listener",
+      "file": "main.js",
+      "line": 12212,
+      "column": 5,
+      "endLine": 12268,
+      "kind": "listener",
+      "symbol": ".addEventListener",
+      "event": "click",
+      "status": "mapped-family",
+      "actions": [
+        "gift-send",
+        "gift-redeem"
+      ],
+      "note": "Native gift forms with cooldown; optional design/icon controls remain unmodeled.",
+      "mappingScope": "reviewed source region; not a per-callback equivalence proof"
+    },
+    {
+      "id": "main.js:12260:6:prompt",
+      "file": "main.js",
+      "line": 12260,
+      "column": 6,
+      "endLine": 12264,
+      "kind": "prompt",
+      "symbol": "Game.Prompt",
+      "status": "mapped-family",
+      "actions": [
+        "gift-send",
+        "gift-redeem"
+      ],
+      "note": "Native gift forms with cooldown; optional design/icon controls remain unmodeled.",
+      "mappingScope": "reviewed source region; not a per-callback equivalence proof"
+    },
+    {
+      "id": "main.js:12476:4:callback-property",
+      "file": "main.js",
+      "line": 12476,
+      "column": 4,
+      "endLine": 12493,
+      "kind": "callback-property",
+      "symbol": "me.clickFunction",
+      "status": "mapped-family",
+      "actions": [
+        "buy-upgrade",
+        "achievement-slot",
+        "wait"
+      ],
+      "note": "Unlock and achievement callbacks, including dynamically assigned click functions.",
+      "mappingScope": "reviewed source region; not a per-callback equivalence proof"
+    },
+    {
+      "id": "main.js:13061:118:callback-property",
+      "file": "main.js",
+      "line": 13061,
+      "column": 118,
+      "endLine": 13061,
+      "kind": "callback-property",
+      "symbol": "Game.last.clickFunction",
+      "status": "mapped-family",
+      "actions": [
+        "buy-upgrade",
+        "achievement-slot",
+        "wait"
+      ],
+      "note": "Unlock and achievement callbacks, including dynamically assigned click functions.",
+      "mappingScope": "reviewed source region; not a per-callback equivalence proof"
+    },
+    {
+      "id": "main.js:13712:25:timer",
+      "file": "main.js",
+      "line": 13712,
+      "column": 25,
+      "endLine": 13717,
+      "kind": "timer",
+      "symbol": "setInterval",
+      "status": "autonomous",
+      "actions": [
+        "wait"
+      ],
+      "note": "Native callback is scheduled by the deterministic timer adapter; asynchronous browser APIs remain environment assumptions."
+    },
+    {
+      "id": "main.js:14342:2:autonomous-step",
+      "file": "main.js",
+      "line": 14342,
+      "column": 2,
+      "endLine": 14550,
+      "kind": "autonomous-step",
+      "symbol": "Game.UpdateWrinklers",
+      "status": "mapped-family",
+      "actions": [
+        "wrinkler-hover",
+        "wrinkler-poke",
+        "wait"
+      ],
+      "note": "Native wrinkler input and autonomous updates.",
+      "mappingScope": "reviewed source region; not a per-callback equivalence proof"
+    },
+    {
+      "id": "main.js:14895:187:generated-event-attribute",
+      "file": "main.js",
+      "line": 14895,
+      "column": 187,
+      "endLine": 14895,
+      "kind": "generated-event-attribute",
+      "symbol": "Game.clickStr",
+      "status": "mapped-family",
+      "actions": [
+        "upgrade-santa",
+        "upgrade-dragon",
+        "dragon-aura",
+        "pet-dragon",
+        "prompt"
+      ],
+      "note": "Santa and dragon native operations; direct special-menu positioning remains partial.",
+      "mappingScope": "reviewed source region; not a per-callback equivalence proof"
+    },
+    {
+      "id": "main.js:14895:264:generated-html-handler",
+      "file": "main.js",
+      "line": 14895,
+      "column": 264,
+      "endLine": 14895,
+      "kind": "generated-html-handler",
+      "symbol": "string literal",
+      "events": [
+        "mouseout"
+      ],
+      "status": "mapped-family",
+      "actions": [
+        "upgrade-santa",
+        "upgrade-dragon",
+        "dragon-aura",
+        "pet-dragon",
+        "prompt"
+      ],
+      "note": "Santa and dragon native operations; direct special-menu positioning remains partial.",
+      "mappingScope": "reviewed source region; not a per-callback equivalence proof"
+    },
+    {
+      "id": "main.js:14895:332:generated-html-handler",
+      "file": "main.js",
+      "line": 14895,
+      "column": 332,
+      "endLine": 14895,
+      "kind": "generated-html-handler",
+      "symbol": "string literal",
+      "events": [
+        "mouseover"
+      ],
+      "status": "mapped-family",
+      "actions": [
+        "upgrade-santa",
+        "upgrade-dragon",
+        "dragon-aura",
+        "pet-dragon",
+        "prompt"
+      ],
+      "note": "Santa and dragon native operations; direct special-menu positioning remains partial.",
+      "mappingScope": "reviewed source region; not a per-callback equivalence proof"
+    },
+    {
+      "id": "main.js:14903:3:prompt",
+      "file": "main.js",
+      "line": 14903,
+      "column": 3,
+      "endLine": 14909,
+      "kind": "prompt",
+      "symbol": "Game.Prompt",
+      "status": "mapped-family",
+      "actions": [
+        "upgrade-santa",
+        "upgrade-dragon",
+        "dragon-aura",
+        "pet-dragon",
+        "prompt"
+      ],
+      "note": "Santa and dragon native operations; direct special-menu positioning remains partial.",
+      "mappingScope": "reviewed source region; not a per-callback equivalence proof"
+    },
+    {
+      "id": "main.js:14959:5:rng-reset",
+      "file": "main.js",
+      "line": 14959,
+      "column": 5,
+      "endLine": 14959,
+      "kind": "rng-reset",
+      "symbol": "Math.seedrandom",
+      "explicitSeed": true,
+      "status": "environment",
+      "actions": [],
+      "note": "Explicit seeded generator is native; unseeded reset resumes the injected tape. No policy receives future draws."
+    },
+    {
+      "id": "main.js:14968:5:rng-reset",
+      "file": "main.js",
+      "line": 14968,
+      "column": 5,
+      "endLine": 14968,
+      "kind": "rng-reset",
+      "symbol": "Math.seedrandom",
+      "explicitSeed": false,
+      "status": "environment",
+      "actions": [],
+      "note": "Explicit seeded generator is native; unseeded reset resumes the injected tape. No policy receives future draws."
+    },
+    {
+      "id": "main.js:14983:36:generated-event-attribute",
+      "file": "main.js",
+      "line": 14983,
+      "column": 36,
+      "endLine": 14983,
+      "kind": "generated-event-attribute",
+      "symbol": "Game.clickStr",
+      "status": "mapped-family",
+      "actions": [
+        "upgrade-santa",
+        "upgrade-dragon",
+        "dragon-aura",
+        "pet-dragon",
+        "prompt"
+      ],
+      "note": "Santa and dragon native operations; direct special-menu positioning remains partial.",
+      "mappingScope": "reviewed source region; not a per-callback equivalence proof"
+    },
+    {
+      "id": "main.js:14984:9:generated-html-handler",
+      "file": "main.js",
+      "line": 14984,
+      "column": 9,
+      "endLine": 14984,
+      "kind": "generated-html-handler",
+      "symbol": "string literal",
+      "events": [
+        "click"
+      ],
+      "status": "mapped-family",
+      "actions": [
+        "upgrade-santa",
+        "upgrade-dragon",
+        "dragon-aura",
+        "pet-dragon",
+        "prompt"
+      ],
+      "note": "Santa and dragon native operations; direct special-menu positioning remains partial.",
+      "mappingScope": "reviewed source region; not a per-callback equivalence proof"
+    },
+    {
+      "id": "main.js:14994:121:generated-event-attribute",
+      "file": "main.js",
+      "line": 14994,
+      "column": 121,
+      "endLine": 14994,
+      "kind": "generated-event-attribute",
+      "symbol": "Game.clickStr",
+      "status": "mapped-family",
+      "actions": [
+        "upgrade-santa",
+        "upgrade-dragon",
+        "dragon-aura",
+        "pet-dragon",
+        "prompt"
+      ],
+      "note": "Santa and dragon native operations; direct special-menu positioning remains partial.",
+      "mappingScope": "reviewed source region; not a per-callback equivalence proof"
+    },
+    {
+      "id": "main.js:15010:118:generated-event-attribute",
+      "file": "main.js",
+      "line": 15010,
+      "column": 118,
+      "endLine": 15010,
+      "kind": "generated-event-attribute",
+      "symbol": "Game.clickStr",
+      "status": "mapped-family",
+      "actions": [
+        "upgrade-santa",
+        "upgrade-dragon",
+        "dragon-aura",
+        "pet-dragon",
+        "prompt"
+      ],
+      "note": "Santa and dragon native operations; direct special-menu positioning remains partial.",
+      "mappingScope": "reviewed source region; not a per-callback equivalence proof"
+    },
+    {
+      "id": "main.js:15021:118:generated-event-attribute",
+      "file": "main.js",
+      "line": 15021,
+      "column": 118,
+      "endLine": 15021,
+      "kind": "generated-event-attribute",
+      "symbol": "Game.clickStr",
+      "status": "mapped-family",
+      "actions": [
+        "upgrade-santa",
+        "upgrade-dragon",
+        "dragon-aura",
+        "pet-dragon",
+        "prompt"
+      ],
+      "note": "Santa and dragon native operations; direct special-menu positioning remains partial.",
+      "mappingScope": "reviewed source region; not a per-callback equivalence proof"
+    },
+    {
+      "id": "main.js:15033:121:generated-event-attribute",
+      "file": "main.js",
+      "line": 15033,
+      "column": 121,
+      "endLine": 15033,
+      "kind": "generated-event-attribute",
+      "symbol": "Game.clickStr",
+      "status": "mapped-family",
+      "actions": [
+        "upgrade-santa",
+        "upgrade-dragon",
+        "dragon-aura",
+        "pet-dragon",
+        "prompt"
+      ],
+      "note": "Santa and dragon native operations; direct special-menu positioning remains partial.",
+      "mappingScope": "reviewed source region; not a per-callback equivalence proof"
+    },
+    {
+      "id": "main.js:15056:5:timer",
+      "file": "main.js",
+      "line": 15056,
+      "column": 5,
+      "endLine": 15056,
+      "kind": "timer",
+      "symbol": "setTimeout",
+      "status": "autonomous",
+      "actions": [
+        "wait"
+      ],
+      "note": "Native callback is scheduled by the deterministic timer adapter; asynchronous browser APIs remain environment assumptions."
+    },
+    {
+      "id": "main.js:15185:4:listener",
+      "file": "main.js",
+      "line": 15185,
+      "column": 4,
+      "endLine": 15191,
+      "kind": "listener",
+      "symbol": "window.addEventListener",
+      "event": "resize",
+      "status": "environment",
+      "actions": [
+        "resize",
+        "wait"
+      ],
+      "note": "Rendering and physics execute against partial DOM/canvas layout; toy dragging is unmodeled.",
+      "mappingScope": "reviewed source region; not a per-callback equivalence proof"
+    },
+    {
+      "id": "main.js:15711:8:listener",
+      "file": "main.js",
+      "line": 15711,
+      "column": 8,
+      "endLine": 15711,
+      "kind": "listener",
+      "symbol": "AddEvent",
+      "event": "mousedown",
+      "status": "environment",
+      "actions": [
+        "resize",
+        "wait"
+      ],
+      "note": "Rendering and physics execute against partial DOM/canvas layout; toy dragging is unmodeled.",
+      "mappingScope": "reviewed source region; not a per-callback equivalence proof"
+    },
+    {
+      "id": "main.js:15712:8:listener",
+      "file": "main.js",
+      "line": 15712,
+      "column": 8,
+      "endLine": 15712,
+      "kind": "listener",
+      "symbol": "AddEvent",
+      "event": "mouseup",
+      "status": "environment",
+      "actions": [
+        "resize",
+        "wait"
+      ],
+      "note": "Rendering and physics execute against partial DOM/canvas layout; toy dragging is unmodeled.",
+      "mappingScope": "reviewed source region; not a per-callback equivalence proof"
+    },
+    {
+      "id": "main.js:15980:35:generated-event-attribute",
+      "file": "main.js",
+      "line": 15980,
+      "column": 35,
+      "endLine": 15980,
+      "kind": "generated-event-attribute",
+      "symbol": "Game.clickStr",
+      "status": "excluded",
+      "actions": [],
+      "note": "Developer console, grants, re-seeding and cheat actions are forbidden.",
+      "mappingScope": "reviewed source region; not a per-callback equivalence proof"
+    },
+    {
+      "id": "main.js:15982:35:generated-event-attribute",
+      "file": "main.js",
+      "line": 15982,
+      "column": 35,
+      "endLine": 15982,
+      "kind": "generated-event-attribute",
+      "symbol": "Game.clickStr",
+      "status": "excluded",
+      "actions": [],
+      "note": "Developer console, grants, re-seeding and cheat actions are forbidden.",
+      "mappingScope": "reviewed source region; not a per-callback equivalence proof"
+    },
+    {
+      "id": "main.js:15983:35:generated-event-attribute",
+      "file": "main.js",
+      "line": 15983,
+      "column": 35,
+      "endLine": 15983,
+      "kind": "generated-event-attribute",
+      "symbol": "Game.clickStr",
+      "status": "excluded",
+      "actions": [],
+      "note": "Developer console, grants, re-seeding and cheat actions are forbidden.",
+      "mappingScope": "reviewed source region; not a per-callback equivalence proof"
+    },
+    {
+      "id": "main.js:15984:35:generated-event-attribute",
+      "file": "main.js",
+      "line": 15984,
+      "column": 35,
+      "endLine": 15984,
+      "kind": "generated-event-attribute",
+      "symbol": "Game.clickStr",
+      "status": "excluded",
+      "actions": [],
+      "note": "Developer console, grants, re-seeding and cheat actions are forbidden.",
+      "mappingScope": "reviewed source region; not a per-callback equivalence proof"
+    },
+    {
+      "id": "main.js:15985:35:generated-event-attribute",
+      "file": "main.js",
+      "line": 15985,
+      "column": 35,
+      "endLine": 15985,
+      "kind": "generated-event-attribute",
+      "symbol": "Game.clickStr",
+      "status": "excluded",
+      "actions": [],
+      "note": "Developer console, grants, re-seeding and cheat actions are forbidden.",
+      "mappingScope": "reviewed source region; not a per-callback equivalence proof"
+    },
+    {
+      "id": "main.js:15986:35:generated-event-attribute",
+      "file": "main.js",
+      "line": 15986,
+      "column": 35,
+      "endLine": 15986,
+      "kind": "generated-event-attribute",
+      "symbol": "Game.clickStr",
+      "status": "excluded",
+      "actions": [],
+      "note": "Developer console, grants, re-seeding and cheat actions are forbidden.",
+      "mappingScope": "reviewed source region; not a per-callback equivalence proof"
+    },
+    {
+      "id": "main.js:15987:35:generated-event-attribute",
+      "file": "main.js",
+      "line": 15987,
+      "column": 35,
+      "endLine": 15987,
+      "kind": "generated-event-attribute",
+      "symbol": "Game.clickStr",
+      "status": "excluded",
+      "actions": [],
+      "note": "Developer console, grants, re-seeding and cheat actions are forbidden.",
+      "mappingScope": "reviewed source region; not a per-callback equivalence proof"
+    },
+    {
+      "id": "main.js:15988:35:generated-event-attribute",
+      "file": "main.js",
+      "line": 15988,
+      "column": 35,
+      "endLine": 15988,
+      "kind": "generated-event-attribute",
+      "symbol": "Game.clickStr",
+      "status": "excluded",
+      "actions": [],
+      "note": "Developer console, grants, re-seeding and cheat actions are forbidden.",
+      "mappingScope": "reviewed source region; not a per-callback equivalence proof"
+    },
+    {
+      "id": "main.js:15989:35:generated-event-attribute",
+      "file": "main.js",
+      "line": 15989,
+      "column": 35,
+      "endLine": 15989,
+      "kind": "generated-event-attribute",
+      "symbol": "Game.clickStr",
+      "status": "excluded",
+      "actions": [],
+      "note": "Developer console, grants, re-seeding and cheat actions are forbidden.",
+      "mappingScope": "reviewed source region; not a per-callback equivalence proof"
+    },
+    {
+      "id": "main.js:15990:35:generated-event-attribute",
+      "file": "main.js",
+      "line": 15990,
+      "column": 35,
+      "endLine": 15990,
+      "kind": "generated-event-attribute",
+      "symbol": "Game.clickStr",
+      "status": "excluded",
+      "actions": [],
+      "note": "Developer console, grants, re-seeding and cheat actions are forbidden.",
+      "mappingScope": "reviewed source region; not a per-callback equivalence proof"
+    },
+    {
+      "id": "main.js:15991:35:generated-event-attribute",
+      "file": "main.js",
+      "line": 15991,
+      "column": 35,
+      "endLine": 15991,
+      "kind": "generated-event-attribute",
+      "symbol": "Game.clickStr",
+      "status": "excluded",
+      "actions": [],
+      "note": "Developer console, grants, re-seeding and cheat actions are forbidden.",
+      "mappingScope": "reviewed source region; not a per-callback equivalence proof"
+    },
+    {
+      "id": "main.js:15992:35:generated-event-attribute",
+      "file": "main.js",
+      "line": 15992,
+      "column": 35,
+      "endLine": 15992,
+      "kind": "generated-event-attribute",
+      "symbol": "Game.clickStr",
+      "status": "excluded",
+      "actions": [],
+      "note": "Developer console, grants, re-seeding and cheat actions are forbidden.",
+      "mappingScope": "reviewed source region; not a per-callback equivalence proof"
+    },
+    {
+      "id": "main.js:15994:37:generated-event-attribute",
+      "file": "main.js",
+      "line": 15994,
+      "column": 37,
+      "endLine": 15994,
+      "kind": "generated-event-attribute",
+      "symbol": "Game.clickStr",
+      "status": "excluded",
+      "actions": [],
+      "note": "Developer console, grants, re-seeding and cheat actions are forbidden.",
+      "mappingScope": "reviewed source region; not a per-callback equivalence proof"
+    },
+    {
+      "id": "main.js:15995:37:generated-event-attribute",
+      "file": "main.js",
+      "line": 15995,
+      "column": 37,
+      "endLine": 15995,
+      "kind": "generated-event-attribute",
+      "symbol": "Game.clickStr",
+      "status": "excluded",
+      "actions": [],
+      "note": "Developer console, grants, re-seeding and cheat actions are forbidden.",
+      "mappingScope": "reviewed source region; not a per-callback equivalence proof"
+    },
+    {
+      "id": "main.js:15996:35:generated-event-attribute",
+      "file": "main.js",
+      "line": 15996,
+      "column": 35,
+      "endLine": 15996,
+      "kind": "generated-event-attribute",
+      "symbol": "Game.clickStr",
+      "status": "excluded",
+      "actions": [],
+      "note": "Developer console, grants, re-seeding and cheat actions are forbidden.",
+      "mappingScope": "reviewed source region; not a per-callback equivalence proof"
+    },
+    {
+      "id": "main.js:15997:35:generated-event-attribute",
+      "file": "main.js",
+      "line": 15997,
+      "column": 35,
+      "endLine": 15997,
+      "kind": "generated-event-attribute",
+      "symbol": "Game.clickStr",
+      "status": "excluded",
+      "actions": [],
+      "note": "Developer console, grants, re-seeding and cheat actions are forbidden.",
+      "mappingScope": "reviewed source region; not a per-callback equivalence proof"
+    },
+    {
+      "id": "main.js:15998:35:generated-event-attribute",
+      "file": "main.js",
+      "line": 15998,
+      "column": 35,
+      "endLine": 15998,
+      "kind": "generated-event-attribute",
+      "symbol": "Game.clickStr",
+      "status": "excluded",
+      "actions": [],
+      "note": "Developer console, grants, re-seeding and cheat actions are forbidden.",
+      "mappingScope": "reviewed source region; not a per-callback equivalence proof"
+    },
+    {
+      "id": "main.js:15999:35:generated-event-attribute",
+      "file": "main.js",
+      "line": 15999,
+      "column": 35,
+      "endLine": 15999,
+      "kind": "generated-event-attribute",
+      "symbol": "Game.clickStr",
+      "status": "excluded",
+      "actions": [],
+      "note": "Developer console, grants, re-seeding and cheat actions are forbidden.",
+      "mappingScope": "reviewed source region; not a per-callback equivalence proof"
+    },
+    {
+      "id": "main.js:16000:35:generated-event-attribute",
+      "file": "main.js",
+      "line": 16000,
+      "column": 35,
+      "endLine": 16000,
+      "kind": "generated-event-attribute",
+      "symbol": "Game.clickStr",
+      "status": "excluded",
+      "actions": [],
+      "note": "Developer console, grants, re-seeding and cheat actions are forbidden.",
+      "mappingScope": "reviewed source region; not a per-callback equivalence proof"
+    },
+    {
+      "id": "main.js:16001:35:generated-event-attribute",
+      "file": "main.js",
+      "line": 16001,
+      "column": 35,
+      "endLine": 16001,
+      "kind": "generated-event-attribute",
+      "symbol": "Game.clickStr",
+      "status": "excluded",
+      "actions": [],
+      "note": "Developer console, grants, re-seeding and cheat actions are forbidden.",
+      "mappingScope": "reviewed source region; not a per-callback equivalence proof"
+    },
+    {
+      "id": "main.js:16002:35:generated-event-attribute",
+      "file": "main.js",
+      "line": 16002,
+      "column": 35,
+      "endLine": 16002,
+      "kind": "generated-event-attribute",
+      "symbol": "Game.clickStr",
+      "status": "excluded",
+      "actions": [],
+      "note": "Developer console, grants, re-seeding and cheat actions are forbidden.",
+      "mappingScope": "reviewed source region; not a per-callback equivalence proof"
+    },
+    {
+      "id": "main.js:16003:35:generated-event-attribute",
+      "file": "main.js",
+      "line": 16003,
+      "column": 35,
+      "endLine": 16003,
+      "kind": "generated-event-attribute",
+      "symbol": "Game.clickStr",
+      "status": "excluded",
+      "actions": [],
+      "note": "Developer console, grants, re-seeding and cheat actions are forbidden.",
+      "mappingScope": "reviewed source region; not a per-callback equivalence proof"
+    },
+    {
+      "id": "main.js:16004:35:generated-event-attribute",
+      "file": "main.js",
+      "line": 16004,
+      "column": 35,
+      "endLine": 16004,
+      "kind": "generated-event-attribute",
+      "symbol": "Game.clickStr",
+      "status": "excluded",
+      "actions": [],
+      "note": "Developer console, grants, re-seeding and cheat actions are forbidden.",
+      "mappingScope": "reviewed source region; not a per-callback equivalence proof"
+    },
+    {
+      "id": "main.js:16005:35:generated-event-attribute",
+      "file": "main.js",
+      "line": 16005,
+      "column": 35,
+      "endLine": 16005,
+      "kind": "generated-event-attribute",
+      "symbol": "Game.clickStr",
+      "status": "excluded",
+      "actions": [],
+      "note": "Developer console, grants, re-seeding and cheat actions are forbidden.",
+      "mappingScope": "reviewed source region; not a per-callback equivalence proof"
+    },
+    {
+      "id": "main.js:16006:35:generated-event-attribute",
+      "file": "main.js",
+      "line": 16006,
+      "column": 35,
+      "endLine": 16006,
+      "kind": "generated-event-attribute",
+      "symbol": "Game.clickStr",
+      "status": "excluded",
+      "actions": [],
+      "note": "Developer console, grants, re-seeding and cheat actions are forbidden.",
+      "mappingScope": "reviewed source region; not a per-callback equivalence proof"
+    },
+    {
+      "id": "main.js:16007:35:generated-event-attribute",
+      "file": "main.js",
+      "line": 16007,
+      "column": 35,
+      "endLine": 16007,
+      "kind": "generated-event-attribute",
+      "symbol": "Game.clickStr",
+      "status": "excluded",
+      "actions": [],
+      "note": "Developer console, grants, re-seeding and cheat actions are forbidden.",
+      "mappingScope": "reviewed source region; not a per-callback equivalence proof"
+    },
+    {
+      "id": "main.js:16008:35:generated-event-attribute",
+      "file": "main.js",
+      "line": 16008,
+      "column": 35,
+      "endLine": 16008,
+      "kind": "generated-event-attribute",
+      "symbol": "Game.clickStr",
+      "status": "excluded",
+      "actions": [],
+      "note": "Developer console, grants, re-seeding and cheat actions are forbidden.",
+      "mappingScope": "reviewed source region; not a per-callback equivalence proof"
+    },
+    {
+      "id": "main.js:16012:36:generated-event-attribute",
+      "file": "main.js",
+      "line": 16012,
+      "column": 36,
+      "endLine": 16012,
+      "kind": "generated-event-attribute",
+      "symbol": "Game.clickStr",
+      "status": "excluded",
+      "actions": [],
+      "note": "Developer console, grants, re-seeding and cheat actions are forbidden.",
+      "mappingScope": "reviewed source region; not a per-callback equivalence proof"
+    },
+    {
+      "id": "main.js:16110:4:timer",
+      "file": "main.js",
+      "line": 16110,
+      "column": 4,
+      "endLine": 16113,
+      "kind": "timer",
+      "symbol": "setTimeout",
+      "status": "autonomous",
+      "actions": [
+        "wait"
+      ],
+      "note": "Native callback is scheduled by the deterministic timer adapter; asynchronous browser APIs remain environment assumptions."
+    },
+    {
+      "id": "main.js:16116:25:timer",
+      "file": "main.js",
+      "line": 16116,
+      "column": 25,
+      "endLine": 16116,
+      "kind": "timer",
+      "symbol": "setTimeout",
+      "status": "autonomous",
+      "actions": [
+        "wait"
+      ],
+      "note": "Native callback is scheduled by the deterministic timer adapter; asynchronous browser APIs remain environment assumptions."
+    },
+    {
+      "id": "main.js:16117:7:timer",
+      "file": "main.js",
+      "line": 16117,
+      "column": 7,
+      "endLine": 16117,
+      "kind": "timer",
+      "symbol": "setTimeout",
+      "status": "autonomous",
+      "actions": [
+        "wait"
+      ],
+      "note": "Native callback is scheduled by the deterministic timer adapter; asynchronous browser APIs remain environment assumptions."
+    },
+    {
+      "id": "main.js:16120:2:timer",
+      "file": "main.js",
+      "line": 16120,
+      "column": 2,
+      "endLine": 16120,
+      "kind": "timer",
+      "symbol": "setTimeout",
+      "status": "autonomous",
+      "actions": [
+        "wait"
+      ],
+      "note": "Native callback is scheduled by the deterministic timer adapter; asynchronous browser APIs remain environment assumptions."
+    },
+    {
+      "id": "main.js:16161:1:autonomous-step",
+      "file": "main.js",
+      "line": 16161,
+      "column": 1,
+      "endLine": 16644,
+      "kind": "autonomous-step",
+      "symbol": "Game.Logic",
+      "status": "autonomous",
+      "actions": [
+        "wait"
+      ],
+      "note": "Native initialization, logic and drawing execute through scheduled callbacks.",
+      "mappingScope": "reviewed source region; not a per-callback equivalence proof"
+    },
+    {
+      "id": "main.js:16650:1:autonomous-step",
+      "file": "main.js",
+      "line": 16650,
+      "column": 1,
+      "endLine": 16760,
+      "kind": "autonomous-step",
+      "symbol": "Game.Draw",
+      "status": "autonomous",
+      "actions": [
+        "wait"
+      ],
+      "note": "Native initialization, logic and drawing execute through scheduled callbacks.",
+      "mappingScope": "reviewed source region; not a per-callback equivalence proof"
+    },
+    {
+      "id": "main.js:16765:1:autonomous-step",
+      "file": "main.js",
+      "line": 16765,
+      "column": 1,
+      "endLine": 16841,
+      "kind": "autonomous-step",
+      "symbol": "Game.Loop",
+      "status": "autonomous",
+      "actions": [
+        "wait"
+      ],
+      "note": "Native initialization, logic and drawing execute through scheduled callbacks.",
+      "mappingScope": "reviewed source region; not a per-callback equivalence proof"
+    },
+    {
+      "id": "main.js:16840:2:timer",
+      "file": "main.js",
+      "line": 16840,
+      "column": 2,
+      "endLine": 16840,
+      "kind": "timer",
+      "symbol": "setTimeout",
+      "status": "autonomous",
+      "actions": [
+        "wait"
+      ],
+      "note": "Native callback is scheduled by the deterministic timer adapter; asynchronous browser APIs remain environment assumptions."
+    },
+    {
+      "id": "main.js:16903:4:listener",
+      "file": "main.js",
+      "line": 16903,
+      "column": 4,
+      "endLine": 16903,
+      "kind": "listener",
+      "symbol": "AddEvent",
+      "event": "click",
+      "status": "excluded",
+      "actions": [],
+      "note": "Native startup executes with fixed English. Language-selection inputs remain outside that environment, and unpinned external scripts cannot be loaded.",
+      "mappingScope": "reviewed source region; not a per-callback equivalence proof"
+    },
+    {
+      "id": "main.js:16904:4:listener",
+      "file": "main.js",
+      "line": 16904,
+      "column": 4,
+      "endLine": 16904,
+      "kind": "listener",
+      "symbol": "AddEvent",
+      "event": "mouseover",
+      "status": "excluded",
+      "actions": [],
+      "note": "Native startup executes with fixed English. Language-selection inputs remain outside that environment, and unpinned external scripts cannot be loaded.",
+      "mappingScope": "reviewed source region; not a per-callback equivalence proof"
+    },
+    {
+      "id": "minigameGarden.js:1293:4:listener",
+      "file": "minigameGarden.js",
+      "line": 1293,
+      "column": 4,
+      "endLine": 1310,
+      "kind": "listener",
+      "symbol": "AddEvent",
+      "event": "click",
+      "status": "mapped-family",
+      "actions": [
+        "garden-plant",
+        "garden-harvest",
+        "garden-harvest-all",
+        "garden-soil",
+        "garden-freeze",
+        "garden-sacrifice",
+        "minigame-refill",
+        "wait"
+      ],
+      "note": "Garden gameplay operations; selective harvest tools, seed selection and information controls require per-surface review.",
+      "mappingScope": "reviewed source region; not a per-callback equivalence proof"
+    },
+    {
+      "id": "minigameGarden.js:1311:4:listener",
+      "file": "minigameGarden.js",
+      "line": 1311,
+      "column": 4,
+      "endLine": 1311,
+      "kind": "listener",
+      "symbol": "AddEvent",
+      "event": "mouseover",
+      "status": "mapped-family",
+      "actions": [
+        "garden-plant",
+        "garden-harvest",
+        "garden-harvest-all",
+        "garden-soil",
+        "garden-freeze",
+        "garden-sacrifice",
+        "minigame-refill",
+        "wait"
+      ],
+      "note": "Garden gameplay operations; selective harvest tools, seed selection and information controls require per-surface review.",
+      "mappingScope": "reviewed source region; not a per-callback equivalence proof"
+    },
+    {
+      "id": "minigameGarden.js:1312:4:listener",
+      "file": "minigameGarden.js",
+      "line": 1312,
+      "column": 4,
+      "endLine": 1312,
+      "kind": "listener",
+      "symbol": "AddEvent",
+      "event": "mouseout",
+      "status": "mapped-family",
+      "actions": [
+        "garden-plant",
+        "garden-harvest",
+        "garden-harvest-all",
+        "garden-soil",
+        "garden-freeze",
+        "garden-sacrifice",
+        "minigame-refill",
+        "wait"
+      ],
+      "note": "Garden gameplay operations; selective harvest tools, seed selection and information controls require per-surface review.",
+      "mappingScope": "reviewed source region; not a per-callback equivalence proof"
+    },
+    {
+      "id": "minigameGarden.js:1330:4:listener",
+      "file": "minigameGarden.js",
+      "line": 1330,
+      "column": 4,
+      "endLine": 1330,
+      "kind": "listener",
+      "symbol": "AddEvent",
+      "event": "click",
+      "status": "mapped-family",
+      "actions": [
+        "garden-plant",
+        "garden-harvest",
+        "garden-harvest-all",
+        "garden-soil",
+        "garden-freeze",
+        "garden-sacrifice",
+        "minigame-refill",
+        "wait"
+      ],
+      "note": "Garden gameplay operations; selective harvest tools, seed selection and information controls require per-surface review.",
+      "mappingScope": "reviewed source region; not a per-callback equivalence proof"
+    },
+    {
+      "id": "minigameGarden.js:1331:4:listener",
+      "file": "minigameGarden.js",
+      "line": 1331,
+      "column": 4,
+      "endLine": 1331,
+      "kind": "listener",
+      "symbol": "AddEvent",
+      "event": "mouseover",
+      "status": "mapped-family",
+      "actions": [
+        "garden-plant",
+        "garden-harvest",
+        "garden-harvest-all",
+        "garden-soil",
+        "garden-freeze",
+        "garden-sacrifice",
+        "minigame-refill",
+        "wait"
+      ],
+      "note": "Garden gameplay operations; selective harvest tools, seed selection and information controls require per-surface review.",
+      "mappingScope": "reviewed source region; not a per-callback equivalence proof"
+    },
+    {
+      "id": "minigameGarden.js:1332:4:listener",
+      "file": "minigameGarden.js",
+      "line": 1332,
+      "column": 4,
+      "endLine": 1332,
+      "kind": "listener",
+      "symbol": "AddEvent",
+      "event": "mouseout",
+      "status": "mapped-family",
+      "actions": [
+        "garden-plant",
+        "garden-harvest",
+        "garden-harvest-all",
+        "garden-soil",
+        "garden-freeze",
+        "garden-sacrifice",
+        "minigame-refill",
+        "wait"
+      ],
+      "note": "Garden gameplay operations; selective harvest tools, seed selection and information controls require per-surface review.",
+      "mappingScope": "reviewed source region; not a per-callback equivalence proof"
+    },
+    {
+      "id": "minigameGarden.js:1349:4:listener",
+      "file": "minigameGarden.js",
+      "line": 1349,
+      "column": 4,
+      "endLine": 1355,
+      "kind": "listener",
+      "symbol": "AddEvent",
+      "event": "click",
+      "status": "mapped-family",
+      "actions": [
+        "garden-plant",
+        "garden-harvest",
+        "garden-harvest-all",
+        "garden-soil",
+        "garden-freeze",
+        "garden-sacrifice",
+        "minigame-refill",
+        "wait"
+      ],
+      "note": "Garden gameplay operations; selective harvest tools, seed selection and information controls require per-surface review.",
+      "mappingScope": "reviewed source region; not a per-callback equivalence proof"
+    },
+    {
+      "id": "minigameGarden.js:1356:4:listener",
+      "file": "minigameGarden.js",
+      "line": 1356,
+      "column": 4,
+      "endLine": 1356,
+      "kind": "listener",
+      "symbol": "AddEvent",
+      "event": "mouseover",
+      "status": "mapped-family",
+      "actions": [
+        "garden-plant",
+        "garden-harvest",
+        "garden-harvest-all",
+        "garden-soil",
+        "garden-freeze",
+        "garden-sacrifice",
+        "minigame-refill",
+        "wait"
+      ],
+      "note": "Garden gameplay operations; selective harvest tools, seed selection and information controls require per-surface review.",
+      "mappingScope": "reviewed source region; not a per-callback equivalence proof"
+    },
+    {
+      "id": "minigameGarden.js:1357:4:listener",
+      "file": "minigameGarden.js",
+      "line": 1357,
+      "column": 4,
+      "endLine": 1357,
+      "kind": "listener",
+      "symbol": "AddEvent",
+      "event": "mouseout",
+      "status": "mapped-family",
+      "actions": [
+        "garden-plant",
+        "garden-harvest",
+        "garden-harvest-all",
+        "garden-soil",
+        "garden-freeze",
+        "garden-sacrifice",
+        "minigame-refill",
+        "wait"
+      ],
+      "note": "Garden gameplay operations; selective harvest tools, seed selection and information controls require per-surface review.",
+      "mappingScope": "reviewed source region; not a per-callback equivalence proof"
+    },
+    {
+      "id": "minigameGarden.js:1384:6:listener",
+      "file": "minigameGarden.js",
+      "line": 1384,
+      "column": 6,
+      "endLine": 1387,
+      "kind": "listener",
+      "symbol": "AddEvent",
+      "event": "click",
+      "status": "mapped-family",
+      "actions": [
+        "garden-plant",
+        "garden-harvest",
+        "garden-harvest-all",
+        "garden-soil",
+        "garden-freeze",
+        "garden-sacrifice",
+        "minigame-refill",
+        "wait"
+      ],
+      "note": "Garden gameplay operations; selective harvest tools, seed selection and information controls require per-surface review.",
+      "mappingScope": "reviewed source region; not a per-callback equivalence proof"
+    },
+    {
+      "id": "minigameGarden.js:1500:3:prompt",
+      "file": "minigameGarden.js",
+      "line": 1500,
+      "column": 3,
+      "endLine": 1500,
+      "kind": "prompt",
+      "symbol": "Game.Prompt",
+      "status": "mapped-family",
+      "actions": [
+        "garden-plant",
+        "garden-harvest",
+        "garden-harvest-all",
+        "garden-soil",
+        "garden-freeze",
+        "garden-sacrifice",
+        "minigame-refill",
+        "wait"
+      ],
+      "note": "Garden gameplay operations; selective harvest tools, seed selection and information controls require per-surface review.",
+      "mappingScope": "reviewed source region; not a per-callback equivalence proof"
+    },
+    {
+      "id": "minigameGarden.js:1542:20:timer",
+      "file": "minigameGarden.js",
+      "line": 1542,
+      "column": 20,
+      "endLine": 1542,
+      "kind": "timer",
+      "symbol": "setTimeout",
+      "status": "autonomous",
+      "actions": [
+        "wait"
+      ],
+      "note": "Native callback is scheduled by the deterministic timer adapter; asynchronous browser APIs remain environment assumptions."
+    },
+    {
+      "id": "minigameGarden.js:1543:20:timer",
+      "file": "minigameGarden.js",
+      "line": 1543,
+      "column": 20,
+      "endLine": 1543,
+      "kind": "timer",
+      "symbol": "setTimeout",
+      "status": "autonomous",
+      "actions": [
+        "wait"
+      ],
+      "note": "Native callback is scheduled by the deterministic timer adapter; asynchronous browser APIs remain environment assumptions."
+    },
+    {
+      "id": "minigameGarden.js:1544:20:timer",
+      "file": "minigameGarden.js",
+      "line": 1544,
+      "column": 20,
+      "endLine": 1544,
+      "kind": "timer",
+      "symbol": "setTimeout",
+      "status": "autonomous",
+      "actions": [
+        "wait"
+      ],
+      "note": "Native callback is scheduled by the deterministic timer adapter; asynchronous browser APIs remain environment assumptions."
+    },
+    {
+      "id": "minigameGarden.js:1663:2:listener",
+      "file": "minigameGarden.js",
+      "line": 1663,
+      "column": 2,
+      "endLine": 1671,
+      "kind": "listener",
+      "symbol": "AddEvent",
+      "event": "click",
+      "status": "mapped-family",
+      "actions": [
+        "garden-plant",
+        "garden-harvest",
+        "garden-harvest-all",
+        "garden-soil",
+        "garden-freeze",
+        "garden-sacrifice",
+        "minigame-refill",
+        "wait"
+      ],
+      "note": "Garden gameplay operations; selective harvest tools, seed selection and information controls require per-surface review.",
+      "mappingScope": "reviewed source region; not a per-callback equivalence proof"
+    },
+    {
+      "id": "minigameGarden.js:1672:2:listener",
+      "file": "minigameGarden.js",
+      "line": 1672,
+      "column": 2,
+      "endLine": 1700,
+      "kind": "listener",
+      "symbol": "AddEvent",
+      "event": "click",
+      "status": "mapped-family",
+      "actions": [
+        "garden-plant",
+        "garden-harvest",
+        "garden-harvest-all",
+        "garden-soil",
+        "garden-freeze",
+        "garden-sacrifice",
+        "minigame-refill",
+        "wait"
+      ],
+      "note": "Garden gameplay operations; selective harvest tools, seed selection and information controls require per-surface review.",
+      "mappingScope": "reviewed source region; not a per-callback equivalence proof"
+    },
+    {
+      "id": "minigameGarden.js:1846:2:timer",
+      "file": "minigameGarden.js",
+      "line": 1846,
+      "column": 2,
+      "endLine": 1846,
+      "kind": "timer",
+      "symbol": "setTimeout",
+      "status": "autonomous",
+      "actions": [
+        "wait"
+      ],
+      "note": "Native callback is scheduled by the deterministic timer adapter; asynchronous browser APIs remain environment assumptions."
+    },
+    {
+      "id": "minigameGarden.js:1848:1:autonomous-step",
+      "file": "minigameGarden.js",
+      "line": 1848,
+      "column": 1,
+      "endLine": 1983,
+      "kind": "autonomous-step",
+      "symbol": "M.logic",
+      "status": "mapped-family",
+      "actions": [
+        "garden-plant",
+        "garden-harvest",
+        "garden-harvest-all",
+        "garden-soil",
+        "garden-freeze",
+        "garden-sacrifice",
+        "minigame-refill",
+        "wait"
+      ],
+      "note": "Garden gameplay operations; selective harvest tools, seed selection and information controls require per-surface review.",
+      "mappingScope": "reviewed source region; not a per-callback equivalence proof"
+    },
+    {
+      "id": "minigameGrimoire.js:204:5:timer",
+      "file": "minigameGrimoire.js",
+      "line": 204,
+      "column": 5,
+      "endLine": 214,
+      "kind": "timer",
+      "symbol": "setTimeout",
+      "status": "autonomous",
+      "actions": [
+        "wait"
+      ],
+      "note": "Native callback is scheduled by the deterministic timer adapter; asynchronous browser APIs remain environment assumptions."
+    },
+    {
+      "id": "minigameGrimoire.js:210:7:timer",
+      "file": "minigameGrimoire.js",
+      "line": 210,
+      "column": 7,
+      "endLine": 212,
+      "kind": "timer",
+      "symbol": "setTimeout",
+      "status": "autonomous",
+      "actions": [
+        "wait"
+      ],
+      "note": "Native callback is scheduled by the deterministic timer adapter; asynchronous browser APIs remain environment assumptions."
+    },
+    {
+      "id": "minigameGrimoire.js:312:3:rng-reset",
+      "file": "minigameGrimoire.js",
+      "line": 312,
+      "column": 3,
+      "endLine": 312,
+      "kind": "rng-reset",
+      "symbol": "Math.seedrandom",
+      "explicitSeed": true,
+      "status": "environment",
+      "actions": [],
+      "note": "Explicit seeded generator is native; unseeded reset resumes the injected tape. No policy receives future draws."
+    },
+    {
+      "id": "minigameGrimoire.js:314:3:rng-reset",
+      "file": "minigameGrimoire.js",
+      "line": 314,
+      "column": 3,
+      "endLine": 314,
+      "kind": "rng-reset",
+      "symbol": "Math.seedrandom",
+      "explicitSeed": false,
+      "status": "environment",
+      "actions": [],
+      "note": "Explicit seeded generator is native; unseeded reset resumes the injected tape. No policy receives future draws."
+    },
+    {
+      "id": "minigameGrimoire.js:428:3:listener",
+      "file": "minigameGrimoire.js",
+      "line": 428,
+      "column": 3,
+      "endLine": 428,
+      "kind": "listener",
+      "symbol": "AddEvent",
+      "event": "click",
+      "status": "mapped-family",
+      "actions": [
+        "cast-spell",
+        "minigame-refill",
+        "wait"
+      ],
+      "note": "Spell and refill handlers plus native autonomous magic recovery.",
+      "mappingScope": "reviewed source region; not a per-callback equivalence proof"
+    },
+    {
+      "id": "minigameGrimoire.js:436:2:listener",
+      "file": "minigameGrimoire.js",
+      "line": 436,
+      "column": 2,
+      "endLine": 443,
+      "kind": "listener",
+      "symbol": "AddEvent",
+      "event": "click",
+      "status": "mapped-family",
+      "actions": [
+        "cast-spell",
+        "minigame-refill",
+        "wait"
+      ],
+      "note": "Spell and refill handlers plus native autonomous magic recovery.",
+      "mappingScope": "reviewed source region; not a per-callback equivalence proof"
+    },
+    {
+      "id": "minigameGrimoire.js:482:1:autonomous-step",
+      "file": "minigameGrimoire.js",
+      "line": 482,
+      "column": 1,
+      "endLine": 500,
+      "kind": "autonomous-step",
+      "symbol": "M.logic",
+      "status": "mapped-family",
+      "actions": [
+        "cast-spell",
+        "minigame-refill",
+        "wait"
+      ],
+      "note": "Spell and refill handlers plus native autonomous magic recovery.",
+      "mappingScope": "reviewed source region; not a per-callback equivalence proof"
+    },
+    {
+      "id": "minigameMarket.js:519:2:listener",
+      "file": "minigameMarket.js",
+      "line": 519,
+      "column": 2,
+      "endLine": 524,
+      "kind": "listener",
+      "symbol": "AddEvent",
+      "event": "click",
+      "status": "mapped-family",
+      "actions": [
+        "market-buy",
+        "market-sell",
+        "market-office",
+        "market-broker",
+        "market-loan",
+        "wait"
+      ],
+      "note": "Market gameplay operations include native Max trades through amount 10000. Graph and row visibility controls remain partial.",
+      "mappingScope": "reviewed source region; not a per-callback equivalence proof"
+    },
+    {
+      "id": "minigameMarket.js:525:2:listener",
+      "file": "minigameMarket.js",
+      "line": 525,
+      "column": 2,
+      "endLine": 531,
+      "kind": "listener",
+      "symbol": "AddEvent",
+      "event": "click",
+      "status": "mapped-family",
+      "actions": [
+        "market-buy",
+        "market-sell",
+        "market-office",
+        "market-broker",
+        "market-loan",
+        "wait"
+      ],
+      "note": "Market gameplay operations include native Max trades through amount 10000. Graph and row visibility controls remain partial.",
+      "mappingScope": "reviewed source region; not a per-callback equivalence proof"
+    },
+    {
+      "id": "minigameMarket.js:534:3:listener",
+      "file": "minigameMarket.js",
+      "line": 534,
+      "column": 3,
+      "endLine": 539,
+      "kind": "listener",
+      "symbol": "AddEvent",
+      "event": "click",
+      "status": "mapped-family",
+      "actions": [
+        "market-buy",
+        "market-sell",
+        "market-office",
+        "market-broker",
+        "market-loan",
+        "wait"
+      ],
+      "note": "Market gameplay operations include native Max trades through amount 10000. Graph and row visibility controls remain partial.",
+      "mappingScope": "reviewed source region; not a per-callback equivalence proof"
+    },
+    {
+      "id": "minigameMarket.js:542:2:listener",
+      "file": "minigameMarket.js",
+      "line": 542,
+      "column": 2,
+      "endLine": 552,
+      "kind": "listener",
+      "symbol": "AddEvent",
+      "event": "click",
+      "status": "mapped-family",
+      "actions": [
+        "market-buy",
+        "market-sell",
+        "market-office",
+        "market-broker",
+        "market-loan",
+        "wait"
+      ],
+      "note": "Market gameplay operations include native Max trades through amount 10000. Graph and row visibility controls remain partial.",
+      "mappingScope": "reviewed source region; not a per-callback equivalence proof"
+    },
+    {
+      "id": "minigameMarket.js:553:2:listener",
+      "file": "minigameMarket.js",
+      "line": 553,
+      "column": 2,
+      "endLine": 561,
+      "kind": "listener",
+      "symbol": "AddEvent",
+      "event": "click",
+      "status": "mapped-family",
+      "actions": [
+        "market-buy",
+        "market-sell",
+        "market-office",
+        "market-broker",
+        "market-loan",
+        "wait"
+      ],
+      "note": "Market gameplay operations include native Max trades through amount 10000. Graph and row visibility controls remain partial.",
+      "mappingScope": "reviewed source region; not a per-callback equivalence proof"
+    },
+    {
+      "id": "minigameMarket.js:563:2:listener",
+      "file": "minigameMarket.js",
+      "line": 563,
+      "column": 2,
+      "endLine": 565,
+      "kind": "listener",
+      "symbol": "AddEvent",
+      "event": "click",
+      "status": "mapped-family",
+      "actions": [
+        "market-buy",
+        "market-sell",
+        "market-office",
+        "market-broker",
+        "market-loan",
+        "wait"
+      ],
+      "note": "Market gameplay operations include native Max trades through amount 10000. Graph and row visibility controls remain partial.",
+      "mappingScope": "reviewed source region; not a per-callback equivalence proof"
+    },
+    {
+      "id": "minigameMarket.js:566:2:listener",
+      "file": "minigameMarket.js",
+      "line": 566,
+      "column": 2,
+      "endLine": 568,
+      "kind": "listener",
+      "symbol": "AddEvent",
+      "event": "click",
+      "status": "mapped-family",
+      "actions": [
+        "market-buy",
+        "market-sell",
+        "market-office",
+        "market-broker",
+        "market-loan",
+        "wait"
+      ],
+      "note": "Market gameplay operations include native Max trades through amount 10000. Graph and row visibility controls remain partial.",
+      "mappingScope": "reviewed source region; not a per-callback equivalence proof"
+    },
+    {
+      "id": "minigameMarket.js:569:2:listener",
+      "file": "minigameMarket.js",
+      "line": 569,
+      "column": 2,
+      "endLine": 571,
+      "kind": "listener",
+      "symbol": "AddEvent",
+      "event": "click",
+      "status": "mapped-family",
+      "actions": [
+        "market-buy",
+        "market-sell",
+        "market-office",
+        "market-broker",
+        "market-loan",
+        "wait"
+      ],
+      "note": "Market gameplay operations include native Max trades through amount 10000. Graph and row visibility controls remain partial.",
+      "mappingScope": "reviewed source region; not a per-callback equivalence proof"
+    },
+    {
+      "id": "minigameMarket.js:585:3:listener",
+      "file": "minigameMarket.js",
+      "line": 585,
+      "column": 3,
+      "endLine": 587,
+      "kind": "listener",
+      "symbol": "AddEvent",
+      "event": "mouseover",
+      "status": "mapped-family",
+      "actions": [
+        "market-buy",
+        "market-sell",
+        "market-office",
+        "market-broker",
+        "market-loan",
+        "wait"
+      ],
+      "note": "Market gameplay operations include native Max trades through amount 10000. Graph and row visibility controls remain partial.",
+      "mappingScope": "reviewed source region; not a per-callback equivalence proof"
+    },
+    {
+      "id": "minigameMarket.js:588:3:listener",
+      "file": "minigameMarket.js",
+      "line": 588,
+      "column": 3,
+      "endLine": 590,
+      "kind": "listener",
+      "symbol": "AddEvent",
+      "event": "mouseout",
+      "status": "mapped-family",
+      "actions": [
+        "market-buy",
+        "market-sell",
+        "market-office",
+        "market-broker",
+        "market-loan",
+        "wait"
+      ],
+      "note": "Market gameplay operations include native Max trades through amount 10000. Graph and row visibility controls remain partial.",
+      "mappingScope": "reviewed source region; not a per-callback equivalence proof"
+    },
+    {
+      "id": "minigameMarket.js:592:3:listener",
+      "file": "minigameMarket.js",
+      "line": 592,
+      "column": 3,
+      "endLine": 613,
+      "kind": "listener",
+      "symbol": "AddEvent",
+      "event": "click",
+      "status": "mapped-family",
+      "actions": [
+        "market-buy",
+        "market-sell",
+        "market-office",
+        "market-broker",
+        "market-loan",
+        "wait"
+      ],
+      "note": "Market gameplay operations include native Max trades through amount 10000. Graph and row visibility controls remain partial.",
+      "mappingScope": "reviewed source region; not a per-callback equivalence proof"
+    },
+    {
+      "id": "minigameMarket.js:615:3:listener",
+      "file": "minigameMarket.js",
+      "line": 615,
+      "column": 3,
+      "endLine": 617,
+      "kind": "listener",
+      "symbol": "AddEvent",
+      "event": "click",
+      "status": "mapped-family",
+      "actions": [
+        "market-buy",
+        "market-sell",
+        "market-office",
+        "market-broker",
+        "market-loan",
+        "wait"
+      ],
+      "note": "Market gameplay operations include native Max trades through amount 10000. Graph and row visibility controls remain partial.",
+      "mappingScope": "reviewed source region; not a per-callback equivalence proof"
+    },
+    {
+      "id": "minigameMarket.js:618:3:listener",
+      "file": "minigameMarket.js",
+      "line": 618,
+      "column": 3,
+      "endLine": 620,
+      "kind": "listener",
+      "symbol": "AddEvent",
+      "event": "click",
+      "status": "mapped-family",
+      "actions": [
+        "market-buy",
+        "market-sell",
+        "market-office",
+        "market-broker",
+        "market-loan",
+        "wait"
+      ],
+      "note": "Market gameplay operations include native Max trades through amount 10000. Graph and row visibility controls remain partial.",
+      "mappingScope": "reviewed source region; not a per-callback equivalence proof"
+    },
+    {
+      "id": "minigameMarket.js:621:3:listener",
+      "file": "minigameMarket.js",
+      "line": 621,
+      "column": 3,
+      "endLine": 623,
+      "kind": "listener",
+      "symbol": "AddEvent",
+      "event": "click",
+      "status": "mapped-family",
+      "actions": [
+        "market-buy",
+        "market-sell",
+        "market-office",
+        "market-broker",
+        "market-loan",
+        "wait"
+      ],
+      "note": "Market gameplay operations include native Max trades through amount 10000. Graph and row visibility controls remain partial.",
+      "mappingScope": "reviewed source region; not a per-callback equivalence proof"
+    },
+    {
+      "id": "minigameMarket.js:624:3:listener",
+      "file": "minigameMarket.js",
+      "line": 624,
+      "column": 3,
+      "endLine": 626,
+      "kind": "listener",
+      "symbol": "AddEvent",
+      "event": "click",
+      "status": "mapped-family",
+      "actions": [
+        "market-buy",
+        "market-sell",
+        "market-office",
+        "market-broker",
+        "market-loan",
+        "wait"
+      ],
+      "note": "Market gameplay operations include native Max trades through amount 10000. Graph and row visibility controls remain partial.",
+      "mappingScope": "reviewed source region; not a per-callback equivalence proof"
+    },
+    {
+      "id": "minigameMarket.js:627:3:listener",
+      "file": "minigameMarket.js",
+      "line": 627,
+      "column": 3,
+      "endLine": 629,
+      "kind": "listener",
+      "symbol": "AddEvent",
+      "event": "click",
+      "status": "mapped-family",
+      "actions": [
+        "market-buy",
+        "market-sell",
+        "market-office",
+        "market-broker",
+        "market-loan",
+        "wait"
+      ],
+      "note": "Market gameplay operations include native Max trades through amount 10000. Graph and row visibility controls remain partial.",
+      "mappingScope": "reviewed source region; not a per-callback equivalence proof"
+    },
+    {
+      "id": "minigameMarket.js:630:3:listener",
+      "file": "minigameMarket.js",
+      "line": 630,
+      "column": 3,
+      "endLine": 632,
+      "kind": "listener",
+      "symbol": "AddEvent",
+      "event": "click",
+      "status": "mapped-family",
+      "actions": [
+        "market-buy",
+        "market-sell",
+        "market-office",
+        "market-broker",
+        "market-loan",
+        "wait"
+      ],
+      "note": "Market gameplay operations include native Max trades through amount 10000. Graph and row visibility controls remain partial.",
+      "mappingScope": "reviewed source region; not a per-callback equivalence proof"
+    },
+    {
+      "id": "minigameMarket.js:633:3:listener",
+      "file": "minigameMarket.js",
+      "line": 633,
+      "column": 3,
+      "endLine": 635,
+      "kind": "listener",
+      "symbol": "AddEvent",
+      "event": "click",
+      "status": "mapped-family",
+      "actions": [
+        "market-buy",
+        "market-sell",
+        "market-office",
+        "market-broker",
+        "market-loan",
+        "wait"
+      ],
+      "note": "Market gameplay operations include native Max trades through amount 10000. Graph and row visibility controls remain partial.",
+      "mappingScope": "reviewed source region; not a per-callback equivalence proof"
+    },
+    {
+      "id": "minigameMarket.js:636:3:listener",
+      "file": "minigameMarket.js",
+      "line": 636,
+      "column": 3,
+      "endLine": 638,
+      "kind": "listener",
+      "symbol": "AddEvent",
+      "event": "click",
+      "status": "mapped-family",
+      "actions": [
+        "market-buy",
+        "market-sell",
+        "market-office",
+        "market-broker",
+        "market-loan",
+        "wait"
+      ],
+      "note": "Market gameplay operations include native Max trades through amount 10000. Graph and row visibility controls remain partial.",
+      "mappingScope": "reviewed source region; not a per-callback equivalence proof"
+    },
+    {
+      "id": "minigameMarket.js:643:2:listener",
+      "file": "minigameMarket.js",
+      "line": 643,
+      "column": 2,
+      "endLine": 687,
+      "kind": "listener",
+      "symbol": "AddEvent",
+      "event": "mousemove",
+      "status": "mapped-family",
+      "actions": [
+        "market-buy",
+        "market-sell",
+        "market-office",
+        "market-broker",
+        "market-loan",
+        "wait"
+      ],
+      "note": "Market gameplay operations include native Max trades through amount 10000. Graph and row visibility controls remain partial.",
+      "mappingScope": "reviewed source region; not a per-callback equivalence proof"
+    },
+    {
+      "id": "minigameMarket.js:688:2:listener",
+      "file": "minigameMarket.js",
+      "line": 688,
+      "column": 2,
+      "endLine": 692,
+      "kind": "listener",
+      "symbol": "AddEvent",
+      "event": "mouseout",
+      "status": "mapped-family",
+      "actions": [
+        "market-buy",
+        "market-sell",
+        "market-office",
+        "market-broker",
+        "market-loan",
+        "wait"
+      ],
+      "note": "Market gameplay operations include native Max trades through amount 10000. Graph and row visibility controls remain partial.",
+      "mappingScope": "reviewed source region; not a per-callback equivalence proof"
+    },
+    {
+      "id": "minigameMarket.js:885:1:autonomous-step",
+      "file": "minigameMarket.js",
+      "line": 885,
+      "column": 1,
+      "endLine": 907,
+      "kind": "autonomous-step",
+      "symbol": "M.logic",
+      "status": "mapped-family",
+      "actions": [
+        "market-buy",
+        "market-sell",
+        "market-office",
+        "market-broker",
+        "market-loan",
+        "wait"
+      ],
+      "note": "Market gameplay operations include native Max trades through amount 10000. Graph and row visibility controls remain partial.",
+      "mappingScope": "reviewed source region; not a per-callback equivalence proof"
+    },
+    {
+      "id": "minigamePantheon.js:404:3:listener",
+      "file": "minigamePantheon.js",
+      "line": 404,
+      "column": 3,
+      "endLine": 404,
+      "kind": "listener",
+      "symbol": "AddEvent",
+      "event": "mousedown",
+      "status": "mapped-family",
+      "actions": [
+        "pantheon-slot",
+        "minigame-refill",
+        "wait"
+      ],
+      "note": "Native drag/drop semantic actions and swap refills; intermediate dragging remains partial.",
+      "mappingScope": "reviewed source region; not a per-callback equivalence proof"
+    },
+    {
+      "id": "minigamePantheon.js:405:3:listener",
+      "file": "minigamePantheon.js",
+      "line": 405,
+      "column": 3,
+      "endLine": 405,
+      "kind": "listener",
+      "symbol": "AddEvent",
+      "event": "mouseup",
+      "status": "mapped-family",
+      "actions": [
+        "pantheon-slot",
+        "minigame-refill",
+        "wait"
+      ],
+      "note": "Native drag/drop semantic actions and swap refills; intermediate dragging remains partial.",
+      "mappingScope": "reviewed source region; not a per-callback equivalence proof"
+    },
+    {
+      "id": "minigamePantheon.js:410:3:listener",
+      "file": "minigamePantheon.js",
+      "line": 410,
+      "column": 3,
+      "endLine": 410,
+      "kind": "listener",
+      "symbol": "AddEvent",
+      "event": "mouseover",
+      "status": "mapped-family",
+      "actions": [
+        "pantheon-slot",
+        "minigame-refill",
+        "wait"
+      ],
+      "note": "Native drag/drop semantic actions and swap refills; intermediate dragging remains partial.",
+      "mappingScope": "reviewed source region; not a per-callback equivalence proof"
+    },
+    {
+      "id": "minigamePantheon.js:411:3:listener",
+      "file": "minigamePantheon.js",
+      "line": 411,
+      "column": 3,
+      "endLine": 411,
+      "kind": "listener",
+      "symbol": "AddEvent",
+      "event": "mouseout",
+      "status": "mapped-family",
+      "actions": [
+        "pantheon-slot",
+        "minigame-refill",
+        "wait"
+      ],
+      "note": "Native drag/drop semantic actions and swap refills; intermediate dragging remains partial.",
+      "mappingScope": "reviewed source region; not a per-callback equivalence proof"
+    },
+    {
+      "id": "minigamePantheon.js:414:2:listener",
+      "file": "minigamePantheon.js",
+      "line": 414,
+      "column": 2,
+      "endLine": 414,
+      "kind": "listener",
+      "symbol": "AddEvent",
+      "event": "mouseup",
+      "status": "mapped-family",
+      "actions": [
+        "pantheon-slot",
+        "minigame-refill",
+        "wait"
+      ],
+      "note": "Native drag/drop semantic actions and swap refills; intermediate dragging remains partial.",
+      "mappingScope": "reviewed source region; not a per-callback equivalence proof"
+    },
+    {
+      "id": "minigamePantheon.js:422:2:listener",
+      "file": "minigamePantheon.js",
+      "line": 422,
+      "column": 2,
+      "endLine": 429,
+      "kind": "listener",
+      "symbol": "AddEvent",
+      "event": "click",
+      "status": "mapped-family",
+      "actions": [
+        "pantheon-slot",
+        "minigame-refill",
+        "wait"
+      ],
+      "note": "Native drag/drop semantic actions and swap refills; intermediate dragging remains partial.",
+      "mappingScope": "reviewed source region; not a per-callback equivalence proof"
+    },
+    {
+      "id": "minigamePantheon.js:479:1:autonomous-step",
+      "file": "minigamePantheon.js",
+      "line": 479,
+      "column": 1,
+      "endLine": 488,
+      "kind": "autonomous-step",
+      "symbol": "M.logic",
+      "status": "mapped-family",
+      "actions": [
+        "pantheon-slot",
+        "minigame-refill",
+        "wait"
+      ],
+      "note": "Native drag/drop semantic actions and swap refills; intermediate dragging remains partial.",
+      "mappingScope": "reviewed source region; not a per-callback equivalence proof"
+    }
+  ]
+}

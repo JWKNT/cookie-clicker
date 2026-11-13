@@ -1,0 +1,92 @@
+[
+  {
+    "name": "explicit-audit-environment-boundary.js",
+    "sha256": "efe7239b6b850b34975024028c2ec1a783bdfc02b504cd67deb5786d25a13908",
+    "lengthUtf16": 47,
+    "text": "localStorage.setItem(\"CookieClickerLang\",\"EN\");"
+  },
+  {
+    "name": "base64.js",
+    "sha256": "875839c3e0c174c9358ce96923adfed6a6d2c090187a32deb35152dfac2c0e47",
+    "lengthUtf16": 3144,
+    "file": "base64.js"
+  },
+  {
+    "name": "index.html:inline:527",
+    "sha256": "4a490f71133e4a0b2c69b7f179c52b3210d7aa4cda9a48153568829db5adc57f",
+    "lengthUtf16": 76,
+    "file": "index.html",
+    "start": 527,
+    "end": 603
+  },
+  {
+    "name": "main.js",
+    "sha256": "a8813ec2ee97edf5ebff6a3ce2037dcb65c08abd13c123bb92efda89b06ef4f7",
+    "lengthUtf16": 958413,
+    "file": "main.js"
+  },
+  {
+    "name": "index.html:inline:3827",
+    "sha256": "e90d6e0daec0d3b86f77a9fabddc1d7e6e8dbcfca11fc718cc12afeb3b163e92",
+    "lengthUtf16": 112,
+    "file": "index.html",
+    "start": 3827,
+    "end": 3939
+  },
+  {
+    "name": "index.html:inline:4484",
+    "sha256": "e41ae1fc8ee0bf499af0f559833ecf7cb55d3cee22245cefe1f9221b35d5f25f",
+    "lengthUtf16": 65,
+    "file": "index.html",
+    "start": 4484,
+    "end": 4549
+  },
+  {
+    "name": "diagnostic-window-load.js",
+    "sha256": "2f870939f8c0b6da2df10ea7f746b1c2f312fbee41098b05eaa7636a62e89fa7",
+    "lengthUtf16": 16,
+    "text": "window.onload();"
+  },
+  {
+    "name": "minigameGarden.js",
+    "sha256": "184eacacd9325d493412dcda07f63d3a791939f83889b4349b6099d04be8e6c9",
+    "lengthUtf16": 85138,
+    "file": "minigameGarden.js"
+  },
+  {
+    "name": "minigameMarket.js",
+    "sha256": "78538743673f3c1cd0e870a3695c77dcacd63febbe64b88f8a8fab9ea7e2863f",
+    "lengthUtf16": 56755,
+    "file": "minigameMarket.js"
+  },
+  {
+    "name": "minigameGrimoire.js",
+    "sha256": "9efea1feb898dc9b719dd971bd27a71f083a8855b910013c524aea9b6d2a349d",
+    "lengthUtf16": 23572,
+    "file": "minigameGrimoire.js"
+  },
+  {
+    "name": "minigamePantheon.js",
+    "sha256": "af08c31c4564d445cc2d1a7d101c4a63b57aa9b89991b93b8a65f4c0427573a0",
+    "lengthUtf16": 25885,
+    "file": "minigamePantheon.js"
+  },
+  {
+    "name": "loc/EN.js",
+    "sha256": "ce48272a5fd5ab1f309dbb8fd7bd70188984ce14235a1d3d9215f3585101f433",
+    "lengthUtf16": 198214,
+    "file": "loc/EN.js"
+  },
+  {
+    "name": "explicit-funded-cycle-fixture.js",
+    "sha256": "ed17ab2a684de7eb961c32f3055190cd1b0c7f0abccbbb5165e8b3b48b9c8624",
+    "lengthUtf16": 411,
+    "text": "Game.volume=0;Game.cookies=Math.pow(2,60);Game.cookiesEarned=Game.cookies;\nGame.Objects.Cursor.amount=1;Game.Objects.Cursor.bought=1;Game.Objects.Cursor.highest=1;\nGame.Objects.Temple.amount=1;Game.Objects.Temple.level=1;Game.BuildingsOwned=2;\nGame.Upgrades['Reinforced index finger'].unlocked=1;\nGame.Upgrades['Carpal tunnel prevention cream'].unlocked=1;\nGame.Achievements['Click'].won=1;Game.LoadMinigames();"
+  },
+  {
+    "name": "explicit-god-and-buff-fixture.js",
+    "sha256": "f87abd6a19e9097003fc8756095b442a748930db694ad01525f7a9ddb36fbeea",
+    "lengthUtf16": 147,
+    "text": "Game.Objects.Temple.minigame.slot[0]=Game.Objects.Temple.minigame.gods.ruin.id;\nGame.gainBuff('devastation',10,1.01);Game.Objects.Cursor.refresh();"
+  }
+]

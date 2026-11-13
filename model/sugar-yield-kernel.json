@@ -1,0 +1,208 @@
+{
+  "schemaVersion": 1,
+  "scope": "Exact IID53 array-index kernel with native binary64 multiplication before floor.",
+  "doesNotProve": [
+    "The active generator at every harvest",
+    "The initialized source call frame",
+    "The full harvest callback transition",
+    "A full-game optimal strategy"
+  ],
+  "reproduction": "node tools/audit-sugar-yield.mjs --check",
+  "mainSourceSha256": "a8813ec2ee97edf5ebff6a3ce2037dcb65c08abd13c123bb92efda89b06ef4f7",
+  "chooseSourceSha256": "2a2c7b1c1d45b981f713f0e6ae3edffd81a50dfee873970c26011a32b50906f2",
+  "harvestSourceSha256": "0e62f4a084174fda3f076c8537c011fb89c74906a5c4316437885a69d804bca7",
+  "sourceArrays": {
+    "golden": {
+      "line": 4494,
+      "values": [
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "callSha256": "c0a22a3c53f7bd338c0bd48696df3b000c295a8865949be055f47ad830cb30c8"
+    },
+    "meaty": {
+      "line": 4499,
+      "values": [
+        0,
+        0,
+        1,
+        2,
+        2
+      ],
+      "callSha256": "372150964dac8c5bac535e9a0cd6cd2c0ed9a56ca6b11f1b625e19ce0a55b0ad"
+    }
+  },
+  "denominator": "9007199254740992",
+  "tables": {
+    "golden": {
+      "buckets": [
+        {
+          "index": 0,
+          "value": 2,
+          "lower": "0",
+          "upperExclusive": "1501199875790166",
+          "count": "1501199875790166"
+        },
+        {
+          "index": 1,
+          "value": 3,
+          "lower": "1501199875790166",
+          "upperExclusive": "3002399751580331",
+          "count": "1501199875790165"
+        },
+        {
+          "index": 2,
+          "value": 4,
+          "lower": "3002399751580331",
+          "upperExclusive": "4503599627370496",
+          "count": "1501199875790165"
+        },
+        {
+          "index": 3,
+          "value": 5,
+          "lower": "4503599627370496",
+          "upperExclusive": "6004799503160661",
+          "count": "1501199875790165"
+        },
+        {
+          "index": 4,
+          "value": 6,
+          "lower": "6004799503160661",
+          "upperExclusive": "7505999378950826",
+          "count": "1501199875790165"
+        },
+        {
+          "index": 5,
+          "value": 7,
+          "lower": "7505999378950826",
+          "upperExclusive": "9007199254740992",
+          "count": "1501199875790166"
+        }
+      ],
+      "distribution": [
+        {
+          "value": 2,
+          "numerator": "1501199875790166",
+          "denominator": "9007199254740992"
+        },
+        {
+          "value": 3,
+          "numerator": "1501199875790165",
+          "denominator": "9007199254740992"
+        },
+        {
+          "value": 4,
+          "numerator": "1501199875790165",
+          "denominator": "9007199254740992"
+        },
+        {
+          "value": 5,
+          "numerator": "1501199875790165",
+          "denominator": "9007199254740992"
+        },
+        {
+          "value": 6,
+          "numerator": "1501199875790165",
+          "denominator": "9007199254740992"
+        },
+        {
+          "value": 7,
+          "numerator": "1501199875790166",
+          "denominator": "9007199254740992"
+        }
+      ],
+      "expectation": {
+        "numerator": "9",
+        "denominator": "2"
+      }
+    },
+    "meaty": {
+      "buckets": [
+        {
+          "index": 0,
+          "value": 0,
+          "lower": "0",
+          "upperExclusive": "1801439850948199",
+          "count": "1801439850948199"
+        },
+        {
+          "index": 1,
+          "value": 0,
+          "lower": "1801439850948199",
+          "upperExclusive": "3602879701896397",
+          "count": "1801439850948198"
+        },
+        {
+          "index": 2,
+          "value": 1,
+          "lower": "3602879701896397",
+          "upperExclusive": "5404319552844595",
+          "count": "1801439850948198"
+        },
+        {
+          "index": 3,
+          "value": 2,
+          "lower": "5404319552844595",
+          "upperExclusive": "7205759403792794",
+          "count": "1801439850948199"
+        },
+        {
+          "index": 4,
+          "value": 2,
+          "lower": "7205759403792794",
+          "upperExclusive": "9007199254740992",
+          "count": "1801439850948198"
+        }
+      ],
+      "distribution": [
+        {
+          "value": 0,
+          "numerator": "3602879701896397",
+          "denominator": "9007199254740992"
+        },
+        {
+          "value": 1,
+          "numerator": "1801439850948198",
+          "denominator": "9007199254740992"
+        },
+        {
+          "value": 2,
+          "numerator": "3602879701896397",
+          "denominator": "9007199254740992"
+        }
+      ],
+      "expectation": {
+        "numerator": "1",
+        "denominator": "1"
+      }
+    }
+  },
+  "nativeSourceComparisonCases": 2055,
+  "roundingCorrections": [
+    {
+      "kind": "golden",
+      "index": "6004799503160661",
+      "realIndex": 3,
+      "nativeIndex": 4
+    },
+    {
+      "kind": "golden",
+      "index": "7505999378950826",
+      "realIndex": 4,
+      "nativeIndex": 5
+    },
+    {
+      "kind": "meaty",
+      "index": "5404319552844595",
+      "realIndex": 2,
+      "nativeIndex": 3
+    }
+  ],
+  "proofModule": "lean/CookieClicker/JavaScriptRandomSmallChoiceBridge.lean",
+  "proofSha256": "0023ff51293568db3f1c72d44738132cc332962e0f3225dde91b4aef75f98032",
+  "kernelSha256": "02528dd9e30207f68b161f7d32160fdd8b19a4bca3ba2a28e371c3a6bc51fbcc"
+}

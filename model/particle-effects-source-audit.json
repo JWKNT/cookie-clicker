@@ -1,0 +1,1357 @@
+{
+  "schemaVersion": 1,
+  "generatorSha256": "42883a993f9e9fe0f97d59b90fa6613b13306241bacf376e2b03da39c3fcfe1b",
+  "status": "source-effect-inventory-and-guarded-native-regression-not-yet-interpreter-refinement",
+  "sourceHashes": {
+    "main.js": "a8813ec2ee97edf5ebff6a3ce2037dcb65c08abd13c123bb92efda89b06ef4f7",
+    "minigameGarden.js": "184eacacd9325d493412dcda07f63d3a791939f83889b4349b6099d04be8e6c9",
+    "minigameMarket.js": "78538743673f3c1cd0e870a3695c77dcacd63febbe64b88f8a8fab9ea7e2863f",
+    "minigameGrimoire.js": "9efea1feb898dc9b719dd971bd27a71f083a8855b910013c524aea9b6d2a349d",
+    "minigamePantheon.js": "af08c31c4564d445cc2d1a7d101c4a63b57aa9b89991b93b8a65f4c0427573a0",
+    "base64.js": "875839c3e0c174c9358ce96923adfed6a6d2c090187a32deb35152dfac2c0e47",
+    "loc/EN.js": "ce48272a5fd5ab1f309dbb8fd7bd70188984ce14235a1d3d9215f3585101f433",
+    "index.html": "28488d9aef9bf31c4c023a0af01f0500a3b3e462b79bf7f2b09790025927a969"
+  },
+  "scope": "All pinned main.js particle storage definitions and uses, plus complete particleAdd/update/draw bodies and their Pic/Loader dependency.",
+  "initialization": [
+    {
+      "line": 5914,
+      "target": "Game.particles",
+      "value": "[]"
+    },
+    {
+      "line": 5915,
+      "target": "Game.particlesN",
+      "value": "50"
+    },
+    {
+      "line": 5918,
+      "target": "Game.particles.*",
+      "value": "{x:0,y:0,xd:0,yd:0,w:64,h:64,z:0,size:1,dur:2,life:-1,r:0,pic:'smallCookies.png',picId:0,picPos:[0,0]}"
+    }
+  ],
+  "functions": [
+    {
+      "name": "Game.particleAdd",
+      "line": 5940,
+      "sourceSha256": "c4d2550cedefa3035392a2d62568c8a383d16f57c651ae306daea78770b3affc",
+      "writes": [
+        {
+          "line": 5964,
+          "target": "me.life",
+          "operator": "="
+        },
+        {
+          "line": 5965,
+          "target": "me.x",
+          "operator": "="
+        },
+        {
+          "line": 5966,
+          "target": "me.y",
+          "operator": "="
+        },
+        {
+          "line": 5967,
+          "target": "me.xd",
+          "operator": "="
+        },
+        {
+          "line": 5968,
+          "target": "me.yd",
+          "operator": "="
+        },
+        {
+          "line": 5969,
+          "target": "me.size",
+          "operator": "="
+        },
+        {
+          "line": 5970,
+          "target": "me.z",
+          "operator": "="
+        },
+        {
+          "line": 5971,
+          "target": "me.dur",
+          "operator": "="
+        },
+        {
+          "line": 5972,
+          "target": "me.r",
+          "operator": "="
+        },
+        {
+          "line": 5973,
+          "target": "me.picId",
+          "operator": "="
+        },
+        {
+          "line": 5985,
+          "target": "me.picPos",
+          "operator": "="
+        },
+        {
+          "line": 5986,
+          "target": "me.picPos",
+          "operator": "="
+        },
+        {
+          "line": 5990,
+          "target": "me.picPos",
+          "operator": "="
+        },
+        {
+          "line": 5991,
+          "target": "me.pic",
+          "operator": "="
+        },
+        {
+          "line": 5992,
+          "target": "me.text",
+          "operator": "="
+        }
+      ],
+      "calls": [
+        {
+          "line": 5961,
+          "target": "Math.floor",
+          "construct": false
+        },
+        {
+          "line": 5961,
+          "target": "Math.random",
+          "construct": false
+        },
+        {
+          "line": 5972,
+          "target": "Math.floor",
+          "construct": false
+        },
+        {
+          "line": 5972,
+          "target": "Math.random",
+          "construct": false
+        },
+        {
+          "line": 5973,
+          "target": "Math.floor",
+          "construct": false
+        },
+        {
+          "line": 5973,
+          "target": "Math.random",
+          "construct": false
+        },
+        {
+          "line": 5983,
+          "target": "cookies.push",
+          "construct": false
+        },
+        {
+          "line": 5985,
+          "target": "choose",
+          "construct": false
+        },
+        {
+          "line": 5986,
+          "target": "Game.bakeryName.toLowerCase",
+          "construct": false
+        },
+        {
+          "line": 5986,
+          "target": "Math.random",
+          "construct": false
+        }
+      ],
+      "returns": [
+        {
+          "line": 5993,
+          "value": "me"
+        },
+        {
+          "line": 5995,
+          "value": "{}"
+        }
+      ],
+      "aliases": [
+        {
+          "line": 5963,
+          "local": "me",
+          "value": "Game.particles.*"
+        },
+        {
+          "line": 5982,
+          "local": "cookie",
+          "value": "Game.Upgrades.*"
+        }
+      ],
+      "readRoots": [
+        "Game.LeftBackground",
+        "Game.LeftBackground.canvas",
+        "Game.LeftBackground.canvas.width",
+        "Game.Upgrades",
+        "Game.Upgrades.*",
+        "Game.bakeryName",
+        "Game.bakeryName.toLowerCase",
+        "Game.particles",
+        "Game.particles.*",
+        "Game.particles.*.life",
+        "Game.particlesN",
+        "Game.season",
+        "Math.floor",
+        "Math.random",
+        "cookie.bought",
+        "cookie.icon",
+        "cookie.pool",
+        "cookies.push"
+      ]
+    },
+    {
+      "name": "Game.particlesUpdate",
+      "line": 5921,
+      "sourceSha256": "2c55cfb54e4d31be01adcb1820e59128cb6644915b6c851d74c15151322266a9",
+      "writes": [
+        {
+          "line": 5928,
+          "target": "me.yd",
+          "operator": "+="
+        },
+        {
+          "line": 5929,
+          "target": "me.x",
+          "operator": "+="
+        },
+        {
+          "line": 5930,
+          "target": "me.y",
+          "operator": "+="
+        },
+        {
+          "line": 5932,
+          "target": "me.life",
+          "operator": "++"
+        },
+        {
+          "line": 5935,
+          "target": "me.life",
+          "operator": "="
+        }
+      ],
+      "calls": [
+        {
+          "line": 5928,
+          "target": "Math.random",
+          "construct": false
+        }
+      ],
+      "returns": [],
+      "aliases": [
+        {
+          "line": 5925,
+          "local": "me",
+          "value": "Game.particles.*"
+        }
+      ],
+      "readRoots": [
+        "Game.fps",
+        "Game.particles",
+        "Game.particles.*",
+        "Game.particlesN",
+        "Math.random",
+        "me.dur",
+        "me.life",
+        "me.text",
+        "me.xd",
+        "me.yd"
+      ]
+    },
+    {
+      "name": "Game.particlesDraw",
+      "line": 5997,
+      "sourceSha256": "1a752a3c0448e5e6f60be9c95a69a4df62df587e90d3d84ead70833691e2986e",
+      "writes": [
+        {
+          "line": 6000,
+          "target": "ctx.fillStyle",
+          "operator": "="
+        },
+        {
+          "line": 6001,
+          "target": "ctx.font",
+          "operator": "="
+        },
+        {
+          "line": 6002,
+          "target": "ctx.textAlign",
+          "operator": "="
+        },
+        {
+          "line": 6012,
+          "target": "ctx.globalAlpha",
+          "operator": "="
+        }
+      ],
+      "calls": [
+        {
+          "line": 6015,
+          "target": "ctx.fillText",
+          "construct": false
+        },
+        {
+          "line": 6019,
+          "target": "ctx.save",
+          "construct": false
+        },
+        {
+          "line": 6020,
+          "target": "ctx.translate",
+          "construct": false
+        },
+        {
+          "line": 6021,
+          "target": "ctx.rotate",
+          "construct": false
+        },
+        {
+          "line": 6028,
+          "target": "ctx.drawImage",
+          "construct": false
+        },
+        {
+          "line": 6028,
+          "target": "Pic",
+          "construct": false
+        },
+        {
+          "line": 6033,
+          "target": "ctx.drawImage",
+          "construct": false
+        },
+        {
+          "line": 6033,
+          "target": "Pic",
+          "construct": false
+        },
+        {
+          "line": 6035,
+          "target": "ctx.restore",
+          "construct": false
+        }
+      ],
+      "returns": [],
+      "aliases": [
+        {
+          "line": 5999,
+          "local": "ctx",
+          "value": "Game.LeftBackground"
+        },
+        {
+          "line": 6006,
+          "local": "me",
+          "value": "Game.particles.*"
+        }
+      ],
+      "readRoots": [
+        "Game.LeftBackground",
+        "Game.fps",
+        "Game.particles",
+        "Game.particles.*",
+        "Game.particlesN",
+        "Math.PI",
+        "ctx.drawImage",
+        "ctx.fillText",
+        "ctx.restore",
+        "ctx.rotate",
+        "ctx.save",
+        "ctx.translate",
+        "me.dur",
+        "me.life",
+        "me.pic",
+        "me.picId",
+        "me.picPos",
+        "me.picPos.0",
+        "me.picPos.1",
+        "me.r",
+        "me.size",
+        "me.text",
+        "me.x",
+        "me.y",
+        "me.z"
+      ]
+    },
+    {
+      "name": "Pic",
+      "line": 867,
+      "sourceSha256": "cb24e5d16f6610cb4bdf3bddfec7ea9fa4c78b148696ac5d92cb877f8f5a57a5",
+      "writes": [],
+      "calls": [
+        {
+          "line": 869,
+          "target": "Game.Loader.assetsLoaded.indexOf",
+          "construct": false
+        },
+        {
+          "line": 870,
+          "target": "Game.Loader.assetsLoading.indexOf",
+          "construct": false
+        },
+        {
+          "line": 870,
+          "target": "Game.Loader.Load",
+          "construct": false
+        }
+      ],
+      "returns": [
+        {
+          "line": 869,
+          "value": "Game.Loader.assets[what]"
+        },
+        {
+          "line": 871,
+          "value": "Game.Loader.blank"
+        }
+      ],
+      "aliases": [],
+      "readRoots": [
+        "Game.Loader",
+        "Game.Loader.Load",
+        "Game.Loader.assets",
+        "Game.Loader.assets.*",
+        "Game.Loader.assetsLoaded",
+        "Game.Loader.assetsLoaded.indexOf",
+        "Game.Loader.assetsLoading",
+        "Game.Loader.assetsLoading.indexOf",
+        "Game.Loader.blank"
+      ]
+    },
+    {
+      "name": "Loader",
+      "line": 785,
+      "sourceSha256": "7e7bdccde03872afa89403e838c2819ca0d3bfc0e6d3e6719a9cf0a2a59e0d45",
+      "writes": [
+        {
+          "line": 787,
+          "target": "this.loadingN",
+          "operator": "="
+        },
+        {
+          "line": 788,
+          "target": "this.assetsN",
+          "operator": "="
+        },
+        {
+          "line": 789,
+          "target": "this.assets",
+          "operator": "="
+        },
+        {
+          "line": 790,
+          "target": "this.assetsLoading",
+          "operator": "="
+        },
+        {
+          "line": 791,
+          "target": "this.assetsLoaded",
+          "operator": "="
+        },
+        {
+          "line": 792,
+          "target": "this.domain",
+          "operator": "="
+        },
+        {
+          "line": 793,
+          "target": "this.loaded",
+          "operator": "="
+        },
+        {
+          "line": 794,
+          "target": "this.doneLoading",
+          "operator": "="
+        },
+        {
+          "line": 796,
+          "target": "this.blank",
+          "operator": "="
+        },
+        {
+          "line": 797,
+          "target": "this.blank.width",
+          "operator": "="
+        },
+        {
+          "line": 798,
+          "target": "this.blank.height",
+          "operator": "="
+        },
+        {
+          "line": 799,
+          "target": "this.blank.alt",
+          "operator": "="
+        },
+        {
+          "line": 801,
+          "target": "this.Load",
+          "operator": "="
+        },
+        {
+          "line": 805,
+          "target": "this.loadingN",
+          "operator": "++"
+        },
+        {
+          "line": 806,
+          "target": "this.assetsN",
+          "operator": "++"
+        },
+        {
+          "line": 810,
+          "target": "img.crossOrigin",
+          "operator": "="
+        },
+        {
+          "line": 811,
+          "target": "img.alt",
+          "operator": "="
+        },
+        {
+          "line": 812,
+          "target": "img.onload",
+          "operator": "="
+        },
+        {
+          "line": 813,
+          "target": "this.assets.*",
+          "operator": "="
+        },
+        {
+          "line": 815,
+          "target": "img.src",
+          "operator": "="
+        },
+        {
+          "line": 816,
+          "target": "img.src",
+          "operator": "="
+        },
+        {
+          "line": 820,
+          "target": "this.Replace",
+          "operator": "="
+        },
+        {
+          "line": 824,
+          "target": "img.crossOrigin",
+          "operator": "="
+        },
+        {
+          "line": 825,
+          "target": "img.src",
+          "operator": "="
+        },
+        {
+          "line": 826,
+          "target": "img.src",
+          "operator": "="
+        },
+        {
+          "line": 827,
+          "target": "img.alt",
+          "operator": "="
+        },
+        {
+          "line": 828,
+          "target": "img.onload",
+          "operator": "="
+        },
+        {
+          "line": 829,
+          "target": "this.assets.*",
+          "operator": "="
+        },
+        {
+          "line": 831,
+          "target": "this.onLoadReplace",
+          "operator": "="
+        },
+        {
+          "line": 834,
+          "target": "this.onLoad",
+          "operator": "="
+        },
+        {
+          "line": 838,
+          "target": "this.loadingN",
+          "operator": "--"
+        },
+        {
+          "line": 841,
+          "target": "this.doneLoading",
+          "operator": "="
+        },
+        {
+          "line": 845,
+          "target": "this.waitForLoad",
+          "operator": "="
+        },
+        {
+          "line": 861,
+          "target": "this.getProgress",
+          "operator": "="
+        }
+      ],
+      "calls": [
+        {
+          "line": 796,
+          "target": "document.createElement",
+          "construct": false
+        },
+        {
+          "line": 807,
+          "target": "this.assetsLoading.indexOf",
+          "construct": false
+        },
+        {
+          "line": 807,
+          "target": "this.assetsLoaded.indexOf",
+          "construct": false
+        },
+        {
+          "line": 809,
+          "target": "Image",
+          "construct": true
+        },
+        {
+          "line": 812,
+          "target": "bind",
+          "construct": false
+        },
+        {
+          "line": 814,
+          "target": "this.assetsLoading.push",
+          "construct": false
+        },
+        {
+          "line": 815,
+          "target": "assets.*.indexOf",
+          "construct": false
+        },
+        {
+          "line": 822,
+          "target": "this.Load",
+          "construct": false
+        },
+        {
+          "line": 823,
+          "target": "Image",
+          "construct": true
+        },
+        {
+          "line": 825,
+          "target": "newer.indexOf",
+          "construct": false
+        },
+        {
+          "line": 828,
+          "target": "bind",
+          "construct": false
+        },
+        {
+          "line": 836,
+          "target": "this.assetsLoaded.push",
+          "construct": false
+        },
+        {
+          "line": 837,
+          "target": "this.assetsLoading.splice",
+          "construct": false
+        },
+        {
+          "line": 837,
+          "target": "this.assetsLoading.indexOf",
+          "construct": false
+        },
+        {
+          "line": 842,
+          "target": "this.loaded",
+          "construct": false
+        },
+        {
+          "line": 853,
+          "target": "me.assetsLoaded.indexOf",
+          "construct": false
+        },
+        {
+          "line": 853,
+          "target": "setTimeout",
+          "construct": false
+        },
+        {
+          "line": 855,
+          "target": "callback",
+          "construct": false
+        },
+        {
+          "line": 858,
+          "target": "me.Load",
+          "construct": false
+        },
+        {
+          "line": 859,
+          "target": "checkLoadedLoop",
+          "construct": false
+        }
+      ],
+      "returns": [
+        {
+          "line": 853,
+          "value": "false"
+        },
+        {
+          "line": 856,
+          "value": "true"
+        },
+        {
+          "line": 863,
+          "value": "1-this.loadingN/this.assetsN"
+        }
+      ],
+      "aliases": [],
+      "readRoots": [
+        "Game.local",
+        "assets.*",
+        "assets.*.indexOf",
+        "assets.length",
+        "document.createElement",
+        "e.target",
+        "e.target.alt",
+        "me.Load",
+        "me.assetsLoaded",
+        "me.assetsLoaded.indexOf",
+        "newer.indexOf",
+        "this.Load",
+        "this.assets",
+        "this.assets.*",
+        "this.assetsLoaded",
+        "this.assetsLoaded.indexOf",
+        "this.assetsLoaded.push",
+        "this.assetsLoading",
+        "this.assetsLoading.indexOf",
+        "this.assetsLoading.push",
+        "this.assetsLoading.splice",
+        "this.assetsN",
+        "this.blank",
+        "this.domain",
+        "this.doneLoading",
+        "this.loaded",
+        "this.loadingN",
+        "this.onLoad"
+      ]
+    },
+    {
+      "name": "bind",
+      "line": 704,
+      "sourceSha256": "8a6dc18513743f3252fcbe9456f8f54d047231d1f2f342ccac3d096ffde12d63",
+      "writes": [],
+      "calls": [
+        {
+          "line": 707,
+          "target": "fn.apply",
+          "construct": false
+        }
+      ],
+      "returns": [
+        {
+          "line": 707,
+          "value": "function() {fn.apply(scope,arguments);}"
+        }
+      ],
+      "aliases": [],
+      "readRoots": [
+        "fn.apply"
+      ]
+    },
+    {
+      "name": "choose",
+      "line": 17,
+      "sourceSha256": "2a2c7b1c1d45b981f713f0e6ae3edffd81a50dfee873970c26011a32b50906f2",
+      "writes": [],
+      "calls": [
+        {
+          "line": 17,
+          "target": "Math.floor",
+          "construct": false
+        },
+        {
+          "line": 17,
+          "target": "Math.random",
+          "construct": false
+        }
+      ],
+      "returns": [
+        {
+          "line": 17,
+          "value": "arr[Math.floor(Math.random()*arr.length)]"
+        }
+      ],
+      "aliases": [],
+      "readRoots": [
+        "Math.floor",
+        "Math.random",
+        "arr.*",
+        "arr.length"
+      ]
+    }
+  ],
+  "storageUses": [
+    {
+      "line": 5914,
+      "target": "Game.particles",
+      "parent": "AssignmentExpression",
+      "owner": 1961
+    },
+    {
+      "line": 5915,
+      "target": "Game.particlesN",
+      "parent": "AssignmentExpression",
+      "owner": 1961
+    },
+    {
+      "line": 5916,
+      "target": "Game.particlesN",
+      "parent": "BinaryExpression",
+      "owner": 1961
+    },
+    {
+      "line": 5918,
+      "target": "Game.particles",
+      "parent": "MemberExpression",
+      "owner": 1961
+    },
+    {
+      "line": 5923,
+      "target": "Game.particlesN",
+      "parent": "BinaryExpression",
+      "owner": 5921
+    },
+    {
+      "line": 5925,
+      "target": "Game.particles",
+      "parent": "MemberExpression",
+      "owner": 5921
+    },
+    {
+      "line": 5948,
+      "target": "Game.particlesN",
+      "parent": "BinaryExpression",
+      "owner": 5940
+    },
+    {
+      "line": 5950,
+      "target": "Game.particles",
+      "parent": "MemberExpression",
+      "owner": 5940
+    },
+    {
+      "line": 5951,
+      "target": "Game.particles",
+      "parent": "MemberExpression",
+      "owner": 5940
+    },
+    {
+      "line": 5953,
+      "target": "Game.particles",
+      "parent": "MemberExpression",
+      "owner": 5940
+    },
+    {
+      "line": 5963,
+      "target": "Game.particles",
+      "parent": "MemberExpression",
+      "owner": 5940
+    },
+    {
+      "line": 6004,
+      "target": "Game.particlesN",
+      "parent": "BinaryExpression",
+      "owner": 5997
+    },
+    {
+      "line": 6006,
+      "target": "Game.particles",
+      "parent": "MemberExpression",
+      "owner": 5997
+    }
+  ],
+  "methodReferences": [
+    {
+      "line": 4784,
+      "parent": "CallExpression",
+      "callee": true
+    },
+    {
+      "line": 4785,
+      "parent": "CallExpression",
+      "callee": true
+    },
+    {
+      "line": 4787,
+      "parent": "CallExpression",
+      "callee": true
+    },
+    {
+      "line": 5940,
+      "parent": "AssignmentExpression",
+      "callee": false
+    },
+    {
+      "line": 14438,
+      "parent": "CallExpression",
+      "callee": true
+    },
+    {
+      "line": 14531,
+      "parent": "CallExpression",
+      "callee": true
+    },
+    {
+      "line": 14538,
+      "parent": "CallExpression",
+      "callee": true
+    },
+    {
+      "line": 14595,
+      "parent": "CallExpression",
+      "callee": true
+    },
+    {
+      "line": 14955,
+      "parent": "CallExpression",
+      "callee": true
+    },
+    {
+      "line": 16307,
+      "parent": "CallExpression",
+      "callee": true
+    }
+  ],
+  "particleCalls": [
+    {
+      "line": 4784,
+      "arguments": [],
+      "possiblePictures": [
+        "icons.png",
+        "smallDollars.png"
+      ],
+      "owner": 4766,
+      "discarded": true
+    },
+    {
+      "line": 4785,
+      "arguments": [
+        "Game.mouseX",
+        "Game.mouseY",
+        "Math.random()*4-2",
+        "Math.random()*-2-2",
+        "Math.random()*0.5+0.75",
+        "1",
+        "2"
+      ],
+      "possiblePictures": [
+        "icons.png",
+        "smallDollars.png"
+      ],
+      "owner": 4766,
+      "discarded": true
+    },
+    {
+      "line": 4787,
+      "arguments": [
+        "Game.mouseX+Math.random()*8-4",
+        "Game.mouseY-8+Math.random()*8-4",
+        "0",
+        "-2",
+        "1",
+        "4",
+        "2",
+        "''",
+        "'+'+Beautify(amount,1)"
+      ],
+      "possiblePictures": [
+        "icons.png",
+        "smallDollars.png"
+      ],
+      "owner": 4766,
+      "discarded": true
+    },
+    {
+      "line": 14438,
+      "arguments": [
+        "x",
+        "y",
+        "Math.random()*4-2",
+        "Math.random()*-2-2",
+        "1",
+        "1",
+        "2",
+        "me.type==1?'shinyWrinklerBits.png':'wrinklerBits.png'"
+      ],
+      "possiblePictures": [
+        "shinyWrinklerBits.png",
+        "wrinklerBits.png"
+      ],
+      "owner": 14342,
+      "discarded": false
+    },
+    {
+      "line": 14531,
+      "arguments": [
+        "Game.mouseX",
+        "Game.mouseY",
+        "Math.random()*4-2",
+        "Math.random()*-2-2",
+        "Math.random()*0.5+0.75",
+        "1.5",
+        "2"
+      ],
+      "possiblePictures": [
+        "icons.png",
+        "smallDollars.png"
+      ],
+      "owner": 14342,
+      "discarded": true
+    },
+    {
+      "line": 14538,
+      "arguments": [
+        "x",
+        "y",
+        "Math.random()*4-2",
+        "Math.random()*-2-2",
+        "1",
+        "1",
+        "2",
+        "me.type==1?'shinyWrinklerBits.png':'wrinklerBits.png'"
+      ],
+      "possiblePictures": [
+        "shinyWrinklerBits.png",
+        "wrinklerBits.png"
+      ],
+      "owner": 14342,
+      "discarded": false
+    },
+    {
+      "line": 14595,
+      "arguments": [
+        "me.x",
+        "me.y",
+        "Math.random()*4-2",
+        "Math.random()*-2-2",
+        "Math.random()*0.5+0.5",
+        "1",
+        "2"
+      ],
+      "possiblePictures": [
+        "icons.png",
+        "smallDollars.png"
+      ],
+      "owner": 14551,
+      "discarded": true
+    },
+    {
+      "line": 14955,
+      "arguments": [
+        "Game.mouseX",
+        "Game.mouseY-32",
+        "Math.random()*4-2",
+        "Math.random()*-2-4",
+        "Math.random()*0.2+0.5",
+        "1",
+        "2",
+        "[20,3]"
+      ],
+      "possiblePictures": [
+        "icons.png"
+      ],
+      "owner": 14944,
+      "discarded": true
+    },
+    {
+      "line": 16307,
+      "arguments": [],
+      "possiblePictures": [
+        "icons.png",
+        "smallDollars.png"
+      ],
+      "owner": 16161,
+      "discarded": true
+    }
+  ],
+  "particleImageNames": [
+    "icons.png",
+    "shinyWrinklerBits.png",
+    "smallCookies.png",
+    "smallDollars.png",
+    "wrinklerBits.png"
+  ],
+  "escapedAliases": [
+    {
+      "line": 14438,
+      "arguments": [
+        "x",
+        "y",
+        "Math.random()*4-2",
+        "Math.random()*-2-2",
+        "1",
+        "1",
+        "2",
+        "me.type==1?'shinyWrinklerBits.png':'wrinklerBits.png'"
+      ],
+      "possiblePictures": [
+        "shinyWrinklerBits.png",
+        "wrinklerBits.png"
+      ],
+      "owner": 14342,
+      "discarded": false,
+      "alias": "part",
+      "references": [
+        {
+          "line": 14438,
+          "parent": "VariableDeclarator",
+          "member": null,
+          "writeOnly": false
+        },
+        {
+          "line": 14439,
+          "parent": "MemberExpression",
+          "member": "part.r",
+          "writeOnly": true
+        },
+        {
+          "line": 14538,
+          "parent": "VariableDeclarator",
+          "member": null,
+          "writeOnly": false
+        },
+        {
+          "line": 14539,
+          "parent": "MemberExpression",
+          "member": "part.r",
+          "writeOnly": true
+        }
+      ]
+    },
+    {
+      "line": 14538,
+      "arguments": [
+        "x",
+        "y",
+        "Math.random()*4-2",
+        "Math.random()*-2-2",
+        "1",
+        "1",
+        "2",
+        "me.type==1?'shinyWrinklerBits.png':'wrinklerBits.png'"
+      ],
+      "possiblePictures": [
+        "shinyWrinklerBits.png",
+        "wrinklerBits.png"
+      ],
+      "owner": 14342,
+      "discarded": false,
+      "alias": "part",
+      "references": [
+        {
+          "line": 14438,
+          "parent": "VariableDeclarator",
+          "member": null,
+          "writeOnly": false
+        },
+        {
+          "line": 14439,
+          "parent": "MemberExpression",
+          "member": "part.r",
+          "writeOnly": true
+        },
+        {
+          "line": 14538,
+          "parent": "VariableDeclarator",
+          "member": null,
+          "writeOnly": false
+        },
+        {
+          "line": 14539,
+          "parent": "MemberExpression",
+          "member": "part.r",
+          "writeOnly": true
+        }
+      ]
+    }
+  ],
+  "conclusions": [
+    "The pinned source initializes exactly50 particle records and has no other assignment to Game.particles, Game.particlesN or Game.particles[index].",
+    "All member writes in particleAdd/update are to the selected particle record; all particleDraw member writes are to the native canvas context.",
+    "The only external aliases of the particleAdd return value are two local part variables; their only nondeclaration uses write part.r.",
+    "particleAdd performs2 to5 source free/seeded random calls (including choose), while particlesUpdate performs at most50; random calls are retained in the inventory and cannot be dropped from a seeded generator.",
+    "Native initialization and the9 audited live callsites restrict particle image names to5 fixed assets, as recorded; this does not classify other callers of Pic.",
+    "The particleAdd cookie icon array may alias an upgrade icon; the particle code reads its coordinates and does not mutate that array.",
+    "particleDraw calls Pic, whose cache-miss path schedules image-load effects through Loader.Load; this is not a pure canvas-only path. With Loader.doneLoading=1 the native onLoad branch cannot call Loader.loaded."
+  ],
+  "requiredContracts": [
+    "Native initialized ordinary Game/particle/upgrade/data properties and unmodified native function/prototype identities; property operations must not invoke economic getters, setters or proxies.",
+    "The50 particle records are pairwise distinct and disjoint from economic/control records; native initialization and every possible subsequent alias/write must refine the audited source inventory.",
+    "All actual particle arguments are ordinary primitive values or readonly icon arrays; no user code or object conversion callbacks.",
+    "Math.floor, native String.toLowerCase, Array.push and choose have their pinned semantics. Retain every random draw and its current generator unless a separate free-IID discarded-prefix theorem applies.",
+    "Canvas calls preserve economic heap and generator phase but retain canvas state, possible exceptions and asset/task effects. Pic/Loader must use their native source identities.",
+    "To exclude an asset-triggered startup callback, establish Loader.doneLoading=1. Preserve load jobs and loaded/loading/cache writes even under zero asset latency.",
+    "Normal termination, native property/coercion/host exception behavior and public-control reachability are separate obligations; this inventory is not a whole-game simulation theorem."
+  ],
+  "nativeRegression": {
+    "kind": "isolated Node VM with rejecting economic-write proxies and explicit host contract; no game save/browser",
+    "cases": 12,
+    "results": [
+      {
+        "name": "empty-auto",
+        "startupCalls": 0,
+        "addDraws": 5,
+        "updateDraws": 1,
+        "particleWrites": 17,
+        "canvasWrites": 7,
+        "hostCalls": 5,
+        "loadedAssets": [
+          "icons.png"
+        ]
+      },
+      {
+        "name": "explicit-position",
+        "startupCalls": 0,
+        "addDraws": 4,
+        "updateDraws": 1,
+        "particleWrites": 17,
+        "canvasWrites": 7,
+        "hostCalls": 5,
+        "loadedAssets": [
+          "icons.png"
+        ]
+      },
+      {
+        "name": "fools",
+        "startupCalls": 0,
+        "addDraws": 3,
+        "updateDraws": 1,
+        "particleWrites": 16,
+        "canvasWrites": 7,
+        "hostCalls": 5,
+        "loadedAssets": [
+          "smallDollars.png"
+        ]
+      },
+      {
+        "name": "ortiel",
+        "startupCalls": 0,
+        "addDraws": 4,
+        "updateDraws": 1,
+        "particleWrites": 18,
+        "canvasWrites": 7,
+        "hostCalls": 5,
+        "loadedAssets": [
+          "icons.png"
+        ]
+      },
+      {
+        "name": "string-picture",
+        "startupCalls": 0,
+        "addDraws": 2,
+        "updateDraws": 1,
+        "particleWrites": 16,
+        "canvasWrites": 7,
+        "hostCalls": 5,
+        "loadedAssets": [
+          "wrinklerBits.png"
+        ]
+      },
+      {
+        "name": "icon-picture",
+        "startupCalls": 0,
+        "addDraws": 2,
+        "updateDraws": 1,
+        "particleWrites": 17,
+        "canvasWrites": 7,
+        "hostCalls": 5,
+        "loadedAssets": [
+          "icons.png"
+        ]
+      },
+      {
+        "name": "text",
+        "startupCalls": 0,
+        "addDraws": 4,
+        "updateDraws": 0,
+        "particleWrites": 16,
+        "canvasWrites": 7,
+        "hostCalls": 1,
+        "loadedAssets": []
+      },
+      {
+        "name": "all-active",
+        "startupCalls": 0,
+        "addDraws": 4,
+        "updateDraws": 50,
+        "particleWrites": 213,
+        "canvasWrites": 56,
+        "hostCalls": 250,
+        "loadedAssets": [
+          "smallCookies.png",
+          "icons.png"
+        ]
+      },
+      {
+        "name": "active-text",
+        "startupCalls": 0,
+        "addDraws": 4,
+        "updateDraws": 1,
+        "particleWrites": 164,
+        "canvasWrites": 56,
+        "hostCalls": 54,
+        "loadedAssets": [
+          "icons.png"
+        ]
+      },
+      {
+        "name": "expiry",
+        "startupCalls": 0,
+        "addDraws": 4,
+        "updateDraws": 50,
+        "particleWrites": 262,
+        "canvasWrites": 7,
+        "hostCalls": 5,
+        "loadedAssets": [
+          "icons.png"
+        ]
+      },
+      {
+        "name": "no-background",
+        "startupCalls": 0,
+        "addDraws": 4,
+        "updateDraws": 1,
+        "particleWrites": 17,
+        "canvasWrites": 0,
+        "hostCalls": 0,
+        "loadedAssets": []
+      },
+      {
+        "name": "startup-callback-boundary",
+        "startupCalls": 1,
+        "addDraws": 5,
+        "updateDraws": 1,
+        "particleWrites": 17,
+        "canvasWrites": 7,
+        "hostCalls": 5,
+        "loadedAssets": [
+          "icons.png"
+        ]
+      }
+    ]
+  }
+}

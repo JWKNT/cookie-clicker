@@ -1,0 +1,37 @@
+{
+  "schema": 1,
+  "scope": "current-active-browsing-context-name",
+  "chromiumVersion": "87.0.4280.141",
+  "sources": [
+    {
+      "file": "window.idl",
+      "url": "https://github.com/chromium/chromium/blob/87.0.4280.141/third_party/blink/renderer/core/frame/window.idl",
+      "sha256": "959b98995fe9fd8172cf35ccd48c82b64f05bb5ea177726a011a48de37412a30"
+    },
+    {
+      "file": "dom_window.cc",
+      "url": "https://github.com/chromium/chromium/blob/87.0.4280.141/third_party/blink/renderer/core/frame/dom_window.cc",
+      "sha256": "b8cba9071f2aeaefc6d196324dd342b6d72f14af7b5148267ae41abbefde67ed"
+    },
+    {
+      "file": "local_dom_window.cc",
+      "url": "https://github.com/chromium/chromium/blob/87.0.4280.141/third_party/blink/renderer/core/frame/local_dom_window.cc",
+      "sha256": "ffe0225add9de48ad58b147678d0f4b9b40a4d0c6c113cf262a90e2a04bb3ceb"
+    }
+  ],
+  "rules": {
+    "initial": "Explicit optional UTF16 fixture; unspecified initial reads stay unresolved.",
+    "get": "Read stored frame name independently of mutable own property descriptors.",
+    "set": "Native receiver validation precedes source DOMString conversion, then stored state changes; setter returns undefined.",
+    "receivers": "Current Window, undefined and null are accepted by the pinned native binding. Unrelated objects throw before conversion.",
+    "callbacks": "Source conversion callbacks can read or update the same state; their writes persist if conversion throws.",
+    "source": "Game.CalculateGains at main.js5112 assigns the lowercase bakery name through a sloppy global name binding before the Orteil/Ortiel production checks."
+  },
+  "validation": "node lean/check_javascript_window_name.mjs --engine",
+  "remaining": [
+    "Navigation and cross-window lifecycle",
+    "Detached or no-longer-displayed Window objects",
+    "Full source/native refinement"
+  ],
+  "navigationRefinementVerified": false
+}

@@ -1,0 +1,636 @@
+{
+  "schemaVersion": 1,
+  "sourceHashes": {
+    "main.js": "a8813ec2ee97edf5ebff6a3ce2037dcb65c08abd13c123bb92efda89b06ef4f7",
+    "minigameGarden.js": "184eacacd9325d493412dcda07f63d3a791939f83889b4349b6099d04be8e6c9",
+    "minigameMarket.js": "78538743673f3c1cd0e870a3695c77dcacd63febbe64b88f8a8fab9ea7e2863f",
+    "minigameGrimoire.js": "9efea1feb898dc9b719dd971bd27a71f083a8855b910013c524aea9b6d2a349d",
+    "minigamePantheon.js": "af08c31c4564d445cc2d1a7d101c4a63b57aa9b89991b93b8a65f4c0427573a0",
+    "base64.js": "875839c3e0c174c9358ce96923adfed6a6d2c090187a32deb35152dfac2c0e47",
+    "loc/EN.js": "ce48272a5fd5ab1f309dbb8fd7bd70188984ce14235a1d3d9215f3585101f433",
+    "index.html": "28488d9aef9bf31c4c023a0af01f0500a3b3e462b79bf7f2b09790025927a969"
+  },
+  "fileCount": 8,
+  "resetAssumption": "No-argument seedrandom returns to fresh independent uniform 53-bit draws; this intentionally differs from native entropy reseeding.",
+  "scope": "Fail-closed inventory and intraprocedural normal-return phase analysis of explicit reseed call sites. Branches are nondeterministic; called helpers preserve phase in this local analysis. No whole-engine refinement or exception-safety claim.",
+  "sites": [
+    {
+      "file": "main.js",
+      "line": 4524,
+      "column": 3,
+      "arguments": 1,
+      "operation": "explicit-seed",
+      "source": "Math.seedrandom(Game.seed+'/'+Game.lumpT)",
+      "callback": "Game.computeLumpType@4522"
+    },
+    {
+      "file": "main.js",
+      "line": 4538,
+      "column": 3,
+      "arguments": 0,
+      "operation": "reset-to-free-assumption",
+      "source": "Math.seedrandom()",
+      "callback": "Game.computeLumpType@4522"
+    },
+    {
+      "file": "main.js",
+      "line": 7584,
+      "column": 33,
+      "arguments": 1,
+      "operation": "explicit-seed",
+      "source": "Math.seedrandom(Game.seed+'-fortune')",
+      "callback": "Game.getNewTicker@6992"
+    },
+    {
+      "file": "main.js",
+      "line": 7584,
+      "column": 292,
+      "arguments": 0,
+      "operation": "reset-to-free-assumption",
+      "source": "Math.seedrandom()",
+      "callback": "Game.getNewTicker@6992"
+    },
+    {
+      "file": "main.js",
+      "line": 8299,
+      "column": 8,
+      "arguments": 1,
+      "operation": "explicit-seed",
+      "source": "Math.seedrandom(Game.seed+' '+this.id+' '+i)",
+      "callback": "this.draw@8236"
+    },
+    {
+      "file": "main.js",
+      "line": 8376,
+      "column": 5,
+      "arguments": 0,
+      "operation": "reset-to-free-assumption",
+      "source": "Math.seedrandom()",
+      "callback": "this.draw@8236"
+    },
+    {
+      "file": "main.js",
+      "line": 8387,
+      "column": 7,
+      "arguments": 1,
+      "operation": "explicit-seed",
+      "source": "Math.seedrandom(Game.seed+' '+pic.id/*+' '+pic.id*/)",
+      "callback": "this.draw@8236"
+    },
+    {
+      "file": "main.js",
+      "line": 8396,
+      "column": 7,
+      "arguments": 0,
+      "operation": "reset-to-free-assumption",
+      "source": "Math.seedrandom()",
+      "callback": "this.draw@8236"
+    },
+    {
+      "file": "main.js",
+      "line": 8421,
+      "column": 7,
+      "arguments": 1,
+      "operation": "explicit-seed",
+      "source": "Math.seedrandom(Game.seed+' cloneTitle')",
+      "callback": "this.draw@8236"
+    },
+    {
+      "file": "main.js",
+      "line": 8423,
+      "column": 7,
+      "arguments": 1,
+      "operation": "explicit-seed",
+      "source": "Math.seedrandom(Game.seed+' clone '+pic.id)",
+      "callback": "this.draw@8236"
+    },
+    {
+      "file": "main.js",
+      "line": 11206,
+      "column": 4,
+      "arguments": 1,
+      "operation": "explicit-seed",
+      "source": "Math.seedrandom(Game.seed+'-blasphemouse')",
+      "callback": "Game.last.descFunc@11205"
+    },
+    {
+      "file": "main.js",
+      "line": 11207,
+      "column": 28,
+      "arguments": 0,
+      "operation": "reset-to-free-assumption",
+      "source": "Math.seedrandom()",
+      "callback": "Game.last.descFunc@11205"
+    },
+    {
+      "file": "main.js",
+      "line": 11208,
+      "column": 10,
+      "arguments": 0,
+      "operation": "reset-to-free-assumption",
+      "source": "Math.seedrandom()",
+      "callback": "Game.last.descFunc@11205"
+    },
+    {
+      "file": "main.js",
+      "line": 11294,
+      "column": 28,
+      "arguments": 1,
+      "operation": "explicit-seed",
+      "source": "Math.seedrandom(Game.seed+'/'+(Game.goldenClicks+Game.reindeerClicked))",
+      "callback": "Game.loseShimmeringVeil@11288"
+    },
+    {
+      "file": "main.js",
+      "line": 11295,
+      "column": 31,
+      "arguments": 1,
+      "operation": "explicit-seed",
+      "source": "Math.seedrandom(Game.seed+'/'+Game.cookieClicks)",
+      "callback": "Game.loseShimmeringVeil@11288"
+    },
+    {
+      "file": "main.js",
+      "line": 11300,
+      "column": 5,
+      "arguments": 0,
+      "operation": "reset-to-free-assumption",
+      "source": "Math.seedrandom()",
+      "callback": "Game.loseShimmeringVeil@11288"
+    },
+    {
+      "file": "main.js",
+      "line": 11303,
+      "column": 4,
+      "arguments": 0,
+      "operation": "reset-to-free-assumption",
+      "source": "Math.seedrandom()",
+      "callback": "Game.loseShimmeringVeil@11288"
+    },
+    {
+      "file": "main.js",
+      "line": 11394,
+      "column": 4,
+      "arguments": 1,
+      "operation": "explicit-seed",
+      "source": "Math.seedrandom(Game.seed+'-tombolacomputing')",
+      "callback": "Game.last.descFunc@11393"
+    },
+    {
+      "file": "main.js",
+      "line": 11396,
+      "column": 4,
+      "arguments": 0,
+      "operation": "reset-to-free-assumption",
+      "source": "Math.seedrandom()",
+      "callback": "Game.last.descFunc@11393"
+    },
+    {
+      "file": "main.js",
+      "line": 14959,
+      "column": 5,
+      "arguments": 1,
+      "operation": "explicit-seed",
+      "source": "Math.seedrandom(Game.seed+'/dragonTime')",
+      "callback": "Game.ClickSpecialPic@14944"
+    },
+    {
+      "file": "main.js",
+      "line": 14968,
+      "column": 5,
+      "arguments": 0,
+      "operation": "reset-to-free-assumption",
+      "source": "Math.seedrandom()",
+      "callback": "Game.ClickSpecialPic@14944"
+    },
+    {
+      "file": "minigameGrimoire.js",
+      "line": 312,
+      "column": 3,
+      "arguments": 1,
+      "operation": "explicit-seed",
+      "source": "Math.seedrandom(Game.seed+'/'+M.spellsCastTotal)",
+      "callback": "M.castSpell@299"
+    },
+    {
+      "file": "minigameGrimoire.js",
+      "line": 314,
+      "column": 3,
+      "arguments": 0,
+      "operation": "reset-to-free-assumption",
+      "source": "Math.seedrandom()",
+      "callback": "M.castSpell@299"
+    }
+  ],
+  "callbacks": [
+    {
+      "file": "main.js",
+      "name": "Game.computeLumpType",
+      "line": 4522,
+      "unrestricted": {
+        "normalExitPhases": [
+          "free"
+        ],
+        "callsWhileSeeded": [
+          "Game.Has",
+          "Game.auraMult",
+          "Math.random",
+          "choose",
+          "randomFloor",
+          "types.push"
+        ],
+        "excludedYouTooltipBranches": 0
+      },
+      "permittedTooltipBranch": {
+        "normalExitPhases": [
+          "free"
+        ],
+        "callsWhileSeeded": [
+          "Game.Has",
+          "Game.auraMult",
+          "Math.random",
+          "choose",
+          "randomFloor",
+          "types.push"
+        ],
+        "excludedYouTooltipBranches": 0
+      }
+    },
+    {
+      "file": "main.js",
+      "name": "Game.getNewTicker",
+      "line": 6992,
+      "unrestricted": {
+        "normalExitPhases": [
+          "free"
+        ],
+        "callsWhileSeeded": [
+          "Math.floor",
+          "Math.random",
+          "loc"
+        ],
+        "excludedYouTooltipBranches": 0
+      },
+      "permittedTooltipBranch": {
+        "normalExitPhases": [
+          "free"
+        ],
+        "callsWhileSeeded": [
+          "Math.floor",
+          "Math.random",
+          "loc"
+        ],
+        "excludedYouTooltipBranches": 0
+      }
+    },
+    {
+      "file": "main.js",
+      "name": "this.draw",
+      "line": 8236,
+      "unrestricted": {
+        "normalExitPhases": [
+          "free",
+          "seeded"
+        ],
+        "callsWhileSeeded": [
+          ".replace",
+          "Beautify",
+          "Date.now",
+          "Game.Win",
+          "Math.floor",
+          "Math.max",
+          "Math.min",
+          "Math.random",
+          "Pic",
+          "choose",
+          "ctx.drawImage",
+          "ctx.fillRect",
+          "ctx.fillText",
+          "ctx.measureText",
+          "loc",
+          "pic",
+          "romanize",
+          "this.pics.pop",
+          "this.pics.push",
+          "this.pics.sort"
+        ],
+        "excludedYouTooltipBranches": 0
+      },
+      "permittedTooltipBranch": {
+        "normalExitPhases": [
+          "free"
+        ],
+        "callsWhileSeeded": [
+          "Beautify",
+          "Date.now",
+          "Game.Win",
+          "Math.floor",
+          "Math.max",
+          "Math.min",
+          "Math.random",
+          "choose",
+          "ctx.fillRect",
+          "ctx.fillText",
+          "ctx.measureText",
+          "loc",
+          "pic",
+          "this.pics.pop",
+          "this.pics.push",
+          "this.pics.sort"
+        ],
+        "excludedYouTooltipBranches": 1
+      }
+    },
+    {
+      "file": "main.js",
+      "name": "Game.last.descFunc",
+      "line": 11205,
+      "unrestricted": {
+        "normalExitPhases": [
+          "free"
+        ],
+        "callsWhileSeeded": [
+          "Math.random"
+        ],
+        "excludedYouTooltipBranches": 0
+      },
+      "permittedTooltipBranch": {
+        "normalExitPhases": [
+          "free"
+        ],
+        "callsWhileSeeded": [
+          "Math.random"
+        ],
+        "excludedYouTooltipBranches": 0
+      }
+    },
+    {
+      "file": "main.js",
+      "name": "Game.loseShimmeringVeil",
+      "line": 11288,
+      "unrestricted": {
+        "normalExitPhases": [
+          "free"
+        ],
+        "callsWhileSeeded": [
+          "Game.Notify",
+          "Game.Win",
+          "Game.getVeilDefense",
+          "Math.random",
+          "loc"
+        ],
+        "excludedYouTooltipBranches": 0
+      },
+      "permittedTooltipBranch": {
+        "normalExitPhases": [
+          "free"
+        ],
+        "callsWhileSeeded": [
+          "Game.Notify",
+          "Game.Win",
+          "Game.getVeilDefense",
+          "Math.random",
+          "loc"
+        ],
+        "excludedYouTooltipBranches": 0
+      }
+    },
+    {
+      "file": "main.js",
+      "name": "Game.last.descFunc",
+      "line": 11393,
+      "unrestricted": {
+        "normalExitPhases": [
+          "free"
+        ],
+        "callsWhileSeeded": [
+          "Math.floor",
+          "Math.random",
+          "choose"
+        ],
+        "excludedYouTooltipBranches": 0
+      },
+      "permittedTooltipBranch": {
+        "normalExitPhases": [
+          "free"
+        ],
+        "callsWhileSeeded": [
+          "Math.floor",
+          "Math.random",
+          "choose"
+        ],
+        "excludedYouTooltipBranches": 0
+      }
+    },
+    {
+      "file": "main.js",
+      "name": "Game.ClickSpecialPic",
+      "line": 14944,
+      "unrestricted": {
+        "normalExitPhases": [
+          "free"
+        ],
+        "callsWhileSeeded": [
+          ".getMinutes",
+          "Game.Has",
+          "Game.HasUnlocked",
+          "Game.Notify",
+          "Game.Unlock",
+          "Math.floor",
+          "loc",
+          "shuffle"
+        ],
+        "excludedYouTooltipBranches": 0
+      },
+      "permittedTooltipBranch": {
+        "normalExitPhases": [
+          "free"
+        ],
+        "callsWhileSeeded": [
+          ".getMinutes",
+          "Game.Has",
+          "Game.HasUnlocked",
+          "Game.Notify",
+          "Game.Unlock",
+          "Math.floor",
+          "loc",
+          "shuffle"
+        ],
+        "excludedYouTooltipBranches": 0
+      }
+    },
+    {
+      "file": "minigameGrimoire.js",
+      "name": "M.castSpell",
+      "line": 299,
+      "unrestricted": {
+        "normalExitPhases": [
+          "free"
+        ],
+        "callsWhileSeeded": [
+          "Math.random",
+          "spell.fail",
+          "spell.win"
+        ],
+        "excludedYouTooltipBranches": 0
+      },
+      "permittedTooltipBranch": {
+        "normalExitPhases": [
+          "free"
+        ],
+        "callsWhileSeeded": [
+          "Math.random",
+          "spell.fail",
+          "spell.win"
+        ],
+        "excludedYouTooltipBranches": 0
+      }
+    }
+  ],
+  "references": [
+    {
+      "file": "main.js",
+      "line": 702,
+      "symbol": "c.seedrandom",
+      "context": "AssignmentExpression"
+    },
+    {
+      "file": "main.js",
+      "line": 4524,
+      "symbol": "Math.seedrandom",
+      "context": "CallExpression"
+    },
+    {
+      "file": "main.js",
+      "line": 4538,
+      "symbol": "Math.seedrandom",
+      "context": "CallExpression"
+    },
+    {
+      "file": "main.js",
+      "line": 7584,
+      "symbol": "Math.seedrandom",
+      "context": "CallExpression"
+    },
+    {
+      "file": "main.js",
+      "line": 7584,
+      "symbol": "Math.seedrandom",
+      "context": "CallExpression"
+    },
+    {
+      "file": "main.js",
+      "line": 8299,
+      "symbol": "Math.seedrandom",
+      "context": "CallExpression"
+    },
+    {
+      "file": "main.js",
+      "line": 8376,
+      "symbol": "Math.seedrandom",
+      "context": "CallExpression"
+    },
+    {
+      "file": "main.js",
+      "line": 8387,
+      "symbol": "Math.seedrandom",
+      "context": "CallExpression"
+    },
+    {
+      "file": "main.js",
+      "line": 8396,
+      "symbol": "Math.seedrandom",
+      "context": "CallExpression"
+    },
+    {
+      "file": "main.js",
+      "line": 8421,
+      "symbol": "Math.seedrandom",
+      "context": "CallExpression"
+    },
+    {
+      "file": "main.js",
+      "line": 8423,
+      "symbol": "Math.seedrandom",
+      "context": "CallExpression"
+    },
+    {
+      "file": "main.js",
+      "line": 11206,
+      "symbol": "Math.seedrandom",
+      "context": "CallExpression"
+    },
+    {
+      "file": "main.js",
+      "line": 11207,
+      "symbol": "Math.seedrandom",
+      "context": "CallExpression"
+    },
+    {
+      "file": "main.js",
+      "line": 11208,
+      "symbol": "Math.seedrandom",
+      "context": "CallExpression"
+    },
+    {
+      "file": "main.js",
+      "line": 11294,
+      "symbol": "Math.seedrandom",
+      "context": "CallExpression"
+    },
+    {
+      "file": "main.js",
+      "line": 11295,
+      "symbol": "Math.seedrandom",
+      "context": "CallExpression"
+    },
+    {
+      "file": "main.js",
+      "line": 11300,
+      "symbol": "Math.seedrandom",
+      "context": "CallExpression"
+    },
+    {
+      "file": "main.js",
+      "line": 11303,
+      "symbol": "Math.seedrandom",
+      "context": "CallExpression"
+    },
+    {
+      "file": "main.js",
+      "line": 11394,
+      "symbol": "Math.seedrandom",
+      "context": "CallExpression"
+    },
+    {
+      "file": "main.js",
+      "line": 11396,
+      "symbol": "Math.seedrandom",
+      "context": "CallExpression"
+    },
+    {
+      "file": "main.js",
+      "line": 14959,
+      "symbol": "Math.seedrandom",
+      "context": "CallExpression"
+    },
+    {
+      "file": "main.js",
+      "line": 14968,
+      "symbol": "Math.seedrandom",
+      "context": "CallExpression"
+    },
+    {
+      "file": "minigameGrimoire.js",
+      "line": 312,
+      "symbol": "Math.seedrandom",
+      "context": "CallExpression"
+    },
+    {
+      "file": "minigameGrimoire.js",
+      "line": 314,
+      "symbol": "Math.seedrandom",
+      "context": "CallExpression"
+    }
+  ]
+}

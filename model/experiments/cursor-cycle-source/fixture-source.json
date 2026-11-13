@@ -1,0 +1,7 @@
+{
+  "fundedFixture": true,
+  "initializedReachabilityProved": false,
+  "setup": "Game.volume=0;Game.cookies=Math.pow(2,60);Game.cookiesEarned=Game.cookies;\nGame.Objects.Cursor.amount=1;Game.Objects.Cursor.bought=1;Game.Objects.Cursor.highest=1;\nGame.Objects.Temple.amount=1;Game.Objects.Temple.level=1;Game.BuildingsOwned=2;\nGame.Upgrades['Reinforced index finger'].unlocked=1;\nGame.Upgrades['Carpal tunnel prevention cream'].unlocked=1;\nGame.Achievements['Click'].won=1;Game.LoadMinigames();",
+  "pantheon": "Game.Objects.Temple.minigame.slot[0]=Game.Objects.Temple.minigame.gods.ruin.id;\nGame.gainBuff('devastation',10,1.01);Game.Objects.Cursor.refresh();",
+  "note": "Exact source reconstructed from archived AST spans and verified against archived text SHA-256; later similarly named scratch fixture differed."
+}

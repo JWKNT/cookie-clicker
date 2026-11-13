@@ -1,0 +1,119 @@
+{
+  "schema": "cookie-clicker-text-selection-host-v1",
+  "sources": [
+    {
+      "file": "model/browser-source/chromium-87/text_control_element.cc",
+      "url": "https://github.com/chromium/chromium/blob/87.0.4280.141/third_party/blink/renderer/core/html/forms/text_control_element.cc",
+      "sha256": "a2de0d1116591a6bb6e15c2ef5d269360232239ef8a63cf9a689c6190a42de7e"
+    },
+    {
+      "file": "model/browser-source/chromium-87/html_text_area_element.cc",
+      "url": "https://github.com/chromium/chromium/blob/87.0.4280.141/third_party/blink/renderer/core/html/forms/html_text_area_element.cc",
+      "sha256": "32798cb274f7fd0dac02d1f356259be59727636807eb96dcceb90794f3a6cd6b"
+    },
+    {
+      "file": "model/browser-source/chromium-87/html_text_area_element.idl",
+      "url": "https://github.com/chromium/chromium/blob/87.0.4280.141/third_party/blink/renderer/core/html/forms/html_text_area_element.idl",
+      "sha256": "0a8d62836bfabea39f553729bab05c8dfa0abf02e43d632e49aaa9a4b5982332"
+    },
+    {
+      "file": "model/browser-source/chromium-87/frame_selection.cc",
+      "url": "https://github.com/chromium/chromium/blob/87.0.4280.141/third_party/blink/renderer/core/editing/frame_selection.cc",
+      "sha256": "94081b0378ba1a50e3ec551e9396d3fad288679ccf1e3079274e6d4819053381"
+    },
+    {
+      "file": "model/browser-source/chromium-87/scripted_animation_controller.cc",
+      "url": "https://github.com/chromium/chromium/blob/87.0.4280.141/third_party/blink/renderer/core/dom/scripted_animation_controller.cc",
+      "sha256": "e74685c63af99625fa1870cff82b2c88a25777222b8f7f9feeac3fe0de2f3087"
+    },
+    {
+      "file": "model/browser-source/chromium-87/html.css",
+      "url": "https://github.com/chromium/chromium/blob/87.0.4280.141/third_party/blink/renderer/core/html/resources/html.css",
+      "sha256": "23effb5564b04c04dcb8d72b04941f9d3e69511ebbb2152ab4eda4f423c3778d"
+    },
+    {
+      "file": "model/browser-source/chromium-87/runtime_enabled_features.json5",
+      "url": "https://github.com/chromium/chromium/blob/87.0.4280.141/third_party/blink/renderer/platform/runtime_enabled_features.json5",
+      "sha256": "8442029405ca78cfa737e58db611de7f3fe2af3f7e960df32b7a38b0b969bcc8"
+    },
+    {
+      "file": "model/browser-source/chromium-87/settings.json5",
+      "url": "https://github.com/chromium/chromium/blob/87.0.4280.141/third_party/blink/renderer/core/frame/settings.json5",
+      "sha256": "ebeff8abaab038f02f6450286985929ae5dc1958de3dc39c1b44bb6442226ef2"
+    }
+  ],
+  "implemented": [
+    "Textarea selectionStart, selectionEnd, selectionDirection, setSelectionRange and select use source argument conversions.",
+    "The cache and focused FrameSelection are separate. The model records editor revision and directionality.",
+    "Focus with preventScroll restores the cache before synchronous source focus callbacks. Select restores it after the focus procedure.",
+    "Changed cached ranges queue trusted bubbling select events. The animation stage freezes its FIFO before dispatch.",
+    "Changed represented frame ranges queue separate trusted nonbubbling Document selectionchange tasks. Neither event class is coalesced.",
+    "Callbacks run through the source interpreter. The dispatch path uses current listeners and retains detached event targets.",
+    "The positive textarea focus-style query checks native layout-object existence and inherited visibility without a measured rectangle."
+  ],
+  "boundaries": [
+    "The rendering cadence and ordering among native task sources are explicit environment requirements. Diagnostics supply event stages; they do not establish a cadence.",
+    "Default focus scrolling remains unresolved. Readonly alone is not a proof that scrolling has no effect.",
+    "Editing, arbitrary document selections, and mutations that require native frame-range adjustment remain unresolved.",
+    "The source wrapper admits no policy or completion boundary inside an active rendering batch, native event dispatch, focus procedure or selectionchange task.",
+    "The comparison results do not prove full native refinement or an optimal full-game strategy."
+  ],
+  "checks": [
+    {
+      "command": "node lean/check_javascript_selection.mjs --engine",
+      "cases": 82,
+      "passed": 82,
+      "nativeComparisons": 80,
+      "versions": {
+        "node": "12.18.3",
+        "v8": "8.7.220.31-electron.0",
+        "uv": "1.38.0",
+        "zlib": "1.2.11",
+        "brotli": "1.0.7",
+        "ares": "1.16.0",
+        "modules": "85",
+        "nghttp2": "1.41.0",
+        "napi": "6",
+        "llhttp": "2.0.4",
+        "http_parser": "2.9.3",
+        "openssl": "1.1.1",
+        "icu": "67.1",
+        "unicode": "13.0",
+        "electron": "11.5.0",
+        "chrome": "87.0.4280.141"
+      },
+      "executableHash": "6d8020c65f288d375dd6307dd86a3bcbe2907efe272ee3b859998211ecfd345b",
+      "gameEntryPointExecuted": false,
+      "fullSelectionRefinementVerified": false,
+      "renderingCadenceSpecified": false
+    },
+    {
+      "command": "node lean/check_javascript_focused_selection.mjs --engine",
+      "cases": 81,
+      "passed": 81,
+      "nativeComparisons": 65,
+      "versions": {
+        "node": "12.18.3",
+        "v8": "8.7.220.31-electron.0",
+        "uv": "1.38.0",
+        "zlib": "1.2.11",
+        "brotli": "1.0.7",
+        "ares": "1.16.0",
+        "modules": "85",
+        "nghttp2": "1.41.0",
+        "napi": "6",
+        "llhttp": "2.0.4",
+        "http_parser": "2.9.3",
+        "openssl": "1.1.1",
+        "icu": "67.1",
+        "unicode": "13.0",
+        "electron": "11.5.0",
+        "chrome": "87.0.4280.141"
+      },
+      "executableHash": "6d8020c65f288d375dd6307dd86a3bcbe2907efe272ee3b859998211ecfd345b",
+      "gameEntryPointExecuted": false,
+      "fullSelectionRefinementVerified": false,
+      "renderingCadenceSpecified": false
+    }
+  ]
+}

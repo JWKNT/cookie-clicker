@@ -1,0 +1,79 @@
+{
+  "schema": 1,
+  "scope": "isolated-native-Storage-quota-boundaries-not-full-host-refinement",
+  "quotaBytes": 104857600,
+  "unit": "two bytes per UTF-16 code unit in keys and values",
+  "sources": [
+    {
+      "file": "electron-dom-storage-limits.patch",
+      "url": "https://raw.githubusercontent.com/electron/electron/v11.5.0/patches/chromium/dom_storage_limits.patch",
+      "sha256": "e41f458d2c00cb8e09f68096f8a34274f9bff667f797a0c93f8518371066aa09"
+    },
+    {
+      "file": "cached_storage_area.cc",
+      "url": "https://raw.githubusercontent.com/chromium/chromium/87.0.4280.141/third_party/blink/renderer/modules/storage/cached_storage_area.cc",
+      "sha256": "8bd09e73cd1fdd27eea65cec47b768e884e4407592090d862c973830b7e34723"
+    },
+    {
+      "file": "storage_area_map.cc",
+      "url": "https://raw.githubusercontent.com/chromium/chromium/87.0.4280.141/third_party/blink/renderer/modules/storage/storage_area_map.cc",
+      "sha256": "9e27f1c72b40c31cf9784c65b677aa8ebbc99b949059f38429c0625b99251935"
+    }
+  ],
+  "executableSha256": "6d8020c65f288d375dd6307dd86a3bcbe2907efe272ee3b859998211ecfd345b",
+  "versions": {
+    "node": "12.18.3",
+    "v8": "8.7.220.31-electron.0",
+    "uv": "1.38.0",
+    "zlib": "1.2.11",
+    "brotli": "1.0.7",
+    "ares": "1.16.0",
+    "modules": "85",
+    "nghttp2": "1.41.0",
+    "napi": "6",
+    "llhttp": "2.0.4",
+    "http_parser": "2.9.3",
+    "openssl": "1.1.1",
+    "icu": "67.1",
+    "unicode": "13.0",
+    "electron": "11.5.0",
+    "chrome": "87.0.4280.141"
+  },
+  "auditConfiguration": {
+    "networkServiceInProcess": true,
+    "hardwareAcceleration": false,
+    "nodeIntegration": false,
+    "contextIsolation": true,
+    "rendererSandbox": false,
+    "allowEval": false,
+    "allowDataAssets": false,
+    "allowInlineStyles": false,
+    "documentMode": "file"
+  },
+  "gameEntryPointExecuted": false,
+  "externalNetworking": false,
+  "cases": [
+    {
+      "area": "localStorage",
+      "oversized": "QuotaExceededError",
+      "afterFailure": 0,
+      "addedKey": "QuotaExceededError",
+      "atBoundary": 52428800,
+      "afterShrink": 2
+    },
+    {
+      "area": "sessionStorage",
+      "oversized": "QuotaExceededError",
+      "afterFailure": 0,
+      "addedKey": "QuotaExceededError",
+      "atBoundary": 52428800,
+      "afterShrink": 2
+    }
+  ],
+  "remaining": [
+    "Native multiple-key iteration order",
+    "Exotic named-property reflection",
+    "Cross-window storage events and backend failures",
+    "Full source/host refinement"
+  ]
+}

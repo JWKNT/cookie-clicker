@@ -1,0 +1,187 @@
+{
+  "schemaVersion": 1,
+  "status": "finite-native-source-prefix-comparison",
+  "identity": {
+    "versions": {
+      "node": "12.18.3",
+      "v8": "8.7.220.31-electron.0",
+      "uv": "1.38.0",
+      "zlib": "1.2.11",
+      "brotli": "1.0.7",
+      "ares": "1.16.0",
+      "modules": "85",
+      "nghttp2": "1.41.0",
+      "napi": "6",
+      "llhttp": "2.0.4",
+      "http_parser": "2.9.3",
+      "openssl": "1.1.1",
+      "cldr": "37.0",
+      "icu": "67.1",
+      "tz": "2020f",
+      "unicode": "13.0",
+      "electron": "11.5.0"
+    },
+    "arch": "arm64",
+    "platform": "darwin",
+    "gameEntryPointExecuted": false
+  },
+  "sourceSha256": "a8813ec2ee97edf5ebff6a3ce2037dcb65c08abd13c123bb92efda89b06ef4f7",
+  "constructorSha256": "a33839971b33fdbe28b81615493de7d4387c27d9fc8815c52bbc80b659bd0670",
+  "cpsPrefixSha256": "ec7c94cb931489ba79add3c6e3fb3dd8f17f94983923b2073a868d69e802f511",
+  "scope": "The exact contiguous three-statement CpS prefix in the numeric Game.Object branch, for all nineteen numeric building indices. The remaining nine price statements are excluded from this finite check. No save or game entry point is loaded; full constructor reachability and compiled-engine refinement remain separate proof obligations.",
+  "ln10Bits": "4612367379483415830",
+  "rows": [
+    {
+      "id": 1,
+      "nBits": "4607182418800017408",
+      "baseCps": 1,
+      "baseCpsBits": "4607182418800017408",
+      "digits": 0.01,
+      "digitsBits": "4576918229304087675"
+    },
+    {
+      "id": 2,
+      "nBits": "4611686018427387904",
+      "baseCps": 8,
+      "baseCpsBits": "4620693217682128896",
+      "digits": 0.1,
+      "digitsBits": "4591870180066957722"
+    },
+    {
+      "id": 3,
+      "nBits": "4613937818241073152",
+      "baseCps": 47,
+      "baseCpsBits": "4631811479262199808",
+      "digits": 1,
+      "digitsBits": "4607182418800017408"
+    },
+    {
+      "id": 4,
+      "nBits": "4616189618054758400",
+      "baseCps": 260,
+      "baseCpsBits": "4643281584563159040",
+      "digits": 10,
+      "digitsBits": "4621819117588971520"
+    },
+    {
+      "id": 5,
+      "nBits": "4617315517961601024",
+      "baseCps": 1400,
+      "baseCpsBits": "4653872080561897472",
+      "digits": 100,
+      "digitsBits": "4636737291354636288"
+    },
+    {
+      "id": 6,
+      "nBits": "4618441417868443648",
+      "baseCps": 7800,
+      "baseCpsBits": "4665298205397745664",
+      "digits": 100,
+      "digitsBits": "4636737291354636288"
+    },
+    {
+      "id": 7,
+      "nBits": "4619567317775286272",
+      "baseCps": 44000,
+      "baseCpsBits": "4676280127535972352",
+      "digits": 1000,
+      "digitsBits": "4652007308841189376"
+    },
+    {
+      "id": 8,
+      "nBits": "4620693217682128896",
+      "baseCps": 260000,
+      "baseCpsBits": "4688173544813625344",
+      "digits": 10000,
+      "digitsBits": "4666723172467343360"
+    },
+    {
+      "id": 9,
+      "nBits": "4621256167635550208",
+      "baseCps": 1600000,
+      "baseCpsBits": "4699622759393656832",
+      "digits": 100000,
+      "digitsBits": "4681608360884174848"
+    },
+    {
+      "id": 10,
+      "nBits": "4621819117588971520",
+      "baseCps": 10000000,
+      "baseCpsBits": "4711630319722168320",
+      "digits": 100000,
+      "digitsBits": "4681608360884174848"
+    },
+    {
+      "id": 11,
+      "nBits": "4622382067542392832",
+      "baseCps": 65000000,
+      "baseCpsBits": "4723992962176909312",
+      "digits": 1000000,
+      "digitsBits": "4696837146684686336"
+    },
+    {
+      "id": 12,
+      "nBits": "4622945017495814144",
+      "baseCps": 430000000,
+      "baseCpsBits": "4735993811619020800",
+      "digits": 10000000,
+      "digitsBits": "4711630319722168320"
+    },
+    {
+      "id": 13,
+      "nBits": "4623507967449235456",
+      "baseCps": 2900000000,
+      "baseCpsBits": "4748372148421132288",
+      "digits": 100000000,
+      "digitsBits": "4726483295884279808"
+    },
+    {
+      "id": 14,
+      "nBits": "4624070917402656768",
+      "baseCps": 21000000000,
+      "baseCpsBits": "4761306230503243776",
+      "digits": 1000000000,
+      "digitsBits": "4741671816366391296"
+    },
+    {
+      "id": 15,
+      "nBits": "4624633867356078080",
+      "baseCps": 150000000000,
+      "baseCpsBits": "4774227205385355264",
+      "digits": 10000000000,
+      "digitsBits": "4756540486875873280"
+    },
+    {
+      "id": 16,
+      "nBits": "4625196817309499392",
+      "baseCps": 1100000000000,
+      "baseCpsBits": "4787328404267466752",
+      "digits": 100000000000,
+      "digitsBits": "4771362005757984768"
+    },
+    {
+      "id": 17,
+      "nBits": "4625478292286210048",
+      "baseCps": 8300000000000,
+      "baseCpsBits": "4800329203522207744",
+      "digits": 100000000000,
+      "digitsBits": "4771362005757984768"
+    },
+    {
+      "id": 18,
+      "nBits": "4625759767262920704",
+      "baseCps": 64000000000000,
+      "baseCpsBits": "4813532802404319232",
+      "digits": 1000000000000,
+      "digitsBits": "4786511204640096256"
+    },
+    {
+      "id": 19,
+      "nBits": "4626041242239631360",
+      "baseCps": 510000000000000,
+      "baseCpsBits": "4827011601286430720",
+      "digits": 10000000000000,
+      "digitsBits": "4801453603149578240"
+    }
+  ]
+}

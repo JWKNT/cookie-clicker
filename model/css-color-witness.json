@@ -1,0 +1,274 @@
+{
+  "schema": 1,
+  "scope": "closed native eight-bit RGBA parsing and distinct CSSOM/Canvas text",
+  "chromiumVersion": "87.0.4280.141",
+  "sources": [
+    {
+      "file": "color.cc",
+      "url": "https://github.com/chromium/chromium/blob/87.0.4280.141/third_party/blink/renderer/platform/graphics/color.cc",
+      "sha256": "17bfefe288b7cd546a1d4b98677a3cc23a90768de6f843f3b5c4cb3c139a643a"
+    },
+    {
+      "file": "color.h",
+      "url": "https://github.com/chromium/chromium/blob/87.0.4280.141/third_party/blink/renderer/platform/graphics/color.h",
+      "sha256": "cbe6534d729ed0d304422a3a4a4462176188c46572f991e1d20fb82873c1b8e3"
+    },
+    {
+      "file": "css_color_value.cc",
+      "url": "https://github.com/chromium/chromium/blob/87.0.4280.141/third_party/blink/renderer/core/css/css_color_value.cc",
+      "sha256": "33aa41cd721aa2f1077ec16c89eca8693dad9b15768c534881e77023802d3d3d"
+    },
+    {
+      "file": "css_parser_fast_paths.cc",
+      "url": "https://github.com/chromium/chromium/blob/87.0.4280.141/third_party/blink/renderer/core/css/parser/css_parser_fast_paths.cc",
+      "sha256": "cf6877bcf1e731289bd677f00e2bf87841b57f7ad5b9160e9c9aaf84d9c55669"
+    },
+    {
+      "file": "canvas_style.cc",
+      "url": "https://github.com/chromium/chromium/blob/87.0.4280.141/third_party/blink/renderer/modules/canvas/canvas2d/canvas_style.cc",
+      "sha256": "ea2a75890e4a953815bb20e6d758c46fc995ad7ed62b52ae22116bd7f949f868"
+    },
+    {
+      "file": "canvas_style.h",
+      "url": "https://github.com/chromium/chromium/blob/87.0.4280.141/third_party/blink/renderer/modules/canvas/canvas2d/canvas_style.h",
+      "sha256": "dc43a2958c99e54c9bffe679f4cea1932225ea9859a8e7f59d0d33a579b76265"
+    },
+    {
+      "file": "decimal.cc",
+      "url": "https://github.com/chromium/chromium/blob/87.0.4280.141/third_party/blink/renderer/platform/wtf/decimal.cc",
+      "sha256": "fe06061a3fae2ce9ee8da669dc021597d46bedc886b33f9ddc7ea4a55dd7a64b"
+    }
+  ],
+  "gameSourceHashes": {
+    "main.js": "a8813ec2ee97edf5ebff6a3ce2037dcb65c08abd13c123bb92efda89b06ef4f7",
+    "minigameGarden.js": "184eacacd9325d493412dcda07f63d3a791939f83889b4349b6099d04be8e6c9",
+    "minigameMarket.js": "78538743673f3c1cd0e870a3695c77dcacd63febbe64b88f8a8fab9ea7e2863f",
+    "minigameGrimoire.js": "9efea1feb898dc9b719dd971bd27a71f083a8855b910013c524aea9b6d2a349d",
+    "minigamePantheon.js": "af08c31c4564d445cc2d1a7d101c4a63b57aa9b89991b93b8a65f4c0427573a0",
+    "base64.js": "875839c3e0c174c9358ce96923adfed6a6d2c090187a32deb35152dfac2c0e47",
+    "loc/EN.js": "ce48272a5fd5ab1f309dbb8fd7bd70188984ce14235a1d3d9215f3585101f433",
+    "index.html": "28488d9aef9bf31c4c023a0af01f0500a3b3e462b79bf7f2b09790025927a969"
+  },
+  "assignmentInventory": [
+    {
+      "name": "main.js",
+      "line": 6000,
+      "property": "fillStyle",
+      "value": "'#fff'"
+    },
+    {
+      "name": "main.js",
+      "line": 8350,
+      "property": "fillStyle",
+      "value": "'#000'"
+    },
+    {
+      "name": "main.js",
+      "line": 8355,
+      "property": "fillStyle",
+      "value": "'rgba(255,255,255,0.7)'"
+    },
+    {
+      "name": "main.js",
+      "line": 8359,
+      "property": "fillStyle",
+      "value": "'rgba(255,255,255,1)'"
+    },
+    {
+      "name": "main.js",
+      "line": 8397,
+      "property": "fillStyle",
+      "value": "'#000'"
+    },
+    {
+      "name": "main.js",
+      "line": 8398,
+      "property": "strokeStyle",
+      "value": "'#000'"
+    },
+    {
+      "name": "main.js",
+      "line": 8407,
+      "property": "fillStyle",
+      "value": "'#fff'"
+    },
+    {
+      "name": "main.js",
+      "line": 8408,
+      "property": "fillStyle",
+      "value": "'rgba(255,255,255,0.7)'"
+    },
+    {
+      "name": "main.js",
+      "line": 8438,
+      "property": "fillStyle",
+      "value": "'#000'"
+    },
+    {
+      "name": "main.js",
+      "line": 8440,
+      "property": "fillStyle",
+      "value": "'#fff'"
+    },
+    {
+      "name": "main.js",
+      "line": 14609,
+      "property": "fillStyle",
+      "value": "'#000'"
+    },
+    {
+      "name": "main.js",
+      "line": 14621,
+      "property": "strokeStyle",
+      "value": "'#fff'"
+    },
+    {
+      "name": "main.js",
+      "line": 14633,
+      "property": "strokeStyle",
+      "value": "'#fff'"
+    },
+    {
+      "name": "main.js",
+      "line": 14637,
+      "property": "fillStyle",
+      "value": "'#fff'"
+    },
+    {
+      "name": "main.js",
+      "line": 15402,
+      "property": "fillStyle",
+      "value": "'#000'"
+    },
+    {
+      "name": "main.js",
+      "line": 15646,
+      "property": "fillStyle",
+      "value": "'#fff'"
+    },
+    {
+      "name": "main.js",
+      "line": 15653,
+      "property": "fillStyle",
+      "value": "'#000'"
+    },
+    {
+      "name": "main.js",
+      "line": 15819,
+      "property": "fillStyle",
+      "value": "'#000'"
+    },
+    {
+      "name": "main.js",
+      "line": 16035,
+      "property": "fillStyle",
+      "value": "'#000'"
+    },
+    {
+      "name": "main.js",
+      "line": 16821,
+      "property": "fillStyle",
+      "value": "'rgb('+Math.round((1-Game.currentFps/Game.fps)*128)+',0,0)'"
+    },
+    {
+      "name": "main.js",
+      "line": 16823,
+      "property": "strokeStyle",
+      "value": "'#fff'"
+    },
+    {
+      "name": "minigameMarket.js",
+      "line": 701,
+      "property": "fillStyle",
+      "value": "'#fff'"
+    },
+    {
+      "name": "minigameMarket.js",
+      "line": 951,
+      "property": "backgroundColor",
+      "value": "M.cols.bg"
+    },
+    {
+      "name": "minigameMarket.js",
+      "line": 952,
+      "property": "color",
+      "value": "M.cols.highlight"
+    },
+    {
+      "name": "minigameMarket.js",
+      "line": 954,
+      "property": "backgroundColor",
+      "value": "M.cols.bg"
+    },
+    {
+      "name": "minigameMarket.js",
+      "line": 971,
+      "property": "fillStyle",
+      "value": "M.cols.bg"
+    },
+    {
+      "name": "minigameMarket.js",
+      "line": 981,
+      "property": "fillStyle",
+      "value": "M.cols.line1"
+    },
+    {
+      "name": "minigameMarket.js",
+      "line": 981,
+      "property": "fillStyle",
+      "value": "M.cols.line2"
+    },
+    {
+      "name": "minigameMarket.js",
+      "line": 987,
+      "property": "fillStyle",
+      "value": "M.cols.line1"
+    },
+    {
+      "name": "minigameMarket.js",
+      "line": 987,
+      "property": "fillStyle",
+      "value": "M.cols.line2"
+    },
+    {
+      "name": "minigameMarket.js",
+      "line": 1013,
+      "property": "fillStyle",
+      "value": "M.cols.highlight"
+    },
+    {
+      "name": "minigameMarket.js",
+      "line": 1016,
+      "property": "fillStyle",
+      "value": "delta>0?M.cols.high:M.cols.low"
+    },
+    {
+      "name": "minigameMarket.js",
+      "line": 1025,
+      "property": "strokeStyle",
+      "value": "M.cols.highlight"
+    },
+    {
+      "name": "minigameMarket.js",
+      "line": 1032,
+      "property": "strokeStyle",
+      "value": "delta>0?M.cols.high:M.cols.low"
+    }
+  ],
+  "implementation": {
+    "storage": "RGBA uses four UInt8 values; no pixel readback or renderer snapshot is supplied.",
+    "grammar": "Hex3/4/6/8, twenty explicit base color keywords, comma rgb/rgba with consistent numeric or percent channels and bounded six-digit decimal parts. Other grammar or environment-dependent colors remain explicit.",
+    "numeric": "Native binary64 parse/divide/multiply/round order, negative clamps and byte clamps are represented by the logical Float.Model.",
+    "cssText": "Accepted keyword identity is retained; numeric values use CSSColorValue rgb/rgba text. The actual byte-alpha two/three-decimal choice is proved equal to the logical Float32 source calculation for all256 bytes in JavaScriptCssColorAlpha.lean.",
+    "canvasText": "Opaque colors use lowercase six-digit hex. Alpha uses binary64 byte/255, ECMAScript shortest text and the native Decimal15-digit reduction."
+  },
+  "validation": "node lean/check_javascript_color.mjs --engine",
+  "remaining": [
+    "General CSS color parser and named/system colors",
+    "CurrentColor environment resolution for Canvas",
+    "Full source/parser/numeric refinement",
+    "Native filter/style lifecycle and raster semantics"
+  ],
+  "fullColorGrammarVerified": false,
+  "rendererRefinementVerified": false
+}

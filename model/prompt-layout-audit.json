@@ -1,0 +1,376 @@
+{
+  "schema": 1,
+  "sourceHashes": {
+    "main.js": "a8813ec2ee97edf5ebff6a3ce2037dcb65c08abd13c123bb92efda89b06ef4f7",
+    "minigameGarden.js": "184eacacd9325d493412dcda07f63d3a791939f83889b4349b6099d04be8e6c9",
+    "minigameMarket.js": "78538743673f3c1cd0e870a3695c77dcacd63febbe64b88f8a8fab9ea7e2863f",
+    "minigameGrimoire.js": "9efea1feb898dc9b719dd971bd27a71f083a8855b910013c524aea9b6d2a349d",
+    "minigamePantheon.js": "af08c31c4564d445cc2d1a7d101c4a63b57aa9b89991b93b8a65f4c0427573a0",
+    "base64.js": "875839c3e0c174c9358ce96923adfed6a6d2c090187a32deb35152dfac2c0e47",
+    "loc/EN.js": "ce48272a5fd5ab1f309dbb8fd7bd70188984ce14235a1d3d9215f3585101f433",
+    "index.html": "28488d9aef9bf31c4c023a0af01f0500a3b3e462b79bf7f2b09790025927a969"
+  },
+  "scope": "source-prompt-layout-dependency-audit",
+  "functions": [
+    {
+      "name": "Game.UpdatePrompt",
+      "start": 282441,
+      "end": 282618,
+      "line": 6295,
+      "endLine": 6299,
+      "sha256": "e3ca6dcbe0f3b82032a4f4854241770fb691968a856c5265f3a44e5f328e7d85"
+    },
+    {
+      "name": "Game.Prompt",
+      "start": 282634,
+      "end": 284392,
+      "line": 6300,
+      "endLine": 6343,
+      "sha256": "aa108022d57fdd0b5ae4b57625a6a0f998692ee592ac1706b85ed644110268ce"
+    },
+    {
+      "name": "Game.ClosePrompt",
+      "start": 284413,
+      "end": 284692,
+      "line": 6344,
+      "endLine": 6354,
+      "sha256": "390361ea4a8eeb9fd0c90db49ee93b385449c842eda4b6154d6ef7163a3f72ac"
+    },
+    {
+      "name": "Game.ConfirmPrompt",
+      "start": 284715,
+      "end": 284920,
+      "line": 6355,
+      "endLine": 6359,
+      "sha256": "d9a9e8e8e83766bc8dac9c4ed2ecd6060858571080ca3ebffb304874b0c73e7c"
+    },
+    {
+      "name": "Game.FocusPromptOption",
+      "start": 284947,
+      "end": 285678,
+      "line": 6360,
+      "endLine": 6374,
+      "sha256": "020a158f1b84ef59208b358fab8ce08e140972b585e2565cf6cd3e6f3163d986"
+    },
+    {
+      "name": "Game.showLangSelection",
+      "start": 293260,
+      "end": 294438,
+      "line": 6562,
+      "endLine": 6593,
+      "sha256": "04b8d9e5652e0880796334e091b48c59346e669d88e1049d6f5a032b3b304621"
+    }
+  ],
+  "update": {
+    "assignments": [
+      {
+        "target": "Game.promptAnchorL.style.top",
+        "start": 282517,
+        "end": 282612,
+        "line": 6298,
+        "endLine": 6298,
+        "sha256": "c7c76f2c097b0f972b2d36f7b1543c8bf77be92c86ff963309a2c1ad815a39b0"
+      }
+    ],
+    "calls": [
+      {
+        "callee": "Game.promptUpdateFunc",
+        "start": 282488,
+        "end": 282511,
+        "line": 6297,
+        "endLine": 6297,
+        "sha256": "387f7d2ec07497bda92f72a7ff6e5a1326f925c94549241ded7ccf0786208268"
+      },
+      {
+        "callee": "Math.floor",
+        "start": 282546,
+        "end": 282607,
+        "line": 6298,
+        "endLine": 6298,
+        "sha256": "55c8fd43246d15ecc69d1883c4c4d3190621d98c03b86b8f09a6d20872f6f494"
+      }
+    ],
+    "evaluationOrder": [
+      "Read promptUpdateFunc; if truthy, read it again and invoke it with Game as receiver.",
+      "Resolve promptAnchorL and its style object before evaluating the right-hand side.",
+      "Resolve Math.floor, read windowH, then read promptWrapL.offsetHeight.",
+      "Perform the source subtraction, division, subtraction, floor and string concatenation.",
+      "Set the native style top property; preserve its conversions, validation and exceptions."
+    ],
+    "directRandomDraws": 0,
+    "callbackEffectsMustBeRetained": true
+  },
+  "references": [
+    {
+      "name": "Game.promptAnchorL",
+      "references": [
+        {
+          "start": 282191,
+          "end": 282209,
+          "line": 6287,
+          "endLine": 6287,
+          "sha256": "03dceac6e62d2603b25b492f70f7d3750ec864ba4f7823d9030a9eac588847df"
+        },
+        {
+          "start": 282517,
+          "end": 282535,
+          "line": 6298,
+          "endLine": 6298,
+          "sha256": "03dceac6e62d2603b25b492f70f7d3750ec864ba4f7823d9030a9eac588847df"
+        },
+        {
+          "start": 284060,
+          "end": 284078,
+          "line": 6335,
+          "endLine": 6335,
+          "sha256": "03dceac6e62d2603b25b492f70f7d3750ec864ba4f7823d9030a9eac588847df"
+        },
+        {
+          "start": 284471,
+          "end": 284489,
+          "line": 6347,
+          "endLine": 6347,
+          "sha256": "03dceac6e62d2603b25b492f70f7d3750ec864ba4f7823d9030a9eac588847df"
+        }
+      ]
+    },
+    {
+      "name": "Game.promptWrapL",
+      "references": [
+        {
+          "start": 282232,
+          "end": 282248,
+          "line": 6288,
+          "endLine": 6288,
+          "sha256": "1788fabf60cd464f989269d359a15dcc09c3890a97b73cbd55e38d8cc33e0be5"
+        },
+        {
+          "start": 282571,
+          "end": 282587,
+          "line": 6298,
+          "endLine": 6298,
+          "sha256": "1788fabf60cd464f989269d359a15dcc09c3890a97b73cbd55e38d8cc33e0be5"
+        },
+        {
+          "start": 282781,
+          "end": 282797,
+          "line": 6304,
+          "endLine": 6304,
+          "sha256": "1788fabf60cd464f989269d359a15dcc09c3890a97b73cbd55e38d8cc33e0be5"
+        },
+        {
+          "start": 282830,
+          "end": 282846,
+          "line": 6304,
+          "endLine": 6304,
+          "sha256": "1788fabf60cd464f989269d359a15dcc09c3890a97b73cbd55e38d8cc33e0be5"
+        }
+      ]
+    },
+    {
+      "name": "Game.promptOn",
+      "references": [
+        {
+          "start": 204339,
+          "end": 204352,
+          "line": 4209,
+          "endLine": 4209,
+          "sha256": "a2d04e862288f529279562d38fef693e3a3c44b12353f520b4d474e0f0c31818"
+        },
+        {
+          "start": 204903,
+          "end": 204916,
+          "line": 4231,
+          "endLine": 4231,
+          "sha256": "a2d04e862288f529279562d38fef693e3a3c44b12353f520b4d474e0f0c31818"
+        },
+        {
+          "start": 206835,
+          "end": 206848,
+          "line": 4254,
+          "endLine": 4254,
+          "sha256": "a2d04e862288f529279562d38fef693e3a3c44b12353f520b4d474e0f0c31818"
+        },
+        {
+          "start": 206900,
+          "end": 206913,
+          "line": 4255,
+          "endLine": 4255,
+          "sha256": "a2d04e862288f529279562d38fef693e3a3c44b12353f520b4d474e0f0c31818"
+        },
+        {
+          "start": 233330,
+          "end": 233343,
+          "line": 4888,
+          "endLine": 4888,
+          "sha256": "a2d04e862288f529279562d38fef693e3a3c44b12353f520b4d474e0f0c31818"
+        },
+        {
+          "start": 233519,
+          "end": 233532,
+          "line": 4891,
+          "endLine": 4891,
+          "sha256": "a2d04e862288f529279562d38fef693e3a3c44b12353f520b4d474e0f0c31818"
+        },
+        {
+          "start": 233700,
+          "end": 233713,
+          "line": 4898,
+          "endLine": 4898,
+          "sha256": "a2d04e862288f529279562d38fef693e3a3c44b12353f520b4d474e0f0c31818"
+        },
+        {
+          "start": 282291,
+          "end": 282304,
+          "line": 6290,
+          "endLine": 6290,
+          "sha256": "a2d04e862288f529279562d38fef693e3a3c44b12353f520b4d474e0f0c31818"
+        },
+        {
+          "start": 284172,
+          "end": 284185,
+          "line": 6338,
+          "endLine": 6338,
+          "sha256": "a2d04e862288f529279562d38fef693e3a3c44b12353f520b4d474e0f0c31818"
+        },
+        {
+          "start": 284438,
+          "end": 284451,
+          "line": 6346,
+          "endLine": 6346,
+          "sha256": "a2d04e862288f529279562d38fef693e3a3c44b12353f520b4d474e0f0c31818"
+        },
+        {
+          "start": 284555,
+          "end": 284568,
+          "line": 6349,
+          "endLine": 6349,
+          "sha256": "a2d04e862288f529279562d38fef693e3a3c44b12353f520b4d474e0f0c31818"
+        },
+        {
+          "start": 284792,
+          "end": 284805,
+          "line": 6358,
+          "endLine": 6358,
+          "sha256": "a2d04e862288f529279562d38fef693e3a3c44b12353f520b4d474e0f0c31818"
+        },
+        {
+          "start": 929160,
+          "end": 929173,
+          "line": 16255,
+          "endLine": 16255,
+          "sha256": "a2d04e862288f529279562d38fef693e3a3c44b12353f520b4d474e0f0c31818"
+        }
+      ]
+    },
+    {
+      "name": "Game.promptUpdateFunc",
+      "references": [
+        {
+          "start": 282311,
+          "end": 282332,
+          "line": 6291,
+          "endLine": 6291,
+          "sha256": "5bd7b9dcf07f8da4fa009e208e4dae0163d4fc67e05e3001cf8624b9c2d54952"
+        },
+        {
+          "start": 282465,
+          "end": 282486,
+          "line": 6297,
+          "endLine": 6297,
+          "sha256": "5bd7b9dcf07f8da4fa009e208e4dae0163d4fc67e05e3001cf8624b9c2d54952"
+        },
+        {
+          "start": 282488,
+          "end": 282509,
+          "line": 6297,
+          "endLine": 6297,
+          "sha256": "5bd7b9dcf07f8da4fa009e208e4dae0163d4fc67e05e3001cf8624b9c2d54952"
+        },
+        {
+          "start": 282732,
+          "end": 282753,
+          "line": 6303,
+          "endLine": 6303,
+          "sha256": "5bd7b9dcf07f8da4fa009e208e4dae0163d4fc67e05e3001cf8624b9c2d54952"
+        },
+        {
+          "start": 284576,
+          "end": 284597,
+          "line": 6350,
+          "endLine": 6350,
+          "sha256": "5bd7b9dcf07f8da4fa009e208e4dae0163d4fc67e05e3001cf8624b9c2d54952"
+        }
+      ]
+    }
+  ],
+  "startup": {
+    "globalSwitch": "App",
+    "gameAppReferences": 0,
+    "gameSetting": "CookieClickerLang",
+    "executableFixture": "Steam adapter plus English in browser localStorage; game save is empty.",
+    "routes": [
+      {
+        "app": false,
+        "language": "absent",
+        "loadLanguage": "EN",
+        "firstLaunch": true,
+        "postInitLanguagePrompt": true
+      },
+      {
+        "app": false,
+        "language": "EN",
+        "loadLanguage": "EN",
+        "firstLaunch": false,
+        "postInitLanguagePrompt": false
+      },
+      {
+        "app": true,
+        "language": "absent",
+        "prelaunchSelection": true,
+        "firstLaunch": false,
+        "postInitLanguagePrompt": false
+      },
+      {
+        "app": true,
+        "language": "EN",
+        "loadLanguage": "EN",
+        "firstLaunch": false,
+        "postInitLanguagePrompt": false
+      }
+    ],
+    "steamWrapperExecutedByLeanProbe": false,
+    "configuredEnglishChangesGameSave": false
+  },
+  "quotient": {
+    "status": "obligations-only; no executable transition is replaced",
+    "possibleLowerBound": "Allow additional target activations independent of geometric hit testing, while retaining the source handlers, random-draw order, elapsed time and completion predicate. A proven simulation into this larger strategy class would give a lower bound.",
+    "retained": [
+      "promptUpdateFunc calls and their complete effects",
+      "promptOn, promptNoClose, options and focused option state",
+      "DOM target identities, callback paths and source event ordering",
+      "All audio and source random draws",
+      "Public observations, including allowed save export",
+      "Native save and reload effects"
+    ],
+    "obligations": [
+      "Show that each concrete native task maps to an abstract task with the same retained state, draw stream and elapsed time.",
+      "Do not remove information available to a concrete observation-based policy; define a history/observation simulation.",
+      "Retain style/layout-flush effects that can invoke callbacks, queue events or change retained state.",
+      "Prove that every concrete legal action is admitted by the larger abstract action class.",
+      "For a candidate upper bound, construct concrete target reachability, hit-test and event/default-action witnesses. The lower-bound action expansion does not supply these.",
+      "Show equality of the candidate cost with a certified lower bound; a source dependency audit alone supplies neither."
+    ],
+    "counterexamplesToBlanketErasure": [
+      "Prompt position changes pointer target reachability and visual observations.",
+      "promptOn gates bulk-key shortcuts and ascension inputs.",
+      "Language mouseover changes the heading and plays audio; the click requests a current save and reload.",
+      "Ordinary prompt options can buy upgrades, spend lumps and ascend.",
+      "The first language prompt has zero option buttons, so ConfirmPrompt cannot replace its language click.",
+      "Canvas dimensions influence source draw loops and random draws; the prompt slice does not justify erasing those metrics."
+    ]
+  },
+  "sourceNoninterferenceProved": false,
+  "rendererRefinementVerified": false,
+  "optimalityProved": false
+}

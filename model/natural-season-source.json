@@ -1,0 +1,1700 @@
+{
+  "schemaVersion": 1,
+  "gameVersion": "2.053",
+  "mainSha256": "a8813ec2ee97edf5ebff6a3ce2037dcb65c08abd13c123bb92efda89b06ef4f7",
+  "launchFragment": {
+    "startLine": 1294,
+    "sha256": "55f9359dc9b19fd9c6c6390520dcf566430756f7f9b7a5993bacc16e0fcae320",
+    "nodes": {
+      "type": "Program",
+      "body": [
+        {
+          "type": "ExpressionStatement",
+          "expression": {
+            "type": "AssignmentExpression",
+            "operator": "=",
+            "left": {
+              "type": "MemberExpression",
+              "object": {
+                "type": "Identifier",
+                "name": "Game"
+              },
+              "property": {
+                "type": "Identifier",
+                "name": "baseSeason"
+              },
+              "computed": false
+            },
+            "right": {
+              "type": "Literal",
+              "value": ""
+            }
+          }
+        },
+        {
+          "type": "VariableDeclaration",
+          "declarations": [
+            {
+              "type": "VariableDeclarator",
+              "id": {
+                "type": "Identifier",
+                "name": "year"
+              },
+              "init": {
+                "type": "CallExpression",
+                "callee": {
+                  "type": "MemberExpression",
+                  "object": {
+                    "type": "NewExpression",
+                    "callee": {
+                      "type": "Identifier",
+                      "name": "Date"
+                    },
+                    "arguments": []
+                  },
+                  "property": {
+                    "type": "Identifier",
+                    "name": "getFullYear"
+                  },
+                  "computed": false
+                },
+                "arguments": []
+              }
+            }
+          ],
+          "kind": "var"
+        },
+        {
+          "type": "VariableDeclaration",
+          "declarations": [
+            {
+              "type": "VariableDeclarator",
+              "id": {
+                "type": "Identifier",
+                "name": "leap"
+              },
+              "init": {
+                "type": "ConditionalExpression",
+                "test": {
+                  "type": "LogicalExpression",
+                  "left": {
+                    "type": "LogicalExpression",
+                    "left": {
+                      "type": "BinaryExpression",
+                      "left": {
+                        "type": "BinaryExpression",
+                        "left": {
+                          "type": "Identifier",
+                          "name": "year"
+                        },
+                        "operator": "%",
+                        "right": {
+                          "type": "Literal",
+                          "value": 4
+                        }
+                      },
+                      "operator": "==",
+                      "right": {
+                        "type": "Literal",
+                        "value": 0
+                      }
+                    },
+                    "operator": "&&",
+                    "right": {
+                      "type": "BinaryExpression",
+                      "left": {
+                        "type": "BinaryExpression",
+                        "left": {
+                          "type": "Identifier",
+                          "name": "year"
+                        },
+                        "operator": "%",
+                        "right": {
+                          "type": "Literal",
+                          "value": 100
+                        }
+                      },
+                      "operator": "!=",
+                      "right": {
+                        "type": "Literal",
+                        "value": 0
+                      }
+                    }
+                  },
+                  "operator": "||",
+                  "right": {
+                    "type": "BinaryExpression",
+                    "left": {
+                      "type": "BinaryExpression",
+                      "left": {
+                        "type": "Identifier",
+                        "name": "year"
+                      },
+                      "operator": "%",
+                      "right": {
+                        "type": "Literal",
+                        "value": 400
+                      }
+                    },
+                    "operator": "==",
+                    "right": {
+                      "type": "Literal",
+                      "value": 0
+                    }
+                  }
+                },
+                "consequent": {
+                  "type": "Literal",
+                  "value": 1
+                },
+                "alternate": {
+                  "type": "Literal",
+                  "value": 0
+                }
+              }
+            }
+          ],
+          "kind": "var"
+        },
+        {
+          "type": "VariableDeclaration",
+          "declarations": [
+            {
+              "type": "VariableDeclarator",
+              "id": {
+                "type": "Identifier",
+                "name": "day"
+              },
+              "init": {
+                "type": "CallExpression",
+                "callee": {
+                  "type": "MemberExpression",
+                  "object": {
+                    "type": "Identifier",
+                    "name": "Math"
+                  },
+                  "property": {
+                    "type": "Identifier",
+                    "name": "floor"
+                  },
+                  "computed": false
+                },
+                "arguments": [
+                  {
+                    "type": "BinaryExpression",
+                    "left": {
+                      "type": "BinaryExpression",
+                      "left": {
+                        "type": "NewExpression",
+                        "callee": {
+                          "type": "Identifier",
+                          "name": "Date"
+                        },
+                        "arguments": []
+                      },
+                      "operator": "-",
+                      "right": {
+                        "type": "NewExpression",
+                        "callee": {
+                          "type": "Identifier",
+                          "name": "Date"
+                        },
+                        "arguments": [
+                          {
+                            "type": "Identifier",
+                            "name": "year"
+                          },
+                          {
+                            "type": "Literal",
+                            "value": 0
+                          },
+                          {
+                            "type": "Literal",
+                            "value": 0
+                          }
+                        ]
+                      }
+                    },
+                    "operator": "/",
+                    "right": {
+                      "type": "BinaryExpression",
+                      "left": {
+                        "type": "BinaryExpression",
+                        "left": {
+                          "type": "BinaryExpression",
+                          "left": {
+                            "type": "Literal",
+                            "value": 1000
+                          },
+                          "operator": "*",
+                          "right": {
+                            "type": "Literal",
+                            "value": 60
+                          }
+                        },
+                        "operator": "*",
+                        "right": {
+                          "type": "Literal",
+                          "value": 60
+                        }
+                      },
+                      "operator": "*",
+                      "right": {
+                        "type": "Literal",
+                        "value": 24
+                      }
+                    }
+                  }
+                ]
+              }
+            }
+          ],
+          "kind": "var"
+        },
+        {
+          "type": "IfStatement",
+          "test": {
+            "type": "LogicalExpression",
+            "left": {
+              "type": "BinaryExpression",
+              "left": {
+                "type": "Identifier",
+                "name": "day"
+              },
+              "operator": ">=",
+              "right": {
+                "type": "Literal",
+                "value": 41
+              }
+            },
+            "operator": "&&",
+            "right": {
+              "type": "BinaryExpression",
+              "left": {
+                "type": "Identifier",
+                "name": "day"
+              },
+              "operator": "<=",
+              "right": {
+                "type": "Literal",
+                "value": 46
+              }
+            }
+          },
+          "consequent": {
+            "type": "ExpressionStatement",
+            "expression": {
+              "type": "AssignmentExpression",
+              "operator": "=",
+              "left": {
+                "type": "MemberExpression",
+                "object": {
+                  "type": "Identifier",
+                  "name": "Game"
+                },
+                "property": {
+                  "type": "Identifier",
+                  "name": "baseSeason"
+                },
+                "computed": false
+              },
+              "right": {
+                "type": "Literal",
+                "value": "valentines"
+              }
+            }
+          },
+          "alternate": {
+            "type": "IfStatement",
+            "test": {
+              "type": "LogicalExpression",
+              "left": {
+                "type": "BinaryExpression",
+                "left": {
+                  "type": "BinaryExpression",
+                  "left": {
+                    "type": "Identifier",
+                    "name": "day"
+                  },
+                  "operator": "+",
+                  "right": {
+                    "type": "Identifier",
+                    "name": "leap"
+                  }
+                },
+                "operator": ">=",
+                "right": {
+                  "type": "Literal",
+                  "value": 90
+                }
+              },
+              "operator": "&&",
+              "right": {
+                "type": "BinaryExpression",
+                "left": {
+                  "type": "Identifier",
+                  "name": "day"
+                },
+                "operator": "<=",
+                "right": {
+                  "type": "BinaryExpression",
+                  "left": {
+                    "type": "Literal",
+                    "value": 92
+                  },
+                  "operator": "+",
+                  "right": {
+                    "type": "Identifier",
+                    "name": "leap"
+                  }
+                }
+              }
+            },
+            "consequent": {
+              "type": "ExpressionStatement",
+              "expression": {
+                "type": "AssignmentExpression",
+                "operator": "=",
+                "left": {
+                  "type": "MemberExpression",
+                  "object": {
+                    "type": "Identifier",
+                    "name": "Game"
+                  },
+                  "property": {
+                    "type": "Identifier",
+                    "name": "baseSeason"
+                  },
+                  "computed": false
+                },
+                "right": {
+                  "type": "Literal",
+                  "value": "fools"
+                }
+              }
+            },
+            "alternate": {
+              "type": "IfStatement",
+              "test": {
+                "type": "LogicalExpression",
+                "left": {
+                  "type": "BinaryExpression",
+                  "left": {
+                    "type": "Identifier",
+                    "name": "day"
+                  },
+                  "operator": ">=",
+                  "right": {
+                    "type": "BinaryExpression",
+                    "left": {
+                      "type": "BinaryExpression",
+                      "left": {
+                        "type": "Literal",
+                        "value": 304
+                      },
+                      "operator": "-",
+                      "right": {
+                        "type": "Literal",
+                        "value": 7
+                      }
+                    },
+                    "operator": "+",
+                    "right": {
+                      "type": "Identifier",
+                      "name": "leap"
+                    }
+                  }
+                },
+                "operator": "&&",
+                "right": {
+                  "type": "BinaryExpression",
+                  "left": {
+                    "type": "Identifier",
+                    "name": "day"
+                  },
+                  "operator": "<=",
+                  "right": {
+                    "type": "BinaryExpression",
+                    "left": {
+                      "type": "Literal",
+                      "value": 304
+                    },
+                    "operator": "+",
+                    "right": {
+                      "type": "Identifier",
+                      "name": "leap"
+                    }
+                  }
+                }
+              },
+              "consequent": {
+                "type": "ExpressionStatement",
+                "expression": {
+                  "type": "AssignmentExpression",
+                  "operator": "=",
+                  "left": {
+                    "type": "MemberExpression",
+                    "object": {
+                      "type": "Identifier",
+                      "name": "Game"
+                    },
+                    "property": {
+                      "type": "Identifier",
+                      "name": "baseSeason"
+                    },
+                    "computed": false
+                  },
+                  "right": {
+                    "type": "Literal",
+                    "value": "halloween"
+                  }
+                }
+              },
+              "alternate": {
+                "type": "IfStatement",
+                "test": {
+                  "type": "LogicalExpression",
+                  "left": {
+                    "type": "BinaryExpression",
+                    "left": {
+                      "type": "Identifier",
+                      "name": "day"
+                    },
+                    "operator": ">=",
+                    "right": {
+                      "type": "BinaryExpression",
+                      "left": {
+                        "type": "Literal",
+                        "value": 349
+                      },
+                      "operator": "+",
+                      "right": {
+                        "type": "Identifier",
+                        "name": "leap"
+                      }
+                    }
+                  },
+                  "operator": "&&",
+                  "right": {
+                    "type": "BinaryExpression",
+                    "left": {
+                      "type": "Identifier",
+                      "name": "day"
+                    },
+                    "operator": "<=",
+                    "right": {
+                      "type": "BinaryExpression",
+                      "left": {
+                        "type": "Literal",
+                        "value": 365
+                      },
+                      "operator": "+",
+                      "right": {
+                        "type": "Identifier",
+                        "name": "leap"
+                      }
+                    }
+                  }
+                },
+                "consequent": {
+                  "type": "ExpressionStatement",
+                  "expression": {
+                    "type": "AssignmentExpression",
+                    "operator": "=",
+                    "left": {
+                      "type": "MemberExpression",
+                      "object": {
+                        "type": "Identifier",
+                        "name": "Game"
+                      },
+                      "property": {
+                        "type": "Identifier",
+                        "name": "baseSeason"
+                      },
+                      "computed": false
+                    },
+                    "right": {
+                      "type": "Literal",
+                      "value": "christmas"
+                    }
+                  }
+                },
+                "alternate": {
+                  "type": "BlockStatement",
+                  "body": [
+                    {
+                      "type": "VariableDeclaration",
+                      "declarations": [
+                        {
+                          "type": "VariableDeclarator",
+                          "id": {
+                            "type": "Identifier",
+                            "name": "easterDay"
+                          },
+                          "init": {
+                            "type": "CallExpression",
+                            "callee": {
+                              "type": "FunctionExpression",
+                              "id": null,
+                              "params": [
+                                {
+                                  "type": "Identifier",
+                                  "name": "Y"
+                                }
+                              ],
+                              "body": {
+                                "type": "BlockStatement",
+                                "body": [
+                                  {
+                                    "type": "VariableDeclaration",
+                                    "declarations": [
+                                      {
+                                        "type": "VariableDeclarator",
+                                        "id": {
+                                          "type": "Identifier",
+                                          "name": "C"
+                                        },
+                                        "init": {
+                                          "type": "CallExpression",
+                                          "callee": {
+                                            "type": "MemberExpression",
+                                            "object": {
+                                              "type": "Identifier",
+                                              "name": "Math"
+                                            },
+                                            "property": {
+                                              "type": "Identifier",
+                                              "name": "floor"
+                                            },
+                                            "computed": false
+                                          },
+                                          "arguments": [
+                                            {
+                                              "type": "BinaryExpression",
+                                              "left": {
+                                                "type": "Identifier",
+                                                "name": "Y"
+                                              },
+                                              "operator": "/",
+                                              "right": {
+                                                "type": "Literal",
+                                                "value": 100
+                                              }
+                                            }
+                                          ]
+                                        }
+                                      }
+                                    ],
+                                    "kind": "var"
+                                  },
+                                  {
+                                    "type": "VariableDeclaration",
+                                    "declarations": [
+                                      {
+                                        "type": "VariableDeclarator",
+                                        "id": {
+                                          "type": "Identifier",
+                                          "name": "N"
+                                        },
+                                        "init": {
+                                          "type": "BinaryExpression",
+                                          "left": {
+                                            "type": "Identifier",
+                                            "name": "Y"
+                                          },
+                                          "operator": "-",
+                                          "right": {
+                                            "type": "BinaryExpression",
+                                            "left": {
+                                              "type": "Literal",
+                                              "value": 19
+                                            },
+                                            "operator": "*",
+                                            "right": {
+                                              "type": "CallExpression",
+                                              "callee": {
+                                                "type": "MemberExpression",
+                                                "object": {
+                                                  "type": "Identifier",
+                                                  "name": "Math"
+                                                },
+                                                "property": {
+                                                  "type": "Identifier",
+                                                  "name": "floor"
+                                                },
+                                                "computed": false
+                                              },
+                                              "arguments": [
+                                                {
+                                                  "type": "BinaryExpression",
+                                                  "left": {
+                                                    "type": "Identifier",
+                                                    "name": "Y"
+                                                  },
+                                                  "operator": "/",
+                                                  "right": {
+                                                    "type": "Literal",
+                                                    "value": 19
+                                                  }
+                                                }
+                                              ]
+                                            }
+                                          }
+                                        }
+                                      }
+                                    ],
+                                    "kind": "var"
+                                  },
+                                  {
+                                    "type": "VariableDeclaration",
+                                    "declarations": [
+                                      {
+                                        "type": "VariableDeclarator",
+                                        "id": {
+                                          "type": "Identifier",
+                                          "name": "K"
+                                        },
+                                        "init": {
+                                          "type": "CallExpression",
+                                          "callee": {
+                                            "type": "MemberExpression",
+                                            "object": {
+                                              "type": "Identifier",
+                                              "name": "Math"
+                                            },
+                                            "property": {
+                                              "type": "Identifier",
+                                              "name": "floor"
+                                            },
+                                            "computed": false
+                                          },
+                                          "arguments": [
+                                            {
+                                              "type": "BinaryExpression",
+                                              "left": {
+                                                "type": "BinaryExpression",
+                                                "left": {
+                                                  "type": "Identifier",
+                                                  "name": "C"
+                                                },
+                                                "operator": "-",
+                                                "right": {
+                                                  "type": "Literal",
+                                                  "value": 17
+                                                }
+                                              },
+                                              "operator": "/",
+                                              "right": {
+                                                "type": "Literal",
+                                                "value": 25
+                                              }
+                                            }
+                                          ]
+                                        }
+                                      }
+                                    ],
+                                    "kind": "var"
+                                  },
+                                  {
+                                    "type": "VariableDeclaration",
+                                    "declarations": [
+                                      {
+                                        "type": "VariableDeclarator",
+                                        "id": {
+                                          "type": "Identifier",
+                                          "name": "I"
+                                        },
+                                        "init": {
+                                          "type": "BinaryExpression",
+                                          "left": {
+                                            "type": "BinaryExpression",
+                                            "left": {
+                                              "type": "BinaryExpression",
+                                              "left": {
+                                                "type": "BinaryExpression",
+                                                "left": {
+                                                  "type": "Identifier",
+                                                  "name": "C"
+                                                },
+                                                "operator": "-",
+                                                "right": {
+                                                  "type": "CallExpression",
+                                                  "callee": {
+                                                    "type": "MemberExpression",
+                                                    "object": {
+                                                      "type": "Identifier",
+                                                      "name": "Math"
+                                                    },
+                                                    "property": {
+                                                      "type": "Identifier",
+                                                      "name": "floor"
+                                                    },
+                                                    "computed": false
+                                                  },
+                                                  "arguments": [
+                                                    {
+                                                      "type": "BinaryExpression",
+                                                      "left": {
+                                                        "type": "Identifier",
+                                                        "name": "C"
+                                                      },
+                                                      "operator": "/",
+                                                      "right": {
+                                                        "type": "Literal",
+                                                        "value": 4
+                                                      }
+                                                    }
+                                                  ]
+                                                }
+                                              },
+                                              "operator": "-",
+                                              "right": {
+                                                "type": "CallExpression",
+                                                "callee": {
+                                                  "type": "MemberExpression",
+                                                  "object": {
+                                                    "type": "Identifier",
+                                                    "name": "Math"
+                                                  },
+                                                  "property": {
+                                                    "type": "Identifier",
+                                                    "name": "floor"
+                                                  },
+                                                  "computed": false
+                                                },
+                                                "arguments": [
+                                                  {
+                                                    "type": "BinaryExpression",
+                                                    "left": {
+                                                      "type": "BinaryExpression",
+                                                      "left": {
+                                                        "type": "Identifier",
+                                                        "name": "C"
+                                                      },
+                                                      "operator": "-",
+                                                      "right": {
+                                                        "type": "Identifier",
+                                                        "name": "K"
+                                                      }
+                                                    },
+                                                    "operator": "/",
+                                                    "right": {
+                                                      "type": "Literal",
+                                                      "value": 3
+                                                    }
+                                                  }
+                                                ]
+                                              }
+                                            },
+                                            "operator": "+",
+                                            "right": {
+                                              "type": "BinaryExpression",
+                                              "left": {
+                                                "type": "Literal",
+                                                "value": 19
+                                              },
+                                              "operator": "*",
+                                              "right": {
+                                                "type": "Identifier",
+                                                "name": "N"
+                                              }
+                                            }
+                                          },
+                                          "operator": "+",
+                                          "right": {
+                                            "type": "Literal",
+                                            "value": 15
+                                          }
+                                        }
+                                      }
+                                    ],
+                                    "kind": "var"
+                                  },
+                                  {
+                                    "type": "ExpressionStatement",
+                                    "expression": {
+                                      "type": "AssignmentExpression",
+                                      "operator": "=",
+                                      "left": {
+                                        "type": "Identifier",
+                                        "name": "I"
+                                      },
+                                      "right": {
+                                        "type": "BinaryExpression",
+                                        "left": {
+                                          "type": "Identifier",
+                                          "name": "I"
+                                        },
+                                        "operator": "-",
+                                        "right": {
+                                          "type": "BinaryExpression",
+                                          "left": {
+                                            "type": "Literal",
+                                            "value": 30
+                                          },
+                                          "operator": "*",
+                                          "right": {
+                                            "type": "CallExpression",
+                                            "callee": {
+                                              "type": "MemberExpression",
+                                              "object": {
+                                                "type": "Identifier",
+                                                "name": "Math"
+                                              },
+                                              "property": {
+                                                "type": "Identifier",
+                                                "name": "floor"
+                                              },
+                                              "computed": false
+                                            },
+                                            "arguments": [
+                                              {
+                                                "type": "BinaryExpression",
+                                                "left": {
+                                                  "type": "Identifier",
+                                                  "name": "I"
+                                                },
+                                                "operator": "/",
+                                                "right": {
+                                                  "type": "Literal",
+                                                  "value": 30
+                                                }
+                                              }
+                                            ]
+                                          }
+                                        }
+                                      }
+                                    }
+                                  },
+                                  {
+                                    "type": "ExpressionStatement",
+                                    "expression": {
+                                      "type": "AssignmentExpression",
+                                      "operator": "=",
+                                      "left": {
+                                        "type": "Identifier",
+                                        "name": "I"
+                                      },
+                                      "right": {
+                                        "type": "BinaryExpression",
+                                        "left": {
+                                          "type": "Identifier",
+                                          "name": "I"
+                                        },
+                                        "operator": "-",
+                                        "right": {
+                                          "type": "BinaryExpression",
+                                          "left": {
+                                            "type": "CallExpression",
+                                            "callee": {
+                                              "type": "MemberExpression",
+                                              "object": {
+                                                "type": "Identifier",
+                                                "name": "Math"
+                                              },
+                                              "property": {
+                                                "type": "Identifier",
+                                                "name": "floor"
+                                              },
+                                              "computed": false
+                                            },
+                                            "arguments": [
+                                              {
+                                                "type": "BinaryExpression",
+                                                "left": {
+                                                  "type": "Identifier",
+                                                  "name": "I"
+                                                },
+                                                "operator": "/",
+                                                "right": {
+                                                  "type": "Literal",
+                                                  "value": 28
+                                                }
+                                              }
+                                            ]
+                                          },
+                                          "operator": "*",
+                                          "right": {
+                                            "type": "BinaryExpression",
+                                            "left": {
+                                              "type": "Literal",
+                                              "value": 1
+                                            },
+                                            "operator": "-",
+                                            "right": {
+                                              "type": "BinaryExpression",
+                                              "left": {
+                                                "type": "BinaryExpression",
+                                                "left": {
+                                                  "type": "CallExpression",
+                                                  "callee": {
+                                                    "type": "MemberExpression",
+                                                    "object": {
+                                                      "type": "Identifier",
+                                                      "name": "Math"
+                                                    },
+                                                    "property": {
+                                                      "type": "Identifier",
+                                                      "name": "floor"
+                                                    },
+                                                    "computed": false
+                                                  },
+                                                  "arguments": [
+                                                    {
+                                                      "type": "BinaryExpression",
+                                                      "left": {
+                                                        "type": "Identifier",
+                                                        "name": "I"
+                                                      },
+                                                      "operator": "/",
+                                                      "right": {
+                                                        "type": "Literal",
+                                                        "value": 28
+                                                      }
+                                                    }
+                                                  ]
+                                                },
+                                                "operator": "*",
+                                                "right": {
+                                                  "type": "CallExpression",
+                                                  "callee": {
+                                                    "type": "MemberExpression",
+                                                    "object": {
+                                                      "type": "Identifier",
+                                                      "name": "Math"
+                                                    },
+                                                    "property": {
+                                                      "type": "Identifier",
+                                                      "name": "floor"
+                                                    },
+                                                    "computed": false
+                                                  },
+                                                  "arguments": [
+                                                    {
+                                                      "type": "BinaryExpression",
+                                                      "left": {
+                                                        "type": "Literal",
+                                                        "value": 29
+                                                      },
+                                                      "operator": "/",
+                                                      "right": {
+                                                        "type": "BinaryExpression",
+                                                        "left": {
+                                                          "type": "Identifier",
+                                                          "name": "I"
+                                                        },
+                                                        "operator": "+",
+                                                        "right": {
+                                                          "type": "Literal",
+                                                          "value": 1
+                                                        }
+                                                      }
+                                                    }
+                                                  ]
+                                                }
+                                              },
+                                              "operator": "*",
+                                              "right": {
+                                                "type": "CallExpression",
+                                                "callee": {
+                                                  "type": "MemberExpression",
+                                                  "object": {
+                                                    "type": "Identifier",
+                                                    "name": "Math"
+                                                  },
+                                                  "property": {
+                                                    "type": "Identifier",
+                                                    "name": "floor"
+                                                  },
+                                                  "computed": false
+                                                },
+                                                "arguments": [
+                                                  {
+                                                    "type": "BinaryExpression",
+                                                    "left": {
+                                                      "type": "BinaryExpression",
+                                                      "left": {
+                                                        "type": "Literal",
+                                                        "value": 21
+                                                      },
+                                                      "operator": "-",
+                                                      "right": {
+                                                        "type": "Identifier",
+                                                        "name": "N"
+                                                      }
+                                                    },
+                                                    "operator": "/",
+                                                    "right": {
+                                                      "type": "Literal",
+                                                      "value": 11
+                                                    }
+                                                  }
+                                                ]
+                                              }
+                                            }
+                                          }
+                                        }
+                                      }
+                                    }
+                                  },
+                                  {
+                                    "type": "VariableDeclaration",
+                                    "declarations": [
+                                      {
+                                        "type": "VariableDeclarator",
+                                        "id": {
+                                          "type": "Identifier",
+                                          "name": "J"
+                                        },
+                                        "init": {
+                                          "type": "BinaryExpression",
+                                          "left": {
+                                            "type": "BinaryExpression",
+                                            "left": {
+                                              "type": "BinaryExpression",
+                                              "left": {
+                                                "type": "BinaryExpression",
+                                                "left": {
+                                                  "type": "BinaryExpression",
+                                                  "left": {
+                                                    "type": "Identifier",
+                                                    "name": "Y"
+                                                  },
+                                                  "operator": "+",
+                                                  "right": {
+                                                    "type": "CallExpression",
+                                                    "callee": {
+                                                      "type": "MemberExpression",
+                                                      "object": {
+                                                        "type": "Identifier",
+                                                        "name": "Math"
+                                                      },
+                                                      "property": {
+                                                        "type": "Identifier",
+                                                        "name": "floor"
+                                                      },
+                                                      "computed": false
+                                                    },
+                                                    "arguments": [
+                                                      {
+                                                        "type": "BinaryExpression",
+                                                        "left": {
+                                                          "type": "Identifier",
+                                                          "name": "Y"
+                                                        },
+                                                        "operator": "/",
+                                                        "right": {
+                                                          "type": "Literal",
+                                                          "value": 4
+                                                        }
+                                                      }
+                                                    ]
+                                                  }
+                                                },
+                                                "operator": "+",
+                                                "right": {
+                                                  "type": "Identifier",
+                                                  "name": "I"
+                                                }
+                                              },
+                                              "operator": "+",
+                                              "right": {
+                                                "type": "Literal",
+                                                "value": 2
+                                              }
+                                            },
+                                            "operator": "-",
+                                            "right": {
+                                              "type": "Identifier",
+                                              "name": "C"
+                                            }
+                                          },
+                                          "operator": "+",
+                                          "right": {
+                                            "type": "CallExpression",
+                                            "callee": {
+                                              "type": "MemberExpression",
+                                              "object": {
+                                                "type": "Identifier",
+                                                "name": "Math"
+                                              },
+                                              "property": {
+                                                "type": "Identifier",
+                                                "name": "floor"
+                                              },
+                                              "computed": false
+                                            },
+                                            "arguments": [
+                                              {
+                                                "type": "BinaryExpression",
+                                                "left": {
+                                                  "type": "Identifier",
+                                                  "name": "C"
+                                                },
+                                                "operator": "/",
+                                                "right": {
+                                                  "type": "Literal",
+                                                  "value": 4
+                                                }
+                                              }
+                                            ]
+                                          }
+                                        }
+                                      }
+                                    ],
+                                    "kind": "var"
+                                  },
+                                  {
+                                    "type": "ExpressionStatement",
+                                    "expression": {
+                                      "type": "AssignmentExpression",
+                                      "operator": "=",
+                                      "left": {
+                                        "type": "Identifier",
+                                        "name": "J"
+                                      },
+                                      "right": {
+                                        "type": "BinaryExpression",
+                                        "left": {
+                                          "type": "Identifier",
+                                          "name": "J"
+                                        },
+                                        "operator": "-",
+                                        "right": {
+                                          "type": "BinaryExpression",
+                                          "left": {
+                                            "type": "Literal",
+                                            "value": 7
+                                          },
+                                          "operator": "*",
+                                          "right": {
+                                            "type": "CallExpression",
+                                            "callee": {
+                                              "type": "MemberExpression",
+                                              "object": {
+                                                "type": "Identifier",
+                                                "name": "Math"
+                                              },
+                                              "property": {
+                                                "type": "Identifier",
+                                                "name": "floor"
+                                              },
+                                              "computed": false
+                                            },
+                                            "arguments": [
+                                              {
+                                                "type": "BinaryExpression",
+                                                "left": {
+                                                  "type": "Identifier",
+                                                  "name": "J"
+                                                },
+                                                "operator": "/",
+                                                "right": {
+                                                  "type": "Literal",
+                                                  "value": 7
+                                                }
+                                              }
+                                            ]
+                                          }
+                                        }
+                                      }
+                                    }
+                                  },
+                                  {
+                                    "type": "VariableDeclaration",
+                                    "declarations": [
+                                      {
+                                        "type": "VariableDeclarator",
+                                        "id": {
+                                          "type": "Identifier",
+                                          "name": "L"
+                                        },
+                                        "init": {
+                                          "type": "BinaryExpression",
+                                          "left": {
+                                            "type": "Identifier",
+                                            "name": "I"
+                                          },
+                                          "operator": "-",
+                                          "right": {
+                                            "type": "Identifier",
+                                            "name": "J"
+                                          }
+                                        }
+                                      }
+                                    ],
+                                    "kind": "var"
+                                  },
+                                  {
+                                    "type": "VariableDeclaration",
+                                    "declarations": [
+                                      {
+                                        "type": "VariableDeclarator",
+                                        "id": {
+                                          "type": "Identifier",
+                                          "name": "M"
+                                        },
+                                        "init": {
+                                          "type": "BinaryExpression",
+                                          "left": {
+                                            "type": "Literal",
+                                            "value": 3
+                                          },
+                                          "operator": "+",
+                                          "right": {
+                                            "type": "CallExpression",
+                                            "callee": {
+                                              "type": "MemberExpression",
+                                              "object": {
+                                                "type": "Identifier",
+                                                "name": "Math"
+                                              },
+                                              "property": {
+                                                "type": "Identifier",
+                                                "name": "floor"
+                                              },
+                                              "computed": false
+                                            },
+                                            "arguments": [
+                                              {
+                                                "type": "BinaryExpression",
+                                                "left": {
+                                                  "type": "BinaryExpression",
+                                                  "left": {
+                                                    "type": "Identifier",
+                                                    "name": "L"
+                                                  },
+                                                  "operator": "+",
+                                                  "right": {
+                                                    "type": "Literal",
+                                                    "value": 40
+                                                  }
+                                                },
+                                                "operator": "/",
+                                                "right": {
+                                                  "type": "Literal",
+                                                  "value": 44
+                                                }
+                                              }
+                                            ]
+                                          }
+                                        }
+                                      }
+                                    ],
+                                    "kind": "var"
+                                  },
+                                  {
+                                    "type": "VariableDeclaration",
+                                    "declarations": [
+                                      {
+                                        "type": "VariableDeclarator",
+                                        "id": {
+                                          "type": "Identifier",
+                                          "name": "D"
+                                        },
+                                        "init": {
+                                          "type": "BinaryExpression",
+                                          "left": {
+                                            "type": "BinaryExpression",
+                                            "left": {
+                                              "type": "Identifier",
+                                              "name": "L"
+                                            },
+                                            "operator": "+",
+                                            "right": {
+                                              "type": "Literal",
+                                              "value": 28
+                                            }
+                                          },
+                                          "operator": "-",
+                                          "right": {
+                                            "type": "BinaryExpression",
+                                            "left": {
+                                              "type": "Literal",
+                                              "value": 31
+                                            },
+                                            "operator": "*",
+                                            "right": {
+                                              "type": "CallExpression",
+                                              "callee": {
+                                                "type": "MemberExpression",
+                                                "object": {
+                                                  "type": "Identifier",
+                                                  "name": "Math"
+                                                },
+                                                "property": {
+                                                  "type": "Identifier",
+                                                  "name": "floor"
+                                                },
+                                                "computed": false
+                                              },
+                                              "arguments": [
+                                                {
+                                                  "type": "BinaryExpression",
+                                                  "left": {
+                                                    "type": "Identifier",
+                                                    "name": "M"
+                                                  },
+                                                  "operator": "/",
+                                                  "right": {
+                                                    "type": "Literal",
+                                                    "value": 4
+                                                  }
+                                                }
+                                              ]
+                                            }
+                                          }
+                                        }
+                                      }
+                                    ],
+                                    "kind": "var"
+                                  },
+                                  {
+                                    "type": "ReturnStatement",
+                                    "argument": {
+                                      "type": "NewExpression",
+                                      "callee": {
+                                        "type": "Identifier",
+                                        "name": "Date"
+                                      },
+                                      "arguments": [
+                                        {
+                                          "type": "Identifier",
+                                          "name": "Y"
+                                        },
+                                        {
+                                          "type": "BinaryExpression",
+                                          "left": {
+                                            "type": "Identifier",
+                                            "name": "M"
+                                          },
+                                          "operator": "-",
+                                          "right": {
+                                            "type": "Literal",
+                                            "value": 1
+                                          }
+                                        },
+                                        {
+                                          "type": "Identifier",
+                                          "name": "D"
+                                        }
+                                      ]
+                                    }
+                                  }
+                                ]
+                              },
+                              "expression": false
+                            },
+                            "arguments": [
+                              {
+                                "type": "Identifier",
+                                "name": "year"
+                              }
+                            ]
+                          }
+                        }
+                      ],
+                      "kind": "var"
+                    },
+                    {
+                      "type": "ExpressionStatement",
+                      "expression": {
+                        "type": "AssignmentExpression",
+                        "operator": "=",
+                        "left": {
+                          "type": "Identifier",
+                          "name": "easterDay"
+                        },
+                        "right": {
+                          "type": "CallExpression",
+                          "callee": {
+                            "type": "MemberExpression",
+                            "object": {
+                              "type": "Identifier",
+                              "name": "Math"
+                            },
+                            "property": {
+                              "type": "Identifier",
+                              "name": "floor"
+                            },
+                            "computed": false
+                          },
+                          "arguments": [
+                            {
+                              "type": "BinaryExpression",
+                              "left": {
+                                "type": "BinaryExpression",
+                                "left": {
+                                  "type": "Identifier",
+                                  "name": "easterDay"
+                                },
+                                "operator": "-",
+                                "right": {
+                                  "type": "NewExpression",
+                                  "callee": {
+                                    "type": "Identifier",
+                                    "name": "Date"
+                                  },
+                                  "arguments": [
+                                    {
+                                      "type": "CallExpression",
+                                      "callee": {
+                                        "type": "MemberExpression",
+                                        "object": {
+                                          "type": "Identifier",
+                                          "name": "easterDay"
+                                        },
+                                        "property": {
+                                          "type": "Identifier",
+                                          "name": "getFullYear"
+                                        },
+                                        "computed": false
+                                      },
+                                      "arguments": []
+                                    },
+                                    {
+                                      "type": "Literal",
+                                      "value": 0
+                                    },
+                                    {
+                                      "type": "Literal",
+                                      "value": 0
+                                    }
+                                  ]
+                                }
+                              },
+                              "operator": "/",
+                              "right": {
+                                "type": "BinaryExpression",
+                                "left": {
+                                  "type": "BinaryExpression",
+                                  "left": {
+                                    "type": "BinaryExpression",
+                                    "left": {
+                                      "type": "Literal",
+                                      "value": 1000
+                                    },
+                                    "operator": "*",
+                                    "right": {
+                                      "type": "Literal",
+                                      "value": 60
+                                    }
+                                  },
+                                  "operator": "*",
+                                  "right": {
+                                    "type": "Literal",
+                                    "value": 60
+                                  }
+                                },
+                                "operator": "*",
+                                "right": {
+                                  "type": "Literal",
+                                  "value": 24
+                                }
+                              }
+                            }
+                          ]
+                        }
+                      }
+                    },
+                    {
+                      "type": "IfStatement",
+                      "test": {
+                        "type": "LogicalExpression",
+                        "left": {
+                          "type": "BinaryExpression",
+                          "left": {
+                            "type": "Identifier",
+                            "name": "day"
+                          },
+                          "operator": ">=",
+                          "right": {
+                            "type": "BinaryExpression",
+                            "left": {
+                              "type": "Identifier",
+                              "name": "easterDay"
+                            },
+                            "operator": "-",
+                            "right": {
+                              "type": "Literal",
+                              "value": 7
+                            }
+                          }
+                        },
+                        "operator": "&&",
+                        "right": {
+                          "type": "BinaryExpression",
+                          "left": {
+                            "type": "Identifier",
+                            "name": "day"
+                          },
+                          "operator": "<=",
+                          "right": {
+                            "type": "Identifier",
+                            "name": "easterDay"
+                          }
+                        }
+                      },
+                      "consequent": {
+                        "type": "ExpressionStatement",
+                        "expression": {
+                          "type": "AssignmentExpression",
+                          "operator": "=",
+                          "left": {
+                            "type": "MemberExpression",
+                            "object": {
+                              "type": "Identifier",
+                              "name": "Game"
+                            },
+                            "property": {
+                              "type": "Identifier",
+                              "name": "baseSeason"
+                            },
+                            "computed": false
+                          },
+                          "right": {
+                            "type": "Literal",
+                            "value": "easter"
+                          }
+                        }
+                      },
+                      "alternate": null
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        }
+      ],
+      "sourceType": "script"
+    }
+  },
+  "extractedFormulas": [
+    {
+      "name": "century",
+      "nativeText": "Math.floor(Y/100)",
+      "sourceSha256": "90e71a84da6dc146bce74de63b88d2822bf3808a50026bd34b3083e3638e16d5",
+      "integerFormula": "(y / 100)"
+    },
+    {
+      "name": "goldenNumber",
+      "nativeText": "Y - 19*Math.floor(Y/19)",
+      "sourceSha256": "dccf9fa1e3e878c6d897ba9561592b07ddafa14d6eb4f256bf761ac8e9ac649f",
+      "integerFormula": "(y - (19 * (y / 19)))"
+    },
+    {
+      "name": "centuryCorrection",
+      "nativeText": "Math.floor((C - 17)/25)",
+      "sourceSha256": "8aa32c0a03fec248c4e0ed624f72e6821c38d1e0f32048e2b8ed2319b94ff443",
+      "integerFormula": "(((century y) - 17) / 25)"
+    },
+    {
+      "name": "rawEpact",
+      "nativeText": "C - Math.floor(C/4) - Math.floor((C - K)/3) + 19*N + 15",
+      "sourceSha256": "f34bf16211120f1d151654bca04984f151eedecfef99282ab3580ce3947747a6",
+      "integerFormula": "(((((century y) - ((century y) / 4)) - (((century y) - (centuryCorrection y)) / 3)) + (19 * (goldenNumber y))) + 15)"
+    },
+    {
+      "name": "epact0",
+      "nativeText": "I - 30*Math.floor((I/30))",
+      "sourceSha256": "4896de235d30551364bebb19d1d20274ad80b44b31b595189f8bcb9ddc1bfdaa",
+      "integerFormula": "((rawEpact y) - (30 * ((rawEpact y) / 30)))"
+    },
+    {
+      "name": "correctEpact",
+      "nativeText": "I - Math.floor(I/28)*(1 - Math.floor(I/28)*Math.floor(29/(I + 1))*Math.floor((21 - N)/11))",
+      "sourceSha256": "ccd7fd52d4888f5a2b140d9a259b8f9ed1f10d7559284afa1ef9745b3bed4a29",
+      "integerFormula": "(i - ((i / 28) * (1 - (((i / 28) * (29 / (i + 1))) * ((21 - n) / 11)))))"
+    },
+    {
+      "name": "rawWeekday",
+      "nativeText": "Y + Math.floor(Y/4) + I + 2 - C + Math.floor(C/4)",
+      "sourceSha256": "0d1749e86087ad399f520b852041fa8ebe3acd8836f8eec245592b2a713ff57c",
+      "integerFormula": "(((((y + (y / 4)) + (epact y)) + 2) - (century y)) + ((century y) / 4))"
+    },
+    {
+      "name": "easterWeekday",
+      "nativeText": "J - 7*Math.floor(J/7)",
+      "sourceSha256": "ff562e3e6151dfe7735ed2f975b3f761d970a48f4f948b8904ca04a42a18985d",
+      "integerFormula": "((rawWeekday y) - (7 * ((rawWeekday y) / 7)))"
+    },
+    {
+      "name": "easterOffset",
+      "nativeText": "I - J",
+      "sourceSha256": "2bc338dafcfaf33691e18ef83787657545e36f5f4c6bb774213b2d3077fa0d10",
+      "integerFormula": "((epact y) - (easterWeekday y))"
+    },
+    {
+      "name": "easterMonth",
+      "nativeText": "3 + Math.floor((L + 40)/44)",
+      "sourceSha256": "e35708bfa129e4f32398b364fe52e19d622dc55a21c14562fd0b67a005ae1780",
+      "integerFormula": "(3 + (((easterOffset y) + 40) / 44))"
+    },
+    {
+      "name": "easterMonthDay",
+      "nativeText": "L + 28 - 31*Math.floor(M/4)",
+      "sourceSha256": "b9a398e4cfbb5232d02496d383574efcf72440ab3942828677ee370d20146754",
+      "integerFormula": "(((easterOffset y) + 28) - (31 * ((easterMonth y) / 4)))"
+    }
+  ],
+  "guards": [
+    {
+      "season": "valentines",
+      "condition": "((day ≥ 41) ∧ (day ≤ 46))"
+    },
+    {
+      "season": "fools",
+      "condition": "(((day + (leap y)) ≥ 90) ∧ (day ≤ (92 + (leap y))))"
+    },
+    {
+      "season": "halloween",
+      "condition": "((day ≥ ((304 - 7) + (leap y))) ∧ (day ≤ (304 + (leap y))))"
+    },
+    {
+      "season": "christmas",
+      "condition": "((day ≥ (349 + (leap y))) ∧ (day ≤ (365 + (leap y))))"
+    },
+    {
+      "season": "easter",
+      "condition": "((day ≥ ((easterOrdinal y) - 7)) ∧ (day ≤ (easterOrdinal y)))"
+    }
+  ],
+  "seasonWriters": [
+    {
+      "name": "reset",
+      "startLine": 3520,
+      "sourceSha256": "57b15a928de4ce8255932116c4f006120454d399dae82f736dde2a7cd2196c82",
+      "text": "Game.seasonT=0;\r\n\t\t\tGame.seasonUses=0;\r\n\t\t\tGame.season=Game.baseSeason;"
+    },
+    {
+      "name": "load",
+      "startLine": 3029,
+      "sourceSha256": "ddd9b6a89e4bea64d06f583bac950b43320178e1046fdea881681803904c9cce",
+      "text": "Game.seasonT=spl[20]?parseInt(spl[20]):0;\r\n\t\t\t\t\t\tGame.seasonUses=spl[21]?parseInt(spl[21]):0;\r\n\t\t\t\t\t\tGame.season=spl[22]?spl[22]:Game.baseSeason;"
+    },
+    {
+      "name": "offline",
+      "startLine": 3256,
+      "sourceSha256": "01829dcd02229bb8cd3b807e8c9db3d9707c2114d8eed068651f0e9ebae2b969",
+      "text": "if (Game.seasonT>0) Game.seasonT=Math.max(Game.seasonT-framesElapsed,1);"
+    },
+    {
+      "name": "duration",
+      "startLine": 12500,
+      "sourceSha256": "26d5833b3175a2ff0287869a08516e3bb7e2f6cc303d34947ec7103b6fe63762",
+      "text": "Game.getSeasonDuration=function(){return Game.fps*60*60*24;}"
+    },
+    {
+      "name": "expiration",
+      "startLine": 16242,
+      "sourceSha256": "8e5296c6c69c337f055306a909f2c8bfabb1d32bf3e3d0a836221684483df79b",
+      "text": "if (Game.seasonT>0)\r\n\t\t\t{\r\n\t\t\t\tGame.seasonT--;\r\n\t\t\t}\r\n\t\t\tif (Game.seasonT<=0 && Game.season!='' && Game.season!=Game.baseSeason && !Game.Has('Eternal seasons'))\r\n\t\t\t{\r\n\t\t\t\tGame.Notify(Game.seasons[Game.season].over,'',Game.seasons[Game.season].triggerUpgrade.icon);\r\n\t\t\t\tif (Game.Has('Season switcher')) {Game.Unlock(Game.seasons[Game.season].trigger);Game.seasons[Game.season].triggerUpgrade.bought=0;}\r\n\t\t\t\tGame.season=Game.baseSeason;\r\n\t\t\t\tGame.seasonT=-1;\r\n\t\t\t}"
+    }
+  ],
+  "generatedLeanSha256": "efcb037ab4d27ac3fdc64f3198cccd3dbe641cbb993ccdbc837e66d148b41baa",
+  "provedScope": "Universal integer guard recurrence with actual extended UTC year decoder; no native Number/Date/source-callback refinement asserted",
+  "calendarMillisecondsPerDay": 86400000,
+  "recurrenceBoundDays": 733,
+  "dailyScheduleDependsOnSeedOrOutcomes": false
+}

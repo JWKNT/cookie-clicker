@@ -1,0 +1,88 @@
+{
+  "schema_version": 2,
+  "contract_version": "1.0.0",
+  "updated": "2026-10-30",
+  "status": "executable completion predicate; full-game optimality unproved",
+  "objective": {
+    "initial_state": "new save",
+    "criterion": "minimize expected elapsed time to completion",
+    "formula": "inf_policy E[inf {t >= 0 : complete(state_t, history_t)}]",
+    "certified_optimal_policy_available": false
+  },
+  "user_confirmed_scope": {
+    "normal_achievements": "required",
+    "upgrades": "required",
+    "unlocks": "required",
+    "shadow_achievements": "excluded",
+    "sugar_time_gates": "The user authorized narrow long-sugar exceptions. The named profile is the audit interpretation of that instruction, not an individually approved list.",
+    "other_calendar_requirements": "No blanket calendar exclusion.",
+    "save_reload_retries": "forbidden",
+    "native_ui_random_outcome_manipulation": "forbidden",
+    "timing_chosen_to_change_seeded_outcomes": "forbidden, including harvest timestamps selected using the publicly exported seed",
+    "scheduled_maintenance_reloads": "allowed, preserving native current-save and reload effects; stale restoration remains forbidden",
+    "native_current_save_export_inspection": "allowed, including decoding the visible current save and startup seed; no import, editing, rollback, or retry"
+  },
+  "authoritative_artifacts": {
+    "profile": "../model/completion-profile.json",
+    "runtime_catalogue": "../model/catalogue.json",
+    "generated_requirements": "../model/completion-requirements.json",
+    "predicate": "../model/completion.mjs",
+    "runtime_adapter": "../model/runtime.mjs",
+    "formalization": "../lean/README.md",
+    "model_boundary": "../model/README.md"
+  },
+  "game": {
+    "title": "Cookie Clicker",
+    "version": "2.053",
+    "platform": "steam",
+    "source_files": {
+      "main.js": "a8813ec2ee97edf5ebff6a3ce2037dcb65c08abd13c123bb92efda89b06ef4f7",
+      "minigameGarden.js": "184eacacd9325d493412dcda07f63d3a791939f83889b4349b6099d04be8e6c9",
+      "minigameMarket.js": "78538743673f3c1cd0e870a3695c77dcacd63febbe64b88f8a8fab9ea7e2863f",
+      "minigameGrimoire.js": "9efea1feb898dc9b719dd971bd27a71f083a8855b910013c524aea9b6d2a349d",
+      "minigamePantheon.js": "af08c31c4564d445cc2d1a7d101c4a63b57aa9b89991b93b8a65f4c0427573a0",
+      "base64.js": "875839c3e0c174c9358ce96923adfed6a6d2c090187a32deb35152dfac2c0e47",
+      "loc/EN.js": "ce48272a5fd5ab1f309dbb8fd7bd70188984ce14235a1d3d9215f3585101f433",
+      "index.html": "28488d9aef9bf31c4c023a0af01f0500a3b3e462b79bf7f2b09790025927a969"
+    }
+  },
+  "counts": {
+    "required_normal_achievements": 598,
+    "individually_excluded_sugar_achievements": 24,
+    "required_current_upgrades": 845,
+    "required_toggle_access": 17,
+    "required_garden_seeds": 34,
+    "minimum_normal_achievements_for_all_milk_unlocks": 600
+  },
+  "acquisition_semantics": {
+    "achievements": "persistent won flags",
+    "ordinary_and_heavenly_upgrades": "currently bought",
+    "toggles": "currently unlocked or bought, or evidenced earlier access under the same game version and edition",
+    "garden_seeds": "currently unlocked, including rebuilding after required sacrifice",
+    "other_unlocks": "current finite progression thresholds",
+    "terminal_run": "normal mode, no ascension or reincarnation transition",
+    "unbounded_counts": "No maximum building amount, level, stock holding, or broker count is required solely because the quantity can grow."
+  },
+  "remaining_proof_obligations": [
+    "Complete and audit every legal action, including UI interactions and the environmental assumptions.",
+    "Specify the exact probability law and observation model, including source-seeded PRNG operations.",
+    "Prove that the installed JavaScript transitions, numeric operations, timers and adapter refine the Lean model.",
+    "Construct a legal policy that reaches the full terminal set from a new save, and determine its expected elapsed time.",
+    "Construct a matching lower bound against every admissible policy, including unbounded waits and non-completing paths.",
+    "Prove time progress and the connection from accumulated action cost to actual completion time.",
+    "Prove that the mod implements the attaining policy."
+  ],
+  "admissible_policy_boundary": {
+    "forbidden": [
+      "save/reload retries",
+      "deliberate native UI manipulation of random outcomes",
+      "timing chosen to change seeded outcomes",
+      "save editing",
+      "clock changes",
+      "future random tape inspection",
+      "hidden generator state inspection"
+    ],
+    "diagnostics": "Synthetic engine fixtures can examine forbidden behavior; they do not count as admissible strategies.",
+    "unresolved": "The IID53 law, native seeded algorithms, unbounded monotone clock, export permission and ban on timing chosen to change seeded outcomes are fixed. The last restriction applies to decision rules, not just observed traces. Complete observation/action semantics and formal transition refinement remain to be proved."
+  }
+}

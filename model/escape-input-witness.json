@@ -1,0 +1,173 @@
+{
+  "result": {
+    "initial": {
+      "focus": true,
+      "activeElement": "BODY"
+    },
+    "beforeRelease": {
+      "key27": 1,
+      "AscendTimer": 1,
+      "lastActivity": 0
+    },
+    "events": [
+      {
+        "type": "keydown",
+        "target": "body",
+        "currentTarget": "BODY",
+        "key": "Escape",
+        "code": "Escape",
+        "keyCode": 27,
+        "charCode": 0,
+        "detail": 0,
+        "location": 0,
+        "repeat": false,
+        "isComposing": false,
+        "isTrusted": true,
+        "bubbles": true,
+        "cancelable": true,
+        "composed": true,
+        "defaultPrevented": false,
+        "viewWindow": true,
+        "sourceCapabilities": {
+          "firesTouchEvents": false
+        },
+        "ctrlKey": false,
+        "altKey": false,
+        "shiftKey": false,
+        "metaKey": false
+      },
+      {
+        "type": "keydown",
+        "target": "body",
+        "currentTarget": "window",
+        "key": "Escape",
+        "code": "Escape",
+        "keyCode": 27,
+        "charCode": 0,
+        "detail": 0,
+        "location": 0,
+        "repeat": false,
+        "isComposing": false,
+        "isTrusted": true,
+        "bubbles": true,
+        "cancelable": true,
+        "composed": true,
+        "defaultPrevented": false,
+        "viewWindow": true,
+        "sourceCapabilities": {
+          "firesTouchEvents": false
+        },
+        "ctrlKey": false,
+        "altKey": false,
+        "shiftKey": false,
+        "metaKey": false
+      },
+      {
+        "type": "keyup",
+        "target": "body",
+        "currentTarget": "BODY",
+        "key": "Escape",
+        "code": "Escape",
+        "keyCode": 27,
+        "charCode": 0,
+        "detail": 0,
+        "location": 0,
+        "repeat": false,
+        "isComposing": false,
+        "isTrusted": true,
+        "bubbles": true,
+        "cancelable": true,
+        "composed": true,
+        "defaultPrevented": false,
+        "viewWindow": true,
+        "sourceCapabilities": {
+          "firesTouchEvents": false
+        },
+        "ctrlKey": false,
+        "altKey": false,
+        "shiftKey": false,
+        "metaKey": false
+      },
+      {
+        "type": "keyup",
+        "target": "body",
+        "currentTarget": "window",
+        "key": "Escape",
+        "code": "Escape",
+        "keyCode": 27,
+        "charCode": 0,
+        "detail": 0,
+        "location": 0,
+        "repeat": false,
+        "isComposing": false,
+        "isTrusted": true,
+        "bubbles": true,
+        "cancelable": true,
+        "composed": true,
+        "defaultPrevented": false,
+        "viewWindow": true,
+        "sourceCapabilities": {
+          "firesTouchEvents": false
+        },
+        "ctrlKey": false,
+        "altKey": false,
+        "shiftKey": false,
+        "metaKey": false
+      }
+    ],
+    "final": {
+      "lastActivity": 1234,
+      "AscendTimer": 150,
+      "key27": 0,
+      "focus": true,
+      "activeElement": "BODY"
+    }
+  },
+  "versions": {
+    "node": "12.18.3",
+    "v8": "8.7.220.31-electron.0",
+    "uv": "1.38.0",
+    "zlib": "1.2.11",
+    "brotli": "1.0.7",
+    "ares": "1.16.0",
+    "modules": "85",
+    "nghttp2": "1.41.0",
+    "napi": "6",
+    "llhttp": "2.0.4",
+    "http_parser": "2.9.3",
+    "openssl": "1.1.1",
+    "icu": "67.1",
+    "unicode": "13.0",
+    "electron": "11.5.0",
+    "chrome": "87.0.4280.141"
+  },
+  "identity": {
+    "binary": "~/Library/Application Support/Steam/steamapps/common/Cookie Clicker/Cookie Clicker.app/Contents/MacOS/Cookie Clicker",
+    "versions": {
+      "node": "12.18.3",
+      "v8": "8.7.220.31-electron.0",
+      "uv": "1.38.0",
+      "zlib": "1.2.11",
+      "brotli": "1.0.7",
+      "ares": "1.16.0",
+      "modules": "85",
+      "nghttp2": "1.41.0",
+      "napi": "6",
+      "llhttp": "2.0.4",
+      "http_parser": "2.9.3",
+      "openssl": "1.1.1",
+      "cldr": "37.0",
+      "icu": "67.1",
+      "tz": "2020f",
+      "unicode": "13.0",
+      "electron": "11.5.0"
+    },
+    "arch": "arm64",
+    "platform": "darwin",
+    "gameEntryPointExecuted": false
+  },
+  "executableHash": "6d8020c65f288d375dd6307dd86a3bcbe2907efe272ee3b859998211ecfd345b",
+  "sourceCallbackSha256": "74df362a465397c1357ce0bae09fa434dd4c0b65643846f3407d42eedd13c761",
+  "keydownCallbackSha256": "92a4e784dabcae6c5ef70a26b1fec3fd9a850e65a66d1eabc120e452452b11f6",
+  "scope": "Isolated native key-down then key-up delivery, with both intact pinned source callbacks and a synthetic Game fixture. The down callback establishes keys[27]=1 before release. This is not a fresh-save reachability or complete OS physical-input refinement."
+}

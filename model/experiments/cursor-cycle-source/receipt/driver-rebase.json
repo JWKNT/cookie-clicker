@@ -1,0 +1,12 @@
+{
+  "sharedDriverSourceSha256": "c1257bc6594265e9f55a1e753a587a8a22e171ce5e336bc53a8723b58ded18d5",
+  "isolatedDriverSourceSha256": "8f68cb5118436e5d5132eb15fd78e16e13d03b8304c1bc69a221d237ed5ceb81",
+  "request": "/tmp/cookie-audit/cursor-cycle-source/cycle-request-load3.json",
+  "requestSha256": "52fb65af37571ac769cdc90d8d3841917250d47f0af4fe4e3c6c3edec906a5aa",
+  "changes": [
+    "Add source-cycle inspector",
+    "Permit only completed normal/value/idle tasks with empty continuation and no active native procedures",
+    "Run inspector only after all prepared setup stages return"
+  ],
+  "sharedFilesModified": false
+}

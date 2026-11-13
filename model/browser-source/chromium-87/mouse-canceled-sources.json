@@ -1,0 +1,32 @@
+[
+  {
+    "path": "html_button_element.h",
+    "url": "https://chromium.googlesource.com/chromium/src/+/refs/tags/87.0.4280.141/third_party/blink/renderer/core/html/forms/html_button_element.h?format=TEXT",
+    "sha256": "825443e1f6e5f9423581180fb3a0736c84fb73246a9666bc19c5cf1fdb358614"
+  },
+  {
+    "path": "html_button_element.cc",
+    "url": "https://chromium.googlesource.com/chromium/src/+/refs/tags/87.0.4280.141/third_party/blink/renderer/core/html/forms/html_button_element.cc?format=TEXT",
+    "sha256": "85e01025b00244e2d88e3889dd99bd37ee825ec7dff6b46b2efad878d666a67e"
+  },
+  {
+    "path": "node.h",
+    "url": "https://chromium.googlesource.com/chromium/src/+/refs/tags/87.0.4280.141/third_party/blink/renderer/core/dom/node.h?format=TEXT",
+    "sha256": "dab2e882bd9b65bde36e7467d592e3471f8c72bfd41e9c4e5357735c22f842bf"
+  },
+  {
+    "path": "node.cc",
+    "url": "https://chromium.googlesource.com/chromium/src/+/refs/tags/87.0.4280.141/third_party/blink/renderer/core/dom/node.cc?format=TEXT",
+    "sha256": "c83c8a9bf23f7505e3152fac88513cfa3a1f702434e851438f444e74b1184e20"
+  },
+  {
+    "path": "html_form_control_element.h",
+    "url": "https://chromium.googlesource.com/chromium/src/+/refs/tags/87.0.4280.141/third_party/blink/renderer/core/html/forms/html_form_control_element.h?format=TEXT",
+    "sha256": "150c96519b8e2a4b3559cedc97088dadc8893964d98f4e71cd846389e11f766d"
+  },
+  {
+    "path": "scroll_anchor.cc",
+    "url": "https://chromium.googlesource.com/chromium/src/+/refs/tags/87.0.4280.141/third_party/blink/renderer/core/layout/scroll_anchor.cc?format=TEXT",
+    "sha256": "41b74c13084027728afe0282db48cec41383ebbea77cf5df8666467e429691db"
+  }
+]

@@ -1,0 +1,665 @@
+{
+  "schemaVersion": 1,
+  "scope": "Garden-callback-cylinder-with-funded-entry-and-clock-jump-premises",
+  "sourceHashes": {
+    "main.js": "a8813ec2ee97edf5ebff6a3ce2037dcb65c08abd13c123bb92efda89b06ef4f7",
+    "minigameGarden.js": "184eacacd9325d493412dcda07f63d3a791939f83889b4349b6099d04be8e6c9",
+    "minigameMarket.js": "78538743673f3c1cd0e870a3695c77dcacd63febbe64b88f8a8fab9ea7e2863f",
+    "minigameGrimoire.js": "9efea1feb898dc9b719dd971bd27a71f083a8855b910013c524aea9b6d2a349d",
+    "minigamePantheon.js": "af08c31c4564d445cc2d1a7d101c4a63b57aa9b89991b93b8a65f4c0427573a0",
+    "base64.js": "875839c3e0c174c9358ce96923adfed6a6d2c090187a32deb35152dfac2c0e47",
+    "loc/EN.js": "ce48272a5fd5ab1f309dbb8fd7bd70188984ce14235a1d3d9215f3585101f433",
+    "index.html": "28488d9aef9bf31c4c023a0af01f0500a3b3e462b79bf7f2b09790025927a969"
+  },
+  "premises": [
+    "Bank/earned=2^90, Farm amount300 and level10 are assigned",
+    "Only Garden logic and gain recomputation run at exact nextStep boundaries; intervening full-game timers are not executed",
+    "The diagnostic draw selector constructs an event; a legal strategy cannot select its random outcomes"
+  ],
+  "open": [
+    "Refine Garden deadline jumps to full-game native waits and bound all intervening draw counts",
+    "Prove uniform resource and maturity/growth invariants at every retry entry",
+    "Kernel-check callback execution and compose the resulting success bound with the full completion route"
+  ],
+  "recovery": {
+    "scope": "native-two-pass-recovery-fixtures",
+    "premises": [
+      "Assign36 age99 meddleweeds; force every possible onKill replacement branch"
+    ],
+    "sourceHashes": {
+      "main.js": "a8813ec2ee97edf5ebff6a3ce2037dcb65c08abd13c123bb92efda89b06ef4f7",
+      "minigameGarden.js": "184eacacd9325d493412dcda07f63d3a791939f83889b4349b6099d04be8e6c9",
+      "minigameMarket.js": "78538743673f3c1cd0e870a3695c77dcacd63febbe64b88f8a8fab9ea7e2863f",
+      "minigameGrimoire.js": "9efea1feb898dc9b719dd971bd27a71f083a8855b910013c524aea9b6d2a349d",
+      "minigamePantheon.js": "af08c31c4564d445cc2d1a7d101c4a63b57aa9b89991b93b8a65f4c0427573a0",
+      "base64.js": "875839c3e0c174c9358ce96923adfed6a6d2c090187a32deb35152dfac2c0e47",
+      "loc/EN.js": "ce48272a5fd5ab1f309dbb8fd7bd70188984ce14235a1d3d9215f3585101f433",
+      "index.html": "28488d9aef9bf31c4c023a0af01f0500a3b3e462b79bf7f2b09790025927a969"
+    },
+    "replacingPlants": [
+      "meddleweed"
+    ],
+    "childCallbacksAbsent": true,
+    "result": [
+      {
+        "replacement": "brownMold",
+        "draws": 72,
+        "harvestCalls": 72,
+        "remainingPlants": 0
+      },
+      {
+        "replacement": "crumbspore",
+        "draws": 72,
+        "harvestCalls": 72,
+        "remainingPlants": 0
+      }
+    ]
+  },
+  "iidEvent": {
+    "drawCount": 171505,
+    "probability": "2^(-9089765)",
+    "outcomes": [
+      "0",
+      "1-2^-53"
+    ]
+  },
+  "rows": [
+    {
+      "log": 1,
+      "target": "meddleweed",
+      "ticks": 6,
+      "draws": 217,
+      "actions": 15,
+      "unlocked": true
+    },
+    {
+      "log": 1,
+      "target": "brownMold",
+      "ticks": 14,
+      "draws": 487,
+      "actions": 17,
+      "unlocked": true
+    },
+    {
+      "log": 1,
+      "target": "crumbspore",
+      "ticks": 27,
+      "draws": 841,
+      "actions": 30,
+      "unlocked": true
+    },
+    {
+      "log": 1,
+      "target": "thumbcorn",
+      "ticks": 10,
+      "draws": 335,
+      "actions": 15,
+      "unlocked": true
+    },
+    {
+      "log": 1,
+      "target": "cronerice",
+      "ticks": 61,
+      "draws": 2068,
+      "actions": 66,
+      "unlocked": true
+    },
+    {
+      "log": 1,
+      "target": "gildmillet",
+      "ticks": 76,
+      "draws": 2577,
+      "actions": 81,
+      "unlocked": true
+    },
+    {
+      "log": 1,
+      "target": "clover",
+      "ticks": 56,
+      "draws": 1897,
+      "actions": 61,
+      "unlocked": true
+    },
+    {
+      "log": 1,
+      "target": "shimmerlily",
+      "ticks": 50,
+      "draws": 1661,
+      "actions": 55,
+      "unlocked": true
+    },
+    {
+      "log": 1,
+      "target": "elderwort",
+      "ticks": 146,
+      "draws": 4578,
+      "actions": 151,
+      "unlocked": true
+    },
+    {
+      "log": 1,
+      "target": "ichorpuff",
+      "ticks": 126,
+      "draws": 3800,
+      "actions": 131,
+      "unlocked": true
+    },
+    {
+      "log": 1,
+      "target": "bakeberry",
+      "ticks": 56,
+      "draws": 1900,
+      "actions": 61,
+      "unlocked": true
+    },
+    {
+      "log": 1,
+      "target": "chocoroot",
+      "ticks": 17,
+      "draws": 583,
+      "actions": 22,
+      "unlocked": true
+    },
+    {
+      "log": 1,
+      "target": "whiteMildew",
+      "ticks": 19,
+      "draws": 710,
+      "actions": 27,
+      "unlocked": true
+    },
+    {
+      "log": 1,
+      "target": "whiteChocoroot",
+      "ticks": 17,
+      "draws": 578,
+      "actions": 22,
+      "unlocked": true
+    },
+    {
+      "log": 1,
+      "target": "whiskerbloom",
+      "ticks": 45,
+      "draws": 1517,
+      "actions": 50,
+      "unlocked": true
+    },
+    {
+      "log": 1,
+      "target": "chimerose",
+      "ticks": 61,
+      "draws": 2047,
+      "actions": 66,
+      "unlocked": true
+    },
+    {
+      "log": 1,
+      "target": "nursetulip",
+      "ticks": 91,
+      "draws": 3035,
+      "actions": 96,
+      "unlocked": true
+    },
+    {
+      "log": 1,
+      "target": "greenRot",
+      "ticks": 42,
+      "draws": 1425,
+      "actions": 47,
+      "unlocked": true
+    },
+    {
+      "log": 1,
+      "target": "keenmoss",
+      "ticks": 27,
+      "draws": 924,
+      "actions": 32,
+      "unlocked": true
+    },
+    {
+      "log": 1,
+      "target": "drowsyfern",
+      "ticks": 48,
+      "draws": 1632,
+      "actions": 53,
+      "unlocked": true
+    },
+    {
+      "log": 1,
+      "target": "wardlichen",
+      "ticks": 69,
+      "draws": 2345,
+      "actions": 74,
+      "unlocked": true
+    },
+    {
+      "log": 1,
+      "target": "queenbeet",
+      "ticks": 131,
+      "draws": 4122,
+      "actions": 136,
+      "unlocked": true
+    },
+    {
+      "log": 1,
+      "target": "queenbeetLump",
+      "ticks": 166,
+      "draws": 4848,
+      "actions": 183,
+      "unlocked": true
+    },
+    {
+      "log": 1,
+      "target": "duketater",
+      "ticks": 176,
+      "draws": 4798,
+      "actions": 181,
+      "unlocked": true
+    },
+    {
+      "log": 1,
+      "target": "doughshroom",
+      "ticks": 108,
+      "draws": 3131,
+      "actions": 113,
+      "unlocked": true
+    },
+    {
+      "log": 1,
+      "target": "glovemorel",
+      "ticks": 50,
+      "draws": 1614,
+      "actions": 55,
+      "unlocked": true
+    },
+    {
+      "log": 1,
+      "target": "cheapcap",
+      "ticks": 30,
+      "draws": 914,
+      "actions": 35,
+      "unlocked": true
+    },
+    {
+      "log": 1,
+      "target": "foolBolete",
+      "ticks": 96,
+      "draws": 2923,
+      "actions": 101,
+      "unlocked": true
+    },
+    {
+      "log": 1,
+      "target": "wrinklegill",
+      "ticks": 88,
+      "draws": 2908,
+      "actions": 93,
+      "unlocked": true
+    },
+    {
+      "log": 1,
+      "target": "shriekbulb",
+      "ticks": 116,
+      "draws": 2983,
+      "actions": 133,
+      "unlocked": true
+    },
+    {
+      "log": 1,
+      "target": "tidygrass",
+      "ticks": 48,
+      "draws": 1624,
+      "actions": 53,
+      "unlocked": true
+    },
+    {
+      "log": 1,
+      "target": "everdaisy",
+      "ticks": 206,
+      "draws": 6257,
+      "actions": 219,
+      "unlocked": true
+    },
+    {
+      "log": 1,
+      "target": "goldenClover",
+      "ticks": 34,
+      "draws": 1149,
+      "actions": 39,
+      "unlocked": true
+    },
+    {
+      "log": 2,
+      "target": "meddleweed",
+      "ticks": 6,
+      "draws": 217,
+      "actions": 15,
+      "unlocked": true
+    },
+    {
+      "log": 2,
+      "target": "brownMold",
+      "ticks": 14,
+      "draws": 487,
+      "actions": 17,
+      "unlocked": true
+    },
+    {
+      "log": 2,
+      "target": "crumbspore",
+      "ticks": 26,
+      "draws": 811,
+      "actions": 29,
+      "unlocked": true
+    },
+    {
+      "log": 2,
+      "target": "thumbcorn",
+      "ticks": 10,
+      "draws": 335,
+      "actions": 15,
+      "unlocked": true
+    },
+    {
+      "log": 2,
+      "target": "cronerice",
+      "ticks": 59,
+      "draws": 2000,
+      "actions": 64,
+      "unlocked": true
+    },
+    {
+      "log": 2,
+      "target": "gildmillet",
+      "ticks": 73,
+      "draws": 2475,
+      "actions": 78,
+      "unlocked": true
+    },
+    {
+      "log": 2,
+      "target": "clover",
+      "ticks": 54,
+      "draws": 1829,
+      "actions": 59,
+      "unlocked": true
+    },
+    {
+      "log": 2,
+      "target": "shimmerlily",
+      "ticks": 49,
+      "draws": 1629,
+      "actions": 54,
+      "unlocked": true
+    },
+    {
+      "log": 2,
+      "target": "elderwort",
+      "ticks": 140,
+      "draws": 4390,
+      "actions": 145,
+      "unlocked": true
+    },
+    {
+      "log": 2,
+      "target": "ichorpuff",
+      "ticks": 121,
+      "draws": 3652,
+      "actions": 126,
+      "unlocked": true
+    },
+    {
+      "log": 2,
+      "target": "bakeberry",
+      "ticks": 54,
+      "draws": 1832,
+      "actions": 59,
+      "unlocked": true
+    },
+    {
+      "log": 2,
+      "target": "chocoroot",
+      "ticks": 16,
+      "draws": 549,
+      "actions": 21,
+      "unlocked": true
+    },
+    {
+      "log": 2,
+      "target": "whiteMildew",
+      "ticks": 19,
+      "draws": 710,
+      "actions": 27,
+      "unlocked": true
+    },
+    {
+      "log": 2,
+      "target": "whiteChocoroot",
+      "ticks": 16,
+      "draws": 546,
+      "actions": 21,
+      "unlocked": true
+    },
+    {
+      "log": 2,
+      "target": "whiskerbloom",
+      "ticks": 44,
+      "draws": 1485,
+      "actions": 49,
+      "unlocked": true
+    },
+    {
+      "log": 2,
+      "target": "chimerose",
+      "ticks": 59,
+      "draws": 1979,
+      "actions": 64,
+      "unlocked": true
+    },
+    {
+      "log": 2,
+      "target": "nursetulip",
+      "ticks": 87,
+      "draws": 2901,
+      "actions": 92,
+      "unlocked": true
+    },
+    {
+      "log": 2,
+      "target": "greenRot",
+      "ticks": 41,
+      "draws": 1391,
+      "actions": 46,
+      "unlocked": true
+    },
+    {
+      "log": 2,
+      "target": "keenmoss",
+      "ticks": 26,
+      "draws": 890,
+      "actions": 31,
+      "unlocked": true
+    },
+    {
+      "log": 2,
+      "target": "drowsyfern",
+      "ticks": 46,
+      "draws": 1566,
+      "actions": 51,
+      "unlocked": true
+    },
+    {
+      "log": 2,
+      "target": "wardlichen",
+      "ticks": 67,
+      "draws": 2277,
+      "actions": 72,
+      "unlocked": true
+    },
+    {
+      "log": 2,
+      "target": "queenbeet",
+      "ticks": 125,
+      "draws": 3936,
+      "actions": 130,
+      "unlocked": true
+    },
+    {
+      "log": 2,
+      "target": "queenbeetLump",
+      "ticks": 158,
+      "draws": 4616,
+      "actions": 175,
+      "unlocked": true
+    },
+    {
+      "log": 2,
+      "target": "duketater",
+      "ticks": 168,
+      "draws": 4582,
+      "actions": 173,
+      "unlocked": true
+    },
+    {
+      "log": 2,
+      "target": "doughshroom",
+      "ticks": 103,
+      "draws": 2987,
+      "actions": 108,
+      "unlocked": true
+    },
+    {
+      "log": 2,
+      "target": "glovemorel",
+      "ticks": 48,
+      "draws": 1550,
+      "actions": 53,
+      "unlocked": true
+    },
+    {
+      "log": 2,
+      "target": "cheapcap",
+      "ticks": 29,
+      "draws": 884,
+      "actions": 34,
+      "unlocked": true
+    },
+    {
+      "log": 2,
+      "target": "foolBolete",
+      "ticks": 92,
+      "draws": 2803,
+      "actions": 97,
+      "unlocked": true
+    },
+    {
+      "log": 2,
+      "target": "wrinklegill",
+      "ticks": 84,
+      "draws": 2776,
+      "actions": 89,
+      "unlocked": true
+    },
+    {
+      "log": 2,
+      "target": "shriekbulb",
+      "ticks": 111,
+      "draws": 2853,
+      "actions": 128,
+      "unlocked": true
+    },
+    {
+      "log": 2,
+      "target": "tidygrass",
+      "ticks": 45,
+      "draws": 1522,
+      "actions": 50,
+      "unlocked": true
+    },
+    {
+      "log": 2,
+      "target": "everdaisy",
+      "ticks": 203,
+      "draws": 6169,
+      "actions": 216,
+      "unlocked": true
+    },
+    {
+      "log": 2,
+      "target": "goldenClover",
+      "ticks": 32,
+      "draws": 1081,
+      "actions": 37,
+      "unlocked": true
+    }
+  ],
+  "gardenTicks": 4925,
+  "plantingCount": 943,
+  "quotedPlantCost": 591822792212260.1,
+  "bankAfter": 1.2379400392847885e+27,
+  "harvestsTotal": 1009,
+  "seedCount": 34,
+  "seedless": true,
+  "fullPlot": true,
+  "gardenDrops": [
+    {
+      "upgrade": "Ichor syrup",
+      "crop": "ichorpuff",
+      "rate": 0.005,
+      "bought": true
+    },
+    {
+      "upgrade": "Wheat slims",
+      "crop": "bakerWheat",
+      "rate": 0.001,
+      "bought": true
+    },
+    {
+      "upgrade": "Elderwort biscuits",
+      "crop": "elderwort",
+      "rate": 0.01,
+      "bought": true
+    },
+    {
+      "upgrade": "Bakeberry cookies",
+      "crop": "bakeberry",
+      "rate": 0.015,
+      "bought": true
+    },
+    {
+      "upgrade": "Fern tea",
+      "crop": "drowsyfern",
+      "rate": 0.01,
+      "bought": true
+    },
+    {
+      "upgrade": "Duketater cookies",
+      "crop": "duketater",
+      "rate": 0.005,
+      "bought": true
+    },
+    {
+      "upgrade": "Green yeast digestives",
+      "crop": "greenRot",
+      "rate": 0.005,
+      "bought": true
+    }
+  ],
+  "tapeSha256": "d29e4bf477a147c804146f5aba5556121d86ef2d1b2ce81bcde1f724d4527463",
+  "actionsSha256": "8c7fb81f9bc04e0156e27744c3aaf9c6d9252d0e72475b3e5f19c3d0e6b34d9e",
+  "reproduction": "node tools/audit-garden-cylinders.mjs",
+  "moduleSha256": "a0a42e2523fde3e86dd35d4b89a35c55a6bd8503537d5e6ae7c71c19949846e3",
+  "runtimeSha256": "2bd47e179d0a23409bfcbc267a744c8fb9f9eb27b2d74dee8603ec96659c64b5",
+  "replay": {
+    "usesStackSelector": false,
+    "usesMutationObserverWrapper": false,
+    "matchesGeneratedResult": true
+  },
+  "certificate": {
+    "path": "model/certificates/garden-collection-cylinder.bin.gz",
+    "encoding": "gzip of one byte per draw;0 means0,1 means1-2^-53",
+    "bytes": 171505,
+    "compressedBytes": 1362,
+    "compressedSha256": "73190e11d2416bc645123f633509f99b6d54b211e44976d25489965cc58abb1c"
+  }
+}

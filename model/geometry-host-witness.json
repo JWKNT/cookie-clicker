@@ -1,0 +1,63 @@
+{
+  "schema": 1,
+  "scope": "native-rectangle-values-not-renderer-layout",
+  "chromiumVersion": "87.0.4280.141",
+  "sources": [
+    {
+      "file": "dom_rect.cc",
+      "url": "https://github.com/chromium/chromium/blob/87.0.4280.141/third_party/blink/renderer/core/geometry/dom_rect.cc",
+      "sha256": "7c74da47ead15a4f503df6d992aceb88db9ff0b0726ff2d6ff8ce219ac3672ee"
+    },
+    {
+      "file": "dom_rect.h",
+      "url": "https://github.com/chromium/chromium/blob/87.0.4280.141/third_party/blink/renderer/core/geometry/dom_rect.h",
+      "sha256": "6c45415ccb56256af88ca77b25aa5dbc7dfaadf924c66eec78539b5f56637187"
+    },
+    {
+      "file": "dom_rect.idl",
+      "url": "https://github.com/chromium/chromium/blob/87.0.4280.141/third_party/blink/renderer/core/geometry/dom_rect.idl",
+      "sha256": "ca31857700c015ccd9de909ad961cc47f4d263eda76be7878884a17ba30efd75"
+    },
+    {
+      "file": "dom_rect_read_only.cc",
+      "url": "https://github.com/chromium/chromium/blob/87.0.4280.141/third_party/blink/renderer/core/geometry/dom_rect_read_only.cc",
+      "sha256": "a66d7a2325969789dae9726a776a66f1e18d7feb8207bb3219510aad19175921"
+    },
+    {
+      "file": "dom_rect_read_only.h",
+      "url": "https://github.com/chromium/chromium/blob/87.0.4280.141/third_party/blink/renderer/core/geometry/dom_rect_read_only.h",
+      "sha256": "e96485ab749db525ffae8ff596daec02c8f742922c8bdc2791aa00807bc62237"
+    },
+    {
+      "file": "dom_rect_read_only.idl",
+      "url": "https://github.com/chromium/chromium/blob/87.0.4280.141/third_party/blink/renderer/core/geometry/dom_rect_read_only.idl",
+      "sha256": "ed4cb5dd4e279fa1902affb07f46606d44da4c3f7f31fd45522eb19693dc78a8"
+    },
+    {
+      "file": "dom_rect_init.idl",
+      "url": "https://github.com/chromium/chromium/blob/87.0.4280.141/third_party/blink/renderer/core/geometry/dom_rect_init.idl",
+      "sha256": "9647756e173845743c50cc2c405038b82eeac6eb7f6e4a5378ea4dd948c3f0bd"
+    },
+    {
+      "file": "geometry_util.h",
+      "url": "https://github.com/chromium/chromium/blob/87.0.4280.141/third_party/blink/renderer/core/geometry/geometry_util.h",
+      "sha256": "dbabf21870fcc548219de76a3ebe220447c86e65a262d36a5f3990bc3dd93148"
+    }
+  ],
+  "rules": {
+    "coordinates": "Four unrestricted binary64 values",
+    "edges": "NaN guard then C++ std::min/max of origin and origin+extent; ties retain the first operand including zero sign",
+    "constructors": "Optional undefined defaults to zero; source ToNumber callbacks run in argument order",
+    "fromRect": "Actual dictionary getter and numeric conversion order height,width,x,y",
+    "mutable": "DOMRect permits x/y/width/height setters; derived edges are readonly",
+    "intrinsics": "Native prototype references remain fixed when source overwrites constructor globals"
+  },
+  "validation": "node lean/check_javascript_geometry.mjs --engine",
+  "remaining": [
+    "Stylesheet cascade and renderer box layout",
+    "Transforms, scrolling, font metrics and generated boxes",
+    "Host reflection and object expandos",
+    "Full native host refinement"
+  ],
+  "rendererLayoutVerified": false
+}

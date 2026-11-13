@@ -1,0 +1,84 @@
+{
+  "schemaVersion": 1,
+  "status": "exhaustive-native-evidence-not-kernel-proof",
+  "files": [
+    {
+      "path": "arc4-short.hpp",
+      "bytes": 1874,
+      "sha256": "3eab311f39865396bbb7ad0b46bf206c166d1f4cf8ac0572de9fb17d81b621a7"
+    },
+    {
+      "path": "scan.cpp",
+      "bytes": 3311,
+      "sha256": "22b055b24adc9a0c3e2bd388c58fcff82cfa8b95a1ce965cde8b561a4c093574"
+    },
+    {
+      "path": "scan.json",
+      "bytes": 547,
+      "sha256": "73aa54bf2041073de00c4cf72e752505f9378d19550032dc2a7240982ba6ac5b"
+    },
+    {
+      "path": "scan.log",
+      "bytes": 523,
+      "sha256": "cac71628eb2c350a30405f40caa96fc732add07a9369c046929170c12f4f037c"
+    },
+    {
+      "path": "preflight.mjs",
+      "bytes": 3117,
+      "sha256": "b1006e6878799026d535fcae485c5973278ccbb3d8544681a889ee1460cd2a0e"
+    },
+    {
+      "path": "preflight.json",
+      "bytes": 1768,
+      "sha256": "6977580cc2337362c45acd3d412024bb121e6424d599624af1a5570b670b0b9c"
+    },
+    {
+      "path": "samples.txt",
+      "bytes": 52698,
+      "sha256": "bc04c5d7f88c369118d5f9afef8eb859a74750c9f0ebe009b908654e75be9ff2"
+    },
+    {
+      "path": "first-counter.bin",
+      "bytes": 11881376,
+      "sha256": "6d8770c7f4dc48309d3f8cdaf5fa31831bb61cbe39eb4b7d1cb8c03f0a1afb33"
+    },
+    {
+      "path": "free-veils.mjs",
+      "bytes": 2858,
+      "sha256": "6819362b379699a32ba8f738c333be51501c6e3f5b35f3ff82af5fefe8b71143"
+    },
+    {
+      "path": "free-veils-receipt.json",
+      "bytes": 7097,
+      "sha256": "8151ef727b5f1e97058a0a2c210f3e14de0ee3afbfec5b33c889f11be8ad9d01"
+    },
+    {
+      "path": "first-counter.bin.gz",
+      "bytes": 4370457,
+      "sha256": "1b096023fc1091cb61922fee995a5e9b432ccc7fb6bdc3c0c42e2d6c0b5815ff"
+    }
+  ],
+  "domain": "All26^5 five-letter lowercase startup seeds, lexicographic aaaaa..zzzzz.",
+  "encoding": "One byte per seed: a sufficient counter c in0..34, not necessarily the first successful native output.",
+  "proofCandidate": "For each seed, all initial six-byte words at counters0..c are nonzero, and output byte0 at c is in1..101. Thus normalization of each attempted first draw has a finite bound; the chosen first draw is strictly below102/256<0.4. The integer/native/source correspondence and kernel certificate check are open.",
+  "nativeOrder": "Game.ClickCookie calls loseShimmeringVeil(click) before cookieClicks++; the first accepted click after ordinary Reset uses seed/0.",
+  "reproduction": [
+    "clang++ -std=c++17 -O3 -fno-fast-math -ffp-contract=off -pthread scan.cpp -o scan",
+    "node preflight.mjs (records the explicit scratch path /tmp/cookie-audit; see file)",
+    "./scan first-counter.bin scan.json 11881376 2 64",
+    "node free-veils.mjs (conditional source fixture; see explicit premises)"
+  ],
+  "scope": [
+    "No policy reads the seed or certificate; a policy simply attempts consecutive direct clicks and stops on the visible native award.",
+    "No repeated reset is used. The source fixture starts from an independently fixed ordinary final-run reset, sells all native starter buildings, waits for gains, and buys only zero-price veil toggles.",
+    "The source fixture supplies prior milestones/heavenly ownership and worst seed awjiu; it is not a path from a new save.",
+    "The long new-save run remains immutable and uses its original controller."
+  ],
+  "openObligations": [
+    "Kernel-checked exhaustive seed certificate with ARC4/source refinement.",
+    "Complete source/physical-input and callback-termination bridge for reset, sale, zero-production, toggle and accepted clicks.",
+    "Prove no retained flat9-CpS quoted egg upgrade in the final normal run; the new policy excludes it from permanent-slot candidates.",
+    "Compose the actual full new-save entry and all remaining goals; no expected-time or optimality result follows from this certificate alone."
+  ],
+  "publicationNote": "On 13 November 2026 the absolute paths of the audit machine in preflight.mjs and free-veils.mjs were changed to paths in the repository, for publication. The scripts have no other change, and no result was calculated again. The digests in this file are the digests of the published files. The original digests were 251cf8c6663e6e1e3ef7df0dec2fe5a13bfaf4f33121f1773a52896dd6ab4f4a (preflight.mjs) and 43ae14bce7a9b55e8719c69b0d390813632ae36a079ae16455cf7646c10d3180 (free-veils.mjs)."
+}

@@ -1,0 +1,69 @@
+{
+  "schemaVersion": 1,
+  "status": "interrupted",
+  "exitCode": 130,
+  "requestedHorizonMs": 172800000,
+  "terminationReason": "Root requested termination of a superseded immutable candidate after archiving its last progress record. No more samples were needed for the open proof obligations.",
+  "lastProgress": {
+    "elapsedMs": 108000900,
+    "decisions": 135749,
+    "cookiesEarned": 31520609183642950000,
+    "cookiesPs": 63570142645121.26,
+    "ascensions": 0,
+    "stage": "early-income-growth",
+    "actionCount": 4262612,
+    "randomDrawCount": 194793390,
+    "checkpointCount": 7537248,
+    "wallSeconds": 3578.260800416,
+    "rss": 739737600
+  },
+  "lastProgressIsFinalState": false,
+  "completedRequestedHorizon": false,
+  "finalResultFileExists": false,
+  "recordingMode": "summary-only",
+  "noFullReplayHistory": true,
+  "scope": "Genuine initialized new-save diagnostic sample with no resource injection, no reload and no outcome search. The last progress record is a lower bound on executed elapsed time. Interruption produced no final observation, completion result, expectation estimate or optimality evidence.",
+  "files": [
+    {
+      "path": "new-save-progress.log",
+      "archive": "new-save-progress.log",
+      "sha256": "ac32ad179f89a042b526aeab98d4b00d61aa46330bf370f097890dd3577cbe31"
+    },
+    {
+      "path": "new-save-policy.js",
+      "archive": "new-save-policy.js",
+      "sha256": "263016c861d367dfa8ed799c4e4f15dc7325035324d661c98e992e234fd4f5d0"
+    },
+    {
+      "path": "tools/probe-early-new-save.mjs",
+      "archive": "tools--probe-early-new-save.mjs",
+      "sha256": "e62fb0e6fa36994da2741fdb1f47f74fbbaf85d6e04cadcad62264ca20bf0e7c"
+    },
+    {
+      "path": "model/completion-policy.mjs",
+      "archive": "model--completion-policy.mjs",
+      "sha256": "b36f9b6239c9e1b73457f2246f479058d0d1c5bf9c1aee402cd24f02d7d85716"
+    },
+    {
+      "path": "model/ascension-policy.mjs",
+      "archive": "model--ascension-policy.mjs",
+      "sha256": "03860fbdf7f6ab73d7b132ae9168ce0044836c554d0f07d4f0a90d38220a8c02"
+    },
+    {
+      "path": "model/baseline-policy.mjs",
+      "archive": "model--baseline-policy.mjs",
+      "sha256": "8ca564aed9f76e386bbbeb717b98482d2d7d76dd79e7d2e5016b1775ec7f0f9d"
+    },
+    {
+      "path": "model/runtime.mjs",
+      "archive": "model--runtime.mjs",
+      "sha256": "427c41595d8e6195c44130b408cd52aafbc003dddaa4a049a66f340e1380a2e5"
+    }
+  ],
+  "snapshotArchive": {
+    "path": "dist/experiments/new-save-interrupted-30h.tar.gz",
+    "sha256": "573356fc63ec8b849b76df234515d50eca6d51c05abfae13534584aadee02f55",
+    "bytes": 77452,
+    "scope": "The recorded policy, runner, four captured model modules and progress log; not a full replay or a complete dependency snapshot."
+  }
+}
