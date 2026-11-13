@@ -19,7 +19,7 @@ export function ReadySeconds() {
 }
 
 /**
- * This function tracks whether ascending is optimal and alerts once per run when it becomes so
+ * This function tracks whether the model recommends ascending and alerts once per run when it becomes so
  * It is called by CM.Main.Loop
  */
 export default function CheckAscensionReady() {
@@ -53,7 +53,7 @@ export default function CheckAscensionReady() {
   nF.createNotification('cookieMonsterMod', 'AscendNotification', 'Time to ascend', message);
   if (settings.AscendNote)
     Game.Notify(
-      'Optimal time to ascend',
+      'Planned time to ascend',
       `${message}<br>Pop wrinklers and buy the Chocolate egg (if unlocked) first.`,
       [19, 7],
     );

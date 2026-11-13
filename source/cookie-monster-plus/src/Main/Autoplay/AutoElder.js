@@ -240,7 +240,7 @@ function PopWrinklers() {
 /**
  * Runs the Grandmapocalypse: research, the elder achievements (the wrath at its peak once, then
  * pledging, signing and revoking the covenant), bursting sprees, the choice of stage and wrinkler popping
- * It is called by Autoplay() with the auto-buyer's cadence
+ * It is called by Autoplay() once in every cycle of frames
  */
 export default function AutoElder() {
   const { settings } = Game.mods.cookieMonsterFramework.saveData.cookieMonsterMod;

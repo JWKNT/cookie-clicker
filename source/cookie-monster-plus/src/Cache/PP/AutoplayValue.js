@@ -430,17 +430,18 @@ export function MilkMultiplier() {
 }
 
 /**
- * Share of CpS one more achievement adds: it raises milk by 0.04, and each owned kitten multiplies CpS
- * by 1 + k * milk * m, so CpS grows by the factor prod (1 + k m (milk + 0.04)) / (1 + k m milk)
+ * Share of CpS added by count achievements. Each raises milk by 0.04. Each owned kitten contributes
+ * the factor (1 + k m (milk + 0.04 count)) / (1 + k m milk).
+ * @param {number} [count] Achievements
  * @returns	{number}
  */
-export function AchievementValue() {
+export function AchievementValue(count = 1) {
   const m = MilkMultiplier();
   const milk = Game.milkProgress || 0;
   let ratio = 1;
   Object.keys(KITTENS).forEach((name) => {
     if (Game.Has(name))
-      ratio *= (1 + KITTENS[name] * m * (milk + 0.04)) / (1 + KITTENS[name] * m * milk);
+      ratio *= (1 + KITTENS[name] * m * (milk + 0.04 * count)) / (1 + KITTENS[name] * m * milk);
   });
   return ratio - 1;
 }
@@ -458,14 +459,14 @@ export function PlayHorizon() {
 
 /**
  * What achievements are worth in seconds of play. A run at speed S retraces the same trajectory S times
- * faster, so a permanent gain of a share x of income makes all future play x faster: over a horizon H it
- * is worth x H seconds, to be weighed against seconds of delay (cookies spent at income I cost
- * cookies / I seconds)
+ * faster. With a fixed remaining horizon H, a gain x after a delay D pays when
+ * (1 + x) (H - D) > H, or D < H x / (1 + x). The horizon and speed scaling remain model assumptions.
  * @param	{number}	[count]	Achievements
  * @returns	{number}	Seconds
  */
 export function AchievementWorth(count = 1) {
-  return count * AchievementValue() * PlayHorizon();
+  const gain = AchievementValue(count);
+  return (gain / (1 + gain)) * PlayHorizon();
 }
 
 /**

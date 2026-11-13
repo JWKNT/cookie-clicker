@@ -173,42 +173,99 @@ function ChooseAuras() {
   else if (best[1] !== Game.dragonAura2) SetAura(best[1], 1);
 }
 
-/** Upgrades petting the dragon can drop, one per quarter of an hour, and seconds between petting sessions */
+/** Pet drops use a fixed permutation of the four quarter-hours in each run. */
 const DRAGON_DROPS = ['Dragon scale', 'Dragon claw', 'Dragon fang', 'Dragon teddy bear'];
-const PET_SECONDS = 60;
-/** Pets per session: each has a 1 in 20 chance to drop the current quarter-hour's upgrade */
+/** Bound native calls so the other autoplay systems and the interface can run. */
 const PETS = 20;
+/** An unknown phase may already be owned when the mod starts partway through a run. */
+const UNKNOWN_PET_RETRY_MS = 100;
 
-let LastPet = 0;
+let PetRun = null;
+let PetQuarterDrops = [];
+let NextPet = 0;
 
 /**
- * With "Pet the dragon", pets the dragon in its menu until this quarter-hour's drop shows up (each drop
- * is an upgrade for this run)
+ * Clear learned drop phases when the public run identity or transition state changes.
+ * startDate also changes on a zero-prestige reset, when resets does not increase.
+ * @returns {boolean} Whether an ascension or reincarnation is in progress
+ */
+function TrackDragonRun() {
+  const transition = Boolean(Game.OnAscend || Game.AscendTimer > 0 || Game.ReincarnateTimer > 0);
+  if (!PetRun || PetRun.startDate !== Game.startDate || PetRun.resets !== Game.resets
+      || PetRun.transition !== transition) {
+    PetQuarterDrops = [];
+    NextPet = 0;
+  }
+  PetRun = { startDate: Game.startDate, resets: Game.resets, transition };
+  return transition;
+}
+
+/** @returns {number} The quarter-hour used by the native drop rule, in local time */
+function PetQuarter() {
+  return Math.floor(new Date().getMinutes() / 15);
+}
+
+/** @param {string} name Upgrade name @returns {boolean} Whether this run has accessed the drop */
+function HasDrop(name) {
+  return Boolean(Game.Has(name) || Game.HasUnlocked(name));
+}
+
+/**
+ * Pet in bounded batches and stop at the first new drop. Native petting has no gameplay cooldown;
+ * its two-second timer controls only the growl sound. Learn phases from new unlocks, without reading
+ * the run seed. A learned phase cannot give another drop until a different quarter-hour starts.
  * @returns	{boolean}	Whether it petted
  */
 function PetDragon() {
-  if (!Game.Has('Pet the dragon') || Game.dragonLevel < 8) return false;
-  if (DRAGON_DROPS.every((name) => Game.Has(name) || Game.HasUnlocked(name))) return false;
-  if (Date.now() - LastPet < PET_SECONDS * 1000) return false;
-  LastPet = Date.now();
-  const { volume } = Game;
+  if (Game.promptOn || !Game.Has('Pet the dragon') || Game.dragonLevel < 8) return false;
+  const seen = DRAGON_DROPS.filter(HasDrop);
+  const phase = PetQuarter();
+  if (seen.length === DRAGON_DROPS.length || HasDrop(PetQuarterDrops[phase])) return false;
+  if (Date.now() < NextPet) return false;
+  // The native shuffle is a permutation. An unknown phase must be missing if every accessed drop
+  // has an observed phase. Otherwise use a positive retry cadence for a possible silent duplicate.
+  const missingDropCertain = seen.every((name) => PetQuarterDrops.includes(name));
+  NextPet = Date.now() + (missingDropCertain ? 0 : UNKNOWN_PET_RETRY_MS);
+  const { volume, specialTab } = Game;
   Game.volume = 0;
-  Game.specialTab = 'dragon';
-  Game.ToggleSpecialMenu(1);
-  for (let i = 0; i < PETS; i++) Game.ClickSpecialPic();
-  Game.ToggleSpecialMenu(0);
-  Game.volume = volume;
+  try {
+    if (specialTab !== 'dragon') {
+      Game.specialTab = 'dragon';
+      Game.ToggleSpecialMenu(1);
+    }
+    for (let i = 0; i < PETS; i++) {
+      const beforePhase = PetQuarter();
+      Game.ClickSpecialPic();
+      const drop = DRAGON_DROPS.find((name) => !seen.includes(name) && HasDrop(name));
+      if (drop) {
+        // Do not assign a phase if the wall clock crossed a boundary during the native call.
+        if (beforePhase === PetQuarter()) PetQuarterDrops[beforePhase] = drop;
+        break;
+      }
+      if (Game.promptOn) break;
+    }
+  } finally {
+    try {
+      if (specialTab && specialTab !== 'dragon') {
+        Game.specialTab = specialTab;
+        Game.ToggleSpecialMenu(1);
+      } else if (!specialTab) Game.ToggleSpecialMenu(0);
+    } finally {
+      Game.specialTab = specialTab;
+      Game.volume = volume;
+    }
+  }
   return true;
 }
 
 /**
  * Buys the dragon egg, trains the dragon, pets it for its drops and picks its auras
- * It is called by Autoplay() with the auto-buyer's cadence
+ * It is called by Autoplay() once in every cycle of frames
  */
 export default function AutoDragon() {
   const { settings } = Game.mods.cookieMonsterFramework.saveData.cookieMonsterMod;
-  if (!settings.AutoDragon || Game.OnAscend || Game.AscendTimer > 0 || Game.ReincarnateTimer > 0)
-    return;
+  const transition = TrackDragonRun();
+  if (!settings.AutoDragon || transition || Game.promptOn) return;
   const egg = Game.Upgrades['A crumbly egg'];
   if (!egg) return;
   if (!egg.bought) {

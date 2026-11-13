@@ -180,7 +180,7 @@ function PokeWrinkler() {
 
 /**
  * Takes the next action-only achievement, one per call
- * It is called by Autoplay() with the auto-buyer's cadence
+ * It is called by Autoplay() once in every cycle of frames
  */
 export default function AutoAchievements() {
   const { settings } = Game.mods.cookieMonsterFramework.saveData.cookieMonsterMod;

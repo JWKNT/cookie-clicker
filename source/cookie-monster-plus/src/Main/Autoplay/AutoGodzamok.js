@@ -11,6 +11,7 @@ import { AutoClickRate } from '../../Cache/PP/AutoplayValue.js';
 import {
   BUDGET_MS,
   BUFF_SECONDS,
+  CycleWorth,
   CycleTypes,
   DevastationBonus,
   GodzamokState,
@@ -42,22 +43,31 @@ export default function AutoGodzamok() {
   const start = performance.now();
   let units = 0;
   let intact = true;
-  for (let pass = 0; pass < MAX_PASSES * types.length && intact; pass++) {
-    if (pass > 0 && performance.now() - start >= BUDGET_MS) break;
-    const me = types[Next % types.length];
-    Next = (Next + 1) % types.length;
-    const n = me.amount;
-    me.sell(-1);
-    me.buy(n);
-    units += n;
-    intact = me.amount === n;
+  try {
+    for (let pass = 0; pass < MAX_PASSES * types.length && intact; pass++) {
+      if (pass > 0 && performance.now() - start >= BUDGET_MS) break;
+      const me = types[Next % types.length];
+      Next = (Next + 1) % types.length;
+      // Earlier cycles change the bank. Recheck every native credit/debit and
+      // the resulting benefit before another sale. Nominal price sums do not
+      // determine the bank loss at large binary64 magnitudes.
+      if (CycleWorth(me, clickIncome, seconds, Game.cookies)) {
+        const n = me.amount;
+        intact = false;
+        me.sell(-1);
+        me.buy(n);
+        units += n;
+        intact = me.amount === n;
+      }
+    }
+  } finally {
+    const elapsed = performance.now() - start;
+    if (units > 0)
+      GodzamokState.msPerUnit = 0.9 * GodzamokState.msPerUnit + (0.1 * elapsed) / units;
+    Game.volume = volume;
+    Game.buyMode = buyMode;
+    // Recompute production after an incomplete cycle. A completed cycle only changes click power.
+    Game.recalculateGains = intact ? recalculateGains : 1;
+    Game.computedMouseCps = Game.mouseCps();
   }
-  const elapsed = performance.now() - start;
-  if (units > 0) GodzamokState.msPerUnit = 0.9 * GodzamokState.msPerUnit + (0.1 * elapsed) / units;
-  Game.volume = volume;
-  Game.buyMode = buyMode;
-  // Counts and CpS are unchanged, so skip the full recalculation (and Cookie Monster's resimulation that
-  // follows it) unless a purchase fell short; the buff only changes click power
-  Game.recalculateGains = intact ? recalculateGains : 1;
-  Game.computedMouseCps = Game.mouseCps();
 }

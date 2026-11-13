@@ -121,7 +121,7 @@ function RefillSwaps() {
 /**
  * Slots the best gods once the Pantheon is unlocked, re-checking every few minutes, and refills the
  * worship swaps with a sugar lump when a much better arrangement waits for them
- * It is called by Autoplay() with the auto-buyer's cadence
+ * It is called by Autoplay() once in every cycle of frames
  */
 export default function AutoPantheon() {
   const { settings } = Game.mods.cookieMonsterFramework.saveData.cookieMonsterMod;

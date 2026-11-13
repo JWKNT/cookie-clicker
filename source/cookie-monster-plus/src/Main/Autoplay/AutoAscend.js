@@ -1,17 +1,18 @@
 import { KittenMilkFactor, MilkMultiplier } from '../../Cache/PP/AutoplayValue.js';
 import { AscensionCache, AutoClickIncome } from '../../Cache/Stats/Ascension.js';
 import HeavenlyPurchaseOrder, { HeavenlyContext } from '../../Cache/Stats/HeavenlyPlan.js';
-import { CacheWrinklersNormal } from '../../Cache/VariablesAndData.js';
 import Beautify from '../../Disp/BeautifyAndFormatting/Beautify.js';
 import { FormatPercent } from '../../Disp/HelperFunctions/AscensionSummary.js';
-import PopAllNormalWrinklers from '../../Disp/HelperFunctions/PopWrinklers.js';
 import { ReadySeconds, SUSTAIN_SECONDS } from '../CheckStates/Ascension.js';
 import { AvailableLoans, LOANS } from './AutoMarket.js';
+import { ClickMarketLoan } from './MarketControls.js';
 import { ChallengeDone, ChallengeDue, ChallengeRun } from './Challenge.js';
+import { CastBeforeAscension } from './AutoGrimoire.js';
+import {
+  BuyForStarsInHeaven, CashInChocolateEgg, LuckyPrestigeWait, RequestWrinklerPayouts,
+  SkipAscensionAnimation, SpendHeavenlyOrder, STARS_BUDGET,
+} from './AscensionActions.js';
 
-/** Seconds to let wrinklers pop before ascending, and to show the heavenly screen before leaving it */
-const CASH_IN_SECONDS = 2;
-const HEAVEN_SECONDS = 1.5;
 /** Seconds before a loan runs out at which the run may end early to avoid its interest */
 const LOAN_EXIT_SECONDS = 60;
 
@@ -19,6 +20,11 @@ let Phase = 'idle';
 let PhaseSince = 0;
 /** Whether the run being left is a Born again run */
 let LeavingChallenge = false;
+
+/** Keep the cash-in bank available until the egg is bought or the reset is cancelled. */
+export function AscensionCashInProgress() {
+  return Phase === 'cashing';
+}
 
 /**
  * Buys a heavenly upgrade after the unowned parents it requires, as the ascension screen only allows
@@ -85,18 +91,17 @@ function FillPermanentSlots() {
 /**
  * Spends heavenly chips: Legacy first, then along the purchase order the ascension planner assumes
  * (best production gain per chip, parents included), buying as many items as the chips cover and
- * saving the rest for the next one; then fills the permanent upgrade slots
+ * saving the rest for the next one; then the cheapest upgrades still missing for "All the stars in
+ * heaven" if they cost at most STARS_BUDGET of the chips; then fills the permanent upgrade slots
  */
 export function SpendHeavenlyChips() {
   if (!BuyWithParents(Game.Upgrades.Legacy)) return;
+  const budget = STARS_BUDGET * Game.heavenlyChips;
   const context =
     AscensionCache.heavenlyContext || HeavenlyContext(Game.cookiesPs, AutoClickIncome());
   const order = HeavenlyPurchaseOrder(context);
-  for (let i = 0; i < order.length && order[i].cost <= Game.heavenlyChips; i++) {
-    order[i].bundle.forEach((me) => {
-      if (!me.bought) me.buy();
-    });
-  }
+  SpendHeavenlyOrder(order);
+  BuyForStarsInHeaven(budget);
   FillPermanentSlots();
 }
 
@@ -117,7 +122,7 @@ function LoanExit() {
 }
 
 /**
- * Ascends when the advisor has said so for SUSTAIN_SECONDS (or a Born again run is over): pops normal
+ * Ascends when the advisor has said so for SUSTAIN_SECONDS (or a Born again run is over): pops all
  * wrinklers and buys the Chocolate egg first, spends the heavenly chips and reincarnates, into a Born
  * again run when the challenge achievements are due
  * It is called every logic frame, also while ascending
@@ -132,16 +137,21 @@ export default function AutoAscend() {
   };
 
   if (Phase === 'idle') {
-    if (!settings.AutoAscend || Game.OnAscend || Game.AscendTimer > 0 || Game.ReincarnateTimer > 0)
+    if (
+      !settings.AutoAscend || Game.promptOn || Game.OnAscend
+      || Game.AscendTimer > 0 || Game.ReincarnateTimer > 0
+    )
       return;
     if (ChallengeRun() ? !ChallengeDone() : ReadySeconds() < SUSTAIN_SECONDS && !LoanExit())
       return;
-    if (CacheWrinklersNormal > 0) PopAllNormalWrinklers();
-    const egg = Game.Upgrades['Chocolate egg'];
-    if (egg && egg.unlocked && !egg.bought) egg.buy();
+    // Payout occurs in a later native game update, before cash-in can continue.
+    RequestWrinklerPayouts();
     enter('cashing');
   } else if (Phase === 'cashing') {
-    if (elapsed < CASH_IN_SECONDS) return;
+    if (Game.OnAscend || Game.AscendTimer > 0 || Game.ReincarnateTimer > 0) {
+      enter('idle');
+      return;
+    }
     const { plan } = AscensionCache;
     LeavingChallenge = ChallengeRun();
     if (
@@ -151,10 +161,14 @@ export default function AutoAscend() {
       enter('idle');
       return;
     }
+    if (Game.promptOn) return;
+    // A wrinkler can start storing cookies after cash-in begins. Include it before the egg.
+    RequestWrinklerPayouts();
+    if (!CashInChocolateEgg()) return;
     // The bank is about to be lost, so a loan's down payment costs nothing now: "Debt evasion"
     const loans = AvailableLoans();
-    if (!Game.HasAchiev('Debt evasion') && loans.length)
-      Game.Objects.Bank.minigame.takeLoan(loans[0].id);
+    if (!Game.HasAchiev('Debt evasion') && loans.length && !ClickMarketLoan(loans[0].id)) return;
+    if (LuckyPrestigeWait(elapsed)) return;
     if (LeavingChallenge)
       Game.Notify(
         'Cookie Monster+ ended the Born again run',
@@ -171,14 +185,17 @@ export default function AutoAscend() {
         )} production in every future run.`,
         [19, 7],
       );
+    if (!LeavingChallenge) CastBeforeAscension();
     Game.Ascend(1);
     enter('ascending');
+    SkipAscensionAnimation();
   } else if (Phase === 'ascending') {
     if (Game.OnAscend) enter('heaven');
     else if (elapsed > 30 && Game.AscendTimer === 0) enter('idle');
   } else if (Phase === 'heaven') {
     if (!Game.OnAscend) enter('idle');
-    else if (elapsed >= HEAVEN_SECONDS) {
+    else if (!settings.AutoAscend) enter('idle');
+    else if (!Game.promptOn && Game.AscendTimer === 0 && Game.ReincarnateTimer === 0) {
       SpendHeavenlyChips();
       Game.nextAscensionMode = ChallengeDue(LeavingChallenge) ? 1 : 0;
       Game.Reincarnate(1);

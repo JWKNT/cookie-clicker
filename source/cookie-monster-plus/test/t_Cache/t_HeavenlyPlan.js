@@ -1,9 +1,10 @@
-import { after, before, describe, it } from 'mocha';
+import { after, before, beforeEach, describe, it } from 'mocha';
 import { expect } from 'chai';
 import { Game } from '../GlobalsForTesting.js';
 
 import HeavenlyPurchaseOrder, {
   HeavenlyUpgradeValues,
+  UnshackledValue,
 } from '../../src/Cache/Stats/HeavenlyPlan.js';
 
 /** Builds mock heavenly upgrades: {name: [price, parentNames]} */
@@ -132,5 +133,107 @@ describe('HeavenlyPurchaseOrder', () => {
       const best = Math.min(...Permutations(items).map(OrderTime));
       expect(OrderTime(order)).to.be.closeTo(best, best * 1e-12);
     }
+  });
+
+  it('Discounts later prices inside a parent bundle and retains each purchase step', () => {
+    Game.heralds = 300;
+    Game.milkProgress = 10;
+    Game.Upgrades = MockUpgrades({
+      Legacy: [1, []],
+      'Kitten angels': [100, ['Legacy']],
+      Heralds: [1, ['Kitten angels']],
+    });
+    const [block] = HeavenlyPurchaseOrder(ctx);
+    expect(block.bundle.map((me) => me.name)).to.deep.equal(['Kitten angels', 'Heralds']);
+    expect(block.cost).to.equal(101);
+    expect(block.effectiveCost).to.equal(100.5);
+    expect(block.mult).to.equal(8);
+    expect(block.density).to.equal((1 - 1 / 8) / 100.5);
+    expect(block.steps).to.deep.equal([{ cost: 100, mult: 2 }, { cost: 1, mult: 4 }]);
+  });
+
+  describe('Unshackled upgrades', () => {
+    // Cursors earn a quarter of CpS and gain x9 from their unshackle upgrade; grandmas own the plain
+    // and berrylium tiers and gain x1.25 for each one that is unshackled with them
+    const shares = [
+      { upgrade: 'Unshackled cursors', share: 0.25, base: 9, gain: 2, tiers: [] },
+      {
+        upgrade: 'Unshackled grandmas',
+        share: 0.75,
+        base: 1,
+        gain: 1.25,
+        tiers: ['Unshackled flavor', 'Unshackled berrylium'],
+      },
+    ];
+    const has =
+      (...names) =>
+      (name) =>
+        names.includes(name);
+    beforeEach(() => {
+      Game.Upgrades = MockUpgrades({
+        Legacy: [1, []],
+        'Label printer': [5, ['Legacy']],
+        'Unshackled flavor': [10, ['Label printer']],
+        'Unshackled cursors': [15, ['Unshackled flavor']],
+        'Unshackled grandmas': [1000, ['Unshackled cursors']],
+        'Unshackled berrylium': [20, ['Unshackled flavor']],
+      });
+    });
+
+    it('Values a building only with its unshackled tiers, as a sum over shares of CpS', () => {
+      const value = UnshackledValue(shares);
+      expect(value(has())).to.equal(1);
+      expect(value(has('Unshackled flavor', 'Unshackled berrylium'))).to.equal(1);
+      expect(value(has('Unshackled flavor', 'Unshackled cursors'))).to.equal(3);
+      expect(
+        value(has('Unshackled flavor', 'Unshackled cursors', 'Unshackled grandmas')),
+      ).to.equal(0.25 * 9 + 0.75 * 1.25);
+      expect(
+        value(
+          has('Unshackled flavor', 'Unshackled cursors', 'Unshackled grandmas', 'Unshackled berrylium'),
+        ),
+      ).to.equal(0.25 * 9 + 0.75 * 1.25 ** 2);
+    });
+
+    it('Measures gains against the unshackle upgrades owned now', () => {
+      // Owned cursors already earn nine times as much: with 3/4 of CpS they gain nothing more
+      Game.Upgrades['Label printer'].bought = true;
+      Game.Upgrades['Unshackled flavor'].bought = true;
+      Game.Upgrades['Unshackled cursors'].bought = true;
+      const owned = [
+        { ...shares[0], share: 0.75 },
+        { ...shares[1], share: 0.25 },
+      ];
+      const value = UnshackledValue(owned);
+      expect(value(has('Unshackled flavor', 'Unshackled cursors'))).to.equal(1);
+      expect(
+        value(has('Unshackled flavor', 'Unshackled cursors', 'Unshackled grandmas')),
+      ).to.equal(0.75 + 0.25 * 1.25);
+    });
+
+    it('Plans the cheap cursor bundle first and keeps each step as a marginal gain', () => {
+      const order = HeavenlyPurchaseOrder({ ...ctx, unshackle: shares });
+      expect(order.map((item) => item.name)).to.deep.equal([
+        'Unshackled cursors',
+        'Unshackled grandmas',
+        'Unshackled berrylium',
+      ]);
+      expect(order[0].bundle.map((me) => me.name)).to.deep.equal([
+        'Label printer',
+        'Unshackled flavor',
+        'Unshackled cursors',
+      ]);
+      expect(order[0].steps.map((step) => step.mult)).to.deep.equal([1, 1, 3]);
+      const total = order
+        .flatMap((item) => item.steps)
+        .reduce((product, step) => product * step.mult, 1);
+      expect(total).to.be.closeTo(0.25 * 9 + 0.75 * 1.25 ** 2, 1e-12);
+    });
+
+    it('Skips a tier while no building that owns it is planned', () => {
+      Game.Upgrades['Unshackled grandmas'].showIf = () => false;
+      const order = HeavenlyPurchaseOrder({ ...ctx, unshackle: shares });
+      expect(order.map((item) => item.name)).to.deep.equal(['Unshackled cursors']);
+    });
   });
 });

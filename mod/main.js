@@ -1,7 +1,7 @@
 /******/ (() => { // webpackBootstrap
 /******/ 	var __webpack_modules__ = ({
 
-/***/ 75:
+/***/ 456:
 /***/ (function(module) {
 
 /**
@@ -3912,7 +3912,7 @@ function createNotification(modName, configName, title, message) {
 }
 
 // EXTERNAL MODULE: ./node_modules/@eastdesire/jscolor/jscolor.js
-var jscolor = __webpack_require__(75);
+var jscolor = __webpack_require__(456);
 var jscolor_default = /*#__PURE__*/__webpack_require__.n(jscolor);
 ;// ./node_modules/@cookiemonsterteam/cookiemonsterframework/src/menu/toggles/toggleFavourite.js
 
@@ -5832,7 +5832,7 @@ function UpdateUpgrades() {
 /** Data related directly to Cookie Monster */
 
 const VersionMajor = '2.053';
-const VersionMinor = '13';
+const VersionMinor = '21';
 
 /** Information about Cookie Monster to be displayed in the info section */
 const ModDescription = (/* unused pure expression or super */ null && (`<a href="https://github.com/CookieMonsterTeam/CookieMonster" target="blank">Cookie Monster</a>
@@ -5844,16 +5844,20 @@ const ModDescription = (/* unused pure expression or super */ null && (`<a href=
 
 /** Latest releasenotes of Cookie Monster to be displayed in the info section */
 const LatestReleaseNotes = (/* unused pure expression or super */ null && (`Cookie Monster+ (local build based on 2.053.10)</br>
+- Version 20 keeps the native click-sound callback during muted auto-clicks. Random draws and sound-index updates are retained. Volume is restored after each click.</br>
+- Version 18 buys on every frame instead of one item every ten frames, so a new run catches up with its bank in seconds. Seasons no longer switch back and forth for heart biscuits. The game keeps full speed while its window is hidden (setting: Full speed when hidden). Heavenly chips also buy the Unshackled upgrades, valued from the share of CpS of each building, and the cheapest upgrades still missing for All the stars in heaven. Ascension waits up to a minute for a prestige level with four 7s, which unlocks Lucky payout.</br>
+- Version 15 uses the native Escape handler to skip the ascent animation. Cash-in waits for actual wrinkler payouts. Heavenly purchases no longer wait for a display delay. Prompts and manual ascensions retain control.</br>
+- Version 14 corrects the no-reset option, achievement time savings and parent-bundle costs. It rechecks Godzamok buyback funds and waits for wrinkler payouts before buying the Chocolate egg. The strategy audit and Lean proofs state their model scope. Full-game optimality remains unproved.</br>
 - Version 13 publishes a readable (unminified) build and the full source at github.com/JWKNT/cookie-clicker, installed by a patcher that checks every file</br>
 - Version 12 adds Godzamok combos: with Godzamok slotted, autoplay sells and buys back every building type whose round trip pays, every frame, so his click buff keeps growing (income rises thousands of times over), and the Pantheon slots him for it (within seconds of an ascension, or with a sugar lump to refill the worship swaps when they ran out)</br>
 - The Grandmapocalypse stage is now chosen by income: with the Elder Pact a pledge costs next to nothing, so autoplay pledges whenever calm (golden cookies, Frenzies on clicks) earns more than wrath and wrinklers, and revokes the covenant the elder achievements leave behind. It bursts wrinklers for "Wrinklesquisher" and "Moistburster" when they are worth the income given up</br>
 - Achievements are valued in seconds of play (a share of income times the play still expected); a Born again run for Neverclick and Hardcore starts once they are worth more than its four hours</br>
 - The garden breeds new seeds along the wheat chain on a checkerboard (Thumbcorn, Cronerice, Gildmillet, Clover, Golden clover, ...) with the right soil; the Stock Market upgrades its offices and takes loans that end before their interest; sugar lumps go to cursor levels for the first loan and to the Sugar frenzy; fortunes, Santa's helper grandmas, gift codes, dragon petting and a narrow-window ticker click are taken as well</br>
 - Version 11 plays the whole game: the Grandmapocalypse (wrath cookies beat golden ones when every cookie is clicked, and wrinklers multiply income about six times), the dragon (trained every run, auras picked by the CpS they add), seasons (Santa, heart biscuits, Easter eggs, reindeer), sugar lumps (minigames first, then building levels), the Pantheon, the Grimoire, permanent upgrade slots, heavenly upgrades for all of these, and achievements that only take an action</br>
-- Autoplay: clicks the big cookie (20 per second by default), buys the building or upgrade with the best payback period, clicks golden cookies and reindeer, and ascends at the optimal time (all switchable under Options, Autoplay)</br>
+- Autoplay: clicks the big cookie (20 per second by default), buys the building or upgrade with the best payback period, clicks golden cookies and reindeer, and ascends at the planned time (all switchable under Options, Autoplay)</br>
 - Ascension Advisor: plans every future ascension with a dynamic program, counting prestige levels, Legacy and the heavenly upgrades the chips can buy (several per ascension); it never recommends an ascension worth less than a 10% speed-up</br>
 - Click and golden cookie upgrades are valued at what they bring under autoplay (auto-click rate, golden cookie income), so they are coloured instead of gray and bought when they are the best deal; a "Lucky!" bank is kept only when that pays back faster than buying</br>
-- Heavenly chips are spent along one purchase order, most time saved per chip first ((1 - 1/multiplier) / cost, which is provably optimal without parent constraints) with required parents included, which the Ascension Advisor also plans with; auto-ascend buys as many items as the chips cover and saves the rest for the next one</br>
+- Heavenly chips are spent along one purchase order, most time saved per chip first ((1 - 1/multiplier) / cost, which is optimal for a fixed required set, constant chip effort, no initial bank and no parent constraints) with required parents included, which the Ascension Advisor also plans with; auto-ascend buys as many items as the chips cover and saves the rest for the next one</br>
 - The auto-buyer judges purchases by what they add to long-run income: click power at the auto-click rate (now for buildings too), multiplied by what the golden cookies autoplay clicks make of production (Frenzies, building specials, cookie storms and Click frenzies), without current buffs. A "Lucky!" bank is only kept back from purchases that pay back slower than banked cookies do, which is now rare</br>
 - The "Next buy" countdown uses the income measured over the last ten minutes, as the expected income counts rare jackpots that seldom arrive within minutes</br>
 - Timer bar: a "Lucky!" bank row appears while autoplay keeps cookies back for "Lucky!", which explains why an affordable "Next buy" can still be waiting</br>
@@ -6343,12 +6347,12 @@ function GetCPSBuffMult() {
  * Section: Godzamok's "Devastation" buff under autoplay
  *
  * With Godzamok slotted, selling buildings starts a ten-second buff worth +1% click power per building
- * sold (+0.5% in the ruby slot, +0.25% in the jade one), and every sale while it runs adds to it, without
- * limit and without extending it. Selling a building type and buying it straight back in the same frame
- * costs only the gap between the prices: a sale returns a quarter of what the next copy would cost, so
- * selling the top n copies refunds 1.15 x 25% of what buying them back costs. Each building sold adds a
- * hundredth of the auto-clicker's income for the rest of the buff, so cycling pays for every type whose
- * copies are worth less than that, which late in a run is everything but the newest tiers. With the
+ * sold (+0.5% in the ruby slot, +0.25% in the jade one). Further sales do not extend its duration.
+ * The source has no explicit multiplier cap, but binary64 rounding can absorb small increments.
+ * Selling a building type and buying it straight back in the same frame
+ * has native per-copy credits and debits. Their effect on the bank can differ from their price sum
+ * because each binary64 bank update rounds separately. The immediate estimate uses the actual rounded
+ * multiplier increase and the remaining buff duration. With the
  * mouse upgrades a click is worth 15% of CpS, so at 20 clicks a second clicking alone earns three times
  * CpS before the buff multiplies it.
  */
@@ -6383,14 +6387,94 @@ function DevastationBonus() {
 }
 
 /**
- * Cookies to buy back every copy of a building after selling them all, and what the round trip costs
- * once the sale's refund is counted
+ * Sum of per-copy buy prices and their nominal difference from sale refunds.
+ * These quotes do not include rounding of each payment against the current bank.
  * @param	{object}	me	Building
  * @returns	{{rebuy: number, net: number}}
  */
 function CycleCost(me) {
-  const rebuy = (me.getPrice() * (1 - 1.15 ** -me.amount)) / 0.15;
-  return { rebuy, net: rebuy * (1 - 1.15 * me.getSellMultiplier()) };
+  // Match getPrice(), sell() and buy() in game 2.053, including free copies and rounding.
+  // The geometric estimate is unsafe near the free-building floor.
+  let rebuy = 0;
+  let refund = 0;
+  const priceAt = (amount) =>
+    Math.ceil(
+      Game.modifyBuildingPrice(
+        me,
+        me.basePrice * Game.priceIncrease ** Math.max(0, amount - me.free),
+      ),
+    );
+  const sellMultiplier = me.getSellMultiplier();
+  for (let amount = 0; amount < me.amount; amount++) {
+    rebuy += priceAt(amount);
+    refund += Math.floor(priceAt(amount + 1) * sellMultiplier);
+  }
+  return { rebuy, net: rebuy - refund };
+}
+
+/**
+ * Project the native bank updates when all current copies are sold and bought back.
+ * Prices and sale modifiers must stay unchanged through the cycle. No game state is changed.
+ * @param {object} me Building
+ * @param {number} bank Cookies before the sale
+ * @returns {{afterSale: number, afterBuyback: number, net: number, bought: number, canRebuy: boolean}}
+ */
+function ProjectCycle(me, bank) {
+  const { amount: count } = me;
+  const projection = {
+    afterSale: bank,
+    afterBuyback: bank,
+    net: 0,
+    bought: 0,
+    canRebuy: false,
+  };
+  if (!Number.isFinite(bank) || bank < 0 || !Number.isSafeInteger(count) || count < 0)
+    return projection;
+  const priceAt = (amount) =>
+    Math.ceil(
+      Game.modifyBuildingPrice(
+        me,
+        me.basePrice * Game.priceIncrease ** Math.max(0, amount - me.free),
+      ),
+    );
+  const sellMultiplier = me.getSellMultiplier();
+  if (!Number.isFinite(sellMultiplier) || sellMultiplier < 0) return projection;
+  // Native sell() starts at the current count, credits that rounded refund,
+  // and then decrements holdings. Aggregating the refunds changes rounding.
+  for (let amount = count; amount > 0; amount--) {
+    const refund = Math.floor(priceAt(amount) * sellMultiplier);
+    if (!Number.isFinite(refund) || refund < 0) return projection;
+    projection.afterSale += refund;
+    if (!Number.isFinite(projection.afterSale)) return projection;
+  }
+  projection.afterBuyback = projection.afterSale;
+  for (let amount = 0; amount < count; amount++) {
+    const price = priceAt(amount);
+    if (!Number.isFinite(price) || price < 0 || projection.afterBuyback < price) break;
+    // Game.Spend(price) subtracts directly from the bank on each successful copy.
+    projection.afterBuyback -= price;
+    projection.bought += 1;
+  }
+  projection.net = bank - projection.afterBuyback;
+  projection.canRebuy = projection.bought === count;
+  return projection;
+}
+
+/** Check benefit and full buyback with the current bank and native update order. */
+function CycleWorth(
+  me, clickIncome, seconds, bank,
+  multiplier = Game.hasBuff('Devastation')?.multClick ?? 1,
+) {
+  const bonus = DevastationBonus();
+  if (!bonus || !(clickIncome > 0) || !(seconds > 0)
+    || me.amount < 1 || NEVER_SELL.includes(me.name)) return false;
+  const { net, canRebuy } = ProjectCycle(me, bank);
+  // Match native sold * bonus followed by addition to the existing buff.
+  // A rounded-away increase has no click benefit; a bank gain can still pay.
+  const increase = multiplier + me.amount * bonus - multiplier;
+  // Zero gain stays zero even when the estimated income has overflowed.
+  const benefit = increase === 0 ? 0 : increase * clickIncome * seconds;
+  return canRebuy && benefit > MARGIN * net;
 }
 
 /**
@@ -6399,18 +6483,18 @@ function CycleCost(me) {
  * @param	{number}	clickIncome	Auto-click income per second without the buff
  * @param	{number}	seconds	Seconds of buff the sale feeds
  * @param	{number}	bank	Cookies at hand
+ * @param {number} multiplier Current buff multiplier; 1 for a fresh-buff forecast
  * @returns	{object[]}	Buildings
  */
-function CycleTypes(clickIncome, seconds, bank) {
+function CycleTypes(
+  clickIncome, seconds, bank,
+  multiplier = Game.hasBuff('Devastation')?.multClick ?? 1,
+) {
   const bonus = DevastationBonus();
   if (!bonus || !(clickIncome > 0) || !(seconds > 0)) return [];
   return Object.keys(Game.Objects)
     .map((name) => Game.Objects[name])
-    .filter((me) => {
-      if (me.amount < 1 || NEVER_SELL.includes(me.name)) return false;
-      const { rebuy, net } = CycleCost(me);
-      return bonus * me.amount * clickIncome * seconds > MARGIN * net && rebuy <= bank;
-    });
+    .filter((me) => CycleWorth(me, clickIncome, seconds, bank, multiplier));
 }
 
 /**
@@ -6424,7 +6508,8 @@ function CycleTypes(clickIncome, seconds, bank) {
 function GodzamokMultiplier(clickIncome, bank) {
   const bonus = DevastationBonus();
   if (!bonus) return 1;
-  const units = CycleTypes(clickIncome, BUFF_SECONDS / 2, bank).reduce(
+  // This forecast spans future buff windows, each starting at multiplier 1.
+  const units = CycleTypes(clickIncome, BUFF_SECONDS / 2, bank, 1).reduce(
     (sum, me) => sum + me.amount,
     0,
   );
@@ -6866,17 +6951,18 @@ function MilkMultiplier() {
 }
 
 /**
- * Share of CpS one more achievement adds: it raises milk by 0.04, and each owned kitten multiplies CpS
- * by 1 + k * milk * m, so CpS grows by the factor prod (1 + k m (milk + 0.04)) / (1 + k m milk)
+ * Share of CpS added by count achievements. Each raises milk by 0.04. Each owned kitten contributes
+ * the factor (1 + k m (milk + 0.04 count)) / (1 + k m milk).
+ * @param {number} [count] Achievements
  * @returns	{number}
  */
-function AchievementValue() {
+function AchievementValue(count = 1) {
   const m = MilkMultiplier();
   const milk = Game.milkProgress || 0;
   let ratio = 1;
   Object.keys(KITTENS).forEach((name) => {
     if (Game.Has(name))
-      ratio *= (1 + KITTENS[name] * m * (milk + 0.04)) / (1 + KITTENS[name] * m * milk);
+      ratio *= (1 + KITTENS[name] * m * (milk + 0.04 * count)) / (1 + KITTENS[name] * m * milk);
   });
   return ratio - 1;
 }
@@ -6894,14 +6980,14 @@ function PlayHorizon() {
 
 /**
  * What achievements are worth in seconds of play. A run at speed S retraces the same trajectory S times
- * faster, so a permanent gain of a share x of income makes all future play x faster: over a horizon H it
- * is worth x H seconds, to be weighed against seconds of delay (cookies spent at income I cost
- * cookies / I seconds)
+ * faster. With a fixed remaining horizon H, a gain x after a delay D pays when
+ * (1 + x) (H - D) > H, or D < H x / (1 + x). The horizon and speed scaling remain model assumptions.
  * @param	{number}	[count]	Achievements
  * @returns	{number}	Seconds
  */
 function AchievementWorth(count = 1) {
-  return count * AchievementValue() * PlayHorizon();
+  const gain = AchievementValue(count);
+  return (gain / (1 + gain)) * PlayHorizon();
 }
 
 /**
@@ -6921,13 +7007,15 @@ function KittenMilkFactor(name) {
  * - Christmas: A festive hat, then Santa's 14 levels (each unlocks a gift such as Santa's legacy, +3% CpS
  *   per level; the last one unlocks Santa's dominion, +20%)
  * - Valentine's day: the 7 heart biscuits (+2% CpS each), each unlocked by buying the previous one, in one
- *   short visit once they are cheap
+ *   short visit once they are cheap. The run waits in Christmas until then, and stays in Valentine's day
+ *   until the last heart: every extra switch costs 1.5 times the one before
  * - Easter: eggs drop from 10% of golden cookies; the run stays until 7 eggs while "Egging on" is missing
  * The rest of the run is spent in Christmas: reindeer pay one or two minutes of CpS each and drop
  * Christmas cookies, more than any other season brings. Switching costs a minute of CpS (x1.5 per switch in
  * a run). These actions are worth far more than they cost, so the auto-buyer keeps back the cookies for the
- * next one whenever it costs at most RESERVE_SECONDS of income. Without the Season switcher only the natural
- * season is used.
+ * next one whenever it costs at most RESERVE_SECONDS of income. Purchases that pay for themselves within
+ * RESERVE_SECONDS go first: they delay the action by less than that. Without the Season switcher only the
+ * natural season is used.
  */
 
 
@@ -6966,6 +7054,17 @@ function HeartsCost() {
 }
 
 /**
+ * Cookies to buy the next heart biscuit (all the remaining ones when none is unlocked yet)
+ * @returns	{number}
+ */
+function NextHeartCost() {
+  const next = (Game.heartDrops || [])
+    .map((name) => Game.Upgrades[name])
+    .find((me) => me.unlocked && !me.bought);
+  return next ? next.getPrice() : HeartsCost();
+}
+
+/**
  * Price of switching to a season (0 if already in it, Infinity if it cannot be triggered)
  * @param	{string}	season	Season key
  * @returns	{number}
@@ -6990,8 +7089,14 @@ function SeasonPlan(cheap) {
     return { season: 'christmas', cost: (Game.santaLevel + 1) ** (Game.santaLevel + 1) };
   }
   const hearts = HeartsCost();
-  if (hearts > 0 && hearts + SwitchCost('valentines') <= cheap)
-    return { season: 'valentines', cost: hearts + SwitchCost('valentines') };
+  if (hearts > 0) {
+    // The income estimate drops when the bank is spent, so a visit stays until the last heart
+    if (Game.season === 'valentines') return { season: 'valentines', cost: NextHeartCost() };
+    const switching = SwitchCost('valentines');
+    if (hearts + switching <= cheap) return { season: 'valentines', cost: hearts + switching };
+    // Wait for cheap hearts in Christmas instead of a round trip through Easter
+    if (Game.season === 'christmas') return { season: 'christmas', cost: 0 };
+  }
   const eggs = CountUnlocked(Game.eggDrops) + CountUnlocked(Game.rareEggDrops);
   if (!Game.HasAchiev('Egging on') && eggs < EGG_GOAL)
     return { season: 'easter', cost: SwitchCost('easter') };
@@ -7031,7 +7136,7 @@ function SeasonPurchases() {
 
 /**
  * Switches seasons, buys seasonal upgrades and sets the reserve the auto-buyer keeps for them
- * It is called by Autoplay() with the auto-buyer's cadence
+ * It is called by Autoplay() once in every cycle of frames
  */
 function AutoSeasons() {
   const { settings } = Game.mods.cookieMonsterFramework.saveData.cookieMonsterMod;
@@ -7155,6 +7260,12 @@ const SkippedUpgrades = ['Chocolate egg'];
 /** Seconds of measured income behind the countdown, and the least history it needs */
 const ETA_WINDOW = 600;
 const ETA_MIN_HISTORY = 60;
+/** Milliseconds of purchases per frame */
+const BURST_MS = 4;
+/** Most copies of one building in one purchase */
+const MAX_COPIES = 1000;
+/** Frames between plan updates while the buyer saves up */
+const WAIT_FRAMES = 10;
 
 /**
  * The purchase the buyer is saving for, shown in the timer bar
@@ -7164,62 +7275,205 @@ const ETA_MIN_HISTORY = 60;
  */
 const AutoBuyState = { next: null };
 
+let NextPlan = 0;
+
 /**
- * Buys the building or upgrade with the best payback period as soon as it is affordable
+ * Whether the buyer keeps its plan this frame: while it saves up it checks the plan a few times a
+ * second, or at once when the planned purchase is affordable
+ * Game.T restarts at 0 when the game resets for an ascension, so a check scheduled more than
+ * WAIT_FRAMES ahead belongs to an earlier run and is ignored
+ * @param	{number}	now	The current frame (Game.T)
+ * @param	{number}	nextPlan	The frame of the next scheduled check
+ * @param	{object|null}	next	The plan (AutoBuyState.next)
+ * @param	{number}	bank	Cookies in the bank
+ * @returns	{boolean}	Whether to skip planning this frame
+ */
+function KeepPlan(now, nextPlan, next, bank) {
+  if (!(now < nextPlan) || nextPlan - now > WAIT_FRAMES) return false;
+  return !(next && bank - next.reserve >= next.price);
+}
+
+/**
+ * The cookies kept back from a purchase with this payback period
+ * @param	{number}	payback	Seconds for the purchase to pay for itself
+ * @param	{{keepLucky: boolean, bankPayback: number, luckyBank: number, seasonReserve: number, seasonPayback: number}}	rules
+ * Reserve rules of this frame: whether to keep a "Lucky!" bank, the payback period above which it
+ * applies and its size at the start of the frame; the cookies kept for the next seasonal action and the
+ * payback period above which they are kept
+ * @returns	{{reserve: number, reason: string}}	The reserve and its reason ('lucky', 'season' or '')
+ */
+function Reserve(payback, rules) {
+  const lucky = rules.keepLucky && payback > rules.bankPayback ? rules.luckyBank : 0;
+  const season = payback > rules.seasonPayback ? rules.seasonReserve : 0;
+  const reserve = Math.max(lucky, season);
+  if (!(reserve > 0)) return { reserve: 0, reason: '' };
+  return { reserve, reason: lucky >= season ? 'lucky' : 'season' };
+}
+
+/**
+ * The buildings and upgrades the buyer may buy, with what each adds to long-run income
+ * The values come from Cookie Monster's caches, which are current at the start of the frame
+ * @param	{object}	economy	From AutoplayEconomy()
+ * @returns	{{name: string, me: object, building: boolean, value: number}[]}	Candidates with a positive value
+ */
+function Candidates(economy) {
+  const list = [];
+  Object.keys(Game.Objects).forEach((name) => {
+    const me = Game.Objects[name];
+    if (me.locked || !CacheObjects1[name]) return;
+    list.push({ name, me, building: true, value: LongRunValue(name, CacheObjects1[name], economy) });
+  });
+  if (UpgradesAllowed())
+    Game.UpgradesInStore.forEach((me) => {
+      if (
+        SkippedPools.includes(me.pool) ||
+        SkippedUpgrades.includes(me.name) ||
+        me.clickFunction ||
+        me.priceLumps > 0
+      )
+        return;
+      const value = LongRunValue(me.name, CacheUpgrades[me.name] || {}, economy);
+      list.push({ name: me.dname || me.name, me, building: false, value });
+    });
+  return list.filter((c) => c.value > 0);
+}
+
+/**
+ * Ranks the candidates by payback period at the current bank: the time to save for each one plus the
+ * time it takes to pay for itself
+ * @param	{object[]}	candidates	From Candidates()
+ * @param	{number}	bank	Cookies in the bank
+ * @param	{number}	income	Expected income, which fills the bank
+ * @param	{object}	rules	Reserve rules of this frame (see Reserve())
+ * @returns	{{best: object|null, second: object|null}}	The best candidate and the runner-up, each
+ * {c, price, payback, pp, reserve, reason}
+ */
+function Rank(candidates, bank, income, rules) {
+  let best = null;
+  let second = null;
+  candidates.forEach((c) => {
+    if (!c.building && c.me.bought) return;
+    const price = c.me.getPrice();
+    if (!Number.isFinite(price)) return;
+    const payback = price / c.value;
+    const { reserve, reason } = Reserve(payback, rules);
+    const pp = Math.max(price - (bank - reserve), 0) / income + payback;
+    const entry = { c, price, payback, pp, reserve, reason };
+    if (best === null || pp < best.pp) {
+      second = best;
+      best = entry;
+    } else if (second === null || pp < second.pp) second = entry;
+  });
+  return { best, second };
+}
+
+/**
+ * How many copies of the best building to buy before the runner-up: every copy must be affordable,
+ * pay back no slower than the runner-up and need the same reserve as the first copy
+ * Copies cost 1.15 times the copy before them and add the same income
+ * @param	{object}	best	The best candidate, a building (from Rank())
+ * @param	{object|null}	second	The runner-up (from Rank())
+ * @param	{number}	bank	Cookies in the bank
+ * @param	{object}	rules	Reserve rules of this frame (see Reserve())
+ * @returns	{number}	Copies to buy, at least 1
+ */
+function Copies(best, second, bank, rules) {
+  const { me, value } = best.c;
+  const factor = Game.modifyBuildingPrice(me, 1);
+  const limit = second ? second.pp : Infinity;
+  let cost = 0;
+  let n = 0;
+  while (n < MAX_COPIES) {
+    const price =
+      n === 0
+        ? best.price
+        : Math.ceil(me.basePrice * Game.priceIncrease ** Math.max(0, me.amount + n - me.free) * factor);
+    const payback = price / value;
+    if (n > 0 && (payback > limit || Reserve(payback, rules).reserve !== best.reserve)) break;
+    if (cost + price > bank - best.reserve) break;
+    cost += price;
+    n += 1;
+  }
+  return Math.max(n, 1);
+}
+
+/**
+ * Buys buildings and upgrades in order of payback period as soon as they are affordable
  * Purchases are valued by what they add to long-run income under autoplay: CpS and click power at the
  * auto-click rate, without current buffs and grown by Frenzies, plus golden cookie effects. Cookies are
  * kept for a maximum "Lucky!" reward whenever a banked cookie pays itself back through "Lucky!" faster
  * than the purchase would
+ * Each frame buys as much as BURST_MS allows, with the values from the start of the frame. More copies
+ * of a building only raise the value of other purchases, so these values never overrate a purchase.
+ * The frame stops after an upgrade and before a second purchase that needs a reserve, because an
+ * upgrade can change many values and the "Lucky!" bank grows with CpS
  */
 function AutoBuy() {
   const { settings } = Game.mods.cookieMonsterFramework.saveData.cookieMonsterMod;
-  // CpS changed this frame and Cookie Monster recomputes its values after autoplay runs, so values
-  // and the "Lucky!" bank are stale until the next tick
-  if (SimDoSims && settings.AutoBuy) return;
-  AutoBuyState.next = null;
-  if (!settings.AutoBuy || Game.OnAscend || Game.AscendTimer > 0 || Game.ReincarnateTimer > 0)
+  // Cookie Monster recomputes its values after autoplay runs. They are stale on the frame after CpS
+  // changes, and when CpS changed earlier in this frame
+  if (settings.AutoBuy && (SimDoSims || Game.recalculateGains)) return;
+  if (!settings.AutoBuy || Game.OnAscend || Game.AscendTimer > 0 || Game.ReincarnateTimer > 0) {
+    AutoBuyState.next = null;
     return;
-  if (Game.buyMode !== 1) return; // The store is in sell mode
+  }
+  if (Game.buyMode !== 1) {
+    AutoBuyState.next = null; // The store is in sell mode
+    return;
+  }
+  if (KeepPlan(Game.T, NextPlan, AutoBuyState.next, Game.cookies)) return;
 
-  const bank = Game.cookies;
-  const economy = AutoplayEconomy(bank);
-  const bankPayback = LuckyBankPayback();
-  const keepLucky = settings.AutoGolden && settings.AutoBuyLuckyBank;
-  const seasonReserve = settings.AutoSeasons ? SeasonState.reserve : 0;
-  if (keepLucky && !(CacheLucky > 0) && Game.cookiesPs > 0) return; // "Lucky!" bank not known yet
-
-  let best = null;
-  const consider = (name, price, value, buy) => {
-    if (!(value > 0) || !Number.isFinite(price)) return;
-    const payback = price / value;
-    const lucky = keepLucky && payback > bankPayback ? CacheLucky : 0;
-    const reserve = Math.max(lucky, seasonReserve);
-    let reason = '';
-    if (reserve > 0) reason = lucky >= seasonReserve ? 'lucky' : 'season';
-    const pp = Math.max(price - (bank - reserve), 0) / economy.income + payback;
-    if (best === null || pp < best.pp) best = { name, price, payback, pp, reserve, reason, buy };
+  const economy = AutoplayEconomy(Game.cookies);
+  const rules = {
+    keepLucky: settings.AutoGolden && settings.AutoBuyLuckyBank,
+    bankPayback: LuckyBankPayback(),
+    luckyBank: CacheLucky,
+    seasonReserve: settings.AutoSeasons ? SeasonState.reserve : 0,
+    seasonPayback: RESERVE_SECONDS,
   };
+  if (rules.keepLucky && !(CacheLucky > 0) && Game.cookiesPs > 0) {
+    AutoBuyState.next = null; // "Lucky!" bank not known yet
+    return;
+  }
 
-  Object.keys(Game.Objects).forEach((name) => {
-    const me = Game.Objects[name];
-    if (me.locked || !CacheObjects1[name]) return;
-    consider(name, me.getPrice(), LongRunValue(name, CacheObjects1[name], economy), () =>
-      me.buy(1),
-    );
-  });
-  Game.UpgradesInStore.forEach((me) => {
-    if (
-      !UpgradesAllowed() ||
-      SkippedPools.includes(me.pool) ||
-      SkippedUpgrades.includes(me.name) ||
-      me.clickFunction ||
-      me.priceLumps > 0
-    )
-      return;
-    const value = LongRunValue(me.name, CacheUpgrades[me.name] || {}, economy);
-    consider(me.dname || me.name, me.getPrice(), value, () => me.buy());
-  });
-  if (best === null) return;
+  const candidates = Candidates(economy);
+  const start = performance.now();
+  const { volume } = Game;
+  let purchases = 0;
+  let upgradeBought = false;
+  let plan = null;
+  let affordable = false;
+  try {
+    for (;;) {
+      const bank = Game.cookies;
+      const { best, second } = Rank(candidates, bank, economy.income, rules);
+      plan = best;
+      affordable = best !== null && best.price <= bank - best.reserve;
+      if (!affordable) break;
+      if (purchases > 0) {
+        if (upgradeBought || best.reserve > 0 || performance.now() - start >= BURST_MS) break;
+        Game.volume = 0; // One purchase sound per frame
+      }
+      const { me } = best.c;
+      if (best.c.building) {
+        const owned = me.amount;
+        me.buy(Copies(best, second, bank, rules));
+        if (me.amount === owned) break;
+      } else {
+        me.buy();
+        if (!me.bought) break;
+        upgradeBought = true;
+      }
+      purchases += 1;
+    }
+  } finally {
+    Game.volume = volume;
+  }
+  NextPlan = affordable ? 0 : Game.T + WAIT_FRAMES;
+  if (plan === null) {
+    AutoBuyState.next = null;
+    return;
+  }
 
   // The countdown uses income measured in this run: the expected income counts rare jackpots (cookie
   // storms, Click frenzies) that seldom land within a few minutes
@@ -7229,17 +7483,16 @@ function AutoBuy() {
       ? CookiesDiff.calcAverage(history)
       : 0;
   const etaIncome = Math.max(measured, economy.cps + economy.clicks, 1e-9);
-  const spendable = bank - best.reserve;
+  const spendable = Game.cookies - plan.reserve;
   AutoBuyState.next = {
-    name: best.name,
-    price: best.price,
-    payback: best.payback,
-    reserve: best.reserve,
-    reason: best.reason,
+    name: plan.c.name,
+    price: plan.price,
+    payback: plan.payback,
+    reserve: plan.reserve,
+    reason: plan.reason,
     spendable,
-    eta: Math.max(best.price - spendable, 0) / etaIncome,
+    eta: Math.max(plan.price - spendable, 0) / etaIncome,
   };
-  if (best.price <= spendable) best.buy();
 }
 
 ;// ./src/Cache/FillCMDCache.js
@@ -7287,8 +7540,8 @@ function FillCMDCache(caches) {
  * Optimal stopping
  * ----------------
  * Ascending is a trade: it restarts the run in exchange for a faster speed in every later run. The best
- * moment minimises the total time to reach a distant prestige goal, which is solved exactly with a
- * dynamic program over the prestige at which each future ascension happens:
+ * moment minimises the modelled time to a distant prestige goal. A dynamic program compares the
+ * selected grid points. Its grid, fitted run curve and minimum speed gain limit the result:
  *
  *     V(P) = min over P' > P of [ runTime(P → P') + τ + V(P') ]
  *
@@ -7413,7 +7666,8 @@ function SolveForGoal(run, goalFactor) {
 
   // The current run: keep baking until factors[j], then ascend (-1: no worthwhile ascension in sight)
   let index = -1;
-  let total = Infinity;
+  // Reaching the goal without another reset is a legal action. Its terminal cost is zero.
+  let total = remainingAt(n - 1);
   for (let j = 0; j < n - 1; j++) {
     if (speeds[j] / speed.currentSpeed - 1 >= MIN_SPEED_GAIN) {
       const t = remainingAt(j) + overhead + value[j];
@@ -7547,13 +7801,23 @@ function OptimalRunMultiplier(beta) {
 /** "Lucky ..." heavenly upgrades: +1% prestige effect on CpS and +1% golden cookie effect duration */
 const luckyUpgrade = (ctx) => 1.01 * (1 + 0.01 * ctx.golden.frenzy);
 
+/** Click multiplier of "Aura gloves": +5% for each cursor level up to `cap` */
+const auraGloves = (cap) => 1 + 0.05 * Math.min(Game.Objects.Cursor.level, cap);
+
+/** Kitten upgrades owned, which "Cat ladies" counts */
+const kittensOwned = () =>
+  ((Game.UpgradesByPool && Game.UpgradesByPool.kitten) || []).filter((me) => me.bought).length;
+
 /**
  * Estimated production multiplier of each heavenly upgrade worth chips under autoplay, given
- * ctx = {clickShare, golden: {frenzy, lucky, total}, autoplay} (income shares of clicks and golden
- * cookies, and which autoplay systems are on).
+ * ctx = {clickShare, golden: {frenzy, lucky, total}, autoplay, grandmaShare} (income shares of clicks and
+ * golden cookies, which autoplay systems are on, and the share of CpS from grandmas).
+ * The "Unshackled" upgrades act together and are valued by UnshackledValue().
  * Upgrades not listed are only bought as parents of listed ones: cosmetics, the golden switch and the
- * shimmering veil (they turn off or break on golden cookies), offline production, fortunes, gifts,
- * petting the dragon and the sugar frenzy.
+ * shimmering veil (they turn off or break on golden cookies), offline production, gifts and the sugar
+ * frenzy. Autoplay spends lumps on the sugar frenzy once Sugar craving is owned, before the cursor levels
+ * for loans and before "Sugar baking" can keep them, so Sugar craving and Sugar aging process (its child)
+ * are not bought.
  */
 const HeavenlyUpgradeValues = {
   'Heavenly cookies': () => 1.1,
@@ -7562,6 +7826,8 @@ const HeavenlyUpgradeValues = {
   Heralds: () => 1 + 0.01 * Game.heralds,
   'Kitten angels': () => 1 + 0.1 * Game.milkProgress,
   'Halo gloves': (ctx) => 1 + 0.1 * ctx.clickShare,
+  'Aura gloves': (ctx) => 1 + ctx.clickShare * (auraGloves(10) - 1),
+  'Luminous gloves': (ctx) => 1 + ctx.clickShare * (auraGloves(20) / auraGloves(10) - 1),
   'Heavenly luck': (ctx) => 1 + 0.05 * ctx.golden.total,
   'Lasting fortune': (ctx) => 1 + 0.1 * ctx.golden.frenzy,
   'Lucky digit': luckyUpgrade,
@@ -7569,6 +7835,10 @@ const HeavenlyUpgradeValues = {
   'Lucky payout': luckyUpgrade,
   'Distilled essence of redoubled luck': (ctx) => 1 + 0.01 * ctx.golden.total,
   'Sugar baking': () => 1 + 0.01 * Math.min(Game.lumps, 100),
+  // Grandmas: x1.29 for each kitten upgrade owned, and +5% for each rank of milk
+  'Cat ladies': (ctx) => 1 + (ctx.grandmaShare || 0) * (1.29 ** kittensOwned() - 1),
+  'Milkhelp&reg; lactose intolerance relief tablets': (ctx) =>
+    1 + (ctx.grandmaShare || 0) * 0.05 * Game.milkProgress * MilkMultiplier(),
   // Estimates for upgrades that work through cheaper or extra store upgrades
   'Divine discount': () => 1.01,
   'Divine sales': () => 1.005,
@@ -7585,6 +7855,11 @@ const HeavenlyUpgradeValues = {
   'Starter kit': () => 1.005,
   'Starter kitchen': () => 1.005,
   'Persistent memory': () => 1.01,
+  // Kitten upgrades 10% cheaper; synergy upgrades 2% cheaper (Chimera's other effects are offline)
+  'Kitten wages': () => 1.01,
+  Chimera: () => 1.002,
+  // About 3% more sugar lumps: bifurcated lumps are more common and drop two lumps more often
+  'Sucralosia Inutilis': () => 1.003,
   // Systems that autoplay runs every ascension (estimates)
   // The dragon reaches Radiant Appetite (x2) once 100 of the first 14 buildings can be sacrificed
   'How to bake your dragon': (ctx) => (ctx.autoplay.dragon ? 1.8 : 1),
@@ -7609,17 +7884,105 @@ const HeavenlyUpgradeValues = {
   Keepsakes: (ctx) => (ctx.autoplay.seasons ? 1.02 : 1),
   // Sending yourself a gift and redeeming it earns "No time like the present": one more achievement
   'Wrapping paper': (ctx) => (ctx.autoplay.achievements ? 1.02 : 1),
+  // Fortunes, clicked when the ticker shows one: about two a run, mostly +7% for one building
+  'Fortune cookies': (ctx) => (ctx.autoplay.achievements ? 1.02 : 1),
+  // Petting drops one +3% upgrade in each new quarter-hour of a run, and drops last one run
+  'Pet the dragon': (ctx) => (ctx.autoplay.dragon ? 1.03 : 1),
 };
+
+/** Upgrades that multiply the Thousand fingers gain, as in the game's cursor code */
+const FINGERS = [
+  ['Million fingers', 5],
+  ['Billion fingers', 10],
+  ['Trillion fingers', 20],
+  ['Quadrillion fingers', 20],
+  ['Quintillion fingers', 20],
+  ['Sextillion fingers', 20],
+  ['Septillion fingers', 20],
+  ['Octillion fingers', 20],
+  ['Nonillion fingers', 20],
+  ['Decillion fingers', 20],
+  ['Undecillion fingers', 20],
+];
+
+/**
+ * Factor by which "Unshackled cursors" multiplies cursor CpS: it multiplies the Thousand fingers gain
+ * (per building that is not a cursor) by 25, and leaves the base production of a cursor as it is
+ * @returns	{number}
+ */
+function CursorUnshackleGain() {
+  if (!Game.Has('Thousand fingers')) return 1;
+  const others =
+    Game.ObjectsById.reduce((sum, me) => sum + me.amount, 0) - Game.Objects.Cursor.amount;
+  const fingers =
+    FINGERS.reduce((gain, [name, mult]) => (Game.Has(name) ? gain * mult : gain), 0.1) * others;
+  const doublings =
+    Game.Has('Reinforced index finger') +
+    Game.Has('Carpal tunnel prevention cream') +
+    Game.Has('Ambidextrous');
+  const base = 0.1 * 2 ** doublings;
+  return (base + 25 * fingers) / (base + fingers);
+}
+
+/** Last shares from a normal run, for use while heavenly upgrades have no effect (Born again) */
+let LastShares = [];
+
+/**
+ * What the "Unshackled" heavenly upgrades act on now. A tiered upgrade of an unshackled building gives
+ * 2 + 0.1 (20 - id) (grandmas 2.5) instead of 2 when its tier is unshackled too. "Unshackled cursors"
+ * multiplies the Thousand fingers gain of cursors by 25 instead; cursors have no such tiers.
+ * @returns	{{upgrade: string, share: number, base: number, gain: number, tiers: string[]}[]}	For each
+ * building: its unshackle upgrade, its share of CpS, the factor that upgrade gives alone, the factor of
+ * each unshackled tier, and the unshackle upgrades of the tiers whose tiered upgrade it owns
+ */
+function UnshackleShares() {
+  if (Game.ascensionMode === 1) return LastShares;
+  const total = Game.ObjectsById.reduce((sum, me) => sum + me.storedTotalCps, 0);
+  if (!(total > 0)) return LastShares;
+  LastShares = Game.ObjectsById.filter((me) => Game.Upgrades[me.unshackleUpgrade]).map((me) => ({
+    upgrade: me.unshackleUpgrade,
+    share: me.storedTotalCps / total,
+    base: me.name === 'Cursor' ? CursorUnshackleGain() : 1,
+    gain: (2 + (me.id === 1 ? 0.5 : (20 - me.id) * 0.1)) / 2,
+    tiers: Object.keys(me.tieredUpgrades)
+      .map((key) => me.tieredUpgrades[key])
+      .filter(
+        (it) =>
+          !Game.Tiers[it.tier].special && Game.Has(it.name) && Game.Tiers[it.tier].unshackleUpgrade,
+      )
+      .map((it) => Game.Tiers[it.tier].unshackleUpgrade),
+  }));
+  return LastShares;
+}
+
+/**
+ * Production multiplier of a set of "Unshackled" upgrades over those owned now: the sum over buildings
+ * of share x (factor with the set) / (factor now). These upgrades are not independent: a building gains
+ * only for the tiers that are unshackled too
+ * @param	{object[]}	shares	From UnshackleShares()
+ * @returns	{function}	has => multiplier, where has(name) tells whether an upgrade is owned or planned
+ */
+function UnshackledValue(shares) {
+  const owned = (name) => !!(Game.Upgrades[name] && Game.Upgrades[name].bought);
+  const factor = (it, has) =>
+    has(it.upgrade) ? it.tiers.reduce((f, tier) => (has(tier) ? f * it.gain : f), it.base) : 1;
+  const weights = shares.map((it) => it.share / factor(it, owned));
+  return (has) =>
+    shares.length ? shares.reduce((sum, it, i) => sum + weights[i] * factor(it, has), 0) : 1;
+}
 
 /**
  * Shares of income from clicks and golden cookies that value the heavenly upgrades. "Lucky!" is
  * counted at its maximum, as autoplay keeps the bank for it when that pays
  * @param	{number}	income		Cookies per second
  * @param	{number}	clickIncome	Cookies per second from auto-click
- * @returns	{{clickShare: number, golden: object, autoplay: object}}
+ * @returns	{{clickShare: number, golden: object, autoplay: object, unshackle: object[], grandmaShare: number}}
  */
 function HeavenlyContext(income, clickIncome) {
   const { settings } = Game.mods.cookieMonsterFramework.saveData.cookieMonsterMod;
+  const unshackle = UnshackleShares();
+  const grandma = Game.Objects.Grandma;
+  const grandmas = grandma && unshackle.find((it) => it.upgrade === grandma.unshackleUpgrade);
   return {
     clickShare: income > 0 ? clickIncome / income : 0,
     golden: GoldenShares(income, CacheLucky),
@@ -7629,6 +7992,8 @@ function HeavenlyContext(income, clickIncome) {
       elder: !!settings.AutoElder,
       achievements: !!settings.AutoAchievements,
     },
+    unshackle,
+    grandmaShare: grandmas ? grandmas.share : 0,
   };
 }
 
@@ -7658,10 +8023,11 @@ function Bundle(upgrade, planned) {
 /**
  * Orders the valued heavenly upgrades by time saved per chip: repeatedly picks the upgrade whose
  * bundle (the upgrade plus the parents it still needs, valued together) has the largest
- * (1 - 1/multiplier) / cost. When earning chips takes time inversely proportional to the speed, swapping
- * two adjacent purchases changes the total time by exactly the difference of this index, so sorting by
- * it is optimal (Smith's rule for multiplicative speed-ups). Legacy is left out; it costs one chip and
- * is always bought first.
+ * (1 - 1/multiplier) / effectiveCost. The effective cost discounts each later price by earlier
+ * multipliers in that bundle. This exchange rule is exact for independent fixed blocks in the
+ * proportional earning model. Searching only ancestor bundles is a heuristic for general prerequisites.
+ * The multiplier of an "Unshackled" upgrade is its gain given the upgrades planned before it.
+ * Legacy is left out. It costs one chip and is always bought first.
  * The ascension planner assumes chips are spent along this order, saving up for the next item, and
  * auto-ascend spends them exactly that way.
  * @param	{object}	ctx	From HeavenlyContext()
@@ -7669,24 +8035,54 @@ function Bundle(upgrade, planned) {
  */
 function HeavenlyPurchaseOrder(ctx) {
   const planned = { Legacy: true };
+  const shares = ctx.unshackle || [];
+  const unshackledValue = UnshackledValue(shares);
+  const unshackled = {};
+  shares.forEach((it) => {
+    unshackled[it.upgrade] = true;
+    it.tiers.forEach((tier) => {
+      unshackled[tier] = true;
+    });
+  });
   const valueOf = (me) =>
     HeavenlyUpgradeValues[me.name] ? HeavenlyUpgradeValues[me.name](ctx) : 1;
+  const bought = (name) => !!(Game.Upgrades[name] && Game.Upgrades[name].bought);
   const candidates = Object.keys(HeavenlyUpgradeValues)
+    .concat(Object.keys(unshackled))
     .map((name) => Game.Upgrades[name])
     .filter((me) => me && !me.bought);
   const order = [];
   for (;;) {
+    const level = unshackledValue((name) => !!planned[name] || bought(name));
     let best = null;
     candidates.forEach((me) => {
       if (planned[me.name]) return;
       const bundle = Bundle(me, planned);
       if (bundle === null) return;
-      const mult = bundle.reduce((product, it) => product * valueOf(it), 1);
+      const added = {};
+      const has = (name) => !!added[name] || !!planned[name] || bought(name);
+      let reached = level;
+      const steps = bundle.map((it) => {
+        added[it.name] = true;
+        let mult = valueOf(it);
+        if (unshackled[it.name]) {
+          const next = unshackledValue(has);
+          mult = reached > 0 ? next / reached : 1;
+          reached = next;
+        }
+        return { cost: it.getPrice(), mult };
+      });
+      let mult = 1;
+      let effectiveCost = 0;
+      steps.forEach((step) => {
+        effectiveCost += step.cost / mult;
+        mult *= step.mult;
+      });
       if (!(mult > 1)) return;
       const cost = bundle.reduce((sum, it) => sum + it.getPrice(), 0);
-      const density = (1 - 1 / mult) / Math.max(cost, 1);
+      const density = effectiveCost > 0 ? (1 - 1 / mult) / effectiveCost : Infinity;
       if (best === null || density > best.density)
-        best = { name: me.dname || me.name, bundle, cost, mult, density };
+        best = { name: me.dname || me.name, bundle, steps, cost, effectiveCost, mult, density };
     });
     if (best === null) return order;
     best.bundle.forEach((it) => {
@@ -7696,8 +8092,114 @@ function HeavenlyPurchaseOrder(ctx) {
   }
 }
 
+;// ./src/Main/Autoplay/AscensionActions.js
+/** Cash-in and purchase actions shared by the ascension planner and automation. */
+
+/** Request every stored wrinkler payout before the bank is used for the egg. */
+function RequestWrinklerPayouts() {
+  for (let i = 0; i < Game.wrinklers.length; i++) {
+    const me = Game.wrinklers[i];
+    if (me.phase > 0 && me.sucked > 0 && me.hp > 0.5) me.hp = 0;
+  }
+}
+
+/** Use the game's Escape handler only during the ascension started by the caller. */
+function SkipAscensionAnimation() {
+  if (
+    Game.promptOn || Game.OnAscend || Game.AscendTimer <= 0 || Game.ReincarnateTimer > 0
+  ) return false;
+  const event = new KeyboardEvent('keyup', {
+    key: 'Escape', code: 'Escape', keyCode: 27, which: 27,
+  });
+  // Cookie Clicker 2.053 reads keyCode. Some event constructors ignore its initializer.
+  if (event.keyCode !== 27) Object.defineProperty(event, 'keyCode', { value: 27 });
+  window.dispatchEvent(event);
+  return Game.AscendTimer >= Game.AscendDuration;
+}
+
+/** Egg payout from a specified bank after its purchase price, without asset liquidation. */
+function ChocolateEggPayout(bank) {
+  const egg = Game.Upgrades['Chocolate egg'];
+  if (!egg || !egg.unlocked || egg.bought) return 0;
+  return 0.05 * Math.max(0, bank - egg.getPrice());
+}
+
+/** Buy the egg after pending wrinkler payouts. Return false while a payout is pending. */
+function CashInChocolateEgg() {
+  if (Game.wrinklers.some((me) => me.phase > 0 && me.hp <= 0.5)) return false;
+  const egg = Game.Upgrades['Chocolate egg'];
+  if (egg && egg.unlocked && !egg.bought) egg.buy();
+  return true;
+}
+
+/** Seconds of cash-in that may pass while ascending waits for a prestige level with four 7s. */
+const LUCKY_WAIT_SECONDS = 60;
+
+/**
+ * Wait before ascending for a prestige level whose digits contain four 7s: only then does the ascension
+ * screen sell "Lucky payout" (+1% prestige effect and golden cookie duration in every later run).
+ * The game earns no cookies during the ascension animation, so the frame that starts the ascension
+ * fixes the prestige level, and each frame adds about CpS / fps cookies.
+ */
+function LuckyPrestigeWait(elapsed) {
+  const me = Game.Upgrades['Lucky payout'];
+  if (!me || me.bought || elapsed > LUCKY_WAIT_SECONDS) return false;
+  if (me.parents.some((parent) => parent !== -1 && !parent.bought)) return false;
+  const prestige = Math.floor(Game.HowMuchPrestige(Game.cookiesReset + Game.cookiesEarned));
+  return `${prestige}`.split('7').length - 1 < 4;
+}
+
+/** Buy the affordable prefix of a planned heavenly order, including partial parent bundles. */
+function SpendHeavenlyOrder(order) {
+  const upgrades = order.flatMap((item) => item.bundle);
+  for (let i = 0; i < upgrades.length; i++) {
+    const me = upgrades[i];
+    if (!me.bought && (me.getPrice() > Game.heavenlyChips || me.buy() !== 1)) break;
+  }
+}
+
+/** Heavenly upgrades owned for "All the stars in heaven", which the game awards at reincarnation. */
+const STARS_IN_HEAVEN = 100;
+/** Share of the chips held at ascension that the upgrades bought only for that count may cost. */
+const STARS_BUDGET = 0.01;
+/** Never bought for the count, with their children: the Sugar frenzy takes the lumps that other uses need, and the veil breaks on every click. */
+const NOT_FOR_STARS = ['Sugar craving', 'Shimmering veil'];
+
+/**
+ * Buy the cheapest available heavenly upgrades that are still missing for "All the stars in heaven",
+ * when all of them cost at most `budget` chips. One achievement adds 4% milk to every run.
+ */
+function BuyForStarsInHeaven(budget) {
+  if (Game.HasAchiev('All the stars in heaven')) return 0;
+  const all = Game.PrestigeUpgrades;
+  const taken = new Set();
+  const ready = (me) => me === -1 || me.bought || taken.has(me);
+  let missing = STARS_IN_HEAVEN - all.filter((me) => me.bought).length;
+  let cost = 0;
+  while (missing > 0) {
+    let next = null;
+    for (let i = 0; i < all.length; i++) {
+      const me = all[i];
+      if (!me.bought && !taken.has(me) && !NOT_FOR_STARS.includes(me.name)
+        && (!me.showIf || me.showIf()) && me.parents.every(ready)
+        && (next === null || me.getPrice() < next.getPrice())) next = me;
+    }
+    if (next === null) return 0;
+    taken.add(next);
+    cost += next.getPrice();
+    missing -= 1;
+  }
+  if (cost > Math.min(budget, Game.heavenlyChips)) return 0;
+  let bought = 0;
+  taken.forEach((me) => {
+    if (me.buy() === 1) bought += 1;
+  });
+  return bought;
+}
+
 ;// ./src/Cache/Stats/Ascension.js
-/** Section: Caches the state of the optimal ascension advisor */
+/** Section: Caches the state of the model-based ascension advisor */
+
 
 
 
@@ -7775,8 +8277,9 @@ function AutoClickIncome() {
  * @returns	{{state: object, heavenly: object, heavenlyContext: object, heavenlyOrder: object[]}}
  */
 function GetAscensionInputs() {
-  const choEgg =
-    Game.HasUnlocked('Chocolate egg') && !Game.Has('Chocolate egg') ? CacheLastChoEgg : 0;
+  // The general Cookie Monster cache assumes asset sales and optimal resale auras.
+  // Autoplay only pops wrinklers before the egg, so use the payout that this policy can collect.
+  const choEgg = ChocolateEggPayout(Game.cookies + CacheWrinklersTotal);
   const buffMult = GetCPSBuffMult();
   const clickIncome = AutoClickIncome();
   const baseIncome =
@@ -7811,7 +8314,7 @@ function GetAscensionInputs() {
       power: HeavenlyMultiplierPotential(),
       // Owned heavenly upgrades speed up the current and future runs alike, so they cancel out
       ownedMult: 1,
-      upgrades: heavenlyOrder.map((item) => ({ cost: item.cost, mult: item.mult })),
+      upgrades: heavenlyOrder.flatMap((item) => item.steps),
     },
     heavenlyContext,
     heavenlyOrder,
@@ -7914,11 +8417,11 @@ function AscensionSummary() {
 
   let status = 'wait';
   let colour = ColourBlue;
-  let headline = `Keep baking: optimal ascension in ${forecastText}`;
+  let headline = `Keep baking: planned ascension in ${forecastText}`;
   if (plan.ascendNow) {
     status = 'ready';
     colour = ColourGreen;
-    headline = 'Ascend now: it is the optimal time';
+    headline = 'Ascend now: the model recommends a reset';
   } else if (plan.readiness >= 0.9) colour = ColourYellow;
 
   return {
@@ -12020,6 +12523,22 @@ function AllAmountTillNextAchievement(forceRecalc) {
 
 
 
+/** Cookies paid by one wrinkler, using the modifiers applied by the game's pop action. */
+function WrinklerPayout(me) {
+  let toSuck = 1.1;
+  if (Game.Has('Sacrilegious corruption')) toSuck *= 1.05;
+  if (me.type === 1) toSuck *= 3;
+  let sucked = me.sucked * (1 + Game.auraMult('Dragon Guts') * 0.2);
+  sucked *= toSuck;
+  if (Game.Has('Wrinklerspawn')) sucked *= 1.05;
+  if (Game.hasGod) {
+    const godLvl = Game.hasGod('scorn');
+    if (godLvl === 1) sucked *= 1.15;
+    else if (godLvl === 2) sucked *= 1.1;
+    else if (godLvl === 3) sucked *= 1.05;
+  }
+  return sucked;
+}
 
 /**
  * This functions caches data related to Wrinklers
@@ -12033,18 +12552,7 @@ function CacheWrinklers() {
   CacheWrinklersNormal = 0;
   CacheWrinklersFattest = [0, null];
   for (let i = 0; i < Game.wrinklers.length; i++) {
-    let { sucked } = Game.wrinklers[i];
-    let toSuck = 1.1;
-    if (Game.Has('Sacrilegious corruption')) toSuck *= 1.05;
-    if (Game.wrinklers[i].type === 1) toSuck *= 3; // Shiny wrinklers
-    sucked *= toSuck;
-    if (Game.Has('Wrinklerspawn')) sucked *= 1.05;
-    if (SimObjects.Temple.minigameLoaded) {
-      const godLvl = Game.hasGod('scorn');
-      if (godLvl === 1) sucked *= 1.15;
-      else if (godLvl === 2) sucked *= 1.1;
-      else if (godLvl === 3) sucked *= 1.05;
-    }
+    const sucked = WrinklerPayout(Game.wrinklers[i]);
     CacheWrinklersTotal += sucked;
     if (Game.wrinklers[i].type === 0) {
       CacheWrinklersNormal += sucked;
@@ -13268,7 +13776,7 @@ const settings_settings = {
     'numscale',
     'Calculation',
     'Ascension overhead (seconds): ',
-    'Time lost per ascension (ascending, spending heavenly chips, restarting) used by the ascension advisor. The optimal ascension time is not very sensitive to this value',
+    'Time lost per ascension (ascending, spending heavenly chips, restarting) used by the ascension advisor. The planned ascension time is not very sensitive to this value',
     0,
     Infinity,
   ),
@@ -13511,7 +14019,7 @@ const settings_settings = {
     'bool',
     'BarsDisplay',
     ['Ascension readiness bar OFF', 'Ascension readiness bar ON'],
-    'Show how close the run is to the optimal ascension time in the timer bar',
+    'Show how close the run is to the planned ascension time in the timer bar',
     true,
   ),
   UpBarColour: new settingClasses.SettingStandardWithFunc(
@@ -13794,7 +14302,7 @@ const settings_settings = {
     'bool',
     'Statistics',
     ['Ascension advisor OFF', 'Ascension advisor ON'],
-    'Show the ascension advisor (optimal time to ascend, forecast and checklist) at the top of the statistics page',
+    'Show the ascension advisor (planned time to ascend, forecast and checklist) at the top of the statistics page',
     true,
   ),
   MissingUpgrades: new settingClasses.SettingStandard(
@@ -14155,7 +14663,7 @@ const settings_settings = {
     'bool',
     'NotificationAscend',
     ['In-game note OFF', 'In-game note ON'],
-    'Show a note in the game when the optimal time to ascend is reached',
+    'Show a note in the game when the planned time to ascend is reached',
     true,
   ),
   AscendNotification: new settingClasses.SettingStandardWithFunc(
@@ -14163,7 +14671,7 @@ const settings_settings = {
     'bool',
     'NotificationAscend',
     ['Notification OFF', 'Notification ON'],
-    'Create a notification when the optimal time to ascend is reached',
+    'Create a notification when the planned time to ascend is reached',
     true,
     () => {
       Config_CheckNotificationPermissions(
@@ -14176,7 +14684,7 @@ const settings_settings = {
     'bool',
     'NotificationAscend',
     ['Flash OFF', 'Flash ON'],
-    'Flash screen when the optimal time to ascend is reached',
+    'Flash screen when the planned time to ascend is reached',
     true,
   ),
   ColourAscendFlash: new settingClasses.SettingColours(
@@ -14190,7 +14698,7 @@ const settings_settings = {
     'bool',
     'NotificationAscend',
     ['Sound OFF', 'Sound ON'],
-    'Play a sound when the optimal time to ascend is reached',
+    'Play a sound when the planned time to ascend is reached',
     true,
   ),
   AscendVolume: new settingClasses.SettingVolume(100, 'vol', 'NotificationAscend', [], 'Volume'),
@@ -14199,7 +14707,7 @@ const settings_settings = {
     'url',
     'NotificationAscend',
     'Sound URL:',
-    'URL of the sound to be played when the optimal time to ascend is reached',
+    'URL of the sound to be played when the planned time to ascend is reached',
   ),
 
   // Autoplay
@@ -14219,6 +14727,14 @@ const settings_settings = {
     'How fast auto-click clicks; the game ignores more than 50 clicks per second',
     1,
     50,
+  ),
+  AutoBackground: new settingClasses.SettingStandard(
+    1,
+    'bool',
+    'Autoplay',
+    ['Full speed when hidden OFF', 'Full speed when hidden ON'],
+    'Keeps the game and auto-click at full speed while the window is hidden, for example behind a full-screen app. The browser slows a hidden window to a few updates a minute, and the game then makes up at most five seconds each time',
+    true,
   ),
   AutoBuy: new settingClasses.SettingStandard(
     1,
@@ -14257,7 +14773,7 @@ const settings_settings = {
     'bool',
     'Autoplay',
     ['Auto-ascend OFF', 'Auto-ascend ON'],
-    'Ascends once the Ascension Advisor has said it is optimal for 10 seconds: pops normal wrinklers and buys the Chocolate egg first, spends heavenly chips (Legacy and production upgrades first, several at once), fills the permanent upgrade slots and reincarnates',
+    'Ascends once the Ascension Advisor has recommended a reset for 10 seconds: pops all wrinklers and buys the Chocolate egg first, spends heavenly chips (Legacy and production upgrades first, several at once), fills the permanent upgrade slots and reincarnates',
     true,
   ),
   AutoElder: new settingClasses.SettingStandard(
@@ -14337,7 +14853,7 @@ const settings_settings = {
     'bool',
     'Autoplay',
     ['Auto Grimoire OFF', 'Auto Grimoire ON'],
-    'Casts Force the Hand of Fate whenever magic is full (magic refills fastest near the top of the bar)',
+    'Casts Force the Hand of Fate near full magic. Before a planned ordinary ascension, also uses remaining magic for the spell-count achievements.',
     true,
   ),
   AutoAchievements: new settingClasses.SettingStandard(
@@ -15900,8 +16416,8 @@ function AscensionSection() {
         summary.readiness,
         summary.colour,
         summary.status === 'ready'
-          ? 'Optimal point reached'
-          : `${FormatPercent(summary.readiness * 100)} of the optimal run completed`,
+          ? 'Planned point reached'
+          : `${FormatPercent(summary.readiness * 100)} of the planned run completed`,
       ),
     );
   }
@@ -16995,6 +17511,177 @@ function UpdateAscendState() {
   UpdateBackground();
 }
 
+;// ./src/Main/Autoplay/AutoClick.js
+
+
+/** The game ignores clicks less than 20 ms apart, so more than 50 per second is pointless */
+const MAX_RATE = 50;
+
+let ClickTimer = null;
+let ClickInterval = 0;
+let NextClickAt = 0;
+
+/**
+ * Whether a click is due on a tick at time now, and when the next one is due. Clicks keep their
+ * interval on average. A schedule more than one interval behind starts again: missed clicks are not
+ * made up in a burst
+ * @param	{number}	now	Date.now()
+ * @param	{number}	next	When the next click is due
+ * @param	{number}	interval	Milliseconds between clicks
+ * @returns	{{click: boolean, next: number}}
+ */
+function ClickSchedule(now, next, interval) {
+  const due = now - next > interval ? now : next;
+  if (now < due) return { click: false, next: due };
+  return { click: true, next: due + interval };
+}
+
+/**
+ * Clicks the big cookie once, without the click sound and with particles drawn on the cookie rather
+ * than under the player's mouse
+ */
+function ClickOnce() {
+  if (!Game.ready || Game.OnAscend || Game.AscendTimer > 0 || Game.ReincarnateTimer > 0) return;
+  if (!ClicksAllowed()) return;
+  const { mouseX, mouseY, volume } = Game;
+  // Keep the native sound callback's random draw and sound-index update.
+  // The native audio function checks this volume before it plays a sound.
+  Game.volume = 0;
+  Game.mouseX = Game.cookieOriginX;
+  Game.mouseY = Game.cookieOriginY;
+  try {
+    Game.ClickCookie();
+  } finally {
+    Game.volume = volume;
+    Game.mouseX = mouseX;
+    Game.mouseY = mouseY;
+  }
+}
+
+/**
+ * Clicks when a click is due, for ticks that replace the clicker's timer while the window is hidden
+ * @param	{number}	now	Date.now()
+ */
+function ClickWhenDue(now) {
+  if (ClickTimer === null) return;
+  const { click, next } = ClickSchedule(now, NextClickAt, ClickInterval);
+  NextClickAt = next;
+  if (click) ClickOnce();
+}
+
+/**
+ * Starts, stops or retimes the clicker to match the settings
+ * Clicks run on their own timer because the game limits clicks by real time, not by game frames
+ */
+function UpdateAutoClicker() {
+  const { settings } = Game.mods.cookieMonsterFramework.saveData.cookieMonsterMod;
+  const rate = settings.AutoClick
+    ? Math.min(Math.max(Number(settings.AutoClickRate) || 0, 0), MAX_RATE)
+    : 0;
+  const interval = rate > 0 ? Math.round(1000 / rate) : 0;
+  if (interval === ClickInterval) return;
+  if (ClickTimer !== null) clearInterval(ClickTimer);
+  ClickTimer = interval > 0 ? setInterval(ClickOnce, interval) : null;
+  ClickInterval = interval;
+}
+
+;// ./src/Main/Autoplay/AutoBackground.js
+/**
+ * Section: full speed while the window is hidden
+ *
+ * The browser throttles timers in a hidden window, for example one behind a full-screen app. The game's
+ * loop and the auto-clicker then run a few times a minute, and the game makes up at most five seconds
+ * each time, so a hidden game runs at a fraction of its speed. A worker's timer is not throttled. It
+ * sends a tick every frame. When the game's own loop has not run for LAG_MS, each tick runs the logic
+ * frames that the window missed, with the game's own catch-up, and the clicks that the auto-clicker
+ * missed.
+ */
+
+
+
+/** Milliseconds without a run of the game's own loop before the ticks take over */
+const LAG_MS = 250;
+/** The game's own limit on the catch-up in one run of its loop */
+const MAX_CATCHUP_MS = 5000;
+/** The worker posts a message at every interval it receives, and stops on 0 */
+const WORKER_SOURCE =
+  'let t=0;onmessage=(e)=>{clearInterval(t);t=e.data>0?setInterval(()=>postMessage(0),e.data):0;};';
+
+let Ticker = null;
+let Unavailable = false;
+let LastLoopT = -1;
+let LastLoopSeen = 0;
+
+/**
+ * Whether the game's own loop has stopped keeping up: it has not run for LAG_MS
+ * @param	{number}	now	Date.now()
+ * @returns	{boolean}
+ */
+function Behind(now) {
+  if (Game.loopT !== LastLoopT) {
+    LastLoopT = Game.loopT;
+    LastLoopSeen = now;
+  }
+  return now - LastLoopSeen >= LAG_MS;
+}
+
+/**
+ * Runs the logic frames that the game missed while its own loop was throttled, with the game's own
+ * accounting: Game.Loop adds the elapsed time to Game.accumulatedDelay and runs one frame for every
+ * 1000 / fps milliseconds of it, up to five seconds
+ * @param	{number}	now	Date.now()
+ * @returns	{number}	Logic frames run
+ */
+function CatchUp(now) {
+  if (!Game.ready || Game.timedout || !Behind(now)) return 0;
+  const frame = 1000 / Game.fps;
+  Game.accumulatedDelay = Math.min(Game.accumulatedDelay + (now - Game.time), MAX_CATCHUP_MS);
+  Game.time = now;
+  let frames = 0;
+  Game.catchupLogic = 1;
+  try {
+    while (Game.accumulatedDelay > 0) {
+      Game.Logic();
+      Game.accumulatedDelay -= frame;
+      frames += 1;
+    }
+  } finally {
+    Game.catchupLogic = 0;
+  }
+  return frames;
+}
+
+/** Runs on each message from the worker */
+function Tick() {
+  const now = Date.now();
+  CatchUp(now);
+  if (Behind(now)) ClickWhenDue(now);
+}
+
+/**
+ * Starts or stops the worker to match the settings
+ * It is called once a second by Cookie Monster's loop
+ */
+function UpdateBackgroundTicks() {
+  const { settings } = Game.mods.cookieMonsterFramework.saveData.cookieMonsterMod;
+  const on = !!settings.AutoBackground && !Unavailable && typeof Worker !== 'undefined';
+  if (on && Ticker === null) {
+    try {
+      const url = URL.createObjectURL(new Blob([WORKER_SOURCE], { type: 'text/javascript' }));
+      Ticker = new Worker(url);
+      Ticker.onmessage = Tick;
+      Ticker.postMessage(1000 / Game.fps);
+    } catch {
+      // Without workers the game runs as before
+      Unavailable = true;
+      Ticker = null;
+    }
+  } else if (!on && Ticker !== null) {
+    Ticker.terminate();
+    Ticker = null;
+  }
+}
+
 ;// ./src/Main/Autoplay/AutoAchievements.js
 /**
  * Section: achievements that only take an action
@@ -17178,7 +17865,7 @@ function PokeWrinkler() {
 
 /**
  * Takes the next action-only achievement, one per call
- * It is called by Autoplay() with the auto-buyer's cadence
+ * It is called by Autoplay() once in every cycle of frames
  */
 function AutoAchievements() {
   const { settings } = Game.mods.cookieMonsterFramework.saveData.cookieMonsterMod;
@@ -17231,7 +17918,7 @@ function ReadySeconds() {
 }
 
 /**
- * This function tracks whether ascending is optimal and alerts once per run when it becomes so
+ * This function tracks whether the model recommends ascending and alerts once per run when it becomes so
  * It is called by CM.Main.Loop
  */
 function CheckAscensionReady() {
@@ -17265,10 +17952,48 @@ function CheckAscensionReady() {
   notificationsFunctions.createNotification('cookieMonsterMod', 'AscendNotification', 'Time to ascend', message);
   if (settings.AscendNote)
     Game.Notify(
-      'Optimal time to ascend',
+      'Planned time to ascend',
       `${message}<br>Pop wrinklers and buy the Chocolate egg (if unlocked) first.`,
       [19, 7],
     );
+}
+
+;// ./src/Main/Autoplay/MarketControls.js
+/** Return a market control only when its rendered ancestors are visible. */
+function VisibleMarketControl(id) {
+  const element = l(id);
+  if (!element) return null;
+  for (let node = element; node; node = node.parentElement || node.parentNode) {
+    const style = typeof getComputedStyle === 'function' && node.nodeType === 1
+      ? getComputedStyle(node) : node.style;
+    if (style && (style.display === 'none' || style.visibility === 'hidden' || style.visibility === 'collapse')) return null;
+  }
+  return element;
+}
+
+/** Open the Bank panel, then allow its next native draw to update controls. */
+function OpenMarketPanel() {
+  const bank = Game.Objects.Bank;
+  if (!bank.minigameLoaded || !bank.minigame || Game.ascensionMode !== 0
+    || Game.OnAscend || Game.AscendTimer > 0 || Game.ReincarnateTimer > 0
+    || Game.promptOn || Game.onMenu) return false;
+  if (bank.onMinigame) return true;
+  const button = VisibleMarketControl(`productMinigameButton${bank.id}`);
+  if (typeof button?.click !== 'function') return false;
+  button.click();
+  return false;
+}
+
+/** Use the native visible loan button, including its sound and pointer effects. */
+function ClickMarketLoan(id) {
+  if (!Number.isInteger(id) || id < 1 || id > 3 || !OpenMarketPanel()) return false;
+  const M = Game.Objects.Bank.minigame;
+  if (M.officeLevel < [2, 4, 5][id - 1]
+    || Game.hasBuff(`Loan ${id}`) || Game.hasBuff(`Loan ${id} (interest)`)) return false;
+  const button = VisibleMarketControl(`bankLoan${id}`);
+  if (typeof button?.click !== 'function') return false;
+  button.click();
+  return !!Game.hasBuff(`Loan ${id}`);
 }
 
 ;// ./src/Main/Autoplay/AutoMarket.js
@@ -17287,6 +18012,7 @@ function CheckAscensionReady() {
  * So a loan is taken once the ascension planner expects the run to end before it runs out, even on its
  * slow estimate, and the ascension routine ends the run early rather than pay the interest.
  */
+
 
 
 
@@ -17332,7 +18058,7 @@ function TakeLoans() {
   if (!plan || !plan.applicable || !Number.isFinite(plan.remainingSlow)) return;
   AvailableLoans().forEach((loan) => {
     if (loan.id !== 2 && plan.remainingSlow <= LOAN_MARGIN * loan.seconds)
-      Game.Objects.Bank.minigame.takeLoan(loan.id);
+      ClickMarketLoan(loan.id);
   });
 }
 
@@ -17344,10 +18070,12 @@ function UpgradeOffice() {
   const M = Game.Objects.Bank.minigame;
   const office = M.offices[M.officeLevel];
   const cursor = Game.Objects.Cursor;
-  if (!office || !office.cost || !l('bankOfficeUpgrade')) return false;
+  const button = VisibleMarketControl('bankOfficeUpgrade');
+  if (!office || !office.cost || typeof button?.click !== 'function') return false;
   if (cursor.amount < office.cost[0] || cursor.level < office.cost[1]) return false;
-  l('bankOfficeUpgrade').click();
-  return true;
+  const before = M.officeLevel;
+  button.click();
+  return M.officeLevel > before;
 }
 
 /**
@@ -17365,7 +18093,7 @@ function Holdings(M) {
 /**
  * Upgrades the office, takes loans that will not reach their interest, and trades every active good:
  * sells what reached its resting value, buys what fell far below it
- * It is called by Autoplay() with the auto-buyer's cadence
+ * It is called by Autoplay() once in every cycle of frames
  */
 function AutoMarket() {
   const { settings } = Game.mods.cookieMonsterFramework.saveData.cookieMonsterMod;
@@ -17373,11 +18101,12 @@ function AutoMarket() {
   if (!settings.AutoMarket || !bank.minigameLoaded || Game.OnAscend || Game.AscendTimer > 0) return;
   const M = bank.minigame;
   if (!M || !M.goodsById) return;
+  if (!OpenMarketPanel()) return;
   if (UpgradeOffice()) return;
   TakeLoans();
   for (let id = 0; id < M.goodsById.length; id++) {
     const me = M.goodsById[id];
-    if (me.active) {
+    if (me.active && VisibleMarketControl(`bankGood-${id}`)) {
       const rest = M.getRestingVal(id);
       const price = M.getGoodPrice(me);
       if (me.stock > 0 && price >= rest * SELL_AT && M.sellGood(id, me.stock)) return;
@@ -17392,6 +18121,71 @@ function AutoMarket() {
   }
 }
 
+;// ./src/Main/Autoplay/AutoGrimoire.js
+/**
+ * Section: the Grimoire under autoplay
+ *
+ * For a fixed magic cap and spell cost, a continuous square-root recharge model favors full-bar
+ * casting over long runs. At about 70 magic, it estimates a cast every 23 minutes, against 40 when
+ * casting as soon as the cost is reached. Native recharge uses discrete updates, a minimum rate and
+ * rounding. This argument does not prove an optimum for a finite spell goal or the full game.
+ */
+
+/**
+ * Casts Force the Hand of Fate when magic is full and no golden cookie is on screen (each one on screen
+ * makes the spell 15% more likely to backfire)
+ * It is called by Autoplay() once in every cycle of frames
+ */
+function AutoGrimoire() {
+  const { settings } = Game.mods.cookieMonsterFramework.saveData.cookieMonsterMod;
+  const tower = Game.Objects['Wizard tower'];
+  if (!settings.AutoGrimoire || !tower.minigameLoaded || Game.OnAscend || Game.AscendTimer > 0)
+    return;
+  const M = tower.minigame;
+  const spell = M && M.spells['hand of fate'];
+  if (!spell || Game.shimmerTypes.golden.n > 0) return;
+  if (M.magic >= M.magicM - 0.5 && M.magic >= M.getSpellCost(spell)) M.castSpell(spell);
+}
+
+/**
+ * Use remaining magic just before an already committed ordinary ascension.
+ * The caller has completed cash-in, loans and the Lucky prestige wait. These
+ * two spells do not change cookies or lumps on either outcome. Reset clears
+ * their buffs, while their spell count and achievements remain.
+ * This does not request another reset or wait for magic.
+ * @returns {number} Number of completed casts
+ */
+function CastBeforeAscension() {
+  const { settings } = Game.mods.cookieMonsterFramework.saveData.cookieMonsterMod;
+  const tower = Game.Objects['Wizard tower'];
+  if (
+    !settings.AutoGrimoire || Game.promptOn || Game.OnAscend || Game.ascensionMode === 1
+    || Game.AscendTimer > 0 || Game.ReincarnateTimer > 0
+    || !tower || tower.amount <= 0 || !Game.isMinigameReady(tower)
+    || Game.HasAchiev('A wizard is you')
+  ) return 0;
+  const M = tower.minigame;
+  if (!M || !Number.isFinite(M.magicM) || M.magicM <= 0) return 0;
+  let casts = 0;
+  // Native costs permit fewer casts from a full bar. This limit also stops
+  // altered callbacks from keeping the browser in an unbounded loop.
+  while (casts < 32 && !Game.HasAchiev('A wizard is you')) {
+    if (!Number.isFinite(M.magic) || M.magic < 0 || !Number.isSafeInteger(M.spellsCastTotal) || M.spellsCastTotal < 0) break;
+    const choices = [M.spells["haggler's charm"], M.spells['diminish ineptitude']]
+      .filter(Boolean)
+      .map((spell) => ({ spell, cost: M.getSpellCost(spell) }))
+      .filter(({ cost }) => Number.isFinite(cost) && Number.isInteger(cost) && cost > 0 && cost <= M.magic)
+      .sort((a, b) => a.cost - b.cost);
+    if (!choices.length) break;
+    const before = M.spellsCastTotal;
+    const { magic } = M;
+    if (!M.castSpell(choices[0].spell)) break;
+    casts += 1;
+    if (!(M.spellsCastTotal > before) || !(M.magic < magic)) break;
+  }
+  return casts;
+}
+
 ;// ./src/Main/Autoplay/AutoAscend.js
 
 
@@ -17404,9 +18198,7 @@ function AutoMarket() {
 
 
 
-/** Seconds to let wrinklers pop before ascending, and to show the heavenly screen before leaving it */
-const CASH_IN_SECONDS = 2;
-const HEAVEN_SECONDS = 1.5;
+
 /** Seconds before a loan runs out at which the run may end early to avoid its interest */
 const LOAN_EXIT_SECONDS = 60;
 
@@ -17414,6 +18206,11 @@ let Phase = 'idle';
 let PhaseSince = 0;
 /** Whether the run being left is a Born again run */
 let LeavingChallenge = false;
+
+/** Keep the cash-in bank available until the egg is bought or the reset is cancelled. */
+function AscensionCashInProgress() {
+  return Phase === 'cashing';
+}
 
 /**
  * Buys a heavenly upgrade after the unowned parents it requires, as the ascension screen only allows
@@ -17480,18 +18277,17 @@ function FillPermanentSlots() {
 /**
  * Spends heavenly chips: Legacy first, then along the purchase order the ascension planner assumes
  * (best production gain per chip, parents included), buying as many items as the chips cover and
- * saving the rest for the next one; then fills the permanent upgrade slots
+ * saving the rest for the next one; then the cheapest upgrades still missing for "All the stars in
+ * heaven" if they cost at most STARS_BUDGET of the chips; then fills the permanent upgrade slots
  */
 function SpendHeavenlyChips() {
   if (!BuyWithParents(Game.Upgrades.Legacy)) return;
+  const budget = STARS_BUDGET * Game.heavenlyChips;
   const context =
     AscensionCache.heavenlyContext || HeavenlyContext(Game.cookiesPs, AutoClickIncome());
   const order = HeavenlyPurchaseOrder(context);
-  for (let i = 0; i < order.length && order[i].cost <= Game.heavenlyChips; i++) {
-    order[i].bundle.forEach((me) => {
-      if (!me.bought) me.buy();
-    });
-  }
+  SpendHeavenlyOrder(order);
+  BuyForStarsInHeaven(budget);
   FillPermanentSlots();
 }
 
@@ -17512,7 +18308,7 @@ function LoanExit() {
 }
 
 /**
- * Ascends when the advisor has said so for SUSTAIN_SECONDS (or a Born again run is over): pops normal
+ * Ascends when the advisor has said so for SUSTAIN_SECONDS (or a Born again run is over): pops all
  * wrinklers and buys the Chocolate egg first, spends the heavenly chips and reincarnates, into a Born
  * again run when the challenge achievements are due
  * It is called every logic frame, also while ascending
@@ -17527,16 +18323,21 @@ function AutoAscend() {
   };
 
   if (Phase === 'idle') {
-    if (!settings.AutoAscend || Game.OnAscend || Game.AscendTimer > 0 || Game.ReincarnateTimer > 0)
+    if (
+      !settings.AutoAscend || Game.promptOn || Game.OnAscend
+      || Game.AscendTimer > 0 || Game.ReincarnateTimer > 0
+    )
       return;
     if (ChallengeRun() ? !ChallengeDone() : ReadySeconds() < SUSTAIN_SECONDS && !LoanExit())
       return;
-    if (CacheWrinklersNormal > 0) PopAllNormalWrinklers();
-    const egg = Game.Upgrades['Chocolate egg'];
-    if (egg && egg.unlocked && !egg.bought) egg.buy();
+    // Payout occurs in a later native game update, before cash-in can continue.
+    RequestWrinklerPayouts();
     enter('cashing');
   } else if (Phase === 'cashing') {
-    if (elapsed < CASH_IN_SECONDS) return;
+    if (Game.OnAscend || Game.AscendTimer > 0 || Game.ReincarnateTimer > 0) {
+      enter('idle');
+      return;
+    }
     const { plan } = AscensionCache;
     LeavingChallenge = ChallengeRun();
     if (
@@ -17546,10 +18347,14 @@ function AutoAscend() {
       enter('idle');
       return;
     }
+    if (Game.promptOn) return;
+    // A wrinkler can start storing cookies after cash-in begins. Include it before the egg.
+    RequestWrinklerPayouts();
+    if (!CashInChocolateEgg()) return;
     // The bank is about to be lost, so a loan's down payment costs nothing now: "Debt evasion"
     const loans = AvailableLoans();
-    if (!Game.HasAchiev('Debt evasion') && loans.length)
-      Game.Objects.Bank.minigame.takeLoan(loans[0].id);
+    if (!Game.HasAchiev('Debt evasion') && loans.length && !ClickMarketLoan(loans[0].id)) return;
+    if (LuckyPrestigeWait(elapsed)) return;
     if (LeavingChallenge)
       Game.Notify(
         'Cookie Monster+ ended the Born again run',
@@ -17566,14 +18371,17 @@ function AutoAscend() {
         )} production in every future run.`,
         [19, 7],
       );
+    if (!LeavingChallenge) CastBeforeAscension();
     Game.Ascend(1);
     enter('ascending');
+    SkipAscensionAnimation();
   } else if (Phase === 'ascending') {
     if (Game.OnAscend) enter('heaven');
     else if (elapsed > 30 && Game.AscendTimer === 0) enter('idle');
   } else if (Phase === 'heaven') {
     if (!Game.OnAscend) enter('idle');
-    else if (elapsed >= HEAVEN_SECONDS) {
+    else if (!settings.AutoAscend) enter('idle');
+    else if (!Game.promptOn && Game.AscendTimer === 0 && Game.ReincarnateTimer === 0) {
       SpendHeavenlyChips();
       Game.nextAscensionMode = ChallengeDue(LeavingChallenge) ? 1 : 0;
       Game.Reincarnate(1);
@@ -17582,52 +18390,6 @@ function AutoAscend() {
   } else if (Phase === 'reincarnating' && !Game.OnAscend && Game.ReincarnateTimer === 0) {
     enter('idle');
   }
-}
-
-;// ./src/Main/Autoplay/AutoClick.js
-
-
-/** The game ignores clicks less than 20 ms apart, so more than 50 per second is pointless */
-const MAX_RATE = 50;
-
-let ClickTimer = null;
-let ClickInterval = 0;
-
-/**
- * Clicks the big cookie once, without the click sound and with particles drawn on the cookie rather
- * than under the player's mouse
- */
-function ClickOnce() {
-  if (!Game.ready || Game.OnAscend || Game.AscendTimer > 0 || Game.ReincarnateTimer > 0) return;
-  if (!ClicksAllowed()) return;
-  const playSound = Game.playCookieClickSound;
-  const { mouseX, mouseY } = Game;
-  Game.playCookieClickSound = function () {};
-  Game.mouseX = Game.cookieOriginX;
-  Game.mouseY = Game.cookieOriginY;
-  try {
-    Game.ClickCookie();
-  } finally {
-    Game.playCookieClickSound = playSound;
-    Game.mouseX = mouseX;
-    Game.mouseY = mouseY;
-  }
-}
-
-/**
- * Starts, stops or retimes the clicker to match the settings
- * Clicks run on their own timer because the game limits clicks by real time, not by game frames
- */
-function UpdateAutoClicker() {
-  const { settings } = Game.mods.cookieMonsterFramework.saveData.cookieMonsterMod;
-  const rate = settings.AutoClick
-    ? Math.min(Math.max(Number(settings.AutoClickRate) || 0, 0), MAX_RATE)
-    : 0;
-  const interval = rate > 0 ? Math.round(1000 / rate) : 0;
-  if (interval === ClickInterval) return;
-  if (ClickTimer !== null) clearInterval(ClickTimer);
-  ClickTimer = interval > 0 ? setInterval(ClickOnce, interval) : null;
-  ClickInterval = interval;
 }
 
 ;// ./src/Main/Autoplay/AutoLumps.js
@@ -17740,7 +18502,7 @@ function SpendLumps() {
 /**
  * Harvests ripe lumps, tries "Hand-picked" once the minigames are open (a mature but unripe lump yields
  * nothing half the time, so it costs half a lump a try), and spends lumps
- * It is called by Autoplay() with the auto-buyer's cadence
+ * It is called by Autoplay() once in every cycle of frames
  */
 function AutoLumps() {
   const { settings } = Game.mods.cookieMonsterFramework.saveData.cookieMonsterMod;
@@ -17936,42 +18698,99 @@ function ChooseAuras() {
   else if (best[1] !== Game.dragonAura2) SetAura(best[1], 1);
 }
 
-/** Upgrades petting the dragon can drop, one per quarter of an hour, and seconds between petting sessions */
+/** Pet drops use a fixed permutation of the four quarter-hours in each run. */
 const DRAGON_DROPS = ['Dragon scale', 'Dragon claw', 'Dragon fang', 'Dragon teddy bear'];
-const PET_SECONDS = 60;
-/** Pets per session: each has a 1 in 20 chance to drop the current quarter-hour's upgrade */
+/** Bound native calls so the other autoplay systems and the interface can run. */
 const PETS = 20;
+/** An unknown phase may already be owned when the mod starts partway through a run. */
+const UNKNOWN_PET_RETRY_MS = 100;
 
-let LastPet = 0;
+let PetRun = null;
+let PetQuarterDrops = [];
+let NextPet = 0;
 
 /**
- * With "Pet the dragon", pets the dragon in its menu until this quarter-hour's drop shows up (each drop
- * is an upgrade for this run)
+ * Clear learned drop phases when the public run identity or transition state changes.
+ * startDate also changes on a zero-prestige reset, when resets does not increase.
+ * @returns {boolean} Whether an ascension or reincarnation is in progress
+ */
+function TrackDragonRun() {
+  const transition = Boolean(Game.OnAscend || Game.AscendTimer > 0 || Game.ReincarnateTimer > 0);
+  if (!PetRun || PetRun.startDate !== Game.startDate || PetRun.resets !== Game.resets
+      || PetRun.transition !== transition) {
+    PetQuarterDrops = [];
+    NextPet = 0;
+  }
+  PetRun = { startDate: Game.startDate, resets: Game.resets, transition };
+  return transition;
+}
+
+/** @returns {number} The quarter-hour used by the native drop rule, in local time */
+function PetQuarter() {
+  return Math.floor(new Date().getMinutes() / 15);
+}
+
+/** @param {string} name Upgrade name @returns {boolean} Whether this run has accessed the drop */
+function HasDrop(name) {
+  return Boolean(Game.Has(name) || Game.HasUnlocked(name));
+}
+
+/**
+ * Pet in bounded batches and stop at the first new drop. Native petting has no gameplay cooldown;
+ * its two-second timer controls only the growl sound. Learn phases from new unlocks, without reading
+ * the run seed. A learned phase cannot give another drop until a different quarter-hour starts.
  * @returns	{boolean}	Whether it petted
  */
 function PetDragon() {
-  if (!Game.Has('Pet the dragon') || Game.dragonLevel < 8) return false;
-  if (DRAGON_DROPS.every((name) => Game.Has(name) || Game.HasUnlocked(name))) return false;
-  if (Date.now() - LastPet < PET_SECONDS * 1000) return false;
-  LastPet = Date.now();
-  const { volume } = Game;
+  if (Game.promptOn || !Game.Has('Pet the dragon') || Game.dragonLevel < 8) return false;
+  const seen = DRAGON_DROPS.filter(HasDrop);
+  const phase = PetQuarter();
+  if (seen.length === DRAGON_DROPS.length || HasDrop(PetQuarterDrops[phase])) return false;
+  if (Date.now() < NextPet) return false;
+  // The native shuffle is a permutation. An unknown phase must be missing if every accessed drop
+  // has an observed phase. Otherwise use a positive retry cadence for a possible silent duplicate.
+  const missingDropCertain = seen.every((name) => PetQuarterDrops.includes(name));
+  NextPet = Date.now() + (missingDropCertain ? 0 : UNKNOWN_PET_RETRY_MS);
+  const { volume, specialTab } = Game;
   Game.volume = 0;
-  Game.specialTab = 'dragon';
-  Game.ToggleSpecialMenu(1);
-  for (let i = 0; i < PETS; i++) Game.ClickSpecialPic();
-  Game.ToggleSpecialMenu(0);
-  Game.volume = volume;
+  try {
+    if (specialTab !== 'dragon') {
+      Game.specialTab = 'dragon';
+      Game.ToggleSpecialMenu(1);
+    }
+    for (let i = 0; i < PETS; i++) {
+      const beforePhase = PetQuarter();
+      Game.ClickSpecialPic();
+      const drop = DRAGON_DROPS.find((name) => !seen.includes(name) && HasDrop(name));
+      if (drop) {
+        // Do not assign a phase if the wall clock crossed a boundary during the native call.
+        if (beforePhase === PetQuarter()) PetQuarterDrops[beforePhase] = drop;
+        break;
+      }
+      if (Game.promptOn) break;
+    }
+  } finally {
+    try {
+      if (specialTab && specialTab !== 'dragon') {
+        Game.specialTab = specialTab;
+        Game.ToggleSpecialMenu(1);
+      } else if (!specialTab) Game.ToggleSpecialMenu(0);
+    } finally {
+      Game.specialTab = specialTab;
+      Game.volume = volume;
+    }
+  }
   return true;
 }
 
 /**
  * Buys the dragon egg, trains the dragon, pets it for its drops and picks its auras
- * It is called by Autoplay() with the auto-buyer's cadence
+ * It is called by Autoplay() once in every cycle of frames
  */
 function AutoDragon() {
   const { settings } = Game.mods.cookieMonsterFramework.saveData.cookieMonsterMod;
-  if (!settings.AutoDragon || Game.OnAscend || Game.AscendTimer > 0 || Game.ReincarnateTimer > 0)
-    return;
+  const transition = TrackDragonRun();
+  if (!settings.AutoDragon || transition || Game.promptOn) return;
   const egg = Game.Upgrades['A crumbly egg'];
   if (!egg) return;
   if (!egg.bought) {
@@ -18227,7 +19046,7 @@ function PopWrinklers() {
 /**
  * Runs the Grandmapocalypse: research, the elder achievements (the wrath at its peak once, then
  * pledging, signing and revoking the covenant), bursting sprees, the choice of stage and wrinkler popping
- * It is called by Autoplay() with the auto-buyer's cadence
+ * It is called by Autoplay() once in every cycle of frames
  */
 function AutoElder() {
   const { settings } = Game.mods.cookieMonsterFramework.saveData.cookieMonsterMod;
@@ -18399,7 +19218,7 @@ function Plant(M, me, x, y) {
 /**
  * Tends the garden: breeds the next seed, or plants the best seed for its passive effect, and picks
  * plants while mature
- * It is called by Autoplay() with the auto-buyer's cadence
+ * It is called by Autoplay() once in every cycle of frames
  */
 function AutoGarden() {
   const { settings } = Game.mods.cookieMonsterFramework.saveData.cookieMonsterMod;
@@ -18507,24 +19326,33 @@ function AutoGodzamok() {
   const start = performance.now();
   let units = 0;
   let intact = true;
-  for (let pass = 0; pass < MAX_PASSES * types.length && intact; pass++) {
-    if (pass > 0 && performance.now() - start >= BUDGET_MS) break;
-    const me = types[Next % types.length];
-    Next = (Next + 1) % types.length;
-    const n = me.amount;
-    me.sell(-1);
-    me.buy(n);
-    units += n;
-    intact = me.amount === n;
+  try {
+    for (let pass = 0; pass < MAX_PASSES * types.length && intact; pass++) {
+      if (pass > 0 && performance.now() - start >= BUDGET_MS) break;
+      const me = types[Next % types.length];
+      Next = (Next + 1) % types.length;
+      // Earlier cycles change the bank. Recheck every native credit/debit and
+      // the resulting benefit before another sale. Nominal price sums do not
+      // determine the bank loss at large binary64 magnitudes.
+      if (CycleWorth(me, clickIncome, seconds, Game.cookies)) {
+        const n = me.amount;
+        intact = false;
+        me.sell(-1);
+        me.buy(n);
+        units += n;
+        intact = me.amount === n;
+      }
+    }
+  } finally {
+    const elapsed = performance.now() - start;
+    if (units > 0)
+      GodzamokState.msPerUnit = 0.9 * GodzamokState.msPerUnit + (0.1 * elapsed) / units;
+    Game.volume = volume;
+    Game.buyMode = buyMode;
+    // Recompute production after an incomplete cycle. A completed cycle only changes click power.
+    Game.recalculateGains = intact ? recalculateGains : 1;
+    Game.computedMouseCps = Game.mouseCps();
   }
-  const elapsed = performance.now() - start;
-  if (units > 0) GodzamokState.msPerUnit = 0.9 * GodzamokState.msPerUnit + (0.1 * elapsed) / units;
-  Game.volume = volume;
-  Game.buyMode = buyMode;
-  // Counts and CpS are unchanged, so skip the full recalculation (and Cookie Monster's resimulation that
-  // follows it) unless a purchase fell short; the buff only changes click power
-  Game.recalculateGains = intact ? recalculateGains : 1;
-  Game.computedMouseCps = Game.mouseCps();
 }
 
 ;// ./src/Main/Autoplay/AutoGolden.js
@@ -18546,32 +19374,6 @@ function AutoGolden() {
       if (!fading || shimmer.life <= FADING_LUCK_FRAMES) shimmer.pop();
     } else if (shimmer.type === 'reindeer') shimmer.pop();
   });
-}
-
-;// ./src/Main/Autoplay/AutoGrimoire.js
-/**
- * Section: the Grimoire under autoplay
- *
- * Casts Force the Hand of Fate, a free golden cookie, whenever magic is full. Magic refills at a rate
- * proportional to sqrt(magic / max), faster the fuller the bar, so casting from the top of the bar uses
- * the fastest stretch of the refill: with about 70 magic a cast every 23 minutes, against 40 when casting
- * as soon as the cost is reached.
- */
-
-/**
- * Casts Force the Hand of Fate when magic is full and no golden cookie is on screen (each one on screen
- * makes the spell 15% more likely to backfire)
- * It is called by Autoplay() with the auto-buyer's cadence
- */
-function AutoGrimoire() {
-  const { settings } = Game.mods.cookieMonsterFramework.saveData.cookieMonsterMod;
-  const tower = Game.Objects['Wizard tower'];
-  if (!settings.AutoGrimoire || !tower.minigameLoaded || Game.OnAscend || Game.AscendTimer > 0)
-    return;
-  const M = tower.minigame;
-  const spell = M && M.spells['hand of fate'];
-  if (!spell || Game.shimmerTypes.golden.n > 0) return;
-  if (M.magic >= M.magicM - 0.5 && M.magic >= M.getSpellCost(spell)) M.castSpell(spell);
 }
 
 ;// ./src/Main/Autoplay/AutoPantheon.js
@@ -18698,7 +19500,7 @@ function RefillSwaps() {
 /**
  * Slots the best gods once the Pantheon is unlocked, re-checking every few minutes, and refills the
  * worship swaps with a sugar lump when a much better arrangement waits for them
- * It is called by Autoplay() with the auto-buyer's cadence
+ * It is called by Autoplay() once in every cycle of frames
  */
 function AutoPantheon() {
   const { settings } = Game.mods.cookieMonsterFramework.saveData.cookieMonsterMod;
@@ -18757,7 +19559,7 @@ function AutoPantheon() {
 
 
 
-/** The other systems take turns on the frames between purchases */
+/** The other systems take turns, one on each frame of a cycle but the first */
 const SYSTEMS = [
   AutoElder,
   AutoDragon,
@@ -18769,7 +19571,7 @@ const SYSTEMS = [
   AutoMarket,
   AutoAchievements,
 ];
-/** Purchases are spaced by a few frames so Cookie Monster's caches catch up after each one */
+/** Each system has one turn in every cycle of frames */
 const CYCLE_FRAMES = SYSTEMS.length + 1;
 
 /**
@@ -18781,14 +19583,20 @@ const CYCLE_FRAMES = SYSTEMS.length + 1;
 function Autoplay() {
   if (Game.T % Game.fps === 0) UpdateAutoClicker();
   AutoGolden();
+  // Leave clicks and golden cookies active. Spending must wait until cash-in has finished.
+  if (AscensionCashInProgress()) {
+    AutoAscend();
+    return;
+  }
   const turn = Game.T % CYCLE_FRAMES;
   if (ChallengeRun()) {
     // A Born again run has no minigames, lumps or seasons, and its rules forbid upgrades
-    if (turn === 0) AutoBuy();
+    AutoBuy();
   } else {
     AutoGodzamok();
-    if (turn === 0) AutoBuy();
-    else SYSTEMS[turn - 1]();
+    if (turn > 0) SYSTEMS[turn - 1]();
+    // The buyer runs on every frame, after any system that changes CpS, so it can wait for fresh values
+    AutoBuy();
   }
   AutoAscend();
 }
@@ -19144,11 +19952,13 @@ function CheckWrinklerCount() {
 
 
 
+
 /**
  * Main loop of Cookie Monster
  * CM.init registers it to the "logic" hook provided by the modding api
  */
 function CMLoopHook() {
+  if (Game.T % Game.fps === 0) UpdateBackgroundTicks();
   Autoplay();
   if (LastAscendState !== Game.OnAscend) {
     LastAscendState = Game.OnAscend;
@@ -19258,6 +20068,7 @@ const headers_headers = {
 
 
 
+
 /**
  * This creates a load function to the CM object. Per Game code/comments:
  * "do stuff with the string data you saved previously"
@@ -19273,6 +20084,9 @@ function load_load(str) {
   ) {
     Game.mods.cookieMonsterFramework.saveData.cookieMonsterMod.lockedMinigames = [];
   }
+
+  // Keep the game at full speed while the window is hidden, from the start
+  UpdateBackgroundTicks();
 
   // Update display with colours and locking of minigames
   UpdateColours();

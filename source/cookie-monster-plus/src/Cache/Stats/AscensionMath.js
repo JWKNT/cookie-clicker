@@ -18,8 +18,8 @@
  * Optimal stopping
  * ----------------
  * Ascending is a trade: it restarts the run in exchange for a faster speed in every later run. The best
- * moment minimises the total time to reach a distant prestige goal, which is solved exactly with a
- * dynamic program over the prestige at which each future ascension happens:
+ * moment minimises the modelled time to a distant prestige goal. A dynamic program compares the
+ * selected grid points. Its grid, fitted run curve and minimum speed gain limit the result:
  *
  *     V(P) = min over P' > P of [ runTime(P → P') + τ + V(P') ]
  *
@@ -144,7 +144,8 @@ function SolveForGoal(run, goalFactor) {
 
   // The current run: keep baking until factors[j], then ascend (-1: no worthwhile ascension in sight)
   let index = -1;
-  let total = Infinity;
+  // Reaching the goal without another reset is a legal action. Its terminal cost is zero.
+  let total = remainingAt(n - 1);
   for (let j = 0; j < n - 1; j++) {
     if (speeds[j] / speed.currentSpeed - 1 >= MIN_SPEED_GAIN) {
       const t = remainingAt(j) + overhead + value[j];

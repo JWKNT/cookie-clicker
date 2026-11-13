@@ -117,6 +117,15 @@ describe('OptimalRunMultiplier', () => {
 });
 
 describe('PlanAscension', () => {
+  it('Can finish the goal without resetting when reset overhead exceeds the remaining play time', () => {
+    const plan = PlanAscension(
+      { cookiesReset: 0, cookiesRun: 1e12, income: 2e9, runTime: 1000, overhead: 1e12 },
+      { currentSpeed: 1, speedAt: () => 1.2 },
+      { gridSize: 20 },
+    );
+    expect(plan.ascendNow).to.equal(false);
+    expect(plan.targetFound).to.equal(false);
+  });
   [2, 3, 4].forEach((beta) => {
     it(`Reproduces the late-game optimum for beta = ${beta}`, () => {
       const state = lateGameState(beta, 0.5);

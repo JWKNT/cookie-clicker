@@ -2,10 +2,10 @@
  "Name": "Cookie Monster+",
  "ID": "cookie monster plus",
  "Author": "Cookie Monster Team · Cookie Monster+ by jehlp.net",
- "Description": "Cookie Monster with mathematically optimal autoplay: purchases, golden cookies, Godzamok, the Grandmapocalypse, the dragon, seasons, sugar lumps, minigames, achievements and ascension timing. Guide: jehlp.net/cookie-clicker. If the Workshop Cookie Monster is also on, only this mod runs.",
- "ModVersion": 2.05313,
+ "Description": "Cookie Monster with model-based autoplay: purchases, golden cookies, Godzamok, the Grandmapocalypse, the dragon, seasons, sugar lumps, minigames, achievements and ascension timing. Guide: jehlp.net/cookie-clicker. If the Workshop Cookie Monster is also on, only this mod runs.",
+ "ModVersion": 2.05321,
  "GameVersion": 2.053,
- "Date": "29/10/2026",
+ "Date": "31/10/2026",
  "Dependencies": [],
  "AllowSteamAchievs": 1
 }

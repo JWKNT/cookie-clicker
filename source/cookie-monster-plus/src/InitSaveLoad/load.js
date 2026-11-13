@@ -4,6 +4,7 @@ import headers from '../Data/headers.js';
 import { VersionMajor, VersionMinor } from '../Data/Moddata.js';
 import settings from '../Data/settings.js';
 import UpdateColours from '../Disp/HelperFunctions/UpdateColours.js';
+import UpdateBackgroundTicks from '../Main/Autoplay/AutoBackground.js';
 import CMLoopHook from '../Main/LoopHook.js';
 import InitData from '../Sim/InitializeData/InitData.js';
 
@@ -22,6 +23,9 @@ export default function load(str) {
   ) {
     Game.mods.cookieMonsterFramework.saveData.cookieMonsterMod.lockedMinigames = [];
   }
+
+  // Keep the game at full speed while the window is hidden, from the start
+  UpdateBackgroundTicks();
 
   // Update display with colours and locking of minigames
   UpdateColours();

@@ -5,13 +5,15 @@
  * - Christmas: A festive hat, then Santa's 14 levels (each unlocks a gift such as Santa's legacy, +3% CpS
  *   per level; the last one unlocks Santa's dominion, +20%)
  * - Valentine's day: the 7 heart biscuits (+2% CpS each), each unlocked by buying the previous one, in one
- *   short visit once they are cheap
+ *   short visit once they are cheap. The run waits in Christmas until then, and stays in Valentine's day
+ *   until the last heart: every extra switch costs 1.5 times the one before
  * - Easter: eggs drop from 10% of golden cookies; the run stays until 7 eggs while "Egging on" is missing
  * The rest of the run is spent in Christmas: reindeer pay one or two minutes of CpS each and drop
  * Christmas cookies, more than any other season brings. Switching costs a minute of CpS (x1.5 per switch in
  * a run). These actions are worth far more than they cost, so the auto-buyer keeps back the cookies for the
- * next one whenever it costs at most RESERVE_SECONDS of income. Without the Season switcher only the natural
- * season is used.
+ * next one whenever it costs at most RESERVE_SECONDS of income. Purchases that pay for themselves within
+ * RESERVE_SECONDS go first: they delay the action by less than that. Without the Season switcher only the
+ * natural season is used.
  */
 
 import { AutoplayEconomy } from '../../Cache/PP/AutoplayValue.js';
@@ -22,7 +24,7 @@ const EGG_GOAL = 7;
  * Seconds of income the auto-buyer keeps back for the next seasonal action: early in a run purchases pay
  * back within minutes, so a longer pause would cost more than the season brings
  */
-const RESERVE_SECONDS = 60;
+export const RESERVE_SECONDS = 60;
 
 /**
  * Cookies the auto-buyer should keep for the next seasonal action (0 when there is none or it is not cheap)
@@ -50,6 +52,17 @@ function HeartsCost() {
 }
 
 /**
+ * Cookies to buy the next heart biscuit (all the remaining ones when none is unlocked yet)
+ * @returns	{number}
+ */
+function NextHeartCost() {
+  const next = (Game.heartDrops || [])
+    .map((name) => Game.Upgrades[name])
+    .find((me) => me.unlocked && !me.bought);
+  return next ? next.getPrice() : HeartsCost();
+}
+
+/**
  * Price of switching to a season (0 if already in it, Infinity if it cannot be triggered)
  * @param	{string}	season	Season key
  * @returns	{number}
@@ -66,7 +79,7 @@ function SwitchCost(season) {
  * @param	{number}	cheap	Cookies counted as cheap (RESERVE_SECONDS of income)
  * @returns	{{season: string, cost: number}}
  */
-function SeasonPlan(cheap) {
+export function SeasonPlan(cheap) {
   if (!Game.Has('A festive hat') || Game.santaLevel < 14) {
     const switching = SwitchCost('christmas');
     if (switching > 0) return { season: 'christmas', cost: switching };
@@ -74,8 +87,14 @@ function SeasonPlan(cheap) {
     return { season: 'christmas', cost: (Game.santaLevel + 1) ** (Game.santaLevel + 1) };
   }
   const hearts = HeartsCost();
-  if (hearts > 0 && hearts + SwitchCost('valentines') <= cheap)
-    return { season: 'valentines', cost: hearts + SwitchCost('valentines') };
+  if (hearts > 0) {
+    // The income estimate drops when the bank is spent, so a visit stays until the last heart
+    if (Game.season === 'valentines') return { season: 'valentines', cost: NextHeartCost() };
+    const switching = SwitchCost('valentines');
+    if (hearts + switching <= cheap) return { season: 'valentines', cost: hearts + switching };
+    // Wait for cheap hearts in Christmas instead of a round trip through Easter
+    if (Game.season === 'christmas') return { season: 'christmas', cost: 0 };
+  }
   const eggs = CountUnlocked(Game.eggDrops) + CountUnlocked(Game.rareEggDrops);
   if (!Game.HasAchiev('Egging on') && eggs < EGG_GOAL)
     return { season: 'easter', cost: SwitchCost('easter') };
@@ -115,7 +134,7 @@ function SeasonPurchases() {
 
 /**
  * Switches seasons, buys seasonal upgrades and sets the reserve the auto-buyer keeps for them
- * It is called by Autoplay() with the auto-buyer's cadence
+ * It is called by Autoplay() once in every cycle of frames
  */
 export default function AutoSeasons() {
   const { settings } = Game.mods.cookieMonsterFramework.saveData.cookieMonsterMod;

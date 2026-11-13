@@ -41,6 +41,7 @@ Game.LoadMod('https://jehlp.net/cookie-clicker/mod/main.js')
 Cookie Monster+ keeps every Cookie Monster feature and adds autoplay. Each system has a switch in the settings.
 
 - It clicks the big cookie and every golden cookie and reindeer.
+- It keeps the game at full speed while its window is hidden.
 - It buys the item with the smallest payback period and keeps a "Lucky!" bank only when the bank pays back faster.
 - It sells and buys back buildings every frame for Godzamok's click buff.
 - It chooses the Grandmapocalypse stage by income, and it bursts wrinklers when that pays.

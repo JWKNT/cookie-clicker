@@ -146,7 +146,7 @@ function Plant(M, me, x, y) {
 /**
  * Tends the garden: breeds the next seed, or plants the best seed for its passive effect, and picks
  * plants while mature
- * It is called by Autoplay() with the auto-buyer's cadence
+ * It is called by Autoplay() once in every cycle of frames
  */
 export default function AutoGarden() {
   const { settings } = Game.mods.cookieMonsterFramework.saveData.cookieMonsterMod;

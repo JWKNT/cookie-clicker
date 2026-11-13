@@ -28,7 +28,7 @@ import urllib.error
 import urllib.request
 from pathlib import Path
 
-VERSION = "2.053.13"
+VERSION = "2.053.21"
 REPOSITORY = "JWKNT/cookie-clicker"
 RAW_BASE = f"https://raw.githubusercontent.com/{REPOSITORY}"
 PAGE = "https://jehlp.net/cookie-clicker/"

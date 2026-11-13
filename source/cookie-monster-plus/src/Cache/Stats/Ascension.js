@@ -1,10 +1,9 @@
-/** Section: Caches the state of the optimal ascension advisor */
+/** Section: Caches the state of the model-based ascension advisor */
 
 import GetCPSBuffMult from '../CPS/GetCPSBuffMult.js';
 import FillCMDCache from '../FillCMDCache.js';
 import {
   CacheCurrWrinklerCPSMult,
-  CacheLastChoEgg,
   CacheWrinklersTotal,
   CookiesDiff,
   WrinkDiff,
@@ -12,6 +11,7 @@ import {
 import { AutoClickRate } from '../PP/AutoplayValue.js';
 import { PlanAscension, SpeedModel } from './AscensionMath.js';
 import HeavenlyPurchaseOrder, { HeavenlyContext } from './HeavenlyPlan.js';
+import { ChocolateEggPayout } from '../../Main/Autoplay/AscensionActions.js';
 
 /** Seconds of income history used to average golden cookie effects into the income estimate */
 const INCOME_WINDOW = 600;
@@ -82,8 +82,9 @@ export function AutoClickIncome() {
  * @returns	{{state: object, heavenly: object, heavenlyContext: object, heavenlyOrder: object[]}}
  */
 export function GetAscensionInputs() {
-  const choEgg =
-    Game.HasUnlocked('Chocolate egg') && !Game.Has('Chocolate egg') ? CacheLastChoEgg : 0;
+  // The general Cookie Monster cache assumes asset sales and optimal resale auras.
+  // Autoplay only pops wrinklers before the egg, so use the payout that this policy can collect.
+  const choEgg = ChocolateEggPayout(Game.cookies + CacheWrinklersTotal);
   const buffMult = GetCPSBuffMult();
   const clickIncome = AutoClickIncome();
   const baseIncome =
@@ -118,7 +119,7 @@ export function GetAscensionInputs() {
       power: HeavenlyMultiplierPotential(),
       // Owned heavenly upgrades speed up the current and future runs alike, so they cancel out
       ownedMult: 1,
-      upgrades: heavenlyOrder.map((item) => ({ cost: item.cost, mult: item.mult })),
+      upgrades: heavenlyOrder.flatMap((item) => item.steps),
     },
     heavenlyContext,
     heavenlyOrder,

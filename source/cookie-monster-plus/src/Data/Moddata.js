@@ -1,7 +1,7 @@
 /** Data related directly to Cookie Monster */
 
 export const VersionMajor = '2.053';
-export const VersionMinor = '13';
+export const VersionMinor = '21';
 
 /** Information about Cookie Monster to be displayed in the info section */
 export const ModDescription = `<a href="https://github.com/CookieMonsterTeam/CookieMonster" target="blank">Cookie Monster</a>
@@ -13,16 +13,20 @@ export const ModDescription = `<a href="https://github.com/CookieMonsterTeam/Coo
 
 /** Latest releasenotes of Cookie Monster to be displayed in the info section */
 export const LatestReleaseNotes = `Cookie Monster+ (local build based on 2.053.10)</br>
+- Version 20 keeps the native click-sound callback during muted auto-clicks. Random draws and sound-index updates are retained. Volume is restored after each click.</br>
+- Version 18 buys on every frame instead of one item every ten frames, so a new run catches up with its bank in seconds. Seasons no longer switch back and forth for heart biscuits. The game keeps full speed while its window is hidden (setting: Full speed when hidden). Heavenly chips also buy the Unshackled upgrades, valued from the share of CpS of each building, and the cheapest upgrades still missing for All the stars in heaven. Ascension waits up to a minute for a prestige level with four 7s, which unlocks Lucky payout.</br>
+- Version 15 uses the native Escape handler to skip the ascent animation. Cash-in waits for actual wrinkler payouts. Heavenly purchases no longer wait for a display delay. Prompts and manual ascensions retain control.</br>
+- Version 14 corrects the no-reset option, achievement time savings and parent-bundle costs. It rechecks Godzamok buyback funds and waits for wrinkler payouts before buying the Chocolate egg. The strategy audit and Lean proofs state their model scope. Full-game optimality remains unproved.</br>
 - Version 13 publishes a readable (unminified) build and the full source at github.com/JWKNT/cookie-clicker, installed by a patcher that checks every file</br>
 - Version 12 adds Godzamok combos: with Godzamok slotted, autoplay sells and buys back every building type whose round trip pays, every frame, so his click buff keeps growing (income rises thousands of times over), and the Pantheon slots him for it (within seconds of an ascension, or with a sugar lump to refill the worship swaps when they ran out)</br>
 - The Grandmapocalypse stage is now chosen by income: with the Elder Pact a pledge costs next to nothing, so autoplay pledges whenever calm (golden cookies, Frenzies on clicks) earns more than wrath and wrinklers, and revokes the covenant the elder achievements leave behind. It bursts wrinklers for "Wrinklesquisher" and "Moistburster" when they are worth the income given up</br>
 - Achievements are valued in seconds of play (a share of income times the play still expected); a Born again run for Neverclick and Hardcore starts once they are worth more than its four hours</br>
 - The garden breeds new seeds along the wheat chain on a checkerboard (Thumbcorn, Cronerice, Gildmillet, Clover, Golden clover, ...) with the right soil; the Stock Market upgrades its offices and takes loans that end before their interest; sugar lumps go to cursor levels for the first loan and to the Sugar frenzy; fortunes, Santa's helper grandmas, gift codes, dragon petting and a narrow-window ticker click are taken as well</br>
 - Version 11 plays the whole game: the Grandmapocalypse (wrath cookies beat golden ones when every cookie is clicked, and wrinklers multiply income about six times), the dragon (trained every run, auras picked by the CpS they add), seasons (Santa, heart biscuits, Easter eggs, reindeer), sugar lumps (minigames first, then building levels), the Pantheon, the Grimoire, permanent upgrade slots, heavenly upgrades for all of these, and achievements that only take an action</br>
-- Autoplay: clicks the big cookie (20 per second by default), buys the building or upgrade with the best payback period, clicks golden cookies and reindeer, and ascends at the optimal time (all switchable under Options, Autoplay)</br>
+- Autoplay: clicks the big cookie (20 per second by default), buys the building or upgrade with the best payback period, clicks golden cookies and reindeer, and ascends at the planned time (all switchable under Options, Autoplay)</br>
 - Ascension Advisor: plans every future ascension with a dynamic program, counting prestige levels, Legacy and the heavenly upgrades the chips can buy (several per ascension); it never recommends an ascension worth less than a 10% speed-up</br>
 - Click and golden cookie upgrades are valued at what they bring under autoplay (auto-click rate, golden cookie income), so they are coloured instead of gray and bought when they are the best deal; a "Lucky!" bank is kept only when that pays back faster than buying</br>
-- Heavenly chips are spent along one purchase order, most time saved per chip first ((1 - 1/multiplier) / cost, which is provably optimal without parent constraints) with required parents included, which the Ascension Advisor also plans with; auto-ascend buys as many items as the chips cover and saves the rest for the next one</br>
+- Heavenly chips are spent along one purchase order, most time saved per chip first ((1 - 1/multiplier) / cost, which is optimal for a fixed required set, constant chip effort, no initial bank and no parent constraints) with required parents included, which the Ascension Advisor also plans with; auto-ascend buys as many items as the chips cover and saves the rest for the next one</br>
 - The auto-buyer judges purchases by what they add to long-run income: click power at the auto-click rate (now for buildings too), multiplied by what the golden cookies autoplay clicks make of production (Frenzies, building specials, cookie storms and Click frenzies), without current buffs. A "Lucky!" bank is only kept back from purchases that pay back slower than banked cookies do, which is now rare</br>
 - The "Next buy" countdown uses the income measured over the last ten minutes, as the expected income counts rare jackpots that seldom arrive within minutes</br>
 - Timer bar: a "Lucky!" bank row appears while autoplay keeps cookies back for "Lucky!", which explains why an affordable "Next buy" can still be waiting</br>

@@ -19,7 +19,12 @@ npm run build:mod
 ```
 
 `npm run build:mod` writes `mod/main.js`. The build is not minified and has no source map, so the published
-file is readable. The 124 unit tests cover the mathematics.
+file is readable. The build gives the published file byte for byte.
+
+The 190 unit tests cover the calculations of the model and the safeguards of the autoplay. They do not prove
+that the mod is the fastest player. Seven more tests run the mod against the source of the game itself. They
+need a model of the game engine that is not in this repository, and an installed copy of the game. Without
+them, mocha reports these seven tests as pending.
 
 ## Where the changes are
 
@@ -32,9 +37,10 @@ file is readable. The 124 unit tests cover the mathematics.
 
 ## Release a new build
 
-1. Change the source. Build `mod/main.js` as above.
-2. Set `VersionMinor` in `src/Data/Moddata.js`, `VERSION` in `patcher/install_cookie_monster_plus.py` and
+1. Change the source. Set the version in `package.json`, both root version fields in `package-lock.json`,
+   `VersionMinor` in `src/Data/Moddata.js`, `VERSION` in `patcher/install_cookie_monster_plus.py`, and
    `ModVersion` in `mod/info.txt`.
+2. Run the mod tests, lint checks and build commands above. Set versions before building `mod/main.js`.
 3. Run `python3 tools/build_release.py` from the repository root. It writes `mod/manifest.json`, builds the
    patcher archive in `dist/` and prints its size and SHA-256 digest.
 4. Put the version, size and digest in the download card of `tools.html`. Run `npm test`.

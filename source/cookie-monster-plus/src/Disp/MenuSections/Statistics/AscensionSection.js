@@ -69,8 +69,8 @@ export default function AscensionSection() {
         summary.readiness,
         summary.colour,
         summary.status === 'ready'
-          ? 'Optimal point reached'
-          : `${FormatPercent(summary.readiness * 100)} of the optimal run completed`,
+          ? 'Planned point reached'
+          : `${FormatPercent(summary.readiness * 100)} of the planned run completed`,
       ),
     );
   }

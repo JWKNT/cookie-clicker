@@ -15,6 +15,7 @@
  */
 
 import { AscensionCache } from '../../Cache/Stats/Ascension.js';
+import { ClickMarketLoan, OpenMarketPanel, VisibleMarketControl } from './MarketControls.js';
 
 /** Buy below this share of a good's resting value, sell at or above SELL_AT */
 const BUY_BELOW = 0.6;
@@ -58,7 +59,7 @@ function TakeLoans() {
   if (!plan || !plan.applicable || !Number.isFinite(plan.remainingSlow)) return;
   AvailableLoans().forEach((loan) => {
     if (loan.id !== 2 && plan.remainingSlow <= LOAN_MARGIN * loan.seconds)
-      Game.Objects.Bank.minigame.takeLoan(loan.id);
+      ClickMarketLoan(loan.id);
   });
 }
 
@@ -70,10 +71,12 @@ function UpgradeOffice() {
   const M = Game.Objects.Bank.minigame;
   const office = M.offices[M.officeLevel];
   const cursor = Game.Objects.Cursor;
-  if (!office || !office.cost || !l('bankOfficeUpgrade')) return false;
+  const button = VisibleMarketControl('bankOfficeUpgrade');
+  if (!office || !office.cost || typeof button?.click !== 'function') return false;
   if (cursor.amount < office.cost[0] || cursor.level < office.cost[1]) return false;
-  l('bankOfficeUpgrade').click();
-  return true;
+  const before = M.officeLevel;
+  button.click();
+  return M.officeLevel > before;
 }
 
 /**
@@ -91,7 +94,7 @@ function Holdings(M) {
 /**
  * Upgrades the office, takes loans that will not reach their interest, and trades every active good:
  * sells what reached its resting value, buys what fell far below it
- * It is called by Autoplay() with the auto-buyer's cadence
+ * It is called by Autoplay() once in every cycle of frames
  */
 export default function AutoMarket() {
   const { settings } = Game.mods.cookieMonsterFramework.saveData.cookieMonsterMod;
@@ -99,11 +102,12 @@ export default function AutoMarket() {
   if (!settings.AutoMarket || !bank.minigameLoaded || Game.OnAscend || Game.AscendTimer > 0) return;
   const M = bank.minigame;
   if (!M || !M.goodsById) return;
+  if (!OpenMarketPanel()) return;
   if (UpgradeOffice()) return;
   TakeLoans();
   for (let id = 0; id < M.goodsById.length; id++) {
     const me = M.goodsById[id];
-    if (me.active) {
+    if (me.active && VisibleMarketControl(`bankGood-${id}`)) {
       const rest = M.getRestingVal(id);
       const price = M.getGoodPrice(me);
       if (me.stock > 0 && price >= rest * SELL_AT && M.sellGood(id, me.stock)) return;

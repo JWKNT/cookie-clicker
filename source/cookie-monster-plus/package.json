@@ -1,8 +1,8 @@
 {
   "name": "cookie-monster-plus",
-  "version": "2.053.13",
+  "version": "2.053.21",
   "private": true,
-  "description": "Cookie Monster+: Cookie Monster with mathematically optimal autoplay for Cookie Clicker. Guide: https://jehlp.net/cookie-clicker/",
+  "description": "Cookie Monster+: Cookie Monster with model-based autoplay for Cookie Clicker. Guide: https://jehlp.net/cookie-clicker/",
   "main": "CookieMonster.js",
   "keywords": [
     "Cookie Clicker",

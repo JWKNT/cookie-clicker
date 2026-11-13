@@ -60,11 +60,11 @@ export default function AscensionSummary() {
 
   let status = 'wait';
   let colour = ColourBlue;
-  let headline = `Keep baking: optimal ascension in ${forecastText}`;
+  let headline = `Keep baking: planned ascension in ${forecastText}`;
   if (plan.ascendNow) {
     status = 'ready';
     colour = ColourGreen;
-    headline = 'Ascend now: it is the optimal time';
+    headline = 'Ascend now: the model recommends a reset';
   } else if (plan.readiness >= 0.9) colour = ColourYellow;
 
   return {

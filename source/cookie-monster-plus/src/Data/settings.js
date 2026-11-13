@@ -79,7 +79,7 @@ const settings = {
     'numscale',
     'Calculation',
     'Ascension overhead (seconds): ',
-    'Time lost per ascension (ascending, spending heavenly chips, restarting) used by the ascension advisor. The optimal ascension time is not very sensitive to this value',
+    'Time lost per ascension (ascending, spending heavenly chips, restarting) used by the ascension advisor. The planned ascension time is not very sensitive to this value',
     0,
     Infinity,
   ),
@@ -322,7 +322,7 @@ const settings = {
     'bool',
     'BarsDisplay',
     ['Ascension readiness bar OFF', 'Ascension readiness bar ON'],
-    'Show how close the run is to the optimal ascension time in the timer bar',
+    'Show how close the run is to the planned ascension time in the timer bar',
     true,
   ),
   UpBarColour: new settingClasses.SettingStandardWithFunc(
@@ -605,7 +605,7 @@ const settings = {
     'bool',
     'Statistics',
     ['Ascension advisor OFF', 'Ascension advisor ON'],
-    'Show the ascension advisor (optimal time to ascend, forecast and checklist) at the top of the statistics page',
+    'Show the ascension advisor (planned time to ascend, forecast and checklist) at the top of the statistics page',
     true,
   ),
   MissingUpgrades: new settingClasses.SettingStandard(
@@ -966,7 +966,7 @@ const settings = {
     'bool',
     'NotificationAscend',
     ['In-game note OFF', 'In-game note ON'],
-    'Show a note in the game when the optimal time to ascend is reached',
+    'Show a note in the game when the planned time to ascend is reached',
     true,
   ),
   AscendNotification: new settingClasses.SettingStandardWithFunc(
@@ -974,7 +974,7 @@ const settings = {
     'bool',
     'NotificationAscend',
     ['Notification OFF', 'Notification ON'],
-    'Create a notification when the optimal time to ascend is reached',
+    'Create a notification when the planned time to ascend is reached',
     true,
     () => {
       CheckNotificationPermissions(
@@ -987,7 +987,7 @@ const settings = {
     'bool',
     'NotificationAscend',
     ['Flash OFF', 'Flash ON'],
-    'Flash screen when the optimal time to ascend is reached',
+    'Flash screen when the planned time to ascend is reached',
     true,
   ),
   ColourAscendFlash: new settingClasses.SettingColours(
@@ -1001,7 +1001,7 @@ const settings = {
     'bool',
     'NotificationAscend',
     ['Sound OFF', 'Sound ON'],
-    'Play a sound when the optimal time to ascend is reached',
+    'Play a sound when the planned time to ascend is reached',
     true,
   ),
   AscendVolume: new settingClasses.SettingVolume(100, 'vol', 'NotificationAscend', [], 'Volume'),
@@ -1010,7 +1010,7 @@ const settings = {
     'url',
     'NotificationAscend',
     'Sound URL:',
-    'URL of the sound to be played when the optimal time to ascend is reached',
+    'URL of the sound to be played when the planned time to ascend is reached',
   ),
 
   // Autoplay
@@ -1030,6 +1030,14 @@ const settings = {
     'How fast auto-click clicks; the game ignores more than 50 clicks per second',
     1,
     50,
+  ),
+  AutoBackground: new settingClasses.SettingStandard(
+    1,
+    'bool',
+    'Autoplay',
+    ['Full speed when hidden OFF', 'Full speed when hidden ON'],
+    'Keeps the game and auto-click at full speed while the window is hidden, for example behind a full-screen app. The browser slows a hidden window to a few updates a minute, and the game then makes up at most five seconds each time',
+    true,
   ),
   AutoBuy: new settingClasses.SettingStandard(
     1,
@@ -1068,7 +1076,7 @@ const settings = {
     'bool',
     'Autoplay',
     ['Auto-ascend OFF', 'Auto-ascend ON'],
-    'Ascends once the Ascension Advisor has said it is optimal for 10 seconds: pops normal wrinklers and buys the Chocolate egg first, spends heavenly chips (Legacy and production upgrades first, several at once), fills the permanent upgrade slots and reincarnates',
+    'Ascends once the Ascension Advisor has recommended a reset for 10 seconds: pops all wrinklers and buys the Chocolate egg first, spends heavenly chips (Legacy and production upgrades first, several at once), fills the permanent upgrade slots and reincarnates',
     true,
   ),
   AutoElder: new settingClasses.SettingStandard(
@@ -1148,7 +1156,7 @@ const settings = {
     'bool',
     'Autoplay',
     ['Auto Grimoire OFF', 'Auto Grimoire ON'],
-    'Casts Force the Hand of Fate whenever magic is full (magic refills fastest near the top of the bar)',
+    'Casts Force the Hand of Fate near full magic. Before a planned ordinary ascension, also uses remaining magic for the spell-count achievements.',
     true,
   ),
   AutoAchievements: new settingClasses.SettingStandard(

@@ -15,6 +15,7 @@ import UpdateAscendState from '../Disp/HelperFunctions/UpdateAscendState.js';
 import { LastAscendState } from '../Disp/VariablesAndData.js';
 import InitData from '../Sim/InitializeData/InitData.js';
 import { SimDoSims } from '../Sim/VariablesAndData.js';
+import UpdateBackgroundTicks from './Autoplay/AutoBackground.js';
 import Autoplay from './Autoplay/Autoplay.js';
 import CheckAscensionReady from './CheckStates/Ascension.js';
 import CheckGardenTick from './CheckStates/Garden.js';
@@ -30,6 +31,7 @@ import { LastModCount } from './VariablesAndData.js';
  * CM.init registers it to the "logic" hook provided by the modding api
  */
 export default function CMLoopHook() {
+  if (Game.T % Game.fps === 0) UpdateBackgroundTicks();
   Autoplay();
   if (LastAscendState !== Game.OnAscend) {
     LastAscendState = Game.OnAscend;

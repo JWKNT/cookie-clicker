@@ -107,7 +107,7 @@ function SpendLumps() {
 /**
  * Harvests ripe lumps, tries "Hand-picked" once the minigames are open (a mature but unripe lump yields
  * nothing half the time, so it costs half a lump a try), and spends lumps
- * It is called by Autoplay() with the auto-buyer's cadence
+ * It is called by Autoplay() once in every cycle of frames
  */
 export default function AutoLumps() {
   const { settings } = Game.mods.cookieMonsterFramework.saveData.cookieMonsterMod;
